@@ -806,3 +806,26 @@ Created: `static/fonts/literata-latin-wght-normal.woff2`,
   DeepMind's own feed from Actions).
 - Stage 8: final documentation review.
 - Me: the two `TODO(Marco)` timeline notes.
+
+---
+
+## 2026-09-23 — Transparency about how the site is built
+
+**What I did**
+- I added one plain line at the end of About: "Built with the help of Claude
+  Code."
+- I wrote down in `CLAUDE.md` that commits made with Claude keep their
+  `Co-Authored-By: Claude …` trailer, as they have from the start.
+
+**What I decided and why**
+- **Say it once, soberly.** Anyone reading the repository can already see
+  Claude as co-author of the commits; a short line in About tells visitors
+  too, without turning it into a feature of the site. It's styled like the
+  other quiet notes (italic, secondary colour).
+
+**Files changed**
+`templates/about.html`, `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- A spacing adjustment of the design, tried on a separate branch first.
+- Stage 7 (GitHub Actions and Pages), once the spacing is decided.

@@ -42,7 +42,7 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Reading log** grouped by month (counters, type filter, readings-per-month chart) and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
 | **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library and Start Here) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
-| **About** | What the site is, sources, how updates work | Template text |
+| **About** | What the site is, sources, how updates work, the typeface credit and a note that it was built with the help of Claude Code | Template text |
 
 **My shelf vs My Own Path:** My shelf (the reading tracker) is private to each
 visitor's browser and nobody else sees it; there are no accounts. My Own Path
@@ -763,7 +763,7 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `start-here/index.html` | `start_here.html` | Start Here: the stages in order, each reading numbered with its "Why here" note, synopsis (collapsible) and *To read / Read* buttons. While no stage has entries, a short "being put together" message |
    | `my-path/index.html` | `my_path.html` | My Own Path: Timeline, Reading log and Bookshelf (section 6.7) |
    | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marked books (as a shelf) and papers (as a list), and export/import |
-   | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) and the result of the last fetch (from `status.json`) |
+   | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) the result of the last fetch (from `status.json`), the Literata credit and "Built with the help of Claude Code." |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
 
    Before rendering, `papers.yaml` and `books.yaml` are **validated** and the publishing rule is

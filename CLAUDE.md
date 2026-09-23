@@ -22,6 +22,9 @@ These rules apply to every Claude session working on this repository.
 2. Make the change.
 3. **Update the documentation in the same commit** (see below).
 4. **When finished**: commit with a clear English message, then `git push`.
+- **Transparency (Marco's decision):** keep the `Co-Authored-By: Claude …`
+  trailer in every commit Claude makes, and keep the line "Built with the help
+  of Claude Code." in About.
 - If a push fails because Git is not authenticated with GitHub, **stop** and
   explain how to authenticate (`gh auth login`). Do not look for workarounds.
 - Git identity is configured **locally** for this repository only
