@@ -1,0 +1,16 @@
+# Python virtual environment (each computer creates its own)
+.venv/
+
+# Python cache files
+__pycache__/
+*.pyc
+
+# Generated website (rebuilt by scripts/build_site.py; never committed)
+_site/
+
+# Editor / OS noise
+.vscode/
+.idea/
+Thumbs.db
+Desktop.ini
+.DS_Store
