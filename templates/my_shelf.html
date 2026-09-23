@@ -4,10 +4,29 @@
 {% block title %}My shelf · {{ site.title }}{% endblock %}
 {% block description %}Your own reading list: what you marked as "To read" and "Read" on this site.{% endblock %}
 
+{# One status section ("to-read" or "read"): books as a shelf, papers as a list.
+   my-shelf.js moves the marked items from the hidden catalogue into these lists. #}
+{% macro status_section(status, heading, empty_text) %}
+<section aria-labelledby="shelf-{{ status }}">
+  <h2 id="shelf-{{ status }}">{{ heading }} <span class="count" data-shelf-count="{{ status }}"></span></h2>
+  <div data-shelf-group="{{ status }}-book" hidden>
+    <h3>Books</h3>
+    <ul class="bookshelf" data-shelf-list="{{ status }}" data-kind="book"></ul>
+  </div>
+  <div data-shelf-group="{{ status }}-paper" hidden>
+    <h3>Papers</h3>
+    <ul class="shelf-list" data-shelf-list="{{ status }}" data-kind="paper"></ul>
+  </div>
+  <p class="empty" data-shelf-empty="{{ status }}">{{ empty_text }}</p>
+</section>
+{% endmacro %}
+
 {% block content %}
 <h1>My shelf</h1>
 <p class="lede">
-  Everything you marked as <em>To read</em> or <em>Read</em> on this site.
+  Everything you marked as <em>To read</em> or <em>Read</em> on this site:
+  books from the <a href="{{ url('library/') }}">Library</a> and entries from
+  <a href="{{ url('papers/') }}">Papers</a>.
 </p>
 <p class="notice">
   <strong>Stored only in this browser.</strong> There are no accounts: your marks
@@ -27,18 +46,8 @@
     so your marks will be lost when you close this page.
   </p>
 
-  <section aria-labelledby="shelf-to-read">
-    <h2 id="shelf-to-read">To read <span class="count" data-shelf-count="to-read"></span></h2>
-    <ul class="shelf-list" data-shelf-list="to-read"></ul>
-    <p class="empty" data-shelf-empty="to-read">Nothing here yet. Mark entries in
-      <a href="{{ url('papers/') }}">Papers</a> as <em>To read</em>.</p>
-  </section>
-
-  <section aria-labelledby="shelf-read">
-    <h2 id="shelf-read">Read <span class="count" data-shelf-count="read"></span></h2>
-    <ul class="shelf-list" data-shelf-list="read"></ul>
-    <p class="empty" data-shelf-empty="read">Nothing here yet.</p>
-  </section>
+  {{ status_section("to-read", "To read", "Nothing here yet. Mark books in the Library or entries in Papers as “To read”.") }}
+  {{ status_section("read", "Read", "Nothing here yet.") }}
 
   <p class="note" data-shelf-orphans hidden></p>
 
@@ -58,11 +67,12 @@
   </section>
 </div>
 
-{# Every published entry, hidden. my-shelf.js copies the ones the visitor
-   marked into the lists above. Books join this catalogue in Stage 4b. #}
+{# Every published book and paper, hidden. my-shelf.js moves the ones the
+   visitor marked into the lists above (and back when a mark is removed). #}
 <ul hidden data-shelf-catalog>
+  {% for b in books %}{{ m.book_tile(b) }}{% endfor %}
   {% for p in papers %}
-  <li class="shelf-item" data-id="{{ p.id }}">
+  <li class="shelf-item" data-id="{{ p.id }}" data-kind="paper">
     <a class="shelf-title" id="shelf-{{ p.id }}-title" href="{{ p.url | safe_url }}" rel="noopener">{{ p.title }}</a>
     <span class="entry-meta">
       <span>{{ m.authors(p.authors) }}</span> <span>{{ p.year }}</span>
@@ -73,10 +83,17 @@
   </li>
   {% endfor %}
 </ul>
+
+{# Book cards for the <dialog>, as in the Library. #}
+{% for b in books %}
+<template data-card="{{ b.id }}">{{ m.book_card(b, "dialog", "h2") }}</template>
+{% endfor %}
+{% include "_book_dialog.html" %}
 {% endblock %}
 
 {% block scripts %}
 <script src="{{ url('static/js/reading-store.js') }}" defer></script>
 <script src="{{ url('static/js/tracker.js') }}" defer></script>
+<script src="{{ url('static/js/library.js') }}" defer></script>
 <script src="{{ url('static/js/my-shelf.js') }}" defer></script>
 {% endblock %}

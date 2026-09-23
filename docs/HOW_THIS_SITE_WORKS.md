@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 4a complete (Papers, reading tracker, My shelf with export/import, `promote_candidate.py`). Next: Stage 4b (the Library of books). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 4 complete: Papers, the Library of books, the reading tracker and My shelf with export/import, `promote_candidate.py`. Next: Stage 5 (Start Here and My Own Path). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -37,10 +37,10 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **Today in AI Safety** (home) | Entries from the last 24–48 h, grouped by topic/source | Collected automatically every day |
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
 | **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
-| **Library** 🚧 4b | Books only, on themed shelves, each shown with its real cover (Open Library). Clicking a book opens its card | `data/books.yaml`, which I edit by hand |
+| **Library** | Books only, on six themed shelves, each shown with its real cover (Open Library) or a typographic one. Clicking a book opens its card; each book also has its own page | `data/books.yaml`, which I edit by hand |
 | **Start Here** 🚧 5 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
 | **My Own Path** 🚧 5 | My public learning log: a **Timeline** of courses, projects and milestones, a **Reading log** grouped by month, and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
-| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, and later in the Library and Start Here) | The visitor's own browser (localStorage) |
+| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers and the Library, and later in Start Here) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work | Template text |
 
@@ -120,7 +120,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `data/status.json` | Time of last run + status of each source | ✅ |
 | `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
 | `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (12 so far); also the Start Here stage list | ✅ |
-| `data/books.yaml` | Library: books on themed shelves | 🚧 Stage 4b |
+| `data/books.yaml` | Library: 19 books on six themed shelves | ✅ |
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ data, 🚧 page in Stage 5 |
 | `data/my_path/reading_log.yaml` | My Own Path reading log (empty, format in comments) | ✅ data, 🚧 page in Stage 5 |
 | `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
@@ -129,6 +129,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `static/css/style.css` | Basic layout | ✅ basic (design in Stage 6) |
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
+| `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
 | `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 7 |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
@@ -215,7 +216,10 @@ a required field missing, an `id` that isn't a lowercase slug, an unknown
 `config/sources.yaml`), a URL that isn't http(s) or has `utm_` parameters, or a
 `start_here.stage` that isn't in `start_here_stages`.
 
-#### `data/books.yaml` — the Library (🚧 Stage 4b, format agreed)
+#### `data/books.yaml` — the Library (edited by hand)
+
+Two top-level keys: `shelves` (id and title, in the order they appear on the
+site) and `entries` (the books).
 
 ```yaml
 shelves:                               # order in this list = order on the site
@@ -224,16 +228,18 @@ shelves:                               # order in this list = order on the site
 
 entries:
   - id: human-compatible               # unique across papers.yaml and books.yaml
-    title: "Human Compatible: Artificial Intelligence and the Problem of Control"
+    title: "Human Compatible"
+    subtitle: "Artificial Intelligence and the Problem of Control"   # optional
     authors: ["Stuart Russell"]
-    year: 2019                         # year of the edition I list
-    edition: "..."                     # optional, e.g. "2nd edition"
-    shelf: ai-safety
-    olid: OL...M                       # Open Library edition id (verified)
-    cover_id: 1234567                  # Open Library cover id (preferred for the image)
-    isbn: "978..."                     # optional, reference only (never used to load covers)
-    url: https://openlibrary.org/works/OL...W   # the book's page ("book page" link)
-    free_url: https://...              # optional: ONLY an official free version by the authors/publisher
+    edition: "3rd edition"             # optional: only for numbered editions
+    year: 2019                         # year of THIS edition
+    publisher: "Viking"
+    shelf: ai-safety                   # an id from `shelves`
+    olid: OL27724147M                  # Open Library EDITION id (OL...M)
+    cover_id: 13157736                 # optional: Open Library cover id
+    isbn: "9780525558613"              # optional, reference only (never used to load covers)
+    url: https://openlibrary.org/books/OL27724147M   # the "Book page on Open Library" link
+    free_url: https://...              # optional: ONLY an official free version
     synopsis: >                        # REQUIRED to publish
       ...
     why_it_matters: >                  # optional
@@ -243,18 +249,35 @@ entries:
     added: 2026-09-23
 ```
 
-- **Edition:** always the most recent English edition, verified on Open Library.
-- **Covers** come straight from Open Library's Covers API as the image `src`
-  (`https://covers.openlibrary.org/b/id/<cover_id>-M.jpg`, or `/b/olid/<olid>-M.jpg`).
-  I never download them into the repo. I use the cover id or OLID, not the ISBN,
-  because ISBN lookups are limited to 100 requests every 5 minutes per IP
-  address. A book without a cover gets a typographic cover drawn in the site's
-  style. The book card and the About page link to Open Library as a courtesy.
+- **Edition:** always the most recent English edition. A new numbered or
+  revised edition counts (Géron's 3rd edition, Axler's 4th); a paperback
+  reprint of the same text doesn't. `year` is the year of the edition I list.
+  Géron's 2025 *…with Scikit-Learn and PyTorch* is a separate new book (its
+  1st edition), not a 4th edition of the TensorFlow one.
+- **Verification:** title, subtitle, authors, publisher and year against the
+  publisher's or author's page; the OLID, cover id and ISBN on Open Library. A
+  book I can't check against an official page stays out.
+- **Covers** come straight from Open Library's Covers API as the image `src`:
+  `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg` on the shelf and
+  `-L.jpg` in the card. I never download them into the repo. I only use the
+  **cover id**, never the ISBN, because ISBN lookups are limited to 100
+  requests every 5 minutes per IP address. A book without `cover_id` gets a
+  **typographic cover** (title and author on a colour per shelf); the same
+  cover sits under every image, so it also shows if an image fails to load.
+  The Library page, each book page and About credit Open Library.
 - **`free_url`** is shown as "Free version (official)". Only for versions the
-  authors or publisher publish for free themselves, never unauthorised copies.
-- **Planned shelves:** AI Safety & Alignment; AI, Society & Governance; Machine
+  authors or publisher publish for free themselves (for example
+  deeplearningbook.org, or Axler's open-access 4th edition), never
+  unauthorised copies.
+- **The build checks** (and stops with a clear message otherwise): required
+  fields, a slug `id`, a `shelf` from `shelves`, an `olid` like `OL…M`, a
+  numeric `cover_id`, http(s) URLs without `utm_`, and ids unique across
+  `papers.yaml` and `books.yaml`. Books without a synopsis are skipped with a
+  warning, like papers.
+- **Shelves:** AI Safety & Alignment; AI, Society & Governance; Machine
   Learning & Deep Learning; Mathematics for ML; Programming & Python; Thinking &
-  Rationality.
+  Rationality. *AI Snake Oil* sits on the first one on purpose, as a sceptical
+  counterpoint.
 
 **Why Start Here has no file of its own:** a reading joins the path through its
 own `start_here` block, so its data exists only once and the path can never
@@ -713,11 +736,13 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `news/index.html` | `news_index.html` | The archive: one line per month with its item count |
    | `news/YYYY-MM/index.html` | `news_month.html` | All items of a month, grouped by day, with source/topic filters and links to the previous/next month |
    | `papers/index.html` | `papers.html` | Papers: every published entry of `papers.yaml` (newest first) with synopsis, labels, filters and *To read / Read* buttons |
-   | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marks, and export/import |
+   | `library/index.html` | `library.html` | The Library: one shelf of covers per shelf in `books.yaml`, plus the book cards for the `<dialog>` |
+   | `library/<id>/index.html` | `book.html` | One page per book with its full card: what visitors without JavaScript get, and a link that can be shared |
+   | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marked books (as a shelf) and papers (as a list), and export/import |
    | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) and the result of the last fetch (from `status.json`) |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
 
-   Before rendering, `papers.yaml` is **validated** and the publishing rule is
+   Before rendering, `papers.yaml` and `books.yaml` are **validated** and the publishing rule is
    applied (section 3.1). Skipped entries are listed as `warning: ... not
    published (...)`; broken data stops the build with `BUILD FAILED`.
 4. **Check every internal link** (section 8). If one is broken, the build stops
@@ -739,9 +764,12 @@ fetching, the home page still shows the latest batch instead of going empty.
   `{% import "_macros.html" as m %}` … `{{ m.entry(e) }}`.
 - `_macros.html` also has `filter_select()` (one filter menu), `paper()` (one
   entry on the Papers page), `authors()` ("A, B and C") and `track_buttons()`
-  (the *To read / Read* buttons of one entry, keyed by its `id`).
-- The menu comes from `nav:` in `config/site.yaml`: News · Papers · About for
-  now; Library, Start Here and My Own Path join it when their pages exist.
+  (the *To read / Read* buttons of one entry, keyed by its `id`). For books:
+  `book_cover()` (image over the typographic cover), `book_tile()` (one book on
+  a shelf, a link to its page) and `book_card()` (the full card, used by the
+  book page and the dialog). `_book_dialog.html` is the one `<dialog>` element.
+- The menu comes from `nav:` in `config/site.yaml`: News · Papers · Library ·
+  About for now; Start Here and My Own Path join it when their pages exist.
   **The site title is the link to the home page (Today)**, so the home page
   needs no menu item, and **My shelf** is a small separate link in the header,
   because it's the visitor's own page, not a section of the site. The current
@@ -773,8 +801,8 @@ always wins.
 
 ### 6.5 JavaScript: the reading tracker and My shelf
 
-Three small scripts, loaded only on the pages that need them (Papers and My
-shelf), in this order:
+Small scripts, loaded only on the pages that need them (Papers, the Library,
+book pages and My shelf), in this order:
 
 1. **`reading-store.js` — the `ReadingStore`.** All reading marks go through
    one small interface: `get(id)`, `set(id, status)` (`"to-read"`, `"read"`
@@ -797,10 +825,28 @@ shelf), in this order:
    Clicking the active button again removes the mark. One click listener for
    the whole page handles every button, so buttons that `my-shelf.js` moves
    around keep working.
-3. **`my-shelf.js` — My shelf.** The page contains a hidden catalogue of every
-   published entry. The script **moves** the marked ones into the *To read*
-   and *Read* lists (moving, not copying, so no element exists twice) and back
-   when a mark is removed. Marks for entries that aren't on the site right now
+3. **`library.js` — the Library** (also on book pages and My shelf).
+   - **Cover fallback:** if a cover image fails to load, it's removed and the
+     typographic cover underneath shows. (Without JavaScript the image has an
+     empty `alt`, so a broken one shows nothing and the typographic cover still
+     shows.)
+   - **Marks on the shelf:** each book shows a small *To read* / *Read* badge.
+   - **The book card `<dialog>`:** every book on a shelf is a normal link to
+     its page. With JavaScript, a plain click copies that book's card from a
+     `<template data-card="<id>">` (rendered by the build, not part of the page
+     until copied) into the one `<dialog>` and opens it with `showModal()`.
+     The browser moves focus into it and makes the rest of the page inert;
+     `Esc`, the × button (a `method="dialog"` form) or a click on the dark
+     backdrop close it, and focus returns to the book that opened it. The
+     dialog is labelled by the book's title for screen readers.
+     Ctrl/Cmd-click still opens the book page in a new tab. A detail I had to
+     fix: the browser fires the `close` event a moment *after* closing, so the
+     handler doesn't empty the dialog if a book was reopened in between.
+4. **`my-shelf.js` — My shelf.** The page contains a hidden catalogue of every
+   published book and paper. The script **moves** the marked ones into the
+   *To read* and *Read* sections (books as a shelf of covers that open the
+   same dialog, papers as a list; moving, not copying, so no element exists
+   twice) and back when a mark is removed. Marks for entries that aren't on the site right now
    (removed, or not published yet) are kept and exported, and a note says how
    many there are.
    - **Export** builds the JSON file in the browser (a `Blob`) and downloads it
@@ -927,21 +973,49 @@ the files as they are instead of running its own site generator (Jekyll) on them
      `warning: ... not published` and skips the entry. Then commit and push.
      On the next run the fetch script sees the paper in `papers.yaml` and
      drops it from the candidates.
-- **Add a book to the Library** (🚧 Stage 4b; format in section 3.1):
-  1. Find the book on **openlibrary.org** and open its **most recent English
-     edition**. Verify title, authors, year and publisher against the
-     publisher's or author's page.
-  2. From the edition page, copy the **edition OLID** (the `OL…M` in the URL)
-     and the **cover id** (right-click the cover → copy image address: it's the
-     number in `covers.openlibrary.org/b/id/<number>-L.jpg`). I check the
-     cover opens. No cover → leave `cover_id` out; the site draws a
-     typographic cover.
-  3. Choose the `shelf` and an `id` not used in `papers.yaml` or `books.yaml`,
-     and add the block to `data/books.yaml`. `url` is the book's Open Library
-     page. Add `free_url` only if the authors or publisher offer the full book
-     for free themselves.
-  4. Write the `synopsis` (2–4 neutral sentences, my own words), optionally
-     `why_it_matters` and `my_opinion`. Build, commit and push.
+- **Add a book to the Library (with its cover):**
+  1. On the **publisher's or author's page**, check the most recent English
+     edition: exact title and subtitle, authors, edition number, publisher and
+     year.
+  2. On **openlibrary.org**, search the book, open *that* edition (the ISBN on
+     the page should match the publisher's) and copy:
+     - the **edition OLID**: the `OL…M` in the address
+       (`openlibrary.org/books/OL27724147M/...`);
+     - the **cover id**: right-click the cover → *Copy image address*; it's the
+       number in `covers.openlibrary.org/b/id/<number>-L.jpg`.
+     I open `https://covers.openlibrary.org/b/id/<number>-M.jpg` to check it's
+     the right cover and edition. If Open Library has no cover, I leave
+     `cover_id` out: the site draws a typographic cover.
+  3. Add a block to `data/books.yaml` (template at the top of the file) with a
+     `shelf` from `shelves` and an `id` not used in `papers.yaml` or
+     `books.yaml`. `url` is `https://openlibrary.org/books/<OLID>`. Add
+     `free_url` only if the authors or the publisher offer the full book for
+     free themselves.
+  4. Write the `synopsis` (2–4 neutral sentences in my own words, never the
+     publisher's blurb), optionally `why_it_matters` and `my_opinion`.
+  5. `python scripts\build_site.py`: it validates the block and creates the
+     book's page `library/<id>/`. Preview, then commit and push.
+- **Add a new shelf:** add `{id, title}` under `shelves:` in `books.yaml` (the
+  order there is the order on the page) and use its `id` as the `shelf` of its
+  books. Typographic covers take their colour from the shelf's position; there
+  are colours for six shelves in `style.css` (`.cover-shelf-0` … `-5`), so a
+  seventh needs one more rule.
+- **Test the Library locally:**
+  1. `python scripts\build_site.py --serve` and open
+     http://localhost:8000/AiSafetyWeb/library/.
+  2. Six shelves with covers; *AI Snake Oil*, *Understanding Deep Learning*,
+     *Introduction to Probability* and *Automate the Boring Stuff* have
+     typographic covers (no cover on Open Library).
+  3. Click a book: its card opens over the page. Try `Esc`, the × and a click
+     outside the card; each closes it and the focus goes back to the book.
+     Try it with the keyboard only: `Tab` to a book, `Enter` opens, `Esc`
+     closes.
+  4. In the card, click *Read*: after closing, the book shows a *Read* badge.
+     *Deep Learning* shows "Free version (official)"; *Superintelligence* doesn't.
+  5. Open **My shelf**: the book appears as a cover under *Read → Books*; click
+     it to open the same card and change its status.
+  6. Without JavaScript: clicking a book opens its own page
+     (`library/<id>/`) with the same card, without buttons.
 - **Test the reading tracker and My shelf locally:**
   1. `python scripts\build_site.py --serve` and open
      http://localhost:8000/AiSafetyWeb/papers/.
@@ -1102,6 +1176,9 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | The preview shows an old version | The browser cached it | Rebuild and reload with `Ctrl+F5` |
 | `warning: data/papers.yaml entry N (...) not published (no synopsis yet)` | The entry has no `synopsis`, or a `TODO` in it or in a required field | Write the synopsis / replace the `TODO`s (section 9). It's a warning, the rest of the site builds |
 | `BUILD FAILED: ... unknown topic(s)`, `type must be one of`, `remove the tracking parameters`, `duplicate id(s)` | Broken data in `papers.yaml` (or an `id` also used in `books.yaml`) | Fix the field the message names (formats in section 3.1) |
+| `BUILD FAILED: data/books.yaml ...: shelf '...' is not in shelves`, `olid must be ...`, `cover_id must be a number` | Broken data in `books.yaml` | Fix the field (section 3.1). The OLID is the edition's `OL…M`, not the work's `OL…W` |
+| A book shows the typographic cover although it has `cover_id` | The cover id is wrong, or Open Library was unreachable | Open `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg` in the browser; fix the id (section 9) |
+| Clicking a book opens its page instead of the card | JavaScript is off or `library.js` failed, or the browser has no `<dialog>` support | Nothing breaks: the page shows the same card. Check DevTools → Console |
 | `Not promoted: ... is not in paper_candidates.json` | Wrong candidate id, or the candidate expired (60 days) | Copy the exact `"id"` from the file; for an expired one, add the paper by hand |
 | `Not promoted: already in papers.yaml as '...'` | That paper was promoted before | Nothing to do |
 | The *To read / Read* buttons don't appear | JavaScript is off, or a script failed to load | Check DevTools → Console; without JS the buttons are hidden on purpose |
@@ -1150,7 +1227,8 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
-- **`<dialog>`** — A native HTML element for pop-up windows: keyboard accessible and closed with `Esc`. The Library's book cards will use it (Stage 4b).
+- **`<dialog>`** — A native HTML element for pop-up windows. Opened with `showModal()`, it takes the focus, makes the rest of the page inert and closes with `Esc`. The Library's book cards use it.
+- **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
 - **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
 - **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).

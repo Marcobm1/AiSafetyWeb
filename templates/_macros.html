@@ -86,3 +86,63 @@
   {{ track_buttons(p.id, "paper-" ~ p.id ~ "-title") }}
 </article>
 {% endmacro %}
+
+{# --- Books (data/books.yaml) ---------------------------------------------- #}
+
+{# A book cover. The typographic cover is always drawn; when Open Library has a
+   cover, the image is laid on top of it. If the image fails, library.js
+   removes it, and without JS an empty-alt broken image shows nothing, so the
+   typographic cover is always what remains. #}
+{% macro book_cover(b, large=False) %}
+<span class="cover cover-shelf-{{ b.shelf_index }}{% if large %} cover-large{% endif %}">
+  <span class="cover-typo" aria-hidden="true">
+    <span class="cover-typo-title">{{ b.title }}</span>
+    <span class="cover-typo-author">{{ b.authors | join(", ") }}</span>
+  </span>
+  {% if b.cover %}
+  <img src="{{ (b.cover_large if large else b.cover) | safe_url }}" alt="" loading="lazy" decoding="async" data-cover>
+  {% endif %}
+</span>
+{% endmacro %}
+
+{# One book on a shelf: a link to its page. library.js turns the click into
+   the <dialog> card when JavaScript is available. #}
+{% macro book_tile(b) %}
+<li class="book" data-id="{{ b.id }}" data-kind="book">
+  <a class="book-link" href="{{ url('library/' ~ b.id ~ '/') }}" data-book="{{ b.id }}">
+    {{ book_cover(b) }}
+    <span class="book-caption">
+      <span class="book-title">{{ b.title }}</span>
+      <span class="book-author">{{ authors(b.authors) }}</span>
+    </span>
+    <span class="book-mark" data-book-mark="{{ b.id }}" hidden></span>
+  </a>
+</li>
+{% endmacro %}
+
+{# The full card of a book: used on its own page and inside the <dialog>.
+   `prefix` keeps element ids unique ("page" or "dialog"). #}
+{% macro book_card(b, prefix, heading="h1") %}
+<article class="book-card">
+  {{ book_cover(b, large=True) }}
+  <div class="book-card-body">
+    <{{ heading }} class="book-card-title" id="{{ prefix }}-{{ b.id }}-title">{{ b.title }}</{{ heading }}>
+    {% if b.subtitle %}<p class="book-card-subtitle">{{ b.subtitle }}</p>{% endif %}
+    <p class="book-card-authors">{{ authors(b.authors) }}</p>
+    <p class="entry-meta">
+      <span>{{ b.year }}</span>
+      {% if b.edition %}<span>{{ b.edition }}</span>{% endif %}
+      <span>{{ b.publisher }}</span>
+      <span class="label">{{ b.shelf_title }}</span>
+    </p>
+    <p class="synopsis">{{ b.synopsis }}</p>
+    {% if b.why_it_matters %}<p class="why"><strong>Why it matters:</strong> {{ b.why_it_matters }}</p>{% endif %}
+    {% if b.my_opinion %}<p class="opinion"><strong>My opinion:</strong> {{ b.my_opinion }}</p>{% endif %}
+    <p class="book-card-links">
+      <a href="{{ b.url | safe_url }}" rel="noopener">Book page on Open Library</a>
+      {% if b.free_url %}<a href="{{ b.free_url | safe_url }}" rel="noopener">Free version (official)</a>{% endif %}
+    </p>
+    {{ track_buttons(b.id, prefix ~ "-" ~ b.id ~ "-title") }}
+  </div>
+</article>
+{% endmacro %}

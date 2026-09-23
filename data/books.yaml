@@ -1,0 +1,448 @@
+# The Library: books only, on themed shelves (papers, essays and reports are
+# in data/papers.yaml). Full format and rules: docs/HOW_THIS_SITE_WORKS.md,
+# section 3.1.
+#
+# Rules I follow here:
+# - Every book is verified against a real source: the publisher's or author's
+#   page for title, subtitle, authors, publisher and year, and Open Library for
+#   the edition record (OLID), cover id and ISBN.
+# - Always the most recent English edition (a new numbered or revised edition
+#   counts; a reprint in another format doesn't). `year` is that edition's year.
+# - Covers are loaded from covers.openlibrary.org by `cover_id` only (never by
+#   ISBN: those lookups are rate-limited). No cover_id -> typographic cover.
+# - `free_url` ONLY for a free version published officially by the authors or
+#   the publisher. Never an unauthorised copy.
+# - `id` is a stable slug, unique across books.yaml AND papers.yaml (the
+#   reading tracker uses it), and never changes once published.
+# - A book is published only when it has a `synopsis` (without TODO).
+#   `why_it_matters` and `my_opinion` are optional; `my_opinion` is only mine.
+#
+# Book template (copy, indent under `entries:` and fill in):
+#
+#   - id: short-slug
+#     title: "Exact title"
+#     subtitle: "Exact subtitle"          # optional
+#     authors: ["First Author", "Second Author"]
+#     edition: "3rd edition"              # optional, only for numbered editions
+#     year: 2024                          # year of this edition
+#     publisher: "Publisher"
+#     shelf: ai-safety                    # an id from `shelves` below
+#     olid: OL12345678M                   # Open Library EDITION id
+#     cover_id: 1234567                   # optional: Open Library cover id
+#     isbn: "9780000000000"               # optional, reference only
+#     url: https://openlibrary.org/books/OL12345678M   # the book page
+#     free_url: https://...               # optional, official free version only
+#     synopsis: >                         # required to publish: 2-4 neutral sentences
+#       What the book is about.
+#     why_it_matters: >                   # optional
+#       Why it is on this shelf.
+#     my_opinion: >                       # optional, only mine
+#       What I think of it.
+#     added: 2026-09-23
+
+# Shelves, in the order they appear on the site.
+shelves:
+  - id: ai-safety
+    title: AI Safety & Alignment
+  - id: ai-society
+    title: AI, Society & Governance
+  - id: ml-dl
+    title: Machine Learning & Deep Learning
+  - id: math-ml
+    title: Mathematics for ML
+  - id: programming-python
+    title: Programming & Python
+  - id: thinking-rationality
+    title: Thinking & Rationality
+
+entries:
+  # --- AI Safety & Alignment ---------------------------------------------------
+  - id: superintelligence
+    title: "Superintelligence"
+    subtitle: "Paths, Dangers, Strategies"
+    authors: ["Nick Bostrom"]
+    year: 2014
+    publisher: "Oxford University Press"
+    shelf: ai-safety
+    olid: OL26411066M
+    cover_id: 8113388
+    isbn: "9780199678112"
+    url: https://openlibrary.org/books/OL26411066M
+    synopsis: >
+      Asks what happens if machines come to surpass humans in general
+      intelligence. Bostrom examines the paths that could lead to
+      superintelligence, how such a system could gain a decisive advantage over
+      everyone else, and why controlling it or giving it the right values is
+      hard. He then discusses strategies for making this transition safer.
+    added: 2026-09-23
+
+  - id: human-compatible
+    title: "Human Compatible"
+    subtitle: "Artificial Intelligence and the Problem of Control"
+    authors: ["Stuart Russell"]
+    year: 2019
+    publisher: "Viking"
+    shelf: ai-safety
+    olid: OL27724147M
+    cover_id: 13157736
+    isbn: "9780525558613"
+    url: https://openlibrary.org/books/OL27724147M
+    synopsis: >
+      Stuart Russell, co-author of a standard AI textbook, argues that the usual
+      way of building AI (machines that optimise a fixed objective we give
+      them) becomes dangerous as systems grow more capable. He proposes another
+      foundation: machines whose only aim is to satisfy human preferences, but
+      which are uncertain about what those preferences are and learn them from
+      our behaviour. The book also covers misuses of AI and the open problems
+      of this approach.
+    added: 2026-09-23
+
+  - id: the-alignment-problem
+    title: "The Alignment Problem"
+    subtitle: "Machine Learning and Human Values"
+    authors: ["Brian Christian"]
+    year: 2020
+    publisher: "W. W. Norton & Company"
+    shelf: ai-safety
+    olid: OL28126189M
+    cover_id: 13162637
+    isbn: "9780393635829"
+    url: https://openlibrary.org/books/OL28126189M
+    synopsis: >
+      A journalistic account, built on interviews with researchers, of how
+      machine learning systems end up doing something other than what their
+      designers intended. It covers bias and fairness in predictive models,
+      transparency, reward design in reinforcement learning, and learning from
+      human behaviour by imitation and by inferring preferences. It connects
+      today's practical failures with longer-term worries about more capable
+      systems.
+    added: 2026-09-23
+
+  - id: if-anyone-builds-it-everyone-dies
+    title: "If Anyone Builds It, Everyone Dies"
+    subtitle: "Why Superhuman AI Would Kill Us All"
+    authors: ["Eliezer Yudkowsky", "Nate Soares"]
+    year: 2025
+    publisher: "Little, Brown and Company"
+    shelf: ai-safety
+    olid: OL60890685M
+    cover_id: 15226802
+    isbn: "9780316595643"
+    url: https://openlibrary.org/books/OL60890685M
+    synopsis: >
+      The authors, from the Machine Intelligence Research Institute, argue that
+      building superhuman AI with anything like today's methods would very
+      likely lead to human extinction. They explain why AI systems that are
+      "grown" rather than designed end up with goals nobody chose, illustrate
+      one possible path to catastrophe with a fictional scenario, and call for
+      an international agreement to stop the development of such systems.
+    added: 2026-09-23
+
+  - id: ai-snake-oil
+    title: "AI Snake Oil"
+    subtitle: "What Artificial Intelligence Can Do, What It Can't, and How to Tell the Difference"
+    authors: ["Arvind Narayanan", "Sayash Kapoor"]
+    year: 2024
+    publisher: "Princeton University Press"
+    shelf: ai-safety
+    olid: OL51587199M
+    isbn: "9780691249131"
+    url: https://openlibrary.org/books/OL51587199M
+    synopsis: >
+      Two Princeton computer scientists separate the AI that works from the AI
+      that doesn't. They explain the differences between kinds of AI, why
+      predictive AI used to make decisions about people often cannot deliver
+      what is promised, and why AI can't fix social media. They also argue that
+      AI is not an existential risk, and that we should worry more about what
+      people will do with AI than about what AI will do on its own: a
+      counterpoint to the other books on this shelf.
+    added: 2026-09-23
+
+  # --- AI, Society & Governance --------------------------------------------------
+  - id: the-precipice
+    title: "The Precipice"
+    subtitle: "Existential Risk and the Future of Humanity"
+    authors: ["Toby Ord"]
+    year: 2020
+    publisher: "Hachette Books"
+    shelf: ai-society
+    olid: OL27950774M
+    cover_id: 9338949
+    isbn: "9780316484916"
+    url: https://openlibrary.org/books/OL27950774M
+    synopsis: >
+      Toby Ord, a philosopher at Oxford, argues that humanity is living through
+      a period of unusually high risk of existential catastrophe, from nuclear
+      war and climate change to engineered pandemics and unaligned AI. He
+      estimates the size of each risk, with unaligned AI as the largest,
+      explains why reducing them matters so much for the long-term future, and
+      proposes what we can do about it.
+    added: 2026-09-23
+
+  - id: the-coming-wave
+    title: "The Coming Wave"
+    subtitle: "Technology, Power, and the Twenty-First Century's Greatest Dilemma"
+    authors: ["Mustafa Suleyman", "Michael Bhaskar"]
+    year: 2023
+    publisher: "Crown"
+    shelf: ai-society
+    olid: OL49766921M
+    cover_id: 15104845
+    isbn: "9780593593967"
+    url: https://openlibrary.org/books/OL49766921M
+    synopsis: >
+      Mustafa Suleyman, a co-founder of DeepMind, argues that AI and synthetic
+      biology form a wave of technology that will spread fast and be very hard
+      to control. He describes the dilemma of "containment": these technologies
+      promise great benefits but also catastrophic misuse and pressure on
+      nation states, while clamping down on them risks surveillance or
+      stagnation. The book ends with ten steps towards containing them.
+    added: 2026-09-23
+
+  # --- Machine Learning & Deep Learning --------------------------------------------
+  - id: deep-learning-goodfellow
+    title: "Deep Learning"
+    authors: ["Ian Goodfellow", "Yoshua Bengio", "Aaron Courville"]
+    year: 2016
+    publisher: "MIT Press"
+    shelf: ml-dl
+    olid: OL26391361M
+    cover_id: 8086288
+    isbn: "9780262035613"
+    url: https://openlibrary.org/books/OL26391361M
+    free_url: https://www.deeplearningbook.org/
+    synopsis: >
+      A comprehensive textbook by three leading researchers. It starts with the
+      applied mathematics and machine learning basics it needs, covers the core
+      of modern practice (feedforward networks, regularisation, optimisation,
+      convolutional and recurrent networks) and ends with research topics such
+      as autoencoders and deep generative models. It was written before
+      transformers became the dominant architecture.
+    added: 2026-09-23
+
+  - id: understanding-deep-learning
+    title: "Understanding Deep Learning"
+    authors: ["Simon J. D. Prince"]
+    year: 2023
+    publisher: "MIT Press"
+    shelf: ml-dl
+    olid: OL49294839M
+    isbn: "9780262048644"
+    url: https://openlibrary.org/books/OL49294839M
+    free_url: https://udlbook.github.io/udlbook/
+    synopsis: >
+      A recent textbook that explains the ideas behind deep learning, from
+      supervised learning and basic neural networks to training,
+      regularisation, convolutional networks, transformers and graph networks,
+      and generative models such as GANs, normalising flows, variational
+      autoencoders and diffusion models. It also covers reinforcement learning
+      and the ethics of AI, and comes with Python notebooks for practice.
+    added: 2026-09-23
+
+  - id: hands-on-machine-learning
+    title: "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    subtitle: "Concepts, Tools, and Techniques to Build Intelligent Systems"
+    authors: ["Aurélien Géron"]
+    edition: "3rd edition"
+    year: 2022
+    publisher: "O'Reilly Media"
+    shelf: ml-dl
+    olid: OL38327656M
+    cover_id: 15225435
+    isbn: "9781098125974"
+    url: https://openlibrary.org/books/OL38327656M
+    synopsis: >
+      A practical guide to machine learning in Python. The first part uses
+      Scikit-Learn for classical methods such as regression, classification,
+      decision trees, ensembles, dimensionality reduction and clustering; the
+      second uses Keras and TensorFlow for neural networks, including computer
+      vision, sequence models, transformers, generative models and
+      reinforcement learning. Each chapter comes with Jupyter notebooks and
+      exercises.
+    added: 2026-09-23
+
+  - id: reinforcement-learning-sutton-barto
+    title: "Reinforcement Learning"
+    subtitle: "An Introduction"
+    authors: ["Richard S. Sutton", "Andrew G. Barto"]
+    edition: "2nd edition"
+    year: 2018
+    publisher: "MIT Press"
+    shelf: ml-dl
+    olid: OL27372328M
+    cover_id: 8835517
+    isbn: "9780262039246"
+    url: https://openlibrary.org/books/OL27372328M
+    free_url: http://incompleteideas.net/book/the-book-2nd.html
+    synopsis: >
+      The standard introduction to reinforcement learning, by two of the
+      field's founders. It builds up from multi-armed bandits and Markov
+      decision processes to dynamic programming, Monte Carlo methods,
+      temporal-difference learning, function approximation and policy-gradient
+      methods. The second edition adds chapters that relate reinforcement
+      learning to psychology and neuroscience, and case studies of
+      applications.
+    added: 2026-09-23
+
+  # --- Mathematics for ML ------------------------------------------------------------
+  - id: mathematics-for-machine-learning
+    title: "Mathematics for Machine Learning"
+    authors: ["Marc Peter Deisenroth", "A. Aldo Faisal", "Cheng Soon Ong"]
+    year: 2020
+    publisher: "Cambridge University Press"
+    shelf: math-ml
+    olid: OL28332765M
+    cover_id: 10281784
+    isbn: "9781108455145"
+    url: https://openlibrary.org/books/OL28332765M
+    free_url: https://mml-book.github.io/
+    synopsis: >
+      Covers the mathematics needed to read machine learning texts: linear
+      algebra, analytic geometry, matrix decompositions, vector calculus,
+      probability and optimisation. The second part applies these tools to four
+      central problems: linear regression, dimensionality reduction with PCA,
+      density estimation with Gaussian mixture models, and classification with
+      support vector machines.
+    added: 2026-09-23
+
+  - id: linear-algebra-done-right
+    title: "Linear Algebra Done Right"
+    authors: ["Sheldon Axler"]
+    edition: "4th edition"
+    year: 2024
+    publisher: "Springer"
+    shelf: math-ml
+    olid: OL49266176M
+    cover_id: 15225626
+    isbn: "9783031410253"
+    url: https://openlibrary.org/books/OL49266176M
+    free_url: https://linear.axler.net/
+    synopsis: >
+      A linear algebra textbook built around vector spaces and linear maps
+      rather than matrix calculations, which leaves determinants until late in
+      the book. It aims at a deep understanding of the structure of linear
+      operators, including eigenvalues, inner product spaces and the spectral
+      theorem. The fourth edition is open access under a Creative Commons
+      licence.
+    added: 2026-09-23
+
+  - id: introduction-to-probability
+    title: "Introduction to Probability"
+    authors: ["Joseph K. Blitzstein", "Jessica Hwang"]
+    edition: "2nd edition"
+    year: 2019
+    publisher: "Chapman & Hall/CRC"
+    shelf: math-ml
+    olid: OL34656520M
+    isbn: "9781138369917"
+    url: https://openlibrary.org/books/OL34656520M
+    synopsis: >
+      An introductory probability textbook developed from Harvard's Statistics
+      110 course. It puts intuition and problem-solving strategies first,
+      alongside the formal tools: conditional probability, random variables and
+      their distributions, expectation, joint distributions, limit theorems and
+      Markov chains.
+    added: 2026-09-23
+
+  # --- Programming & Python -------------------------------------------------------------
+  - id: python-crash-course
+    title: "Python Crash Course"
+    subtitle: "A Hands-On, Project-Based Introduction to Programming"
+    authors: ["Eric Matthes"]
+    edition: "3rd edition"
+    year: 2022
+    publisher: "No Starch Press"
+    shelf: programming-python
+    olid: OL38327872M
+    cover_id: 15225531
+    isbn: "9781718502703"
+    url: https://openlibrary.org/books/OL38327872M
+    synopsis: >
+      A beginner's introduction to programming with Python. The first half
+      teaches the basics (variables, lists, dictionaries, loops, functions,
+      classes, files and testing); the second half applies them in three
+      projects: a 2D game, data visualisations, and a web application built
+      with Django.
+    added: 2026-09-23
+
+  - id: fluent-python
+    title: "Fluent Python"
+    subtitle: "Clear, Concise, and Effective Programming"
+    authors: ["Luciano Ramalho"]
+    edition: "2nd edition"
+    year: 2022
+    publisher: "O'Reilly Media"
+    shelf: programming-python
+    olid: OL28341899M
+    cover_id: 10290195
+    isbn: "9781492056355"
+    url: https://openlibrary.org/books/OL28341899M
+    synopsis: >
+      For programmers who already know Python and want to use it more
+      idiomatically. It explains how the language works underneath: the data
+      model and special methods, data structures, functions as objects,
+      object-oriented idioms, iterators, generators and context managers, and
+      concurrency. The second edition adds type hints and other features of
+      recent Python versions.
+    added: 2026-09-23
+
+  - id: automate-the-boring-stuff
+    title: "Automate the Boring Stuff with Python"
+    subtitle: "Practical Programming for Total Beginners"
+    authors: ["Al Sweigart"]
+    edition: "3rd edition"
+    year: 2025
+    publisher: "No Starch Press"
+    shelf: programming-python
+    olid: OL50718345M
+    isbn: "9781718503403"
+    url: https://openlibrary.org/books/OL50718345M
+    free_url: https://automatetheboringstuff.com/
+    synopsis: >
+      A practical introduction to Python for people with no programming
+      experience, focused on automating everyday computer tasks. After the
+      basics of the language, it shows how to work with files, spreadsheets,
+      PDFs and Word documents, scrape websites, send email and notifications,
+      and control the keyboard and mouse. The author publishes the full text
+      free online under a Creative Commons licence.
+    added: 2026-09-23
+
+  # --- Thinking & Rationality --------------------------------------------------------------
+  - id: rationality-ai-to-zombies
+    title: "Rationality: From AI to Zombies"
+    authors: ["Eliezer Yudkowsky"]
+    year: 2015
+    publisher: "Machine Intelligence Research Institute"
+    shelf: thinking-rationality
+    olid: OL31990847M
+    cover_id: 10662600
+    isbn: "9781939311153"
+    url: https://openlibrary.org/books/OL31990847M
+    free_url: https://www.readthesequences.com/
+    synopsis: >
+      A collection of Eliezer Yudkowsky's essays, first posted on Overcoming
+      Bias and LessWrong between 2006 and 2009, edited into six books. They
+      cover cognitive biases, how to change one's mind, the philosophy of
+      science and language, and questions about minds, values and AI. It is a
+      founding text of the LessWrong rationalist community.
+    added: 2026-09-23
+
+  - id: thinking-fast-and-slow
+    title: "Thinking, Fast and Slow"
+    authors: ["Daniel Kahneman"]
+    year: 2011
+    publisher: "Farrar, Straus and Giroux"
+    shelf: thinking-rationality
+    olid: OL24896701M
+    cover_id: 13775637
+    isbn: "9780374275631"
+    url: https://openlibrary.org/books/OL24896701M
+    synopsis: >
+      Daniel Kahneman, a psychologist who won the Nobel prize in economics,
+      summarises decades of research on judgement and decision-making. He
+      describes two modes of thinking, a fast, intuitive "System 1" and a slow,
+      deliberate "System 2", and the systematic biases that come from relying
+      on intuition, such as anchoring, availability, overconfidence and loss
+      aversion. Some of the priming studies it cites have since failed to
+      replicate.
+    added: 2026-09-23

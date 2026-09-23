@@ -63,7 +63,8 @@ If something is ambiguous, ask Marco before assuming.
   sentences in its own words, based on the verified source; never copy text
   from the publisher, Amazon, Goodreads, reviews or the abstract.
   **Never write or invent `my_opinion`**: only Marco writes it.
-- Books: use the most recent English edition (verified). Covers are always
+- Books: use the most recent English edition (verified; a new numbered or
+  revised edition counts, a reprint in another format doesn't). Covers are always
   loaded from `covers.openlibrary.org` by **cover id or OLID** (never by ISBN:
   ISBN lookups are rate-limited to 100 requests / 5 min per IP); never
   download cover images into the repo. `free_url` only for free versions
@@ -97,7 +98,8 @@ If something is ambiguous, ask Marco before assuming.
 - **Two reading sections, two data files:**
   - **Papers** (papers, essays, reports, scenarios, blog posts) → `data/papers.yaml`.
   - **Library** (books only, on themed shelves, with Open Library covers) →
-    `data/books.yaml` (Stage 4b).
+    `data/books.yaml`. Each book has its own page (`library/<id>/`, the no-JS
+    fallback) and opens in a native `<dialog>` card on the shelf.
   Every entry has a stable `id`, **unique across both files** (the build checks
   it). Papers, Library, **Start Here**, **My Own Path** (`paper_ref` /
   `book_ref` in the reading log) and the reading tracker all refer to entries
@@ -122,7 +124,7 @@ config/sources.yaml      all news sources, arXiv query, karma thresholds, topic 
 config/site.yaml         site title, base path, settings
 data/papers.yaml         Papers: curated papers, essays, reports... (by hand); also
                          holds the Start Here stage list and each entry's start_here block
-data/books.yaml          Library: books on themed shelves (by hand, Stage 4b)
+data/books.yaml          Library: books on themed shelves (by hand)
 data/my_path/timeline.yaml     My Own Path: courses, projects, milestones (by hand)
 data/my_path/reading_log.yaml  My Own Path: everything Marco reads, by month (by hand)
 data/paper_candidates.json  arXiv candidates for the archive (written by the bot, auto-pruned)
@@ -133,7 +135,7 @@ scripts/promote_candidate.py  copy a candidate into papers.yaml as a new block
 scripts/build_site.py    render templates + data into _site/
 templates/               Jinja2 HTML templates
 static/css, static/js    styles and small vanilla JS modules (filters, reading-store,
-                         tracker, my-shelf)
+                         tracker, my-shelf, library)
 docs/                    HOW_THIS_SITE_WORKS.md, DEVLOG.md
 .github/workflows/       update-and-deploy.yml
 ```

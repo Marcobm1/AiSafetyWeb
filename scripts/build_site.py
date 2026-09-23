@@ -9,11 +9,14 @@ What one build does:
        news/index.html          the news archive: one line per month
        news/YYYY-MM/index.html  all entries of one month
        papers/index.html        my curated papers, essays, reports... (data/papers.yaml)
+       library/index.html       the Library: books on shelves (data/books.yaml)
+       library/<id>/index.html  one page per book (the card, for visitors without JS)
        my-shelf/index.html      the visitor's own "to read" / "read" marks
        about/index.html         what the site is + status of the last fetch
        404.html                 "page not found" (GitHub Pages serves it)
-     Entries in data/papers.yaml are validated first; an entry without a
-     synopsis (or with a TODO in a required field) is skipped with a warning.
+     Entries in data/papers.yaml and data/books.yaml are validated first; an
+     entry without a synopsis (or with a TODO in a required field) is skipped
+     with a warning.
   5. Check every internal link and asset: it must start with the base path
      (/AiSafetyWeb/) and point to a file that exists. Otherwise the build fails.
 
@@ -45,7 +48,7 @@ SOURCES_CONFIG = ROOT / "config" / "sources.yaml"
 NEWS_DIR = ROOT / "data" / "news"
 STATUS_FILE = ROOT / "data" / "status.json"
 PAPERS_FILE = ROOT / "data" / "papers.yaml"
-BOOKS_FILE = ROOT / "data" / "books.yaml"   # Stage 4b; only its ids are checked for now
+BOOKS_FILE = ROOT / "data" / "books.yaml"
 TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 OUTPUT_DIR = ROOT / "_site"
@@ -107,7 +110,11 @@ PAPER_TYPES = {"paper": "Paper", "essay": "Essay", "report": "Report",
 DIFFICULTIES = {"intro": "Intro", "intermediate": "Intermediate", "advanced": "Advanced"}
 PAPER_REQUIRED = ("id", "title", "authors", "year", "type", "url", "tags",
                   "difficulty", "added")
-PAPER_OPTIONAL_TEXT = ("why_it_matters", "my_opinion")
+OPTIONAL_TEXT = ("why_it_matters", "my_opinion")
+BOOK_REQUIRED = ("id", "title", "authors", "year", "publisher", "shelf", "olid",
+                 "url", "added")
+OLID_RE = re.compile(r"^OL\d+M$")
+COVERS_URL = "https://covers.openlibrary.org/b/id/{cover_id}-{size}.jpg"
 ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
 
 
@@ -123,6 +130,40 @@ def check_url(url, where: str) -> None:
         raise BuildError(f"{where}: url must start with http:// or https://, got {url!r}")
     if "utm_" in parts.query.lower():
         raise BuildError(f"{where}: remove the tracking parameters (utm_...) from {url}")
+
+
+def publishable(entry: dict, required: tuple, where: str) -> bool:
+    """The publishing rule, shared by papers and books.
+
+    Missing required fields stop the build. An entry without a synopsis (or
+    with TODO in it or in a required field) is skipped with a warning.
+    """
+    missing = [key for key in required if entry.get(key) in (None, "", [])]
+    if missing:
+        raise BuildError(f"{where}: missing {', '.join(missing)}")
+    synopsis = entry.get("synopsis")
+    if not synopsis or has_todo(synopsis):
+        print(f"  warning: {where} not published (no synopsis yet)")
+        return False
+    todo_fields = [key for key in required if has_todo(entry[key])]
+    if todo_fields:
+        print(f"  warning: {where} not published (TODO in {', '.join(todo_fields)})")
+        return False
+    if not ID_RE.match(str(entry["id"])):
+        raise BuildError(f"{where}: id must be a lowercase slug like 'sleeper-agents'")
+    return True
+
+
+def hide_todo_texts(entry: dict, where: str) -> dict:
+    """Optional texts (why_it_matters, my_opinion) are hidden while they hold a TODO."""
+    entry = dict(entry)
+    for key in OPTIONAL_TEXT:
+        if has_todo(entry.get(key)):
+            print(f"  warning: {where}: {key} still has a TODO, not shown")
+            entry[key] = None
+        else:
+            entry.setdefault(key, None)
+    return entry
 
 
 def load_entry_ids(path: Path) -> list[str]:
@@ -156,19 +197,8 @@ def load_papers(topics: set[str]) -> tuple[list[dict], list[dict]]:
     published = []
     for n, entry in enumerate(entries, start=1):
         where = f"data/papers.yaml entry {n} ({entry.get('id', 'no id')})"
-        missing = [key for key in PAPER_REQUIRED if entry.get(key) in (None, "", [])]
-        if missing:
-            raise BuildError(f"{where}: missing {', '.join(missing)}")
-        synopsis = entry.get("synopsis")
-        todo_fields = [key for key in PAPER_REQUIRED if has_todo(entry[key])]
-        if not synopsis or has_todo(synopsis):
-            print(f"  warning: {where} not published (no synopsis yet)")
+        if not publishable(entry, PAPER_REQUIRED, where):
             continue
-        if todo_fields:
-            print(f"  warning: {where} not published (TODO in {', '.join(todo_fields)})")
-            continue
-        if not ID_RE.match(entry["id"]):
-            raise BuildError(f"{where}: id must be a lowercase slug like 'sleeper-agents'")
         if entry["type"] not in PAPER_TYPES:
             raise BuildError(f"{where}: type must be one of {', '.join(PAPER_TYPES)}")
         if entry["difficulty"] not in DIFFICULTIES:
@@ -183,18 +213,55 @@ def load_papers(topics: set[str]) -> tuple[list[dict], list[dict]]:
             raise BuildError(f"{where}: start_here.stage {start_here.get('stage')!r} "
                              "is not in start_here_stages")
 
-        paper = dict(entry, year=int(entry["year"]))
-        for key in PAPER_OPTIONAL_TEXT:
-            if has_todo(paper.get(key)):
-                print(f"  warning: {where}: {key} still has a TODO, not shown")
-                paper[key] = None
-            else:
-                paper.setdefault(key, None)
+        paper = hide_todo_texts(entry, where)
+        paper["year"] = int(paper["year"])
         published.append(paper)
 
     # Newest first; alphabetical within a year.
     published.sort(key=lambda p: (-p["year"], p["title"].lower()))
     return published, stages
+
+
+def load_books() -> list[dict]:
+    """Validate data/books.yaml and return the shelves, each with its published books.
+
+    Same publishing rule as papers. Covers: `cover_id` becomes an image URL on
+    covers.openlibrary.org (by id, never by ISBN); without it the templates
+    draw a typographic cover. (Id uniqueness across both files is checked in
+    load_papers.)
+    """
+    if not BOOKS_FILE.exists():
+        return []
+    data = load_yaml(BOOKS_FILE) or {}
+    shelves = [dict(shelf, books=[]) for shelf in (data.get("shelves") or [])]
+    by_id = {shelf["id"]: shelf for shelf in shelves}
+
+    for n, entry in enumerate(data.get("entries") or [], start=1):
+        where = f"data/books.yaml entry {n} ({entry.get('id', 'no id')})"
+        if not publishable(entry, BOOK_REQUIRED, where):
+            continue
+        if entry["shelf"] not in by_id:
+            raise BuildError(f"{where}: shelf {entry['shelf']!r} is not in `shelves`")
+        if not OLID_RE.match(str(entry["olid"])):
+            raise BuildError(f"{where}: olid must be an Open Library edition id like OL12345678M")
+        check_url(entry["url"], where)
+        if entry.get("free_url"):
+            check_url(entry["free_url"], where)
+        cover_id = entry.get("cover_id")
+        if cover_id is not None and not str(cover_id).isdigit():
+            raise BuildError(f"{where}: cover_id must be a number (the Open Library cover id)")
+
+        book = hide_todo_texts(entry, where)
+        book["year"] = int(book["year"])
+        book.setdefault("subtitle", None)
+        book.setdefault("edition", None)
+        book.setdefault("free_url", None)
+        book["cover"] = (COVERS_URL.format(cover_id=cover_id, size="M") if cover_id else None)
+        book["cover_large"] = (COVERS_URL.format(cover_id=cover_id, size="L") if cover_id else None)
+        book["shelf_title"] = by_id[entry["shelf"]]["title"]
+        book["shelf_index"] = shelves.index(by_id[entry["shelf"]])
+        by_id[entry["shelf"]]["books"].append(book)
+    return shelves
 
 
 # ---------------------------------------------------------------------------
@@ -305,6 +372,8 @@ def build() -> None:
     status = load_json(STATUS_FILE, {})
     entries = load_news()
     papers, _start_here_stages = load_papers(set(sources["topics"]))
+    shelves = load_books()
+    books = [book for shelf in shelves for book in shelf["books"]]
     env = make_env(site, status)
 
     # Start from an empty _site/ so deleted pages don't linger.
@@ -343,7 +412,12 @@ def build() -> None:
     # --- Papers and the visitor's shelf ---------------------------------------
     render(env, "papers.html", "papers/index.html",
            papers=papers, filters=paper_filter_options(papers))
-    render(env, "my_shelf.html", "my-shelf/index.html", papers=papers)
+    render(env, "my_shelf.html", "my-shelf/index.html", papers=papers, books=books)
+
+    # --- Library: the shelves, and one page per book --------------------------
+    render(env, "library.html", "library/index.html", shelves=shelves, books=books)
+    for book in books:
+        render(env, "book.html", f"library/{book['id']}/index.html", book=book)
 
     # --- About and 404 --------------------------------------------------------
     render(env, "about.html", "about/index.html",
@@ -352,8 +426,8 @@ def build() -> None:
 
     check_internal_links(site["base_path"])
     pages = sum(1 for _ in OUTPUT_DIR.rglob("*.html"))
-    print(f"Built {pages} pages from {len(entries)} news entries and {len(papers)} papers"
-          f" into {OUTPUT_DIR.name}/ (internal links OK)")
+    print(f"Built {pages} pages from {len(entries)} news entries, {len(papers)} papers"
+          f" and {len(books)} books into {OUTPUT_DIR.name}/ (internal links OK)")
 
 
 # ---------------------------------------------------------------------------

@@ -489,3 +489,80 @@ Created: `data/papers.yaml` (renamed from `data/library.yaml`),
   `my_opinion` where I want.
 - Verify the DeepMind specification gaming post from another network.
 - Stage 4b: books (list approved; sceptical pick to confirm: *AI Snake Oil*).
+
+---
+
+## 2026-09-23 — Stage 4b: the Library of books
+
+**What I did**
+- I created `data/books.yaml` with six shelves and **19 books**, each checked
+  against the publisher's or author's page (title, subtitle, authors, edition,
+  publisher, year) and against Open Library for the edition record (OLID),
+  cover id and ISBN. I checked every cover image by eye on a contact sheet:
+  all 15 covers match the right book and edition (the 3rd, 4th and 2nd edition
+  covers show their edition). Four books have no cover on Open Library and get
+  a typographic one: *AI Snake Oil*, *Understanding Deep Learning*,
+  *Introduction to Probability* (2nd ed.) and *Automate the Boring Stuff* (3rd ed.).
+- The synopses are Claude's drafts, written from the verified sources, not
+  from publisher blurbs. `why_it_matters` and `my_opinion` are empty for me.
+- `build_site.py` validates `books.yaml` with the same publishing rule as
+  papers (plus shelf, OLID and cover id checks) and renders `library/`, one
+  page per book (`library/<id>/`) and the books part of My shelf.
+- New `static/js/library.js`: cover fallback, *To read / Read* badges on the
+  shelf, and the book card in a native `<dialog>`.
+- Library joined the menu; Papers links to it; About credits Open Library and
+  explains that marks stay in the visitor's browser.
+
+**What I decided and why**
+- **Dropped *Life 3.0*** (Tegmark, 2017). I only found it on Open Library: the
+  Penguin Random House page returned 404 and the author's MIT page didn't
+  respond, so I couldn't check it against an official source. The AI, Society
+  & Governance shelf has two books for now.
+- **Hands-On ML: the 3rd edition (2022)** of *…with Scikit-Learn, Keras, and
+  TensorFlow*. Géron's 2025 *…with Scikit-Learn and PyTorch* is a new book (its
+  own 1st edition, per his repository), not a new edition of the one I approved.
+- **"Most recent edition" = the latest numbered or revised edition**, not the
+  latest paperback reprint. `year` is that edition's year.
+- **`free_url` on 7 books**, only where the author or publisher offers the book
+  free themselves: *Deep Learning*, *Understanding Deep Learning*, Sutton &
+  Barto, *Mathematics for ML*, *Linear Algebra Done Right* (open access, CC
+  BY-NC), *Automate the Boring Stuff* (CC licence) and *Rationality: From AI to
+  Zombies* (linked as "Read Online" by MIRI). **Not** for Blitzstein & Hwang:
+  its free PDF is on a Google Drive I couldn't confirm as official (Harvard's
+  course page blocked my requests).
+- **Covers by cover id only**, as the image `src` from covers.openlibrary.org
+  (no downloads, no ISBN lookups). The typographic cover is always drawn
+  underneath, so a missing or failed image never leaves a hole.
+- **One `<dialog>` + `<template>` cards + a real page per book:** without
+  JavaScript the link just goes to the book page; with it, the same card
+  opens over the shelf. Native `<dialog>` gives focus handling, `Esc` and an
+  inert background for free.
+- **The same dialog on My shelf**, where books appear as a shelf of covers and
+  papers as a list.
+
+**How I tested it**
+- Headless Edge against the local preview (24 checks): 19 books on 6 shelves,
+  15 covers loaded, typographic cover where expected, dialog opens without
+  leaving the page, is labelled by the title, takes focus, shows the buttons;
+  marking *Read* adds the badge; the × and a backdrop click close it and focus
+  returns to the book; the free link appears only where set; a broken image
+  falls back to the typographic cover; My shelf shows books and papers in
+  their groups and moves a book when its status changes in the dialog; the
+  book page shows the saved mark. The Stage 4a tests (papers, export, import)
+  still pass. No page scrolls horizontally at 360 px.
+- The tests found one real bug: reopening a book right after closing the
+  dialog left it empty, because the `close` event arrives late. Fixed.
+
+**Files created / changed**
+Created: `data/books.yaml`, `templates/library.html`, `templates/book.html`,
+`templates/_book_dialog.html`, `static/js/library.js`. Changed:
+`scripts/build_site.py`, `templates/_macros.html`, `templates/my_shelf.html`,
+`templates/papers.html`, `templates/about.html`, `static/js/tracker.js`,
+`static/js/my-shelf.js`, `static/css/style.css`, `config/site.yaml`,
+`CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Me: review the 12 paper synopses (table in chat) and the 19 book synopses.
+- Maybe find a verifiable third book for AI, Society & Governance, or retry
+  *Life 3.0* from another network.
+- Stage 5: Start Here + My Own Path (timeline, reading log, Bookshelf).

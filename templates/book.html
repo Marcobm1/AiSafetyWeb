@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{# One page per book: the same card as the Library's <dialog>. It's what
+   visitors without JavaScript see, and a link that can be shared. #}
+{% block title %}{{ book.title }} · Library · {{ site.title }}{% endblock %}
+{% block description %}{{ book.title }}{% if book.subtitle %}: {{ book.subtitle }}{% endif %}, by {{ book.authors | join(", ") }}.{% endblock %}
+
+{% block content %}
+<p class="breadcrumb"><a href="{{ url('library/') }}">Library</a> · {{ book.shelf_title }}</p>
+{{ m.book_card(book, "page", "h1") }}
+<p class="note credit">
+  Cover and book details from <a href="https://openlibrary.org/" rel="noopener">Open Library</a>.
+</p>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+<script src="{{ url('static/js/library.js') }}" defer></script>
+{% endblock %}

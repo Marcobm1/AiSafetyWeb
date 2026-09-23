@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}Library · {{ site.title }}{% endblock %}
+{% block description %}Books for AI Safety and for learning about this world in general, on themed shelves.{% endblock %}
+
+{% block content %}
+<h1>Library</h1>
+<p class="lede">
+  Books for AI Safety and for learning about this world in general, on themed
+  shelves. {{ books | length }} books. Open one to read a short synopsis.
+  Papers, essays and reports are in <a href="{{ url('papers/') }}">Papers</a>.
+</p>
+<p class="note" data-track-hint hidden>
+  Mark books as <em>To read</em> or <em>Read</em>; they are collected in
+  <a href="{{ url('my-shelf/') }}">My shelf</a>. Your marks are saved only in this browser.
+</p>
+
+{% for shelf in shelves if shelf.books %}
+<section class="shelf" aria-labelledby="shelf-{{ shelf.id }}">
+  <h2 id="shelf-{{ shelf.id }}">{{ shelf.title }} <span class="count">{{ shelf.books | length }}</span></h2>
+  <ul class="bookshelf">
+    {% for b in shelf.books %}{{ m.book_tile(b) }}{% endfor %}
+  </ul>
+</section>
+{% endfor %}
+
+<p class="note credit">
+  Covers and book details from <a href="https://openlibrary.org/" rel="noopener">Open Library</a>,
+  the Internet Archive's open catalogue of books. Books without a cover there get a plain typographic one.
+</p>
+
+{# The book cards for the <dialog>. <template> content is not part of the page
+   until library.js copies one into the dialog. #}
+{% for b in books %}
+<template data-card="{{ b.id }}">{{ m.book_card(b, "dialog", "h2") }}</template>
+{% endfor %}
+{% include "_book_dialog.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+<script src="{{ url('static/js/library.js') }}" defer></script>
+{% endblock %}

@@ -1,9 +1,10 @@
-// My shelf page: the visitor's marked entries, plus export and import.
+// My shelf page: the visitor's marked books and papers, plus export and import.
 //
-// The page contains a hidden catalogue of every published entry
-// ([data-shelf-catalog]). This script moves the marked ones into the
-// "To read" and "Read" lists (and back when a mark is removed), so there is
-// never a second copy of an item on the page.
+// The page contains a hidden catalogue of every published book and paper
+// ([data-shelf-catalog], each item with data-id and data-kind). This script
+// moves the marked ones into the "To read" and "Read" sections, books into a
+// shelf of covers and papers into a list (and back when a mark is removed), so
+// there is never a second copy of an item on the page.
 //
 // Export file format (also accepted by Import):
 //   { "format": "aisafetyweb-reading", "version": 1,
@@ -25,28 +26,41 @@
   // Remember each item's place in the catalogue, to keep the site's order.
   var items = {};
   var order = [];
-  catalog.querySelectorAll("[data-id]").forEach(function (item) {
+  catalog.querySelectorAll(":scope > [data-id]").forEach(function (item) {
     items[item.dataset.id] = item;
     order.push(item.dataset.id);
   });
 
-  function render() {
-    var lists = {
-      "to-read": shelf.querySelector('[data-shelf-list="to-read"]'),
-      "read": shelf.querySelector('[data-shelf-list="read"]')
-    };
-    var counts = { "to-read": 0, "read": 0 };
+  var STATUSES = ["to-read", "read"];
+  var KINDS = ["book", "paper"];
 
-    order.forEach(function (id) {
-      var status = store.get(id);
-      var target = lists[status] || catalog;
-      if (lists[status]) counts[status]++;
-      target.appendChild(items[id]);  // appendChild moves the element
+  function list(status, kind) {
+    return shelf.querySelector('[data-shelf-list="' + status + '"][data-kind="' + kind + '"]');
+  }
+
+  function render() {
+    var counts = {};
+    STATUSES.forEach(function (status) {
+      KINDS.forEach(function (kind) { counts[status + "-" + kind] = 0; });
     });
 
-    Object.keys(lists).forEach(function (status) {
-      shelf.querySelector('[data-shelf-count="' + status + '"]').textContent = counts[status];
-      shelf.querySelector('[data-shelf-empty="' + status + '"]').hidden = counts[status] > 0;
+    order.forEach(function (id) {
+      var item = items[id];
+      var status = store.get(id);
+      var target = status ? list(status, item.dataset.kind) : null;
+      if (target) counts[status + "-" + item.dataset.kind]++;
+      (target || catalog).appendChild(item);  // appendChild moves the element
+    });
+
+    STATUSES.forEach(function (status) {
+      var total = 0;
+      KINDS.forEach(function (kind) {
+        var n = counts[status + "-" + kind];
+        shelf.querySelector('[data-shelf-group="' + status + "-" + kind + '"]').hidden = n === 0;
+        total += n;
+      });
+      shelf.querySelector('[data-shelf-count="' + status + '"]').textContent = total;
+      shelf.querySelector('[data-shelf-empty="' + status + '"]').hidden = total > 0;
     });
 
     // Marks for entries that are no longer published (removed, or not yet

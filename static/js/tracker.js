@@ -34,5 +34,8 @@
   });
 
   store.subscribe(refresh);
+  // Other scripts call this after adding buttons to the page (e.g. library.js
+  // when it opens a book card in the dialog).
+  window.AiSafetyWeb.refreshTracker = refresh;
   refresh();
 })();

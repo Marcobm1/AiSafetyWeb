@@ -34,6 +34,22 @@
   {% endif %}
 </ul>
 
+<h2>Papers and the Library</h2>
+<p>
+  <a href="{{ url('papers/') }}">Papers</a> and the <a href="{{ url('library/') }}">Library</a>
+  are chosen by hand. Every entry is checked against its original source, and
+  each synopsis is a short summary written for this site, never text copied from
+  the publisher. Book covers and details come from
+  <a href="https://openlibrary.org/" rel="noopener">Open Library</a>, the
+  Internet Archive's open catalogue of books; many thanks to them. Links marked
+  "Free version (official)" point only to free editions published by the
+  authors or publishers themselves.
+</p>
+<p>
+  Your <em>To read</em> / <em>Read</em> marks (<a href="{{ url('my-shelf/') }}">My shelf</a>)
+  are stored only in your browser; this site has no accounts and collects no data.
+</p>
+
 {% if status.sources is defined %}
 <h2>Last fetch</h2>
 <p>

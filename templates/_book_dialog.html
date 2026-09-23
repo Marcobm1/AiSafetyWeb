@@ -1,0 +1,10 @@
+{# The single <dialog> that shows a book card (static/js/library.js fills it).
+   Native <dialog> opened with showModal(): focus moves inside, the rest of the
+   page is inert, and Esc closes it. The close button submits a
+   method="dialog" form, which closes it without any script. #}
+<dialog class="book-dialog" data-book-dialog aria-label="Book details">
+  <form method="dialog" class="book-dialog-close">
+    <button type="submit" aria-label="Close" data-dialog-close>×</button>
+  </form>
+  <div data-book-dialog-body></div>
+</dialog>
