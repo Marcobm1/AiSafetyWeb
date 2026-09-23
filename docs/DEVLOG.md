@@ -1024,3 +1024,12 @@ Created: `.github/workflows/update-and-deploy.yml`, `static/js/stale.js`.
 Changed: `scripts/fetch_news.py`, `templates/base.html`, `static/css/style.css`,
 `config/site.yaml`, `data/papers.yaml`, `CLAUDE.md`,
 `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Google DeepMind's own feed (same day)**
+- I tested `https://deepmind.google/blog/rss.xml` from GitHub Actions with
+  the new `check_feed` field: OK, 100 items. It has five times as many items
+  as the `blog.google` DeepMind category and includes posts that one leaves
+  out, so `config/sources.yaml` now uses it. No DeepMind entries were saved
+  yet (the topic filter had dropped all of them), so the switch can't create
+  duplicates. From my work network this source will show as failing in local
+  runs; the daily run is on GitHub's servers.

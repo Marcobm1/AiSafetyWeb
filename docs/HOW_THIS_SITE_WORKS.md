@@ -716,10 +716,14 @@ Every URL was checked (HTTP 200 + a valid feed) before adding it.
   Research, the UK AI Security Institute and the CAIS blog (CAIS is covered by
   its newsletter). Anthropic's **interpretability** research *does* have a feed
   (Transformer Circuits Thread), so that one is in.
-- **Google DeepMind:** its own feed (`deepmind.google/blog/rss.xml`) fails from
-  my work network (TLS handshake blocked), so for now I use the one on
-  `blog.google`. In Stage 8 I'll test the DeepMind feed from GitHub Actions and
-  switch to it if it works there.
+- **Google DeepMind:** I use its own feed, `deepmind.google/blog/rss.xml`. It
+  fails from my work network (TLS handshake blocked), so until Stage 8 I used
+  the one on `blog.google`. In Stage 8 I tested it from GitHub Actions
+  (`--check-feed`: 100 items, OK) and from home: it has five times as many
+  items as `blog.google`'s DeepMind category and includes DeepMind-only posts
+  that `blog.google` leaves out, so I switched. From my work computer the
+  `--dry-run` will show this one source as failing; that's expected, the daily
+  run happens on GitHub's servers.
 - **`default_topics`:** a source can add fixed topics to all its entries. I use
   it for Transformer Circuits, whose titles ("HeadVis") often contain no keyword.
 

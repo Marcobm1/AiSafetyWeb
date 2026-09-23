@@ -99,7 +99,10 @@ sources:
 
   - id: google-deepmind
     name: Google DeepMind
-    url: https://blog.google/technology/google-deepmind/rss/
+    # DeepMind's own blog feed (checked from GitHub Actions on 2026-09-23 with
+    # fetch_news.py --check-feed). It fails only from my work network; until
+    # Stage 8 I used https://blog.google/technology/google-deepmind/rss/.
+    url: https://deepmind.google/blog/rss.xml
     require_topic: true
 
 # arXiv: one API request per run (see https://info.arxiv.org/help/api/tou.html).
