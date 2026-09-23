@@ -199,6 +199,28 @@ entries:
       stagnation. The book ends with ten steps towards containing them.
     added: 2026-09-23
 
+  - id: life-3-0
+    title: "Life 3.0"
+    subtitle: "Being Human in the Age of Artificial Intelligence"
+    authors: ["Max Tegmark"]
+    year: 2017
+    publisher: "Alfred A. Knopf"
+    shelf: ai-society
+    olid: OL26930664M
+    cover_id: 15104654
+    isbn: "9781101946596"
+    url: https://openlibrary.org/books/OL26930664M
+    synopsis: >
+      Max Tegmark, an MIT physicist and co-founder of the Future of Life
+      Institute, looks at how AI could change life on Earth, from near-term
+      issues such as jobs, autonomous weapons and the law to the possible
+      arrival of general intelligence. He describes a range of futures after
+      superintelligence, from utopias to human extinction, and argues that the
+      danger lies less in malevolent machines than in AI whose goals are not
+      aligned with ours. He also discusses what could be done now to steer
+      towards a good outcome.
+    added: 2026-09-23
+
   # --- Machine Learning & Deep Learning --------------------------------------------
   - id: deep-learning-goodfellow
     title: "Deep Learning"
@@ -240,25 +262,29 @@ entries:
     added: 2026-09-23
 
   - id: hands-on-machine-learning
-    title: "Hands-On Machine Learning with Scikit-Learn, Keras, and TensorFlow"
+    title: "Hands-On Machine Learning with Scikit-Learn and PyTorch"
     subtitle: "Concepts, Tools, and Techniques to Build Intelligent Systems"
     authors: ["Aurélien Géron"]
-    edition: "3rd edition"
-    year: 2022
+    edition: "1st edition"
+    year: 2025
     publisher: "O'Reilly Media"
     shelf: ml-dl
-    olid: OL38327656M
-    cover_id: 15225435
-    isbn: "9781098125974"
-    url: https://openlibrary.org/books/OL38327656M
+    # Print edition (ISBN as on the author's page, homl.info). Its Open Library
+    # record has no cover; the cover id comes from the same edition's other
+    # Open Library record (OL60572832M, ISBN 9798341607972).
+    olid: OL60898555M
+    cover_id: 15138297
+    isbn: "9798341607989"
+    url: https://openlibrary.org/books/OL60898555M
     synopsis: >
-      A practical guide to machine learning in Python. The first part uses
-      Scikit-Learn for classical methods such as regression, classification,
-      decision trees, ensembles, dimensionality reduction and clustering; the
-      second uses Keras and TensorFlow for neural networks, including computer
-      vision, sequence models, transformers, generative models and
-      reinforcement learning. Each chapter comes with Jupyter notebooks and
-      exercises.
+      A practical guide to machine learning in Python, now built on PyTorch,
+      the framework most AI research uses. The first part uses Scikit-Learn for
+      classical methods such as regression, classification, decision trees,
+      ensembles, dimensionality reduction and clustering; the second builds
+      neural networks with PyTorch, from training deep networks and computer
+      vision to transformers for language and vision, generative models
+      (autoencoders, GANs, diffusion) and reinforcement learning. Each chapter
+      comes with Jupyter notebooks and exercises.
     added: 2026-09-23
 
   - id: reinforcement-learning-sutton-barto
@@ -336,6 +362,7 @@ entries:
     olid: OL34656520M
     isbn: "9781138369917"
     url: https://openlibrary.org/books/OL34656520M
+    free_url: http://probabilitybook.net
     synopsis: >
       An introductory probability textbook developed from Harvard's Statistics
       110 course. It puts intuition and problem-solving strategies first,

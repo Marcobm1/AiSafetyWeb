@@ -26,7 +26,6 @@ topics:
 
 # Main menu, in order. The home page (Today) has no menu item: the site title
 # links to it. "My shelf" is a small separate link in the header (base.html).
-# Start Here and My Own Path are added when their pages exist (Stage 5).
 nav:
   - label: News
     path: news/
@@ -34,5 +33,9 @@ nav:
     path: papers/
   - label: Library
     path: library/
+  - label: Start Here
+    path: start-here/
+  - label: My Own Path
+    path: my-path/
   - label: About
     path: about/

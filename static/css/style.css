@@ -165,3 +165,65 @@ details > summary h2 { display: inline; }
 .book-dialog-close button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
 .credit { margin-top: 2rem; font-size: .85rem; }
 [data-shelf-group] h3 { font-size: 1rem; margin: 1rem 0 .6rem; color: var(--muted); }
+
+/* --- Stage 5: Start Here and My Own Path ------------------------------------ */
+.toc ol, .toc ul { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; padding: 0; margin: 1rem 0; list-style: none; font-size: .9rem; }
+.toc ol { counter-reset: toc; }
+.toc ol li { counter-increment: toc; }
+.toc ol li::before { content: counter(toc) ". "; color: var(--muted); }
+
+/* Start Here */
+.path-stage h2 { display: flex; align-items: baseline; gap: .6rem; }
+.step {
+  display: inline-grid; place-items: center; flex: none; width: 1.8rem; height: 1.8rem;
+  border-radius: 50%; background: var(--link); color: #fff; font-size: .95rem;
+}
+.stage-intro { color: var(--muted); }
+.path-list { list-style: none; padding: 0; margin: 0; counter-reset: path; }
+.path-item { position: relative; padding: .8rem 0 .8rem 2.2rem; border-top: 1px solid var(--line); counter-increment: path; }
+.path-item::before { content: counter(path); position: absolute; left: .4rem; top: .85rem; font-weight: 700; color: var(--muted); }
+.why-here { margin: .4rem 0 0; }
+.path-synopsis { margin-top: .4rem; font-size: .95rem; }
+
+/* Timeline: a vertical line with one dot per stage. */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1.4rem; border-left: 2px solid var(--line); }
+.timeline-item { position: relative; margin: 0 0 1rem; }
+.timeline-item::before {
+  content: ""; position: absolute; left: calc(-1.4rem - 7px); top: .45rem;
+  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--link);
+}
+.timeline-completed::before { background: var(--link); }
+.timeline-item summary { display: flex; flex-direction: column; gap: .15rem; list-style: none; cursor: pointer; }
+.timeline-item summary::-webkit-details-marker { display: none; }
+.timeline-item summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
+.timeline-dates { font-size: .85rem; color: var(--muted); }
+.timeline-title { font-weight: 700; font-size: 1.05rem; }
+.timeline-title::after { content: " ▸"; color: var(--muted); font-weight: 400; }
+.timeline-item details[open] .timeline-title::after { content: " ▾"; }
+.duration { display: block; height: 6px; margin-top: .3rem; background: var(--tag-bg); border-radius: 3px; max-width: 20rem; }
+.duration-bar { display: block; height: 100%; background: var(--link); border-radius: 3px; }
+.timeline-in-progress .duration-bar { opacity: .55; }
+.timeline-body { padding: .3rem 0 0; }
+.timeline-body p { margin: .3rem 0; }
+.status-in-progress { border-style: dashed; }
+
+/* Reading log */
+.counters { margin: .5rem 0 1rem; }
+.month-chart { margin: 1rem 0 1.5rem; }
+.month-chart figcaption { font-weight: 600; font-size: .9rem; margin-bottom: .4rem; }
+.month-chart ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .3rem; }
+.month-chart li { display: grid; grid-template-columns: 8.5rem 1fr 2rem; align-items: center; gap: .6rem; font-size: .85rem; }
+.month-chart-label { color: var(--muted); }
+.month-chart-track { display: block; height: 10px; }
+.month-chart-bar { display: block; height: 100%; min-width: 2px; background: var(--link); border-radius: 0 4px 4px 0; }
+.month-chart-value { font-variant-numeric: tabular-nums; }
+.log-month { border-top: 1px solid var(--line); padding: .3rem 0; }
+.log-month summary h3 { display: inline; font-size: 1.05rem; }
+.log-list { list-style: none; padding: 0; margin: .4rem 0 .6rem; }
+.log-entry { padding: .45rem 0; display: flex; flex-direction: column; gap: .1rem; }
+.log-title { font-weight: 600; text-decoration: none; }
+.log-title:hover { text-decoration: underline; }
+.log-notes { margin: .2rem 0 0; }
+@media (max-width: 34rem) {
+  .month-chart li { grid-template-columns: 6.5rem 1fr 1.6rem; }
+}

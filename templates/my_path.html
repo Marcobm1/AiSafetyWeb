@@ -1,0 +1,168 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}My Own Path · {{ site.title }}{% endblock %}
+{% block description %}My public learning log in AI Safety: the courses and projects I've done, everything I've read, and my bookshelf.{% endblock %}
+
+{# A book from my reading log. Library books open their card (dialog / page);
+   others link to their own URL. #}
+{% macro log_book(e) %}
+{% if e.book %}
+  {{ m.book_tile(e.book) }}
+{% else %}
+<li class="book">
+  <a class="book-link" href="{{ e.url | safe_url }}" rel="noopener">
+    <span class="cover cover-shelf-5">
+      <span class="cover-typo" aria-hidden="true">
+        <span class="cover-typo-title">{{ e.title }}</span>
+        {% if e.author %}<span class="cover-typo-author">{{ e.author }}</span>{% endif %}
+      </span>
+      {% if e.cover %}<img src="{{ e.cover | safe_url }}" alt="" loading="lazy" decoding="async" data-cover>{% endif %}
+    </span>
+    <span class="book-caption">
+      <span class="book-title">{{ e.title }}</span>
+      {% if e.author %}<span class="book-author">{{ e.author }}</span>{% endif %}
+    </span>
+  </a>
+</li>
+{% endif %}
+{% endmacro %}
+
+{% block content %}
+<h1>My Own Path</h1>
+<p class="lede">
+  My public learning log in AI Safety: the courses, projects and milestones on
+  my way, everything I read, and the books on my shelf. I update it by hand as
+  I go.
+</p>
+<nav class="toc" aria-label="On this page">
+  <ul>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#reading-log">Reading log</a></li>
+    <li><a href="#bookshelf">Bookshelf</a></li>
+  </ul>
+</nav>
+
+{# --- Timeline --------------------------------------------------------------- #}
+<section id="timeline" aria-labelledby="timeline-title">
+  <h2 id="timeline-title">Timeline</h2>
+  <p class="note">Newest first. Open a stage to see its details. The bar shows how long it took.</p>
+  <ol class="timeline">
+    {% for t in path.timeline %}
+    <li class="timeline-item timeline-{{ t.status }}" id="timeline-{{ t.id }}">
+      <details>
+        <summary>
+          <span class="timeline-dates">
+            <time datetime="{{ t.start.isoformat() }}">{{ t.start.strftime("%d %b %Y") }}</time>
+            {% if t.end %}– <time datetime="{{ t.end.isoformat() }}">{{ t.end.strftime("%d %b %Y") }}</time>
+            {% elif t.status == "in-progress" %}– now{% endif %}
+          </span>
+          <span class="timeline-title">{{ t.title }}</span>
+          <span class="entry-meta">
+            <span class="label">{{ timeline_types[t.type] }}</span>
+            <span class="label status-{{ t.status }}">{{ timeline_statuses[t.status] }}</span>
+            {% if t.type != "milestone" %}<span>{{ t.days }} day{{ "s" if t.days != 1 }}</span>{% endif %}
+          </span>
+          {% if t.type != "milestone" %}
+          <span class="duration" aria-hidden="true"><span class="duration-bar" style="width: {{ t.bar }}%"></span></span>
+          {% endif %}
+        </summary>
+        <div class="timeline-body">
+          {% if t.provider %}<p>{{ t.provider }}{% if t.url %} · <a href="{{ t.url | safe_url }}" rel="noopener">course page</a>{% endif %}</p>
+          {% elif t.url %}<p><a href="{{ t.url | safe_url }}" rel="noopener">Link</a></p>{% endif %}
+          {% if t.notes %}<p class="timeline-notes">{{ t.notes }}</p>{% endif %}
+          {% if t.readings %}<p><a href="#reading-log">{{ t.readings }} reading{{ "s" if t.readings != 1 }}</a> in the reading log.</p>{% endif %}
+        </div>
+      </details>
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+
+{# --- Reading log -------------------------------------------------------------- #}
+<section id="reading-log" aria-labelledby="reading-log-title">
+  <h2 id="reading-log-title">Reading log</h2>
+  {% if path.total %}
+  <p class="counters">
+    <strong>{{ path.total }}</strong> reading{{ "s" if path.total != 1 }} in
+    {{ path.by_month | length }} month{{ "s" if path.by_month | length != 1 }}:
+    {% for type, n in path.per_type %}{{ n }} {{ reading_types[type] | lower }}{{ "s" if n != 1 }}{{ ", " if not loop.last }}{% endfor %}.
+  </p>
+
+  {# Readings per month: one bar per month, the number written next to it, so
+     it reads without colour and without JavaScript. #}
+  <figure class="month-chart">
+    <figcaption>Readings per month</figcaption>
+    <ul>
+      {% for row in path.per_month %}
+      <li>
+        <span class="month-chart-label">{{ row.month | month_label }}</span>
+        <span class="month-chart-track"><span class="month-chart-bar" style="width: {{ row.bar }}%"></span></span>
+        <span class="month-chart-value">{{ row.count }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </figure>
+
+  <div data-filter-root>
+    <form class="filters" data-filters hidden>
+      {{ m.filter_select("type", "Type", "All types", path.per_type | map("first") | list, reading_types.get) }}
+      <output data-filter-count aria-live="polite"></output>
+    </form>
+    {% for month, items in path.by_month.items() %}
+    <details class="log-month" data-filter-group {% if loop.first %}open{% endif %}>
+      <summary><h3>{{ month | month_label }} <span class="count">{{ items | length }}</span></h3></summary>
+      <ul class="log-list">
+        {% for e in items %}
+        <li class="log-entry" data-filter-item data-type="{{ e.type }}">
+          <a class="log-title" href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a>
+          <span class="entry-meta">
+            {% if e.author %}<span>{{ e.author }}</span>{% endif %}
+            {% if e.source %}<span>{{ e.source }}</span>{% endif %}
+            <span class="label">{{ reading_types[e.type] }}</span>
+            {% if e.via %}<a href="#timeline-{{ e.via }}">via {{ e.via_title }}</a>{% endif %}
+            {% if e.archive_url %}<a href="{{ e.archive_url | safe_url }}" rel="noopener">archived copy</a>{% endif %}
+            {% if e.ref_link %}<a href="{{ url(e.ref_link) }}">on this site</a>{% endif %}
+          </span>
+          {% if e.notes %}<p class="log-notes">{{ e.notes }}</p>{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endfor %}
+    <p class="empty" data-filter-empty hidden>No readings of this type.</p>
+  </div>
+  {% else %}
+  <p class="empty">No readings logged yet.</p>
+  {% endif %}
+</section>
+
+{# --- Bookshelf ------------------------------------------------------------------- #}
+<section id="bookshelf" aria-labelledby="bookshelf-title">
+  <h2 id="bookshelf-title">Bookshelf</h2>
+  {% if path.reading_now or path.finished %}
+    {% if path.reading_now %}
+    <h3>Reading now</h3>
+    <ul class="bookshelf">{% for e in path.reading_now %}{{ log_book(e) }}{% endfor %}</ul>
+    {% endif %}
+    {% if path.finished %}
+    <h3>Finished</h3>
+    <ul class="bookshelf">{% for e in path.finished %}{{ log_book(e) }}{% endfor %}</ul>
+    {% endif %}
+  {% else %}
+  <p class="empty">No books here yet. The books I read will appear here, with my opinion of each.</p>
+  {% endif %}
+</section>
+
+{% for b in card_books %}
+<template data-card="{{ b.id }}">{{ m.book_card(b, "dialog", "h2") }}</template>
+{% endfor %}
+{% include "_book_dialog.html" %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/filters.js') }}" defer></script>
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+<script src="{{ url('static/js/library.js') }}" defer></script>
+{% endblock %}

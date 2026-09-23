@@ -11,6 +11,8 @@ What one build does:
        papers/index.html        my curated papers, essays, reports... (data/papers.yaml)
        library/index.html       the Library: books on shelves (data/books.yaml)
        library/<id>/index.html  one page per book (the card, for visitors without JS)
+       start-here/index.html    the Start Here reading path (start_here blocks in papers.yaml)
+       my-path/index.html       My Own Path: timeline, reading log, bookshelf (data/my_path/)
        my-shelf/index.html      the visitor's own "to read" / "read" marks
        about/index.html         what the site is + status of the last fetch
        404.html                 "page not found" (GitHub Pages serves it)
@@ -28,6 +30,7 @@ Usage (from the repository root, with the venv active):
 from __future__ import annotations
 
 import argparse
+import datetime as dt
 import functools
 import http.server
 import json
@@ -49,6 +52,8 @@ NEWS_DIR = ROOT / "data" / "news"
 STATUS_FILE = ROOT / "data" / "status.json"
 PAPERS_FILE = ROOT / "data" / "papers.yaml"
 BOOKS_FILE = ROOT / "data" / "books.yaml"
+TIMELINE_FILE = ROOT / "data" / "my_path" / "timeline.yaml"
+READING_LOG_FILE = ROOT / "data" / "my_path" / "reading_log.yaml"
 TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 OUTPUT_DIR = ROOT / "_site"
@@ -265,6 +270,223 @@ def load_books() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Start Here (the start_here blocks in data/papers.yaml)
+# ---------------------------------------------------------------------------
+
+def build_start_here(stages: list[dict], papers: list[dict]) -> list[dict]:
+    """The Start Here path: each stage with its published papers, in order.
+
+    A paper joins a stage through its own `start_here: {stage, order, note}`
+    block (the stage id is already checked in load_papers). A block whose
+    note is missing or still has a TODO is left out of the path (the paper
+    stays in Papers).
+    """
+    path = [dict(stage, entries=[]) for stage in stages]
+    by_id = {stage["id"]: stage for stage in path}
+    for paper in papers:
+        block = paper.get("start_here")
+        if not block:
+            continue
+        where = f"data/papers.yaml ({paper['id']}): start_here"
+        if not block.get("note") or has_todo(block["note"]) or has_todo(by_id[block["stage"]].get("intro")):
+            print(f"  warning: {where} not in the path (no note yet)")
+            continue
+        if not isinstance(block.get("order"), int):
+            raise BuildError(f"{where}: order must be a whole number")
+        stage = by_id[block["stage"]]
+        if any(e["start_here"]["order"] == block["order"] for e in stage["entries"]):
+            raise BuildError(f"{where}: two entries with order {block['order']} in stage {stage['id']!r}")
+        stage["entries"].append(paper)
+    for stage in path:
+        stage["entries"].sort(key=lambda p: p["start_here"]["order"])
+    return [stage for stage in path if stage["entries"]]
+
+
+# ---------------------------------------------------------------------------
+# My Own Path (data/my_path/): timeline, reading log, bookshelf
+# ---------------------------------------------------------------------------
+
+TIMELINE_TYPES = {"course": "Course", "project": "Project", "milestone": "Milestone"}
+TIMELINE_STATUSES = {"in-progress": "In progress", "completed": "Completed"}
+READING_TYPES = {"paper": "Paper", "report": "Report", "essay": "Essay",
+                 "article": "Article", "book": "Book", "resource": "Resource"}
+BOOK_STATUSES = ("reading", "finished")
+MONTH_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
+
+
+def as_date(value, where: str, field: str) -> dt.date:
+    """YAML reads 2026-09-07 as a date; anything else is a mistake."""
+    if isinstance(value, dt.date):
+        return value
+    raise BuildError(f"{where}: {field} must be a date like 2026-09-07, got {value!r}")
+
+
+def as_month(value, where: str, field: str) -> str:
+    """Months are written in quotes ("2026-09"); unquoted YAML may turn them into numbers."""
+    if not isinstance(value, str) or not MONTH_RE.match(value):
+        raise BuildError(f'{where}: {field} must be a month in quotes like "2026-09", got {value!r}')
+    return value
+
+
+def load_timeline(today: dt.date) -> list[dict]:
+    """Validate timeline.yaml; newest first, each stage with its duration in days.
+
+    Notes that still contain a TODO placeholder are not shown.
+    """
+    items = load_yaml(TIMELINE_FILE) or []
+    seen, timeline = set(), []
+    for n, item in enumerate(items, start=1):
+        where = f"data/my_path/timeline.yaml entry {n} ({item.get('id', 'no id')})"
+        for key in ("id", "type", "date", "title", "status"):
+            if not item.get(key):
+                raise BuildError(f"{where}: missing {key}")
+        if not ID_RE.match(str(item["id"])) or item["id"] in seen:
+            raise BuildError(f"{where}: id must be a unique lowercase slug")
+        seen.add(item["id"])
+        if item["type"] not in TIMELINE_TYPES:
+            raise BuildError(f"{where}: type must be one of {', '.join(TIMELINE_TYPES)}")
+        if item["status"] not in TIMELINE_STATUSES:
+            raise BuildError(f"{where}: status must be one of {', '.join(TIMELINE_STATUSES)}")
+        start = as_date(item["date"], where, "date")
+        end = as_date(item["completed"], where, "completed") if item.get("completed") else None
+        if end and end < start:
+            raise BuildError(f"{where}: completed is before date")
+        if item["status"] == "completed" and not end and item["type"] != "milestone":
+            raise BuildError(f"{where}: a completed stage needs `completed:`")
+        if item.get("url"):
+            check_url(item["url"], where)
+        stage = dict(item, start=start, end=end)
+        stage["days"] = ((end or max(today, start)) - start).days + 1
+        stage.setdefault("provider", None)
+        stage.setdefault("url", None)
+        stage["notes"] = None if has_todo(item.get("notes")) else item.get("notes")
+        if has_todo(item.get("notes")):
+            print(f"  warning: {where}: notes still have a TODO, not shown")
+        timeline.append(stage)
+    timeline.sort(key=lambda t: t["start"], reverse=True)
+    longest = max((t["days"] for t in timeline if t["type"] != "milestone"), default=1)
+    for stage in timeline:
+        # Width of the duration bar, relative to the longest stage (never invisible).
+        stage["bar"] = max(3, round(100 * stage["days"] / longest))
+    return timeline
+
+
+def load_reading_log(timeline: list[dict], papers: list[dict], books: list[dict]) -> list[dict]:
+    """Validate reading_log.yaml and resolve paper_ref / book_ref.
+
+    Every entry comes out with title, author (may be empty), source and url,
+    taken from papers.yaml / books.yaml when it has a ref, plus `ref_link`
+    (the entry on this site) and `via_title`.
+    """
+    data = load_yaml(READING_LOG_FILE) or {}
+    timeline_by_id = {t["id"]: t for t in timeline}
+    papers_by_id = {p["id"]: p for p in papers}
+    books_by_id = {b["id"]: b for b in books}
+    log = []
+    for n, item in enumerate(data.get("entries") or [], start=1):
+        where = f"data/my_path/reading_log.yaml entry {n} ({item.get('title') or item.get('paper_ref') or item.get('book_ref') or '?'})"
+        entry = dict(item)
+        if entry.get("type") not in READING_TYPES:
+            raise BuildError(f"{where}: type must be one of {', '.join(READING_TYPES)}")
+        is_book = entry["type"] == "book"
+
+        if is_book:
+            if entry.get("status") not in BOOK_STATUSES:
+                raise BuildError(f"{where}: a book needs status: reading or finished")
+            if entry["status"] == "finished" and not entry.get("month"):
+                raise BuildError(f'{where}: a finished book needs month: (the month I finished it)')
+            if entry.get("started"):
+                as_month(entry["started"], where, "started")
+        elif entry.get("status") or entry.get("started"):
+            raise BuildError(f"{where}: status/started are only for books")
+        if entry.get("month") is not None:
+            entry["month"] = as_month(entry["month"], where, "month")
+        elif not is_book:
+            raise BuildError(f"{where}: missing month")
+
+        if entry.get("via"):
+            if entry["via"] not in timeline_by_id:
+                raise BuildError(f"{where}: via {entry['via']!r} is not an id in timeline.yaml")
+            entry["via_title"] = timeline_by_id[entry["via"]]["title"]
+        else:
+            entry["via_title"] = None
+
+        entry["ref_link"], entry["book"] = None, None
+        if entry.get("paper_ref"):
+            paper = papers_by_id.get(entry["paper_ref"])
+            if not paper:
+                raise BuildError(f"{where}: paper_ref {entry['paper_ref']!r} is not a published entry of papers.yaml")
+            entry.update(title=paper["title"], author=", ".join(paper["authors"]),
+                         source=None, url=paper["url"], ref_link=f"papers/#paper-{paper['id']}")
+        elif entry.get("book_ref"):
+            if not is_book:
+                raise BuildError(f"{where}: book_ref is only for type: book")
+            book = books_by_id.get(entry["book_ref"])
+            if not book:
+                raise BuildError(f"{where}: book_ref {entry['book_ref']!r} is not a published book of books.yaml")
+            entry.update(title=book["title"], author=", ".join(book["authors"]),
+                         source=book["publisher"], url=book["url"],
+                         ref_link=f"library/{book['id']}/", book=book)
+        else:
+            for key in ("title", "source", "url"):
+                if not entry.get(key):
+                    raise BuildError(f"{where}: missing {key} (or a paper_ref / book_ref)")
+        check_url(entry["url"], where)
+        if entry.get("archive_url"):
+            check_url(entry["archive_url"], where)
+        for key in ("author", "archive_url", "via", "cover_id"):
+            entry.setdefault(key, None)
+        entry["notes"] = None if has_todo(entry.get("notes")) else entry.get("notes")
+        if is_book and not entry["book"]:
+            # A book that is not in the Library: its own (optional) cover id.
+            cover_id = entry.get("cover_id")
+            entry["cover"] = COVERS_URL.format(cover_id=cover_id, size="M") if cover_id else None
+        log.append(entry)
+    return log
+
+
+def month_range(first: str, last: str) -> list[str]:
+    """Every month from first to last, inclusive: ['2026-08', '2026-09', ...]."""
+    year, month = map(int, first.split("-"))
+    months = []
+    while f"{year:04d}-{month:02d}" <= last:
+        months.append(f"{year:04d}-{month:02d}")
+        year, month = (year + 1, 1) if month == 12 else (year, month + 1)
+    return months
+
+
+def build_my_path(timeline: list[dict], log: list[dict]) -> dict:
+    """Everything the My Own Path page needs, already grouped and counted."""
+    # The reading log lists what I have read: books still in progress only
+    # appear on the Bookshelf.
+    readings = [e for e in log if not (e["type"] == "book" and e["status"] == "reading")]
+    readings.sort(key=lambda e: e["month"], reverse=True)
+    by_month = group_by(readings, key=lambda e: e["month"])
+    per_month = []
+    if readings:
+        counts = {month: len(items) for month, items in by_month.items()}
+        months = month_range(min(counts), max(counts))
+        top = max(counts.values())
+        per_month = [{"month": m, "count": counts.get(m, 0),
+                      "bar": round(100 * counts.get(m, 0) / top)} for m in months]
+    per_type = [(t, sum(1 for e in readings if e["type"] == t))
+                for t in READING_TYPES if any(e["type"] == t for e in readings)]
+    for stage in timeline:
+        stage["readings"] = sum(1 for e in readings if e.get("via") == stage["id"])
+    books = [e for e in log if e["type"] == "book"]
+    return {
+        "timeline": timeline,
+        "by_month": by_month,
+        "per_month": per_month,
+        "per_type": per_type,
+        "total": len(readings),
+        "reading_now": [e for e in books if e["status"] == "reading"],
+        "finished": sorted((e for e in books if e["status"] == "finished"),
+                           key=lambda e: e["month"], reverse=True),
+    }
+
+
+# ---------------------------------------------------------------------------
 # Template helpers (available inside every template)
 # ---------------------------------------------------------------------------
 
@@ -313,6 +535,9 @@ def make_env(site: dict, status: dict) -> Environment:
         topic_label=lambda topic: site["topics"].get(topic, topic.title()),
         paper_types=PAPER_TYPES,
         difficulties=DIFFICULTIES,
+        reading_types=READING_TYPES,
+        timeline_types=TIMELINE_TYPES,
+        timeline_statuses=TIMELINE_STATUSES,
     )
     env.filters.update(
         safe_url=safe_external_url,
@@ -371,9 +596,12 @@ def build() -> None:
     sources = load_yaml(SOURCES_CONFIG)
     status = load_json(STATUS_FILE, {})
     entries = load_news()
-    papers, _start_here_stages = load_papers(set(sources["topics"]))
+    papers, start_here_stages = load_papers(set(sources["topics"]))
     shelves = load_books()
     books = [book for shelf in shelves for book in shelf["books"]]
+    start_here = build_start_here(start_here_stages, papers)
+    timeline = load_timeline(dt.datetime.now(timezone.utc).date())
+    my_path = build_my_path(timeline, load_reading_log(timeline, papers, books))
     env = make_env(site, status)
 
     # Start from an empty _site/ so deleted pages don't linger.
@@ -418,6 +646,12 @@ def build() -> None:
     render(env, "library.html", "library/index.html", shelves=shelves, books=books)
     for book in books:
         render(env, "book.html", f"library/{book['id']}/index.html", book=book)
+
+    # --- Start Here and My Own Path --------------------------------------------
+    render(env, "start_here.html", "start-here/index.html", stages=start_here)
+    # Library books on my Bookshelf open the same card as in the Library.
+    shelf_books = [e["book"] for e in my_path["reading_now"] + my_path["finished"] if e["book"]]
+    render(env, "my_path.html", "my-path/index.html", path=my_path, card_books=shelf_books)
 
     # --- About and 404 --------------------------------------------------------
     render(env, "about.html", "about/index.html",

@@ -566,3 +566,84 @@ Created: `data/books.yaml`, `templates/library.html`, `templates/book.html`,
 - Maybe find a verifiable third book for AI, Society & Governance, or retry
   *Life 3.0* from another network.
 - Stage 5: Start Here + My Own Path (timeline, reading log, Bookshelf).
+
+---
+
+## 2026-09-23 — Library adjustments and Stage 5: Start Here and My Own Path
+
+**Library adjustments**
+- **Introduction to Probability** now has `free_url: http://probabilitybook.net`.
+  Harvard's Stat 110 page blocks requests from my network (403), so I read
+  its Wayback Machine copy (2 Sep 2026), which says: "A free online version of
+  the second edition … is now available at http://probabilitybook.net".
+- **Life 3.0** (Tegmark) is back on AI, Society & Governance. I verified it on
+  Wikipedia (title, subtitle, Knopf, 2017, first edition, ISBN 9781101946596,
+  OCLC 973137375), which matches Open Library's Knopf record. The publisher's
+  and author's pages still don't answer from my network. I also added the
+  rule to `CLAUDE.md`: try another reliable source before dropping a book.
+- **Hands-On Machine Learning** is now the **PyTorch** book (1st edition,
+  O'Reilly, October 2025), because AI Safety research works mostly in PyTorch.
+  Verified on the author's page (homl.info: edition 1, released 10-2025, ISBN
+  9798341607989) and his repository (chapter list). The print record on Open
+  Library has no cover, so `cover_id` comes from the same edition's other
+  record; I checked the image. Same `id` as before.
+- The Library now has 20 books.
+
+**Stage 5: what I did**
+- **Start Here page** (`/start-here/`): stages in order, numbered readings,
+  "Why here" note, collapsible synopsis, *To read / Read* buttons with the same
+  ids as Papers. There was no provisional route in the repository (it was lost
+  with an earlier conversation), so Claude proposed one built from the 12
+  verified papers, and re-checked that all 12 original URLs still respond with
+  the right title. **The route is not in `papers.yaml` yet:** I review it
+  first. Until then the page says the path is being put together.
+- **My Own Path page** (`/my-path/`): Timeline (vertical, clickable
+  `<details>`, duration bars), Reading log (counters, readings-per-month chart,
+  type filter, grouped by month, "via" links to the timeline, archived copies)
+  and Bookshelf (reading now / finished, same covers and dialog as the Library).
+- **My 14 September readings** in `reading_log.yaml` (all `via: agi-strategy`,
+  no notes). None of them is in `papers.yaml`, so none uses `paper_ref`.
+- The menu is now News · Papers · Library · Start Here · My Own Path · About.
+- The build validates `timeline.yaml`, `reading_log.yaml` and the Start Here
+  blocks (section 3.1 of HOW_THIS_SITE_WORKS).
+
+**What I decided and why**
+- **`author` is optional in the reading log** when the organisation is the
+  author (METR's risk report, Epoch AI's pages). I didn't want to write
+  "METR" as an author just to fill a field.
+- **Timeline notes with `TODO` are hidden**, like every other placeholder: my
+  two course notes are still `TODO(Marco)`, so the stages show without notes.
+- **The chart is an HTML list of bars, not a charting library:** one series,
+  one colour, the number next to each bar, and every month between the first
+  and last shown (an empty month is a visible zero). It works without
+  JavaScript and with screen readers, and needs no legend.
+- **Books still being read are only on the Bookshelf**, not in the monthly log:
+  they have no finished month yet.
+- **The Vox article's `archive_url` (archive.ph) can't be checked from here:**
+  archive.ph is blocked in Spain (my network redirects it to a Ministry of
+  Culture block page), and Claude's own fetcher can't open it either. The
+  original Vox URL works (HTTP 200, same headline). I kept the link as given.
+
+**How I tested it**
+- Headless Edge against the local preview (19 checks): menu and current page,
+  timeline order and bars, no "TODO" on the page, 14 readings, counters, chart,
+  type filter (3 resources of 14), via and archive links, no `utm_`; Start
+  Here with the proposed route loaded from a temporary copy (4 stages, 12
+  readings, a mark set there shows in Papers). No horizontal scroll at 360 px.
+- Bookshelf and validation with temporary test data (never in my files): a
+  Library book being read, an own finished book with a cover, and the errors
+  (finished book without month, unknown `via`, unquoted month, `utm_` URL,
+  unknown `paper_ref`, `book_ref` on a non-book). The tests found one real bug
+  (a reading without `via` broke the build), now fixed.
+
+**Files created / changed**
+Created: `templates/start_here.html`, `templates/my_path.html`. Changed:
+`scripts/build_site.py`, `static/css/style.css`, `config/site.yaml`,
+`data/books.yaml`, `data/my_path/reading_log.yaml`, `CLAUDE.md`,
+`docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Me: approve or correct the Start Here route; then it goes into `papers.yaml`.
+- Me: replace the two `TODO(Marco)` timeline notes.
+- Check `https://archive.ph/9DCPq` from a network where archive.ph isn't blocked.
+- Stage 6: styles (serif, 680px column, light/dark).

@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}Start Here · {{ site.title }}{% endblock %}
+{% block description %}An ordered reading path for newcomers to AI Safety, in stages, with a note on why each reading sits where it does.{% endblock %}
+
+{% block content %}
+<h1>Start Here</h1>
+<p class="lede">
+  New to AI Safety? This is an ordered path through a few key readings, in
+  stages. Each one has a short note on why it sits at that point. Everything
+  here is also in <a href="{{ url('papers/') }}">Papers</a>, and there are
+  books in the <a href="{{ url('library/') }}">Library</a>.
+</p>
+<p class="note" data-track-hint hidden>
+  Mark readings as <em>To read</em> or <em>Read</em> to keep track of where you
+  are; they are collected in <a href="{{ url('my-shelf/') }}">My shelf</a>.
+  Your marks are saved only in this browser.
+</p>
+
+{% if stages %}
+<nav class="toc" aria-label="Stages">
+  <ol>
+    {% for stage in stages %}<li><a href="#stage-{{ stage.id }}">{{ stage.title }}</a></li>{% endfor %}
+  </ol>
+</nav>
+
+{% for stage in stages %}
+<section class="path-stage" id="stage-{{ stage.id }}" aria-labelledby="stage-{{ stage.id }}-title">
+  <h2 id="stage-{{ stage.id }}-title"><span class="step">{{ loop.index }}</span> {{ stage.title }}</h2>
+  {% if stage.intro %}<p class="stage-intro">{{ stage.intro }}</p>{% endif %}
+  <ol class="path-list">
+    {% for p in stage.entries %}
+    <li class="path-item" id="start-{{ p.id }}">
+      <h3 class="entry-title" id="start-{{ p.id }}-title"><a href="{{ p.url | safe_url }}" rel="noopener">{{ p.title }}</a></h3>
+      <p class="entry-meta">
+        <span>{{ m.authors(p.authors) }}</span>
+        <span>{{ p.year }}</span>
+        <span class="label">{{ paper_types[p.type] }}</span>
+        <span class="label">{{ difficulties[p.difficulty] }}</span>
+      </p>
+      <p class="why-here"><strong>Why here:</strong> {{ p.start_here.note }}</p>
+      <details class="path-synopsis">
+        <summary>Synopsis</summary>
+        <p class="synopsis">{{ p.synopsis }}</p>
+      </details>
+      {{ m.track_buttons(p.id, "start-" ~ p.id ~ "-title") }}
+    </li>
+    {% endfor %}
+  </ol>
+</section>
+{% endfor %}
+{% else %}
+<p class="empty">The reading path is being put together. Meanwhile, every reading is in
+  <a href="{{ url('papers/') }}">Papers</a>.</p>
+{% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+{% endblock %}

@@ -10,7 +10,9 @@
 #   status       books only: reading | finished
 #   started      books only, optional: YYYY-MM when I started it, in quotes
 #   title        exact title
-#   author       author(s), as one string ("Ajeya Cotra", "Hubinger et al.")
+#   author       author(s), as one string ("Ajeya Cotra", "Hubinger et al.");
+#                optional when the organisation itself is the author (METR,
+#                Epoch AI): then only `source` is shown
 #   source       publication or website ("Cold Takes", "arXiv", "The Guardian")
 #   url          link to the original, WITHOUT tracking parameters (utm_...)
 #   archive_url  optional: archived copy (for paywalled articles); the site
@@ -55,3 +57,115 @@
 #       What I took from it.
 
 entries:
+
+  # September 2026: readings from the AGI Strategy course (BlueDot Impact).
+  # No `author` for METR's and Epoch AI's own publications: the organisation
+  # is the source.
+  - month: "2026-09"
+    type: essay
+    title: "Personal Statement on AI Risk"
+    author: "Daniel Selsam"
+    source: "Google Docs"
+    url: https://docs.google.com/document/d/1NRSfwBrVGWkBE24zRKOeP_Ksmx8ZRLbIwsF1k8pjDfA/edit
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: essay
+    title: "Racing through a minefield: the AI deployment problem"
+    author: "Holden Karnofsky"
+    source: "Cold Takes"
+    url: https://www.cold-takes.com/racing-through-a-minefield-the-ai-deployment-problem/
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "The Scramble: getting in position to pace the frontier"
+    author: "Peter Wildeford"
+    source: "The Power Law"
+    url: https://blog.peterwildeford.com/p/the-scramble-getting-in-position
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: essay
+    title: "In search of a dynamist vision for safe superhuman AI"
+    author: "Helen Toner"
+    source: "Rising Tide"
+    url: https://helentoner.substack.com/p/dynamism-vs-stasis
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "It's practically impossible to run a big AI company ethically"
+    author: "Sigal Samuel"
+    source: "Vox (Future Perfect)"
+    url: https://www.vox.com/future-perfect/364384/its-practically-impossible-to-run-a-big-ai-company-ethically
+    archive_url: https://archive.ph/9DCPq
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "Seeking Stability in the Competition for AI Advantage"
+    author: "Iskander Rehman, Karl P. Mueller, Michael J. Mazarr"
+    source: "RAND"
+    url: https://www.rand.org/pubs/commentary/2025/03/seeking-stability-in-the-competition-for-ai-advantage.html
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "The Rise and Fall of Agent Civilizations"
+    author: "Dwarkesh Patel"
+    source: "Dwarkesh Podcast"
+    url: https://www.dwarkesh.com/p/openai-huggingface
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "Will we have AGI by 2030?"
+    author: "Benjamin Todd"
+    source: "80,000 Hours"
+    url: https://80000hours.org/ai/guide/when-will-agi-arrive/
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: report
+    title: "What will AI look like in 2030?"
+    author: "David Owen"
+    source: "Epoch AI"
+    url: https://epoch.ai/publications/what-will-ai-look-like-in-2030
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: report
+    title: "Frontier Risk Report (February to March 2026)"
+    source: "METR"
+    url: https://metr.org/blog/2026-05-19-frontier-risk-report/
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: article
+    title: "Measurements for understanding the pace of AI development inside frontier labs"
+    author: "Marina Favaro, Phillie Wright"
+    source: "Anthropic"
+    url: https://www.anthropic.com/institute/measuring-pace-of-ai-development
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: resource
+    title: "Trends in Artificial Intelligence"
+    source: "Epoch AI"
+    url: https://epoch.ai/trends
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: resource
+    title: "Epoch Capabilities Index (ECI)"
+    source: "Epoch AI"
+    url: https://epoch.ai/eci
+    via: agi-strategy
+
+  - month: "2026-09"
+    type: resource
+    title: "Benchmarks"
+    source: "Epoch AI"
+    url: https://epoch.ai/benchmarks/search
+    via: agi-strategy

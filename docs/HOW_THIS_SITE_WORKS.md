@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 4 complete: Papers, the Library of books, the reading tracker and My shelf with export/import, `promote_candidate.py`. Next: Stage 5 (Start Here and My Own Path). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 5 built: the Start Here page (its reading path is waiting for my approval) and My Own Path (timeline, reading log with my 14 September readings, bookshelf). Next: Stage 6 (styles). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -38,9 +38,9 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
 | **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
 | **Library** | Books only, on six themed shelves, each shown with its real cover (Open Library) or a typographic one. Clicking a book opens its card; each book also has its own page | `data/books.yaml`, which I edit by hand |
-| **Start Here** 🚧 5 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
-| **My Own Path** 🚧 5 | My public learning log: a **Timeline** of courses, projects and milestones, a **Reading log** grouped by month, and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
-| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers and the Library, and later in Start Here) | The visitor's own browser (localStorage) |
+| **Start Here** | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point (the page exists; the path goes live once I approve it) | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
+| **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Reading log** grouped by month (counters, type filter, readings-per-month chart) and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
+| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library and Start Here) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work | Template text |
 
@@ -120,9 +120,9 @@ dark-mode toggle and the reading tracker (My shelf).
 | `data/status.json` | Time of last run + status of each source | ✅ |
 | `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
 | `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (12 so far); also the Start Here stage list | ✅ |
-| `data/books.yaml` | Library: 19 books on six themed shelves | ✅ |
-| `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ data, 🚧 page in Stage 5 |
-| `data/my_path/reading_log.yaml` | My Own Path reading log (empty, format in comments) | ✅ data, 🚧 page in Stage 5 |
+| `data/books.yaml` | Library: 20 books on six themed shelves | ✅ |
+| `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ |
+| `data/my_path/reading_log.yaml` | My Own Path reading log (my 14 September readings) | ✅ |
 | `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
 | `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
@@ -250,13 +250,19 @@ entries:
 ```
 
 - **Edition:** always the most recent English edition. A new numbered or
-  revised edition counts (Géron's 3rd edition, Axler's 4th); a paperback
-  reprint of the same text doesn't. `year` is the year of the edition I list.
-  Géron's 2025 *…with Scikit-Learn and PyTorch* is a separate new book (its
-  1st edition), not a 4th edition of the TensorFlow one.
+  revised edition counts (Axler's 4th); a paperback reprint of the same text
+  doesn't. `year` is the year of the edition I list. For Géron I list the 2025
+  *…with Scikit-Learn and PyTorch* (a new book, 1st edition) instead of the
+  TensorFlow one, because AI Safety research works mostly in PyTorch.
 - **Verification:** title, subtitle, authors, publisher and year against the
-  publisher's or author's page; the OLID, cover id and ISBN on Open Library. A
-  book I can't check against an official page stays out.
+  publisher's or author's page, or another reliable source when those pages
+  can't be reached from my network (Wikipedia, WorldCat, or an archived copy
+  of the official page on the Wayback Machine); the OLID, cover id and ISBN on
+  Open Library. A book I can't check against any reliable source stays out.
+- **One edition, two Open Library records:** sometimes the print edition's
+  record has no cover but the ebook record of the same edition has one (Géron's
+  PyTorch book). Then `olid` and `isbn` are the print edition's and `cover_id`
+  comes from the other record, with a comment saying so.
 - **Covers** come straight from Open Library's Covers API as the image `src`:
   `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg` on the shelf and
   `-L.jpg` in the card. I never download them into the repo. I only use the
@@ -267,8 +273,9 @@ entries:
   The Library page, each book page and About credit Open Library.
 - **`free_url`** is shown as "Free version (official)". Only for versions the
   authors or publisher publish for free themselves (for example
-  deeplearningbook.org, or Axler's open-access 4th edition), never
-  unauthorised copies.
+  deeplearningbook.org, Axler's open-access 4th edition, or
+  probabilitybook.net, which Harvard's Stat 110 course page names as the free
+  online version of Blitzstein & Hwang), never unauthorised copies.
 - **The build checks** (and stops with a clear message otherwise): required
   fields, a slug `id`, a `shelf` from `shelves`, an `olid` like `OL…M`, a
   numeric `cover_id`, http(s) URLs without `utm_`, and ids unique across
@@ -432,11 +439,21 @@ entries:
   or the Library. A book I don't want in the public Library goes here with its
   own data and no `book_ref`.
 
-Rules the build script will check (Stage 5), failing with a clear message:
-`month` must look like `YYYY-MM`; `via` must be an `id` in `timeline.yaml`;
-`paper_ref` must be an `id` in `papers.yaml` and `book_ref` one in
-`books.yaml`; a finished book needs `month`; an entry without a ref needs
-`title`, `author`, `source` and `url`; no URL may contain `utm_` parameters.
+- **`author` is optional** when the organisation itself is the author (METR's
+  risk report, Epoch AI's data pages): then the site shows only `source`.
+
+Rules the build script checks, failing with a clear message: `type` must be
+one of the six types; `month` must be a quoted `"YYYY-MM"`; `via` must be an
+`id` in `timeline.yaml`; `paper_ref` must be a published entry of
+`papers.yaml` and `book_ref` a published book of `books.yaml` (and only on
+`type: book`); a book needs `status`, and a finished book needs `month`;
+`status` / `started` only on books; an entry without a ref needs `title`,
+`source` and `url`; no URL may contain `utm_` parameters.
+
+For the **timeline**, the build checks the `id` (unique slug), `type`,
+`status`, the dates (`completed` not before `date`; a completed course or
+project needs `completed`) and URLs. **Notes that still contain `TODO` are not
+shown**, so placeholders like my `TODO(Marco)` notes never go live.
 
 #### The visitor's marks (localStorage, never in the repo)
 
@@ -738,6 +755,8 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `papers/index.html` | `papers.html` | Papers: every published entry of `papers.yaml` (newest first) with synopsis, labels, filters and *To read / Read* buttons |
    | `library/index.html` | `library.html` | The Library: one shelf of covers per shelf in `books.yaml`, plus the book cards for the `<dialog>` |
    | `library/<id>/index.html` | `book.html` | One page per book with its full card: what visitors without JavaScript get, and a link that can be shared |
+   | `start-here/index.html` | `start_here.html` | Start Here: the stages in order, each reading numbered with its "Why here" note, synopsis (collapsible) and *To read / Read* buttons. While no stage has entries, a short "being put together" message |
+   | `my-path/index.html` | `my_path.html` | My Own Path: Timeline, Reading log and Bookshelf (section 6.7) |
    | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marked books (as a shelf) and papers (as a list), and export/import |
    | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) and the result of the last fetch (from `status.json`) |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
@@ -769,7 +788,7 @@ fetching, the home page still shows the latest batch instead of going empty.
   a shelf, a link to its page) and `book_card()` (the full card, used by the
   book page and the dialog). `_book_dialog.html` is the one `<dialog>` element.
 - The menu comes from `nav:` in `config/site.yaml`: News · Papers · Library ·
-  About for now; Start Here and My Own Path join it when their pages exist.
+  Start Here · My Own Path · About.
   **The site title is the link to the home page (Today)**, so the home page
   needs no menu item, and **My shelf** is a small separate link in the header,
   because it's the visitor's own page, not a section of the site. The current
@@ -861,7 +880,45 @@ book pages and My shelf), in this order:
 The page says clearly that marks are **stored only in this browser**, and
 without JavaScript it explains why the shelf can't be shown.
 
-### 6.6 Styles
+### 6.6 Start Here: how the path is built
+
+`build_site.py` takes the stages from `start_here_stages` (in order) and puts
+into each one the published papers whose `start_here.stage` points to it,
+sorted by `start_here.order`. A paper whose `start_here` block has no `note`
+(or a `TODO` in it) stays out of the path but remains in Papers. Two papers
+with the same `order` in one stage stop the build. Stages without any entry
+are not shown. The *To read / Read* buttons use the same `id` as in Papers, so
+a mark set in Start Here shows up in Papers and My shelf too.
+
+### 6.7 My Own Path: timeline, reading log and bookshelf
+
+All of it is built in Python; the page works without JavaScript.
+
+- **Timeline:** newest first, as a vertical line with one dot per stage
+  (filled when completed). Each stage is a `<details>` element: the summary
+  shows dates, title, type, status and the number of days; clicking opens
+  provider, link, my notes and how many readings point to it with `via`. The
+  **duration bar** is the stage's length relative to the longest stage; an
+  in-progress stage counts until the day of the build and its bar is lighter.
+  Each stage has the anchor `#timeline-<id>`.
+- **Reading log:** a summary line (total readings, months, count per type),
+  a **readings-per-month chart** and the readings grouped by month, newest
+  month open. The chart is a plain HTML list: one bar per month from the
+  first to the last (empty months included, as a zero), the number written
+  next to each bar, one colour. So it reads without colours, without
+  JavaScript and with a screen reader, and there's no need for a legend.
+  Each reading shows author, source, type, "via <stage>" (a link to the
+  timeline), "archived copy" if there's an `archive_url`, and "on this site" if
+  it points to Papers or the Library. The **type filter** is the same
+  `filters.js` as elsewhere; months with no match are hidden. Books still
+  being read are not in the log (they haven't got a finished `month`); they
+  are on the Bookshelf.
+- **Bookshelf:** "Reading now" and "Finished" shelves with the same covers as
+  the Library. A book with `book_ref` is the Library's own tile and opens the
+  same card (with my `my_opinion`) in the `<dialog>`; a book that's not in the
+  Library links to its own `url`, with its `cover_id` cover or a typographic one.
+
+### 6.8 Styles
 
 `static/css/style.css` is a simple, readable layout for now (system font,
 ~44rem column, wraps long titles so there's never horizontal scrolling on a
@@ -1003,7 +1060,7 @@ the files as they are instead of running its own site generator (Jekyll) on them
 - **Test the Library locally:**
   1. `python scripts\build_site.py --serve` and open
      http://localhost:8000/AiSafetyWeb/library/.
-  2. Six shelves with covers; *AI Snake Oil*, *Understanding Deep Learning*,
+  2. Six shelves with 20 books; *AI Snake Oil*, *Understanding Deep Learning*,
      *Introduction to Probability* and *Automate the Boring Stuff* have
      typographic covers (no cover on Open Library).
   3. Click a book: its card opens over the page. Try `Esc`, the × and a click
@@ -1048,9 +1105,21 @@ the files as they are instead of running its own site generator (Jekyll) on them
      so search engines don't list it, and **don't link it from the menu**.
   4. Remember that it is still **public**: anyone with the URL can open it.
      "Hidden" only means unlinked and unindexed, not protected.
-- **Add an entry to the Start Here path:** 🚧 Stage 5 (add a `start_here` block to
-  an entry in `papers.yaml`, after verifying the entry against the original source).
-- **Add a reading to My Own Path** (the file exists now; the page comes in Stage 5):
+- **Add an entry to the Start Here path:**
+  1. The reading must be a published entry of `papers.yaml`, verified against
+     the original source.
+  2. If its stage doesn't exist yet, add `{id, title, intro}` to
+     `start_here_stages` (order in the list = order on the page).
+  3. Add to the entry:
+     ```yaml
+         start_here:
+           stage: why-it-matters   # an id from start_here_stages
+           order: 2                # position inside the stage (whole number, unique there)
+           note: >
+             Why it sits at this point of the path.
+     ```
+  4. Build and check `/start-here/`; then commit and push.
+- **Add a reading to My Own Path:**
   1. Open the original and **verify** the exact title, the author(s), the
      publication and the URL. I remove any `utm_…` parameters from the URL.
   2. If it's a paywalled article, I look for an archived copy (for example on
@@ -1077,13 +1146,29 @@ the files as they are instead of running its own site generator (Jekyll) on them
      ```
      `type` is one of paper, report, essay, article, book, resource. `via` is
      the `id` of a stage in `timeline.yaml`.
-  5. (From Stage 3 on) run `python scripts\build_site.py` to check nothing is
-     broken, then commit and push. The site updates on the next deploy.
+     For a book that is not in the Library I can add `cover_id` (found as in
+     *Add a book to the Library*) for its cover on my Bookshelf.
+  5. Run `python scripts\build_site.py` to check nothing is broken (it
+     explains any mistake), then commit and push. The site updates on the next
+     deploy.
 - **Add a stage to the My Own Path Timeline:** add a block at the top of
   `data/my_path/timeline.yaml` with a new `id` (short slug that I never change),
   `type` (course, project or milestone), `date`, `title`, `status` and, when
   I have them, `provider`, `url` and `notes`. When I finish it, I add
-  `completed: YYYY-MM-DD` and change `status` to `completed`.
+  `completed: YYYY-MM-DD` and change `status` to `completed`. Notes that still
+  say `TODO` are not shown on the site.
+- **Test Start Here and My Own Path locally:**
+  1. `python scripts\build_site.py --serve`, open
+     http://localhost:8000/AiSafetyWeb/my-path/.
+  2. Timeline: two stages, newest first, with duration bars; click one to open
+     it (AGI Strategy says "14 readings").
+  3. Reading log: "14 readings in 1 month…", the chart with one bar, September
+     open. Choose Type → Resource: "3 of 14 shown". "via AGI Strategy" jumps
+     to the timeline; the Vox article has "archived copy".
+  4. Bookshelf: empty for now, with a short message.
+  5. http://localhost:8000/AiSafetyWeb/start-here/ shows the stages once the
+     path is in `papers.yaml`; a *Read* mark there also shows in Papers.
+  6. The menu shows News · Papers · Library · Start Here · My Own Path · About.
 - **Preview the site after any change:** `python scripts\build_site.py --serve`
   and open http://localhost:8000/AiSafetyWeb/ (section 6).
 - **Change the menu:** edit `nav:` in `config/site.yaml` (`label` shown,
@@ -1177,6 +1262,10 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | `warning: data/papers.yaml entry N (...) not published (no synopsis yet)` | The entry has no `synopsis`, or a `TODO` in it or in a required field | Write the synopsis / replace the `TODO`s (section 9). It's a warning, the rest of the site builds |
 | `BUILD FAILED: ... unknown topic(s)`, `type must be one of`, `remove the tracking parameters`, `duplicate id(s)` | Broken data in `papers.yaml` (or an `id` also used in `books.yaml`) | Fix the field the message names (formats in section 3.1) |
 | `BUILD FAILED: data/books.yaml ...: shelf '...' is not in shelves`, `olid must be ...`, `cover_id must be a number` | Broken data in `books.yaml` | Fix the field (section 3.1). The OLID is the edition's `OL…M`, not the work's `OL…W` |
+| `BUILD FAILED: ... reading_log.yaml ...: month must be a month in quotes like "2026-09"` | The month was written without quotes | Write `month: "2026-09"` |
+| `BUILD FAILED: ... via '...' is not an id in timeline.yaml` / `paper_ref ... is not a published entry` | A typo in the id, or the referenced entry isn't published yet (no synopsis) | Fix the id, or finish the referenced entry first |
+| `warning: ... timeline.yaml ...: notes still have a TODO, not shown` | A placeholder note | Replace the `TODO(Marco)` with my notes; until then the stage shows without notes |
+| `warning: ... start_here not in the path (no note yet)` | A `start_here` block without a note | Write the note |
 | A book shows the typographic cover although it has `cover_id` | The cover id is wrong, or Open Library was unreachable | Open `https://covers.openlibrary.org/b/id/<cover_id>-M.jpg` in the browser; fix the id (section 9) |
 | Clicking a book opens its page instead of the card | JavaScript is off or `library.js` failed, or the browser has no `<dialog>` support | Nothing breaks: the page shows the same card. Check DevTools → Console |
 | `Not promoted: ... is not in paper_candidates.json` | Wrong candidate id, or the candidate expired (60 days) | Copy the exact `"id"` from the file; for an expired one, add the paper by hand |
@@ -1228,6 +1317,7 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
 - **`<dialog>`** — A native HTML element for pop-up windows. Opened with `showModal()`, it takes the focus, makes the rest of the page inert and closes with `Esc`. The Library's book cards use it.
+- **`<details>` / `<summary>`** — A native HTML element that folds content away behind a clickable summary line, without any JavaScript. The timeline stages, the reading-log months and the synopses in Start Here use it.
 - **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
 - **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
 - **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.

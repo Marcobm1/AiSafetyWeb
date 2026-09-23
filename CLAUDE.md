@@ -55,8 +55,11 @@ If something is ambiguous, ask Marco before assuming.
 - Every **Papers** and **Library** entry (title, authors, year, type, URL and,
   for books, the Open Library OLID / cover id / ISBN and the edition) must be
   verified against the original source, not just against a curriculum or
-  listing. Strip tracking parameters (e.g. `utm_source`) from URLs. Drop what
-  cannot be verified and tell Marco.
+  listing. If the publisher's or author's page can't be reached from Marco's
+  network, use another reliable source (Wikipedia, WorldCat, an archived copy
+  of the official page on the Wayback Machine) before dropping an entry.
+  Strip tracking parameters (e.g. `utm_source`) from URLs. Drop what cannot be
+  verified and tell Marco.
 - **Publishing rule (papers and books):** an entry is published only if it has
   a `synopsis` without `TODO`. `why_it_matters` and `my_opinion` are optional
   and shown only when present. Claude may draft a `synopsis`: 2–4 neutral
