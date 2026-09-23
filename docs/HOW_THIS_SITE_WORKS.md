@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stages 1–6 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 7 (GitHub Actions and Pages). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stages 1–6 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 7 (My Own Path v2: Timeline, Bookshelf and a monthly Journal, plus a local-only "Add entry" form), then Stage 8 (GitHub Actions and Pages) and Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -132,7 +132,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
-| `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 7 |
+| `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 8 |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
 
@@ -343,7 +343,7 @@ A JSON list, newest first. An entry goes into the file of the month it was
 Per source: `items_in_feed` is what the feed returned, `kept` is what passed
 the filters (age, topic), `new` is what wasn't already saved. When a source
 fails, `status` is `"error"` and `error` says why. The site will use
-`last_run` for its "data is stale" warning (Stage 7).
+`last_run` for its "data is stale" warning (Stage 8).
 
 #### `data/paper_candidates.json` — arXiv papers I might curate (written by the bot)
 
@@ -703,7 +703,7 @@ Every URL was checked (HTTP 200 + a valid feed) before adding it.
   (Transformer Circuits Thread), so that one is in.
 - **Google DeepMind:** its own feed (`deepmind.google/blog/rss.xml`) fails from
   my work network (TLS handshake blocked), so for now I use the one on
-  `blog.google`. In Stage 7 I'll test the DeepMind feed from GitHub Actions and
+  `blog.google`. In Stage 8 I'll test the DeepMind feed from GitHub Actions and
   switch to it if it works there.
 - **`default_topics`:** a source can add fixed topics to all its entries. I use
   it for Transformer Circuits, whose titles ("HeadVis") often contain no keyword.
@@ -997,7 +997,7 @@ reload).
 
 ## 7. GitHub Actions and the cron schedule
 
-🚧 **Not built yet (Stage 7).** The design I agreed on: a **single** workflow
+🚧 **Not built yet (Stage 8).** The design I agreed on: a **single** workflow
 `update-and-deploy.yml`, triggered by a daily cron, by a manual button and by
 every push to `main`. It fetches, commits the data, builds and deploys.
 
@@ -1012,14 +1012,14 @@ repositories after 60 days without repository activity. My safeguards:
   This check runs in the visitor's browser, so it still works if Actions stops.
 - GitHub emails me when a workflow run fails.
 
-**To do in Stage 7:** test Google DeepMind's own feed
+**To do in Stage 8:** test Google DeepMind's own feed
 (`https://deepmind.google/blog/rss.xml`) from GitHub Actions. It fails only from
 my work network, so if it works on GitHub's servers I'll switch to it
 (section 5.3).
 
 ## 8. Deployment to GitHub Pages and the base path
 
-🚧 **Deployment details in Stage 7.** The base-path handling is built (Stage 3).
+🚧 **Deployment details in Stage 8.** The base-path handling is built (Stage 3).
 
 **The base path problem:** this is a *project site*, so it lives under a
 sub-folder: `https://marcobm1.github.io/AiSafetyWeb/`. A link written as
@@ -1322,6 +1322,83 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 
 **Abort if unsure:** `git merge --abort` returns me to the state before the pull.
 
+### Trying a change on a branch (so I can throw it away)
+
+When I'm not sure I'll like a change, I don't make it on `main`. I make it on
+a **branch**: a separate line of commits that starts from `main` and doesn't
+affect it. If I like the result, I **merge** it into `main`; if not, I delete
+the branch and `main` never knew it existed.
+
+**Real example (23 Sep 2026):** I felt the design was a bit tight, so I tried
+more spacing (bigger chapter titles, more air between sections and list
+entries, a 660px column, 1.2rem text) on a branch called `design-spacing`. I
+compared it side by side with `main` and decided to keep `main` as it was, so
+I deleted the branch without merging.
+
+**Seeing both versions at once, with a worktree.** A normal branch switch
+(`git switch`) changes the files in my one folder, so I could only preview one
+version at a time. A **worktree** is a second folder linked to the same
+repository, with a different branch checked out. Each folder has its own
+`_site/`, so I can serve both:
+
+```powershell
+cd C:\dev\AiSafetyWeb                     # or my home-computer folder
+git pull
+# 1. Create the branch from main, in a second folder next to the project
+git worktree add -b design-spacing ..\AiSafetyWeb-spacing main
+
+# 2. Make the changes in ..\AiSafetyWeb-spacing, then commit them there
+cd ..\AiSafetyWeb-spacing
+# ... edit static/css/style.css ...
+git commit -am "Try more spacing"
+
+# 3. Preview both: main on 8000 (terminal 1), the branch on 8001 (terminal 2)
+#    terminal 1:  cd C:\dev\AiSafetyWeb;       .\.venv\Scripts\python.exe scripts\build_site.py --serve
+#    terminal 2:  cd ..\AiSafetyWeb-spacing;   ..\AiSafetyWeb\.venv\Scripts\python.exe scripts\build_site.py --serve --port 8001
+```
+
+Then I open http://localhost:8000/AiSafetyWeb/ and
+http://localhost:8001/AiSafetyWeb/ in two tabs and compare the same page.
+(The branch folder uses the main folder's `.venv`; it doesn't need its own.
+On my home computer the main folder is `AI Safety Web`, so the paths there
+are like `& "..\AI Safety Web\.venv\Scripts\python.exe" scripts\build_site.py --serve --port 8001`
+(quotes because of the spaces, and `&` to run a quoted path in PowerShell),
+and I'd name the second folder `AI Safety Web-spacing`.)
+
+**If I like it: merge, push, clean up.**
+```powershell
+# stop the 8001 preview (Ctrl+C in terminal 2)
+cd C:\dev\AiSafetyWeb
+git switch main
+git pull
+git merge design-spacing                  # brings the branch's commits into main
+# update the docs (HOW_THIS_SITE_WORKS, DEVLOG) and commit them
+git push
+git worktree remove --force ..\AiSafetyWeb-spacing   # --force: the folder has a built _site/
+git branch -d design-spacing              # -d only deletes a branch that is merged
+```
+
+**If I don't like it: throw it away (what I did with the spacing).**
+```powershell
+# stop the 8001 preview (Ctrl+C in terminal 2)
+cd C:\dev\AiSafetyWeb
+git worktree remove --force ..\AiSafetyWeb-spacing   # --force: the folder has a built _site/
+git branch -D design-spacing              # -D (capital): delete even though it's not merged
+```
+
+**If I want something in between:** I keep editing and committing in the
+branch folder, rebuild its preview, and compare again. Nothing reaches `main`
+until I merge.
+
+**Things to know:**
+- I never pushed the branch, so it only ever existed on my computer. To try a
+  branch on both computers I'd `git push -u origin design-spacing` and delete
+  it on GitHub too when I'm done (`git push origin --delete design-spacing`).
+- The worktree folder must be **outside OneDrive**, like the project.
+- `git worktree list` shows which folders are linked; `git branch` shows my
+  branches (the one with `*` is checked out in the current folder).
+- The daily robot only commits to `main`, so it never touches my branch.
+
 ## 11. Common problems and fixes
 
 | Symptom | Cause | Fix |
@@ -1377,7 +1454,9 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **`aria-pressed`** — An attribute that tells screen readers a button is a toggle and whether it is on (`true`) or off (`false`). The *To read / Read* buttons use it.
 - **Base path** — The sub-folder a site lives under (`/AiSafetyWeb/`). All internal links must include it.
 - **Blob** — A chunk of data created in the browser. My shelf puts the export JSON in a Blob and offers it as a download, without any server.
-- **Branch / `main`** — A line of development in Git. `main` is the default and the one that is published.
+- **Branch / `main`** — A line of development in Git. `main` is the default and the one that is published. Other branches are for trying things without touching `main` (section 10).
+- **Merge** — Bringing the commits of one branch into another (`git merge design-spacing` while on `main`).
+- **Worktree** — A second folder linked to the same repository with another branch checked out, so two versions can be open (and previewed) at once.
 - **CI/CD** — *Continuous Integration / Continuous Deployment*: automatically building, testing and publishing on every change or schedule. GitHub Actions is my CI/CD here.
 - **Clone** — Download a full copy of a repository, including its history.
 - **Commit** — A saved snapshot of changes in Git, with a message and author.

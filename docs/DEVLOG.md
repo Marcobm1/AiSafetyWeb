@@ -829,3 +829,43 @@ Created: `static/fonts/literata-latin-wght-normal.woff2`,
 **Pending**
 - A spacing adjustment of the design, tried on a separate branch first.
 - Stage 7 (GitHub Actions and Pages), once the spacing is decided.
+
+---
+
+## 2026-09-23 — A spacing trial on a branch (discarded) and a new Stage 7
+
+**What I did**
+- I felt the design was a bit tight, so Claude tried more spacing on a
+  separate branch, `design-spacing`, in a second folder (a git worktree):
+  bigger chapter titles (2.2 → 2.75rem), more air around the header, between
+  sections and between list entries (entries 1.1 → 1.6rem), a 660px column
+  instead of 620px and 1.2rem text, with a smaller share of the extra space on
+  phones. No colours changed, and nothing scrolled sideways at 360px.
+- I compared it with `main` side by side (main on port 8000, the branch on
+  8001) and **decided to keep `main` as it was.** The branch was deleted
+  without merging; it was never pushed.
+- I wrote the procedure down so I can do it myself: HOW_THIS_SITE_WORKS §10,
+  "Trying a change on a branch", with this case as the example.
+- I added a new stage before publishing: **My Own Path v2**. The plan is now:
+  - ✅ Stages 1–6.
+  - Stage 7: My Own Path v2 (Timeline, Bookshelf, a monthly Journal instead of
+    the Reading log, and an "Add entry" form that only exists in my local
+    preview).
+  - Stage 8: GitHub Actions and GitHub Pages.
+  - Stage 9: final documentation review.
+
+**What I decided and why**
+- **Branch + worktree for design trials:** a branch keeps `main` untouched
+  until I decide, and a worktree lets me serve both versions at the same time,
+  which is the only fair way to compare spacing.
+- **Why I kept the current spacing:** it's the version I approved, and seeing
+  both side by side didn't convince me the extra air was better.
+- **My Own Path v2 before publishing:** I'd rather publish the page in its
+  final shape than change its structure after it's live.
+
+**Files changed**
+`CLAUDE.md` (plan), `docs/HOW_THIS_SITE_WORKS.md` (branch guide, glossary,
+stage numbers), `docs/DEVLOG.md`.
+
+**Pending**
+- Stage 7: Claude proposes the plan (data, pages, form) and waits for my approval.

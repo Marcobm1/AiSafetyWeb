@@ -136,6 +136,18 @@ If something is ambiguous, ask Marco before assuming.
 - Python **3.12** everywhere (local venv in `.venv/` and in Actions); pinned
   versions in `requirements.txt`.
 
+## Plan (stages)
+- ✅ 1–6: setup, news fetching, site skeleton, Papers + Library, Start Here +
+  My Own Path, design.
+- **7: My Own Path v2**: Timeline, Bookshelf, a monthly Journal (replaces the
+  Reading log) and a local-only "Add entry" form. Plan to be approved by Marco
+  before any code.
+- **8: GitHub Actions + GitHub Pages**: don't start until Marco approves
+  Stage 7 in the local preview.
+- **9: final documentation review.**
+- Before merging any experimental change, try it on a branch (see
+  HOW_THIS_SITE_WORKS §10, "Trying a change on a branch").
+
 ## Folder structure
 ```
 config/sources.yaml      all news sources, arXiv query, karma thresholds, topic keywords
