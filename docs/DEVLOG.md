@@ -329,3 +329,46 @@ removed), `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
 - Replace the `TODO(Marco)` notes in `data/my_path/timeline.yaml`.
 - Add my September readings to `data/my_path/reading_log.yaml` once the
   My Own Path page exists (Stage 5).
+
+---
+
+## 2026-09-23 — Narrower title-based duplicate check
+
+**What I did**
+- I reviewed the title-based duplicate check I added in Stage 3. It compared
+  normalised titles (4+ words) between **any** two entries, even from the same
+  source, so generic titles in unrelated blogs could be merged by mistake.
+- I tested it against real data: the Stage 2 news file, the current one, and
+  every item currently in all 14 feeds (1,611 items, no karma/age/topic filter).
+- I replaced it with a narrower rule (`SeenIndex` in `scripts/fetch_news.py`):
+  the title only counts between two **different** sources marked
+  `crossposts: true` in `config/sources.yaml`. I marked the Alignment Forum,
+  LessWrong, Redwood Research and METR, because I saw real cross-posts from them.
+
+**What I decided and why**
+- **Not "same title + same author":** the author never matched in the real
+  cross-posts. The AF shows usernames (`Jozdien`, `ryan_greenblatt`) and
+  Redwood's blog shows real names or another co-author (`Arun Jose`,
+  `Nathan Sheffield`), so that rule would miss all of them.
+- **Not within one source:** OpenAI has two different pages titled "The state
+  of enterprise AI"; the old rule would have merged them. Within one source the
+  URL check is enough.
+- **Only sources with a proven cross-post get the flag**, so I don't widen the
+  rule on a guess.
+
+**Results** (the numbers of duplicates found by title)
+- Stage 2 file (137 entries): 3, the three Redwood/AF posts I removed by hand.
+- Current file (134 entries): 0.
+- All current feed items (1,611): 4, the same three plus a joint METR/Redwood
+  investigation published on both blogs. No false positives.
+- Synthetic checks: the same generic title in Zvi and Transformer → not merged;
+  twice in Redwood → not merged; in Redwood and the AF → merged.
+- A real `--dry-run` of the fetch script runs cleanly (0/15 sources failed).
+
+**Files changed**
+`scripts/fetch_news.py`, `config/sources.yaml`, `docs/HOW_THIS_SITE_WORKS.md`,
+`docs/DEVLOG.md`.
+
+**Pending**
+- Stage 4 is being redesigned (books and papers in separate sections) before I
+  write any code; the plan comes in its own entry once I approve it.

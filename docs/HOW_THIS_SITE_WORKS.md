@@ -454,13 +454,30 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
 5. **Skip duplicates.** Before comparing, every URL is **normalised**: https,
    lowercase host, no `utm_*` tracking parameters, no trailing slash, and arXiv
    `/pdf/…v2` links turned into `/abs/<id>`. LessWrong and the Alignment Forum
-   share posts, so for them the post id is compared instead. As a second
-   check, two items with the **same title** (lowercase, punctuation removed)
-   are also duplicates: that catches cross-posts with different URLs, such as
-   a Redwood Research post that is also on the Alignment Forum. Titles shorter
-   than 4 words are too generic ("Introduction") and are not compared. The
-   first source in the config keeps the item, which is why the Alignment Forum
-   is listed first.
+   share posts, so for them the post id is compared instead.
+
+   As a second check, the **title** (lowercase, punctuation removed) is
+   compared, but **only between two different sources marked
+   `crossposts: true`** in `config/sources.yaml`. Those are sources I have
+   *seen* publish the same post under different URLs: the Alignment Forum,
+   LessWrong, Redwood Research (its posts also go to the AF) and METR (one joint
+   investigation appeared on both METR's and Redwood's blogs). Titles shorter
+   than 4 words are never compared. The first source in the config keeps the
+   item, which is why the Alignment Forum is listed first.
+
+   Why so narrow: comparing titles across *all* sources would merge unrelated
+   posts with generic titles ("Weekly update on AI safety research") from two
+   different blogs, and even two different pages of one source (OpenAI has two
+   pages called "The state of enterprise AI"). I also tried "same title **and**
+   same author", but it misses every real cross-post: the AF shows the
+   username (`Jozdien`, `ryan_greenblatt`) while Redwood's blog shows the real
+   name or a different co-author (`Arun Jose`, `Nathan Sheffield`).
+
+   Measured on 2026-09-23: the rule finds the 3 Redwood/AF duplicates in the
+   Stage 2 data, 0 in the current news file, and 4 in the full current feeds
+   (1,611 items without any filter): those 3 plus the METR/Redwood joint post.
+   No false positives. **To mark a new source**, I add `crossposts: true` only
+   after seeing a real cross-post in the data.
 6. **Save** new entries into `data/news/YYYY-MM.json` by publication month.
    arXiv papers go there too, so they appear on the home page like any other news.
 7. **Update the paper candidates** (`data/paper_candidates.json`): add the new

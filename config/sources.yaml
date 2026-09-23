@@ -14,6 +14,11 @@
 #                    keyword below (for general sources that also post off-topic)
 #   default_topics   topics every entry of this source gets, on top of the
 #                    keyword matches (for single-topic sources)
+#   crossposts       true = this source publishes the same posts as other
+#                    sources marked `crossposts`, under different URLs. Only
+#                    between two such sources is an entry with the same title
+#                    (normalised, 4+ words) treated as a duplicate. Mark a source
+#                    only after seeing a real cross-post in the data.
 #
 # Order matters for cross-posts: the same post can be on the Alignment Forum and
 # on LessWrong. The first source that sees it keeps it, so AF goes first.
@@ -29,11 +34,13 @@ sources:
   - id: alignment-forum
     name: AI Alignment Forum
     url: https://www.alignmentforum.org/feed.xml?view=community-rss
+    crossposts: true   # seen: Redwood posts also published here
     karma_threshold: 20
 
   - id: lesswrong
     name: LessWrong
     url: https://www.lesswrong.com/feed.xml?view=community-rss
+    crossposts: true   # same posts as the AF (and its cross-posts)
     karma_threshold: 30
     require_topic: true
 
@@ -49,10 +56,12 @@ sources:
   - id: metr
     name: METR
     url: https://metr.org/feed.xml
+    crossposts: true   # seen: a joint post also on Redwood's blog
 
   - id: redwood
     name: Redwood Research
     url: https://redwoodresearch.substack.com/feed
+    crossposts: true   # seen: posts also on the AF, and one on METR's blog
 
   - id: govai
     name: Centre for the Governance of AI

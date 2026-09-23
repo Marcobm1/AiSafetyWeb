@@ -9,7 +9,8 @@ What one run does, in order:
   4. Turn every item into the same entry format (see docs/HOW_THIS_SITE_WORKS.md
      section 3.1), assign topics by keyword and drop items that are too old or
      off-topic.
-  5. Skip anything already saved (same normalised URL or same title) and add the rest to
+  5. Skip anything already saved (same normalised URL, or same title between two
+     cross-posting sources) and add the rest to
      data/news/YYYY-MM.json (one file per month of publication).
   6. Add new arXiv papers to data/paper_candidates.json, unless they are already
      in data/library.yaml, and delete candidates older than the retention period.
@@ -154,23 +155,48 @@ TITLE_KEY_MIN_WORDS = 4
 def title_key(title: str) -> str | None:
     """Second duplicate key: the title in lowercase, without punctuation.
 
-    Catches cross-posts with different URLs (e.g. a Redwood Research post that
-    is also on the Alignment Forum). Short titles ("Introduction") are too
-    generic to compare, so they get no title key.
+    Only used between cross-posting sources (see SeenIndex). Short titles
+    ("Funding update") are too generic to compare, so they get no title key.
     """
     words = re.sub(r"[^a-z0-9]+", " ", title.lower()).split()
     if len(words) < TITLE_KEY_MIN_WORDS:
         return None
-    return "title:" + " ".join(words)
+    return " ".join(words)
 
 
-def dedupe_keys(entry: dict) -> set[str]:
-    """All the keys under which an entry counts as 'already seen'."""
-    keys = {dedupe_key(entry["url"])}
-    by_title = title_key(entry["title"])
-    if by_title:
-        keys.add(by_title)
-    return keys
+class SeenIndex:
+    """Everything already saved, for duplicate detection.
+
+    Two checks:
+      1. Same URL key (normalised URL, or LessWrong/AF post id): always a duplicate.
+      2. Same normalised title: a duplicate ONLY if both entries come from
+         two *different* sources marked `crossposts: true` in sources.yaml
+         (e.g. a Redwood Research post also published on the Alignment Forum).
+         Generic titles in unrelated sources, or two pages of the same source
+         with the same title, are never merged by title.
+    """
+
+    def __init__(self, crosspost_sources: set[str]):
+        self.crosspost_sources = crosspost_sources
+        self.url_keys: set[str] = set()
+        self.titles: dict[str, set[str]] = {}  # title key -> source ids that have it
+
+    def _title(self, entry: dict) -> str | None:
+        if entry["source_id"] not in self.crosspost_sources:
+            return None
+        return title_key(entry["title"])
+
+    def is_duplicate(self, entry: dict) -> bool:
+        if dedupe_key(entry["url"]) in self.url_keys:
+            return True
+        key = self._title(entry)
+        return bool(key) and bool(self.titles.get(key, set()) - {entry["source_id"]})
+
+    def add(self, entry: dict) -> None:
+        self.url_keys.add(dedupe_key(entry["url"]))
+        key = self._title(entry)
+        if key:
+            self.titles.setdefault(key, set()).add(entry["source_id"])
 
 
 def entry_id(url: str) -> str:
@@ -495,16 +521,18 @@ def main() -> int:
 
     # --- 2. Merge into the monthly files, skipping duplicates ---------------
     news = load_news()
-    seen = {key for month in news.values() for e in month for key in dedupe_keys(e)}
+    seen = SeenIndex({s["id"] for s in config["sources"] if s.get("crossposts")})
+    for month in news.values():
+        for e in month:
+            seen.add(e)
     new_by_source: dict[str, int] = {}
     new_papers = []
     changed_months = set()
     for source, entries in fetched:
         for entry in entries:
-            keys = dedupe_keys(entry)
-            if keys & seen:
+            if seen.is_duplicate(entry):
                 continue
-            seen |= keys
+            seen.add(entry)
             month = entry["published"][:7]
             news.setdefault(month, []).append(entry)
             changed_months.add(month)
