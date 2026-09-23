@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stages 1–7 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path v2 (Timeline, Bookshelf and a monthly Journal, plus my local-only "Add entry" form) and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 8 (GitHub Actions and Pages), then Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stages 1–8 built and **published at https://marcobm1.github.io/AiSafetyWeb/**: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path v2 (Timeline, Bookshelf and a monthly Journal, plus my local-only "Add entry" form) and My shelf, with the e-reader design (Literata, sepia paper, light and dark). A GitHub Actions workflow updates the data every day at 06:00 UTC and redeploys the site (section 7). Next: Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -119,7 +119,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `data/news/YYYY-MM.json` | Collected news, one file per month | ✅ |
 | `data/status.json` | Time of last run + status of each source | ✅ |
 | `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
-| `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (12 so far); also the Start Here stage list | ✅ |
+| `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (13 so far); also the Start Here stage list | ✅ |
 | `data/books.yaml` | Library: 20 books on six themed shelves | ✅ |
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ |
 | `data/my_path/reading_log.yaml` | My Own Path readings and resources (my 14 September readings); shown in the Journal | ✅ |
@@ -135,7 +135,8 @@ dark-mode toggle and the reading tracker (My shelf).
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
-| `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 8 |
+| `.github/workflows/update-and-deploy.yml` | The one workflow: daily fetch + commit, build, deploy to GitHub Pages (section 7) | ✅ |
+| `static/js/stale.js` | The "This site may be out of date" warning, checked in the visitor's browser | ✅ |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
 
@@ -346,7 +347,7 @@ A JSON list, newest first. An entry goes into the file of the month it was
 Per source: `items_in_feed` is what the feed returned, `kept` is what passed
 the filters (age, topic), `new` is what wasn't already saved. When a source
 fails, `status` is `"error"` and `error` says why. The site will use
-`last_run` for its "data is stale" warning (Stage 8).
+`last_run` for its "This site may be out of date" warning (section 7.4).
 
 #### `data/paper_candidates.json` — arXiv papers I might curate (written by the bot)
 
@@ -1102,29 +1103,154 @@ to use it:
 
 ## 7. GitHub Actions and the cron schedule
 
-🚧 **Not built yet (Stage 8).** The design I agreed on: a **single** workflow
-`update-and-deploy.yml`, triggered by a daily cron, by a manual button and by
-every push to `main`. It fetches, commits the data, builds and deploys.
+Everything automatic happens in **one workflow**,
+`.github/workflows/update-and-deploy.yml`. GitHub runs it on its own servers
+(a fresh Ubuntu machine each time), so my computers can be off.
 
-I use one workflow and not two because commits made by a workflow (with the
-built-in `GITHUB_TOKEN`) **do not trigger other workflows**. A separate
-"deploy on push" workflow would never see the robot's commits.
+### 7.1 When it runs, and what each trigger does
 
-**60-day inactivity rule:** GitHub disables scheduled workflows in public
-repositories after 60 days without repository activity. My safeguards:
-- `data/status.json` is committed on every run, so there is activity every day.
-- The site shows a visible warning if the last update is older than 48 hours.
-  This check runs in the visitor's browser, so it still works if Actions stops.
-- GitHub emails me when a workflow run fails.
+| Trigger | When | What it does |
+|---|---|---|
+| `schedule` | every day at **06:00 UTC** (`cron: "0 6 * * *"`) | fetch news → commit data if it changed → build → deploy |
+| `workflow_dispatch` | when I press **Run workflow** in the Actions tab (or `gh workflow run`) | the same as the daily run |
+| `workflow_dispatch` with `check_feed` filled in | same button, with a feed URL in the field | **only** tests that feed and prints a report (section 9, *Add a news source*); no fetch, commit or deploy |
+| `push` to `main` | every time I push | build → deploy only: **no fetching** |
 
-**To do in Stage 8:** test Google DeepMind's own feed
-(`https://deepmind.google/blog/rss.xml`) from GitHub Actions. It fails only from
-my work network, so if it works on GitHub's servers I'll switch to it
-(section 5.3).
+**How the workflow tells a push from the daily run:** GitHub gives every run
+the name of the event that started it, `github.event_name` (`schedule`,
+`workflow_dispatch` or `push`). The fetch and commit steps have
+`if: github.event_name != 'push'`, so on my pushes they are skipped and the
+site is rebuilt from exactly what I pushed. That way my own commits deploy
+quickly and never mix in new data I haven't seen.
+
+**Why one workflow and not two:** commits made by a workflow with the built-in
+`GITHUB_TOKEN` **do not start other workflows** (GitHub does this on purpose,
+to avoid endless loops). A separate "deploy on push" workflow would never see
+the robot's data commits, so the daily data would never be published. In one
+workflow, the same run fetches, commits and deploys.
+
+**Scheduled runs can be late.** GitHub starts `schedule` runs when it has
+capacity, so "06:00" often means some minutes later, sometimes much later at
+busy times. That's fine for a daily site.
+
+### 7.2 The steps
+
+Job **`build`** (permission: `contents: write`, to push the data commit):
+1. **Check out** the repository.
+2. **Set up Python** with the version in `.python-version` (3.12, the same as
+   on my computers) and **pip's cache** keyed on `requirements.txt`, so the
+   packages download only when the requirements change.
+3. **Install** `requirements.txt` (pinned versions).
+4. *(Only a manual run with `check_feed`)*: `fetch_news.py --check-feed <URL>`
+   and stop.
+5. *(Not on push)* **Fetch**: `python scripts/fetch_news.py`. If *every*
+   source fails it exits with 1, the run fails and GitHub emails me.
+6. *(Not on push)* **Commit the data only if it changed**: `git add data/`;
+   if `git diff --cached --quiet` says nothing is staged, it stops there.
+   Otherwise it commits as **`github-actions[bot]`** ("Update news data
+   (automated)"), then **`git pull --rebase origin main`** and
+   `git push origin HEAD:main`. The rebase matters when I pushed something
+   while the run was fetching: the robot's commit is placed on top of mine
+   instead of the push being rejected. (`data/status.json` has the time of
+   the run, so in practice there's a data commit every day.)
+7. **Build** the site (`python scripts/build_site.py`), with every check of
+   the local build: data validation, internal links, no local form.
+8. **Upload** `_site/` as the Pages artifact (`upload-pages-artifact`).
+
+Job **`deploy`** (needs `build`; permissions: `pages: write` and
+`id-token: write`): **deploys** the artifact with `deploy-pages` to the
+`github-pages` environment. `id-token: write` lets the job get a short-lived
+signed token (OIDC) that proves to GitHub Pages which workflow run is
+deploying; there is no password or long-lived key anywhere.
+
+### 7.3 Safety choices in the workflow
+
+- **Minimal permissions:** the workflow starts with `permissions: {}` (nothing)
+  and each job asks only for what it needs: `build` can write repository
+  contents (for the data commit), `deploy` can write Pages and request the
+  OIDC token. The repository's default for the token is read-only
+  (Settings → Actions → General → Workflow permissions).
+- **Every action pinned to a full commit SHA**, with the version in a comment:
+  ```yaml
+  uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+  ```
+  A tag like `@v7` is just a label its owner can move to different code; a
+  commit SHA always means the same code. The repository also has
+  **"Require actions to be pinned to a full-length commit SHA"** turned on,
+  so GitHub refuses a workflow that uses a tag. Only actions made by GitHub
+  (`actions/…`) are allowed, and they are the only ones I use:
+  `checkout` v7.0.1, `setup-python` v7.0.0, `upload-pages-artifact` v5.0.0
+  (which itself uses `upload-artifact` pinned by SHA) and `deploy-pages`
+  v5.0.1.
+- **The `check_feed` URL is never pasted into the script.** It goes in an
+  environment variable (`FEED_URL`) and the script reads `"$FEED_URL"`, so a
+  URL with shell characters can't run commands.
+- **`concurrency`** (group `update-and-deploy`, `cancel-in-progress: false`):
+  never two runs at once. If I push during the daily run, my run waits for it
+  to finish instead of both pushing or deploying at the same time, and nothing
+  is cancelled halfway through a commit or a deployment.
+- **Time limits:** 20 minutes for `build`, 10 for `deploy`, so a hung
+  download can't run for hours.
+
+**Updating a pinned action (e.g. once or twice a year):** I look up the new
+release on the action's GitHub page (Releases), take the **full commit SHA**
+of that release's tag, and replace both the SHA and the version comment. To
+get the SHA from the terminal:
+`gh api repos/actions/checkout/commits/v7.0.1 --jq .sha`. Then I push and
+check that the run is green.
+
+### 7.4 Monitoring: how I find out something is wrong
+
+- **A failed run → an email.** In my GitHub account settings
+  (Settings → Notifications → Actions) I have email notifications for
+  **failed workflows only**. A run fails when all sources fail, when the data
+  push can't be rebased, when the build finds a problem, or when the
+  deployment fails.
+- **A site that stopped updating → a warning on the site.** Every page has a
+  hidden notice, *"This site may be out of date"*, with the time of the last
+  fetch (`last_run` from `data/status.json`). `static/js/stale.js` shows it
+  when that time is more than `stale_after_hours` (48, in `config/site.yaml`)
+  in the past **by the visitor's clock**. The check has to run in the
+  browser: if Actions stops, nothing rebuilds the site, so a check made at
+  build time would never fire. Without JavaScript the notice stays hidden,
+  and the footer still shows "News last fetched …".
+- **The Actions tab** (https://github.com/Marcobm1/AiSafetyWeb/actions) lists
+  every run with its logs; `gh run list --workflow update-and-deploy.yml`
+  shows the same in the terminal.
+- **The 60-day rule.** GitHub disables *scheduled* workflows in a public
+  repository when there has been no repository activity for 60 days. The
+  daily data commit should count as activity, but if GitHub ever disables the
+  workflow it usually sends me an email first, and the site's warning appears
+  48 hours after the last fetch. How to switch it back on is in section 11.
+
+### 7.5 Repository settings this depends on
+
+- **Settings → Pages → Build and deployment → Source: "GitHub Actions"**
+  (not "Deploy from a branch").
+- **Settings → Actions → General:** "Allow Marcobm1, and select non-Marcobm1,
+  actions and reusable workflows" with **"Allow actions created by GitHub"**;
+  **"Require actions to be pinned to a full-length commit SHA"** on; Workflow
+  permissions **"Read repository contents and packages permissions"**; "Allow
+  GitHub Actions to create and approve pull requests" **off**.
+- **Settings → Environments → `github-pages`:** created by GitHub for Pages;
+  only `main` may deploy to it.
 
 ## 8. Deployment to GitHub Pages and the base path
 
-🚧 **Deployment details in Stage 8.** The base-path handling is built (Stage 3).
+The site is deployed by the workflow's `deploy` job (section 7.2): the build
+uploads `_site/` as an **artifact** (a packed copy of the folder) and
+`deploy-pages` publishes it. Nothing is committed to a `gh-pages` branch, and
+`_site/` is never in the repository. Each deployment replaces the whole site,
+so a page I delete disappears online too.
+
+Published address: **https://marcobm1.github.io/AiSafetyWeb/**. The Actions
+tab shows each deployment with a link to the site, and Settings → Pages shows
+the current one.
+
+**What is never published:** the local "Add entry" form and anything under
+`_local/`. The workflow runs `build_site.py` without `--serve`, so the form
+never exists there, and the build's `check_no_local_tools()` would fail the
+run if any of its markers reached `_site/` (section 6.9).
 
 **The base path problem:** this is a *project site*, so it lives under a
 sub-folder: `https://marcobm1.github.io/AiSafetyWeb/`. A link written as
@@ -1160,9 +1286,19 @@ the files as they are instead of running its own site generator (Jekyll) on them
   2. Add a block under `sources:` in `config/sources.yaml` with a new `id`, the
      `name` to show on the site and the `url`. If the source also publishes
      off-topic posts, add `require_topic: true`.
-  3. Run `python scripts\fetch_news.py --dry-run` and check the new source's
+  3. Test the feed on its own first:
+     `python scripts\fetch_news.py --check-feed <URL>`. It fetches that URL
+     the way the daily run would (same User-Agent, same age and topic
+     filters), prints how many items it has, how many recent ones match a
+     topic and the newest five, and **writes nothing**. If the feed fails from
+     my network (like DeepMind's from my work computer), I test it from GitHub
+     instead: Actions → *Update and deploy* → **Run workflow**, paste the URL
+     in *check_feed*, run, and read the "Check one feed" step. That run only
+     tests the feed (no fetch, commit or deploy). From the terminal:
+     `gh workflow run update-and-deploy.yml -f check_feed=<URL>`.
+  4. Run `python scripts\fetch_news.py --dry-run` and check the new source's
      line says `ok` and keeps a sensible number of items.
-  4. Run it for real (or let the daily bot do it), update the source table in
+  5. Run it for real (or let the daily bot do it), update the source table in
      section 5.3, and commit.
 - **Remove or pause a source:** delete its block in `config/sources.yaml` (its
   old entries stay in `data/news/`, which is fine), and update section 5.3.
@@ -1572,6 +1708,13 @@ until I merge.
 | The form says "Forbidden: wrong Host header" or "did not come from this preview" | I opened it through another address (e.g. my computer's network name), or something else posted to it | Open it as `http://localhost:8000/...` or `http://127.0.0.1:8000/...` |
 | `BUILD FAILED: local-only form code found in the output` | A piece of the local form (`data-local-only` or a `/_local/` link) ended up in a published template or in `static/` | Remove it from that template/file: the form lives only in `scripts/local_form.py` and `templates/local/` |
 | The Journal doesn't show a book | It's a book I'm reading without `started`, so it has no month yet | It's on the Bookshelf; add `started: "YYYY-MM"` to see it in the Journal |
+| An email "Run failed: Update and deploy" | Every source failed, the data push couldn't be rebased, the build found a problem, or the deployment failed | Open the run from the email (or the Actions tab), click the red step and read its log. Fix the cause, then **Run workflow** again |
+| The site shows *"This site may be out of date"* | No successful fetch for 48 h: the workflow is failing, disabled or GitHub is delayed | Check the Actions tab: a red run (see the row above) or a banner saying the workflow is disabled (see the next row) |
+| The Actions tab says *"This scheduled workflow is disabled because there hasn't been activity in this repository for at least 60 days"* | GitHub's 60-day inactivity rule (it usually emails me before doing it) | Actions tab → **Update and deploy** → **Enable workflow** (the button in that banner), or `gh workflow enable update-and-deploy.yml`. Then **Run workflow** once so the site updates right away |
+| The run fails at "Commit and push the data" with a rebase conflict | I edited a file in `data/` that the robot also changed the same day (usually `data/news/*.json` or `status.json`) | `git pull` on my computer, resolve the conflict (section 10: keep GitHub's version of the robot's files), push, then Run workflow |
+| The run fails with *"…must be pinned to a full-length commit SHA"* or *"…is not allowed to be used"* | A `uses:` line with a tag instead of a SHA, or an action not made by GitHub | Pin it to the full SHA (section 7.3) or use an official `actions/…` action |
+| The deploy job fails with a Pages error (404 or "Get Pages site failed") | Settings → Pages → Source is not "GitHub Actions" | Set it back to **GitHub Actions** (section 7.5) and re-run |
+| The published site shows unstyled pages or 404s for `/static/...` | A link or asset without the base path | Can't happen with a green build (the link check would fail); if it does, check `base_path` in `config/site.yaml` |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## 12. Possible future extensions
@@ -1614,8 +1757,10 @@ until I merge.
 - **Merge** — Bringing the commits of one branch into another (`git merge design-spacing` while on `main`).
 - **Worktree** — A second folder linked to the same repository with another branch checked out, so two versions can be open (and previewed) at once.
 - **CI/CD** — *Continuous Integration / Continuous Deployment*: automatically building, testing and publishing on every change or schedule. GitHub Actions is my CI/CD here.
+- **Artifact** — A file (here a packed copy of `_site/`) that one job of a workflow uploads so another job can use it. The deploy job publishes the Pages artifact.
 - **Clone** — Download a full copy of a repository, including its history.
 - **Commit** — A saved snapshot of changes in Git, with a message and author.
+- **Concurrency (workflow)** — A setting that stops two runs of a workflow from running at the same time; a new run waits for the current one.
 - **Cron** — A syntax for schedules (`minute hour day month weekday`). `0 6 * * *` = every day at 06:00 UTC.
 - **CSRF / Origin check** — *Cross-site request forgery*: a malicious website making my browser send a request to another site (here, my local form). Checking the `Origin` header (which site the request comes from) and a secret token stops it.
 - **Deduplication** — Making sure the same item is saved only once, even if several feeds (or several runs) return it.
@@ -1641,6 +1786,7 @@ until I merge.
 - **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
+- **OIDC token (`id-token: write`)** — A short-lived, signed token that a workflow run can request to prove its identity to another service (here GitHub Pages), instead of storing a password or key.
 - **`<dialog>`** — A native HTML element for pop-up windows. Opened with `showModal()`, it takes the focus, makes the rest of the page inert and closes with `Esc`. The Library's book cards use it.
 - **`<details>` / `<summary>`** — A native HTML element that folds content away behind a clickable summary line, without any JavaScript. The timeline stages, the reading-log months and the synopses in Start Here use it.
 - **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
@@ -1650,6 +1796,7 @@ until I merge.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
 - **Progressive enhancement** — Building the page so it fully works as plain HTML, then adding JavaScript extras (like filters) on top. If the script fails, nothing essential breaks.
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
+- **SHA pinning** — Referring to an action by the full commit hash of its code (`@3d3c42e5…`) instead of a movable tag (`@v7`), so the code that runs can't change behind my back.
 - **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
 - **`prefers-color-scheme`** — A CSS media query that tells the page whether the visitor's system is in light or dark mode.

@@ -125,6 +125,7 @@ h1::after { content: "⁂"; display: block; font-size: 1rem; color: var(--muted)
 /* Labels and topics: small caps, no boxes. */
 .tag, .label { font-style: normal; font-size: 1rem; font-variant: small-caps; text-transform: lowercase; letter-spacing: .04em; color: var(--muted); }
 .notice { border-left: 2px solid var(--text); background: var(--surface); padding: .7rem 1rem; font-size: 1rem; }
+.stale-warning { margin: 1.25rem 0 0; }
 
 details > summary { cursor: pointer; }
 details > summary h2 { display: inline; }

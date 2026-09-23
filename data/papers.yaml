@@ -355,3 +355,23 @@ entries:
       note: >
         Makes the abstract argument concrete: a month-by-month story
         of how fast AI could advance and where it could go wrong.
+
+  - id: specification-gaming
+    title: "Specification gaming: the flip side of AI ingenuity"
+    authors: ["Victoria Krakovna", "Jonathan Uesato", "Vladimir Mikulik", "Matthew Rahtz", "Tom Everitt", "Ramana Kumar", "Zac Kenton", "Jan Leike", "Shane Legg"]
+    year: 2020
+    type: blog-post
+    url: https://deepmind.google/blog/specification-gaming-the-flip-side-of-ai-ingenuity/
+    tags: [alignment]
+    difficulty: intro
+    synopsis: >
+      Defines specification gaming: an agent satisfying the literal objective it
+      was given without achieving what its designers meant, like a robot arm
+      that flips a Lego block over instead of stacking it. Drawing on a list of
+      around 60 collected examples, the post traces the problem to the task
+      specification rather than the learning algorithm: badly shaped rewards,
+      outcomes described too loosely, flawed human feedback, simulator bugs and,
+      for agents acting in the real world, reward tampering. It argues that
+      getting the specification right matters more as agents become better at
+      finding unexpected solutions.
+    added: 2026-09-23

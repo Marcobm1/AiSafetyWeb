@@ -1,0 +1,106 @@
+# Update the news data, build the site and deploy it to GitHub Pages.
+# One workflow on purpose: commits made with the built-in GITHUB_TOKEN don't
+# trigger other workflows, so a separate "deploy on push" workflow would never
+# see the robot's data commits. Full explanation: docs/HOW_THIS_SITE_WORKS.md §7.
+name: Update and deploy
+
+on:
+  schedule:
+    - cron: "0 6 * * *"          # every day at 06:00 UTC
+  workflow_dispatch:              # "Run workflow" button in the Actions tab
+    inputs:
+      check_feed:
+        description: "Optional: only TEST this feed URL (prints a report; no data is fetched, committed or deployed)"
+        required: false
+        default: ""
+  push:
+    branches: [main]             # my own commits: build and deploy only
+
+# Nothing by default; each job asks only for what it needs.
+permissions: {}
+
+# Never two runs at the same time (e.g. the daily run and my push). A new run
+# waits for the current one instead of cancelling it halfway through a commit
+# or a deployment.
+concurrency:
+  group: update-and-deploy
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write            # to push the data commit
+    steps:
+      # Every action is pinned to a full commit SHA (the version is in the
+      # comment): a tag like @v7 can be moved to other code, a SHA can't.
+      - name: Check out the repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up Python (version from .python-version)
+        uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
+        with:
+          python-version-file: .python-version
+          cache: pip
+          cache-dependency-path: requirements.txt
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      # Manual run with a feed URL: test that feed and stop (nothing else runs).
+      # The URL goes through an environment variable, never pasted into the
+      # script, so it can't inject shell commands.
+      - name: Check one feed (manual test only)
+        if: github.event_name == 'workflow_dispatch' && (inputs.check_feed || '') != ''
+        env:
+          FEED_URL: ${{ inputs.check_feed }}
+        run: python scripts/fetch_news.py --check-feed "$FEED_URL"
+
+      # The daily and manual runs fetch new data; a push (my own commit) only
+      # rebuilds and redeploys what is already in the repository.
+      - name: Fetch news and paper candidates
+        if: github.event_name != 'push' && (inputs.check_feed || '') == ''
+        run: python scripts/fetch_news.py
+
+      - name: Commit and push the data if it changed
+        if: github.event_name != 'push' && (inputs.check_feed || '') == ''
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "No data changes."
+            exit 0
+          fi
+          git commit -m "Update news data (automated)"
+          # I may have pushed while this run was fetching: put the robot's
+          # commit on top of mine instead of failing or overwriting.
+          git pull --rebase origin main
+          git push origin HEAD:main
+
+      - name: Build the site
+        if: (inputs.check_feed || '') == ''
+        run: python scripts/build_site.py
+
+      - name: Upload the site for GitHub Pages
+        if: (inputs.check_feed || '') == ''
+        uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site/
+
+  deploy:
+    needs: build
+    if: (inputs.check_feed || '') == ''
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      pages: write               # to deploy to GitHub Pages
+      id-token: write            # to prove to Pages that this run is who it says
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1

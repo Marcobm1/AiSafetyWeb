@@ -478,10 +478,39 @@ def update_candidates(new_papers: list[dict], today: datetime,
 # Main
 # ---------------------------------------------------------------------------
 
+def check_feed(url: str, config: dict) -> int:
+    """Try one feed URL the way the daily run would, and report. Writes nothing.
+
+    Used to test a new source (or one that fails from one network, like
+    DeepMind's own feed from my work computer) before adding it to
+    config/sources.yaml. From GitHub Actions: "Run workflow" with the
+    `check_feed` field filled in.
+    """
+    settings = config["settings"]
+    session = requests.Session()
+    session.headers["User-Agent"] = settings["user_agent"]
+    now = datetime.now(timezone.utc)
+    source = {"id": "check", "name": "check", "url": url, "require_topic": True}
+    try:
+        kept, total = fetch_feed(source, session, settings, TopicMatcher(config["topics"]),
+                                 now - timedelta(days=settings["max_age_days"]), now)
+    except Exception as exc:  # noqa: BLE001 - report any failure, it's a check
+        print(f"FEED CHECK FAILED for {url}: {type(exc).__name__}: {exc}")
+        return 1
+    print(f"FEED CHECK OK: {url}")
+    print(f"  {total} items in the feed; {len(kept)} from the last "
+          f"{settings['max_age_days']} days that match a topic (require_topic).")
+    for entry in kept[:5]:
+        print(f"  - {entry['published'][:10]}  {entry['title']}  [{', '.join(entry['topics'])}]")
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument("--dry-run", action="store_true",
                         help="fetch and report, but do not write any file")
+    parser.add_argument("--check-feed", metavar="URL",
+                        help="only try this one feed URL and report (writes nothing)")
     args = parser.parse_args()
 
     # Titles contain all kinds of characters; the Windows console may not.
@@ -491,6 +520,8 @@ def main() -> int:
 
     started = time.monotonic()
     config = load_yaml(CONFIG_FILE)
+    if args.check_feed:
+        return check_feed(args.check_feed, config)
     settings = config["settings"]
     matcher = TopicMatcher(config["topics"])
     now = datetime.now(timezone.utc)

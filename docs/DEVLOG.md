@@ -969,3 +969,58 @@ comments only), `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
 - Me: review My Own Path v2 and the form in the local preview and approve it.
 - Stage 8 (GitHub Actions and Pages) waits for that approval.
 - Me: the two `TODO(Marco)` timeline notes.
+
+---
+
+## 2026-09-23 — Stage 8: GitHub Actions and GitHub Pages
+
+**What I did**
+- I wrote the one workflow, `.github/workflows/update-and-deploy.yml`
+  (HOW_THIS_SITE_WORKS §7): daily at 06:00 UTC, manual, and on every push to
+  `main`. Daily and manual runs fetch, commit the data if it changed (as
+  `github-actions[bot]`, with `git pull --rebase` before pushing), build and
+  deploy; a push only builds and deploys.
+- I added `fetch_news.py --check-feed URL`, which tests one feed and writes
+  nothing, and a `check_feed` field on the manual run to use it from GitHub's
+  servers.
+- I built the **"This site may be out of date"** warning (`static/js/stale.js`,
+  `stale_after_hours: 48` in `config/site.yaml`), planned since Stage 1.
+- I added **"Specification gaming: the flip side of AI ingenuity"**
+  (Krakovna et al., DeepMind, 21 April 2020) to Papers, not to Start Here. It
+  was dropped in Stage 4a because DeepMind's site didn't open from my work
+  network; from home it opens, and I checked title, date and all nine authors
+  on the official page. The synopsis is Claude's draft from the post itself.
+- GitHub settings: Claude checked with `gh` that Pages already used "GitHub
+  Actions" as its source (the `PUT` to set it changed nothing) and read the
+  Actions permissions. I then changed them myself: only GitHub-made actions
+  allowed, **SHA pinning required**, read-only token by default, Actions can't
+  approve pull requests; and email notifications for failed workflows only.
+  Claude re-read the permissions afterwards to confirm them.
+
+**What I decided and why**
+- **How a push is told apart:** `github.event_name` is `push` for my commits,
+  so the fetch and commit steps are skipped (`if: github.event_name != 'push'`).
+- **One workflow, not two:** commits made with `GITHUB_TOKEN` don't trigger
+  other workflows, so a separate deploy workflow would never publish the
+  robot's data.
+- **Minimal permissions, per job:** `permissions: {}` at the top; `build` gets
+  `contents: write`, `deploy` gets `pages: write` and `id-token: write`. I
+  left out `configure-pages`: it isn't needed with a fixed base path, and it
+  would have needed one more permission.
+- **Actions pinned by commit SHA** (checkout v7.0.1, setup-python v7.0.0,
+  upload-pages-artifact v5.0.0, deploy-pages v5.0.1). I got each SHA from the
+  release tag and checked it a second way (the commit the tag points to).
+  `actionlint` found no problems in the workflow.
+- **No automatic re-enabling for the 60-day rule** for now: it would need an
+  extra permission (`actions: write`). The site's warning, the failure emails
+  and GitHub's own email before disabling are enough; how to re-enable by
+  hand is in HOW_THIS_SITE_WORKS §11.
+- **The stale check runs in the browser:** if Actions stops, nothing rebuilds
+  the site, so only the visitor's clock can notice. I tested it with a fake
+  clock: hidden at +1 h and +47 h, shown at +49 h and +10 days.
+
+**Files created / changed**
+Created: `.github/workflows/update-and-deploy.yml`, `static/js/stale.js`.
+Changed: `scripts/fetch_news.py`, `templates/base.html`, `static/css/style.css`,
+`config/site.yaml`, `data/papers.yaml`, `CLAUDE.md`,
+`docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.

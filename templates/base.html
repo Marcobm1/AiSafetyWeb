@@ -32,6 +32,17 @@
     </nav>
   </header>
 
+  {% if last_run %}
+  {# Shown by static/js/stale.js only when the last fetch is older than
+     stale_after_hours: the check must run in the visitor's browser, because
+     a site that stopped updating also stopped rebuilding. #}
+  <p class="notice stale-warning" role="status" data-stale-since="{{ status.last_run }}"
+     data-stale-hours="{{ site.stale_after_hours }}" hidden>
+    <strong>This site may be out of date.</strong> The news was last updated on
+    <time datetime="{{ status.last_run }}">{{ last_run | date("%d %b %Y, %H:%M UTC") }}</time>,
+    more than {{ site.stale_after_hours }} hours ago; the daily update may have stopped.
+  </p>
+  {% endif %}
   <main id="main">
     {% block content %}{% endblock %}
   </main>
@@ -46,6 +57,7 @@
     </p>
   </footer>
   <script src="{{ url('static/js/theme.js') }}" defer></script>
+  <script src="{{ url('static/js/stale.js') }}" defer></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>

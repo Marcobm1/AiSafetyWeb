@@ -16,6 +16,12 @@ base_path: /AiSafetyWeb/
 home:
   window_hours: 48
 
+# Warning shown at the top of every page when the last fetch is older than
+# this. The visitor's browser does the check (static/js/stale.js), comparing
+# `last_run` from data/status.json with its own clock, so the warning appears
+# even if GitHub Actions stops running and nothing rebuilds the site.
+stale_after_hours: 48
+
 # Labels shown on the site for the topic ids used in config/sources.yaml.
 topics:
   alignment: Alignment
