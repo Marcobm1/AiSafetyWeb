@@ -1033,3 +1033,42 @@ Changed: `scripts/fetch_news.py`, `templates/base.html`, `static/css/style.css`,
   yet (the topic filter had dropped all of them), so the switch can't create
   duplicates. From my work network this source will show as failing in local
   runs; the daily run is on GitHub's servers.
+
+**First runs (same day)**
+- **Push run** (the Stage 8 commit): the fetch and commit steps were skipped,
+  as designed; build and deploy took about 20 seconds. The site went live at
+  https://marcobm1.github.io/AiSafetyWeb/.
+- **`check_feed` run** for DeepMind: only the check step ran; deploy skipped.
+- **Full manual run:** it waited (`pending`) until my push run had finished,
+  which is `concurrency` working; then fetched 7 new entries, committed them
+  as `github-actions[bot]` ("Update news data (automated)"), built and
+  deployed.
+- **Checks on the published site:** a crawler followed every internal link
+  from the home page: 29 pages and 12 assets (CSS, the two Literata files as
+  `font/woff2`, the licence, 8 scripts), all HTTP 200, none outside
+  `/AiSafetyWeb/`. No page contains "Add entry", `data-local-only` or
+  `/_local/`, and `_local/add-entry/` returns the site's 404 page. In Edge
+  (Playwright): no horizontal scrolling on 10 pages in light and dark at
+  1100px and 360px; Literata loaded; theme toggle; Start Here 4 stages / 12
+  readings; Papers 13 entries; the book dialog; My Own Path without the form
+  link and with September's 16 Journal entries; the stale warning hidden now
+  and shown with the clock moved 49 hours ahead (hidden at 47).
+- **Problem found: Substack blocks GitHub's servers.** Redwood Research,
+  Import AI, Zvi and Epoch AI (all on `*.substack.com`) answered
+  `403 Forbidden` from Actions; from home they work with the same User-Agent,
+  so the block is by address. I tested alternatives from Actions with
+  `check_feed`: `blog.redwoodresearch.org/feed` (Redwood's own domain; the
+  Substack address redirects there), `jack-clark.net/feed/` (Jack Clark's site,
+  where `importai.net` redirects) and `thezvi.wordpress.com/feed/` (Zvi's
+  WordPress copy of the same posts) all work, with the same posts as the
+  Substack feeds. I found no other official feed for Epoch AI. Switching
+  needs a decision first: the entries already saved from those sources have
+  Substack URLs, so the new feeds would add the most recent posts again under
+  new URLs.
+
+**Pending**
+- Me: decide how to handle the four Substack sources.
+- Optional: a favicon (browsers ask for `/favicon.ico`, which doesn't exist).
+- The `ubuntu-latest` runner moves to Ubuntu 26 from 19 October 2026 (GitHub's
+  notice in the run); nothing to change, Python comes from `setup-python`.
+- Stage 9: final documentation review.

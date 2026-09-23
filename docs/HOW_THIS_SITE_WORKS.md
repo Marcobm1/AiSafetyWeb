@@ -724,6 +724,14 @@ Every URL was checked (HTTP 200 + a valid feed) before adding it.
   that `blog.google` leaves out, so I switched. From my work computer the
   `--dry-run` will show this one source as failing; that's expected, the daily
   run happens on GitHub's servers.
+- **Substack blocks GitHub's servers (found in Stage 8).** The four sources on
+  `*.substack.com` (Redwood Research, Import AI, Zvi, Epoch AI) answer
+  **403 Forbidden** to GitHub Actions, while from my home network, with the
+  same User-Agent, they work: Substack refuses requests from data-centre
+  addresses. Substack newsletters on their own domain (CAIS's
+  `newsletter.safe.ai`, Transformer) are not affected. Until I decide how to
+  replace them (see DEVLOG), those four show as failing in `status.json` and
+  on About, and the daily run carries on without them.
 - **`default_topics`:** a source can add fixed topics to all its entries. I use
   it for Transformer Circuits, whose titles ("HeadVis") often contain no keyword.
 
@@ -1719,6 +1727,7 @@ until I merge.
 | The run fails with *"…must be pinned to a full-length commit SHA"* or *"…is not allowed to be used"* | A `uses:` line with a tag instead of a SHA, or an action not made by GitHub | Pin it to the full SHA (section 7.3) or use an official `actions/…` action |
 | The deploy job fails with a Pages error (404 or "Get Pages site failed") | Settings → Pages → Source is not "GitHub Actions" | Set it back to **GitHub Actions** (section 7.5) and re-run |
 | The published site shows unstyled pages or 404s for `/static/...` | A link or asset without the base path | Can't happen with a green build (the link check would fail); if it does, check `base_path` in `config/site.yaml` |
+| Redwood, Import AI, Zvi or Epoch fail with `403 Forbidden` only in GitHub Actions | Substack blocks requests from data-centre addresses (section 5.3) | Nothing to fix in the script; use an alternative feed of the same publication (test it with *check_feed*) or accept that source failing |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## 12. Possible future extensions
