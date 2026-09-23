@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 1 of 7 complete (repository setup and initial documentation).
+**Current status:** Stage 1 of 8 complete (repository setup and initial documentation). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -35,9 +35,15 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 |---|---|---|
 | **Today in AI Safety** (home) | Entries from the last 24–48 h, grouped by topic/source | Collected automatically every day |
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
-| **Papers** | My curated list of important papers, filterable by year/tag/difficulty | `data/papers.yaml`, which I edit by hand |
-| **Reading tracker** | Each visitor marks papers as *read* / *to read* | The visitor's own browser (localStorage) |
+| **Library** | My curated archive of papers, essays, reports, scenarios and blog posts, filterable by type/year/tag/difficulty | `data/library.yaml`, which I edit by hand |
+| **Start Here** 🚧 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/library.yaml`: the stage list plus a `start_here` block on each entry in the path |
+| **My Own Path** 🚧 | My public learning log: courses, papers, articles, projects and milestones, newest first, with filters and counters | `data/my_path.yaml`, which I edit by hand |
+| **Reading tracker** | Each visitor marks entries as *read* / *to read* (in the Library **and** in Start Here) | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work | Template text |
+
+**Reading tracker vs My Own Path:** the tracker is private to each visitor's
+browser and nobody else sees it. My Own Path is my own *public* record, written
+by me in a file in the repository.
 
 My content rules: the site only shows the **title, source, date, a short excerpt
 (max ~2 sentences) and a link** to each original. I never republish full
@@ -65,7 +71,9 @@ flowchart LR
     subgraph Repo["Git repository"]
         CFG["config/sources.yaml"]
         NEWS["data/news/YYYY-MM.json"]
-        PAP["data/papers.yaml<br/>(edited by hand)"]
+        CAND["data/paper_candidates.json<br/>(auto-pruned)"]
+        PAP["data/library.yaml<br/>(edited by hand)"]
+        PATH["data/my_path.yaml<br/>(edited by hand)"]
         TPL["templates/ + static/"]
     end
 
@@ -73,8 +81,11 @@ flowchart LR
     ARX --> F
     CFG --> F
     F -->|"new entries, commit"| NEWS
+    F -->|"new arXiv papers"| CAND
+    CAND -.->|"I promote one<br/>(promote_candidate.py)"| PAP
     NEWS --> B
     PAP --> B
+    PATH --> B
     TPL --> B
     B -->|"_site/ (HTML, CSS, JS)"| PAGES["GitHub Pages<br/>marcobm1.github.io/AiSafetyWeb/"]
     PAGES --> V["Visitor's browser<br/>(reading tracker in localStorage)"]
@@ -101,19 +112,133 @@ dark-mode toggle and the reading tracker.
 | `docs/DEVLOG.md` | My chronological log of every change and why | ✅ |
 | `config/sources.yaml` | All news sources, arXiv query, karma thresholds, topic keywords | 🚧 Stage 2 |
 | `config/site.yaml` | Site title, base path, retention settings | 🚧 Stage 3 |
-| `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON | 🚧 Stage 2 |
+| `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON and paper candidates | 🚧 Stage 2 |
 | `data/news/YYYY-MM.json` | Collected news, one file per month | 🚧 Stage 2 |
 | `data/status.json` | Time of last run + status of each source | 🚧 Stage 2 |
+| `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | 🚧 Stage 2 |
+| `data/library.yaml` (format only) | Empty file with the documented format, so the fetch script can skip papers I already curated | 🚧 Stage 2 |
+| `data/my_path.yaml` | My learning log (format + my first two courses) | 🚧 Stage 2 (data), Stage 5 (page) |
+| `scripts/promote_candidate.py` | Copies a candidate into `library.yaml` as a new block | 🚧 Stage 4 |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder | 🚧 Stage 3 |
 | `templates/` | Jinja2 HTML templates | 🚧 Stage 3 |
-| `static/` | CSS and JavaScript | 🚧 Stages 3–5 |
-| `data/papers.yaml` | Curated paper archive | 🚧 Stage 4 |
-| `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 6 |
+| `static/` | CSS and JavaScript | 🚧 Stages 3–6 |
+| `data/library.yaml` (content) | Curated reading archive, Start Here stages and entries | 🚧 Stages 4–5 |
+| `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 7 |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | 🚧 Stage 3 |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
 
 **Why one JSON file per month:** the files stay small, the daily Git diffs stay
 readable, and merge conflicts are rare because only the current month's file changes.
+
+**YAML for what I edit, JSON for what the bot writes:** YAML is easier for me
+to read and edit by hand, and it allows comments. JSON is strict, which is
+safer for files that a script rewrites every day.
+
+### 3.1 Data formats
+
+I'm fixing these formats now (Stage 2), even though the Start Here and My Own
+Path pages come later, so every script and page is built against the same shape.
+
+**The `id` is the glue.** Every reading entry in `library.yaml` has a stable,
+unique `id` (a short lowercase slug such as `ai-2027` or `sleeper-agents`).
+The Library, the Start Here path, My Own Path and the visitors' reading tracker
+all refer to an entry by this `id`, so its data (title, authors, URL) lives in
+one place only. **I never change an `id` once it's published**, because
+visitors' saved *read / to read* marks point to it.
+
+#### `data/library.yaml` — my curated reading archive (edited by hand)
+
+The file has two top-level keys. `start_here_stages` lists the stages of the
+Start Here path, in the order they appear on the site. `entries` holds every
+reading. **`entries` must stay the last key in the file**, because
+`promote_candidate.py` appends new entries to the end of the file.
+
+```yaml
+start_here_stages:                     # order in this list = order on the site
+  - id: why-it-matters                 # referenced by start_here.stage below
+    title: Why it matters
+    intro: >
+      Short paragraph shown at the top of the stage.
+
+entries:
+  - id: sleeper-agents                 # stable slug, unique, never changes
+    title: "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training"
+    authors: ["Evan Hubinger", "et al."] # "et al." allowed for long author lists
+    year: 2024
+    type: paper                        # paper | essay | report | scenario | blog-post
+    url: https://arxiv.org/abs/2401.05566
+    arxiv_id: "2401.05566"             # optional; lets the fetch script skip it as a candidate
+    tags: [alignment, evaluations]
+    difficulty: intermediate           # intro | intermediate | advanced
+    why_it_matters: >
+      One or two sentences, in my words, on why this entry is in the Library.
+    added: 2026-09-23                  # date I added it
+    start_here:                        # optional: only if it's part of the Start Here path
+      stage: evaluations               # an id from start_here_stages
+      order: 2                         # position inside that stage
+      note: >
+        Why it sits at this point of the path.
+```
+
+The website shows `type` as a label (e.g. *Scenario*, *Blog post*) and lets
+visitors filter by it.
+
+**Why Start Here has no file of its own:** a reading joins the path through its
+own `start_here` block, so its data exists only once and the path can never
+point to an entry that isn't in the Library. The build script groups the
+entries by `start_here.stage` and sorts them by `start_here.order`; the stage
+titles and intros come from `start_here_stages`. The build fails with a clear
+message if an entry names a stage that isn't in that list.
+
+#### `data/paper_candidates.json` — arXiv papers I might curate (written by the bot)
+
+```json
+{
+  "arxiv:2401.05566": {
+    "id": "arxiv:2401.05566",
+    "title": "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training",
+    "authors": ["Evan Hubinger", "Carson Denison", "..."],
+    "year": 2024,
+    "url": "https://arxiv.org/abs/2401.05566",
+    "abstract": "First two sentences of the abstract at most.",
+    "detected": "2026-09-23",
+    "topics": ["alignment", "evaluations"]
+  }
+}
+```
+
+- The `id` is `arxiv:` + the arXiv number **without** the version suffix
+  (`v1`, `v2`…), so a new version of the same paper never creates a duplicate.
+- A paper is **not** added if it's already a candidate or already in
+  `library.yaml` (matched by `arxiv_id` or by its normalised arXiv URL).
+- Candidates older than `candidates.retention_days` (in `config/sources.yaml`,
+  default 60 days) are deleted on every run, so the file never grows without limit.
+
+#### `data/my_path.yaml` — my public learning log (edited by hand)
+
+```yaml
+- date: 2026-09-07                # when I started (or when it happened, for a milestone)
+  completed: 2026-09-11           # optional: when I finished it
+  type: course                    # course | paper | article | project | milestone
+  title: Future of AI
+  url: https://bluedot.org/courses/future-of-ai
+  provider: BlueDot Impact        # for courses; use `author` for texts
+  status: completed               # in-progress | completed
+  notes: >
+    My takeaways, in first person.
+
+- date: 2026-09-15                # (illustrative example of a linked entry)
+  type: paper
+  ref: sleeper-agents             # links to the entry in library.yaml: title, authors
+  status: in-progress             # and URL come from there, so I don't repeat them
+  notes: >
+    ...
+```
+
+If an entry has `ref`, I leave out `title`, `url` and `author`; the build
+script fills them in from `library.yaml` and fails with a clear message if the
+`ref` doesn't exist. The timeline is sorted by the most recent of `date` and
+`completed`.
 
 **How I write these docs:** every Markdown file meant for readers (`README.md`,
 everything in `docs/`) is written in first person, as my own technical notes,
@@ -216,7 +341,13 @@ venv with `py -3.12`, and the GitHub Actions workflow reads the same file.
 5. Assign topics (alignment, interpretability, evals, governance, security)
    from keywords.
 6. Remove duplicates by URL and merge into `data/news/YYYY-MM.json`.
-7. Write `data/status.json` (run time + per-source result) **on every run**,
+   arXiv papers go there too, so they appear on the home page like any other news.
+7. **Paper candidates:** add each new arXiv paper to `data/paper_candidates.json`
+   unless it's already a candidate or already in `data/library.yaml`, then delete
+   candidates older than the retention period (format in section 3.1).
+   Candidates are **not** shown on the website; they are my shortlist in the
+   repository (which is public, but nobody browses it like the site).
+8. Write `data/status.json` (run time + per-source result) **on every run**,
    even with no new entries. The daily commit this produces keeps the
    repository active.
 
@@ -232,7 +363,7 @@ Then I open the URL it prints (under `/AiSafetyWeb/`, like the real site).
 
 ## 7. GitHub Actions and the cron schedule
 
-🚧 **Not built yet (Stage 6).** The design I agreed on: a **single** workflow
+🚧 **Not built yet (Stage 7).** The design I agreed on: a **single** workflow
 `update-and-deploy.yml`, triggered by a daily cron, by a manual button and by
 every push to `main`. It fetches, commits the data, builds and deploys.
 
@@ -249,7 +380,7 @@ repositories after 60 days without repository activity. My safeguards:
 
 ## 8. Deployment to GitHub Pages and the base path
 
-🚧 **Details in Stages 3 and 6.**
+🚧 **Details in Stages 3 and 7.**
 
 **The base path problem:** this is a *project site*, so it lives under a
 sub-folder: `https://marcobm1.github.io/AiSafetyWeb/`. A link written as
@@ -261,8 +392,41 @@ which does not exist. Every internal link and asset must be prefixed with
 ## 9. How to…
 
 - **Add a news source:** 🚧 Stage 2 (edit `config/sources.yaml`).
-- **Add a paper:** 🚧 Stage 4 (edit `data/papers.yaml`).
-- **Change the design:** 🚧 Stage 5 (edit `static/css/style.css`).
+- **Add a paper (or essay, report…):** 🚧 Stage 4 (add a block to `data/library.yaml`
+  following the format in section 3.1).
+- **Promote a paper candidate to the Library:** 🚧 Stage 4. The planned way:
+  1. I look through `data/paper_candidates.json` (on GitHub or in VS Code) and
+     copy the `id` of a paper I like, e.g. `arxiv:2401.05566`.
+  2. I run `python scripts\promote_candidate.py arxiv:2401.05566`. It appends a
+     ready-made block to the end of `library.yaml` with the title, authors, year,
+     URL and topics already filled in, and `why_it_matters` / `difficulty` set
+     to `TODO`. (It appends plain text instead of rewriting the whole file, so
+     my comments in `library.yaml` survive.)
+  3. I open `library.yaml`, check the generated `id` slug, and replace the two
+     `TODO`s with my note and the difficulty.
+  4. Commit and push. On the next run the fetch script sees the paper in
+     `library.yaml` and drops it from the candidates. The build script skips
+     (with a warning) any entry that still has a `TODO`, so a half-finished
+     entry is never published.
+- **(Optional, later) Add a hidden page to review candidates:** I decided to
+  keep candidates **only in the repo**: new arXiv papers already appear on the
+  home page and in the news archive, so a public "Recent papers" page would
+  duplicate them and mix unreviewed papers with my curated Library. If reading
+  the JSON ever becomes tedious, this is how I'd add a private-ish review page:
+  1. Create `templates/candidates.html` that lists the candidates (title,
+     authors, date detected, topics, link, and the `id` to copy for
+     `promote_candidate.py`).
+  2. In `build_site.py`, load `data/paper_candidates.json` and render that
+     template to `_site/review/candidates/index.html`.
+  3. Add `<meta name="robots" content="noindex, nofollow">` to its `<head>`
+     so search engines don't list it, and **don't link it from the menu**.
+  4. Remember that it is still **public**: anyone with the URL can open it.
+     "Hidden" only means unlinked and unindexed, not protected.
+- **Add an entry to the Start Here path:** 🚧 Stage 5 (add a `start_here` block to
+  an entry in `library.yaml`, after verifying the entry against the original source).
+- **Add an entry to My Own Path:** 🚧 Stage 5 (step-by-step guide will be here
+  once the page exists; the format is in section 3.1).
+- **Change the design:** 🚧 Stage 6 (edit `static/css/style.css`).
 - **Upgrade a Python package:** I activate the venv, run
   `pip install --upgrade <pkg>`, test the build, then `pip freeze > requirements.txt`,
   keep the explanatory comment at the top of the file, and commit.
@@ -354,6 +518,7 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
+- **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
 - **Repository (repo)** — A project folder tracked by Git, including its full history.
 - **RSS** — *Really Simple Syndication*: a standard XML format for publishing a list of recent posts.
