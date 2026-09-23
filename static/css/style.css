@@ -1,229 +1,312 @@
-/* Basic layout for Stage 3 (skeleton). The real design (serif type, 680px
-   reading column, light/dark themes) comes in Stage 6. */
+/* AI Safety Web: an e-reader page.
+   One book typeface (Literata, self-hosted), warm sepia paper, ink-only
+   colours, a 620px reading column, chapter-style headings, light and dark.
+   Every colour is a token below; docs/HOW_THIS_SITE_WORKS.md §6 lists their
+   contrast ratios. */
 
-:root {
-  --text: #1d1d1f;
-  --muted: #5f6368;
-  --line: #e2e2e2;
-  --link: #1a4fb4;
-  --bg: #ffffff;
-  --tag-bg: #eef1f6;
+/* ---- Font (static/fonts/, licence in static/fonts/Literata-OFL.txt) ------ */
+@font-face {
+  font-family: "Literata";
+  src: url("../fonts/literata-latin-wght-normal.woff2") format("woff2");
+  font-weight: 200 900; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Literata";
+  src: url("../fonts/literata-latin-wght-italic.woff2") format("woff2");
+  font-weight: 200 900; font-style: italic; font-display: swap;
 }
 
-*, *::before, *::after { box-sizing: border-box; }
+/* ---- Colour tokens ------------------------------------------------------- */
+:root {
+  color-scheme: light;
+  --bg: #f4ecd8;          /* sepia paper */
+  --surface: #ebe1c9;     /* notices, bar tracks */
+  --text: #221f1a;        /* ink; also links and pressed buttons */
+  --muted: #5d564a;       /* secondary text, labels */
+  --line: #d6cbb1;        /* rules between entries (decorative) */
+  --shadow: rgba(60, 45, 15, .2);
+  --font: "Literata", Georgia, "Times New Roman", serif;
+}
+/* Dark: follows the system unless the visitor chose light with the toggle... */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    color-scheme: dark;
+    --bg: #111110; --surface: #1d1c1a; --text: #d9d5cc; --muted: #9a958b;
+    --line: #2f2d29; --shadow: rgba(0, 0, 0, .6);
+  }
+}
+/* ...or when the visitor chose dark. */
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #111110; --surface: #1d1c1a; --text: #d9d5cc; --muted: #9a958b;
+  --line: #2f2d29; --shadow: rgba(0, 0, 0, .6);
+}
 
+/* ---- Base ---------------------------------------------------------------- */
+*, *::before, *::after { box-sizing: border-box; }
 /* The `hidden` attribute must win over any `display` rule below. */
 [hidden] { display: none !important; }
 
+html { background: var(--bg); -webkit-text-size-adjust: 100%; }
 body {
-  margin: 0 auto;
-  max-width: 44rem;
-  padding: 0 1rem 3rem;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  line-height: 1.55;
-  color: var(--text);
-  background: var(--bg);
+  margin: 0 auto; max-width: calc(620px + 2rem); padding: 0 1rem 4rem;
+  font-family: var(--font); font-size: 1.15rem; line-height: 1.7;
+  font-variant-numeric: oldstyle-nums;
+  color: var(--text); background: var(--bg);
   overflow-wrap: break-word;   /* long URLs/titles never force horizontal scroll */
 }
 
-a { color: var(--link); }
+/* Links are ink, told apart by their underline. */
+a { color: var(--text); text-decoration-thickness: 1px; text-underline-offset: .18em; text-decoration-color: var(--muted); }
+a:hover { text-decoration-color: var(--text); text-decoration-thickness: 2px; }
+
+/* Keyboard focus: with no link colour, focus must be unmistakable. A thick ink
+   ring with a paper-coloured gap, on everything that can take focus. */
+:focus-visible {
+  outline: 3px solid var(--text); outline-offset: 3px; border-radius: 2px;
+  box-shadow: 0 0 0 3px var(--bg);
+}
+a:focus-visible { text-decoration: none; background: var(--surface); }
+
+/* Prose is justified with automatic hyphenation (the page is lang="en"), so
+   justified lines don't open big gaps between words. Only words of 7+ letters
+   are split. List excerpts stay ragged-right and unhyphenated, easy to scan. */
+.prose p, .lede, .synopsis, main > p {
+  text-align: justify; hyphens: auto; -webkit-hyphens: auto;
+  hyphenate-limit-chars: 7 3 3;
+}
+
+h1, h2, h3 { line-height: 1.25; }
+h2 { font-size: 1.45rem; font-weight: 500; margin: 2.75rem 0 .6rem; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: .8rem 0; }
+.lede { font-size: 1.15rem; margin-top: 0; }
+.empty, .breadcrumb, .stage-intro { color: var(--muted); }
+.note { color: var(--muted); font-style: italic; font-size: 1rem; }
+.count { color: var(--muted); font-weight: 400; font-size: .8em; }
+
+/* Page title: a chapter opening, with a ⁂ underneath. */
+h1 { text-align: center; font-weight: 400; font-size: 2.2rem; letter-spacing: .01em; margin: 3rem 0 1.5rem; }
+h1::after { content: "⁂"; display: block; font-size: 1rem; color: var(--muted); margin-top: .6rem; }
+/* Drop cap, only on pages that open with an introduction (class set in the template). */
+.drop-cap::first-letter { float: left; font-size: 3.3em; line-height: .85; padding: .08em .08em 0 0; font-weight: 500; }
 
 .skip-link { position: absolute; left: -999px; }
-.skip-link:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; }
+.skip-link:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; z-index: 10; }
 
+/* ---- Header and footer: centred, like a book's running head -------------- */
 .site-header {
-  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
-  gap: .5rem 1rem; padding: 1.25rem 0 .75rem; border-bottom: 1px solid var(--line);
+  display: flex; flex-direction: column; align-items: center; text-align: center; gap: .5rem;
+  padding: 2.25rem 0 1.25rem; border-bottom: 1px solid var(--line);
 }
-.site-title { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: var(--text); }
-.site-header ul { display: flex; flex-wrap: wrap; gap: .25rem 1rem; list-style: none; margin: 0; padding: 0; }
-.site-header a[aria-current="page"] { font-weight: 700; text-decoration: none; color: var(--text); }
+.site-title { font-size: 1rem; font-weight: 500; letter-spacing: .18em; text-transform: uppercase; color: var(--text); text-decoration: none; }
+.site-header ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .1rem 1.1rem; list-style: none; margin: 0; padding: 0; }
+.site-header nav a { font-size: .95rem; font-style: italic; color: var(--muted); text-decoration: none; }
+.site-header nav a:hover { color: var(--text); text-decoration: underline; }
+.site-header a[aria-current="page"] { color: var(--text); font-style: normal; text-decoration: none; }
+.header-tools { order: 3; display: flex; gap: 1rem; }
+.shelf-link, .theme-toggle { font-size: .85rem; font-style: italic; color: var(--muted); text-decoration: none; }
+.shelf-link:hover, .theme-toggle:hover { color: var(--text); text-decoration: underline; }
+.theme-toggle { font-family: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
 
-h1 { font-size: 1.8rem; line-height: 1.2; margin: 1.5rem 0 .5rem; }
-h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; }
-.lede, .empty, .note, .breadcrumb { color: var(--muted); }
-.count { color: var(--muted); font-weight: 400; font-size: .85em; }
+.site-footer {
+  margin-top: 4rem; padding-top: 1.25rem; border-top: 1px solid var(--line);
+  text-align: center; font-style: italic; font-size: .85rem; color: var(--muted); line-height: 1.55;
+}
+.site-footer a { color: var(--muted); }
 
-.entry { padding: .75rem 0; border-top: 1px solid var(--line); }
-.entry-title { font-size: 1.05rem; margin: 0 0 .2rem; }
+/* ---- Lists of entries (news, papers): left-aligned, easy to scan --------- */
+.entry, .paper { padding: 1.1rem 0; border-top: 1px solid var(--line); }
+.entry-title { font-size: 1.15rem; font-weight: 600; margin: 0 0 .25rem; }
 .entry-title a { text-decoration: none; }
 .entry-title a:hover { text-decoration: underline; }
-.entry-meta { margin: 0; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .25rem .6rem; }
-.entry-excerpt { margin: .35rem 0 0; }
-.tag { background: var(--tag-bg); border-radius: 3px; padding: 0 .35rem; }
+.entry-meta { margin: 0; font-size: .88rem; font-style: italic; color: var(--muted); display: flex; flex-wrap: wrap; gap: .15rem .7rem; align-items: baseline; }
+.entry-excerpt, .synopsis, .why, .opinion { margin: .45rem 0 0; }
+/* Labels and topics: small caps, no boxes. */
+.tag, .label { font-style: normal; font-size: 1rem; font-variant: small-caps; text-transform: lowercase; letter-spacing: .04em; color: var(--muted); }
+.notice { border-left: 2px solid var(--text); background: var(--surface); padding: .7rem 1rem; font-size: 1rem; }
 
-details > summary { cursor: pointer; list-style-position: outside; }
+details > summary { cursor: pointer; }
 details > summary h2 { display: inline; }
+summary { font-style: italic; font-size: .95rem; color: var(--muted); }
+summary:hover { color: var(--text); }
 
-.filters { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: end; margin: 1rem 0; font-size: .9rem; }
-.filters label { display: flex; flex-direction: column; gap: .2rem; }
-.filters select { max-width: 100%; }
+.filters { display: flex; flex-wrap: wrap; gap: .6rem 1rem; align-items: end; margin: 1.25rem 0; font-size: .88rem; font-style: italic; color: var(--muted); }
+.filters label { display: flex; flex-direction: column; gap: .25rem; }
+.filters select {
+  max-width: 100%; font: inherit; font-style: normal; color: var(--text); background: var(--bg);
+  border: 1px solid var(--muted); border-radius: 2px; padding: .3rem .4rem;
+}
 
 .month-list { padding-left: 1.2rem; }
-.pager { display: flex; justify-content: space-between; margin-top: 2rem; }
+.pager { display: flex; justify-content: space-between; margin-top: 2.5rem; font-style: italic; }
 
-.site-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }
-
-/* --- Stage 4a: header shelf link, papers, reading tracker, My shelf ------- */
-.site-header { position: relative; }
-.shelf-link { font-size: .85rem; margin-left: auto; }
-.site-title[aria-current="page"], .shelf-link[aria-current="page"] { text-decoration: none; }
-
-.label { border: 1px solid var(--line); border-radius: 3px; padding: 0 .35rem; }
-.paper { padding: .9rem 0; border-top: 1px solid var(--line); }
-.synopsis, .why, .opinion { margin: .4rem 0 0; }
-.notice { border-left: 3px solid var(--link); background: var(--tag-bg); padding: .6rem .8rem; }
-
-/* "To read" / "Read" toggle buttons; aria-pressed="true" is the saved mark. */
-.track { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+/* ---- Buttons: plain ink, square, like e-reader menus --------------------- */
+.track { display: flex; flex-wrap: wrap; gap: .45rem; margin-top: .7rem; }
 .track button, .shelf-io button, .file-button {
-  font: inherit; font-size: .85rem; padding: .25rem .7rem; border-radius: 999px;
-  border: 1px solid var(--muted); background: var(--bg); color: var(--text); cursor: pointer;
+  font: inherit; font-size: .85rem; padding: .2rem .8rem; border-radius: 2px;
+  border: 1px solid var(--muted); background: transparent; color: var(--text); cursor: pointer;
 }
-.track button[aria-pressed="true"] { background: var(--link); border-color: var(--link); color: #fff; }
-.track button:focus-visible, .shelf-io button:focus-visible, .file-button:focus-within {
-  outline: 2px solid var(--link); outline-offset: 2px;
-}
+.track button:hover, .shelf-io button:hover, .file-button:hover { border-color: var(--text); }
+.track button[aria-pressed="true"] { background: var(--text); border-color: var(--text); color: var(--bg); }
+.file-button:focus-within { outline: 3px solid var(--text); outline-offset: 3px; }
 
 .shelf-list { list-style: none; padding: 0; margin: 0; }
-.shelf-item { padding: .6rem 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: .15rem; }
+.shelf-item { padding: .7rem 0; border-top: 1px solid var(--line); display: flex; flex-direction: column; gap: .15rem; }
 .shelf-title { font-weight: 600; text-decoration: none; }
+.shelf-title:hover { text-decoration: underline; }
 .shelf-io-buttons { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center; }
 /* The real file input stays keyboard-focusable but invisible; its label is the button. */
 .file-button { position: relative; }
 .file-button input { position: absolute; inset: 0; opacity: 0; width: 100%; cursor: pointer; }
 
-/* --- Stage 4b: the Library (shelves, covers, book card, dialog) ------------- */
-.shelf h2 { margin-top: 2.2rem; }
+/* ---- Library (shelves, covers, book card, dialog) ------------------------ */
+.shelf h2 { margin-top: 2.5rem; }
 .bookshelf {
-  list-style: none; padding: 0 0 .9rem; margin: 0;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(7.2rem, 1fr)); gap: 1.1rem .9rem;
-  border-bottom: 6px solid var(--line);   /* the shelf board */
+  list-style: none; padding: 0 0 1rem; margin: 0;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(7.2rem, 1fr)); gap: 1.2rem 1rem;
+  border-bottom: 1px solid var(--line); box-shadow: 0 1px 0 var(--line);
 }
-.book-link { display: block; position: relative; text-decoration: none; color: var(--text); }
-.book-link:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
-.book-caption { display: block; margin-top: .4rem; font-size: .8rem; line-height: 1.3; }
+.book-link { display: block; position: relative; text-decoration: none; }
+.book-link:focus-visible { background: none; outline-offset: 5px; }
+.book-link:hover .book-title { text-decoration: underline; }
+.book-caption { display: block; margin-top: .45rem; font-size: .88rem; line-height: 1.3; }
 .book-title { display: block; font-weight: 600; }
-.book-author { display: block; color: var(--muted); }
+.book-author { display: block; font-size: .8rem; font-style: italic; color: var(--muted); margin-top: .1rem; }
 .book-mark {
-  position: absolute; top: .35rem; left: .35rem; font-size: .7rem; font-weight: 600;
-  padding: .05rem .4rem; border-radius: 999px; background: var(--bg); color: var(--text);
-  box-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+  position: absolute; top: .35rem; left: .35rem; font-size: .72rem; font-weight: 600;
+  padding: .05rem .45rem; border-radius: 2px; background: var(--bg); color: var(--text);
+  box-shadow: 0 1px 3px var(--shadow);
 }
-.book-mark-read { background: var(--link); color: #fff; }
+.book-mark-read { background: var(--text); color: var(--bg); }
 
 /* A cover: 2:3 box. The typographic cover fills it; the image (if any) sits on top. */
 .cover {
   position: relative; display: block; aspect-ratio: 2 / 3; overflow: hidden;
-  border-radius: 2px 5px 5px 2px; box-shadow: 0 2px 6px rgba(0, 0, 0, .25);
+  border-radius: 1px 3px 3px 1px; box-shadow: 0 1px 2px var(--shadow), 0 4px 10px var(--shadow);
   transition: transform .15s ease;
 }
-.book-link:hover .cover, .book-link:focus-visible .cover { transform: translateY(-3px); }
-.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: var(--bg); }
+.book-link:hover .cover, .book-link:focus-visible .cover { transform: translateY(-2px); }
+.cover img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; background: var(--surface); }
 .cover-typo {
   position: absolute; inset: 0; display: flex; flex-direction: column; justify-content: space-between;
   /* Extra room at the top for the To read / Read mark. */
-  padding: 1.9rem .55rem .7rem; color: #fff; font-family: Georgia, "Times New Roman", serif;
-  border-left: 5px solid rgba(0, 0, 0, .25);
+  padding: 1.9rem .55rem .7rem; color: #fbf8f1; border-left: 4px solid rgba(0, 0, 0, .22);
 }
 .cover-typo-title { font-size: .8rem; font-weight: 700; line-height: 1.2; overflow-wrap: break-word; hyphens: auto; }
-.cover-typo-author { font-size: .72rem; opacity: .9; }
+.cover-typo-author { font-size: .72rem; }
 .cover-large .cover-typo-title { font-size: 1.3rem; }
 .cover-large .cover-typo-author { font-size: .9rem; }
-/* One colour per shelf, so typographic covers are told apart. */
-.cover-shelf-0 .cover-typo { background: #7a2e2e; }
-.cover-shelf-1 .cover-typo { background: #2e4f7a; }
-.cover-shelf-2 .cover-typo { background: #2e6b52; }
-.cover-shelf-3 .cover-typo { background: #6b4f1d; }
-.cover-shelf-4 .cover-typo { background: #4b3a73; }
-.cover-shelf-5 .cover-typo { background: #3d4a55; }
+/* One muted cloth colour per shelf, so typographic covers are told apart. */
+.cover-shelf-0 .cover-typo { background: #6e3131; }
+.cover-shelf-1 .cover-typo { background: #2f4a6b; }
+.cover-shelf-2 .cover-typo { background: #2e5e4e; }
+.cover-shelf-3 .cover-typo { background: #6a5226; }
+.cover-shelf-4 .cover-typo { background: #4a3d68; }
+.cover-shelf-5 .cover-typo { background: #3f4a52; }
 
 /* The book card (its own page, and inside the dialog). */
-.book-card { display: grid; grid-template-columns: minmax(0, 11rem) 1fr; gap: 1.25rem; align-items: start; margin-top: 1rem; }
+.book-card { display: grid; grid-template-columns: minmax(0, 11rem) 1fr; gap: 1.5rem; align-items: start; margin-top: 1rem; }
 .book-card .cover { width: 100%; }
-.book-card-title { margin: 0; font-size: 1.5rem; line-height: 1.2; }
-.book-card-subtitle { margin: .25rem 0 0; font-size: 1.05rem; color: var(--muted); }
-.book-card-authors { margin: .4rem 0; font-weight: 600; }
-.book-card-links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: .8rem 0 0; }
+.book-card-title { margin: 0; font-size: 1.6rem; font-weight: 500; line-height: 1.2; }
+.book-card-subtitle { margin: .3rem 0 0; font-size: 1.1rem; font-style: italic; color: var(--muted); }
+.book-card-authors { margin: .5rem 0; font-weight: 600; }
+.book-card-links { display: flex; flex-wrap: wrap; gap: .4rem 1.2rem; margin: .9rem 0 0; font-size: .95rem; }
 @media (max-width: 34rem) {
   .book-card { grid-template-columns: 1fr; }
   .book-card .cover { width: 9rem; }
 }
 
 .book-dialog {
-  width: min(44rem, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem);
-  padding: 1rem 1.25rem 1.5rem; border: 1px solid var(--line); border-radius: 8px;
-  background: var(--bg); color: var(--text);
+  width: min(620px, calc(100vw - 2rem)); max-height: calc(100dvh - 2rem);
+  padding: 1rem 1.5rem 1.75rem; border: 1px solid var(--line); border-radius: 3px;
+  background: var(--bg); color: var(--text); box-shadow: 0 10px 40px var(--shadow);
 }
-.book-dialog::backdrop { background: rgba(0, 0, 0, .55); }
+.book-dialog::backdrop { background: rgba(20, 16, 8, .6); }
 .book-dialog .book-card { margin-top: 0; }
 .book-dialog-close { display: flex; justify-content: flex-end; margin: -.3rem 0 .2rem; }
 .book-dialog-close button {
-  font-size: 1.6rem; line-height: 1; width: 2.4rem; height: 2.4rem; border-radius: 50%;
-  border: 1px solid var(--line); background: var(--bg); color: var(--text); cursor: pointer;
+  font-size: 1.5rem; line-height: 1; width: 2.4rem; height: 2.4rem; border-radius: 50%;
+  border: 1px solid var(--muted); background: var(--bg); color: var(--text); cursor: pointer;
 }
-.book-dialog-close button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.credit { margin-top: 2rem; font-size: .85rem; }
-[data-shelf-group] h3 { font-size: 1rem; margin: 1rem 0 .6rem; color: var(--muted); }
+.credit { margin-top: 2.5rem; font-size: .85rem; font-style: italic; color: var(--muted); }
+[data-shelf-group] h3 { font-size: .9rem; font-weight: 500; font-variant: small-caps; text-transform: lowercase; letter-spacing: .08em; margin: 1.25rem 0 .6rem; color: var(--muted); }
 
-/* --- Stage 5: Start Here and My Own Path ------------------------------------ */
-.toc ol, .toc ul { display: flex; flex-wrap: wrap; gap: .3rem 1.2rem; padding: 0; margin: 1rem 0; list-style: none; font-size: .9rem; }
+/* ---- Contents lists (Start Here, My Own Path) ---------------------------- */
+.toc { text-align: center; }
+.toc ol, .toc ul { display: flex; flex-wrap: wrap; justify-content: center; gap: .3rem 1.25rem; padding: 0; margin: 1.25rem 0; list-style: none; font-size: .92rem; font-style: italic; }
 .toc ol { counter-reset: toc; }
 .toc ol li { counter-increment: toc; }
 .toc ol li::before { content: counter(toc) ". "; color: var(--muted); }
 
-/* Start Here */
-.path-stage h2 { display: flex; align-items: baseline; gap: .6rem; }
-.step {
-  display: inline-grid; place-items: center; flex: none; width: 1.8rem; height: 1.8rem;
-  border-radius: 50%; background: var(--link); color: #fff; font-size: .95rem;
-}
-.stage-intro { color: var(--muted); }
-.path-list { list-style: none; padding: 0; margin: 0; counter-reset: path; }
-.path-item { position: relative; padding: .8rem 0 .8rem 2.2rem; border-top: 1px solid var(--line); counter-increment: path; }
-.path-item::before { content: counter(path); position: absolute; left: .4rem; top: .85rem; font-weight: 700; color: var(--muted); }
-.why-here { margin: .4rem 0 0; }
-.path-synopsis { margin-top: .4rem; font-size: .95rem; }
+/* ---- Start Here: each stage opens like a chapter ------------------------- */
+.path-stage { margin-top: 3.5rem; text-align: center; }
+.path-stage + .path-stage::before { content: "❦"; display: block; color: var(--muted); margin-bottom: 2.5rem; }
+.path-stage h2 { display: block; margin-top: 0; font-size: 1.6rem; font-weight: 400; }
+.step { display: block; margin-bottom: .35rem; font-size: .8rem; letter-spacing: .2em; text-transform: uppercase; color: var(--muted); }
+.step::before { content: "Stage "; }
+.stage-intro { max-width: 30rem; margin: 0 auto 1.25rem; font-style: italic; }
+.path-list { list-style: none; padding: 0; margin: 0; counter-reset: path; text-align: left; }
+.path-item { position: relative; padding: 1.1rem 0 1.1rem 2.4rem; border-top: 1px solid var(--line); counter-increment: path; }
+.path-item::before { content: counter(path); position: absolute; left: 0; top: 1.15rem; font-size: 1.1rem; color: var(--muted); }
+.why-here { margin: .5rem 0 0; }
+.why-here strong { font-style: italic; font-weight: 400; font-size: .95rem; color: var(--muted); }
+.path-synopsis { margin-top: .5rem; }
+.path-synopsis .synopsis { font-size: 1.05rem; }
 
-/* Timeline: a vertical line with one dot per stage. */
-.timeline { list-style: none; margin: 0; padding: 0 0 0 1.4rem; border-left: 2px solid var(--line); }
-.timeline-item { position: relative; margin: 0 0 1rem; }
+/* ---- My Own Path: timeline ----------------------------------------------- */
+.timeline { list-style: none; margin: 0; padding: 0 0 0 1.4rem; border-left: 1px solid var(--line); }
+.timeline-item { position: relative; margin: 0 0 1.25rem; }
 .timeline-item::before {
-  content: ""; position: absolute; left: calc(-1.4rem - 7px); top: .45rem;
-  width: 12px; height: 12px; border-radius: 50%; background: var(--bg); border: 2px solid var(--link);
+  content: ""; position: absolute; left: calc(-1.4rem - 5px); top: .6rem;
+  width: 9px; height: 9px; border-radius: 50%; background: var(--bg); border: 1.5px solid var(--text);
 }
-.timeline-completed::before { background: var(--link); }
-.timeline-item summary { display: flex; flex-direction: column; gap: .15rem; list-style: none; cursor: pointer; }
+.timeline-completed::before { background: var(--text); }
+.timeline-item summary { display: flex; flex-direction: column; gap: .15rem; list-style: none; font-style: normal; font-size: inherit; color: var(--text); }
 .timeline-item summary::-webkit-details-marker { display: none; }
-.timeline-item summary:focus-visible { outline: 2px solid var(--link); outline-offset: 3px; }
-.timeline-dates { font-size: .85rem; color: var(--muted); }
-.timeline-title { font-weight: 700; font-size: 1.05rem; }
-.timeline-title::after { content: " ▸"; color: var(--muted); font-weight: 400; }
+.timeline-dates { font-size: .85rem; font-style: italic; color: var(--muted); }
+.timeline-title { font-weight: 600; font-size: 1.15rem; }
+.timeline-title::after { content: " ▸"; color: var(--muted); font-weight: 400; font-size: .8em; }
 .timeline-item details[open] .timeline-title::after { content: " ▾"; }
-.duration { display: block; height: 6px; margin-top: .3rem; background: var(--tag-bg); border-radius: 3px; max-width: 20rem; }
-.duration-bar { display: block; height: 100%; background: var(--link); border-radius: 3px; }
-.timeline-in-progress .duration-bar { opacity: .55; }
+.duration { display: block; height: 4px; margin-top: .35rem; background: var(--surface); border-radius: 2px; max-width: 20rem; }
+.duration-bar { display: block; height: 100%; background: var(--text); border-radius: 2px; }
+.timeline-in-progress .duration-bar { opacity: .5; }
 .timeline-body { padding: .3rem 0 0; }
 .timeline-body p { margin: .3rem 0; }
-.status-in-progress { border-style: dashed; }
+.status-in-progress { font-style: italic; }
 
-/* Reading log */
+/* ---- My Own Path: reading log -------------------------------------------- */
 .counters { margin: .5rem 0 1rem; }
-.month-chart { margin: 1rem 0 1.5rem; }
-.month-chart figcaption { font-weight: 600; font-size: .9rem; margin-bottom: .4rem; }
-.month-chart ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .3rem; }
-.month-chart li { display: grid; grid-template-columns: 8.5rem 1fr 2rem; align-items: center; gap: .6rem; font-size: .85rem; }
+.month-chart { margin: 1.25rem 0 1.75rem; }
+.month-chart figcaption { font-size: .9rem; font-style: italic; color: var(--muted); margin-bottom: .5rem; }
+.month-chart ul { list-style: none; padding: 0; margin: 0; display: grid; gap: .35rem; }
+.month-chart li { display: grid; grid-template-columns: 8.5rem 1fr 2rem; align-items: center; gap: .6rem; font-size: .88rem; }
 .month-chart-label { color: var(--muted); }
-.month-chart-track { display: block; height: 10px; }
-.month-chart-bar { display: block; height: 100%; min-width: 2px; background: var(--link); border-radius: 0 4px 4px 0; }
+.month-chart-track { display: block; height: 8px; }
+.month-chart-bar { display: block; height: 100%; min-width: 2px; background: var(--text); border-radius: 0 3px 3px 0; }
 .month-chart-value { font-variant-numeric: tabular-nums; }
-.log-month { border-top: 1px solid var(--line); padding: .3rem 0; }
-.log-month summary h3 { display: inline; font-size: 1.05rem; }
-.log-list { list-style: none; padding: 0; margin: .4rem 0 .6rem; }
-.log-entry { padding: .45rem 0; display: flex; flex-direction: column; gap: .1rem; }
+.log-month { border-top: 1px solid var(--line); padding: .4rem 0; }
+.log-month summary { font-style: normal; color: var(--text); }
+.log-month summary h3 { display: inline; font-size: 1.15rem; }
+.log-list { list-style: none; padding: 0; margin: .4rem 0 .7rem; }
+.log-entry { padding: .5rem 0; display: flex; flex-direction: column; gap: .1rem; }
 .log-title { font-weight: 600; text-decoration: none; }
 .log-title:hover { text-decoration: underline; }
 .log-notes { margin: .2rem 0 0; }
+
+/* ---- Phones -------------------------------------------------------------- */
 @media (max-width: 34rem) {
+  body { font-size: 1.08rem; }
+  h1 { font-size: 1.9rem; margin-top: 2.25rem; }
+  /* A narrow column leaves big gaps when justified, even with hyphenation. */
+  .prose p, .lede, .synopsis, main > p { text-align: left; hyphens: manual; -webkit-hyphens: manual; }
   .month-chart li { grid-template-columns: 6.5rem 1fr 1.6rem; }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .cover { transition: none; }
+}
+
+/* The book card's text column is narrow (next to the cover): justified text
+   would open gaps there, so it stays ragged-right. */
+.book-card .synopsis { text-align: left; hyphens: manual; -webkit-hyphens: manual; }

@@ -6,7 +6,8 @@
 <h1>About</h1>
 <p class="lede">{{ site.tagline }}</p>
 
-<p>
+{# The drop cap goes on the first long paragraph: the tagline is one line. #}
+<p class="drop-cap">
   I built this site to keep up with AI Safety research and news. Every day an
   automated job collects new posts from the sources below and new arXiv papers,
   and rebuilds the site. For each item it shows only the title, source, date, a
@@ -48,6 +49,15 @@
 <p>
   Your <em>To read</em> / <em>Read</em> marks (<a href="{{ url('my-shelf/') }}">My shelf</a>)
   are stored only in your browser; this site has no accounts and collects no data.
+</p>
+
+<h2>Typeface</h2>
+<p>
+  The text is set in <a href="https://github.com/googlefonts/literata" rel="noopener">Literata</a>,
+  a typeface for reading on screens by TypeTogether, first made for Google
+  Play Books.
+  It is served from this site itself (no third-party font service), under the
+  <a href="{{ url('static/fonts/Literata-OFL.txt') }}">SIL Open Font License 1.1</a>.
 </p>
 
 {% if status.sources is defined %}

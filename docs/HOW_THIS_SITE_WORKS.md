@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 5 built: the Start Here page (a reading path of 12 papers in 4 stages) and My Own Path (timeline, reading log with my 14 September readings, bookshelf). Next: Stage 6 (styles). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stages 1–6 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 7 (GitHub Actions and Pages). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -126,7 +126,9 @@ dark-mode toggle and the reading tracker (My shelf).
 | `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
 | `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
-| `static/css/style.css` | Basic layout | ✅ basic (design in Stage 6) |
+| `static/css/style.css` | The whole design: colour tokens, light/dark, typography, layout (section 6.8) | ✅ |
+| `static/fonts/` | Literata (two `.woff2` files, roman and italic) and its licence `Literata-OFL.txt` | ✅ |
+| `static/js/theme.js` | The *Dark mode / Light mode* toggle in the header | ✅ |
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
@@ -921,12 +923,77 @@ All of it is built in Python; the page works without JavaScript.
   same card (with my `my_opinion`) in the `<dialog>`; a book that's not in the
   Library links to its own `url`, with its `cover_id` cover or a typographic one.
 
-### 6.8 Styles
+### 6.8 Styles: the e-reader design
 
-`static/css/style.css` is a simple, readable layout for now (system font,
-~44rem column, wraps long titles so there's never horizontal scrolling on a
-phone). The real design (serif type, 680px reading column, light/dark themes)
-is Stage 6.
+I wanted the site to read like a book on an e-reader, so the design is
+deliberately quiet. Everything is in `static/css/style.css`.
+
+- **One typeface: Literata**, a serif made for reading on screens (by
+  TypeTogether, first for Google Play Books). I serve it **from the site
+  itself** (`static/fonts/`, two variable `.woff2` files of ~50 KB each, Latin
+  subset), not from Google Fonts, so visitors' browsers never contact a third
+  party. It's under the SIL Open Font License 1.1, which allows this; the
+  licence travels with the files (`static/fonts/Literata-OFL.txt`) and About
+  credits it. `base.html` preloads the regular file so text appears in the
+  right face quickly; `font-display: swap` shows Georgia until it arrives.
+- **Ink on paper, no colour.** Sepia paper in light mode, near-black in dark
+  mode. Links are the text colour, told apart by their underline; pressed
+  *To read / Read* buttons are filled with ink. The only colours are the book
+  covers (and the cloth colours of the typographic covers).
+- **Book layout.** A 620px column; the header centred like a running head,
+  with the menu in italics; every page title opens like a chapter, with a ⁂
+  underneath; Start Here stages open like chapters too, separated by a ❦.
+  Labels and topics are small caps; secondary data (authors, dates) is italic.
+- **Drop cap only where there's an introduction:** the `drop-cap` class is set
+  in the templates of Start Here, My Own Path, the Library and About (on the
+  first long paragraph there; the tagline is only one line). Today, News,
+  Papers and My shelf keep the chapter title but no drop cap: they are lists,
+  and they should be quick to scan.
+- **Justified text with hyphenation.** Paragraphs of prose (introductions,
+  synopses, About) are justified with `hyphens: auto`, which works because the
+  page says `lang="en"`; only words of 7+ letters are split. List excerpts, the
+  book card (its column is narrow) and everything on phones (≤ 34rem) stay
+  ragged-right without hyphenation, because narrow justified lines open big
+  gaps and many hyphens make lists hard to scan.
+- **Keyboard focus.** With no link colour, focus has to be unmistakable:
+  everything focusable gets a 3px ink ring with a paper-coloured gap
+  (`:focus-visible`), links also get a light background, and a book on the
+  shelf gets the ring around cover and caption.
+
+**Colour tokens and contrast.** Every colour is a CSS variable on `:root`
+(`--bg`, `--surface`, `--text`, `--muted`, `--line`), redefined for dark
+mode. WCAG AA asks for 4.5:1 for normal text and 3:1 for large text; I checked
+every pair that carries text:
+
+| Pair | Light | Dark |
+|---|---|---|
+| Text (`--text`) on paper (`--bg`); also links, unpressed buttons | 13.95 | 12.90 |
+| Secondary text, labels, dates (`--muted`) on paper | 6.16 | 6.34 |
+| Text on notices (`--surface`) | 12.62 | 11.63 |
+| Secondary text on notices | 5.58 | 5.71 |
+| Pressed button: paper colour on ink | 13.95 | 12.90 |
+| Typographic cover text (`#fbf8f1`) on the six cloth colours | 6.95–9.22 | same |
+
+`--line` (the rules between entries) is decorative, not text, so it's allowed
+to be faint. The focus ring is ink on paper (≥ 12.9:1).
+
+**Light and dark.** Without JavaScript, or until the visitor chooses, the site
+follows the system setting (`prefers-color-scheme`). The *Dark mode / Light
+mode* link in the header (`static/js/theme.js`, hidden without JavaScript)
+sets `data-theme` on `<html>` and saves the choice in localStorage under
+`theme`. A two-line inline script at the top of `base.html` applies a saved
+choice **before** the page is painted, so there's no flash of the wrong theme.
+The CSS has the dark values twice: once inside the media query (for "system
+is dark and the visitor didn't choose light") and once for
+`[data-theme="dark"]`.
+
+**How I checked it.** Every page (Today, News and a month page, Papers, the
+Library with a book card open, Start Here, My Own Path, My shelf with test
+marks, About, 404) in light and dark, at desktop width and at 360px, in
+headless Edge: no horizontal scrolling anywhere. Plus keyboard focus on a
+link, a button (pressed and not), a filter and a book, in both themes, and
+the toggle (starting from a light and from a dark system, remembered after a
+reload).
 
 ## 7. GitHub Actions and the cron schedule
 
@@ -1190,7 +1257,11 @@ the files as they are instead of running its own site generator (Jekyll) on them
   `scripts/build_site.py`, use `url('...')` for every internal link, and add it
   to `nav:` if it belongs in the menu. The link check will tell me if I got a
   path wrong.
-- **Change the design:** 🚧 Stage 6 (edit `static/css/style.css`).
+- **Change the design:** edit `static/css/style.css` (section 6.8). To change
+  a colour, change its token in **both** places (light `:root`, and the dark
+  values, which appear twice) and recheck the contrast table in 6.8: at least
+  4.5:1 for text. Then preview both themes (the *Dark mode* link) at desktop
+  and phone width (DevTools → device toolbar, 360px).
 - **Upgrade a Python package:** I activate the venv, run
   `pip install --upgrade <pkg>`, test the build, then `pip freeze > requirements.txt`,
   keep the explanatory comment at the top of the file, and commit.
@@ -1269,6 +1340,8 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | `jinja2.exceptions.UndefinedError: '…' is undefined` | A typo in a template variable, or a value the build doesn't pass to that template | Fix the name in the template, or pass the value in `render(...)` |
 | `OSError: [WinError 10048]` / "address already in use" with `--serve` | Another preview (or program) is using port 8000 | Stop the other one (`Ctrl+C` in its terminal) or use `--port 8001` |
 | The preview shows an old version | The browser cached it | Rebuild and reload with `Ctrl+F5` |
+| Justified paragraphs have big gaps between words | The browser has no English hyphenation dictionary yet (Chrome/Edge download it on first use), or the page lost `lang="en"` | Reload later; check `<html lang="en">` in `base.html` (it comes from `language:` in `config/site.yaml`) |
+| The site stays dark (or light) although my system changed | I chose a theme with the header link; that choice wins | Click the link again, or clear the site's data in the browser |
 | `warning: data/papers.yaml entry N (...) not published (no synopsis yet)` | The entry has no `synopsis`, or a `TODO` in it or in a required field | Write the synopsis / replace the `TODO`s (section 9). It's a warning, the rest of the site builds |
 | `BUILD FAILED: ... unknown topic(s)`, `type must be one of`, `remove the tracking parameters`, `duplicate id(s)` | Broken data in `papers.yaml` (or an `id` also used in `books.yaml`) | Fix the field the message names (formats in section 3.1) |
 | `BUILD FAILED: data/books.yaml ...: shelf '...' is not in shelves`, `olid must be ...`, `cover_id must be a number` | Broken data in `books.yaml` | Fix the field (section 3.1). The OLID is the edition's `OL…M`, not the work's `OL…W` |
@@ -1313,9 +1386,12 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Deploy** — Publish a built version of the site so visitors can see it.
 - **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
 - **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
+- **Drop cap** — A large first letter that spans several lines at the start of a chapter. Here only on pages that open with an introduction.
 - **Escaping (autoescape)** — Turning characters like `<` into `&lt;` so text from outside can never become HTML or JavaScript on my page.
+- **Focus ring (`:focus-visible`)** — The outline that shows which element the keyboard is on. `:focus-visible` shows it for keyboard use without adding it to mouse clicks.
 - **Feed** — A machine-readable list of a site's latest posts (RSS or Atom).
 - **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
+- **Hyphenation (`hyphens: auto`)** — The browser splits long words at line ends ("read-ings") using a dictionary for the page's language (`lang`). It keeps justified lines from opening big gaps.
 - **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
 - **GitHub Actions** — GitHub's automation service. It runs *workflows* (YAML files) on GitHub's servers when triggered.
 - **GitHub Pages** — GitHub's free hosting for static websites.
@@ -1331,12 +1407,15 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
 - **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
 - **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.
+- **OFL (SIL Open Font License)** — A free licence for fonts: they can be used, embedded and redistributed (not sold on their own), as long as the licence goes with them.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
 - **Progressive enhancement** — Building the page so it fully works as plain HTML, then adding JavaScript extras (like filters) on top. If the script fails, nothing essential breaks.
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
 - **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
+- **`prefers-color-scheme`** — A CSS media query that tells the page whether the visitor's system is in light or dark mode.
 - **Regular expression (regex)** — A small pattern language for searching text. The topic matcher turns each keyword into a regex such as `(?<!\w)AGI(?!\w)` ("AGI" as a whole word).
+- **Self-hosted font** — A font file served by the site itself instead of a font service like Google Fonts, so visitors' browsers don't contact a third party.
 - **Repository (repo)** — A project folder tracked by Git, including its full history.
 - **RSS** — *Really Simple Syndication*: a standard XML format for publishing a list of recent posts.
 - **Template inheritance** — In Jinja2, a page template `extends` a base template and only fills in the blocks that change, so the header and footer are written once.

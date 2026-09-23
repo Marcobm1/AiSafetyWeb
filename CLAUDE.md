@@ -116,6 +116,15 @@ If something is ambiguous, ask Marco before assuming.
 - **Menu:** the site title links to the home page (Today); the menu is
   News · Papers · Library · Start Here · My Own Path · About (only pages that
   exist); "My shelf" is a small separate link in the header.
+- **Design (Stage 6, approved by Marco): an e-reader page.** Literata as the
+  only typeface, **self-hosted** in `static/fonts/` with its OFL licence (never
+  Google Fonts or another font CDN); sepia paper / near-black, ink-only
+  colours (links are text colour + underline); 620px column; chapter-style
+  titles. Colours are tokens on `:root`, redefined for dark mode (media query
+  + `[data-theme="dark"]`). Every text colour must meet WCAG AA (4.5:1; 3:1
+  for large text): recheck the table in HOW_THIS_SITE_WORKS §6.8 on any colour
+  change. Keyboard focus must stay clearly visible. Drop cap (`drop-cap`) only
+  on pages with an introduction, never on list pages.
 - Paper candidates are **not shown on the website**; they only live in the repo.
 - **Paper candidates**: the daily script writes new arXiv papers to
   `data/paper_candidates.json` (machine-written, auto-pruned). Marco promotes
@@ -141,7 +150,8 @@ scripts/promote_candidate.py  copy a candidate into papers.yaml as a new block
 scripts/build_site.py    render templates + data into _site/
 templates/               Jinja2 HTML templates
 static/css, static/js    styles and small vanilla JS modules (filters, reading-store,
-                         tracker, my-shelf, library)
+                         tracker, my-shelf, library, theme)
+static/fonts/            Literata (self-hosted .woff2) + its OFL licence
 docs/                    HOW_THIS_SITE_WORKS.md, DEVLOG.md
 .github/workflows/       update-and-deploy.yml
 ```

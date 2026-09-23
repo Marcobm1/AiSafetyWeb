@@ -5,3 +5,6 @@
 # Windows-only scripts keep CRLF
 *.ps1 text eol=crlf
 *.bat text eol=crlf
+
+# Fonts are binary: never touch their bytes
+*.woff2 binary

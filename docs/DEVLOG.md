@@ -726,3 +726,83 @@ Created: `templates/start_here.html`, `templates/my_path.html`. Changed:
 **Pending**
 - Stage 6: styles (the e-reader design is approved; applying it next).
 - Me: the two `TODO(Marco)` timeline notes.
+
+---
+
+## 2026-09-23 — Stage 6: the e-reader design
+
+**What I did**
+- Claude showed me two directions in a throwaway preview (never in the repo):
+  a minimal serif design on cream with one green accent, and an
+  **e-reader ("Kindle") version**. I chose the e-reader one and discarded the
+  first.
+- I rewrote `static/css/style.css` around it: Literata as the only typeface,
+  sepia paper and ink (near-black paper in dark mode), a 620px column, the
+  header centred with the menu in italics, chapter openings (centred title with
+  ⁂, drop cap on introductions), Start Here stages as chapters separated by ❦,
+  labels in small caps and secondary data in italics.
+- I added Literata to the repository (`static/fonts/`: roman and italic
+  variable `.woff2`, Latin subset, ~105 KB together) with its licence
+  (`static/fonts/Literata-OFL.txt`), and credited it in About.
+- New `static/js/theme.js`: a *Dark mode / Light mode* link in the header. A
+  short inline script in `base.html` applies the saved choice before the page
+  is painted.
+- `drop-cap` class in the templates of Start Here, My Own Path, the Library and
+  About.
+
+**What I decided and why**
+- **Literata, self-hosted, not Google Fonts.** Kindle's own font (Bookerly)
+  belongs to Amazon; Literata is the closest free equivalent (made for Google
+  Play Books) and is under the SIL Open Font License. Serving it myself means
+  visitors' browsers don't contact Google, and it keeps working offline in the
+  preview. I checked its authorship and licence in the official repository
+  (`github.com/googlefonts/literata`).
+- **No colour at all.** Links are ink with an underline, like a book. Because
+  that removes the usual colour cue, I made keyboard focus a thick ink ring
+  with a paper-coloured gap on everything focusable.
+- **Contrast checked, not guessed:** all text pairs pass WCAG AA with room to
+  spare (lowest: secondary text on notices, 5.58:1 light / 5.71:1 dark; body
+  text ~13–14:1). The table is in HOW_THIS_SITE_WORKS §6.8. Nothing needed
+  adjusting. I also dropped the 90% opacity on the typographic covers' author
+  line so it keeps full contrast.
+- **Justified prose with hyphenation, but not everywhere.** Introductions,
+  synopses and About are justified with `hyphens: auto` (the page is
+  `lang="en"`, words of 7+ letters only). The tests showed two problems I then
+  fixed: the book card's narrow text column opened big gaps (now
+  ragged-right), and on phones the hyphenated ragged text had a hyphen every
+  other line (now no justification or hyphenation below 34rem). List excerpts
+  are never justified: lists must be quick to scan.
+- **Drop cap only on pages that open with an introduction.** About's drop cap
+  is on its first long paragraph, because the tagline above it is one line.
+- **Small caps labels a bit larger than in the mock-up** (1rem instead of
+  0.8–0.92rem): in real lists they were too small to read comfortably.
+
+**How I tested it**
+- Headless Edge against the local preview, every page in light and dark, at
+  desktop width and at 360px (inside 360px frames, because headless Edge won't
+  make a window narrower than ~490px): Today, News, a month page, Papers (with
+  test marks), the Library with the book card open, Start Here, My Own Path,
+  My shelf (with test marks), About and 404. No page scrolls horizontally.
+- Keyboard focus on a link, a pressed button, a filter and a book, in both
+  themes: the ring is clearly visible.
+- The theme toggle, starting from a light and from a dark system: it switches,
+  saves the choice and keeps it after a reload.
+- Hyphenation: my test browser profile had no English dictionary at first
+  (Edge downloads them separately); with the dictionary it hyphenates as
+  expected ("read-ings"). Real browsers download it on their own.
+- The build still passes with all internal links OK (the font preload and the
+  licence link included).
+
+**Files created / changed**
+Created: `static/fonts/literata-latin-wght-normal.woff2`,
+`static/fonts/literata-latin-wght-italic.woff2`, `static/fonts/Literata-OFL.txt`,
+`static/js/theme.js`. Changed: `.gitattributes` (`*.woff2 binary`), `static/css/style.css`, `templates/base.html`,
+`templates/about.html`, `templates/start_here.html`, `templates/my_path.html`,
+`templates/library.html`, `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`,
+`docs/DEVLOG.md`.
+
+**Pending**
+- Stage 7: GitHub Actions workflow and GitHub Pages (and retry Google
+  DeepMind's own feed from Actions).
+- Stage 8: final documentation review.
+- Me: the two `TODO(Marco)` timeline notes.

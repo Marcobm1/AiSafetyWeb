@@ -5,6 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ site.title }}{% endblock %}</title>
   <meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+  <script>
+    // Apply the theme saved by static/js/theme.js before the page is painted.
+    try { var t = localStorage.getItem("theme"); if (t === "light" || t === "dark") document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preload" href="{{ url('static/fonts/literata-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ url('static/css/style.css') }}">
   {% block head %}{% endblock %}
 </head>
@@ -13,7 +18,11 @@
   <header class="site-header">
     {# The site title is the link to the home page (Today). #}
     <a class="site-title" href="{{ url() }}"{% if current_path == "" %} aria-current="page"{% endif %}>{{ site.title }}</a>
-    <a class="shelf-link" href="{{ url('my-shelf/') }}"{% if current_path.startswith('my-shelf/') %} aria-current="page"{% endif %}>My shelf</a>
+    <span class="header-tools">
+      {# Hidden without JavaScript; static/js/theme.js shows it. #}
+      <button type="button" class="theme-toggle" data-theme-toggle hidden>Dark mode</button>
+      <a class="shelf-link" href="{{ url('my-shelf/') }}"{% if current_path.startswith('my-shelf/') %} aria-current="page"{% endif %}>My shelf</a>
+    </span>
     <nav aria-label="Main">
       <ul>
       {% for item in site.nav %}
@@ -36,6 +45,7 @@
       <a href="{{ url('about/') }}">About this site</a>.
     </p>
   </footer>
+  <script src="{{ url('static/js/theme.js') }}" defer></script>
   {% block scripts %}{% endblock %}
 </body>
 </html>
