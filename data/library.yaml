@@ -1,0 +1,36 @@
+# My curated reading archive: the Library (and the Start Here path).
+# Full format and rules: docs/HOW_THIS_SITE_WORKS.md, section 3.1.
+#
+# Rules I follow here:
+# - Every entry is verified against the original source (title, authors, year,
+#   type, URL). URLs without tracking parameters (utm_source...).
+# - `id` is a stable slug and never changes once published: visitors' read /
+#   to-read marks and My Own Path entries point to it.
+# - `entries` must stay the LAST key in this file, because
+#   scripts/promote_candidate.py appends new entries at the end.
+#
+# Entry template (copy, indent under `entries:` and fill in):
+#
+#   - id: short-slug
+#     title: "Exact title"
+#     authors: ["First Author", "Second Author"]
+#     year: 2024
+#     type: paper            # paper | essay | report | scenario | blog-post
+#     url: https://...
+#     arxiv_id: "2401.05566" # optional, only for arXiv papers
+#     tags: [alignment]
+#     difficulty: intro      # intro | intermediate | advanced
+#     why_it_matters: >
+#       One or two sentences in my words.
+#     added: 2026-09-23
+#     start_here:            # optional: only for readings in the Start Here path
+#       stage: why-it-matters
+#       order: 1
+#       note: >
+#         Why it sits at this point of the path.
+
+# Stages of the Start Here path, in the order they appear on the site.
+# Filled in Stage 5 of the plan.
+start_here_stages:
+
+entries:

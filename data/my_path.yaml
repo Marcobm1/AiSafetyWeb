@@ -1,0 +1,36 @@
+# My Own Path: my public learning log (courses, papers, articles, projects,
+# milestones). The website shows it as a timeline, newest first.
+# Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
+#
+# Fields:
+#   date       YYYY-MM-DD when I started (or when it happened, for a milestone)
+#   completed  YYYY-MM-DD when I finished (optional)
+#   type       course | paper | article | project | milestone
+#   title, url                 omit both if the entry uses `ref`
+#   provider   for courses (e.g. BlueDot Impact)
+#   author     for texts not in the Library
+#   ref        id of an entry in data/library.yaml (title, authors and URL come
+#              from there, so I don't repeat them)
+#   status     in-progress | completed
+#   notes      my takeaways, in first person
+
+- date: 2026-09-12
+  type: course
+  title: AGI Strategy
+  url: https://bluedot.org/courses/agi-strategy
+  provider: BlueDot Impact
+  status: in-progress
+  notes: >
+    TODO(Marco): replace this placeholder with my own notes. Example: what I
+    expect to get from the course and what I'm finding most useful so far.
+
+- date: 2026-09-07
+  completed: 2026-09-11
+  type: course
+  title: Future of AI
+  url: https://bluedot.org/courses/future-of-ai
+  provider: BlueDot Impact
+  status: completed
+  notes: >
+    TODO(Marco): replace this placeholder with my own takeaways. Example: the
+    two or three ideas from the course that changed how I think about AI.

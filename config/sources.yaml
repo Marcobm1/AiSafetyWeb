@@ -1,0 +1,198 @@
+# All news sources for scripts/fetch_news.py, in one place.
+#
+# Every feed URL below was checked by hand (HTTP 200 + valid RSS/Atom) on
+# 2026-09-23. Never add a URL without checking it first.
+#
+# Per-source fields:
+#   id               short unique name, used in data/status.json
+#   name             label shown on the website
+#   url              the RSS/Atom feed
+#   karma_threshold  (LessWrong / Alignment Forum only) the script adds
+#                    `karmaThreshold=<n>` to the URL, so the site only sends
+#                    posts that reached that karma
+#   require_topic    true = keep an entry only if it matches at least one topic
+#                    keyword below (for general sources that also post off-topic)
+#
+# Order matters for cross-posts: the same post can be on the Alignment Forum and
+# on LessWrong. The first source that sees it keeps it, so AF goes first.
+
+settings:
+  user_agent: "AiSafetyWeb/1.0 (+https://marcobm1.github.io/AiSafetyWeb/)"
+  timeout_seconds: 30
+  # Ignore entries older than this. Protects against feeds that return their
+  # whole history (OpenAI's has 1,000+ items) the first time we read them.
+  max_age_days: 14
+
+sources:
+  - id: alignment-forum
+    name: AI Alignment Forum
+    url: https://www.alignmentforum.org/feed.xml?view=community-rss
+    karma_threshold: 20
+
+  - id: lesswrong
+    name: LessWrong
+    url: https://www.lesswrong.com/feed.xml?view=community-rss
+    karma_threshold: 30
+    require_topic: true
+
+  - id: ai-safety-newsletter
+    name: AI Safety Newsletter (CAIS)
+    url: https://newsletter.safe.ai/feed
+
+  - id: metr
+    name: METR
+    url: https://metr.org/feed.xml
+
+  - id: redwood
+    name: Redwood Research
+    url: https://redwoodresearch.substack.com/feed
+
+  - id: govai
+    name: Centre for the Governance of AI
+    url: https://www.governance.ai/post/rss.xml
+    require_topic: true   # the feed also carries job postings
+
+  - id: transformer
+    name: Transformer
+    url: https://www.transformernews.ai/feed
+    require_topic: true
+
+  - id: import-ai
+    name: Import AI
+    url: https://importai.substack.com/feed
+
+  - id: zvi
+    name: Don't Worry About the Vase
+    url: https://thezvi.substack.com/feed
+    require_topic: true
+
+  - id: epoch
+    name: Epoch AI
+    url: https://epochai.substack.com/feed
+    require_topic: true
+
+  - id: bluedot
+    name: BlueDot Impact
+    url: https://blog.bluedot.org/feed
+    require_topic: true
+
+  - id: openai
+    name: OpenAI News
+    url: https://openai.com/news/rss.xml
+    require_topic: true
+
+  - id: google-deepmind
+    name: Google DeepMind
+    url: https://blog.google/technology/google-deepmind/rss/
+    require_topic: true
+
+# arXiv: one API request per run (see https://info.arxiv.org/help/api/tou.html).
+# The query searches titles and abstracts in cs.AI, cs.LG and cs.CL for the
+# phrases below. Plain "interpretability" was left out on purpose: it matched
+# ~200 papers a week, mostly generic explainability.
+arxiv:
+  enabled: true
+  categories: [cs.AI, cs.LG, cs.CL]
+  phrases:
+    - AI safety
+    - AI alignment
+    - mechanistic interpretability
+    - sparse autoencoder
+    - reward hacking
+    - red teaming
+    - jailbreak
+    - deceptive alignment
+    - scalable oversight
+    - dangerous capabilities
+    - sandbagging
+    - alignment faking
+    - misalignment
+    - AI control
+    - AI governance
+    - frontier AI
+    - catastrophic risk
+    - specification gaming
+  max_results: 100
+  pause_seconds: 3      # arXiv asks for at least 3 s between requests
+
+# Paper candidates (data/paper_candidates.json): new arXiv papers I might add
+# to the Library. Candidates older than this are deleted on every run.
+candidates:
+  retention_days: 60
+
+# Topics are assigned by keyword, case insensitive, in the title and the first
+# 600 characters of the text.
+# A keyword matches whole words only ("AGI" does not match "agile"). A trailing
+# * allows any ending: "misalign*" matches misaligned, misalignment...
+# Keep keywords specific: "policy" alone would match every reinforcement-learning paper.
+topics:
+  alignment:
+    - AI safety
+    - alignment
+    - misalign*
+    - reward hacking
+    - RLHF
+    - constitutional AI
+    - scalable oversight
+    - deceptive
+    - deception
+    - scheming
+    - sycophan*
+    - specification gaming
+    - AI control
+    - corrigib*
+    - sandbagging
+    - superintelligen*
+    - AGI
+    - x-risk
+    - existential risk
+    - loss of control
+  interpretability:
+    - interpretability
+    - mechanistic
+    - sparse autoencoder*
+    - circuit*
+    - probing
+    - activation steering
+    - chain-of-thought monitor*
+    - chain of thought monitor*
+    - CoT monitor*
+  evals:
+    - eval
+    - evals
+    - evaluation*
+    - benchmark*
+    - red team*
+    - red-team*
+    - dangerous capabilit*
+    - system card*
+    - preparedness
+    - uplift
+    - METR
+  governance:
+    - governance
+    - AI policy
+    - regulat*
+    - legislat*
+    - AI Act
+    - executive order*
+    - export control*
+    - compute threshold*
+    - treaty
+    - treaties
+    - AI Security Institute
+    - AI Safety Institute
+    - frontier AI
+  security:
+    - jailbreak*
+    - prompt injection*
+    - adversarial
+    - security
+    - cyber*
+    - model weights
+    - exfiltrat*
+    - backdoor*
+    - data poisoning
+    - biosecurity
+    - bioweapon*
+    - misuse

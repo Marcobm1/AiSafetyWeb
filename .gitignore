@@ -14,3 +14,6 @@ _site/
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# Temporary files from atomic writes in scripts/fetch_news.py
+*.tmp

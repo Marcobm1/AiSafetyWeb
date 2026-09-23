@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 1 of 8 complete (repository setup and initial documentation). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 2 of 8 complete (news fetching, paper candidates and data formats). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -110,14 +110,14 @@ dark-mode toggle and the reading tracker.
 | `.gitattributes` | Forces LF line endings in the repo (avoids Windows/Linux diffs) | ✅ |
 | `docs/HOW_THIS_SITE_WORKS.md` | These notes | ✅ |
 | `docs/DEVLOG.md` | My chronological log of every change and why | ✅ |
-| `config/sources.yaml` | All news sources, arXiv query, karma thresholds, topic keywords | 🚧 Stage 2 |
+| `config/sources.yaml` | All news sources, arXiv query, karma thresholds, topic keywords | ✅ |
 | `config/site.yaml` | Site title, base path, retention settings | 🚧 Stage 3 |
-| `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON and paper candidates | 🚧 Stage 2 |
-| `data/news/YYYY-MM.json` | Collected news, one file per month | 🚧 Stage 2 |
-| `data/status.json` | Time of last run + status of each source | 🚧 Stage 2 |
-| `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | 🚧 Stage 2 |
-| `data/library.yaml` (format only) | Empty file with the documented format, so the fetch script can skip papers I already curated | 🚧 Stage 2 |
-| `data/my_path.yaml` | My learning log (format + my first two courses) | 🚧 Stage 2 (data), Stage 5 (page) |
+| `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON and paper candidates | ✅ |
+| `data/news/YYYY-MM.json` | Collected news, one file per month | ✅ |
+| `data/status.json` | Time of last run + status of each source | ✅ |
+| `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
+| `data/library.yaml` (format only) | Empty file with the documented format, so the fetch script can skip papers I already curated | ✅ |
+| `data/my_path.yaml` | My learning log (format + my first two courses) | ✅ data, 🚧 page in Stage 5 |
 | `scripts/promote_candidate.py` | Copies a candidate into `library.yaml` as a new block | 🚧 Stage 4 |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder | 🚧 Stage 3 |
 | `templates/` | Jinja2 HTML templates | 🚧 Stage 3 |
@@ -136,8 +136,8 @@ safer for files that a script rewrites every day.
 
 ### 3.1 Data formats
 
-I'm fixing these formats now (Stage 2), even though the Start Here and My Own
-Path pages come later, so every script and page is built against the same shape.
+I fixed these formats in Stage 2, even though the Library, Start Here and My
+Own Path pages come later, so every script and page is built against the same shape.
 
 **The `id` is the glue.** Every reading entry in `library.yaml` has a stable,
 unique `id` (a short lowercase slug such as `ai-2027` or `sleeper-agents`).
@@ -190,6 +190,56 @@ entries by `start_here.stage` and sorts them by `start_here.order`; the stage
 titles and intros come from `start_here_stages`. The build fails with a clear
 message if an entry names a stage that isn't in that list.
 
+#### `data/news/YYYY-MM.json` — collected news (written by the bot)
+
+A JSON list, newest first. An entry goes into the file of the month it was
+**published** (not the month it was fetched).
+
+```json
+[
+  {
+    "id": "ad56e86e1a6694f2",
+    "url": "https://www.lesswrong.com/posts/HsijShdRdAg5sPKnF/an-unexamined-cause-...",
+    "title": "An unexamined cause of the OpenAI Hugging Face hacking incident: ...",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-23T03:20:03Z",
+    "fetched_at": "2026-09-23T10:45:44Z",
+    "excerpt": "At most two sentences, HTML removed, max 320 characters.",
+    "topics": ["alignment", "evals"],
+    "summary": null
+  }
+]
+```
+
+- `id`: the first 16 characters of the SHA-1 hash of the normalised URL, so the
+  same URL always gets the same id.
+- `source` is the label shown on the site; `source_id` matches the source's
+  `id` in `config/sources.yaml` and in `status.json`.
+- arXiv entries also have `authors` (list) and `arxiv_id`.
+- Times are always **UTC** in ISO 8601 format (the `Z` at the end means UTC).
+- `summary` is always `null` for now: reserved for future AI summaries.
+
+#### `data/status.json` — what happened in the last run (written by the bot)
+
+```json
+{
+  "last_run": "2026-09-23T10:45:44Z",
+  "duration_seconds": 15.9,
+  "new_entries": 137,
+  "sources": [
+    {"id": "lesswrong", "name": "LessWrong", "status": "ok",
+     "items_in_feed": 10, "kept": 6, "new": 6, "error": null}
+  ],
+  "candidates": {"added": 100, "removed_promoted": 0, "pruned": 0, "total": 100}
+}
+```
+
+Per source: `items_in_feed` is what the feed returned, `kept` is what passed
+the filters (age, topic), `new` is what wasn't already saved. When a source
+fails, `status` is `"error"` and `error` says why. The site will use
+`last_run` for its "data is stale" warning (Stage 7).
+
 #### `data/paper_candidates.json` — arXiv papers I might curate (written by the bot)
 
 ```json
@@ -202,7 +252,7 @@ message if an entry names a stage that isn't in that list.
     "url": "https://arxiv.org/abs/2401.05566",
     "abstract": "First two sentences of the abstract at most.",
     "detected": "2026-09-23",
-    "topics": ["alignment", "evaluations"]
+    "topics": ["alignment", "evals"]
   }
 }
 ```
@@ -213,6 +263,9 @@ message if an entry names a stage that isn't in that list.
   `library.yaml` (matched by `arxiv_id` or by its normalised arXiv URL).
 - Candidates older than `candidates.retention_days` (in `config/sources.yaml`,
   default 60 days) are deleted on every run, so the file never grows without limit.
+- A candidate I have promoted to `library.yaml` is removed on the next run.
+- Only papers that are **new to the news files** become candidates. That way a
+  candidate I let expire never comes back just because arXiv still lists it.
 
 #### `data/my_path.yaml` — my public learning log (edited by hand)
 
@@ -326,30 +379,108 @@ venv with `py -3.12`, and the GitHub Actions workflow reads the same file.
 
 ## 5. The fetch script, step by step
 
-🚧 **Not built yet (Stage 2).** The design I agreed on:
+✅ **Built in Stage 2.** The script is `scripts/fetch_news.py` and all its
+settings live in `config/sources.yaml`. I run it from the repository root
+with the venv active:
 
-1. Read `config/sources.yaml` (I keep all sources in this one file).
-2. For each RSS/Atom source: download the feed, apply filters (e.g. karma
-   threshold: **30 for LessWrong, 20 for the Alignment Forum**). A failing
-   source is logged as an error and **the others continue**.
-3. Query the arXiv API for cs.AI, cs.LG and cs.CL, filtered by keywords
-   (alignment, interpretability, reward hacking, AI safety, red teaming,
-   evaluations…), with the pauses between requests that arXiv requires.
-4. Normalise each entry to: `id` (hash of URL), `url`, `title`, `source`,
-   `published`, `fetched_at`, `excerpt` (≤2 sentences, HTML stripped),
-   `topics[]`, `summary` (null, reserved for future AI summaries).
-5. Assign topics (alignment, interpretability, evals, governance, security)
-   from keywords.
-6. Remove duplicates by URL and merge into `data/news/YYYY-MM.json`.
+```powershell
+python scripts\fetch_news.py            # fetch and save
+python scripts\fetch_news.py --dry-run  # fetch and report, but write nothing
+```
+
+It prints one line per source (`ok` or `ERROR`, how many items the feed had
+and how many it kept) and a summary at the end. A full run takes ~15 seconds.
+
+### 5.1 What one run does
+
+1. **Read `config/sources.yaml`.** All sources, the arXiv query, the karma
+   thresholds and the topic keywords are in this one file.
+2. **Download every RSS/Atom feed.** Each download has a 30-second timeout and
+   one retry. If a source still fails, the error is recorded in `status.json`
+   and **the other sources carry on**.
+   - LessWrong and the Alignment Forum filter by karma on their side: the
+     script adds `karmaThreshold=30` (LessWrong) or `karmaThreshold=20` (AF) to
+     the feed URL, so only posts that reached that karma come back.
+3. **Ask the arXiv API** once for the 100 newest papers in cs.AI, cs.LG or
+   cs.CL whose title or abstract contains one of the phrases in
+   `arxiv.phrases`. One request a day is far below arXiv's limits; if it has
+   to retry, it waits at least 3 seconds, as arXiv asks.
+4. **Turn every item into an entry** (format in section 3.1):
+   - remove HTML, keep at most **two sentences / 320 characters** as the
+     excerpt (the site never republishes full articles);
+   - **drop items older than 14 days** (`settings.max_age_days`). Some feeds
+     return their whole history (OpenAI's has 1,000+ items), and I don't want
+     to import years of old posts;
+   - **assign topics** by keyword (section 5.2);
+   - for sources marked `require_topic: true`, **drop items that match no
+     topic**. I use this for sources that also publish off-topic things
+     (LessWrong, OpenAI, Google DeepMind, GovAI's job postings…).
+5. **Skip duplicates.** Before comparing, every URL is **normalised**: https,
+   lowercase host, no `utm_*` tracking parameters, no trailing slash, and arXiv
+   `/pdf/…v2` links turned into `/abs/<id>`. LessWrong and the Alignment Forum
+   share posts, so for them the post id is compared instead. The Alignment
+   Forum is listed first in the config, so a cross-post is labelled "AI
+   Alignment Forum".
+6. **Save** new entries into `data/news/YYYY-MM.json` by publication month.
    arXiv papers go there too, so they appear on the home page like any other news.
-7. **Paper candidates:** add each new arXiv paper to `data/paper_candidates.json`
-   unless it's already a candidate or already in `data/library.yaml`, then delete
-   candidates older than the retention period (format in section 3.1).
-   Candidates are **not** shown on the website; they are my shortlist in the
-   repository (which is public, but nobody browses it like the site).
-8. Write `data/status.json` (run time + per-source result) **on every run**,
-   even with no new entries. The daily commit this produces keeps the
-   repository active.
+7. **Update the paper candidates** (`data/paper_candidates.json`): add the new
+   arXiv papers that aren't in `library.yaml`, remove those I've promoted, and
+   delete those older than `candidates.retention_days` (60). Candidates are
+   **not** shown on the website; they are my shortlist in the repository (which
+   is public, but nobody browses it like the site).
+8. **Write `data/status.json` on every run**, even when nothing is new. Because
+   `last_run` changes every time, the daily bot always has something to commit,
+   and that keeps the repository "active" for GitHub (section 7).
+
+Files are written **atomically**: first to a `.tmp` file, then renamed over
+the real one, so a crash halfway never leaves a half-written JSON file.
+
+**Exit code:** the script ends with an error (exit code 1) only if **every**
+source failed. That usually means a problem on my side (no network, broken
+config), and I want GitHub Actions to mark the run as failed and email me. One
+broken feed is normal and only shows up in `status.json`.
+
+### 5.2 Topics and keywords
+
+There are five topics: **alignment, interpretability, evals, governance,
+security**. Each has a keyword list in `config/sources.yaml`. The script looks
+for them in the title and the first 600 characters of the text (LessWrong
+feeds contain the whole post, and a long post mentions every topic in passing).
+
+- Matching is **case insensitive** and on **whole words**: `AGI` does not
+  match "agile".
+- A trailing `*` allows any ending: `misalign*` matches "misaligned" and
+  "misalignment".
+- An entry can have several topics, or none.
+
+Keyword matching is simple and imperfect (a paper on "image-text alignment"
+counts as *alignment*). It's good enough for filtering and grouping; I can
+refine the lists at any time.
+
+### 5.3 The sources (checked 2026-09-23)
+
+| id | Source | Filter |
+|---|---|---|
+| `alignment-forum` | AI Alignment Forum | karma ≥ 20 |
+| `lesswrong` | LessWrong | karma ≥ 30, on-topic only |
+| `ai-safety-newsletter` | AI Safety Newsletter (CAIS) | — |
+| `metr` | METR | — |
+| `redwood` | Redwood Research | — |
+| `govai` | Centre for the Governance of AI | on-topic only |
+| `transformer` | Transformer | on-topic only |
+| `import-ai` | Import AI | — |
+| `zvi` | Don't Worry About the Vase | on-topic only |
+| `epoch` | Epoch AI | on-topic only |
+| `bluedot` | BlueDot Impact | on-topic only |
+| `openai` | OpenAI News | on-topic only |
+| `google-deepmind` | Google DeepMind | on-topic only |
+| `arxiv` | arXiv API (cs.AI, cs.LG, cs.CL) | phrase query |
+
+Every URL was checked (HTTP 200 + a valid feed) before adding it. Sources I
+looked for but **couldn't find a feed for**: Anthropic (news and alignment
+blog), Apollo Research, the UK AI Security Institute and the CAIS blog (CAIS is
+covered by its newsletter). Google DeepMind's own `deepmind.google` feed failed
+from my network, so I use the one on `blog.google`, which works.
 
 ## 6. Building and previewing the site locally
 
@@ -391,7 +522,26 @@ which does not exist. Every internal link and asset must be prefixed with
 
 ## 9. How to…
 
-- **Add a news source:** 🚧 Stage 2 (edit `config/sources.yaml`).
+- **Add a news source:**
+  1. Find the site's real feed URL. I look in the page's HTML for
+     `<link rel="alternate" type="application/rss+xml" href="...">`, or try the
+     usual paths (`/feed`, `/rss.xml`, `/feed.xml`; Substack blogs always use
+     `/feed`). **I never add a URL I haven't opened.**
+  2. Add a block under `sources:` in `config/sources.yaml` with a new `id`, the
+     `name` to show on the site and the `url`. If the source also publishes
+     off-topic posts, add `require_topic: true`.
+  3. Run `python scripts\fetch_news.py --dry-run` and check the new source's
+     line says `ok` and keeps a sensible number of items.
+  4. Run it for real (or let the daily bot do it), update the source table in
+     section 5.3, and commit.
+- **Remove or pause a source:** delete its block in `config/sources.yaml` (its
+  old entries stay in `data/news/`, which is fine), and update section 5.3.
+- **Change the topic keywords or the arXiv phrases:** edit `topics:` or
+  `arxiv.phrases` in `config/sources.yaml`, then check with `--dry-run`. New
+  keywords only apply to entries fetched from then on; existing entries keep
+  their topics.
+- **Check whether the last run went well:** open `data/status.json` (on GitHub
+  or locally) and look for `"status": "error"`.
 - **Add a paper (or essay, report…):** 🚧 Stage 4 (add a block to `data/library.yaml`
   following the format in section 3.1).
 - **Promote a paper candidate to the Library:** 🚧 Stage 4. The planned way:
@@ -495,6 +645,10 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | `git push` asks for a password / `Authentication failed` / 403 | Git is not authenticated | `gh auth login` (section 4.3) |
 | `git push` rejected: "remote contains work…" | The daily Action pushed commits | `git pull`, then `git push` |
 | Commits show the wrong author/email | Identity not set on this computer | `git config --local user.email ...` (section 4.4) |
+| A source shows `"status": "error"` with `HTTPError: 404` in `status.json` | The site moved or removed its feed | Find the new feed URL (section 9, *Add a news source*) and update `config/sources.yaml` |
+| `SSLError … HANDSHAKE_FAILURE` or timeouts for one site, only on my work computer | The company network/proxy blocks or intercepts that site | Nothing to fix if GitHub Actions can reach it; test at home or use an alternative feed URL (as I did for Google DeepMind) |
+| `UnicodeEncodeError: 'charmap' codec…` when printing from my own Python snippets | The Windows console uses an old encoding | Set `$env:PYTHONIOENCODING = "utf-8"` in PowerShell first (`fetch_news.py` already handles this itself) |
+| A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## Glossary
 
@@ -506,8 +660,13 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Clone** — Download a full copy of a repository, including its history.
 - **Commit** — A saved snapshot of changes in Git, with a message and author.
 - **Cron** — A syntax for schedules (`minute hour day month weekday`). `0 6 * * *` = every day at 06:00 UTC.
+- **Deduplication** — Making sure the same item is saved only once, even if several feeds (or several runs) return it.
 - **Deploy** — Publish a built version of the site so visitors can see it.
+- **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
+- **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
 - **Feed** — A machine-readable list of a site's latest posts (RSS or Atom).
+- **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
+- **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
 - **GitHub Actions** — GitHub's automation service. It runs *workflows* (YAML files) on GitHub's servers when triggered.
 - **GitHub Pages** — GitHub's free hosting for static websites.
 - **`GITHUB_TOKEN`** — A temporary credential that GitHub gives each workflow run so it can commit or deploy.
@@ -516,13 +675,17 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Karma** — The community voting score of a LessWrong / Alignment Forum post. I use it as a noise filter.
 - **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
+- **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
 - **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
+- **Regular expression (regex)** — A small pattern language for searching text. The topic matcher turns each keyword into a regex such as `(?<!\w)AGI(?!\w)` ("AGI" as a whole word).
 - **Repository (repo)** — A project folder tracked by Git, including its full history.
 - **RSS** — *Really Simple Syndication*: a standard XML format for publishing a list of recent posts.
 - **Static site** — A website made of fixed files (HTML/CSS/JS) served as-is, with no server-side code or database. Fast, cheap (free here) and secure.
 - **Static site generator** — A program that builds a static site from templates + data (mine is `scripts/build_site.py`).
+- **User-Agent** — A header every HTTP request carries to say which program is asking. My script identifies itself as `AiSafetyWeb/1.0` with a link to the site, which is polite and what APIs like arXiv expect.
+- **UTC** — Coordinated Universal Time, the time zone-free reference clock. All times in the data files are UTC.
 - **Virtual environment (venv)** — A per-project folder with its own Python packages.
 - **Workflow** — A YAML file in `.github/workflows/` that tells GitHub Actions what to run and when.

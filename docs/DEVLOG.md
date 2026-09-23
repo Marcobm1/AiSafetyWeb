@@ -149,3 +149,61 @@ which files changed, and what is still pending. Newest entries at the bottom.
 
 **Pending**
 - Stage 2 starts now (see the revised plan in the previous entry).
+
+---
+
+## 2026-09-23 — Stage 2: News fetching, paper candidates and data formats
+
+**What I did**
+- I wrote `config/sources.yaml` with 13 RSS/Atom sources plus the arXiv query,
+  karma thresholds, candidate retention and topic keywords. I checked every
+  feed URL (HTTP 200 + valid feed) before adding it.
+- I wrote `scripts/fetch_news.py` (see HOW_THIS_SITE_WORKS §5). It downloads
+  the feeds and arXiv, normalises and deduplicates entries, saves them to
+  `data/news/YYYY-MM.json`, updates `data/paper_candidates.json` and writes
+  `data/status.json`. It has a `--dry-run` mode.
+- I created `data/library.yaml` (empty, with the format documented in comments)
+  and `data/my_path.yaml` with my first two entries: Future of AI
+  (2026-09-07 → 2026-09-11, completed) and AGI Strategy (started 2026-09-12,
+  in progress). Their notes are `TODO(Marco)` placeholders.
+- First real run: 14/14 sources OK, 137 entries (all September 2026), 100 paper
+  candidates. A second run added nothing, which confirms the deduplication works.
+
+**What I decided and why**
+- **Karma filtering on LessWrong's side** (`karmaThreshold` URL parameter):
+  their feeds don't include karma, but the site filters for me. I checked that
+  different thresholds really return different posts.
+- **`max_age_days: 14`:** OpenAI's feed returns 1,219 items (its whole
+  history). Without an age limit the first run would import years of posts.
+- **`require_topic` for general sources** (LessWrong, OpenAI, DeepMind, Zvi,
+  Transformer, Epoch, BlueDot, GovAI): they also post off-topic things. GovAI's
+  feed turned out to be mostly job postings.
+- **Topics from the title + first 600 characters:** LessWrong/AF feeds contain
+  the whole post, and on the first try almost every post got all five topics.
+- **Whole-word keyword matching with an explicit `*` for prefixes:** simple
+  prefix matching made `AGI` match "agile".
+- **arXiv query without plain "interpretability":** I measured one week of
+  papers per phrase; "interpretability" alone matched ~195 papers a week, most
+  of them generic explainability. The remaining phrases give ~10–15 a day.
+- **One arXiv request per run** (100 newest results, sorted by submission
+  date): far below arXiv's rate limits; the retry waits ≥ 3 s as they ask.
+- **Cross-posts:** LessWrong and the AF share post ids, so duplicates are
+  detected by post id; AF is listed first so it keeps the cross-post.
+- **Only papers new to the news files become candidates:** an expired
+  candidate can't come back just because arXiv still lists it.
+- **Exit code 1 only if every source fails:** one broken feed is normal; all
+  of them failing means a problem on my side that should trigger GitHub's email.
+- **No Anthropic, Apollo Research, UK AISI or CAIS-blog feeds:** I couldn't find
+  a working RSS feed for them, so I didn't invent one. Google DeepMind's own feed
+  failed from my work network, so I use the one on `blog.google`.
+
+**Files created / changed**
+Created: `config/sources.yaml`, `scripts/fetch_news.py`, `data/library.yaml`,
+`data/my_path.yaml`, `data/news/2026-09.json`, `data/paper_candidates.json`,
+`data/status.json`. Changed: `.gitignore` (`*.tmp`),
+`docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Replace the `TODO(Marco)` notes in `data/my_path.yaml` with my own takeaways.
+- Review the source list and keywords after a few days of real data.
+- Stage 3: site skeleton, `config/site.yaml`, `build_site.py`, local preview.
