@@ -647,3 +647,53 @@ Created: `templates/start_here.html`, `templates/my_path.html`. Changed:
 - Me: replace the two `TODO(Marco)` timeline notes.
 - Check `https://archive.ph/9DCPq` from a network where archive.ph isn't blocked.
 - Stage 6: styles (serif, 680px column, light/dark).
+
+---
+
+## 2026-09-23 — Home computer set up and the Start Here path goes in
+
+**What I did**
+- I cloned the repository on my home computer, at
+  `C:\Users\bymar\Desktop\Varios\Proyectos\AI Safety Web` (a plain local folder,
+  not synced by OneDrive). I installed Python 3.12.10 and GitHub CLI 2.101 with
+  `winget` (the computer only had Python 3.14), created `.venv` with 3.12,
+  installed `requirements.txt` and set the same local Git identity as on my
+  work computer. The build ran cleanly before any change.
+- I approved the Start Here route that Claude proposed in the previous
+  session (with the superlatives toned down) and put it in `data/papers.yaml`:
+  four stages in `start_here_stages` and a `start_here` block (stage, order,
+  note) on each of the 12 papers.
+  1. **Why it matters:** Cotra → AI 2027 → Grace's counterarguments.
+  2. **The alignment problem:** Concrete Problems → Ngo et al. → Carlsmith →
+     Risks from Learned Optimization (marked optional on a first pass).
+  3. **Evidence from today's models:** Sleeper Agents → Alignment Faking.
+  4. **What researchers are doing about it:** Model evaluation for extreme
+     risks → AI Control → Toy Models of Superposition.
+
+**What I decided and why**
+- **Two working copies, two paths:** I work from both computers, so
+  `CLAUDE.md` and HOW_THIS_SITE_WORKS §4.2 and §10 now list both folders
+  instead of only `C:\dev\AiSafetyWeb`. The rule that matters stays the same:
+  never inside a synced folder.
+- **Grace right after the case for concern:** the path should let a newcomer
+  test the argument, not only absorb it.
+- **Every path entry is an existing Papers entry:** I checked that the 12
+  titles match the 12 verified entries by `id`, so the path adds no new
+  unverified data.
+- I added the stages and blocks as text, not by re-saving the YAML with
+  PyYAML, so the comments in `papers.yaml` are kept.
+
+**How I tested it**
+- The build passes (30 pages, links OK). `start-here/index.html` shows the four
+  stages in order with 3, 4, 2 and 3 readings in the approved order, no
+  "being put together" message and no `TODO`.
+- The live site doesn't exist yet (GitHub Pages comes in Stage 7), so for now
+  the path is in the repository and in the local preview.
+
+**Files changed**
+`data/papers.yaml`, `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Check the Vox article's `archive_url` (archive.ph) from this network.
+- Me: the two `TODO(Marco)` timeline notes (I'll write them later).
+- Stage 6: styles.

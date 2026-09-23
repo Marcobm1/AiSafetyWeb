@@ -8,7 +8,10 @@ These rules apply to every Claude session working on this repository.
   commit messages, and everything in `docs/`.
 
 ## Where the project lives
-- The working copy is **`C:\dev\AiSafetyWeb`**. Always work from there.
+- Marco works from two computers, each with its own working copy:
+  - work computer: **`C:\dev\AiSafetyWeb`**
+  - home computer: **`C:\Users\bymar\Desktop\Varios\Proyectos\AI Safety Web`**
+  Work from whichever of the two the session was opened in.
 - **Never put the repository inside OneDrive** (or Dropbox/Google Drive) on any
   computer. Cloud-sync tools rewrite files inside `.git/` while Git is using them,
   which can corrupt the repository. GitHub is the sync mechanism between computers.

@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 5 built: the Start Here page (its reading path is waiting for my approval) and My Own Path (timeline, reading log with my 14 September readings, bookshelf). Next: Stage 6 (styles). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 5 built: the Start Here page (a reading path of 12 papers in 4 stages) and My Own Path (timeline, reading log with my 14 September readings, bookshelf). Next: Stage 6 (styles). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -38,7 +38,7 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
 | **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
 | **Library** | Books only, on six themed shelves, each shown with its real cover (Open Library) or a typographic one. Clicking a book opens its card; each book also has its own page | `data/books.yaml`, which I edit by hand |
-| **Start Here** | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point (the page exists; the path goes live once I approve it) | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
+| **Start Here** | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point (4 stages, 12 readings from Papers) | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
 | **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Reading log** grouped by month (counters, type filter, readings-per-month chart) and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
 | **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library and Start Here) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
@@ -500,7 +500,10 @@ Then I close and reopen the terminal so the new commands are found, and check:
 `git --version`, `py -3.12 --version`, `gh --version`.
 
 ### 4.2 Location: never inside OneDrive
-I keep the project at **`C:\dev\AiSafetyWeb`**. OneDrive (and similar sync tools)
+On my work computer I keep the project at **`C:\dev\AiSafetyWeb`**; on my home
+computer it lives at **`C:\Users\bymar\Desktop\Varios\Proyectos\AI Safety Web`**
+(my Desktop there is a normal local folder, not synced by OneDrive). Any local
+path works as long as no sync tool watches it. OneDrive (and similar sync tools)
 upload and rewrite files inside the hidden `.git/` folder while Git is using
 them. That can corrupt the repository or create "conflicted copy" files. GitHub
 is already the synchronisation mechanism between my computers.
@@ -1166,8 +1169,10 @@ the files as they are instead of running its own site generator (Jekyll) on them
      open. Choose Type → Resource: "3 of 14 shown". "via AGI Strategy" jumps
      to the timeline; the Vox article has "archived copy".
   4. Bookshelf: empty for now, with a short message.
-  5. http://localhost:8000/AiSafetyWeb/start-here/ shows the stages once the
-     path is in `papers.yaml`; a *Read* mark there also shows in Papers.
+  5. http://localhost:8000/AiSafetyWeb/start-here/ shows 4 stages (Why it
+     matters, The alignment problem, Evidence from today's models, What
+     researchers are doing about it) with 3, 4, 2 and 3 readings; a *Read*
+     mark there also shows in Papers.
   6. The menu shows News · Papers · Library · Start Here · My Own Path · About.
 - **Preview the site after any change:** `python scripts\build_site.py --serve`
   and open http://localhost:8000/AiSafetyWeb/ (section 6).
@@ -1191,7 +1196,9 @@ the files as they are instead of running its own site generator (Jekyll) on them
 
 ### Setting up my second computer
 1. Install the tools and authenticate (sections 4.1 and 4.3).
-2. Clone **outside OneDrive**:
+2. Clone **outside OneDrive** (on my home computer the folder is
+   `C:\Users\bymar\Desktop\Varios\Proyectos\AI Safety Web` instead; see
+   section 4.2):
    ```powershell
    New-Item -ItemType Directory -Force C:\dev
    git clone https://github.com/Marcobm1/AiSafetyWeb.git C:\dev\AiSafetyWeb
@@ -1202,7 +1209,7 @@ the files as they are instead of running its own site generator (Jekyll) on them
 
 ### My routine, every time
 ```powershell
-cd C:\dev\AiSafetyWeb
+cd C:\dev\AiSafetyWeb           # or my home-computer folder (section 4.2)
 git pull                       # ALWAYS first
 # ... work ...
 git add -A
