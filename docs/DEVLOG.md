@@ -694,6 +694,35 @@ Created: `templates/start_here.html`, `templates/my_path.html`. Changed:
 `data/papers.yaml`, `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
 
 **Pending**
-- Check the Vox article's `archive_url` (archive.ph) from this network.
+- ~~Check the Vox article's `archive_url`~~ (done: see the next entry).
 - Me: the two `TODO(Marco)` timeline notes (I'll write them later).
 - Stage 6: styles.
+
+---
+
+## 2026-09-23 — The Vox article's archived copy moves to the Wayback Machine
+
+**What I did**
+- I replaced the `archive_url` of "It's practically impossible to run a big
+  AI company ethically" (Vox) in `data/my_path/reading_log.yaml`: from
+  `https://archive.ph/9DCPq` to the Wayback Machine copy from 5 August 2024,
+  the day it was published
+  (`https://web.archive.org/web/20240805132439/https://www.vox.com/future-perfect/364384/its-practically-impossible-to-run-a-big-ai-company-ethically`).
+- I added to the "Add a reading to My Own Path" how-to (HOW_THIS_SITE_WORKS §9)
+  that archived copies come from the Wayback Machine, not archive.ph.
+
+**What I decided and why**
+- **I checked both from my home network.** archive.ph isn't blocked here but
+  only answers scripts with a CAPTCHA, so its content couldn't be checked. From
+  my work network it redirects to the Ministry of Culture's block page: archive.ph
+  is blocked in Spain, so many visitors would never see the copy.
+- **The Wayback copy is verified:** it opens (HTTP 200), its headline is the
+  same as in my reading log and the article is signed by Sigal Samuel, with
+  the full text.
+
+**Files changed**
+`data/my_path/reading_log.yaml`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Stage 6: styles (the e-reader design is approved; applying it next).
+- Me: the two `TODO(Marco)` timeline notes.

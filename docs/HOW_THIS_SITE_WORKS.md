@@ -1125,8 +1125,11 @@ the files as they are instead of running its own site generator (Jekyll) on them
 - **Add a reading to My Own Path:**
   1. Open the original and **verify** the exact title, the author(s), the
      publication and the URL. I remove any `utm_…` parameters from the URL.
-  2. If it's a paywalled article, I look for an archived copy (for example on
-     the Wayback Machine, `web.archive.org`) and keep its URL for `archive_url`.
+  2. If it's a paywalled article, I look for an archived copy on the Wayback
+     Machine (`web.archive.org`), check that it opens and shows the right
+     headline and author, and keep its URL for `archive_url`. I don't use
+     archive.ph / archive.today: it is blocked in Spain, so visitors from here
+     would only see a block page.
   3. If the text is already in Papers (`data/papers.yaml`) or the Library
      (`data/books.yaml`), I only need its `id` for `paper_ref` / `book_ref` and
      can skip title, author, source and URL. My opinion of it then goes in its
