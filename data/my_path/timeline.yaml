@@ -1,0 +1,41 @@
+# My Own Path — Timeline: the courses, projects and milestones of my AI Safety
+# journey. The website shows them as a vertical timeline (newest first); clicking
+# a stage opens my notes. Readings go in reading_log.yaml, not here.
+# Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
+#
+# Fields:
+#   id         stable slug, never changes (reading_log.yaml links to it via `via`,
+#              and the site uses it as the anchor #timeline-<id>)
+#   type       course | project | milestone
+#   date       YYYY-MM-DD when I started (or when it happened, for a milestone)
+#   completed  YYYY-MM-DD when I finished (optional; leave out while in progress)
+#   title
+#   provider   who runs it (for courses), optional otherwise
+#   url        optional, without tracking parameters (utm_...)
+#   status     in-progress | completed
+#   notes      my takeaways, in first person (optional)
+#
+# Rule: only real dates, statuses and notes. Placeholders are marked TODO(Marco).
+
+- id: agi-strategy
+  type: course
+  date: 2026-09-12
+  title: AGI Strategy
+  provider: BlueDot Impact
+  url: https://bluedot.org/courses/agi-strategy
+  status: in-progress
+  notes: >
+    TODO(Marco): replace this placeholder with my own notes. Example: what I
+    expect to get from the course and what I'm finding most useful so far.
+
+- id: future-of-ai
+  type: course
+  date: 2026-09-07
+  completed: 2026-09-11
+  title: Future of AI
+  provider: BlueDot Impact
+  url: https://bluedot.org/courses/future-of-ai
+  status: completed
+  notes: >
+    TODO(Marco): replace this placeholder with my own takeaways. Example: the
+    two or three ideas from the course that changed how I think about AI.

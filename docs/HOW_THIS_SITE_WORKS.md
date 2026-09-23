@@ -37,7 +37,7 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
 | **Library** | My curated archive of papers, essays, reports, scenarios and blog posts, filterable by type/year/tag/difficulty | `data/library.yaml`, which I edit by hand |
 | **Start Here** 🚧 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/library.yaml`: the stage list plus a `start_here` block on each entry in the path |
-| **My Own Path** 🚧 | My public learning log: courses, papers, articles, projects and milestones, newest first, with filters and counters | `data/my_path.yaml`, which I edit by hand |
+| **My Own Path** 🚧 | My public learning log in two parts: a **Timeline** of courses, projects and milestones (vertical, clickable, with duration bars) and a **Reading log** of everything I read, grouped by month, with type filters and a readings-per-month chart | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
 | **Reading tracker** | Each visitor marks entries as *read* / *to read* (in the Library **and** in Start Here) | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work | Template text |
 
@@ -73,7 +73,7 @@ flowchart LR
         NEWS["data/news/YYYY-MM.json"]
         CAND["data/paper_candidates.json<br/>(auto-pruned)"]
         PAP["data/library.yaml<br/>(edited by hand)"]
-        PATH["data/my_path.yaml<br/>(edited by hand)"]
+        PATH["data/my_path/<br/>timeline + reading log<br/>(edited by hand)"]
         TPL["templates/ + static/"]
     end
 
@@ -117,7 +117,8 @@ dark-mode toggle and the reading tracker.
 | `data/status.json` | Time of last run + status of each source | ✅ |
 | `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
 | `data/library.yaml` (format only) | Empty file with the documented format, so the fetch script can skip papers I already curated | ✅ |
-| `data/my_path.yaml` | My learning log (format + my first two courses) | ✅ data, 🚧 page in Stage 5 |
+| `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ data, 🚧 page in Stage 5 |
+| `data/my_path/reading_log.yaml` | My Own Path reading log (empty, format in comments) | ✅ data, 🚧 page in Stage 5 |
 | `scripts/promote_candidate.py` | Copies a candidate into `library.yaml` as a new block | 🚧 Stage 4 |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder | 🚧 Stage 3 |
 | `templates/` | Jinja2 HTML templates | 🚧 Stage 3 |
@@ -141,7 +142,7 @@ Own Path pages come later, so every script and page is built against the same sh
 
 **The `id` is the glue.** Every reading entry in `library.yaml` has a stable,
 unique `id` (a short lowercase slug such as `ai-2027` or `sleeper-agents`).
-The Library, the Start Here path, My Own Path and the visitors' reading tracker
+The Library, the Start Here path, the My Own Path reading log and the visitors' reading tracker
 all refer to an entry by this `id`, so its data (title, authors, URL) lives in
 one place only. **I never change an `id` once it's published**, because
 visitors' saved *read / to read* marks point to it.
@@ -267,31 +268,63 @@ fails, `status` is `"error"` and `error` says why. The site will use
 - Only papers that are **new to the news files** become candidates. That way a
   candidate I let expire never comes back just because arXiv still lists it.
 
-#### `data/my_path.yaml` — my public learning log (edited by hand)
+#### `data/my_path/` — My Own Path (edited by hand)
+
+My Own Path has two parts, each in its own file:
+
+**`timeline.yaml` — courses, projects and milestones**
 
 ```yaml
-- date: 2026-09-07                # when I started (or when it happened, for a milestone)
-  completed: 2026-09-11           # optional: when I finished it
-  type: course                    # course | paper | article | project | milestone
+- id: future-of-ai              # stable slug; reading-log entries point to it with `via`
+  type: course                  # course | project | milestone
+  date: 2026-09-07              # when I started (or when it happened, for a milestone)
+  completed: 2026-09-11         # optional: when I finished; left out while in progress
   title: Future of AI
-  url: https://bluedot.org/courses/future-of-ai
-  provider: BlueDot Impact        # for courses; use `author` for texts
-  status: completed               # in-progress | completed
-  notes: >
-    My takeaways, in first person.
-
-- date: 2026-09-15                # (illustrative example of a linked entry)
-  type: paper
-  ref: sleeper-agents             # links to the entry in library.yaml: title, authors
-  status: in-progress             # and URL come from there, so I don't repeat them
-  notes: >
+  provider: BlueDot Impact      # optional
+  url: https://bluedot.org/courses/future-of-ai   # optional
+  status: completed             # in-progress | completed
+  notes: >                      # optional: my takeaways, in first person
     ...
 ```
 
-If an entry has `ref`, I leave out `title`, `url` and `author`; the build
-script fills them in from `library.yaml` and fails with a clear message if the
-`ref` doesn't exist. The timeline is sorted by the most recent of `date` and
-`completed`.
+**`reading_log.yaml` — everything I read**
+
+```yaml
+entries:
+  - month: "2026-09"            # month only (quoted, so YAML keeps it as text)
+    type: essay                 # paper | report | essay | article | book | resource
+    title: "Exact title"
+    author: "Author Name"
+    source: "Cold Takes"        # publication or website
+    url: https://...            # the original, without utm_ parameters
+    archive_url: https://...    # optional: archived copy of a paywalled article
+    via: agi-strategy           # optional: the Timeline stage I read it in
+    notes: >                    # optional
+      ...
+
+  - month: "2026-09"
+    type: paper
+    library_ref: sleeper-agents # (illustrative) already in the Library: title, author, source
+    via: agi-strategy           # and URL come from library.yaml
+```
+
+Rules the build script will check (Stage 5), failing with a clear message:
+`month` must look like `YYYY-MM`; `via` must be an `id` in `timeline.yaml`;
+`library_ref` must be an `id` in `library.yaml`; an entry without `library_ref`
+needs `title`, `author`, `source` and `url`; no URL may contain `utm_`
+parameters.
+
+**Why two files instead of one `my_path.yaml` with two sections:**
+- They grow very differently. The timeline gets a new stage every few weeks;
+  the reading log gets entries every week. Keeping the long list apart means
+  the short one stays easy to read and edit.
+- Different shapes (days vs months, different fields and types). A separate
+  file per shape keeps each file's header comment and template short and exact.
+- Fewer indentation mistakes: a slip in a long YAML file can silently move an
+  entry into the wrong section; with two files it can't cross over.
+- Clearer Git history: "added 3 readings" and "finished a course" show up as
+  changes to different files.
+- The folder `data/my_path/` still keeps both halves of the section together.
 
 **How I write these docs:** every Markdown file meant for readers (`README.md`,
 everything in `docs/`) is written in first person, as my own technical notes,
@@ -403,8 +436,11 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
      the feed URL, so only posts that reached that karma come back.
 3. **Ask the arXiv API** once for the 100 newest papers in cs.AI, cs.LG or
    cs.CL whose title or abstract contains one of the phrases in
-   `arxiv.phrases`. One request a day is far below arXiv's limits; if it has
-   to retry, it waits at least 3 seconds, as arXiv asks.
+   `arxiv.phrases`, or all the terms of one entry in `arxiv.combinations`
+   (e.g. *interpretability* **and** *deception*). One request a day is far
+   below arXiv's limits. If a download fails, it retries once; if the server
+   answers **429 Too Many Requests** or **503**, it waits as long as the
+   server's `Retry-After` header says (at least 30 s) before retrying.
 4. **Turn every item into an entry** (format in section 3.1):
    - remove HTML, keep at most **two sentences / 320 characters** as the
      excerpt (the site never republishes full articles);
@@ -462,8 +498,9 @@ refine the lists at any time.
 | id | Source | Filter |
 |---|---|---|
 | `alignment-forum` | AI Alignment Forum | karma ≥ 20 |
+| `transformer-circuits` | Transformer Circuits Thread (Anthropic's interpretability research) | always tagged *interpretability* |
 | `lesswrong` | LessWrong | karma ≥ 30, on-topic only |
-| `ai-safety-newsletter` | AI Safety Newsletter (CAIS) | — |
+| `ai-safety-newsletter` | AI Safety Newsletter (CAIS; its Substack, on the `newsletter.safe.ai` domain) | — |
 | `metr` | METR | — |
 | `redwood` | Redwood Research | — |
 | `govai` | Centre for the Governance of AI | on-topic only |
@@ -474,13 +511,42 @@ refine the lists at any time.
 | `bluedot` | BlueDot Impact | on-topic only |
 | `openai` | OpenAI News | on-topic only |
 | `google-deepmind` | Google DeepMind | on-topic only |
-| `arxiv` | arXiv API (cs.AI, cs.LG, cs.CL) | phrase query |
+| `arxiv` | arXiv API (cs.AI, cs.LG, cs.CL) | phrase + combination query (section 5.4) |
 
-Every URL was checked (HTTP 200 + a valid feed) before adding it. Sources I
-looked for but **couldn't find a feed for**: Anthropic (news and alignment
-blog), Apollo Research, the UK AI Security Institute and the CAIS blog (CAIS is
-covered by its newsletter). Google DeepMind's own `deepmind.google` feed failed
-from my network, so I use the one on `blog.google`, which works.
+Every URL was checked (HTTP 200 + a valid feed) before adding it.
+
+- **No feed, so left out:** Anthropic's news page and its **Alignment Science
+  blog** (`alignment.anthropic.com`: no `<link rel="alternate">`, and `/feed`,
+  `/feed.xml`, `/rss.xml`, `/atom.xml`, `/index.xml` all return 404), Apollo
+  Research, the UK AI Security Institute and the CAIS blog (CAIS is covered by
+  its newsletter). Anthropic's **interpretability** research *does* have a feed
+  (Transformer Circuits Thread), so that one is in.
+- **Google DeepMind:** its own feed (`deepmind.google/blog/rss.xml`) fails from
+  my work network (TLS handshake blocked), so for now I use the one on
+  `blog.google`. In Stage 7 I'll test the DeepMind feed from GitHub Actions and
+  switch to it if it works there.
+- **`default_topics`:** a source can add fixed topics to all its entries. I use
+  it for Transformer Circuits, whose titles ("HeadVis") often contain no keyword.
+
+### 5.4 The arXiv query and why "interpretability" is combined
+
+arXiv's search matches word **stems**: "interpretability" also finds
+"interpretable" and "interpretation". I measured one week (2026-09-15 to 22) in
+cs.AI/cs.LG/cs.CL, titles and abstracts:
+
+| Query | Papers/week | Quality |
+|---|---|---|
+| interpretability (alone) | 195 | mostly generic explainability |
+| interpretability AND safety | 12 | mostly noise (medical, legal…) |
+| interpretability AND alignment | 33 | noise ("cross-modal alignment"…) |
+| "mechanistic interpretability" | 6 | relevant |
+| interpretability AND ("AI safety" or "AI alignment") | 1 | relevant |
+| interpretability AND (deception or deceptive) | 4 | about half relevant |
+
+So I keep "mechanistic interpretability" and "sparse autoencoder" as phrases
+and add the precise combinations under `arxiv.combinations`. The whole query
+went from 71 to 74 papers a week: most interpretability-and-safety papers were
+already caught by other phrases.
 
 ## 6. Building and previewing the site locally
 
@@ -508,6 +574,11 @@ repositories after 60 days without repository activity. My safeguards:
 - The site shows a visible warning if the last update is older than 48 hours.
   This check runs in the visitor's browser, so it still works if Actions stops.
 - GitHub emails me when a workflow run fails.
+
+**To do in Stage 7:** test Google DeepMind's own feed
+(`https://deepmind.google/blog/rss.xml`) from GitHub Actions. It fails only from
+my work network, so if it works on GitHub's servers I'll switch to it
+(section 5.3).
 
 ## 8. Deployment to GitHub Pages and the base path
 
@@ -574,8 +645,35 @@ which does not exist. Every internal link and asset must be prefixed with
      "Hidden" only means unlinked and unindexed, not protected.
 - **Add an entry to the Start Here path:** 🚧 Stage 5 (add a `start_here` block to
   an entry in `library.yaml`, after verifying the entry against the original source).
-- **Add an entry to My Own Path:** 🚧 Stage 5 (step-by-step guide will be here
-  once the page exists; the format is in section 3.1).
+- **Add a reading to My Own Path** (the file exists now; the page comes in Stage 5):
+  1. Open the original and **verify** the exact title, the author(s), the
+     publication and the URL. I remove any `utm_…` parameters from the URL.
+  2. If it's a paywalled article, I look for an archived copy (for example on
+     the Wayback Machine, `web.archive.org`) and keep its URL for `archive_url`.
+  3. If the text is already in the Library (`data/library.yaml`), I only need
+     its `id` for `library_ref` and can skip title, author, source and URL.
+  4. Open `data/my_path/reading_log.yaml` and add a block under `entries:`,
+     indented like the template at the top of the file:
+     ```yaml
+       - month: "2026-09"
+         type: article
+         title: "Exact title"
+         author: "Author Name"
+         source: "Publication"
+         url: https://...
+         via: agi-strategy        # only if I read it as part of a Timeline stage
+         notes: >
+           What I took from it.
+     ```
+     `type` is one of paper, report, essay, article, book, resource. `via` is
+     the `id` of a stage in `timeline.yaml`.
+  5. (From Stage 3 on) run `python scripts\build_site.py` to check nothing is
+     broken, then commit and push. The site updates on the next deploy.
+- **Add a stage to the My Own Path Timeline:** add a block at the top of
+  `data/my_path/timeline.yaml` with a new `id` (short slug that I never change),
+  `type` (course, project or milestone), `date`, `title`, `status` and, when
+  I have them, `provider`, `url` and `notes`. When I finish it, I add
+  `completed: YYYY-MM-DD` and change `status` to `completed`.
 - **Change the design:** 🚧 Stage 6 (edit `static/css/style.css`).
 - **Upgrade a Python package:** I activate the venv, run
   `pip install --upgrade <pkg>`, test the build, then `pip freeze > requirements.txt`,
@@ -648,6 +746,7 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | A source shows `"status": "error"` with `HTTPError: 404` in `status.json` | The site moved or removed its feed | Find the new feed URL (section 9, *Add a news source*) and update `config/sources.yaml` |
 | `SSLError … HANDSHAKE_FAILURE` or timeouts for one site, only on my work computer | The company network/proxy blocks or intercepts that site | Nothing to fix if GitHub Actions can reach it; test at home or use an alternative feed URL (as I did for Google DeepMind) |
 | `UnicodeEncodeError: 'charmap' codec…` when printing from my own Python snippets | The Windows console uses an old encoding | Set `$env:PYTHONIOENCODING = "utf-8"` in PowerShell first (`fetch_news.py` already handles this itself) |
+| `HTTP 429, retrying in 30 s` for arXiv | Too many arXiv requests in a short time (e.g. many test runs) | Nothing: the script waits and retries. Avoid running it many times in a row |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## Glossary

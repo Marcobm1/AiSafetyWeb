@@ -1,0 +1,38 @@
+# My Own Path — Reading log: everything I read, by month.
+# The website groups it by month (collapsible blocks with a counter), with type
+# filters and a small chart of readings per month.
+# Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
+#
+# Fields:
+#   month        YYYY-MM (month only, no day) — write it in quotes: "2026-09"
+#   type         paper | report | essay | article | book | resource
+#   title        exact title
+#   author       author(s), as one string ("Ajeya Cotra", "Hubinger et al.")
+#   source       publication or website ("Cold Takes", "arXiv", "The Guardian")
+#   url          link to the original, WITHOUT tracking parameters (utm_...)
+#   archive_url  optional: archived copy (for paywalled articles); the site
+#                shows it as a small "archived copy" link next to the original
+#   via          optional: id of the Timeline stage (timeline.yaml) in which I
+#                read it, e.g. agi-strategy
+#   library_ref  optional: id of the entry in data/library.yaml if the text is
+#                already in the Library. Then I leave out title, author,
+#                source and url: the site takes them from the Library.
+#   notes        optional: my comments, in first person
+#
+# Rules: every entry verified against the original (title, author, URL); no
+# invented dates or notes.
+#
+# Template (copy it below `entries:`, indented, newest month at the top):
+#
+#   - month: "2026-09"
+#     type: essay
+#     title: "Exact title"
+#     author: "Author Name"
+#     source: "Website or publication"
+#     url: https://...
+#     archive_url: https://archive.org/...   # optional
+#     via: agi-strategy                      # optional
+#     notes: >                               # optional
+#       What I took from it.
+
+entries:

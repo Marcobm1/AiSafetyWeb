@@ -199,9 +199,17 @@ class TopicMatcher:
 # Downloading
 # ---------------------------------------------------------------------------
 
+# "Too many requests" / "service unavailable": the server asks us to slow down.
+SLOW_DOWN_STATUSES = (429, 503)
+
+
 def http_get(session: requests.Session, url: str, timeout: int,
              params: dict | None = None, retry_delay: float = 5) -> bytes:
-    """GET a URL and return the body. Tries twice before giving up."""
+    """GET a URL and return the body. Tries twice before giving up.
+
+    If the server says "slow down" (429/503), the retry waits for as long as
+    its Retry-After header asks, and at least 30 seconds.
+    """
     for attempt in (1, 2):
         try:
             response = session.get(url, params=params, timeout=timeout)
@@ -210,8 +218,14 @@ def http_get(session: requests.Session, url: str, timeout: int,
         except requests.RequestException as exc:
             if attempt == 2:
                 raise
-            log.info("  retrying after error: %s", exc)
-            time.sleep(retry_delay)
+            delay = retry_delay
+            status = exc.response.status_code if exc.response is not None else None
+            if status in SLOW_DOWN_STATUSES:
+                retry_after = exc.response.headers.get("Retry-After", "")
+                delay = max(30, int(retry_after) if retry_after.isdigit() else 0)
+            reason = f"HTTP {status}" if status else type(exc).__name__
+            log.info("  %s, retrying in %d s", reason, delay)
+            time.sleep(delay)
     raise AssertionError("unreachable")
 
 
@@ -259,6 +273,9 @@ def fetch_feed(source: dict, session: requests.Session, settings: dict,
             continue
         description = clean_text(item.get("summary"))
         topics = matcher.match(f"{title} {description[:TOPIC_TEXT_CHARS]}")
+        for topic in source.get("default_topics", []):
+            if topic not in topics:
+                topics.append(topic)
         if source.get("require_topic") and not topics:
             continue
         kept.append(make_entry(link, title, source, published, fetched_at,
@@ -270,10 +287,16 @@ def fetch_arxiv(config: dict, session: requests.Session, settings: dict,
                 matcher: TopicMatcher, cutoff: datetime,
                 fetched_at: datetime) -> tuple[list[dict], int]:
     """One request to the arXiv API. Returns (kept entries, items returned)."""
+    def field(term: str) -> str:
+        return f'ti:"{term}" OR abs:"{term}"'
+
     categories = " OR ".join(f"cat:{c}" for c in config["categories"])
-    phrases = " OR ".join(f'ti:"{p}" OR abs:"{p}"' for p in config["phrases"])
+    # Any phrase, OR all the terms of one combination together.
+    alternatives = [field(p) for p in config["phrases"]]
+    alternatives += [" AND ".join(f"({field(t)})" for t in combo)
+                     for combo in config.get("combinations", [])]
     params = {
-        "search_query": f"({categories}) AND ({phrases})",
+        "search_query": f"({categories}) AND ({' OR '.join(f'({a})' for a in alternatives)})",
         "sortBy": "submittedDate",
         "sortOrder": "descending",
         "start": 0,

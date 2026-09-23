@@ -12,6 +12,8 @@
 #                    posts that reached that karma
 #   require_topic    true = keep an entry only if it matches at least one topic
 #                    keyword below (for general sources that also post off-topic)
+#   default_topics   topics every entry of this source gets, on top of the
+#                    keyword matches (for single-topic sources)
 #
 # Order matters for cross-posts: the same post can be on the Alignment Forum and
 # on LessWrong. The first source that sees it keeps it, so AF goes first.
@@ -35,9 +37,14 @@ sources:
     karma_threshold: 30
     require_topic: true
 
+  - id: transformer-circuits
+    name: Transformer Circuits Thread (Anthropic)
+    url: https://transformer-circuits.pub/feed.xml
+    default_topics: [interpretability]
+
   - id: ai-safety-newsletter
     name: AI Safety Newsletter (CAIS)
-    url: https://newsletter.safe.ai/feed
+    url: https://newsletter.safe.ai/feed   # CAIS's Substack, on its own domain
 
   - id: metr
     name: METR
@@ -87,9 +94,13 @@ sources:
     require_topic: true
 
 # arXiv: one API request per run (see https://info.arxiv.org/help/api/tou.html).
-# The query searches titles and abstracts in cs.AI, cs.LG and cs.CL for the
-# phrases below. Plain "interpretability" was left out on purpose: it matched
-# ~200 papers a week, mostly generic explainability.
+# The query searches titles and abstracts in cs.AI, cs.LG and cs.CL for any of
+# the `phrases`, or for all the terms of any `combinations` entry together.
+# Plain "interpretability" is not used on its own: arXiv matches word stems
+# (interpretable, interpretation...) and it returned ~195 papers a week, mostly
+# generic explainability. Measured on 2026-09-15..22: interpretability AND
+# safety = 12/week (mostly noise), AND alignment = 33 (noise: "cross-modal
+# alignment"...), so those were left out too.
 arxiv:
   enabled: true
   categories: [cs.AI, cs.LG, cs.CL]
@@ -112,6 +123,11 @@ arxiv:
     - frontier AI
     - catastrophic risk
     - specification gaming
+  combinations:           # every term must appear (title or abstract)
+    - [interpretability, AI safety]
+    - [interpretability, AI alignment]
+    - [interpretability, deception]
+    - [interpretability, deceptive]
   max_results: 100
   pause_seconds: 3      # arXiv asks for at least 3 s between requests
 

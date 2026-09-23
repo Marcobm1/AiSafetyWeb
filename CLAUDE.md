@@ -55,8 +55,8 @@ If something is ambiguous, ask Marco before assuming.
 - Every **Start Here** entry (title, authors, year, type, URL) must be verified
   against the original source, not just against a curriculum listing. Strip
   tracking parameters (e.g. `utm_source`) from URLs.
-- **`data/my_path.yaml` is Marco's personal record.** Never invent its dates,
-  statuses or notes: ask him. Placeholder notes must be clearly marked
+- **`data/my_path/` (timeline + reading log) is Marco's personal record.**
+  Never invent its dates, months, statuses or notes: ask him. Placeholder notes must be clearly marked
   `TODO(Marco)` so they are obvious to replace.
 - Paper candidate abstracts follow the excerpt rule (max ~2 sentences).
 
@@ -73,7 +73,7 @@ If something is ambiguous, ask Marco before assuming.
   a server-backed store can be added later.
 - **Reading entries** (papers, essays, reports, scenarios, blog posts) live in
   `data/library.yaml`, each with a stable `id`. The Library, the **Start Here**
-  path and **My Own Path** all refer to entries by that `id`; never duplicate
+  path and the **My Own Path** reading log (`library_ref`) all refer to entries by that `id`; never duplicate
   entry data. The reading tracker is keyed by the same `id`. The website
   section for this archive is called **Library** (not "Papers").
 - **Start Here** has no separate file: stages are listed under
@@ -92,7 +92,8 @@ config/sources.yaml      all news sources, arXiv query, karma thresholds, topic 
 config/site.yaml         site title, base path, settings
 data/library.yaml        curated reading archive (edited by hand); also holds the
                          Start Here stage list and each entry's start_here block
-data/my_path.yaml        Marco's public learning log (edited by hand)
+data/my_path/timeline.yaml     My Own Path: courses, projects, milestones (by hand)
+data/my_path/reading_log.yaml  My Own Path: everything Marco reads, by month (by hand)
 data/paper_candidates.json  arXiv candidates for the archive (written by the bot, auto-pruned)
 data/news/YYYY-MM.json   aggregated news entries, one file per month
 data/status.json         last run time + per-source status
