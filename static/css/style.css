@@ -1,0 +1,65 @@
+/* Basic layout for Stage 3 (skeleton). The real design (serif type, 680px
+   reading column, light/dark themes) comes in Stage 6. */
+
+:root {
+  --text: #1d1d1f;
+  --muted: #5f6368;
+  --line: #e2e2e2;
+  --link: #1a4fb4;
+  --bg: #ffffff;
+  --tag-bg: #eef1f6;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+/* The `hidden` attribute must win over any `display` rule below. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0 auto;
+  max-width: 44rem;
+  padding: 0 1rem 3rem;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.55;
+  color: var(--text);
+  background: var(--bg);
+  overflow-wrap: break-word;   /* long URLs/titles never force horizontal scroll */
+}
+
+a { color: var(--link); }
+
+.skip-link { position: absolute; left: -999px; }
+.skip-link:focus { left: 1rem; top: 1rem; background: var(--bg); padding: .5rem; }
+
+.site-header {
+  display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between;
+  gap: .5rem 1rem; padding: 1.25rem 0 .75rem; border-bottom: 1px solid var(--line);
+}
+.site-title { font-weight: 700; font-size: 1.15rem; text-decoration: none; color: var(--text); }
+.site-header ul { display: flex; flex-wrap: wrap; gap: .25rem 1rem; list-style: none; margin: 0; padding: 0; }
+.site-header a[aria-current="page"] { font-weight: 700; text-decoration: none; color: var(--text); }
+
+h1 { font-size: 1.8rem; line-height: 1.2; margin: 1.5rem 0 .5rem; }
+h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; }
+.lede, .empty, .note, .breadcrumb { color: var(--muted); }
+.count { color: var(--muted); font-weight: 400; font-size: .85em; }
+
+.entry { padding: .75rem 0; border-top: 1px solid var(--line); }
+.entry-title { font-size: 1.05rem; margin: 0 0 .2rem; }
+.entry-title a { text-decoration: none; }
+.entry-title a:hover { text-decoration: underline; }
+.entry-meta { margin: 0; font-size: .85rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: .25rem .6rem; }
+.entry-excerpt { margin: .35rem 0 0; }
+.tag { background: var(--tag-bg); border-radius: 3px; padding: 0 .35rem; }
+
+details > summary { cursor: pointer; list-style-position: outside; }
+details > summary h2 { display: inline; }
+
+.filters { display: flex; flex-wrap: wrap; gap: .5rem 1rem; align-items: end; margin: 1rem 0; font-size: .9rem; }
+.filters label { display: flex; flex-direction: column; gap: .2rem; }
+.filters select { max-width: 100%; }
+
+.month-list { padding-left: 1.2rem; }
+.pager { display: flex; justify-content: space-between; margin-top: 2rem; }
+
+.site-footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line); font-size: .85rem; color: var(--muted); }

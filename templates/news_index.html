@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}News archive · {{ site.title }}{% endblock %}
+
+{% block content %}
+<h1>News archive</h1>
+<p class="lede">Everything the daily fetch has collected, one page per month.</p>
+
+{% if months %}
+<ul class="month-list">
+  {% for month, count in months %}
+  <li><a href="{{ url('news/' ~ month ~ '/') }}">{{ month | month_label }}</a> <span class="count">{{ count }} items</span></li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">No news collected yet.</p>
+{% endif %}
+{% endblock %}

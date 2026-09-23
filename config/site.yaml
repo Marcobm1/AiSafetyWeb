@@ -1,0 +1,35 @@
+# Site-wide settings for scripts/build_site.py.
+
+title: AI Safety Web
+tagline: Daily AI Safety research and news, plus a curated reading library.
+language: en
+
+# Public address of the site. GitHub Pages serves this repository as a
+# "project site" under /AiSafetyWeb/, so EVERY internal link and asset must
+# start with base_path. Templates never write it by hand: they call url('...').
+site_url: https://marcobm1.github.io/AiSafetyWeb/
+base_path: /AiSafetyWeb/
+
+# Home page ("Today in AI Safety"): entries published in the last N hours,
+# counted back from the last fetch run (data/status.json), not from the moment
+# the site is built. That way a rebuild days later still shows the latest batch.
+home:
+  window_hours: 48
+
+# Labels shown on the site for the topic ids used in config/sources.yaml.
+topics:
+  alignment: Alignment
+  interpretability: Interpretability
+  evals: Evaluations
+  governance: Governance
+  security: Security
+
+# Main menu, in order. Library, Start Here and My Own Path are added when
+# their pages exist (Stages 4 and 5).
+nav:
+  - label: Today
+    path: ""
+  - label: News archive
+    path: news/
+  - label: About
+    path: about/

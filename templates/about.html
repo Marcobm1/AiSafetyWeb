@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block title %}About · {{ site.title }}{% endblock %}
+
+{% block content %}
+<h1>About</h1>
+<p class="lede">{{ site.tagline }}</p>
+
+<p>
+  I built this site to keep up with AI Safety research and news. Every day an
+  automated job collects new posts from the sources below and new arXiv papers,
+  and rebuilds the site. For each item it shows only the title, source, date, a
+  short excerpt and a link: please read the full text at the original source.
+</p>
+
+<h2>How it updates</h2>
+<p>
+  Once a day, a GitHub Actions job downloads the feeds, keeps what is on-topic
+  and new, saves it to the repository and publishes the site again. Topics
+  (alignment, interpretability, evaluations, governance, security) are assigned
+  automatically by keywords, so they are a rough guide, not a judgement.
+</p>
+
+<h2>Sources</h2>
+<ul class="source-list">
+  {% for s in sources %}
+  <li>{{ s.name }}
+    {% if s.karma_threshold is defined %}<span class="note">(posts with karma ≥ {{ s.karma_threshold }})</span>{% endif %}
+    {% if s.require_topic is defined and s.require_topic %}<span class="note">(on-topic posts only)</span>{% endif %}
+  </li>
+  {% endfor %}
+  {% if arxiv.enabled %}
+  <li>arXiv <span class="note">(new papers in {{ arxiv.categories | join(", ") }} matching AI Safety terms)</span></li>
+  {% endif %}
+</ul>
+
+{% if status.sources is defined %}
+<h2>Last fetch</h2>
+<p>
+  {{ last_run | date("%d %b %Y, %H:%M UTC") }}:
+  {{ status.new_entries }} new items,
+  {{ status.sources | selectattr("status", "equalto", "ok") | list | length }} of {{ status.sources | length }} sources OK.
+</p>
+{% set failed = status.sources | selectattr("status", "equalto", "error") | list %}
+{% if failed %}
+<ul class="status-errors">
+  {% for s in failed %}<li>{{ s.name }}: could not be fetched.</li>{% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+{% endblock %}

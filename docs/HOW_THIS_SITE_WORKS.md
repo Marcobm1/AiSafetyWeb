@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 2 of 8 complete (news fetching, paper candidates and data formats). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 3 of 8 complete (site skeleton, generator and local preview). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -111,7 +111,7 @@ dark-mode toggle and the reading tracker.
 | `docs/HOW_THIS_SITE_WORKS.md` | These notes | ✅ |
 | `docs/DEVLOG.md` | My chronological log of every change and why | ✅ |
 | `config/sources.yaml` | All news sources, arXiv query, karma thresholds, topic keywords | ✅ |
-| `config/site.yaml` | Site title, base path, retention settings | 🚧 Stage 3 |
+| `config/site.yaml` | Site title, base path, home-page window, topic labels, menu | ✅ |
 | `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON and paper candidates | ✅ |
 | `data/news/YYYY-MM.json` | Collected news, one file per month | ✅ |
 | `data/status.json` | Time of last run + status of each source | ✅ |
@@ -120,12 +120,12 @@ dark-mode toggle and the reading tracker.
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ data, 🚧 page in Stage 5 |
 | `data/my_path/reading_log.yaml` | My Own Path reading log (empty, format in comments) | ✅ data, 🚧 page in Stage 5 |
 | `scripts/promote_candidate.py` | Copies a candidate into `library.yaml` as a new block | 🚧 Stage 4 |
-| `scripts/build_site.py` | Turns templates + data into the `_site/` folder | 🚧 Stage 3 |
-| `templates/` | Jinja2 HTML templates | 🚧 Stage 3 |
-| `static/` | CSS and JavaScript | 🚧 Stages 3–6 |
+| `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
+| `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
+| `static/css/style.css`, `static/js/filters.js` | Basic layout; source/topic filters | ✅ basic (design in Stage 6) |
 | `data/library.yaml` (content) | Curated reading archive, Start Here stages and entries | 🚧 Stages 4–5 |
 | `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 7 |
-| `_site/` | Generated website. **Not committed**, rebuilt each time | 🚧 Stage 3 |
+| `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
 
 **Why one JSON file per month:** the files stay small, the daily Git diffs stay
@@ -454,9 +454,13 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
 5. **Skip duplicates.** Before comparing, every URL is **normalised**: https,
    lowercase host, no `utm_*` tracking parameters, no trailing slash, and arXiv
    `/pdf/…v2` links turned into `/abs/<id>`. LessWrong and the Alignment Forum
-   share posts, so for them the post id is compared instead. The Alignment
-   Forum is listed first in the config, so a cross-post is labelled "AI
-   Alignment Forum".
+   share posts, so for them the post id is compared instead. As a second
+   check, two items with the **same title** (lowercase, punctuation removed)
+   are also duplicates: that catches cross-posts with different URLs, such as
+   a Redwood Research post that is also on the Alignment Forum. Titles shorter
+   than 4 words are too generic ("Introduction") and are not compared. The
+   first source in the config keeps the item, which is why the Alignment Forum
+   is listed first.
 6. **Save** new entries into `data/news/YYYY-MM.json` by publication month.
    arXiv papers go there too, so they appear on the home page like any other news.
 7. **Update the paper candidates** (`data/paper_candidates.json`): add the new
@@ -550,13 +554,81 @@ already caught by other phrases.
 
 ## 6. Building and previewing the site locally
 
-🚧 **Not built yet (Stage 3).** The command I plan to use, which builds the site
-and starts a local server:
+✅ **Built in Stage 3.** The generator is `scripts/build_site.py`. It reads
+`config/site.yaml`, `config/sources.yaml` and the data files, and writes the
+finished website into `_site/` (never committed; it's rebuilt every time).
 
 ```powershell
-python scripts\build_site.py --serve
+python scripts\build_site.py                  # build into _site\
+python scripts\build_site.py --serve          # build, then preview
+python scripts\build_site.py --serve --port 8001   # if port 8000 is busy
 ```
-Then I open the URL it prints (under `/AiSafetyWeb/`, like the real site).
+
+With `--serve` I open **http://localhost:8000/AiSafetyWeb/** and stop the
+server with `Ctrl+C`. The preview serves the site **under `/AiSafetyWeb/`**,
+exactly like GitHub Pages, so a link that forgets the base path breaks here too
+(section 8). `http://localhost:8000/` just redirects there.
+
+### 6.1 What one build does
+
+1. **Delete `_site/` and create it again**, so pages I remove never linger.
+2. **Copy `static/`** (CSS and JavaScript) to `_site/static/`.
+3. **Render each page** from a Jinja2 template:
+
+   | Output | Template | What it shows |
+   |---|---|---|
+   | `index.html` | `index.html` | *Today in AI Safety*: entries published in the last 48 h (`home.window_hours`), one group per source, plus a collapsible "New papers on arXiv" block. If nothing is that recent, the 10 latest items |
+   | `news/index.html` | `news_index.html` | The archive: one line per month with its item count |
+   | `news/YYYY-MM/index.html` | `news_month.html` | All items of a month, grouped by day, with source/topic filters and links to the previous/next month |
+   | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) and the result of the last fetch (from `status.json`) |
+   | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
+
+4. **Check every internal link** (section 8). If one is broken, the build stops
+   with `BUILD FAILED` and a list of the bad links, so a broken site never gets
+   published.
+
+The 48 hours are counted back from the **last fetch run** (`last_run` in
+`status.json`), not from the moment I build. If I rebuild days later without
+fetching, the home page still shows the latest batch instead of going empty.
+
+### 6.2 How the templates fit together
+
+- `base.html` is the page frame: `<head>`, header with the menu, footer with
+  the time of the last fetch. Every other template starts with
+  `{% extends "base.html" %}` and fills in `{% block content %}`.
+- `_macros.html` holds reusable pieces: `entry()` draws one news item (title
+  linking to the original, source, date, topic tags, excerpt) and `filters()`
+  draws the source/topic menus. Templates use them with
+  `{% import "_macros.html" as m %}` … `{{ m.entry(e) }}`.
+- The menu comes from `nav:` in `config/site.yaml`. The current page is marked
+  with `aria-current="page"` (screen readers announce it, and the CSS makes it bold).
+
+### 6.3 Safety measures in the generator
+
+- **Autoescaping:** every value inserted into the HTML is escaped, so a feed
+  title like `<script>…</script>` is shown as text and never runs.
+- **Only http(s) links from feeds** (`safe_url` filter): a malicious feed
+  could send a `javascript:` link; it becomes `#` instead.
+- **`StrictUndefined`:** a typo in a template (`{{ entyr.title }}`) stops the
+  build with an error instead of silently printing nothing.
+- External links carry `rel="noopener"`, so the opened page can't control mine.
+
+### 6.4 JavaScript: filters (progressive enhancement)
+
+The HTML already contains every item, so every page works **without
+JavaScript**. `static/js/filters.js` only adds the source/topic menus on the
+month pages: the menus start `hidden` and the script shows them, then hides the
+items that don't match (it reads the `data-source` and `data-topics` attributes
+of each item). Days with no visible items are hidden too, and a counter says
+"12 of 134 shown". The CSS rule `[hidden] { display: none !important; }` makes
+sure the `hidden` attribute always wins.
+
+### 6.5 Styles
+
+`static/css/style.css` is a simple, readable layout for now (system font,
+~44rem column, wraps long titles so there's never horizontal scrolling on a
+phone). The real design (serif type, 680px reading column, light/dark themes)
+is Stage 6.
 
 ## 7. GitHub Actions and the cron schedule
 
@@ -582,14 +654,31 @@ my work network, so if it works on GitHub's servers I'll switch to it
 
 ## 8. Deployment to GitHub Pages and the base path
 
-🚧 **Details in Stages 3 and 7.**
+🚧 **Deployment details in Stage 7.** The base-path handling is built (Stage 3).
 
 **The base path problem:** this is a *project site*, so it lives under a
 sub-folder: `https://marcobm1.github.io/AiSafetyWeb/`. A link written as
 `/css/style.css` would point to `https://marcobm1.github.io/css/style.css`,
 which does not exist. Every internal link and asset must be prefixed with
-`/AiSafetyWeb/`. I define the prefix **once** in `config/site.yaml`
-(`base_path`) and all templates use it.
+`/AiSafetyWeb/`.
+
+**How I handle it:**
+1. The prefix is defined **once**, as `base_path` in `config/site.yaml`.
+2. Templates **never** write internal links by hand. They call the `url()`
+   helper: `{{ url('news/') }}` → `/AiSafetyWeb/news/`,
+   `{{ url('static/css/style.css') }}` → `/AiSafetyWeb/static/css/style.css`.
+3. After every build, `build_site.py` scans all generated HTML: every `href`
+   or `src` that starts with `/` must start with `/AiSafetyWeb/` **and** point
+   to a file that exists in `_site/` (a link ending in `/` means that folder's
+   `index.html`). Otherwise the build fails and lists the bad links.
+4. The local preview also serves the site under `/AiSafetyWeb/`, so I see the
+   same result as on GitHub Pages.
+
+If the repository were ever renamed, I'd only change `base_path` and `site_url`
+in `config/site.yaml`.
+
+`_site/` also gets an empty `.nojekyll` file. It tells GitHub Pages to publish
+the files as they are instead of running its own site generator (Jekyll) on them.
 
 ## 9. How to…
 
@@ -674,6 +763,19 @@ which does not exist. Every internal link and asset must be prefixed with
   `type` (course, project or milestone), `date`, `title`, `status` and, when
   I have them, `provider`, `url` and `notes`. When I finish it, I add
   `completed: YYYY-MM-DD` and change `status` to `completed`.
+- **Preview the site after any change:** `python scripts\build_site.py --serve`
+  and open http://localhost:8000/AiSafetyWeb/ (section 6).
+- **Change the menu:** edit `nav:` in `config/site.yaml` (`label` shown,
+  `path` relative to the base path, e.g. `news/`).
+- **Change how many hours the home page covers:** `home.window_hours` in
+  `config/site.yaml`.
+- **Change a topic's label on the site:** `topics:` in `config/site.yaml`
+  (the topic ids themselves live in `config/sources.yaml`).
+- **Add a new page:** create a template that starts with
+  `{% extends "base.html" %}`, add a `render(...)` call for it in `build()` in
+  `scripts/build_site.py`, use `url('...')` for every internal link, and add it
+  to `nav:` if it belongs in the menu. The link check will tell me if I got a
+  path wrong.
 - **Change the design:** 🚧 Stage 6 (edit `static/css/style.css`).
 - **Upgrade a Python package:** I activate the venv, run
   `pip install --upgrade <pkg>`, test the build, then `pip freeze > requirements.txt`,
@@ -747,6 +849,10 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | `SSLError … HANDSHAKE_FAILURE` or timeouts for one site, only on my work computer | The company network/proxy blocks or intercepts that site | Nothing to fix if GitHub Actions can reach it; test at home or use an alternative feed URL (as I did for Google DeepMind) |
 | `UnicodeEncodeError: 'charmap' codec…` when printing from my own Python snippets | The Windows console uses an old encoding | Set `$env:PYTHONIOENCODING = "utf-8"` in PowerShell first (`fetch_news.py` already handles this itself) |
 | `HTTP 429, retrying in 30 s` for arXiv | Too many arXiv requests in a short time (e.g. many test runs) | Nothing: the script waits and retries. Avoid running it many times in a row |
+| `BUILD FAILED: broken internal links` | A template has a hand-written link without the base path, or points to a page that doesn't exist | Use `url('...')` in the template and check the path (section 8) |
+| `jinja2.exceptions.UndefinedError: '…' is undefined` | A typo in a template variable, or a value the build doesn't pass to that template | Fix the name in the template, or pass the value in `render(...)` |
+| `OSError: [WinError 10048]` / "address already in use" with `--serve` | Another preview (or program) is using port 8000 | Stop the other one (`Ctrl+C` in its terminal) or use `--port 8001` |
+| The preview shows an old version | The browser cached it | Rebuild and reload with `Ctrl+F5` |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## Glossary
@@ -763,6 +869,7 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **Deploy** — Publish a built version of the site so visitors can see it.
 - **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
 - **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
+- **Escaping (autoescape)** — Turning characters like `<` into `&lt;` so text from outside can never become HTML or JavaScript on my page.
 - **Feed** — A machine-readable list of a site's latest posts (RSS or Atom).
 - **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
 - **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
@@ -775,13 +882,17 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
+- **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
+- **Progressive enhancement** — Building the page so it fully works as plain HTML, then adding JavaScript extras (like filters) on top. If the script fails, nothing essential breaks.
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
 - **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
 - **Regular expression (regex)** — A small pattern language for searching text. The topic matcher turns each keyword into a regex such as `(?<!\w)AGI(?!\w)` ("AGI" as a whole word).
 - **Repository (repo)** — A project folder tracked by Git, including its full history.
 - **RSS** — *Really Simple Syndication*: a standard XML format for publishing a list of recent posts.
+- **Template inheritance** — In Jinja2, a page template `extends` a base template and only fills in the blocks that change, so the header and footer are written once.
+- **XSS (cross-site scripting)** — An attack where text from an outside source ends up running as JavaScript in a visitor's browser. Autoescaping and the http(s)-only link filter protect against it.
 - **Static site** — A website made of fixed files (HTML/CSS/JS) served as-is, with no server-side code or database. Fast, cheap (free here) and secure.
 - **Static site generator** — A program that builds a static site from templates + data (mine is `scripts/build_site.py`).
 - **User-Agent** — A header every HTTP request carries to say which program is asking. My script identifies itself as `AiSafetyWeb/1.0` with a link to the site, which is polite and what APIs like arXiv expect.

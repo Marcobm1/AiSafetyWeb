@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}{{ month | month_label }} · News archive · {{ site.title }}{% endblock %}
+
+{% block content %}
+<p class="breadcrumb"><a href="{{ url('news/') }}">News archive</a></p>
+<h1>{{ month | month_label }}</h1>
+<p class="lede">{{ count }} items, newest first.</p>
+
+<div data-filter-root>
+  {{ m.filters(filters) }}
+  {% for day, items in by_day.items() %}
+  <section class="day-group" data-filter-group>
+    <h2><time datetime="{{ day }}">{{ items[0].published_dt | date("%A %d %B") }}</time></h2>
+    {% for e in items %}{{ m.entry(e, show_date=False) }}{% endfor %}
+  </section>
+  {% endfor %}
+  <p class="empty" data-filter-empty hidden>No items match these filters.</p>
+</div>
+
+<nav class="pager" aria-label="Months">
+  {% if newer %}<a href="{{ url('news/' ~ newer ~ '/') }}">← {{ newer | month_label }}</a>{% endif %}
+  {% if older %}<a href="{{ url('news/' ~ older ~ '/') }}">{{ older | month_label }} →</a>{% endif %}
+</nav>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/filters.js') }}" defer></script>
+{% endblock %}

@@ -1,0 +1,38 @@
+{# Reusable pieces of HTML. Import with: {% import "_macros.html" as m %} #}
+
+{# One news entry: title (link to the original), meta line, excerpt.
+   The data-* attributes are what static/js/filters.js reads. #}
+{% macro entry(e, show_source=True, show_date=True) %}
+<article class="entry" data-source="{{ e.source }}" data-topics="{{ e.topics | join(' ') }}">
+  <h3 class="entry-title"><a href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a></h3>
+  <p class="entry-meta">
+    {% if show_source %}<span class="entry-source">{{ e.source }}</span>{% endif %}
+    {% if show_date %}<time datetime="{{ e.published }}">{{ e.published_dt | date }}</time>{% endif %}
+    {% if e.authors is defined and e.authors %}
+      <span class="entry-authors">{{ e.authors[:3] | join(", ") }}{% if e.authors | length > 3 %} et al.{% endif %}</span>
+    {% endif %}
+    {% for topic in e.topics %}<span class="tag">{{ topic_label(topic) }}</span>{% endfor %}
+  </p>
+  {% if e.excerpt %}<p class="entry-excerpt">{{ e.excerpt }}</p>{% endif %}
+</article>
+{% endmacro %}
+
+{# Source + topic filter menus. They only work with JavaScript, so they start
+   hidden and filters.js shows them. #}
+{% macro filters(options) %}
+<form class="filters" data-filters hidden>
+  <label>Source
+    <select data-filter="source">
+      <option value="">All sources</option>
+      {% for source in options.sources %}<option value="{{ source }}">{{ source }}</option>{% endfor %}
+    </select>
+  </label>
+  <label>Topic
+    <select data-filter="topic">
+      <option value="">All topics</option>
+      {% for topic in options.topics %}<option value="{{ topic }}">{{ topic_label(topic) }}</option>{% endfor %}
+    </select>
+  </label>
+  <output data-filter-count aria-live="polite"></output>
+</form>
+{% endmacro %}

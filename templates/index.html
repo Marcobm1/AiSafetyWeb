@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block content %}
+<h1>Today in AI Safety</h1>
+<p class="lede">
+  What's new in the last {{ window_hours }} hours
+  {% if last_run %}(up to {{ last_run | date("%d %b, %H:%M UTC") }}){% endif %}.
+  Older items are in the <a href="{{ url('news/') }}">news archive</a>.
+</p>
+
+{% if not by_source and not papers %}
+  <p class="empty">Nothing new in the last {{ window_hours }} hours. Here are the latest items:</p>
+  {% for e in latest %}{{ m.entry(e) }}{% endfor %}
+{% endif %}
+
+{% for source, items in by_source.items() %}
+<section class="source-group">
+  <h2>{{ source }} <span class="count">{{ items | length }}</span></h2>
+  {% for e in items %}{{ m.entry(e, show_source=False) }}{% endfor %}
+</section>
+{% endfor %}
+
+{% if papers %}
+<section class="source-group">
+  <details>
+    <summary><h2>New papers on arXiv <span class="count">{{ papers | length }}</span></h2></summary>
+    {% for e in papers %}{{ m.entry(e, show_source=False) }}{% endfor %}
+  </details>
+</section>
+{% endif %}
+{% endblock %}

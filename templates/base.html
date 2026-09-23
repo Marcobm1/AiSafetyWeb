@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="{{ site.language }}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block title %}{{ site.title }}{% endblock %}</title>
+  <meta name="description" content="{% block description %}{{ site.tagline }}{% endblock %}">
+  <link rel="stylesheet" href="{{ url('static/css/style.css') }}">
+  {% block head %}{% endblock %}
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="site-title" href="{{ url() }}">{{ site.title }}</a>
+    <nav aria-label="Main">
+      <ul>
+      {% for item in site.nav %}
+        {% set active = (current_path == item.path) if item.path == "" else current_path.startswith(item.path) %}
+        <li><a href="{{ url(item.path) }}"{% if active %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+      {% endfor %}
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    {% block content %}{% endblock %}
+  </main>
+
+  <footer class="site-footer">
+    <p>
+      {% if last_run %}
+      News last fetched <time datetime="{{ status.last_run }}">{{ last_run | date("%d %b %Y, %H:%M UTC") }}</time>.
+      {% endif %}
+      Titles, short excerpts and links only; every item links to its original source.
+      <a href="{{ url('about/') }}">About this site</a>.
+    </p>
+  </footer>
+  {% block scripts %}{% endblock %}
+</body>
+</html>

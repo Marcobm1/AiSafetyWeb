@@ -9,7 +9,7 @@ What one run does, in order:
   4. Turn every item into the same entry format (see docs/HOW_THIS_SITE_WORKS.md
      section 3.1), assign topics by keyword and drop items that are too old or
      off-topic.
-  5. Skip anything already saved (same normalised URL) and add the rest to
+  5. Skip anything already saved (same normalised URL or same title) and add the rest to
      data/news/YYYY-MM.json (one file per month of publication).
   6. Add new arXiv papers to data/paper_candidates.json, unless they are already
      in data/library.yaml, and delete candidates older than the retention period.
@@ -146,6 +146,31 @@ def dedupe_key(url: str) -> str:
         if match:
             return f"lw-post:{match.group(1)}"
     return normalized
+
+
+TITLE_KEY_MIN_WORDS = 4
+
+
+def title_key(title: str) -> str | None:
+    """Second duplicate key: the title in lowercase, without punctuation.
+
+    Catches cross-posts with different URLs (e.g. a Redwood Research post that
+    is also on the Alignment Forum). Short titles ("Introduction") are too
+    generic to compare, so they get no title key.
+    """
+    words = re.sub(r"[^a-z0-9]+", " ", title.lower()).split()
+    if len(words) < TITLE_KEY_MIN_WORDS:
+        return None
+    return "title:" + " ".join(words)
+
+
+def dedupe_keys(entry: dict) -> set[str]:
+    """All the keys under which an entry counts as 'already seen'."""
+    keys = {dedupe_key(entry["url"])}
+    by_title = title_key(entry["title"])
+    if by_title:
+        keys.add(by_title)
+    return keys
 
 
 def entry_id(url: str) -> str:
@@ -470,16 +495,16 @@ def main() -> int:
 
     # --- 2. Merge into the monthly files, skipping duplicates ---------------
     news = load_news()
-    seen = {dedupe_key(e["url"]) for month in news.values() for e in month}
+    seen = {key for month in news.values() for e in month for key in dedupe_keys(e)}
     new_by_source: dict[str, int] = {}
     new_papers = []
     changed_months = set()
     for source, entries in fetched:
         for entry in entries:
-            key = dedupe_key(entry["url"])
-            if key in seen:
+            keys = dedupe_keys(entry)
+            if keys & seen:
                 continue
-            seen.add(key)
+            seen |= keys
             month = entry["published"][:7]
             news.setdefault(month, []).append(entry)
             changed_months.add(month)

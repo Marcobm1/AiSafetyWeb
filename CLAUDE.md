@@ -68,6 +68,11 @@ If something is ambiguous, ask Marco before assuming.
   deploys `_site/` to GitHub Pages.
 - **Site URL**: https://marcobm1.github.io/AiSafetyWeb/ — every internal link and
   asset must use the base path `/AiSafetyWeb/` (set once in `config/site.yaml`).
+  Templates build internal links only with the `url('...')` helper, never by
+  hand; `build_site.py` fails the build on any broken internal link.
+- Pages must work **without JavaScript**; JS only adds extras (filters, tracker,
+  theme toggle). Feed data is always autoescaped and external links go through
+  the `safe_url` filter (http/https only).
 - **Reading tracker** (read / to read) lives only in the visitor's browser
   (localStorage, always wrapped in try/catch) behind a `ReadingStore` interface so
   a server-backed store can be added later.

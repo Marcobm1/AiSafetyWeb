@@ -275,3 +275,57 @@ Created: `data/my_path/reading_log.yaml`. Moved: `data/my_path.yaml` →
   (`deepmind.google/blog/rss.xml`) from Actions and switch to it if it works**
   (it only fails from my work network).
 - Stage 8: final documentation review.
+
+---
+
+## 2026-09-23 — Stage 3: Site skeleton, generator and local preview
+
+**What I did**
+- I wrote `config/site.yaml` (title, `site_url`, `base_path`, the 48-hour
+  home-page window, topic labels, the menu).
+- I wrote `scripts/build_site.py`. It rebuilds `_site/` from scratch, copies
+  `static/`, renders the home page, the news archive (index + one page per
+  month), About and a 404 page, and then checks every internal link. With
+  `--serve` it previews the site on `http://localhost:8000/AiSafetyWeb/`.
+- I wrote the templates (`base.html`, `_macros.html`, `index.html`,
+  `news_index.html`, `news_month.html`, `about.html`, `404.html`), a basic
+  stylesheet and `static/js/filters.js` (source/topic filters on month pages).
+- I added a **second duplicate check by title** to `fetch_news.py` after
+  finding three Redwood Research posts that were also on the Alignment Forum
+  under different URLs, and removed those three duplicates from
+  `data/news/2026-09.json` (134 entries now).
+- I tested the preview: `/` redirects to `/AiSafetyWeb/`, every page returns
+  200, unknown pages return our 404 page, and `/static/…` without the base
+  path fails just like it would on GitHub Pages.
+
+**What I decided and why**
+- **`url()` helper + automatic link check:** the base path is the classic
+  GitHub Pages trap. Templates never write internal links by hand, and the
+  build fails if any `href`/`src` misses the base path or points to a missing
+  file. I tested it by planting a bad link: the build failed with a clear message.
+- **The preview serves under `/AiSafetyWeb/`**, not at the root, so it behaves
+  like the real site.
+- **The home window counts back from the last fetch, not from build time:** a
+  rebuild days later still shows the latest batch instead of an empty page.
+- **arXiv in its own collapsible block on the home page:** 15–20 papers a day
+  would otherwise bury the posts from the other sources.
+- **Security in the generator:** autoescaping, `StrictUndefined`, http(s)-only
+  links from feeds (`safe_url`), `rel="noopener"` on external links.
+- **Progressive enhancement:** everything works without JavaScript; the filter
+  menus are hidden until the script shows them.
+- **Title duplicates need ≥ 4 words:** short titles are too generic to compare.
+- **Menu only lists pages that exist:** Library, Start Here and My Own Path
+  join it in Stages 4–5.
+
+**Files created / changed**
+Created: `config/site.yaml`, `scripts/build_site.py`, `templates/*.html`,
+`static/css/style.css`, `static/js/filters.js`. Changed:
+`scripts/fetch_news.py` (title dedupe), `data/news/2026-09.json` (3 duplicates
+removed), `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Stage 4: Library page, reading tracker (`ReadingStore`, localStorage),
+  `promote_candidate.py`.
+- Replace the `TODO(Marco)` notes in `data/my_path/timeline.yaml`.
+- Add my September readings to `data/my_path/reading_log.yaml` once the
+  My Own Path page exists (Stage 5).

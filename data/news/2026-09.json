@@ -2430,20 +2430,6 @@
     "summary": null
   },
   {
-    "id": "d4742b662ad38454",
-    "url": "https://blog.redwoodresearch.org/p/cot-controllability-evals-seem-very",
-    "title": "CoT controllability evals seem very under-elicited",
-    "source": "Redwood Research",
-    "source_id": "redwood",
-    "published": "2026-09-11T17:12:25Z",
-    "fetched_at": "2026-09-23T10:45:44Z",
-    "excerpt": "Simple prompt optimizations can improve model capability to control their reasoning",
-    "topics": [
-      "evals"
-    ],
-    "summary": null
-  },
-  {
     "id": "9001c5af91c65b50",
     "url": "https://thezvi.substack.com/p/jacob-coxon-warns-of-human-extinction",
     "title": "Jacob Coxon Warns of Human Extinction and Triggers a Preference Cascade",
@@ -2483,30 +2469,6 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
-  },
-  {
-    "id": "a91b7c58d672e96b",
-    "url": "https://blog.redwoodresearch.org/p/an-operationalization-of-opaque-serial",
-    "title": "An operationalization of opaque serial depth",
-    "source": "Redwood Research",
-    "source_id": "redwood",
-    "published": "2026-09-10T18:40:20Z",
-    "fetched_at": "2026-09-23T10:45:44Z",
-    "excerpt": "\"Serial depth between text bottlenecks\" as a proxy for latent reasoning abilities.",
-    "topics": [],
-    "summary": null
-  },
-  {
-    "id": "eb9656b6468e1a3e",
-    "url": "https://blog.redwoodresearch.org/p/proposal-for-tracking-the-effects",
-    "title": "Proposal for tracking the effects of architecture on monitorability",
-    "source": "Redwood Research",
-    "source_id": "redwood",
-    "published": "2026-09-10T18:13:53Z",
-    "fetched_at": "2026-09-23T10:45:44Z",
-    "excerpt": "Architectures that incorporate opaque recurrence or allow agents to communicate using latents could rapidly make it much harder to monitor chains of thought. We propose that AI companies regularly report verified information about opaque serial depth, share monitorability evidence, and publish a policy on…",
-    "topics": [],
     "summary": null
   },
   {
