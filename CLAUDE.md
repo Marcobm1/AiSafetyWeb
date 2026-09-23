@@ -128,6 +128,22 @@ If something is ambiguous, ask Marco before assuming.
   for large text): recheck the table in HOW_THIS_SITE_WORKS §6.8 on any colour
   change. Keyboard focus must stay clearly visible. Drop cap (`drop-cap`) only
   on pages with an introduction, never on list pages.
+- **My Own Path v2:** page order Timeline → Bookshelf → Journal. The Journal
+  is computed by `build_journal()` from `timeline.yaml` + `reading_log.yaml`
+  (no file of its own): one month at a time, grouped by type; without JS all
+  months are shown. Reading types: paper, report, essay, article, book,
+  resource, podcast-video; Timeline types: course, project, milestone. The
+  validation rules live in `check_timeline_item` / `check_log_entry`, shared
+  by the build and the form: change them there, never duplicate them.
+- **Local "Add entry" form (`scripts/local_form.py`, `templates/local/`):**
+  only the preview server (`build_site.py --serve`) generates it, in memory.
+  It must never be written to `_site/` or put in `static/` (the build fails on
+  its markers `data-local-only` / `/_local/`). It inserts text into the YAML
+  (never re-dumps it), validates the whole file before replacing it, rebuilds
+  the preview and **never commits or pushes**. Keep its protections: server on
+  127.0.0.1 only, Host check (DNS rebinding), Origin/Referer check, per-run
+  random token, 64 KB limit. When testing it, use a temporary copy of the
+  repository, never Marco's real data files.
 - Paper candidates are **not shown on the website**; they only live in the repo.
 - **Paper candidates**: the daily script writes new arXiv papers to
   `data/paper_candidates.json` (machine-written, auto-pruned). Marco promotes
@@ -139,9 +155,9 @@ If something is ambiguous, ask Marco before assuming.
 ## Plan (stages)
 - ✅ 1–6: setup, news fetching, site skeleton, Papers + Library, Start Here +
   My Own Path, design.
-- **7: My Own Path v2**: Timeline, Bookshelf, a monthly Journal (replaces the
-  Reading log) and a local-only "Add entry" form. Plan to be approved by Marco
-  before any code.
+- ✅ **7: My Own Path v2** (built; waiting for Marco's approval in the local
+  preview): Timeline, Bookshelf, a monthly Journal (replaces the Reading log)
+  and a local-only "Add entry" form.
 - **8: GitHub Actions + GitHub Pages**: don't start until Marco approves
   Stage 7 in the local preview.
 - **9: final documentation review.**
@@ -156,16 +172,18 @@ data/papers.yaml         Papers: curated papers, essays, reports... (by hand); a
                          holds the Start Here stage list and each entry's start_here block
 data/books.yaml          Library: books on themed shelves (by hand)
 data/my_path/timeline.yaml     My Own Path: courses, projects, milestones (by hand)
-data/my_path/reading_log.yaml  My Own Path: everything Marco reads, by month (by hand)
+data/my_path/reading_log.yaml  My Own Path: everything Marco reads/watches, by month
+                         (by hand or with the local form; shown in the Journal)
 data/paper_candidates.json  arXiv candidates for the archive (written by the bot, auto-pruned)
 data/news/YYYY-MM.json   aggregated news entries, one file per month
 data/status.json         last run time + per-source status
 scripts/fetch_news.py    fetch feeds + arXiv, dedupe by URL, save JSON + candidates
 scripts/promote_candidate.py  copy a candidate into papers.yaml as a new block
-scripts/build_site.py    render templates + data into _site/
-templates/               Jinja2 HTML templates
+scripts/build_site.py    render templates + data into _site/; --serve = local preview
+scripts/local_form.py    the local-only "Add entry" form (preview server only)
+templates/               Jinja2 HTML templates (templates/local/: the local form, never built)
 static/css, static/js    styles and small vanilla JS modules (filters, reading-store,
-                         tracker, my-shelf, library, theme)
+                         tracker, my-shelf, library, theme, journal)
 static/fonts/            Literata (self-hosted .woff2) + its OFL licence
 docs/                    HOW_THIS_SITE_WORKS.md, DEVLOG.md
 .github/workflows/       update-and-deploy.yml

@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stages 1–6 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 7 (My Own Path v2: Timeline, Bookshelf and a monthly Journal, plus a local-only "Add entry" form), then Stage 8 (GitHub Actions and Pages) and Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stages 1–7 built: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path v2 (Timeline, Bookshelf and a monthly Journal, plus my local-only "Add entry" form) and My shelf, with the e-reader design (Literata, sepia paper, light and dark). Next: Stage 8 (GitHub Actions and Pages), then Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -39,7 +39,7 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 | **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
 | **Library** | Books only, on six themed shelves, each shown with its real cover (Open Library) or a typographic one. Clicking a book opens its card; each book also has its own page | `data/books.yaml`, which I edit by hand |
 | **Start Here** | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point (4 stages, 12 readings from Papers) | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
-| **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Reading log** grouped by month (counters, type filter, readings-per-month chart) and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
+| **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Bookshelf** of the books I read, with my opinion, and a **Journal**: one month at a time (month selector), everything I did that month grouped by type, with an activity-per-month chart | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand or with my local "Add entry" form |
 | **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library and Start Here) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work, the typeface credit and a note that it was built with the help of Claude Code | Template text |
@@ -122,13 +122,16 @@ dark-mode toggle and the reading tracker (My shelf).
 | `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (12 so far); also the Start Here stage list | ✅ |
 | `data/books.yaml` | Library: 20 books on six themed shelves | ✅ |
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ |
-| `data/my_path/reading_log.yaml` | My Own Path reading log (my 14 September readings) | ✅ |
+| `data/my_path/reading_log.yaml` | My Own Path readings and resources (my 14 September readings); shown in the Journal | ✅ |
+| `scripts/local_form.py` | The local-only "Add entry" form, served by `build_site.py --serve` (section 6.9) | ✅ |
+| `templates/local/add_entry.html` | The form's page; only ever rendered by the preview server, never into `_site/` | ✅ |
 | `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
 | `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
 | `static/css/style.css` | The whole design: colour tokens, light/dark, typography, layout (section 6.8) | ✅ |
 | `static/fonts/` | Literata (two `.woff2` files, roman and italic) and its licence `Literata-OFL.txt` | ✅ |
 | `static/js/theme.js` | The *Dark mode / Light mode* toggle in the header | ✅ |
+| `static/js/journal.js` | My Own Path Journal: month selector, Older / Newer, month in the URL | ✅ |
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
@@ -372,7 +375,7 @@ fails, `status` is `"error"` and `error` says why. The site will use
 - Only papers that are **new to the news files** become candidates. That way a
   candidate I let expire never comes back just because arXiv still lists it.
 
-#### `data/my_path/` — My Own Path (edited by hand)
+#### `data/my_path/` — My Own Path (edited by hand or with my local form)
 
 My Own Path has two parts, each in its own file:
 
@@ -396,7 +399,7 @@ My Own Path has two parts, each in its own file:
 ```yaml
 entries:
   - month: "2026-09"            # month only (quoted, so YAML keeps it as text)
-    type: essay                 # paper | report | essay | article | book | resource
+    type: essay                 # paper | report | essay | article | book | resource | podcast-video
     title: "Exact title"
     author: "Author Name"
     source: "Cold Takes"        # publication or website
@@ -444,17 +447,28 @@ entries:
 - **`author` is optional** when the organisation itself is the author (METR's
   risk report, Epoch AI's data pages): then the site shows only `source`.
 
+- **`podcast-video`** (shown as "Podcast / video") is for things I watch or
+  listen to: a talk, an interview, a podcast episode. One type for both,
+  because what matters in my log is that it wasn't a text.
+
 Rules the build script checks, failing with a clear message: `type` must be
-one of the six types; `month` must be a quoted `"YYYY-MM"`; `via` must be an
+one of the seven types; `month` must be a quoted `"YYYY-MM"`; `via` must be an
 `id` in `timeline.yaml`; `paper_ref` must be a published entry of
 `papers.yaml` and `book_ref` a published book of `books.yaml` (and only on
-`type: book`); a book needs `status`, and a finished book needs `month`;
-`status` / `started` only on books; an entry without a ref needs `title`,
-`source` and `url`; no URL may contain `utm_` parameters.
+`type: book`; never both); a book needs `status`, a finished book needs
+`month`, a book I'm still reading has no `month`, and `started` can't be after
+`month`; `status` / `started` / `cover_id` only on books; an entry without a
+ref needs `title`, `source` and `url`; no URL may contain `utm_` parameters.
 
 For the **timeline**, the build checks the `id` (unique slug), `type`,
 `status`, the dates (`completed` not before `date`; a completed course or
-project needs `completed`) and URLs. **Notes that still contain `TODO` are not
+project needs `completed`; a stage with `completed` must have
+`status: completed`) and URLs.
+
+The rules live in two functions in `build_site.py`, `check_timeline_item` and
+`check_log_entry`. The build and the local "Add entry" form (section 6.9) call
+the same functions, so the form can never accept something the build would
+reject. **Notes that still contain `TODO` are not
 shown**, so placeholders like my `TODO(Marco)` notes never go live.
 
 #### The visitor's marks (localStorage, never in the repo)
@@ -761,7 +775,7 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `library/index.html` | `library.html` | The Library: one shelf of covers per shelf in `books.yaml`, plus the book cards for the `<dialog>` |
    | `library/<id>/index.html` | `book.html` | One page per book with its full card: what visitors without JavaScript get, and a link that can be shared |
    | `start-here/index.html` | `start_here.html` | Start Here: the stages in order, each reading numbered with its "Why here" note, synopsis (collapsible) and *To read / Read* buttons. While no stage has entries, a short "being put together" message |
-   | `my-path/index.html` | `my_path.html` | My Own Path: Timeline, Reading log and Bookshelf (section 6.7) |
+   | `my-path/index.html` | `my_path.html` | My Own Path: Timeline, Bookshelf and Journal (section 6.7) |
    | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marked books (as a shelf) and papers (as a list), and export/import |
    | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`), the result of the last fetch (from `status.json`), the Literata credit and "Built with the help of Claude Code." |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
@@ -772,6 +786,8 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
 4. **Check every internal link** (section 8). If one is broken, the build stops
    with `BUILD FAILED` and a list of the bad links, so a broken site never gets
    published.
+5. **Check that the local "Add entry" form isn't in the output** (section 6.9).
+   If any file in `_site/` contains its markers, the build stops.
 
 The 48 hours are counted back from the **last fetch run** (`last_run` in
 `status.json`), not from the moment I build. If I rebuild days later without
@@ -895,33 +911,59 @@ with the same `order` in one stage stop the build. Stages without any entry
 are not shown. The *To read / Read* buttons use the same `id` as in Papers, so
 a mark set in Start Here shows up in Papers and My shelf too.
 
-### 6.7 My Own Path: timeline, reading log and bookshelf
+### 6.7 My Own Path: timeline, bookshelf and journal
 
-All of it is built in Python; the page works without JavaScript.
+All of it is built in Python; the page works without JavaScript. The order on
+the page is Timeline → Bookshelf → Journal.
 
 - **Timeline:** newest first, as a vertical line with one dot per stage
   (filled when completed). Each stage is a `<details>` element: the summary
   shows dates, title, type, status and the number of days; clicking opens
-  provider, link, my notes and how many readings point to it with `via`. The
-  **duration bar** is the stage's length relative to the longest stage; an
-  in-progress stage counts until the day of the build and its bar is lighter.
-  Each stage has the anchor `#timeline-<id>`.
-- **Reading log:** a summary line (total readings, months, count per type),
-  a **readings-per-month chart** and the readings grouped by month, newest
-  month open. The chart is a plain HTML list: one bar per month from the
-  first to the last (empty months included, as a zero), the number written
-  next to each bar, one colour. So it reads without colours, without
-  JavaScript and with a screen reader, and there's no need for a legend.
-  Each reading shows author, source, type, "via <stage>" (a link to the
-  timeline), "archived copy" if there's an `archive_url`, and "on this site" if
-  it points to Papers or the Library. The **type filter** is the same
-  `filters.js` as elsewhere; months with no match are hidden. Books still
-  being read are not in the log (they haven't got a finished `month`); they
-  are on the Bookshelf.
+  provider, link, my notes and how many readings point to it with `via` (a
+  link to that month in the Journal). The **duration bar** is the stage's
+  length relative to the longest stage; an in-progress stage counts until the
+  day of the build and its bar is lighter. Each stage has the anchor
+  `#timeline-<id>`.
 - **Bookshelf:** "Reading now" and "Finished" shelves with the same covers as
   the Library. A book with `book_ref` is the Library's own tile and opens the
   same card (with my `my_opinion`) in the `<dialog>`; a book that's not in the
   Library links to its own `url`, with its `cover_id` cover or a typographic one.
+- **Journal** (it replaced the Reading log in Stage 7): everything I did, one
+  month at a time. `build_journal()` in `build_site.py` puts into each month:
+  - the readings and resources of that month (`month` in `reading_log.yaml`);
+  - the Timeline stages that **started**, were **in progress** or were
+    **completed** in it (a stage still in progress runs until the current
+    month; a milestone belongs to its own month only);
+  - the books I **started** (`started`), was still **reading**, or
+    **finished** (`month`). A book I'm reading without a `started` month has
+    no month to show in: it's only on the Bookshelf.
+
+  Each month shows a summary line ("2 courses · 3 essays · 6 articles…") and
+  the entries **grouped by type** (courses, projects, milestones, books, then
+  the reading types), each group with its counter. Every entry shows its
+  state where it has one ("Started", "In progress", "Completed", "Reading",
+  "Finished").
+- **Activity-per-month chart:** a plain HTML list, one bar per month from the
+  first to the last (empty months included, as a zero), the number written
+  next to each bar, one colour, so it reads without colours, without
+  JavaScript and with a screen reader. A bar counts the readings of that month
+  (a book counts in the month I finished it) **plus** the Timeline stages that
+  started or ended in it, each stage once per month. A stage that is simply
+  still in progress doesn't add to the bar, or a long course would inflate
+  every month. Each bar with entries is a link to its month
+  (`#journal-2026-09`).
+- **Month selector (`static/js/journal.js`):** one drop-down with every month
+  that has entries (newest first) and *Older* / *Newer* buttons. The chosen
+  month goes into the URL (`#journal-2026-09`), so it can be linked, and the
+  browser's Back button works. Without a month in the URL it shows the newest
+  month with activity. Clicking a bar of the chart just follows its link, and
+  the script shows that month.
+- **Without JavaScript** there is no selector: every month is shown, newest
+  first, and the chart's bars are links that jump to each month.
+- **Ready for more people (not used yet):** the Journal carries the owner's id
+  (`data-person="marco"`, from `my_path.person` in `config/site.yaml`) on the
+  section and on every month. Section 12 explains how a person selector would
+  build on it.
 
 ### 6.8 Styles: the e-reader design
 
@@ -994,6 +1036,69 @@ headless Edge: no horizontal scrolling anywhere. Plus keyboard focus on a
 link, a button (pressed and not), a filter and a book, in both themes, and
 the toggle (starting from a light and from a dark system, remembered after a
 reload).
+
+### 6.9 The local "Add entry" form (my computer only)
+
+To add things to My Own Path without editing YAML by hand, the preview server
+(`python scripts\build_site.py --serve`) has a small form. It exists **only**
+in that preview on my computer: it is never part of the published site or of
+the GitHub Actions build.
+
+**How it stays off the published site.**
+- The form page is generated **in memory** by the preview server
+  (`scripts/local_form.py`, template `templates/local/add_entry.html`) at
+  `/AiSafetyWeb/_local/add-entry/`. It is never written to `_site/`.
+- The "Add entry" link on My Own Path is also added in memory, while the
+  preview server sends that page. The file in `_site/my-path/` doesn't have it.
+- The form's CSS and JavaScript are inside its own page, not in `static/`,
+  because everything in `static/` is published.
+- **A safety net in the build:** `check_no_local_tools()` fails the build if
+  any file in `_site/` contains the form's markers (`data-local-only` or
+  `/_local/`). If I ever put a piece of the form in a published template by
+  mistake, the build (locally and in Actions) stops with
+  `BUILD FAILED: local-only form code found in the output`.
+
+**What it does when I save.**
+1. It turns the form into an entry and validates it with the **same
+   functions the build uses** (`check_timeline_item` / `check_log_entry`):
+   types, date and month formats, URLs without `utm_`, `via` and
+   `paper_ref` / `book_ref` pointing to existing entries, a unique id, a
+   finished book with its month… Every problem is shown next to its field,
+   and nothing is saved while there is one. With a `paper_ref` / `book_ref`
+   it also asks me to leave title, author, source and URL empty (they come
+   from Papers / the Library).
+2. It **inserts text** into the YAML file instead of loading and re-saving it
+   (re-saving with PyYAML would delete my comments):
+   - Timeline → appended at the end of `timeline.yaml` (the site sorts by date).
+   - Journal → inserted right under `entries:` in `reading_log.yaml`, the
+     newest at the top, like the rest of the file.
+   Titles, authors, sources and months are written in double quotes, dates
+   bare (so YAML reads them as dates), notes as a folded `>` block.
+3. It writes the new version to a temporary file, **validates the whole
+   file** with the build's loaders and only then replaces the real one. If
+   anything is wrong, the real file is untouched.
+4. It rebuilds the preview and shows which file changed and the block it
+   added. **It never commits or pushes**: I check the change with `git diff`
+   and commit it myself.
+
+**Protections.** The form writes files on my computer, so only I must be able
+to use it:
+- **Only my computer:** the preview server listens on `127.0.0.1`, not on the
+  network, so other devices can't even connect.
+- **Host check (against DNS rebinding):** every request to the form must say
+  `Host: 127.0.0.1:<port>` or `Host: localhost:<port>`. In a DNS rebinding
+  attack, a malicious website makes its own domain point to `127.0.0.1` so my
+  browser talks to my local server; the browser still sends the attacker's
+  domain as `Host`, so the request is refused (403).
+- **Origin check:** a save must come from a page of this preview (`Origin:
+  http://127.0.0.1:<port>` or `http://localhost:<port>`; if the browser sends
+  no `Origin`, the `Referer` must match). Another website open in my browser
+  can't post to the form.
+- **A secret token:** the server makes a new random token each time it starts
+  and puts it in the form; a save without the current token is refused. (After
+  restarting the server I reload the form.)
+- **Small requests only** (64 KB), `Cache-Control: no-store`, and the page
+  can't be shown inside a frame of another site.
 
 ## 7. GitHub Actions and the cron schedule
 
@@ -1189,7 +1294,28 @@ the files as they are instead of running its own site generator (Jekyll) on them
              Why it sits at this point of the path.
      ```
   4. Build and check `/start-here/`; then commit and push.
-- **Add a reading to My Own Path:**
+- **Add an entry to My Own Path with the form (the easy way):**
+  1. `python scripts\build_site.py --serve`, open
+     http://localhost:8000/AiSafetyWeb/my-path/ and click **Add entry** (just
+     under the introduction; the terminal also prints the form's address).
+  2. In **What to add**, choose the type: *Timeline · Course / Project /
+     Milestone* or *Journal · Paper / Report / Essay / Article / Book /
+     Resource / Podcast / video*. Only the fields of that type are shown.
+  3. Fill it in. The same checks as in the manual steps below apply: I verify
+     title, author and URL against the original first, remove `utm_…`, use a
+     Wayback Machine copy for `archive_url`, and pick `via`, *Already in
+     Papers?* or *Already in the Library?* from the lists instead of typing ids.
+     Timeline: dates by day (the date picker), `Id` is suggested from the
+     title. Journal: the month (for a book, the month I finished it; for a
+     book I'm still reading: status *Reading*, no month, optional *Started*).
+  4. **Save entry.** If something is wrong, the page lists the problems and
+     marks each field; my values stay in the form. Fix and save again.
+  5. When it's saved, the page shows the file that changed and the exact
+     block added, and a link to see it on My Own Path (the preview is
+     already rebuilt).
+  6. In the terminal: `git diff data/my_path/` to review, then commit and push
+     as usual. The form never commits.
+- **Add a reading to My Own Path by hand:**
   1. Open the original and **verify** the exact title, the author(s), the
      publication and the URL. I remove any `utm_…` parameters from the URL.
   2. If it's a paywalled article, I look for an archived copy on the Wayback
@@ -1217,15 +1343,15 @@ the files as they are instead of running its own site generator (Jekyll) on them
          notes: >
            What I took from it.
      ```
-     `type` is one of paper, report, essay, article, book, resource. `via` is
-     the `id` of a stage in `timeline.yaml`.
+     `type` is one of paper, report, essay, article, book, resource,
+     podcast-video. `via` is the `id` of a stage in `timeline.yaml`.
      For a book that is not in the Library I can add `cover_id` (found as in
      *Add a book to the Library*) for its cover on my Bookshelf.
   5. Run `python scripts\build_site.py` to check nothing is broken (it
      explains any mistake), then commit and push. The site updates on the next
      deploy.
-- **Add a stage to the My Own Path Timeline:** add a block at the top of
-  `data/my_path/timeline.yaml` with a new `id` (short slug that I never change),
+- **Add a stage to the My Own Path Timeline by hand:** (or use the form above)
+  add a block to `data/my_path/timeline.yaml` with a new `id` (short slug that I never change),
   `type` (course, project or milestone), `date`, `title`, `status` and, when
   I have them, `provider`, `url` and `notes`. When I finish it, I add
   `completed: YYYY-MM-DD` and change `status` to `completed`. Notes that still
@@ -1233,17 +1359,26 @@ the files as they are instead of running its own site generator (Jekyll) on them
 - **Test Start Here and My Own Path locally:**
   1. `python scripts\build_site.py --serve`, open
      http://localhost:8000/AiSafetyWeb/my-path/.
-  2. Timeline: two stages, newest first, with duration bars; click one to open
-     it (AGI Strategy says "14 readings").
-  3. Reading log: "14 readings in 1 month…", the chart with one bar, September
-     open. Choose Type → Resource: "3 of 14 shown". "via AGI Strategy" jumps
-     to the timeline; the Vox article has "archived copy".
-  4. Bookshelf: empty for now, with a short message.
-  5. http://localhost:8000/AiSafetyWeb/start-here/ shows 4 stages (Why it
+  2. The order is Timeline, Bookshelf, Journal. Timeline: two stages, newest
+     first, with duration bars; click one to open it (AGI Strategy says "14
+     readings in the Journal").
+  3. Bookshelf: empty for now, with a short message.
+  4. Journal: the chart shows *Sep 2026* with 16 (14 readings + Future of AI
+     and AGI Strategy, which started or ended in September). The selector
+     shows *September 2026* (Older / Newer disabled: it's the only month), with
+     "2 courses · 2 reports · 3 essays · 6 articles · 3 resources" and the
+     entries grouped by type. "via AGI Strategy" jumps to the timeline; the
+     Vox article has "archived copy". The URL gets `#journal-2026-09` when I
+     pick the month.
+  5. Without JavaScript (DevTools → Ctrl+Shift+P → "Disable JavaScript", then
+     reload): no selector; every month is shown, newest first; the chart's
+     bars are links to each month. The "Add entry" link is still there
+     (it's added by the preview server, not by JavaScript).
+  6. http://localhost:8000/AiSafetyWeb/start-here/ shows 4 stages (Why it
      matters, The alignment problem, Evidence from today's models, What
      researchers are doing about it) with 3, 4, 2 and 3 readings; a *Read*
      mark there also shows in Papers.
-  6. The menu shows News · Papers · Library · Start Here · My Own Path · About.
+  7. The menu shows News · Papers · Library · Start Here · My Own Path · About.
 - **Preview the site after any change:** `python scripts\build_site.py --serve`
   and open http://localhost:8000/AiSafetyWeb/ (section 6).
 - **Change the menu:** edit `nav:` in `config/site.yaml` (`label` shown,
@@ -1433,6 +1568,10 @@ until I merge.
 | The *To read / Read* buttons don't appear | JavaScript is off, or a script failed to load | Check DevTools → Console; without JS the buttons are hidden on purpose |
 | A visitor's marks disappeared | They were in a private window, cleared their browser data, or used another browser/device | Marks live only in that browser; the export file is the backup (section 6.5) |
 | Import says "not a shelf export from this site" | The file isn't an export from My shelf (or was edited into another format) | Export again from the original browser |
+| The form says "Forbidden: the form token is missing or old" | The preview server was restarted after I opened the form | Reload the form page (my values are lost; copy them first) |
+| The form says "Forbidden: wrong Host header" or "did not come from this preview" | I opened it through another address (e.g. my computer's network name), or something else posted to it | Open it as `http://localhost:8000/...` or `http://127.0.0.1:8000/...` |
+| `BUILD FAILED: local-only form code found in the output` | A piece of the local form (`data-local-only` or a `/_local/` link) ended up in a published template or in `static/` | Remove it from that template/file: the form lives only in `scripts/local_form.py` and `templates/local/` |
+| The Journal doesn't show a book | It's a book I'm reading without `started`, so it has no month yet | It's on the Bookshelf; add `started: "YYYY-MM"` to see it in the Journal |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## 12. Possible future extensions
@@ -1445,6 +1584,23 @@ until I merge.
   is the hook: a server-backed store with the same methods could replace the
   localStorage one, and export/import already gives people a way to move
   their marks into an account.
+- **Several people in My Own Path.** The Journal is already built with the
+  person in mind: every month carries `data-person="<id>"` and the owner comes
+  from `my_path.person` in `config/site.yaml`. A multi-person version would:
+  keep one data folder per person (`data/my_path/<person>/timeline.yaml` and
+  `reading_log.yaml`), list the people in `config/site.yaml`, build each
+  person's Journal with the same `build_journal()`, and add a second
+  drop-down (person) next to the month selector in `journal.js` that shows
+  only that person's months. Without JavaScript, each person would get their
+  own section (or page).
+- **Visitors' own path (Timeline, Bookshelf and Journal).** First step, like
+  My shelf: stored only in the visitor's browser (localStorage behind an
+  interface like `ReadingStore`), with export/import to a JSON file, and the
+  same Journal view built in the browser from that data. Second step, with
+  accounts: a server-backed store with the same methods, so paths can be kept
+  across devices and, if someone wants, published. That second step needs a
+  server and a database, sign-in, privacy choices and moderation, so the site
+  would no longer be purely static.
 - **A hidden page to review paper candidates** (section 9).
 
 ## Glossary
@@ -1461,7 +1617,9 @@ until I merge.
 - **Clone** — Download a full copy of a repository, including its history.
 - **Commit** — A saved snapshot of changes in Git, with a message and author.
 - **Cron** — A syntax for schedules (`minute hour day month weekday`). `0 6 * * *` = every day at 06:00 UTC.
+- **CSRF / Origin check** — *Cross-site request forgery*: a malicious website making my browser send a request to another site (here, my local form). Checking the `Origin` header (which site the request comes from) and a secret token stops it.
 - **Deduplication** — Making sure the same item is saved only once, even if several feeds (or several runs) return it.
+- **DNS rebinding** — An attack where a website's domain is switched to point to `127.0.0.1`, so a page from that site can talk to servers on my own computer. Checking the `Host` header defeats it: the browser still sends the attacker's domain.
 - **Deploy** — Publish a built version of the site so visitors can see it.
 - **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
 - **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
@@ -1470,7 +1628,9 @@ until I merge.
 - **Focus ring (`:focus-visible`)** — The outline that shows which element the keyboard is on. `:focus-visible` shows it for keyboard use without adding it to mouse clicks.
 - **Feed** — A machine-readable list of a site's latest posts (RSS or Atom).
 - **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
+- **Hash (`#journal-2026-09`)** — The part of a URL after `#`. It points to a place inside the page and changes without reloading; the Journal keeps the chosen month there.
 - **Hyphenation (`hyphens: auto`)** — The browser splits long words at line ends ("read-ings") using a dictionary for the page's language (`lang`). It keeps justified lines from opening big gaps.
+- **`Host` header** — The part of an HTTP request that says which site the browser thinks it's talking to (`localhost:8000`).
 - **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
 - **GitHub Actions** — GitHub's automation service. It runs *workflows* (YAML files) on GitHub's servers when triggered.
 - **GitHub Pages** — GitHub's free hosting for static websites.

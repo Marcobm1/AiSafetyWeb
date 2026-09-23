@@ -1,0 +1,167 @@
+{% extends "base.html" %}
+{#
+  LOCAL ONLY. Rendered in memory by scripts/local_form.py when the site is
+  served with `build_site.py --serve`. The build never renders this template,
+  and build_site.check_no_local_tools() fails if its markers ever reach _site/.
+  Its CSS and JS are inline on purpose: nothing of it goes into static/.
+#}
+{% block title %}Add entry (local) · {{ site.title }}{% endblock %}
+{% block head %}
+<meta name="robots" content="noindex">
+<style>
+  .local-form fieldset { border: 1px solid var(--line); border-radius: 3px; padding: .8rem 1rem 1rem; margin: 1.25rem 0; min-width: 0; }
+  .local-form .field > input, .local-form .field > select, .local-form .field > textarea { width: 100%; }
+  .local-form legend { font-style: italic; color: var(--muted); padding: 0 .3rem; }
+  .local-form .field { display: flex; flex-direction: column; gap: .2rem; margin: .7rem 0; }
+  .local-form label { font-size: .95rem; }
+  .local-form .hint { font-size: .85rem; font-style: italic; color: var(--muted); }
+  .local-form input, .local-form select, .local-form textarea {
+    font: inherit; font-size: 1rem; color: var(--text); background: var(--bg);
+    border: 1px solid var(--muted); border-radius: 2px; padding: .35rem .5rem; max-width: 100%;
+  }
+  .local-form textarea { min-height: 6rem; }
+  .local-form .error { font-size: .9rem; font-weight: 600; margin: 0; }
+  .local-form .error::before { content: "⚠ "; }
+  .local-form [aria-invalid="true"] { border: 2px solid var(--text); }
+  .local-form button[type="submit"] {
+    font: inherit; padding: .4rem 1.2rem; border-radius: 2px; cursor: pointer;
+    border: 1px solid var(--text); background: var(--text); color: var(--bg);
+  }
+  .local-banner { border: 2px solid var(--text); padding: .6rem .9rem; margin: 1rem 0; }
+  .local-banner pre { white-space: pre-wrap; font-size: .85rem; background: var(--surface); padding: .6rem; }
+</style>
+{% endblock %}
+
+{% macro err(name) %}
+{% for message in errors.get(name, []) %}<p class="error" id="{{ name }}-error">{{ message }}</p>{% endfor %}
+{% endmacro %}
+{% macro attrs(name) %}name="{{ name }}" id="{{ name }}"{% if errors.get(name) %} aria-invalid="true" aria-describedby="{{ name }}-error"{% endif %}{% endmacro %}
+{% macro text(name, label, hint="", type="text") %}
+<div class="field" data-for="{{ name }}">
+  <label for="{{ name }}">{{ label }}</label>
+  <input type="{{ type }}" {{ attrs(name) }} value="{{ values.get(name, '') }}">
+  {% if hint %}<span class="hint">{{ hint }}</span>{% endif %}
+  {{ err(name) }}
+</div>
+{% endmacro %}
+{% macro choice(name, label, options, empty="—", hint="") %}
+<div class="field" data-for="{{ name }}">
+  <label for="{{ name }}">{{ label }}</label>
+  <select {{ attrs(name) }}>
+    {% if empty %}<option value="">{{ empty }}</option>{% endif %}
+    {% for value, text in options %}<option value="{{ value }}"{% if values.get(name) == value %} selected{% endif %}>{{ text }}</option>{% endfor %}
+  </select>
+  {% if hint %}<span class="hint">{{ hint }}</span>{% endif %}
+  {{ err(name) }}
+</div>
+{% endmacro %}
+
+{% block content %}
+<div data-local-only>
+<p class="breadcrumb"><a href="{{ url('my-path/') }}">My Own Path</a></p>
+<h1>Add entry</h1>
+<p class="note">
+  Local preview only: this page doesn't exist on the published site. Saving
+  adds the entry to the YAML file and rebuilds the preview. It does not
+  commit or push: I review the change with <code>git diff</code> and commit it myself.
+</p>
+
+{% if saved %}
+<div class="local-banner" role="status">
+  <p><strong>Saved</strong> to <code>{{ saved.file }}</code> ({{ saved.where }}). {{ saved.rebuilt }}</p>
+  <pre>{{ saved.block }}</pre>
+  <p><a href="{{ url(saved.anchor) }}">See it on My Own Path</a> · Not committed: <code>git diff {{ saved.file }}</code>, then commit and push.</p>
+</div>
+{% endif %}
+{% if fatal %}
+<div class="local-banner" role="alert"><p><strong>Not saved.</strong> {{ fatal }}</p></div>
+{% endif %}
+{% if errors %}
+<div class="local-banner" role="alert">
+  <p><strong>Not saved: {{ errors | length }} field{{ "s" if errors | length != 1 }} to fix.</strong></p>
+  <ul>{% for name, messages in errors.items() %}{% for m in messages %}<li><a href="#{{ name }}">{{ m }}</a></li>{% endfor %}{% endfor %}</ul>
+</div>
+{% endif %}
+
+<form class="local-form" method="post" action="{{ form_action }}" data-local-form>
+  <input type="hidden" name="token" value="{{ token }}">
+  {{ choice("kind", "What to add", kinds, empty="Choose…") }}
+
+  {# --- Timeline ----------------------------------------------------------- #}
+  <fieldset data-target="timeline">
+    <legend>Timeline stage</legend>
+    {{ text("t_title", "Title") }}
+    {{ text("t_id", "Id", "Lowercase words joined by hyphens, e.g. agi-strategy. Never changes later.") }}
+    {{ text("t_date", "Date (started, or when it happened)", "YYYY-MM-DD", "date") }}
+    {{ text("t_completed", "Completed (optional)", "YYYY-MM-DD. Leave empty while it's in progress.", "date") }}
+    {{ choice("t_status", "Status", [("in-progress", "In progress"), ("completed", "Completed")], empty=None) }}
+    {{ text("t_provider", "Provider (optional)", "Who runs it, e.g. BlueDot Impact") }}
+    {{ text("t_url", "URL (optional)", "Without tracking parameters (utm_...)", "url") }}
+    <div class="field" data-for="t_notes">
+      <label for="t_notes">Notes (optional, my own words)</label>
+      <textarea {{ attrs("t_notes") }}>{{ values.get("t_notes", "") }}</textarea>
+      {{ err("t_notes") }}
+    </div>
+  </fieldset>
+
+  {# --- Journal ------------------------------------------------------------ #}
+  <fieldset data-target="journal">
+    <legend>Journal entry (readings and resources)</legend>
+    {{ choice("j_paper_ref", "Already in Papers? (optional)", paper_choices, hint="Then leave title, author, source and URL empty.") }}
+    {{ choice("j_book_ref", "Already in the Library? (optional, books)", book_choices, hint="Then leave title, author, source and URL empty.") }}
+    {{ text("j_title", "Title", "Exact title, checked against the original") }}
+    {{ text("j_author", "Author (optional)", "\"Ajeya Cotra\", \"Hubinger et al.\"; empty when the organisation is the author") }}
+    {{ text("j_source", "Source", "Publication or website") }}
+    {{ text("j_url", "URL", "Link to the original, without utm_ parameters", "url") }}
+    {{ text("j_month", "Month", "The month I read it (for a book: the month I finished it)", "month") }}
+    {{ choice("j_status", "Book status", [("reading", "Reading"), ("finished", "Finished")], empty="—") }}
+    {{ text("j_started", "Started (optional, books)", "The month I started the book", "month") }}
+    {{ text("j_cover_id", "Open Library cover id (optional, books not in the Library)") }}
+    {{ text("j_archive_url", "Archived copy (optional)", "A Wayback Machine copy for paywalled articles", "url") }}
+    {{ choice("j_via", "Via (optional)", timeline_choices, hint="The Timeline stage in which I read it") }}
+    <div class="field" data-for="j_notes">
+      <label for="j_notes">Notes (optional, my own words)</label>
+      <textarea {{ attrs("j_notes") }}>{{ values.get("j_notes", "") }}</textarea>
+      <span class="hint">Only for readings that are not in Papers or the Library.</span>
+      {{ err("j_notes") }}
+    </div>
+  </fieldset>
+
+  <p><button type="submit">Save entry</button></p>
+</form>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script data-local-only>
+// Show only the fields of the chosen type. Without this script every field is
+// shown; the server ignores the ones that don't apply and validates the rest.
+(function () {
+  var form = document.querySelector("[data-local-form]");
+  var kind = form.querySelector("#kind");
+  var BOOK_ONLY = ["j_book_ref", "j_status", "j_started", "j_cover_id"];
+  function update() {
+    var parts = kind.value.split(":"), target = parts[0], type = parts[1];
+    form.querySelectorAll("fieldset[data-target]").forEach(function (fs) {
+      fs.hidden = fs.dataset.target !== target;
+    });
+    form.querySelectorAll("[data-for]").forEach(function (field) {
+      var name = field.dataset.for, show = true;
+      if (BOOK_ONLY.indexOf(name) >= 0) show = type === "book";
+      if (name === "j_paper_ref") show = type !== "book";
+      if (name === "t_completed") show = type !== "milestone";   // a milestone is one day
+      field.hidden = !show;
+    });
+  }
+  // Suggest an id from the title while the id is empty.
+  var title = form.querySelector("#t_title"), id = form.querySelector("#t_id"), touched = !!id.value;
+  id.addEventListener("input", function () { touched = true; });
+  title.addEventListener("input", function () {
+    if (!touched) id.value = title.value.toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "")
+      .replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
+  });
+  kind.addEventListener("change", update);
+  update();
+})();
+</script>
+{% endblock %}

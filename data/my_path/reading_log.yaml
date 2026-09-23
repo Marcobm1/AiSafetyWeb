@@ -1,13 +1,17 @@
-# My Own Path — Reading log: everything I read, by month.
-# The website groups it by month (collapsible blocks with a counter), with type
-# filters and a small chart of readings per month.
+# My Own Path — Reading log: everything I read (and watch or listen to), by month.
+# The website shows it in the Journal: one month at a time, together with the
+# Timeline stages of that month, grouped by type, with a chart of activity per
+# month. Books also appear on the Bookshelf.
+# I can add entries by hand or with the local "Add entry" form
+# (build_site.py --serve → My Own Path → Add entry); the form inserts new
+# entries right under `entries:` and keeps these comments.
 # Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
 #
 # Fields:
 #   month        YYYY-MM (month only, no day) — write it in quotes: "2026-09".
 #                For a book: the month I FINISHED it (leave out while reading)
-#   type         paper | report | essay | article | book | resource
-#   status       books only: reading | finished
+#   type         paper | report | essay | article | book | resource | podcast-video
+#   status       books only: reading | finished (a book I'm reading has no month)
 #   started      books only, optional: YYYY-MM when I started it, in quotes
 #   title        exact title
 #   author       author(s), as one string ("Ajeya Cotra", "Hubinger et al.");

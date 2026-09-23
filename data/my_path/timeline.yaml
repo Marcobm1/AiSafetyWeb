@@ -2,6 +2,8 @@
 # journey. The website shows them as a vertical timeline (newest first); clicking
 # a stage opens my notes. Readings go in reading_log.yaml, not here.
 # Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
+# The local "Add entry" form (build_site.py --serve) appends new stages at
+# the end of this file; the site sorts them by date anyway.
 #
 # Fields:
 #   id         stable slug, never changes (reading_log.yaml links to it via `via`,
@@ -12,7 +14,7 @@
 #   title
 #   provider   who runs it (for courses), optional otherwise
 #   url        optional, without tracking parameters (utm_...)
-#   status     in-progress | completed
+#   status     in-progress | completed (with `completed:` it must be completed)
 #   notes      my takeaways, in first person (optional)
 #
 # Rule: only real dates, statuses and notes. Placeholders are marked TODO(Marco).

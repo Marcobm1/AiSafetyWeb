@@ -869,3 +869,103 @@ stage numbers), `docs/DEVLOG.md`.
 
 **Pending**
 - Stage 7: Claude proposes the plan (data, pages, form) and waits for my approval.
+
+---
+
+## 2026-09-23 — Stage 7: My Own Path v2 (Journal and a local "Add entry" form)
+
+**What I did**
+- **New page order:** Timeline → Bookshelf → **Journal**. The Journal
+  replaces the Reading log: one month at a time (a "month and year"
+  drop-down with *Older* / *Newer*, and the month in the URL, e.g.
+  `#journal-2026-09`). A month shows everything I did in it: readings and
+  resources, the Timeline stages that started, were in progress or were
+  completed, and the books I started, kept reading or finished. Grouped by
+  type, with a counter per type. Default: the newest month with activity.
+- **Activity-per-month chart:** each bar links to its month. It counts the
+  readings of the month plus the Timeline stages that started or ended in
+  it (each once); a stage that is only "still in progress" doesn't count.
+  September 2026 = 14 readings + Future of AI + AGI Strategy = 16.
+- **New reading type `podcast-video`** (shown as "Podcast / video").
+- **Local "Add entry" form** (`scripts/local_form.py`,
+  `templates/local/add_entry.html`), only in `build_site.py --serve`: adds a
+  Timeline stage or a Journal entry, validates it with the build's own rules,
+  inserts it into the YAML without touching my comments, rebuilds the
+  preview and shows the file and block that changed. It never commits.
+- **Validation refactor:** the rules for a timeline stage and a reading-log
+  entry are now two functions (`check_timeline_item`, `check_log_entry`) that
+  collect every problem with its field. The build stops at the first (same
+  messages as before); the form shows them all next to their fields. A few
+  rules are new: a stage with `completed` must be `status: completed`; a
+  book I'm still reading has no `month`; `started` can't be after `month`;
+  `cover_id` only on books; not `paper_ref` and `book_ref` together. My data
+  already followed all of them.
+- **Build safety net:** `check_no_local_tools()` fails the build if the form's
+  markers (`data-local-only`, `/_local/`) appear anywhere in `_site/`.
+- `config/site.yaml` has `my_path.person` (me); the Journal marks every month
+  with `data-person`, ready for a person selector later.
+
+**What I decided and why**
+- **The Journal has no data file of its own.** It's a view the build
+  computes from `timeline.yaml` and `reading_log.yaml`, so every fact is
+  still written in one place. I kept the name `reading_log.yaml`: renaming it
+  would change nothing on the site and would break my habits and the docs.
+- **One `podcast-video` type**, not two: in my log what matters is that it
+  wasn't a text.
+- **The form is generated in memory by the preview server, never written to
+  `_site/`.** That's safer than building it and trying to delete it later:
+  the build that GitHub Actions runs doesn't even know the form exists. The
+  "Add entry" link on My Own Path is added the same way, while the preview
+  server sends the page. Its CSS and JS are inside its own page, because
+  everything in `static/` is published.
+- **Protections for a form that writes files on my computer:** the server
+  listens only on 127.0.0.1; the **Host** header must be `127.0.0.1:<port>`
+  or `localhost:<port>` (against DNS rebinding); a save must come from this
+  preview (**Origin**, or **Referer** if there's no Origin); a **random token**
+  new on every server start; a 64 KB limit; no caching; no framing.
+- **Insert text instead of re-saving YAML:** loading and dumping with PyYAML
+  would delete my comments. The form writes the new version to a temporary
+  file, validates the whole file with the build's loaders, and only then
+  replaces the real one.
+- **Chart labels shortened to "Sep 2026"** after seeing "September 2026"
+  wrap on a phone.
+
+**How I tested it**
+- My real page, before and after: the same 14 readings (titles and URLs) and
+  the same two courses; the Vox "archived copy" link is still there.
+- The form, against a **temporary copy of the repository** on port 8002 (my
+  real data files were never touched), 34 automated checks: the page and the
+  injected link; nothing of the form in `_site/`; a foreign Host (GET and
+  POST), another Origin, no Origin/Referer, a wrong token and an oversized
+  request are all refused; validation errors next to each field (utm_ URL,
+  bad month, unknown `via`, finished book without month, `paper_ref` plus a
+  title, duplicate id, completed before date) with nothing written; a real
+  save of a `podcast-video` with a tricky title (`"`, `:`, `#`) and two
+  paragraphs of notes (inserted under `entries:`, comments kept, the rest of
+  the file byte-for-byte the same, YAML round-trip exact, preview rebuilt);
+  a milestone appended to `timeline.yaml` with a bare date; and the build
+  failing when I planted a local marker in a published template.
+- The Journal in Edge driven by Playwright (23 checks): newest month by
+  default, Older / Newer (skipping an empty August) and their disabled ends,
+  the drop-down, a click on a chart bar, the Back button, a direct link to a
+  month, an unknown month in the URL; without JavaScript every month is shown
+  and the bars are links; focus ring on the selector; the form showing only
+  the fields of each type, the id suggested from the title, and errors kept
+  with my values.
+- The book logic with made-up data: a book started in September and finished
+  in November shows "Started", "Reading", "Finished"; a book I'm reading
+  without `started` stays only on the Bookshelf.
+- Light and dark, desktop and 360px, for My Own Path and the form: no
+  horizontal scrolling.
+
+**Files created / changed**
+Created: `scripts/local_form.py`, `templates/local/add_entry.html`,
+`static/js/journal.js`. Changed: `scripts/build_site.py`,
+`templates/my_path.html`, `static/css/style.css`, `config/site.yaml`,
+`data/my_path/reading_log.yaml` and `data/my_path/timeline.yaml` (header
+comments only), `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Me: review My Own Path v2 and the form in the local preview and approve it.
+- Stage 8 (GitHub Actions and Pages) waits for that approval.
+- Me: the two `TODO(Marco)` timeline notes.

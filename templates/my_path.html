@@ -38,8 +38,8 @@
 <nav class="toc" aria-label="On this page">
   <ul>
     <li><a href="#timeline">Timeline</a></li>
-    <li><a href="#reading-log">Reading log</a></li>
     <li><a href="#bookshelf">Bookshelf</a></li>
+    <li><a href="#journal">Journal</a></li>
   </ul>
 </nav>
 
@@ -71,70 +71,12 @@
           {% if t.provider %}<p>{{ t.provider }}{% if t.url %} · <a href="{{ t.url | safe_url }}" rel="noopener">course page</a>{% endif %}</p>
           {% elif t.url %}<p><a href="{{ t.url | safe_url }}" rel="noopener">Link</a></p>{% endif %}
           {% if t.notes %}<p class="timeline-notes">{{ t.notes }}</p>{% endif %}
-          {% if t.readings %}<p><a href="#reading-log">{{ t.readings }} reading{{ "s" if t.readings != 1 }}</a> in the reading log.</p>{% endif %}
+          {% if t.readings %}<p><a href="#journal-{{ t.start.strftime('%Y-%m') }}">{{ t.readings }} reading{{ "s" if t.readings != 1 }}</a> in the Journal.</p>{% endif %}
         </div>
       </details>
     </li>
     {% endfor %}
   </ol>
-</section>
-
-{# --- Reading log -------------------------------------------------------------- #}
-<section id="reading-log" aria-labelledby="reading-log-title">
-  <h2 id="reading-log-title">Reading log</h2>
-  {% if path.total %}
-  <p class="counters">
-    <strong>{{ path.total }}</strong> reading{{ "s" if path.total != 1 }} in
-    {{ path.by_month | length }} month{{ "s" if path.by_month | length != 1 }}:
-    {% for type, n in path.per_type %}{{ n }} {{ reading_types[type] | lower }}{{ "s" if n != 1 }}{{ ", " if not loop.last }}{% endfor %}.
-  </p>
-
-  {# Readings per month: one bar per month, the number written next to it, so
-     it reads without colour and without JavaScript. #}
-  <figure class="month-chart">
-    <figcaption>Readings per month</figcaption>
-    <ul>
-      {% for row in path.per_month %}
-      <li>
-        <span class="month-chart-label">{{ row.month | month_label }}</span>
-        <span class="month-chart-track"><span class="month-chart-bar" style="width: {{ row.bar }}%"></span></span>
-        <span class="month-chart-value">{{ row.count }}</span>
-      </li>
-      {% endfor %}
-    </ul>
-  </figure>
-
-  <div data-filter-root>
-    <form class="filters" data-filters hidden>
-      {{ m.filter_select("type", "Type", "All types", path.per_type | map("first") | list, reading_types.get) }}
-      <output data-filter-count aria-live="polite"></output>
-    </form>
-    {% for month, items in path.by_month.items() %}
-    <details class="log-month" data-filter-group {% if loop.first %}open{% endif %}>
-      <summary><h3>{{ month | month_label }} <span class="count">{{ items | length }}</span></h3></summary>
-      <ul class="log-list">
-        {% for e in items %}
-        <li class="log-entry" data-filter-item data-type="{{ e.type }}">
-          <a class="log-title" href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a>
-          <span class="entry-meta">
-            {% if e.author %}<span>{{ e.author }}</span>{% endif %}
-            {% if e.source %}<span>{{ e.source }}</span>{% endif %}
-            <span class="label">{{ reading_types[e.type] }}</span>
-            {% if e.via %}<a href="#timeline-{{ e.via }}">via {{ e.via_title }}</a>{% endif %}
-            {% if e.archive_url %}<a href="{{ e.archive_url | safe_url }}" rel="noopener">archived copy</a>{% endif %}
-            {% if e.ref_link %}<a href="{{ url(e.ref_link) }}">on this site</a>{% endif %}
-          </span>
-          {% if e.notes %}<p class="log-notes">{{ e.notes }}</p>{% endif %}
-        </li>
-        {% endfor %}
-      </ul>
-    </details>
-    {% endfor %}
-    <p class="empty" data-filter-empty hidden>No readings of this type.</p>
-  </div>
-  {% else %}
-  <p class="empty">No readings logged yet.</p>
-  {% endif %}
 </section>
 
 {# --- Bookshelf ------------------------------------------------------------------- #}
@@ -154,6 +96,103 @@
   {% endif %}
 </section>
 
+{# --- Journal ------------------------------------------------------------------ #}
+{# Everything I did, month by month. Without JavaScript every month is shown,
+   newest first; static/js/journal.js turns it into one month at a time with a
+   month selector (the chosen month is in the URL: #journal-2026-09).
+   data-person is there for a future person selector (HOW_THIS_SITE_WORKS §12). #}
+{% set journal = path.journal %}
+<section id="journal" aria-labelledby="journal-title" data-journal data-person="{{ journal.person.id }}">
+  <h2 id="journal-title">Journal</h2>
+  {% if journal.months %}
+  <p class="note">
+    Everything I did each month: what I read, and the courses, projects and
+    books I started, continued or finished.
+  </p>
+
+  {# Activity per month: one bar per month, the number written next to it, so
+     it reads without colour and without JavaScript. Each bar links to its month. #}
+  <figure class="month-chart">
+    <figcaption>Activity per month <span class="chart-hint">(readings, plus courses and projects started or finished)</span></figcaption>
+    <ul>
+      {% for row in journal.chart %}
+      <li>
+        {% if row.has_entries %}
+        <a class="month-chart-row" href="#journal-{{ row.month }}" data-journal-link="{{ row.month }}">
+        {% else %}
+        <span class="month-chart-row">
+        {% endif %}
+          <span class="month-chart-label"><abbr title="{{ row.month | month_label }}">{{ row.month | month_short }}</abbr></span>
+          <span class="month-chart-track"><span class="month-chart-bar" style="width: {{ row.bar }}%"></span></span>
+          <span class="month-chart-value">{{ row.count }}</span>
+        {% if row.has_entries %}</a>{% else %}</span>{% endif %}
+      </li>
+      {% endfor %}
+    </ul>
+  </figure>
+
+  <div class="journal-controls" data-journal-controls hidden>
+    <button type="button" data-journal-step="older">‹ Older</button>
+    <label>
+      <span class="visually-hidden">Month</span>
+      <select data-journal-select>
+        {% for m in journal.months %}<option value="{{ m.month }}">{{ m.month | month_label }}</option>{% endfor %}
+      </select>
+    </label>
+    <button type="button" data-journal-step="newer">Newer ›</button>
+  </div>
+
+  {% for m in journal.months %}
+  <section class="journal-month" id="journal-{{ m.month }}" data-journal-month="{{ m.month }}"
+           data-person="{{ journal.person.id }}" aria-labelledby="journal-{{ m.month }}-title">
+    <h3 id="journal-{{ m.month }}-title">{{ m.month | month_label }}</h3>
+    <p class="journal-summary">
+      {% for g in m.groups %}{{ g.entries | length }} {{ (g.label if g.entries | length != 1 else (timeline_types.get(g.type) or reading_types[g.type])) | lower }}{{ " · " if not loop.last }}{% endfor %}
+    </p>
+    {% for g in m.groups %}
+    <div class="journal-group" data-type="{{ g.type }}">
+      <h4>{{ g.label }} <span class="count">{{ g.entries | length }}</span></h4>
+      <ul class="log-list">
+        {% for x in g.entries %}
+        {% set e = x.item %}
+        {% if x.kind == "timeline" %}
+        <li class="log-entry">
+          <a class="log-title" href="#timeline-{{ e.id }}">{{ e.title }}</a>
+          <span class="entry-meta">
+            {% if e.provider %}<span>{{ e.provider }}</span>{% endif %}
+            <span>
+              <time datetime="{{ e.start.isoformat() }}">{{ e.start.strftime("%d %b %Y") }}</time>
+              {% if e.end %}– <time datetime="{{ e.end.isoformat() }}">{{ e.end.strftime("%d %b %Y") }}</time>
+              {% elif e.status == "in-progress" %}– now{% endif %}
+            </span>
+            <span class="label">{{ x.state }}</span>
+          </span>
+        </li>
+        {% else %}
+        <li class="log-entry">
+          <a class="log-title" href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a>
+          <span class="entry-meta">
+            {% if e.author %}<span>{{ e.author }}</span>{% endif %}
+            {% if e.source %}<span>{{ e.source }}</span>{% endif %}
+            {% if x.state %}<span class="label">{{ x.state }}</span>{% endif %}
+            {% if e.via %}<a href="#timeline-{{ e.via }}">via {{ e.via_title }}</a>{% endif %}
+            {% if e.archive_url %}<a href="{{ e.archive_url | safe_url }}" rel="noopener">archived copy</a>{% endif %}
+            {% if e.ref_link %}<a href="{{ url(e.ref_link) }}">on this site</a>{% endif %}
+          </span>
+          {% if e.notes %}<p class="log-notes">{{ e.notes }}</p>{% endif %}
+        </li>
+        {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    {% endfor %}
+  </section>
+  {% endfor %}
+  {% else %}
+  <p class="empty">Nothing logged yet.</p>
+  {% endif %}
+</section>
+
 {% for b in card_books %}
 <template data-card="{{ b.id }}">{{ m.book_card(b, "dialog", "h2") }}</template>
 {% endfor %}
@@ -161,7 +200,7 @@
 {% endblock %}
 
 {% block scripts %}
-<script src="{{ url('static/js/filters.js') }}" defer></script>
+<script src="{{ url('static/js/journal.js') }}" defer></script>
 <script src="{{ url('static/js/reading-store.js') }}" defer></script>
 <script src="{{ url('static/js/tracker.js') }}" defer></script>
 <script src="{{ url('static/js/library.js') }}" defer></script>

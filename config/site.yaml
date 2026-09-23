@@ -24,6 +24,14 @@ topics:
   governance: Governance
   security: Security
 
+# My Own Path belongs to one person for now. The Journal marks every item with
+# this person's id (data-person="..."), so a person selector can be added later
+# without changing the page structure (HOW_THIS_SITE_WORKS §12).
+my_path:
+  person:
+    id: marco
+    name: Marco
+
 # Main menu, in order. The home page (Today) has no menu item: the site title
 # links to it. "My shelf" is a small separate link in the header (base.html).
 nav:

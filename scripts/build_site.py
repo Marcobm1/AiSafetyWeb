@@ -12,7 +12,7 @@ What one build does:
        library/index.html       the Library: books on shelves (data/books.yaml)
        library/<id>/index.html  one page per book (the card, for visitors without JS)
        start-here/index.html    the Start Here reading path (start_here blocks in papers.yaml)
-       my-path/index.html       My Own Path: timeline, reading log, bookshelf (data/my_path/)
+       my-path/index.html       My Own Path: timeline, bookshelf, journal (data/my_path/)
        my-shelf/index.html      the visitor's own "to read" / "read" marks
        about/index.html         what the site is + status of the last fetch
        404.html                 "page not found" (GitHub Pages serves it)
@@ -21,10 +21,13 @@ What one build does:
      with a warning.
   5. Check every internal link and asset: it must start with the base path
      (/AiSafetyWeb/) and point to a file that exists. Otherwise the build fails.
+  6. Check that nothing from the local-only "Add entry" form (local_form.py)
+     is in _site/. Otherwise the build fails.
 
 Usage (from the repository root, with the venv active):
     python scripts/build_site.py            # build into _site/
     python scripts/build_site.py --serve    # build, then preview on localhost
+                                            # (with the local "Add entry" form)
 """
 
 from __future__ import annotations
@@ -303,21 +306,64 @@ def build_start_here(stages: list[dict], papers: list[dict]) -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
-# My Own Path (data/my_path/): timeline, reading log, bookshelf
+# My Own Path (data/my_path/): timeline, reading log, bookshelf, journal
 # ---------------------------------------------------------------------------
 
 TIMELINE_TYPES = {"course": "Course", "project": "Project", "milestone": "Milestone"}
 TIMELINE_STATUSES = {"in-progress": "In progress", "completed": "Completed"}
 READING_TYPES = {"paper": "Paper", "report": "Report", "essay": "Essay",
-                 "article": "Article", "book": "Book", "resource": "Resource"}
+                 "article": "Article", "book": "Book", "resource": "Resource",
+                 "podcast-video": "Podcast / video"}
+# Group headings in the Journal ("3 essays", "Podcasts / videos").
+PLURALS = {"course": "Courses", "project": "Projects", "milestone": "Milestones",
+           "paper": "Papers", "report": "Reports", "essay": "Essays",
+           "article": "Articles", "book": "Books", "resource": "Resources",
+           "podcast-video": "Podcasts / videos"}
 BOOK_STATUSES = ("reading", "finished")
 MONTH_RE = re.compile(r"^\d{4}-(0[1-9]|1[0-2])$")
+DATE_RE = re.compile(r"^\d{4}-\d{2}-\d{2}$")
+
+
+class Problems:
+    """Collects validation problems for one entry, each tied to a field.
+
+    The build stops at the first one (BuildError, same messages as always);
+    the local "Add entry" form shows all of them next to their fields.
+    """
+
+    def __init__(self, where: str):
+        self.where = where
+        self.items: list[tuple[str, str]] = []   # (field, message)
+
+    def add(self, field: str, message: str) -> None:
+        self.items.append((field, message))
+
+    def __bool__(self) -> bool:
+        return bool(self.items)
+
+    def raise_first(self) -> None:
+        if self.items:
+            raise BuildError(f"{self.where}: {self.items[0][1]}")
+
+
+def url_problem(url) -> str | None:
+    """The check_url rule, as a message instead of an exception."""
+    try:
+        check_url(url, "")
+    except BuildError as exc:
+        return str(exc).removeprefix(": ")
+    return None
 
 
 def as_date(value, where: str, field: str) -> dt.date:
     """YAML reads 2026-09-07 as a date; anything else is a mistake."""
     if isinstance(value, dt.date):
         return value
+    if isinstance(value, str) and DATE_RE.match(value):
+        try:
+            return dt.date.fromisoformat(value)
+        except ValueError:
+            pass
     raise BuildError(f"{where}: {field} must be a date like 2026-09-07, got {value!r}")
 
 
@@ -328,33 +374,51 @@ def as_month(value, where: str, field: str) -> str:
     return value
 
 
-def load_timeline(today: dt.date) -> list[dict]:
+def check_timeline_item(item: dict, seen_ids: set, p: Problems) -> None:
+    """Every rule for one timeline.yaml entry. Adds problems to `p`."""
+    for key in ("id", "type", "date", "title", "status"):
+        if not item.get(key):
+            p.add(key, f"missing {key}")
+    if item.get("id") and (not ID_RE.match(str(item["id"])) or item["id"] in seen_ids):
+        p.add("id", "id must be a unique lowercase slug")
+    if item.get("type") and item["type"] not in TIMELINE_TYPES:
+        p.add("type", f"type must be one of {', '.join(TIMELINE_TYPES)}")
+    if item.get("status") and item["status"] not in TIMELINE_STATUSES:
+        p.add("status", f"status must be one of {', '.join(TIMELINE_STATUSES)}")
+    start = end = None
+    for key in ("date", "completed"):
+        if item.get(key):
+            try:
+                value = as_date(item[key], "", key)
+            except BuildError as exc:
+                p.add(key, str(exc).removeprefix(": "))
+                continue
+            start, end = (value, end) if key == "date" else (start, value)
+    if start and end and end < start:
+        p.add("completed", "completed is before date")
+    if item.get("status") == "completed" and not item.get("completed") and item.get("type") != "milestone":
+        p.add("completed", "a completed stage needs `completed:`")
+    if item.get("status") == "in-progress" and item.get("completed"):
+        p.add("status", "a stage with `completed:` must have status: completed")
+    if item.get("url") and url_problem(item["url"]):
+        p.add("url", url_problem(item["url"]))
+
+
+def load_timeline(today: dt.date, path: Path = TIMELINE_FILE) -> list[dict]:
     """Validate timeline.yaml; newest first, each stage with its duration in days.
 
     Notes that still contain a TODO placeholder are not shown.
     """
-    items = load_yaml(TIMELINE_FILE) or []
+    items = load_yaml(path) or []
     seen, timeline = set(), []
     for n, item in enumerate(items, start=1):
         where = f"data/my_path/timeline.yaml entry {n} ({item.get('id', 'no id')})"
-        for key in ("id", "type", "date", "title", "status"):
-            if not item.get(key):
-                raise BuildError(f"{where}: missing {key}")
-        if not ID_RE.match(str(item["id"])) or item["id"] in seen:
-            raise BuildError(f"{where}: id must be a unique lowercase slug")
+        problems = Problems(where)
+        check_timeline_item(item, seen, problems)
+        problems.raise_first()
         seen.add(item["id"])
-        if item["type"] not in TIMELINE_TYPES:
-            raise BuildError(f"{where}: type must be one of {', '.join(TIMELINE_TYPES)}")
-        if item["status"] not in TIMELINE_STATUSES:
-            raise BuildError(f"{where}: status must be one of {', '.join(TIMELINE_STATUSES)}")
         start = as_date(item["date"], where, "date")
         end = as_date(item["completed"], where, "completed") if item.get("completed") else None
-        if end and end < start:
-            raise BuildError(f"{where}: completed is before date")
-        if item["status"] == "completed" and not end and item["type"] != "milestone":
-            raise BuildError(f"{where}: a completed stage needs `completed:`")
-        if item.get("url"):
-            check_url(item["url"], where)
         stage = dict(item, start=start, end=end)
         stage["days"] = ((end or max(today, start)) - start).days + 1
         stage.setdefault("provider", None)
@@ -371,73 +435,99 @@ def load_timeline(today: dt.date) -> list[dict]:
     return timeline
 
 
-def load_reading_log(timeline: list[dict], papers: list[dict], books: list[dict]) -> list[dict]:
+def check_log_entry(item: dict, timeline_ids: set, paper_ids: set, book_ids: set,
+                    p: Problems) -> None:
+    """Every rule for one reading_log.yaml entry. Adds problems to `p`."""
+    kind = item.get("type")
+    if kind not in READING_TYPES:
+        p.add("type", f"type must be one of {', '.join(READING_TYPES)}")
+    is_book = kind == "book"
+    if is_book:
+        if item.get("status") not in BOOK_STATUSES:
+            p.add("status", "a book needs status: reading or finished")
+        if item.get("status") == "finished" and not item.get("month"):
+            p.add("month", "a finished book needs month: (the month I finished it)")
+        if item.get("status") == "reading" and item.get("month"):
+            p.add("month", "a book I'm still reading has no month: (add it when I finish)")
+        if item.get("started"):
+            try:
+                as_month(item["started"], "", "started")
+            except BuildError as exc:
+                p.add("started", str(exc).removeprefix(": "))
+    elif item.get("status") or item.get("started"):
+        p.add("status" if item.get("status") else "started", "status/started are only for books")
+    if item.get("month") is not None:
+        try:
+            as_month(item["month"], "", "month")
+        except BuildError as exc:
+            p.add("month", str(exc).removeprefix(": "))
+    elif not is_book:
+        p.add("month", "missing month")
+    if (is_book and item.get("started") and item.get("month") and MONTH_RE.match(str(item["started"]))
+            and MONTH_RE.match(str(item["month"])) and item["started"] > item["month"]):
+        p.add("started", "started is after the month I finished it")
+
+    if item.get("via") and item["via"] not in timeline_ids:
+        p.add("via", f"via {item['via']!r} is not an id in timeline.yaml")
+    if item.get("paper_ref") and item.get("book_ref"):
+        p.add("book_ref", "use paper_ref or book_ref, not both")
+    if item.get("paper_ref"):
+        if item["paper_ref"] not in paper_ids:
+            p.add("paper_ref", f"paper_ref {item['paper_ref']!r} is not a published entry of papers.yaml")
+    elif item.get("book_ref"):
+        if not is_book:
+            p.add("book_ref", "book_ref is only for type: book")
+        elif item["book_ref"] not in book_ids:
+            p.add("book_ref", f"book_ref {item['book_ref']!r} is not a published book of books.yaml")
+    else:
+        for key in ("title", "source", "url"):
+            if not item.get(key):
+                p.add(key, f"missing {key} (or a paper_ref / book_ref)")
+    for key in ("url", "archive_url"):
+        if item.get(key) and url_problem(item[key]):
+            p.add(key, url_problem(item[key]))
+    cover_id = item.get("cover_id")
+    if cover_id is not None and cover_id != "":
+        if not is_book:
+            p.add("cover_id", "cover_id is only for books")
+        elif not str(cover_id).isdigit():
+            p.add("cover_id", "cover_id must be a number (the Open Library cover id)")
+
+
+def load_reading_log(timeline: list[dict], papers: list[dict], books: list[dict],
+                     path: Path = READING_LOG_FILE) -> list[dict]:
     """Validate reading_log.yaml and resolve paper_ref / book_ref.
 
     Every entry comes out with title, author (may be empty), source and url,
     taken from papers.yaml / books.yaml when it has a ref, plus `ref_link`
     (the entry on this site) and `via_title`.
     """
-    data = load_yaml(READING_LOG_FILE) or {}
+    data = load_yaml(path) or {}
     timeline_by_id = {t["id"]: t for t in timeline}
     papers_by_id = {p["id"]: p for p in papers}
     books_by_id = {b["id"]: b for b in books}
     log = []
     for n, item in enumerate(data.get("entries") or [], start=1):
         where = f"data/my_path/reading_log.yaml entry {n} ({item.get('title') or item.get('paper_ref') or item.get('book_ref') or '?'})"
+        problems = Problems(where)
+        check_log_entry(item, set(timeline_by_id), set(papers_by_id), set(books_by_id), problems)
+        problems.raise_first()
         entry = dict(item)
-        if entry.get("type") not in READING_TYPES:
-            raise BuildError(f"{where}: type must be one of {', '.join(READING_TYPES)}")
-        is_book = entry["type"] == "book"
-
-        if is_book:
-            if entry.get("status") not in BOOK_STATUSES:
-                raise BuildError(f"{where}: a book needs status: reading or finished")
-            if entry["status"] == "finished" and not entry.get("month"):
-                raise BuildError(f'{where}: a finished book needs month: (the month I finished it)')
-            if entry.get("started"):
-                as_month(entry["started"], where, "started")
-        elif entry.get("status") or entry.get("started"):
-            raise BuildError(f"{where}: status/started are only for books")
-        if entry.get("month") is not None:
-            entry["month"] = as_month(entry["month"], where, "month")
-        elif not is_book:
-            raise BuildError(f"{where}: missing month")
-
-        if entry.get("via"):
-            if entry["via"] not in timeline_by_id:
-                raise BuildError(f"{where}: via {entry['via']!r} is not an id in timeline.yaml")
-            entry["via_title"] = timeline_by_id[entry["via"]]["title"]
-        else:
-            entry["via_title"] = None
-
+        entry["via_title"] = timeline_by_id[entry["via"]]["title"] if entry.get("via") else None
         entry["ref_link"], entry["book"] = None, None
         if entry.get("paper_ref"):
-            paper = papers_by_id.get(entry["paper_ref"])
-            if not paper:
-                raise BuildError(f"{where}: paper_ref {entry['paper_ref']!r} is not a published entry of papers.yaml")
+            paper = papers_by_id[entry["paper_ref"]]
             entry.update(title=paper["title"], author=", ".join(paper["authors"]),
                          source=None, url=paper["url"], ref_link=f"papers/#paper-{paper['id']}")
         elif entry.get("book_ref"):
-            if not is_book:
-                raise BuildError(f"{where}: book_ref is only for type: book")
-            book = books_by_id.get(entry["book_ref"])
-            if not book:
-                raise BuildError(f"{where}: book_ref {entry['book_ref']!r} is not a published book of books.yaml")
+            book = books_by_id[entry["book_ref"]]
             entry.update(title=book["title"], author=", ".join(book["authors"]),
                          source=book["publisher"], url=book["url"],
                          ref_link=f"library/{book['id']}/", book=book)
-        else:
-            for key in ("title", "source", "url"):
-                if not entry.get(key):
-                    raise BuildError(f"{where}: missing {key} (or a paper_ref / book_ref)")
-        check_url(entry["url"], where)
-        if entry.get("archive_url"):
-            check_url(entry["archive_url"], where)
-        for key in ("author", "archive_url", "via", "cover_id"):
+        for key in ("author", "archive_url", "via", "cover_id", "month", "started", "status"):
             entry.setdefault(key, None)
         entry["notes"] = None if has_todo(entry.get("notes")) else entry.get("notes")
-        if is_book and not entry["book"]:
+        if entry["type"] == "book" and not entry["book"]:
             # A book that is not in the Library: its own (optional) cover id.
             cover_id = entry.get("cover_id")
             entry["cover"] = COVERS_URL.format(cover_id=cover_id, size="M") if cover_id else None
@@ -455,31 +545,94 @@ def month_range(first: str, last: str) -> list[str]:
     return months
 
 
-def build_my_path(timeline: list[dict], log: list[dict]) -> dict:
+def build_journal(timeline: list[dict], log: list[dict], today: dt.date, person: dict) -> dict:
+    """The Journal: for every month, everything I did in it, grouped by type.
+
+    A month shows:
+    - the readings and resources of that month (`month` in reading_log.yaml);
+    - timeline stages that started, were in progress or were completed in it
+      (a stage still in progress runs until the current month);
+    - books I started (`started`), was still reading, or finished (`month`).
+    The chart counts, per month, the readings (finished books included) plus
+    the timeline stages that started or ended in it, each stage once: a stage
+    that is merely still in progress doesn't add to the bar.
+    """
+    this_month = today.strftime("%Y-%m")
+    months: dict[str, dict[str, list]] = {}
+    counts: dict[str, int] = {}
+
+    def add(month: str, kind: str, item: dict) -> None:
+        months.setdefault(month, {}).setdefault(kind, []).append(item)
+
+    for t in timeline:
+        first = t["start"].strftime("%Y-%m")
+        last = t["end"].strftime("%Y-%m") if t["end"] else (first if t["type"] == "milestone" else this_month)
+        for m in month_range(first, max(first, last)):
+            if t["type"] == "milestone":
+                state = "Milestone"
+            elif m == first and t["end"] and m == last:
+                state = "Started and completed"
+            elif m == first:
+                state = "Started"
+            elif t["end"] and m == last:
+                state = "Completed"
+            else:
+                state = "In progress"
+            add(m, t["type"], {"kind": "timeline", "item": t, "state": state})
+            if m in (first, last) and (m == first or t["end"]):
+                counts[m] = counts.get(m, 0) + 1
+
+    for e in log:
+        if e["type"] != "book":
+            add(e["month"], e["type"], {"kind": "reading", "item": e, "state": None})
+            counts[e["month"]] = counts.get(e["month"], 0) + 1
+            continue
+        # Books: only with a known month (started and/or finished).
+        first = e["started"] or e["month"]
+        if not first:
+            continue   # still reading, no start month: only on the Bookshelf
+        last = e["month"] or this_month
+        for m in month_range(first, max(first, last)):
+            if e["month"] and m == e["month"]:
+                state = "Started and finished" if m == e["started"] else "Finished"
+            elif m == e["started"]:
+                state = "Started"
+            else:
+                state = "Reading"
+            add(m, "book", {"kind": "reading", "item": e, "state": state})
+        if e["month"]:
+            counts[e["month"]] = counts.get(e["month"], 0) + 1
+
+    order = list(TIMELINE_TYPES) + ["book"] + [t for t in READING_TYPES if t != "book"]
+    journal_months = []
+    for month in sorted(months, reverse=True):
+        groups = [{"type": kind, "label": PLURALS[kind], "entries": months[month][kind]}
+                  for kind in order if kind in months[month]]
+        for g in groups:
+            if g["type"] in TIMELINE_TYPES:
+                g["entries"].sort(key=lambda x: x["item"]["start"], reverse=True)
+        journal_months.append({"month": month, "groups": groups,
+                               "total": sum(len(g["entries"]) for g in groups)})
+
+    chart = []
+    if months:
+        top = max(counts.values(), default=0) or 1
+        for m in month_range(min(months), max(months)):
+            n = counts.get(m, 0)
+            chart.append({"month": m, "count": n, "bar": round(100 * n / top),
+                          "has_entries": m in months})
+    return {"person": person, "months": journal_months, "chart": chart}
+
+
+def build_my_path(timeline: list[dict], log: list[dict], today: dt.date, person: dict) -> dict:
     """Everything the My Own Path page needs, already grouped and counted."""
-    # The reading log lists what I have read: books still in progress only
-    # appear on the Bookshelf.
-    readings = [e for e in log if not (e["type"] == "book" and e["status"] == "reading")]
-    readings.sort(key=lambda e: e["month"], reverse=True)
-    by_month = group_by(readings, key=lambda e: e["month"])
-    per_month = []
-    if readings:
-        counts = {month: len(items) for month, items in by_month.items()}
-        months = month_range(min(counts), max(counts))
-        top = max(counts.values())
-        per_month = [{"month": m, "count": counts.get(m, 0),
-                      "bar": round(100 * counts.get(m, 0) / top)} for m in months]
-    per_type = [(t, sum(1 for e in readings if e["type"] == t))
-                for t in READING_TYPES if any(e["type"] == t for e in readings)]
+    readings = [e for e in log if e["type"] != "book"]
     for stage in timeline:
         stage["readings"] = sum(1 for e in readings if e.get("via") == stage["id"])
     books = [e for e in log if e["type"] == "book"]
     return {
         "timeline": timeline,
-        "by_month": by_month,
-        "per_month": per_month,
-        "per_type": per_type,
-        "total": len(readings),
+        "journal": build_journal(timeline, log, today, person),
         "reading_now": [e for e in books if e["status"] == "reading"],
         "finished": sorted((e for e in books if e["status"] == "finished"),
                            key=lambda e: e["month"], reverse=True),
@@ -516,6 +669,11 @@ def month_label(month: str) -> str:
     return datetime.strptime(month, "%Y-%m").strftime("%B %Y")
 
 
+def month_short(month: str) -> str:
+    """'2026-09' -> 'Sep 2026' (for the chart, where space is short on phones)."""
+    return datetime.strptime(month, "%Y-%m").strftime("%b %Y")
+
+
 def make_env(site: dict, status: dict) -> Environment:
     env = Environment(
         loader=FileSystemLoader(TEMPLATES_DIR),
@@ -536,6 +694,7 @@ def make_env(site: dict, status: dict) -> Environment:
         paper_types=PAPER_TYPES,
         difficulties=DIFFICULTIES,
         reading_types=READING_TYPES,
+        plurals=PLURALS,
         timeline_types=TIMELINE_TYPES,
         timeline_statuses=TIMELINE_STATUSES,
     )
@@ -543,6 +702,7 @@ def make_env(site: dict, status: dict) -> Environment:
         safe_url=safe_external_url,
         date=format_date,
         month_label=month_label,
+        month_short=month_short,
     )
     return env
 
@@ -600,8 +760,10 @@ def build() -> None:
     shelves = load_books()
     books = [book for shelf in shelves for book in shelf["books"]]
     start_here = build_start_here(start_here_stages, papers)
-    timeline = load_timeline(dt.datetime.now(timezone.utc).date())
-    my_path = build_my_path(timeline, load_reading_log(timeline, papers, books))
+    today = dt.datetime.now(timezone.utc).date()
+    timeline = load_timeline(today)
+    my_path = build_my_path(timeline, load_reading_log(timeline, papers, books),
+                            today, site["my_path"]["person"])
     env = make_env(site, status)
 
     # Start from an empty _site/ so deleted pages don't linger.
@@ -659,6 +821,7 @@ def build() -> None:
     render(env, "404.html", "404.html")
 
     check_internal_links(site["base_path"])
+    check_no_local_tools()
     pages = sum(1 for _ in OUTPUT_DIR.rglob("*.html"))
     print(f"Built {pages} pages from {len(entries)} news entries, {len(papers)} papers"
           f" and {len(books)} books into {OUTPUT_DIR.name}/ (internal links OK)")
@@ -696,6 +859,26 @@ def check_internal_links(base_path: str) -> None:
         raise BuildError("broken internal links:\n  " + "\n  ".join(problems))
 
 
+# The local "Add entry" form (scripts/local_form.py) is only ever generated by
+# the preview server, in memory. These markers must never reach _site/: if a
+# template or static file ever carries them, the build fails, so the form can't
+# be published by mistake (on GitHub Pages it would be a dead, confusing page).
+LOCAL_ONLY_MARKERS = ("data-local-only", "/_local/")
+
+
+def check_no_local_tools() -> None:
+    """Fail the build if anything from the local-only form ended up in _site/."""
+    found = []
+    for file in sorted(OUTPUT_DIR.rglob("*")):
+        if file.suffix not in (".html", ".js", ".css", ".json", ".txt", ".xml"):
+            continue
+        text = file.read_text(encoding="utf-8", errors="replace")
+        found += [f"{file.relative_to(OUTPUT_DIR).as_posix()}: {m}" for m in LOCAL_ONLY_MARKERS if m in text]
+    if found:
+        raise BuildError("local-only form code found in the output (it must never be "
+                         "published):\n  " + "\n  ".join(found))
+
+
 # ---------------------------------------------------------------------------
 # Local preview server
 # ---------------------------------------------------------------------------
@@ -705,7 +888,15 @@ def serve(base_path: str, port: int) -> None:
 
     The real site lives under /AiSafetyWeb/, so the preview does too: that way
     a link that forgets the base path breaks here as well, not only online.
+
+    The preview also serves my local-only "Add entry" form (scripts/local_form.py)
+    at <base_path>_local/add-entry/, generated in memory, and adds a link to it
+    on My Own Path while serving that page. Neither is ever written to _site/.
+    It listens on 127.0.0.1 only, so nothing else on the network can reach it.
     """
+    import local_form   # only the preview needs it (scripts/ is on the import path)
+    form = local_form.LocalForm(sys.modules[__name__], base_path, port)
+    my_path_page = base_path + "my-path/"
 
     class Handler(http.server.SimpleHTTPRequestHandler):
         def __init__(self, *args, **kwargs):
@@ -718,12 +909,33 @@ def serve(base_path: str, port: int) -> None:
             return str(OUTPUT_DIR / "__outside_base_path__")
 
         def do_GET(self):
+            path = urlsplit(self.path).path
+            if path == form.path:
+                return form.handle_get(self)
+            if path in (my_path_page, my_path_page + "index.html"):
+                return self.send_my_path()
             if self.path in ("/", ""):
                 self.send_response(302)
                 self.send_header("Location", base_path)
                 self.end_headers()
                 return
             super().do_GET()
+
+        def do_POST(self):
+            if urlsplit(self.path).path == form.path:
+                return form.handle_post(self)
+            self.send_error(405)
+
+        def send_my_path(self):
+            """My Own Path with the local "Add entry" link added (in memory only)."""
+            page = (OUTPUT_DIR / "my-path" / "index.html").read_text(encoding="utf-8")
+            body = form.inject_link(page).encode("utf-8")
+            self.send_response(200)
+            self.send_header("Content-Type", "text/html; charset=utf-8")
+            self.send_header("Content-Length", str(len(body)))
+            self.send_header("Cache-Control", "no-store")
+            self.end_headers()
+            self.wfile.write(body)
 
         def send_error(self, code, message=None, explain=None):
             # Like GitHub Pages: unknown pages get our 404.html.
@@ -740,6 +952,7 @@ def serve(base_path: str, port: int) -> None:
 
     server = http.server.ThreadingHTTPServer(("127.0.0.1", port), Handler)
     print(f"Preview: http://localhost:{port}{base_path}  (Ctrl+C to stop)")
+    print(f"Add entry (local only): http://localhost:{port}{form.path}")
     try:
         server.serve_forever()
     except KeyboardInterrupt:
