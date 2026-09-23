@@ -314,6 +314,23 @@
       "alignment"
     ]
   },
+  "arxiv:2609.24369": {
+    "id": "arxiv:2609.24369",
+    "title": "DeceptionAnalyser: A Web-Based AI Tool for Performing Structured Deception Analysis with Argumentation Schemes and LLMs",
+    "authors": [
+      "Stefan Sarkadi",
+      "Xabier Garmendia",
+      "Jack Mumford",
+      "Trevor Bench-Capon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.24369",
+    "abstract": "Deception plays a central role in Intelligence operations, yet it remains difficult to analyse systematically without expert knowledge of reasoning patterns and cognitive manipulation. In computational argumentation, for instance, no scheme-level ground-truth corpora currently exist to support statistical validation.",
+    "detected": "2026-09-23",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2609.24243": {
     "id": "arxiv:2609.24243",
     "title": "Taming CoT Obfuscation in VLMs: From Mechanistic Evidence to Activation Enforcement",
@@ -362,6 +379,24 @@
     "year": 2026,
     "url": "https://arxiv.org/abs/2609.24016",
     "abstract": "Commercial large language models are increasingly deployed across African fintech infrastructure for fraud detection and customer communication, yet no Nigerian or African continental regulatory instrument specifies what pre-deployment evaluation such systems must undergo before procurement. This paper reviews African…",
+    "detected": "2026-09-23",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2609.24002": {
+    "id": "arxiv:2609.24002",
+    "title": "FinInteract: Benchmarking Clarification and Intent Integration in Ambiguous Financial Question Answering",
+    "authors": [
+      "Xinyu Wang",
+      "Tung Sum Thomas Kwok",
+      "Zhenghan Tai",
+      "Guang Cheng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.24002",
+    "abstract": "Large language model agents increasingly answer financial questions by searching regulatory filings. Such questions are often deceptively under-specified: Meta Platforms' \"operating income\" is $46.75B consolidated but $62.87B for the Family of Apps segment, and each reading is exactly verifiable against the filing.",
     "detected": "2026-09-23",
     "topics": [
       "evals",
@@ -766,6 +801,23 @@
     "topics": [
       "alignment",
       "interpretability"
+    ]
+  },
+  "arxiv:2609.20336": {
+    "id": "arxiv:2609.20336",
+    "title": "Detecting Deceptive Recruitment: A Signal-theoretic Machine Learning Framework for Early Identification of Labour Exploitation",
+    "authors": [
+      "Sajid Siraj",
+      "Mahnaz Hosseinzadeh",
+      "Amin Vafadarnikjoo",
+      "Shuyang Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.20336",
+    "abstract": "Deceptive online job advertisements have emerged as a primary pathway into forced labour, yet systematic detection methods remain underdeveloped due to data scarcity and absence of empirically validated indicators. We formalise this detection challenge as a classification problem under signalling theory, where…",
+    "detected": "2026-09-23",
+    "topics": [
+      "alignment"
     ]
   },
   "arxiv:2609.20143": {

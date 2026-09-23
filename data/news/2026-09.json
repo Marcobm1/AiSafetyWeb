@@ -1,5 +1,61 @@
 [
   {
+    "id": "d968602ca78670ee",
+    "url": "https://www.lesswrong.com/posts/ZprfxCZthEir5WNev/the-first-american-bill-to-ban-superintelligent-ai-is-here",
+    "title": "The First American Bill to Ban Superintelligent AI Is Here",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-23T18:12:00Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "Today, Senator Bernie Sanders (I-Vt.) and Representative Greg Casar (D-Texas) introduced the Ban Artificial Superintelligence Act in Congress: the first American bill to propose banning the development of superintelligent AI. ControlAI has spent years on the question of how to prevent the extinction risk posed by…",
+    "topics": [
+      "alignment"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8e7d39f7b94bb5b5",
+    "url": "https://www.alignmentforum.org/posts/LcQ9x72eNji2gpS9b/why-i-m-scared-of-rl",
+    "title": "Why I'm scared of RL",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-09-23T17:05:09Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "Summary: First, I give several different angles on how I feel about reinforcement learning: Theoretical case: RL is a black-box source of agency — this should give us classic misalignment worries, especially compared to agency-via-scaffolding Recent incidents (huggingface etc) and more mundane forms of misaligned…",
+    "topics": [
+      "alignment"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1d77064cbebb782f",
+    "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
+    "title": "OpenAI extends cyber access to Ukraine for civilian defense",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-09-23T13:00:00Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1d5a9cc2d9509da8",
+    "url": "https://openai.com/index/introducing-mentalhealthbench",
+    "title": "Introducing MentalHealthBench",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-09-23T10:00:00Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "MentalHealthBench is an expert-informed benchmark for evaluating helpful and safe AI responses across realistic mental health conversations.",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
     "id": "ad56e86e1a6694f2",
     "url": "https://www.lesswrong.com/posts/HsijShdRdAg5sPKnF/an-unexamined-cause-of-the-openai-hugging-face-hacking",
     "title": "An unexamined cause of the OpenAI Hugging Face hacking incident: its binary performance metric",
@@ -532,6 +588,27 @@
     "summary": null
   },
   {
+    "id": "bf76fc03c92329fb",
+    "url": "https://arxiv.org/abs/2609.24369",
+    "title": "DeceptionAnalyser: A Web-Based AI Tool for Performing Structured Deception Analysis with Argumentation Schemes and LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-21T10:02:07Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "Deception plays a central role in Intelligence operations, yet it remains difficult to analyse systematically without expert knowledge of reasoning patterns and cognitive manipulation. In computational argumentation, for instance, no scheme-level ground-truth corpora currently exist to support statistical validation.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Stefan Sarkadi",
+      "Xabier Garmendia",
+      "Jack Mumford",
+      "Trevor Bench-Capon"
+    ],
+    "arxiv_id": "2609.24369",
+    "summary": null
+  },
+  {
     "id": "2c9792fbb14ae5db",
     "url": "https://openai.com/index/building-standards-next-phase-ai",
     "title": "Building standards for the next phase of AI",
@@ -610,6 +687,28 @@
       "Oluwafemi Osho"
     ],
     "arxiv_id": "2609.24016",
+    "summary": null
+  },
+  {
+    "id": "ff4bf2593c46194f",
+    "url": "https://arxiv.org/abs/2609.24002",
+    "title": "FinInteract: Benchmarking Clarification and Intent Integration in Ambiguous Financial Question Answering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-21T02:06:45Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "Large language model agents increasingly answer financial questions by searching regulatory filings. Such questions are often deceptively under-specified: Meta Platforms' \"operating income\" is $46.75B consolidated but $62.87B for the Family of Apps segment, and each reading is exactly verifiable against the filing.",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Xinyu Wang",
+      "Tung Sum Thomas Kwok",
+      "Zhenghan Tai",
+      "Guang Cheng"
+    ],
+    "arxiv_id": "2609.24002",
     "summary": null
   },
   {
@@ -1132,6 +1231,27 @@
       "P. Bisconti"
     ],
     "arxiv_id": "2609.20408",
+    "summary": null
+  },
+  {
+    "id": "a9783f69dd654086",
+    "url": "https://arxiv.org/abs/2609.20336",
+    "title": "Detecting Deceptive Recruitment: A Signal-theoretic Machine Learning Framework for Early Identification of Labour Exploitation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-17T13:06:21Z",
+    "fetched_at": "2026-09-23T20:35:44Z",
+    "excerpt": "Deceptive online job advertisements have emerged as a primary pathway into forced labour, yet systematic detection methods remain underdeveloped due to data scarcity and absence of empirically validated indicators. We formalise this detection challenge as a classification problem under signalling theory, where…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Sajid Siraj",
+      "Mahnaz Hosseinzadeh",
+      "Amin Vafadarnikjoo",
+      "Shuyang Li"
+    ],
+    "arxiv_id": "2609.20336",
     "summary": null
   },
   {

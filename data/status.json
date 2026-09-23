@@ -1,15 +1,15 @@
 {
-  "last_run": "2026-09-23T10:46:08Z",
-  "duration_seconds": 14.7,
-  "new_entries": 0,
+  "last_run": "2026-09-23T20:35:44Z",
+  "duration_seconds": 26.1,
+  "new_entries": 7,
   "sources": [
     {
       "id": "alignment-forum",
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 6,
-      "new": 0,
+      "kept": 7,
+      "new": 1,
       "error": null
     },
     {
@@ -17,7 +17,16 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 6,
+      "kept": 5,
+      "new": 1,
+      "error": null
+    },
+    {
+      "id": "transformer-circuits",
+      "name": "Transformer Circuits Thread (Anthropic)",
+      "status": "ok",
+      "items_in_feed": 56,
+      "kept": 0,
       "new": 0,
       "error": null
     },
@@ -42,18 +51,18 @@
     {
       "id": "redwood",
       "name": "Redwood Research",
-      "status": "ok",
-      "items_in_feed": 20,
-      "kept": 4,
+      "status": "error",
+      "items_in_feed": 0,
+      "kept": 0,
       "new": 0,
-      "error": null
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://redwoodresearch.substack.com/feed"
     },
     {
       "id": "govai",
       "name": "Centre for the Governance of AI",
       "status": "ok",
       "items_in_feed": 54,
-      "kept": 3,
+      "kept": 0,
       "new": 0,
       "error": null
     },
@@ -69,29 +78,29 @@
     {
       "id": "import-ai",
       "name": "Import AI",
-      "status": "ok",
-      "items_in_feed": 20,
-      "kept": 1,
+      "status": "error",
+      "items_in_feed": 0,
+      "kept": 0,
       "new": 0,
-      "error": null
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://importai.substack.com/feed"
     },
     {
       "id": "zvi",
       "name": "Don't Worry About the Vase",
-      "status": "ok",
-      "items_in_feed": 20,
-      "kept": 5,
+      "status": "error",
+      "items_in_feed": 0,
+      "kept": 0,
       "new": 0,
-      "error": null
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://thezvi.substack.com/feed"
     },
     {
       "id": "epoch",
       "name": "Epoch AI",
-      "status": "ok",
-      "items_in_feed": 20,
-      "kept": 1,
+      "status": "error",
+      "items_in_feed": 0,
+      "kept": 0,
       "new": 0,
-      "error": null
+      "error": "HTTPError: 403 Client Error: Forbidden for url: https://epochai.substack.com/feed"
     },
     {
       "id": "bluedot",
@@ -106,16 +115,16 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1219,
+      "items_in_feed": 1226,
       "kept": 6,
-      "new": 0,
+      "new": 2,
       "error": null
     },
     {
       "id": "google-deepmind",
       "name": "Google DeepMind",
       "status": "ok",
-      "items_in_feed": 20,
+      "items_in_feed": 100,
       "kept": 0,
       "new": 0,
       "error": null
@@ -126,14 +135,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 0,
+      "new": 3,
       "error": null
     }
   ],
   "candidates": {
-    "added": 0,
+    "added": 3,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 100
+    "total": 103
   }
 }
