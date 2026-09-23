@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}Papers · {{ site.title }}{% endblock %}
+{% block description %}Curated AI Safety papers, essays, reports, scenarios and posts, each with a short synopsis.{% endblock %}
+
+{% block content %}
+<h1>Papers</h1>
+<p class="lede">
+  Papers, essays, reports, scenarios and posts I recommend, each with a short
+  synopsis and a link to the original. {{ papers | length }} entries, newest first.
+</p>
+<p class="note" data-track-hint hidden>
+  Mark entries as <em>To read</em> or <em>Read</em>; they are collected in
+  <a href="{{ url('my-shelf/') }}">My shelf</a>. Your marks are saved only in this browser.
+</p>
+
+<div data-filter-root>
+  <form class="filters" data-filters hidden>
+    {{ m.filter_select("year", "Year", "All years", filters.years) }}
+    {{ m.filter_select("type", "Type", "All types", filters.types, paper_types.get) }}
+    {{ m.filter_select("topics", "Topic", "All topics", filters.topics, topic_label) }}
+    {{ m.filter_select("difficulty", "Difficulty", "All levels", filters.difficulties, difficulties.get) }}
+    <output data-filter-count aria-live="polite"></output>
+  </form>
+
+  {% for p in papers %}{{ m.paper(p) }}{% endfor %}
+  {% if not papers %}<p class="empty">No entries yet.</p>{% endif %}
+  <p class="empty" data-filter-empty hidden>No entries match these filters.</p>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/filters.js') }}" defer></script>
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+{% endblock %}

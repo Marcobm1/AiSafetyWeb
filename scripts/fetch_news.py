@@ -13,7 +13,7 @@ What one run does, in order:
      cross-posting sources) and add the rest to
      data/news/YYYY-MM.json (one file per month of publication).
   6. Add new arXiv papers to data/paper_candidates.json, unless they are already
-     in data/library.yaml, and delete candidates older than the retention period.
+     in data/papers.yaml, and delete candidates older than the retention period.
   7. Write data/status.json on every run, even when nothing is new.
 
 Usage (from the repository root, with the venv active):
@@ -45,7 +45,7 @@ CONFIG_FILE = ROOT / "config" / "sources.yaml"
 NEWS_DIR = ROOT / "data" / "news"
 STATUS_FILE = ROOT / "data" / "status.json"
 CANDIDATES_FILE = ROOT / "data" / "paper_candidates.json"
-LIBRARY_FILE = ROOT / "data" / "library.yaml"
+PAPERS_FILE = ROOT / "data" / "papers.yaml"
 
 ARXIV_API = "https://export.arxiv.org/api/query"
 ARXIV_SOURCE = {"id": "arxiv", "name": "arXiv"}
@@ -413,11 +413,11 @@ def load_news() -> dict[str, list[dict]]:
             for path in sorted(NEWS_DIR.glob("*.json"))}
 
 
-def load_library_refs() -> tuple[set[str], set[str]]:
-    """arXiv ids and normalised URLs of everything already in the Library."""
-    if not LIBRARY_FILE.exists():
+def load_paper_refs() -> tuple[set[str], set[str]]:
+    """arXiv ids and normalised URLs of everything already in data/papers.yaml."""
+    if not PAPERS_FILE.exists():
         return set(), set()
-    data = load_yaml(LIBRARY_FILE) or {}
+    data = load_yaml(PAPERS_FILE) or {}
     entries = data.get("entries") or []
     arxiv_ids = {str(e["arxiv_id"]) for e in entries if e.get("arxiv_id")}
     urls = {normalize_url(e["url"]) for e in entries if e.get("url")}
@@ -431,14 +431,14 @@ def update_candidates(new_papers: list[dict], today: datetime,
     Returns (all candidates, counters for status.json).
     """
     candidates = load_json(CANDIDATES_FILE, {})
-    library_arxiv_ids, library_urls = load_library_refs()
+    paper_arxiv_ids, paper_urls = load_paper_refs()
 
-    def in_library(arxiv_id: str, url: str) -> bool:
-        return arxiv_id in library_arxiv_ids or url in library_urls
+    def in_papers(arxiv_id: str, url: str) -> bool:
+        return arxiv_id in paper_arxiv_ids or url in paper_urls
 
-    # 1. Drop candidates I have promoted to the Library since the last run.
+    # 1. Drop candidates I have promoted to papers.yaml since the last run.
     promoted = [cid for cid, c in candidates.items()
-                if in_library(cid.removeprefix("arxiv:"), c["url"])]
+                if in_papers(cid.removeprefix("arxiv:"), c["url"])]
     for cid in promoted:
         del candidates[cid]
 
@@ -452,7 +452,7 @@ def update_candidates(new_papers: list[dict], today: datetime,
     added = 0
     for paper in new_papers:
         cid = f"arxiv:{paper['arxiv_id']}"
-        if cid in candidates or in_library(paper["arxiv_id"], paper["url"]):
+        if cid in candidates or in_papers(paper["arxiv_id"], paper["url"]):
             continue
         candidates[cid] = {
             "id": cid,

@@ -8,7 +8,7 @@
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stage 3 of 8 complete (site skeleton, generator and local preview). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** Stage 4a complete (Papers, reading tracker, My shelf with export/import, `promote_candidate.py`). Next: Stage 4b (the Library of books). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -22,7 +22,8 @@
 9. [How to…](#9-how-to)
 10. [Working from two computers](#10-working-from-two-computers)
 11. [Common problems and fixes](#11-common-problems-and-fixes)
-12. [Glossary](#glossary)
+12. [Possible future extensions](#12-possible-future-extensions)
+13. [Glossary](#glossary)
 
 ---
 
@@ -35,15 +36,17 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 |---|---|---|
 | **Today in AI Safety** (home) | Entries from the last 24–48 h, grouped by topic/source | Collected automatically every day |
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
-| **Library** | My curated archive of papers, essays, reports, scenarios and blog posts, filterable by type/year/tag/difficulty | `data/library.yaml`, which I edit by hand |
-| **Start Here** 🚧 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/library.yaml`: the stage list plus a `start_here` block on each entry in the path |
-| **My Own Path** 🚧 | My public learning log in two parts: a **Timeline** of courses, projects and milestones (vertical, clickable, with duration bars) and a **Reading log** of everything I read, grouped by month, with type filters and a readings-per-month chart | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
-| **Reading tracker** | Each visitor marks entries as *read* / *to read* (in the Library **and** in Start Here) | The visitor's own browser (localStorage) |
+| **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
+| **Library** 🚧 4b | Books only, on themed shelves, each shown with its real cover (Open Library). Clicking a book opens its card | `data/books.yaml`, which I edit by hand |
+| **Start Here** 🚧 5 | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
+| **My Own Path** 🚧 5 | My public learning log: a **Timeline** of courses, projects and milestones, a **Reading log** grouped by month, and a **Bookshelf** of the books I read, with my opinion | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand |
+| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, and later in the Library and Start Here) | The visitor's own browser (localStorage) |
+| **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work | Template text |
 
-**Reading tracker vs My Own Path:** the tracker is private to each visitor's
-browser and nobody else sees it. My Own Path is my own *public* record, written
-by me in a file in the repository.
+**My shelf vs My Own Path:** My shelf (the reading tracker) is private to each
+visitor's browser and nobody else sees it; there are no accounts. My Own Path
+is my own *public* record, written by me in files in the repository.
 
 My content rules: the site only shows the **title, source, date, a short excerpt
 (max ~2 sentences) and a link** to each original. I never republish full
@@ -72,7 +75,7 @@ flowchart LR
         CFG["config/sources.yaml"]
         NEWS["data/news/YYYY-MM.json"]
         CAND["data/paper_candidates.json<br/>(auto-pruned)"]
-        PAP["data/library.yaml<br/>(edited by hand)"]
+        PAP["data/papers.yaml + data/books.yaml<br/>(edited by hand)"]
         PATH["data/my_path/<br/>timeline + reading log<br/>(edited by hand)"]
         TPL["templates/ + static/"]
     end
@@ -88,7 +91,7 @@ flowchart LR
     PATH --> B
     TPL --> B
     B -->|"_site/ (HTML, CSS, JS)"| PAGES["GitHub Pages<br/>marcobm1.github.io/AiSafetyWeb/"]
-    PAGES --> V["Visitor's browser<br/>(reading tracker in localStorage)"]
+    PAGES --> V["Visitor's browser<br/>(My shelf marks in localStorage)"]
 ```
 
 **Why I chose Python + Jinja2 instead of a site generator like Astro or Eleventy:**
@@ -96,7 +99,7 @@ the fetch script has to be Python anyway. Writing the page generator in Python
 too means I only deal with one language and toolchain (no Node.js/npm), and
 Python is also the language I use for ML. The generated HTML is complete on its
 own, so the site works without JavaScript. JavaScript only adds filters, the
-dark-mode toggle and the reading tracker.
+dark-mode toggle and the reading tracker (My shelf).
 
 ## 3. Folders and files
 
@@ -116,14 +119,16 @@ dark-mode toggle and the reading tracker.
 | `data/news/YYYY-MM.json` | Collected news, one file per month | ✅ |
 | `data/status.json` | Time of last run + status of each source | ✅ |
 | `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
-| `data/library.yaml` (format only) | Empty file with the documented format, so the fetch script can skip papers I already curated | ✅ |
+| `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (12 so far); also the Start Here stage list | ✅ |
+| `data/books.yaml` | Library: books on themed shelves | 🚧 Stage 4b |
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ data, 🚧 page in Stage 5 |
 | `data/my_path/reading_log.yaml` | My Own Path reading log (empty, format in comments) | ✅ data, 🚧 page in Stage 5 |
-| `scripts/promote_candidate.py` | Copies a candidate into `library.yaml` as a new block | 🚧 Stage 4 |
+| `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
 | `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
-| `static/css/style.css`, `static/js/filters.js` | Basic layout; source/topic filters | ✅ basic (design in Stage 6) |
-| `data/library.yaml` (content) | Curated reading archive, Start Here stages and entries | 🚧 Stages 4–5 |
+| `static/css/style.css` | Basic layout | ✅ basic (design in Stage 6) |
+| `static/js/filters.js` | Filter menus for news and papers | ✅ |
+| `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `.github/workflows/update-and-deploy.yml` | Daily automation | 🚧 Stage 7 |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
@@ -140,19 +145,36 @@ safer for files that a script rewrites every day.
 I fixed these formats in Stage 2, even though the Library, Start Here and My
 Own Path pages come later, so every script and page is built against the same shape.
 
-**The `id` is the glue.** Every reading entry in `library.yaml` has a stable,
-unique `id` (a short lowercase slug such as `ai-2027` or `sleeper-agents`).
-The Library, the Start Here path, the My Own Path reading log and the visitors' reading tracker
-all refer to an entry by this `id`, so its data (title, authors, URL) lives in
-one place only. **I never change an `id` once it's published**, because
-visitors' saved *read / to read* marks point to it.
+**The `id` is the glue.** Every entry in `papers.yaml` and `books.yaml` has a
+stable `id` (a short lowercase slug such as `ai-2027` or `sleeper-agents`),
+**unique across both files**. Papers, the Library, the Start Here path, the My
+Own Path reading log and the visitors' reading tracker all refer to an entry
+by this `id`, so its data (title, authors, URL) lives in one place only. **I
+never change an `id` once it's published**, because visitors' saved *To read /
+Read* marks point to it. The build fails if the same `id` appears twice.
 
-#### `data/library.yaml` — my curated reading archive (edited by hand)
+**Why books and papers are separate:** they are read and browsed differently.
+Papers are best as a filterable list with a synopsis; books are nicer as
+shelves of covers you can pick up. They also need different fields (edition,
+cover, shelf). Two files keep each format simple, and the shared `id` rule
+keeps the tracker working across both.
+
+**The publishing rule (both files).** An entry is published only when it has a
+`synopsis` without `TODO`: 2–4 neutral sentences, based on the verified
+source, never copied from the publisher, Amazon, Goodreads, reviews or the
+abstract. `why_it_matters` and `my_opinion` are optional and only appear when
+they exist. **`my_opinion` is only ever written by me**; Claude may draft a
+synopsis, never my opinion. An entry with no synopsis, or with a `TODO` in a
+required field, is skipped by the build with a warning, so a half-finished
+entry never goes live.
+
+#### `data/papers.yaml` — Papers (edited by hand)
 
 The file has two top-level keys. `start_here_stages` lists the stages of the
 Start Here path, in the order they appear on the site. `entries` holds every
-reading. **`entries` must stay the last key in the file**, because
-`promote_candidate.py` appends new entries to the end of the file.
+paper, essay, report, scenario and post. **`entries` must stay the last key in
+the file**, because `promote_candidate.py` appends new entries to the end of
+the file.
 
 ```yaml
 start_here_stages:                     # order in this list = order on the site
@@ -164,15 +186,19 @@ start_here_stages:                     # order in this list = order on the site
 entries:
   - id: sleeper-agents                 # stable slug, unique, never changes
     title: "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training"
-    authors: ["Evan Hubinger", "et al."] # "et al." allowed for long author lists
+    authors: ["Evan Hubinger", "Carson Denison", "Jesse Mu", "et al."] # "et al." for long lists
     year: 2024
     type: paper                        # paper | essay | report | scenario | blog-post
     url: https://arxiv.org/abs/2401.05566
     arxiv_id: "2401.05566"             # optional; lets the fetch script skip it as a candidate
-    tags: [alignment, evaluations]
+    tags: [alignment, evals]           # topics: alignment | interpretability | evals | governance | security
     difficulty: intermediate           # intro | intermediate | advanced
-    why_it_matters: >
-      One or two sentences, in my words, on why this entry is in the Library.
+    synopsis: >                        # REQUIRED to publish: 2-4 neutral sentences
+      What the text says, in my own words.
+    why_it_matters: >                  # optional
+      Why it is in this list.
+    my_opinion: >                      # optional, only mine
+      What I think of it.
     added: 2026-09-23                  # date I added it
     start_here:                        # optional: only if it's part of the Start Here path
       stage: evaluations               # an id from start_here_stages
@@ -181,8 +207,54 @@ entries:
         Why it sits at this point of the path.
 ```
 
-The website shows `type` as a label (e.g. *Scenario*, *Blog post*) and lets
-visitors filter by it.
+The website shows `type` and `difficulty` as labels and the tags as topics,
+and lets visitors filter by year, type, topic and difficulty. The build checks
+every published entry and stops with a clear message if something is wrong:
+a required field missing, an `id` that isn't a lowercase slug, an unknown
+`type`, `difficulty` or topic (topics must be the five ids in
+`config/sources.yaml`), a URL that isn't http(s) or has `utm_` parameters, or a
+`start_here.stage` that isn't in `start_here_stages`.
+
+#### `data/books.yaml` — the Library (🚧 Stage 4b, format agreed)
+
+```yaml
+shelves:                               # order in this list = order on the site
+  - id: ai-safety                      # referenced by `shelf` below
+    title: AI Safety & Alignment
+
+entries:
+  - id: human-compatible               # unique across papers.yaml and books.yaml
+    title: "Human Compatible: Artificial Intelligence and the Problem of Control"
+    authors: ["Stuart Russell"]
+    year: 2019                         # year of the edition I list
+    edition: "..."                     # optional, e.g. "2nd edition"
+    shelf: ai-safety
+    olid: OL...M                       # Open Library edition id (verified)
+    cover_id: 1234567                  # Open Library cover id (preferred for the image)
+    isbn: "978..."                     # optional, reference only (never used to load covers)
+    url: https://openlibrary.org/works/OL...W   # the book's page ("book page" link)
+    free_url: https://...              # optional: ONLY an official free version by the authors/publisher
+    synopsis: >                        # REQUIRED to publish
+      ...
+    why_it_matters: >                  # optional
+      ...
+    my_opinion: >                      # optional, only mine
+      ...
+    added: 2026-09-23
+```
+
+- **Edition:** always the most recent English edition, verified on Open Library.
+- **Covers** come straight from Open Library's Covers API as the image `src`
+  (`https://covers.openlibrary.org/b/id/<cover_id>-M.jpg`, or `/b/olid/<olid>-M.jpg`).
+  I never download them into the repo. I use the cover id or OLID, not the ISBN,
+  because ISBN lookups are limited to 100 requests every 5 minutes per IP
+  address. A book without a cover gets a typographic cover drawn in the site's
+  style. The book card and the About page link to Open Library as a courtesy.
+- **`free_url`** is shown as "Free version (official)". Only for versions the
+  authors or publisher publish for free themselves, never unauthorised copies.
+- **Planned shelves:** AI Safety & Alignment; AI, Society & Governance; Machine
+  Learning & Deep Learning; Mathematics for ML; Programming & Python; Thinking &
+  Rationality.
 
 **Why Start Here has no file of its own:** a reading joins the path through its
 own `start_here` block, so its data exists only once and the path can never
@@ -261,10 +333,10 @@ fails, `status` is `"error"` and `error` says why. The site will use
 - The `id` is `arxiv:` + the arXiv number **without** the version suffix
   (`v1`, `v2`…), so a new version of the same paper never creates a duplicate.
 - A paper is **not** added if it's already a candidate or already in
-  `library.yaml` (matched by `arxiv_id` or by its normalised arXiv URL).
+  `papers.yaml` (matched by `arxiv_id` or by its normalised arXiv URL).
 - Candidates older than `candidates.retention_days` (in `config/sources.yaml`,
   default 60 days) are deleted on every run, so the file never grows without limit.
-- A candidate I have promoted to `library.yaml` is removed on the next run.
+- A candidate I have promoted to `papers.yaml` is removed on the next run.
 - Only papers that are **new to the news files** become candidates. That way a
   candidate I let expire never comes back just because arXiv still lists it.
 
@@ -304,15 +376,57 @@ entries:
 
   - month: "2026-09"
     type: paper
-    library_ref: sleeper-agents # (illustrative) already in the Library: title, author, source
-    via: agi-strategy           # and URL come from library.yaml
+    paper_ref: sleeper-agents   # already in Papers: title, author, source
+    via: agi-strategy           # and URL come from papers.yaml
+
+  - type: book                  # a book I'm still reading
+    status: reading             # books only: reading | finished
+    started: "2026-09"          # books only, optional
+    book_ref: human-compatible  # (illustrative) already in the Library
+
+  - month: "2026-10"            # for a book: the month I FINISHED it
+    type: book
+    status: finished
+    title: "A novel I don't want in the public Library"
+    author: "Author Name"
+    source: "Publisher"
+    url: https://openlibrary.org/works/...
+    cover_id: 1234567           # optional, for the cover on my Bookshelf
+    notes: >
+      My opinion, because this book is not in books.yaml.
 ```
+
+- **`paper_ref` / `book_ref`** replace the old `library_ref`: a reading that is
+  already in Papers or the Library points to it by `id` instead of copying its
+  data.
+- **Books** can take several months, so they have `status` (reading /
+  finished), an optional `started` month and `month` = the month I finished
+  (left out while reading). On My Own Path they appear on a **Bookshelf**
+  (same shelf style and book card as the Library, Stage 5).
+- **Where my opinion lives:** in `my_opinion` in `papers.yaml` / `books.yaml`
+  when the reading is there (so the Library and my Bookshelf show the same
+  text); `notes` in the reading log only for readings that are *not* in Papers
+  or the Library. A book I don't want in the public Library goes here with its
+  own data and no `book_ref`.
 
 Rules the build script will check (Stage 5), failing with a clear message:
 `month` must look like `YYYY-MM`; `via` must be an `id` in `timeline.yaml`;
-`library_ref` must be an `id` in `library.yaml`; an entry without `library_ref`
-needs `title`, `author`, `source` and `url`; no URL may contain `utm_`
-parameters.
+`paper_ref` must be an `id` in `papers.yaml` and `book_ref` one in
+`books.yaml`; a finished book needs `month`; an entry without a ref needs
+`title`, `author`, `source` and `url`; no URL may contain `utm_` parameters.
+
+#### The visitor's marks (localStorage, never in the repo)
+
+The reading tracker saves one small JSON value in the visitor's browser, under
+the key `aisafetyweb.reading.v1`:
+
+```json
+{"version": 1, "items": {"sleeper-agents": {"status": "read", "updated": "2026-09-23T10:00:00.000Z"}}}
+```
+
+`status` is `to-read` or `read`; there is no entry for unmarked readings. The
+**export** file has the same `items` plus a header:
+`{"format": "aisafetyweb-reading", "version": 1, "exported": "...", "items": {...}}`.
 
 **Why two files instead of one `my_path.yaml` with two sections:**
 - They grow very differently. The timeline gets a new stage every few weeks;
@@ -481,7 +595,7 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
 6. **Save** new entries into `data/news/YYYY-MM.json` by publication month.
    arXiv papers go there too, so they appear on the home page like any other news.
 7. **Update the paper candidates** (`data/paper_candidates.json`): add the new
-   arXiv papers that aren't in `library.yaml`, remove those I've promoted, and
+   arXiv papers that aren't in `papers.yaml`, remove those I've promoted, and
    delete those older than `candidates.retention_days` (60). Candidates are
    **not** shown on the website; they are my shortlist in the repository (which
    is public, but nobody browses it like the site).
@@ -572,7 +686,8 @@ already caught by other phrases.
 ## 6. Building and previewing the site locally
 
 ✅ **Built in Stage 3.** The generator is `scripts/build_site.py`. It reads
-`config/site.yaml`, `config/sources.yaml` and the data files, and writes the
+`config/site.yaml`, `config/sources.yaml` and the data files (news, status,
+`papers.yaml`), and writes the
 finished website into `_site/` (never committed; it's rebuilt every time).
 
 ```powershell
@@ -597,9 +712,14 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `index.html` | `index.html` | *Today in AI Safety*: entries published in the last 48 h (`home.window_hours`), one group per source, plus a collapsible "New papers on arXiv" block. If nothing is that recent, the 10 latest items |
    | `news/index.html` | `news_index.html` | The archive: one line per month with its item count |
    | `news/YYYY-MM/index.html` | `news_month.html` | All items of a month, grouped by day, with source/topic filters and links to the previous/next month |
+   | `papers/index.html` | `papers.html` | Papers: every published entry of `papers.yaml` (newest first) with synopsis, labels, filters and *To read / Read* buttons |
+   | `my-shelf/index.html` | `my_shelf.html` | My shelf: the visitor's marks, and export/import |
    | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`) and the result of the last fetch (from `status.json`) |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
 
+   Before rendering, `papers.yaml` is **validated** and the publishing rule is
+   applied (section 3.1). Skipped entries are listed as `warning: ... not
+   published (...)`; broken data stops the build with `BUILD FAILED`.
 4. **Check every internal link** (section 8). If one is broken, the build stops
    with `BUILD FAILED` and a list of the bad links, so a broken site never gets
    published.
@@ -617,8 +737,16 @@ fetching, the home page still shows the latest batch instead of going empty.
   linking to the original, source, date, topic tags, excerpt) and `filters()`
   draws the source/topic menus. Templates use them with
   `{% import "_macros.html" as m %}` … `{{ m.entry(e) }}`.
-- The menu comes from `nav:` in `config/site.yaml`. The current page is marked
-  with `aria-current="page"` (screen readers announce it, and the CSS makes it bold).
+- `_macros.html` also has `filter_select()` (one filter menu), `paper()` (one
+  entry on the Papers page), `authors()` ("A, B and C") and `track_buttons()`
+  (the *To read / Read* buttons of one entry, keyed by its `id`).
+- The menu comes from `nav:` in `config/site.yaml`: News · Papers · About for
+  now; Library, Start Here and My Own Path join it when their pages exist.
+  **The site title is the link to the home page (Today)**, so the home page
+  needs no menu item, and **My shelf** is a small separate link in the header,
+  because it's the visitor's own page, not a section of the site. The current
+  page is marked with `aria-current="page"` (screen readers announce it, and
+  the CSS makes it bold).
 
 ### 6.3 Safety measures in the generator
 
@@ -633,14 +761,61 @@ fetching, the home page still shows the latest batch instead of going empty.
 ### 6.4 JavaScript: filters (progressive enhancement)
 
 The HTML already contains every item, so every page works **without
-JavaScript**. `static/js/filters.js` only adds the source/topic menus on the
-month pages: the menus start `hidden` and the script shows them, then hides the
-items that don't match (it reads the `data-source` and `data-topics` attributes
-of each item). Days with no visible items are hidden too, and a counter says
-"12 of 134 shown". The CSS rule `[hidden] { display: none !important; }` makes
-sure the `hidden` attribute always wins.
+JavaScript**. `static/js/filters.js` only adds the filter menus (source/topic
+on the news month pages; year/type/topic/difficulty on Papers): the menus
+start `hidden` and the script shows them, then hides the items that don't
+match. It is generic: a menu `<select data-filter="type">` keeps an item if the
+chosen value is one of the words in the item's `data-type` attribute (topics
+are several words: `data-topics="alignment evals"`). Days with no visible
+items are hidden too, and a counter says "12 of 134 shown". The CSS rule
+`[hidden] { display: none !important; }` makes sure the `hidden` attribute
+always wins.
 
-### 6.5 Styles
+### 6.5 JavaScript: the reading tracker and My shelf
+
+Three small scripts, loaded only on the pages that need them (Papers and My
+shelf), in this order:
+
+1. **`reading-store.js` — the `ReadingStore`.** All reading marks go through
+   one small interface: `get(id)`, `set(id, status)` (`"to-read"`, `"read"`
+   or `null` to remove), `all()`, `merge(items)` (for imports),
+   `subscribe(fn)` and `persistent`. Today it's implemented with
+   **localStorage** (section 3.1 has the stored format). Every access is
+   wrapped in `try/catch`: localStorage can be missing or blocked (private
+   windows, strict privacy settings, full storage). Then the store keeps marks
+   in memory for that page only and My shelf shows a warning. A corrupt stored
+   value is ignored instead of breaking the page. If another tab changes the
+   marks, the `storage` event keeps every open tab in sync.
+
+   **Why an interface:** pages never touch localStorage directly. If one day
+   there are accounts and marks live on a server (section 12), I only write a
+   second store with the same methods; the pages don't change.
+2. **`tracker.js` — the buttons.** Every entry has *To read* and *Read* buttons
+   in the HTML, but hidden: without JavaScript there is nowhere to save a
+   mark. The script shows them and sets `aria-pressed="true"` on the saved
+   status (screen readers announce "pressed", and the CSS fills the button).
+   Clicking the active button again removes the mark. One click listener for
+   the whole page handles every button, so buttons that `my-shelf.js` moves
+   around keep working.
+3. **`my-shelf.js` — My shelf.** The page contains a hidden catalogue of every
+   published entry. The script **moves** the marked ones into the *To read*
+   and *Read* lists (moving, not copying, so no element exists twice) and back
+   when a mark is removed. Marks for entries that aren't on the site right now
+   (removed, or not published yet) are kept and exported, and a note says how
+   many there are.
+   - **Export** builds the JSON file in the browser (a `Blob`) and downloads it
+     as `ai-safety-web-shelf-YYYY-MM-DD.json`. Nothing is uploaded anywhere.
+   - **Import** reads a file chosen by the visitor (max 1 MB), checks that it
+     is valid JSON with `"format": "aisafetyweb-reading"`, keeps only valid
+     marks (an `id` that is a slug, a status of `to-read` or `read`) and
+     **merges** them into the shelf: new ones are added, and where both have a
+     mark for the same entry, the imported one wins. A message reports
+     "Imported N marks: X new, Y changed, Z invalid ones skipped".
+
+The page says clearly that marks are **stored only in this browser**, and
+without JavaScript it explains why the shelf can't be shown.
+
+### 6.6 Styles
 
 `static/css/style.css` is a simple, readable layout for now (system font,
 ~44rem column, wraps long titles so there's never horizontal scrolling on a
@@ -719,22 +894,72 @@ the files as they are instead of running its own site generator (Jekyll) on them
   their topics.
 - **Check whether the last run went well:** open `data/status.json` (on GitHub
   or locally) and look for `"status": "error"`.
-- **Add a paper (or essay, report…):** 🚧 Stage 4 (add a block to `data/library.yaml`
-  following the format in section 3.1).
-- **Promote a paper candidate to the Library:** 🚧 Stage 4. The planned way:
+- **Add a paper (or essay, report, scenario, post) by hand:**
+  1. Open the original and **verify** the exact title, all authors (or the
+     first three + `"et al."`), the year, the type and the URL. I remove any
+     `utm_…` parameters. For arXiv papers I also note the arXiv number.
+  2. Pick an `id`: a short lowercase slug (`sleeper-agents`) that isn't used in
+     `papers.yaml` or `books.yaml`. It never changes once published.
+  3. Add a block at the end of `data/papers.yaml` (template at the top of the
+     file; `entries` stays the last key), with `tags` from the five topics and
+     a `difficulty`.
+  4. Write the `synopsis`: 2–4 neutral sentences in my own words, based on the
+     text itself (not the abstract, publisher text or reviews). Add
+     `why_it_matters` and `my_opinion` if I want; both are optional.
+  5. Run `python scripts\build_site.py`: it validates the entry (section 3.1)
+     and says if something is wrong. Then commit and push.
+- **Promote a paper candidate to Papers:**
   1. I look through `data/paper_candidates.json` (on GitHub or in VS Code) and
      copy the `id` of a paper I like, e.g. `arxiv:2401.05566`.
-  2. I run `python scripts\promote_candidate.py arxiv:2401.05566`. It appends a
-     ready-made block to the end of `library.yaml` with the title, authors, year,
-     URL and topics already filled in, and `why_it_matters` / `difficulty` set
-     to `TODO`. (It appends plain text instead of rewriting the whole file, so
-     my comments in `library.yaml` survive.)
-  3. I open `library.yaml`, check the generated `id` slug, and replace the two
-     `TODO`s with my note and the difficulty.
-  4. Commit and push. On the next run the fetch script sees the paper in
-     `library.yaml` and drops it from the candidates. The build script skips
-     (with a warning) any entry that still has a `TODO`, so a half-finished
-     entry is never published.
+  2. I run `python scripts\promote_candidate.py arxiv:2401.05566` (add
+     `--id sleeper-agents` to choose the `id`, `--type report` for another
+     type, `--dry-run` to only see the block). It appends a ready-made block to
+     the end of `papers.yaml` with the title, authors (first three +
+     "et al."), year, URL, arXiv id and topics filled in, and `synopsis` and
+     `difficulty` set to `TODO` (and `tags` too if the candidate had no
+     topics). It appends plain text instead of rewriting the whole file, so my
+     comments in `papers.yaml` survive; it checks that the result is still
+     valid YAML with `entries` last before saving. It refuses candidates that
+     are already in `papers.yaml`, unknown candidate ids and `id`s already used.
+  3. I open `papers.yaml`, check the generated `id`, and replace the `TODO`s
+     with the synopsis and the difficulty (and topics).
+  4. `python scripts\build_site.py`: while a `TODO` is left, it prints
+     `warning: ... not published` and skips the entry. Then commit and push.
+     On the next run the fetch script sees the paper in `papers.yaml` and
+     drops it from the candidates.
+- **Add a book to the Library** (🚧 Stage 4b; format in section 3.1):
+  1. Find the book on **openlibrary.org** and open its **most recent English
+     edition**. Verify title, authors, year and publisher against the
+     publisher's or author's page.
+  2. From the edition page, copy the **edition OLID** (the `OL…M` in the URL)
+     and the **cover id** (right-click the cover → copy image address: it's the
+     number in `covers.openlibrary.org/b/id/<number>-L.jpg`). I check the
+     cover opens. No cover → leave `cover_id` out; the site draws a
+     typographic cover.
+  3. Choose the `shelf` and an `id` not used in `papers.yaml` or `books.yaml`,
+     and add the block to `data/books.yaml`. `url` is the book's Open Library
+     page. Add `free_url` only if the authors or publisher offer the full book
+     for free themselves.
+  4. Write the `synopsis` (2–4 neutral sentences, my own words), optionally
+     `why_it_matters` and `my_opinion`. Build, commit and push.
+- **Test the reading tracker and My shelf locally:**
+  1. `python scripts\build_site.py --serve` and open
+     http://localhost:8000/AiSafetyWeb/papers/.
+  2. Click *To read* on one entry and *Read* on another: the button fills in.
+     Click it again: the mark is removed. Reload: the marks are still there.
+  3. Open **My shelf** (top right): both entries are in their lists. Change one
+     with its buttons: it moves to the other list.
+  4. **Export**: a file `ai-safety-web-shelf-<date>.json` is downloaded. Open
+     it in VS Code to see the format.
+  5. Clear the marks (click the active buttons, or DevTools `F12` →
+     Application → Local storage → delete `aisafetyweb.reading.v1`), reload,
+     then **Import…** the file: the message says how many marks came back.
+     Importing a random `.json` shows "not a shelf export" and changes nothing.
+  6. Private window: the buttons work, and My shelf may show the warning that
+     marks will be lost when the window closes (it depends on the browser).
+  7. Without JavaScript (DevTools → `Ctrl+Shift+P` → "Disable JavaScript"):
+     Papers shows every entry without buttons or filters; My shelf explains it
+     needs JavaScript.
 - **(Optional, later) Add a hidden page to review candidates:** I decided to
   keep candidates **only in the repo**: new arXiv papers already appear on the
   home page and in the news archive, so a public "Recent papers" page would
@@ -750,14 +975,19 @@ the files as they are instead of running its own site generator (Jekyll) on them
   4. Remember that it is still **public**: anyone with the URL can open it.
      "Hidden" only means unlinked and unindexed, not protected.
 - **Add an entry to the Start Here path:** 🚧 Stage 5 (add a `start_here` block to
-  an entry in `library.yaml`, after verifying the entry against the original source).
+  an entry in `papers.yaml`, after verifying the entry against the original source).
 - **Add a reading to My Own Path** (the file exists now; the page comes in Stage 5):
   1. Open the original and **verify** the exact title, the author(s), the
      publication and the URL. I remove any `utm_…` parameters from the URL.
   2. If it's a paywalled article, I look for an archived copy (for example on
      the Wayback Machine, `web.archive.org`) and keep its URL for `archive_url`.
-  3. If the text is already in the Library (`data/library.yaml`), I only need
-     its `id` for `library_ref` and can skip title, author, source and URL.
+  3. If the text is already in Papers (`data/papers.yaml`) or the Library
+     (`data/books.yaml`), I only need its `id` for `paper_ref` / `book_ref` and
+     can skip title, author, source and URL. My opinion of it then goes in its
+     `my_opinion` there, not in `notes`.
+     For a **book**, I add `status: reading` when I start it (optionally
+     `started: "YYYY-MM"`), and when I finish it I change it to
+     `status: finished` and add `month:` with the month I finished.
   4. Open `data/my_path/reading_log.yaml` and add a block under `entries:`,
      indented like the template at the top of the file:
      ```yaml
@@ -870,13 +1100,34 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 | `jinja2.exceptions.UndefinedError: '…' is undefined` | A typo in a template variable, or a value the build doesn't pass to that template | Fix the name in the template, or pass the value in `render(...)` |
 | `OSError: [WinError 10048]` / "address already in use" with `--serve` | Another preview (or program) is using port 8000 | Stop the other one (`Ctrl+C` in its terminal) or use `--port 8001` |
 | The preview shows an old version | The browser cached it | Rebuild and reload with `Ctrl+F5` |
+| `warning: data/papers.yaml entry N (...) not published (no synopsis yet)` | The entry has no `synopsis`, or a `TODO` in it or in a required field | Write the synopsis / replace the `TODO`s (section 9). It's a warning, the rest of the site builds |
+| `BUILD FAILED: ... unknown topic(s)`, `type must be one of`, `remove the tracking parameters`, `duplicate id(s)` | Broken data in `papers.yaml` (or an `id` also used in `books.yaml`) | Fix the field the message names (formats in section 3.1) |
+| `Not promoted: ... is not in paper_candidates.json` | Wrong candidate id, or the candidate expired (60 days) | Copy the exact `"id"` from the file; for an expired one, add the paper by hand |
+| `Not promoted: already in papers.yaml as '...'` | That paper was promoted before | Nothing to do |
+| The *To read / Read* buttons don't appear | JavaScript is off, or a script failed to load | Check DevTools → Console; without JS the buttons are hidden on purpose |
+| A visitor's marks disappeared | They were in a private window, cleared their browser data, or used another browser/device | Marks live only in that browser; the export file is the backup (section 6.5) |
+| Import says "not a shelf export from this site" | The file isn't an export from My shelf (or was edited into another format) | Export again from the original browser |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
+
+## 12. Possible future extensions
+
+- **Public My Own Path pages for other people (with accounts).** Today every
+  visitor's shelf is private to their browser, and My Own Path is only mine.
+  A future version could let people sign in and publish their own path. That
+  needs a server and a database (so no longer a purely static site), sign-in,
+  privacy choices and moderation. The `ReadingStore` interface (section 6.5)
+  is the hook: a server-backed store with the same methods could replace the
+  localStorage one, and export/import already gives people a way to move
+  their marks into an account.
+- **A hidden page to review paper candidates** (section 9).
 
 ## Glossary
 
 - **API** — An interface through which a program requests data from a service (here the arXiv API returns paper listings as Atom/XML).
 - **Atom** — A feed format similar to RSS.
+- **`aria-pressed`** — An attribute that tells screen readers a button is a toggle and whether it is on (`true`) or off (`false`). The *To read / Read* buttons use it.
 - **Base path** — The sub-folder a site lives under (`/AiSafetyWeb/`). All internal links must include it.
+- **Blob** — A chunk of data created in the browser. My shelf puts the export JSON in a Blob and offers it as a download, without any server.
 - **Branch / `main`** — A line of development in Git. `main` is the default and the one that is published.
 - **CI/CD** — *Continuous Integration / Continuous Deployment*: automatically building, testing and publishing on every change or schedule. GitHub Actions is my CI/CD here.
 - **Clone** — Download a full copy of a repository, including its history.
@@ -899,7 +1150,9 @@ conflict, I keep GitHub's version: `git checkout --theirs data/<file>` →
 - **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
 - **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
 - **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
+- **`<dialog>`** — A native HTML element for pop-up windows: keyboard accessible and closed with `Esc`. The Library's book cards will use it (Stage 4b).
 - **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
+- **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
 - **Progressive enhancement** — Building the page so it fully works as plain HTML, then adding JavaScript extras (like filters) on top. If the script fails, nothing essential breaks.
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.

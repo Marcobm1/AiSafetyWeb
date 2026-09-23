@@ -1,0 +1,82 @@
+{% extends "base.html" %}
+{% import "_macros.html" as m %}
+
+{% block title %}My shelf · {{ site.title }}{% endblock %}
+{% block description %}Your own reading list: what you marked as "To read" and "Read" on this site.{% endblock %}
+
+{% block content %}
+<h1>My shelf</h1>
+<p class="lede">
+  Everything you marked as <em>To read</em> or <em>Read</em> on this site.
+</p>
+<p class="notice">
+  <strong>Stored only in this browser.</strong> There are no accounts: your marks
+  never leave this device, nobody else can see them, and clearing your browser
+  data deletes them. Use <em>Export</em> below to keep a copy or to move them to
+  another browser.
+</p>
+
+<noscript>
+  <p class="notice">My shelf needs JavaScript, because your marks are stored in
+  your browser and only a script can read them.</p>
+</noscript>
+
+<div data-shelf hidden>
+  <p class="notice" data-storage-warning hidden>
+    Your browser is blocking local storage (for example in a private window),
+    so your marks will be lost when you close this page.
+  </p>
+
+  <section aria-labelledby="shelf-to-read">
+    <h2 id="shelf-to-read">To read <span class="count" data-shelf-count="to-read"></span></h2>
+    <ul class="shelf-list" data-shelf-list="to-read"></ul>
+    <p class="empty" data-shelf-empty="to-read">Nothing here yet. Mark entries in
+      <a href="{{ url('papers/') }}">Papers</a> as <em>To read</em>.</p>
+  </section>
+
+  <section aria-labelledby="shelf-read">
+    <h2 id="shelf-read">Read <span class="count" data-shelf-count="read"></span></h2>
+    <ul class="shelf-list" data-shelf-list="read"></ul>
+    <p class="empty" data-shelf-empty="read">Nothing here yet.</p>
+  </section>
+
+  <p class="note" data-shelf-orphans hidden></p>
+
+  <section class="shelf-io" aria-labelledby="shelf-io">
+    <h2 id="shelf-io">Back up or move your shelf</h2>
+    <p>
+      <em>Export</em> downloads your marks as a small JSON file.
+      <em>Import</em> reads such a file (from this or another browser) and adds
+      its marks to this shelf; where both have a mark for the same entry, the
+      imported one wins.
+    </p>
+    <p class="shelf-io-buttons">
+      <button type="button" data-export>Export</button>
+      <label class="file-button">Import… <input type="file" accept=".json,application/json" data-import></label>
+    </p>
+    <p role="status" data-io-message></p>
+  </section>
+</div>
+
+{# Every published entry, hidden. my-shelf.js copies the ones the visitor
+   marked into the lists above. Books join this catalogue in Stage 4b. #}
+<ul hidden data-shelf-catalog>
+  {% for p in papers %}
+  <li class="shelf-item" data-id="{{ p.id }}">
+    <a class="shelf-title" id="shelf-{{ p.id }}-title" href="{{ p.url | safe_url }}" rel="noopener">{{ p.title }}</a>
+    <span class="entry-meta">
+      <span>{{ m.authors(p.authors) }}</span> <span>{{ p.year }}</span>
+      <span class="label">{{ paper_types[p.type] }}</span>
+      <a href="{{ url('papers/') }}#paper-{{ p.id }}">in Papers</a>
+    </span>
+    {{ m.track_buttons(p.id, "shelf-" ~ p.id ~ "-title") }}
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/reading-store.js') }}" defer></script>
+<script src="{{ url('static/js/tracker.js') }}" defer></script>
+<script src="{{ url('static/js/my-shelf.js') }}" defer></script>
+{% endblock %}

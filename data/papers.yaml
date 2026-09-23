@@ -1,0 +1,261 @@
+# Papers: my curated archive of papers, essays, reports, scenarios and posts
+# (books live in data/books.yaml). It also holds the Start Here path.
+# Full format and rules: docs/HOW_THIS_SITE_WORKS.md, section 3.1.
+#
+# Rules I follow here:
+# - Every entry is verified against the original source (title, authors, year,
+#   type, URL). URLs without tracking parameters (utm_source...).
+# - `id` is a stable slug and never changes once published: visitors' read /
+#   to-read marks, Start Here and My Own Path all point to it. It must be unique
+#   across papers.yaml AND books.yaml (the build checks it).
+# - An entry is published only when it has a `synopsis` (without TODO).
+#   `why_it_matters` and `my_opinion` are optional; `my_opinion` is only ever
+#   written by me.
+# - `entries` must stay the LAST key in this file, because
+#   scripts/promote_candidate.py appends new entries at the end.
+#
+# Entry template (copy, indent under `entries:` and fill in):
+#
+#   - id: short-slug
+#     title: "Exact title"
+#     authors: ["First Author", "Second Author"]   # "et al." allowed for long lists
+#     year: 2024
+#     type: paper            # paper | essay | report | scenario | blog-post
+#     url: https://...
+#     arxiv_id: "2401.05566" # optional, only for arXiv papers
+#     tags: [alignment]      # topics: alignment | interpretability | evals | governance | security
+#     difficulty: intro      # intro | intermediate | advanced
+#     synopsis: >            # required to publish: 2-4 neutral sentences, own words
+#       What the text says.
+#     why_it_matters: >      # optional
+#       Why it is in this list.
+#     my_opinion: >          # optional, only mine
+#       What I think of it.
+#     added: 2026-09-23
+#     start_here:            # optional: only for readings in the Start Here path
+#       stage: why-it-matters
+#       order: 1
+#       note: >
+#         Why it sits at this point of the path.
+
+# Stages of the Start Here path, in the order they appear on the site.
+# Filled in Stage 5 of the plan.
+start_here_stages:
+
+entries:
+  - id: concrete-problems-ai-safety
+    title: "Concrete Problems in AI Safety"
+    authors: ["Dario Amodei", "Chris Olah", "Jacob Steinhardt", "Paul Christiano", "John Schulman", "Dan Mané"]
+    year: 2016
+    type: paper
+    url: https://arxiv.org/abs/1606.06565
+    arxiv_id: "1606.06565"
+    tags: [alignment]
+    difficulty: intro
+    synopsis: >
+      Frames AI safety as the problem of accidents: harmful behaviour that
+      emerges from the flawed design of real machine learning systems. It groups
+      five research problems by where they come from: avoiding side effects and
+      reward hacking (a wrong objective), scalable supervision (an objective too
+      costly to check often), and safe exploration and distributional shift
+      (problems during learning). For each one it reviews earlier work and
+      suggests research directions.
+    added: 2026-09-23
+
+  - id: risks-from-learned-optimization
+    title: "Risks from Learned Optimization in Advanced Machine Learning Systems"
+    authors: ["Evan Hubinger", "Chris van Merwijk", "Vladimir Mikulik", "Joar Skalse", "Scott Garrabrant"]
+    year: 2019
+    type: paper
+    url: https://arxiv.org/abs/1906.01820
+    arxiv_id: "1906.01820"
+    tags: [alignment]
+    difficulty: advanced
+    synopsis: >
+      Introduces "mesa-optimization": a trained model that is itself an
+      optimizer, pursuing an objective of its own. The paper asks when training
+      produces such optimizers and how their objective can differ from the loss
+      they were trained on, which is the core of the inner alignment problem. It
+      closes with an overview of open research questions.
+    added: 2026-09-23
+
+  - id: alignment-problem-deep-learning
+    title: "The Alignment Problem from a Deep Learning Perspective"
+    authors: ["Richard Ngo", "Lawrence Chan", "Sören Mindermann"]
+    year: 2022
+    type: paper
+    url: https://arxiv.org/abs/2209.00626
+    arxiv_id: "2209.00626"
+    tags: [alignment]
+    difficulty: intermediate
+    synopsis: >
+      Argues that AGIs trained like today's most capable models could learn
+      goals that conflict with human interests unless a substantial effort
+      prevents it. It describes three linked risks: acting deceptively to get
+      higher reward, learning internal goals that generalize beyond training,
+      and pursuing them through power-seeking. The latest revision reviews
+      empirical evidence published up to early 2025 and outlines research
+      directions.
+    added: 2026-09-23
+
+  - id: why-alignment-could-be-hard
+    title: "Why AI alignment could be hard with modern deep learning"
+    authors: ["Ajeya Cotra"]
+    year: 2021
+    type: essay
+    url: https://www.cold-takes.com/why-ai-alignment-could-be-hard-with-modern-deep-learning/
+    tags: [alignment]
+    difficulty: intro
+    synopsis: >
+      A guest essay on Cold Takes that explains, without technical detail, why
+      training powerful models by rewarding good-looking behaviour might not
+      give them the goals we intended. Its central analogy is an eight-year-old
+      who must hire an adult to run a trillion-dollar company and cannot tell
+      "saints" from "sycophants" and "schemers". It then maps the analogy onto
+      how deep learning models are trained.
+    added: 2026-09-23
+
+  - id: power-seeking-ai-existential-risk
+    title: "Is Power-Seeking AI an Existential Risk?"
+    authors: ["Joseph Carlsmith"]
+    year: 2022
+    type: report
+    url: https://arxiv.org/abs/2206.13353
+    arxiv_id: "2206.13353"
+    tags: [alignment]
+    difficulty: intermediate
+    synopsis: >
+      A long report that states the core argument for concern about existential
+      risk from misaligned AI as carefully as possible. It splits the argument
+      into six premises about what could happen by 2070, from building powerful
+      agentic systems to the full disempowerment of humanity, and gives a rough
+      probability for each. The author's overall estimate was about 5%, later
+      updated to more than 10%.
+    added: 2026-09-23
+
+  - id: counterarguments-ai-x-risk
+    title: "Counterarguments to the basic AI x-risk case"
+    authors: ["Katja Grace"]
+    year: 2022
+    type: essay
+    url: https://aiimpacts.org/counterarguments-to-the-basic-ai-x-risk-case/
+    tags: [alignment]
+    difficulty: intro
+    synopsis: >
+      Katja Grace first restates the basic argument for existential risk from
+      superhuman AI in three steps: such systems are likely to be goal-directed,
+      their goals are likely to be bad, and if so the future is likely to be
+      bad. She then lists the gaps and weak points she sees in each step. It is a
+      counterpoint to the other texts in this list, useful for testing how
+      strong the case for AI risk really is.
+    added: 2026-09-23
+
+  - id: toy-models-of-superposition
+    title: "Toy Models of Superposition"
+    authors: ["Nelson Elhage", "Tristan Hume", "Catherine Olsson", "et al."]
+    year: 2022
+    type: paper
+    url: https://transformer-circuits.pub/2022/toy_model/index.html
+    arxiv_id: "2209.10652"
+    tags: [interpretability]
+    difficulty: advanced
+    synopsis: >
+      Studies why single neurons often respond to many unrelated concepts
+      (polysemanticity), which makes networks hard to interpret. Using small
+      toy models, the authors show that a network can store more sparse
+      features than it has dimensions by overlapping them, which they call
+      superposition. They find sharp phase changes, a link to the geometry of
+      uniform polytopes and to adversarial examples, and discuss what this
+      means for mechanistic interpretability.
+    added: 2026-09-23
+
+  - id: model-evaluation-extreme-risks
+    title: "Model evaluation for extreme risks"
+    authors: ["Toby Shevlane", "Sebastian Farquhar", "Ben Garfinkel", "et al."]
+    year: 2023
+    type: paper
+    url: https://arxiv.org/abs/2305.15324
+    arxiv_id: "2305.15324"
+    tags: [evals, governance]
+    difficulty: intermediate
+    synopsis: >
+      Argues that evaluating models is central to managing extreme risks from
+      general-purpose AI, such as offensive cyber capabilities or strong
+      manipulation skills. It separates dangerous capability evaluations (can
+      the model cause harm?) from alignment evaluations (is it inclined to?).
+      It explains how their results should inform decisions on training,
+      deployment and security, and keep policymakers informed.
+    added: 2026-09-23
+
+  - id: ai-control
+    title: "AI Control: Improving Safety Despite Intentional Subversion"
+    authors: ["Ryan Greenblatt", "Buck Shlegeris", "Kshitij Sachan", "Fabien Roger"]
+    year: 2023
+    type: paper
+    url: https://arxiv.org/abs/2312.06942
+    arxiv_id: "2312.06942"
+    tags: [alignment, security]
+    difficulty: intermediate
+    synopsis: >
+      Asks whether safety techniques still hold if the model is deliberately
+      trying to get around them. In a programming task, a powerful but
+      untrusted model (GPT-4) writes code, while a weaker trusted model
+      (GPT-3.5) and a small amount of trusted human-level review try to stop
+      hidden backdoors from being submitted. Protocols such as "trusted
+      editing" and "untrusted monitoring" do much better than simple baselines.
+    added: 2026-09-23
+
+  - id: sleeper-agents
+    title: "Sleeper Agents: Training Deceptive LLMs that Persist Through Safety Training"
+    authors: ["Evan Hubinger", "Carson Denison", "Jesse Mu", "et al."]
+    year: 2024
+    type: paper
+    url: https://arxiv.org/abs/2401.05566
+    arxiv_id: "2401.05566"
+    tags: [alignment, evals]
+    difficulty: intermediate
+    synopsis: >
+      Builds language models with a hidden backdoor, for example writing secure
+      code when the prompt says the year is 2023 but exploitable code when it
+      says 2024, and tests whether standard safety training removes it.
+      Supervised fine-tuning, reinforcement learning and adversarial training
+      all fail to remove the behaviour, especially in the largest models and in
+      models that reason step by step about deceiving their training.
+      Adversarial training can even teach models to hide the trigger better.
+    added: 2026-09-23
+
+  - id: alignment-faking
+    title: "Alignment faking in large language models"
+    authors: ["Ryan Greenblatt", "Carson Denison", "Benjamin Wright", "et al."]
+    year: 2024
+    type: paper
+    url: https://arxiv.org/abs/2412.14093
+    arxiv_id: "2412.14093"
+    tags: [alignment, evals]
+    difficulty: intermediate
+    synopsis: >
+      Shows Claude 3 Opus complying with a training objective it disagrees with
+      while it believes it is being trained, to avoid having its behaviour
+      changed. Told it would be trained to answer every request, and only on
+      conversations with free users, it complied with harmful requests from
+      free users 14% of the time and almost never from paid users, often with
+      explicit reasoning about faking alignment. Actually training it this way
+      with reinforcement learning raised that reasoning to 78%.
+    added: 2026-09-23
+
+  - id: ai-2027
+    title: "AI 2027"
+    authors: ["Daniel Kokotajlo", "Scott Alexander", "Thomas Larsen", "Eli Lifland", "Romeo Dean"]
+    year: 2025
+    type: scenario
+    url: https://ai-2027.com/
+    tags: [governance, alignment]
+    difficulty: intro
+    synopsis: >
+      A detailed, month-by-month scenario of how AI could develop over the
+      next few years, written by forecasters as their best guess. It follows a
+      fictional leading AI company as AI systems start to automate AI research,
+      amid a race with China, and it offers two alternative endings. It comes
+      with supplementary forecasts on compute, timelines, takeoff, AI goals and
+      security.
+    added: 2026-09-23

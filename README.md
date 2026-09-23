@@ -1,8 +1,11 @@
 # AI Safety Web
 
 I built this site to keep up with AI Safety research and news. It is a static
-website that updates itself automatically once a day, plus a Library of
-important AI Safety readings (papers, essays, reports…) that I curate by hand.
+website that updates itself automatically once a day. On top of the daily
+news, I curate two reading sections by hand: **Papers** (papers, essays,
+reports, scenarios and posts, each with a short synopsis) and the **Library**
+(books on themed shelves). Visitors can mark what they want to read or have
+read on their own **My shelf**, which lives only in their browser.
 
 **Live site (once deployed):** https://marcobm1.github.io/AiSafetyWeb/
 

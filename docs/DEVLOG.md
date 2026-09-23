@@ -372,3 +372,120 @@ removed), `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
 **Pending**
 - Stage 4 is being redesigned (books and papers in separate sections) before I
   write any code; the plan comes in its own entry once I approve it.
+
+---
+
+## 2026-09-23 — Plan redesign: Papers and Library (books) as separate sections
+
+**What I decided and why**
+- **Books and papers are now two sections.** *Papers* (papers, essays,
+  reports, scenarios, posts) is a filterable list with a synopsis per entry;
+  the *Library* is books only, shown as shelves of real covers. They're browsed
+  differently and need different fields, so they get separate files:
+  `data/papers.yaml` (the old `library.yaml`, renamed) and `data/books.yaml`.
+  I kept the name "Papers" for the list because it's short enough for the menu
+  on a phone; the page's intro says it also holds essays, reports and posts.
+- **Ids stay unique across both files**, so the reading tracker keeps one key
+  per reading everywhere on the site.
+- **Start Here stays in `papers.yaml`** (`start_here_stages` + each entry's
+  `start_here` block).
+- **New publishing rule:** an entry is published if it has a `synopsis`
+  (2–4 neutral sentences in my own words, based on the verified source, never
+  copied from publishers, Amazon, Goodreads, reviews or the abstract).
+  `why_it_matters` and `my_opinion` are optional. Claude may draft synopses but
+  never my opinion. Before, an entry needed my `why_it_matters` to go live,
+  which would have kept the Papers page empty for a long time.
+- **Menu:** the site title links to Today, the menu is News · Papers · Library ·
+  Start Here · My Own Path · About, and "My shelf" is a small link in the header.
+- **Library design (Stage 4b):** six shelves (AI Safety & Alignment; AI,
+  Society & Governance; ML & Deep Learning; Mathematics for ML; Programming &
+  Python; Thinking & Rationality), 2–4 books each, most recent English edition.
+  Covers load from Open Library's Covers API by cover id / OLID (ISBN lookups are
+  rate-limited to 100 per 5 minutes per IP), never downloaded; typographic
+  cover when there is none. A book opens in a native `<dialog>` (Esc closes it);
+  without JavaScript each book has its own page. Optional `free_url` only for
+  official free versions.
+- **My shelf:** each visitor's *To read* / *Read* marks on one page, with
+  export/import, stored only in their browser. Public paths with accounts are
+  documented as a possible future extension.
+- **My Own Path → Bookshelf (Stage 5):** books from `reading_log.yaml`
+  (`type: book`, with `status: reading | finished`, optional `started`, and
+  `month` = month finished). `library_ref` becomes `paper_ref` / `book_ref`.
+  My opinion lives only in `my_opinion` in papers/books.yaml; reading-log
+  `notes` are for readings that are in neither.
+- **A counterpoint on each side:** Katja Grace's "Counterarguments to the basic
+  AI x-risk case" in Papers, and a book with a sceptical view on the AI Safety
+  shelf (proposed: *AI Snake Oil*, Narayanan & Kapoor, 2024).
+
+**Revised plan**
+- ✅ Stages 1–3.
+- ✅ **Stage 4a:** Papers, reading tracker (`ReadingStore`), My shelf with
+  export/import, `promote_candidate.py`, publishing rule.
+- **Stage 4b:** Library of books (shelves, covers, `<dialog>` cards, book pages),
+  books in My shelf.
+- **Stage 5:** Start Here + My Own Path (timeline, reading log, Bookshelf).
+- Stage 6: styles. Stage 7: GitHub Actions + Pages. Stage 8: docs review.
+
+---
+
+## 2026-09-23 — Stage 4a: Papers, reading tracker, My shelf and promote_candidate.py
+
+**What I did**
+- I renamed `data/library.yaml` to `data/papers.yaml` and added **12 entries**,
+  each verified against its original source (title, authors, year, type, URL):
+  nine from the arXiv API in one request (Concrete Problems, Risks from Learned
+  Optimization, Ngo et al., Carlsmith, Toy Models of Superposition, Shevlane et
+  al., AI Control, Sleeper Agents, Alignment Faking), plus Cotra's Cold Takes
+  essay, Katja Grace's counterarguments (AI Impacts) and AI 2027 (checked on
+  their own pages). Toy Models links to its original on transformer-circuits.pub
+  (arXiv id kept too). Synopses are Claude's drafts, written from the sources;
+  `why_it_matters` and `my_opinion` are empty for me to fill in.
+- **Dropped:** "Specification gaming: the flip side of AI ingenuity" (Krakovna
+  et al., DeepMind, 2020). DeepMind's site fails with a TLS error from my work
+  network, and I couldn't open an official copy elsewhere, so I couldn't verify
+  it. To retry from home or once Actions runs (Stage 7).
+- `build_site.py` now validates `papers.yaml` (required fields, slug ids, types,
+  difficulties, topics, http(s) URLs without `utm_`, Start Here stages, ids
+  unique across papers.yaml and books.yaml) and applies the publishing rule.
+  It renders `papers/` and `my-shelf/`.
+- New JavaScript: `reading-store.js` (the `ReadingStore` over localStorage),
+  `tracker.js` (the buttons), `my-shelf.js` (lists, export, import).
+  `filters.js` became generic, so the same script filters news and papers.
+- `scripts/promote_candidate.py` appends a candidate to `papers.yaml` with
+  `synopsis` and `difficulty` as TODO.
+- `fetch_news.py` now reads `papers.yaml` to skip curated papers as candidates.
+- The header: the title links to Today, a small "My shelf" link, and the menu is
+  News · Papers · About (Library, Start Here and My Own Path join later).
+- `reading_log.yaml`: format comments updated (`paper_ref` / `book_ref`, book
+  `status` / `started`, `cover_id`, where `notes` apply). I did this now, not in
+  4b as planned, because `library.yaml` no longer exists and the old comments
+  pointed to it. The file still has no entries.
+
+**How I tested it**
+- Build: 7 pages, 12 papers, links OK. Broken data (unknown topic, `utm_` URL,
+  duplicate id, bad type, missing URL, unknown stage) stops the build with a
+  clear message; a missing synopsis or a TODO only skips that entry.
+- `promote_candidate.py`: dry run, a real promotion (then reverted), and the
+  errors (already promoted, unknown candidate, id taken, bad id).
+- JavaScript in headless Edge against the local preview, with a throwaway test
+  page: buttons and `aria-pressed`, filters (1 of 12 for type = scenario), saved
+  format, My shelf lists and counts, moving between lists, removing a mark,
+  export content, import (2 new, 1 changed, 2 invalid skipped, orphan note),
+  a non-JSON file rejected, and corrupt storage not breaking the page. All passed.
+- At 360 px wide, no page scrolls horizontally.
+
+**Files created / changed**
+Created: `data/papers.yaml` (renamed from `data/library.yaml`),
+`scripts/promote_candidate.py`, `templates/papers.html`,
+`templates/my_shelf.html`, `static/js/reading-store.js`, `static/js/tracker.js`,
+`static/js/my-shelf.js`. Changed: `scripts/build_site.py`,
+`scripts/fetch_news.py`, `templates/base.html`, `templates/_macros.html`,
+`static/js/filters.js`, `static/css/style.css`, `config/site.yaml`,
+`data/my_path/reading_log.yaml`, `CLAUDE.md`, `README.md`,
+`docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Me: review the 12 synopses and difficulties; add `why_it_matters` /
+  `my_opinion` where I want.
+- Verify the DeepMind specification gaming post from another network.
+- Stage 4b: books (list approved; sceptical pick to confirm: *AI Snake Oil*).

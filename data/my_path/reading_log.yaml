@@ -4,8 +4,11 @@
 # Full format and a step-by-step guide: docs/HOW_THIS_SITE_WORKS.md.
 #
 # Fields:
-#   month        YYYY-MM (month only, no day) — write it in quotes: "2026-09"
+#   month        YYYY-MM (month only, no day) — write it in quotes: "2026-09".
+#                For a book: the month I FINISHED it (leave out while reading)
 #   type         paper | report | essay | article | book | resource
+#   status       books only: reading | finished
+#   started      books only, optional: YYYY-MM when I started it, in quotes
 #   title        exact title
 #   author       author(s), as one string ("Ajeya Cotra", "Hubinger et al.")
 #   source       publication or website ("Cold Takes", "arXiv", "The Guardian")
@@ -14,15 +17,31 @@
 #                shows it as a small "archived copy" link next to the original
 #   via          optional: id of the Timeline stage (timeline.yaml) in which I
 #                read it, e.g. agi-strategy
-#   library_ref  optional: id of the entry in data/library.yaml if the text is
-#                already in the Library. Then I leave out title, author,
-#                source and url: the site takes them from the Library.
-#   notes        optional: my comments, in first person
+#   paper_ref    optional: id of the entry in data/papers.yaml if the text is
+#                already in Papers. Then I leave out title, author, source and
+#                url: the site takes them from papers.yaml.
+#   book_ref     optional, books only: id of the book in data/books.yaml (the
+#                Library). Same idea: the book's data and cover come from there.
+#   cover_id     optional, books WITHOUT book_ref: Open Library cover id, for
+#                the cover on my Bookshelf
+#   notes        optional: my comments, in first person. Only for readings
+#                that are NOT in Papers or the Library; for those, my opinion
+#                goes in `my_opinion` in papers.yaml / books.yaml (one place only)
 #
 # Rules: every entry verified against the original (title, author, URL); no
 # invented dates or notes.
 #
 # Template (copy it below `entries:`, indented, newest month at the top):
+#
+#   - month: "2026-09"
+#     type: paper
+#     paper_ref: sleeper-agents              # already in Papers
+#     via: agi-strategy
+#
+#   - type: book                             # a book I'm still reading
+#     status: reading
+#     started: "2026-09"
+#     book_ref: human-compatible             # (illustrative) already in the Library
 #
 #   - month: "2026-09"
 #     type: essay

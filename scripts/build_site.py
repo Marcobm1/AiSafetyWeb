@@ -8,8 +8,12 @@ What one build does:
        index.html               Today in AI Safety (the home page)
        news/index.html          the news archive: one line per month
        news/YYYY-MM/index.html  all entries of one month
+       papers/index.html        my curated papers, essays, reports... (data/papers.yaml)
+       my-shelf/index.html      the visitor's own "to read" / "read" marks
        about/index.html         what the site is + status of the last fetch
        404.html                 "page not found" (GitHub Pages serves it)
+     Entries in data/papers.yaml are validated first; an entry without a
+     synopsis (or with a TODO in a required field) is skipped with a warning.
   5. Check every internal link and asset: it must start with the base path
      (/AiSafetyWeb/) and point to a file that exists. Otherwise the build fails.
 
@@ -40,6 +44,8 @@ SITE_CONFIG = ROOT / "config" / "site.yaml"
 SOURCES_CONFIG = ROOT / "config" / "sources.yaml"
 NEWS_DIR = ROOT / "data" / "news"
 STATUS_FILE = ROOT / "data" / "status.json"
+PAPERS_FILE = ROOT / "data" / "papers.yaml"
+BOOKS_FILE = ROOT / "data" / "books.yaml"   # Stage 4b; only its ids are checked for now
 TEMPLATES_DIR = ROOT / "templates"
 STATIC_DIR = ROOT / "static"
 OUTPUT_DIR = ROOT / "_site"
@@ -93,6 +99,105 @@ def load_news() -> list[dict]:
 
 
 # ---------------------------------------------------------------------------
+# Papers (data/papers.yaml): validation and the publishing rule
+# ---------------------------------------------------------------------------
+
+PAPER_TYPES = {"paper": "Paper", "essay": "Essay", "report": "Report",
+               "scenario": "Scenario", "blog-post": "Blog post"}
+DIFFICULTIES = {"intro": "Intro", "intermediate": "Intermediate", "advanced": "Advanced"}
+PAPER_REQUIRED = ("id", "title", "authors", "year", "type", "url", "tags",
+                  "difficulty", "added")
+PAPER_OPTIONAL_TEXT = ("why_it_matters", "my_opinion")
+ID_RE = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
+
+
+def has_todo(value) -> bool:
+    """True if a field (or anything inside it) still contains a TODO placeholder."""
+    return "TODO" in str(value)
+
+
+def check_url(url, where: str) -> None:
+    """Hand-written URLs must be http(s) and carry no tracking parameters."""
+    parts = urlsplit(str(url))
+    if parts.scheme not in ("http", "https") or not parts.netloc:
+        raise BuildError(f"{where}: url must start with http:// or https://, got {url!r}")
+    if "utm_" in parts.query.lower():
+        raise BuildError(f"{where}: remove the tracking parameters (utm_...) from {url}")
+
+
+def load_entry_ids(path: Path) -> list[str]:
+    """Ids of all entries in a YAML data file (empty list if it doesn't exist)."""
+    if not path.exists():
+        return []
+    data = load_yaml(path) or {}
+    return [str(e.get("id")) for e in (data.get("entries") or [])]
+
+
+def load_papers(topics: set[str]) -> tuple[list[dict], list[dict]]:
+    """Validate data/papers.yaml and return (published entries, Start Here stages).
+
+    Publishing rule: an entry is published only if it has a synopsis without
+    TODO and no required field contains TODO. Optional texts (why_it_matters,
+    my_opinion) that still contain TODO are simply not shown. Malformed data
+    (unknown type or topic, bad URL, duplicate id...) stops the build.
+    """
+    data = load_yaml(PAPERS_FILE) or {}
+    stages = data.get("start_here_stages") or []
+    stage_ids = {stage["id"] for stage in stages}
+    entries = data.get("entries") or []
+
+    # Ids must be unique across papers.yaml AND books.yaml: the reading tracker
+    # keys every mark by id alone.
+    ids = [str(e.get("id")) for e in entries] + load_entry_ids(BOOKS_FILE)
+    duplicates = sorted({i for i in ids if ids.count(i) > 1})
+    if duplicates:
+        raise BuildError("duplicate id(s) across papers.yaml/books.yaml: " + ", ".join(duplicates))
+
+    published = []
+    for n, entry in enumerate(entries, start=1):
+        where = f"data/papers.yaml entry {n} ({entry.get('id', 'no id')})"
+        missing = [key for key in PAPER_REQUIRED if entry.get(key) in (None, "", [])]
+        if missing:
+            raise BuildError(f"{where}: missing {', '.join(missing)}")
+        synopsis = entry.get("synopsis")
+        todo_fields = [key for key in PAPER_REQUIRED if has_todo(entry[key])]
+        if not synopsis or has_todo(synopsis):
+            print(f"  warning: {where} not published (no synopsis yet)")
+            continue
+        if todo_fields:
+            print(f"  warning: {where} not published (TODO in {', '.join(todo_fields)})")
+            continue
+        if not ID_RE.match(entry["id"]):
+            raise BuildError(f"{where}: id must be a lowercase slug like 'sleeper-agents'")
+        if entry["type"] not in PAPER_TYPES:
+            raise BuildError(f"{where}: type must be one of {', '.join(PAPER_TYPES)}")
+        if entry["difficulty"] not in DIFFICULTIES:
+            raise BuildError(f"{where}: difficulty must be one of {', '.join(DIFFICULTIES)}")
+        unknown = [t for t in entry["tags"] if t not in topics]
+        if unknown:
+            raise BuildError(f"{where}: unknown topic(s) {', '.join(unknown)} "
+                             f"(allowed: {', '.join(sorted(topics))})")
+        check_url(entry["url"], where)
+        start_here = entry.get("start_here")
+        if start_here and start_here.get("stage") not in stage_ids:
+            raise BuildError(f"{where}: start_here.stage {start_here.get('stage')!r} "
+                             "is not in start_here_stages")
+
+        paper = dict(entry, year=int(entry["year"]))
+        for key in PAPER_OPTIONAL_TEXT:
+            if has_todo(paper.get(key)):
+                print(f"  warning: {where}: {key} still has a TODO, not shown")
+                paper[key] = None
+            else:
+                paper.setdefault(key, None)
+        published.append(paper)
+
+    # Newest first; alphabetical within a year.
+    published.sort(key=lambda p: (-p["year"], p["title"].lower()))
+    return published, stages
+
+
+# ---------------------------------------------------------------------------
 # Template helpers (available inside every template)
 # ---------------------------------------------------------------------------
 
@@ -139,6 +244,8 @@ def make_env(site: dict, status: dict) -> Environment:
         last_run=parse_time(status.get("last_run")),
         url=functools.partial(make_url, site["base_path"]),
         topic_label=lambda topic: site["topics"].get(topic, topic.title()),
+        paper_types=PAPER_TYPES,
+        difficulties=DIFFICULTIES,
     )
     env.filters.update(
         safe_url=safe_external_url,
@@ -170,10 +277,25 @@ def render(env: Environment, template: str, out_path: str, **context) -> None:
 
 
 def filter_options(entries: list[dict]) -> dict:
-    """Sources and topics present in a list of entries, for the filter menus."""
+    """Sources and topics present in a list of news entries, for the filter menus.
+
+    Sources are (source_id, name) pairs: the id is what the item's
+    data-source attribute holds, the name is what the menu shows.
+    """
     return {
-        "sources": sorted({e["source"] for e in entries}),
+        "sources": sorted({(e["source_id"], e["source"]) for e in entries},
+                          key=lambda option: option[1].lower()),
         "topics": sorted({t for e in entries for t in e["topics"]}),
+    }
+
+
+def paper_filter_options(papers: list[dict]) -> dict:
+    """Years, types, topics and difficulties present in the papers, for the filters."""
+    return {
+        "years": sorted({p["year"] for p in papers}, reverse=True),
+        "types": [t for t in PAPER_TYPES if any(p["type"] == t for p in papers)],
+        "topics": sorted({t for p in papers for t in p["tags"]}),
+        "difficulties": [d for d in DIFFICULTIES if any(p["difficulty"] == d for p in papers)],
     }
 
 
@@ -182,6 +304,7 @@ def build() -> None:
     sources = load_yaml(SOURCES_CONFIG)
     status = load_json(STATUS_FILE, {})
     entries = load_news()
+    papers, _start_here_stages = load_papers(set(sources["topics"]))
     env = make_env(site, status)
 
     # Start from an empty _site/ so deleted pages don't linger.
@@ -217,6 +340,11 @@ def build() -> None:
                newer=months[i - 1] if i > 0 else None,
                older=months[i + 1] if i + 1 < len(months) else None)
 
+    # --- Papers and the visitor's shelf ---------------------------------------
+    render(env, "papers.html", "papers/index.html",
+           papers=papers, filters=paper_filter_options(papers))
+    render(env, "my_shelf.html", "my-shelf/index.html", papers=papers)
+
     # --- About and 404 --------------------------------------------------------
     render(env, "about.html", "about/index.html",
            sources=sources["sources"], arxiv=sources.get("arxiv", {}))
@@ -224,8 +352,8 @@ def build() -> None:
 
     check_internal_links(site["base_path"])
     pages = sum(1 for _ in OUTPUT_DIR.rglob("*.html"))
-    print(f"Built {pages} pages from {len(entries)} news entries into {OUTPUT_DIR.name}/"
-          " (internal links OK)")
+    print(f"Built {pages} pages from {len(entries)} news entries and {len(papers)} papers"
+          f" into {OUTPUT_DIR.name}/ (internal links OK)")
 
 
 # ---------------------------------------------------------------------------

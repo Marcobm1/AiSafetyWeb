@@ -24,12 +24,14 @@ topics:
   governance: Governance
   security: Security
 
-# Main menu, in order. Library, Start Here and My Own Path are added when
-# their pages exist (Stages 4 and 5).
+# Main menu, in order. The home page (Today) has no menu item: the site title
+# links to it. "My shelf" is a small separate link in the header (base.html).
+# Library, Start Here and My Own Path are added when their pages exist
+# (Stages 4b and 5).
 nav:
-  - label: Today
-    path: ""
-  - label: News archive
+  - label: News
     path: news/
+  - label: Papers
+    path: papers/
   - label: About
     path: about/

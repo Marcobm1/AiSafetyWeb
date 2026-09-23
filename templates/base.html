@@ -11,12 +11,13 @@
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <a class="site-title" href="{{ url() }}">{{ site.title }}</a>
+    {# The site title is the link to the home page (Today). #}
+    <a class="site-title" href="{{ url() }}"{% if current_path == "" %} aria-current="page"{% endif %}>{{ site.title }}</a>
+    <a class="shelf-link" href="{{ url('my-shelf/') }}"{% if current_path.startswith('my-shelf/') %} aria-current="page"{% endif %}>My shelf</a>
     <nav aria-label="Main">
       <ul>
       {% for item in site.nav %}
-        {% set active = (current_path == item.path) if item.path == "" else current_path.startswith(item.path) %}
-        <li><a href="{{ url(item.path) }}"{% if active %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
+        <li><a href="{{ url(item.path) }}"{% if current_path.startswith(item.path) %} aria-current="page"{% endif %}>{{ item.label }}</a></li>
       {% endfor %}
       </ul>
     </nav>

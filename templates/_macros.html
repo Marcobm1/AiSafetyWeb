@@ -1,9 +1,9 @@
 {# Reusable pieces of HTML. Import with: {% import "_macros.html" as m %} #}
 
 {# One news entry: title (link to the original), meta line, excerpt.
-   The data-* attributes are what static/js/filters.js reads. #}
+   data-filter-item and the data-* attributes are what static/js/filters.js reads. #}
 {% macro entry(e, show_source=True, show_date=True) %}
-<article class="entry" data-source="{{ e.source }}" data-topics="{{ e.topics | join(' ') }}">
+<article class="entry" data-filter-item data-source="{{ e.source_id }}" data-topics="{{ e.topics | join(' ') }}">
   <h3 class="entry-title"><a href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a></h3>
   <p class="entry-meta">
     {% if show_source %}<span class="entry-source">{{ e.source }}</span>{% endif %}
@@ -17,22 +17,72 @@
 </article>
 {% endmacro %}
 
-{# Source + topic filter menus. They only work with JavaScript, so they start
-   hidden and filters.js shows them. #}
+{# One filter menu. `options` is a list of values, or of (value, label) pairs.
+   filters.js keeps an item visible if the chosen value is one of the
+   space-separated words in the item's data-<key> attribute. #}
+{% macro filter_select(key, label, all_label, options, label_fn=None) %}
+<label>{{ label }}
+  <select data-filter="{{ key }}">
+    <option value="">{{ all_label }}</option>
+    {% for option in options %}
+      {% if option is string or option is number %}
+        <option value="{{ option }}">{{ label_fn(option) if label_fn else option }}</option>
+      {% else %}
+        <option value="{{ option[0] }}">{{ option[1] }}</option>
+      {% endif %}
+    {% endfor %}
+  </select>
+</label>
+{% endmacro %}
+
+{# Source + topic filter menus for news. They only work with JavaScript, so
+   they start hidden and filters.js shows them. #}
 {% macro filters(options) %}
 <form class="filters" data-filters hidden>
-  <label>Source
-    <select data-filter="source">
-      <option value="">All sources</option>
-      {% for source in options.sources %}<option value="{{ source }}">{{ source }}</option>{% endfor %}
-    </select>
-  </label>
-  <label>Topic
-    <select data-filter="topic">
-      <option value="">All topics</option>
-      {% for topic in options.topics %}<option value="{{ topic }}">{{ topic_label(topic) }}</option>{% endfor %}
-    </select>
-  </label>
+  {{ filter_select("source", "Source", "All sources", options.sources) }}
+  {{ filter_select("topics", "Topic", "All topics", options.topics, topic_label) }}
   <output data-filter-count aria-live="polite"></output>
 </form>
+{% endmacro %}
+
+{# "To read" / "Read" buttons for one reading, keyed by its id.
+   Hidden without JavaScript; static/js/tracker.js shows and wires them.
+   `title_id` is the id of the element holding the title, so screen readers
+   announce which reading the buttons belong to. #}
+{% macro track_buttons(id, title_id) %}
+<div class="track" role="group" aria-label="Reading status" aria-describedby="{{ title_id }}" data-track="{{ id }}" hidden>
+  <button type="button" data-status="to-read" aria-pressed="false">To read</button>
+  <button type="button" data-status="read" aria-pressed="false">Read</button>
+</div>
+{% endmacro %}
+
+{# Authors as one line: "A, B and C" (lists may end in "et al."). #}
+{% macro authors(list) %}
+{%- if list | length > 1 and list[-1] != "et al." -%}
+{{ list[:-1] | join(", ") }} and {{ list[-1] }}
+{%- elif list | length > 1 -%}
+{{ list[:-1] | join(", ") }} et al.
+{%- else -%}
+{{ list | join(", ") }}
+{%- endif -%}
+{% endmacro %}
+
+{# One entry of data/papers.yaml, as shown on the Papers page. #}
+{% macro paper(p) %}
+<article class="paper" id="paper-{{ p.id }}" data-filter-item
+         data-year="{{ p.year }}" data-type="{{ p.type }}"
+         data-topics="{{ p.tags | join(' ') }}" data-difficulty="{{ p.difficulty }}">
+  <h3 class="entry-title" id="paper-{{ p.id }}-title"><a href="{{ p.url | safe_url }}" rel="noopener">{{ p.title }}</a></h3>
+  <p class="entry-meta">
+    <span>{{ authors(p.authors) }}</span>
+    <span>{{ p.year }}</span>
+    <span class="label">{{ paper_types[p.type] }}</span>
+    <span class="label">{{ difficulties[p.difficulty] }}</span>
+    {% for topic in p.tags %}<span class="tag">{{ topic_label(topic) }}</span>{% endfor %}
+  </p>
+  <p class="synopsis">{{ p.synopsis }}</p>
+  {% if p.why_it_matters %}<p class="why"><strong>Why it matters:</strong> {{ p.why_it_matters }}</p>{% endif %}
+  {% if p.my_opinion %}<p class="opinion"><strong>My opinion:</strong> {{ p.my_opinion }}</p>{% endif %}
+  {{ track_buttons(p.id, "paper-" ~ p.id ~ "-title") }}
+</article>
 {% endmacro %}
