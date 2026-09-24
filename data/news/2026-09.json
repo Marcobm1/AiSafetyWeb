@@ -12,7 +12,10 @@
       "interpretability",
       "evals"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "camilablank"
+    ]
   },
   {
     "id": "1800e0479f536e69",
@@ -26,7 +29,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Ashe Vazquez Nuñez"
+    ]
   },
   {
     "id": "1f2124647256fdc3",
@@ -41,7 +47,10 @@
       "interpretability",
       "security"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "25Hour"
+    ]
   },
   {
     "id": "ba0e78b731d6215e",
@@ -55,7 +64,10 @@
     "topics": [
       "evals"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "ethanelasky"
+    ]
   },
   {
     "id": "ff313a4358aa60f3",
@@ -70,7 +82,10 @@
       "alignment",
       "governance"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Aaron_Scher"
+    ]
   },
   {
     "id": "896c5908658eb9e8",
@@ -84,7 +99,10 @@
     "topics": [
       "evals"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "TheZvi"
+    ]
   },
   {
     "id": "d968602ca78670ee",
@@ -98,7 +116,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Andrea_Miotti"
+    ]
   },
   {
     "id": "5cd537eda313edbe",
@@ -110,7 +131,10 @@
     "fetched_at": "2026-09-24T05:38:38Z",
     "excerpt": "We should have a strong presumption that latent reasoning architectures would make oversight far more difficult.",
     "topics": [],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Lukas Finnveden"
+    ]
   },
   {
     "id": "8e7d39f7b94bb5b5",
@@ -124,7 +148,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "owencb"
+    ]
   },
   {
     "id": "8c9f37beff9f3bac",
@@ -312,7 +339,10 @@
     "topics": [
       "evals"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Dylan Xu"
+    ]
   },
   {
     "id": "6715476f98f9e77f",
@@ -665,7 +695,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Jack Clark"
+    ]
   },
   {
     "id": "2ad5f0dd44fcec8e",
@@ -931,7 +964,10 @@
       "evals",
       "security"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "TheZvi"
+    ]
   },
   {
     "id": "1022915917233dce",
@@ -1021,7 +1057,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "TheZvi"
+    ]
   },
   {
     "id": "a4fe14f0f60edffe",
@@ -1331,7 +1370,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "TheZvi"
+    ]
   },
   {
     "id": "6ae75790cb667377",
@@ -1410,7 +1452,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Jozdien"
+    ]
   },
   {
     "id": "5870fd02691b550b",
@@ -1464,7 +1509,10 @@
     "topics": [
       "governance"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Paper Tiger by Julian Gewirtz"
+    ]
   },
   {
     "id": "be615d826a5c09df",
@@ -1493,7 +1541,10 @@
     "fetched_at": "2026-09-23T10:45:44Z",
     "excerpt": "Also, OpenAI releases GPT-6 Astra.",
     "topics": [],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Laura Hiscott"
+    ]
   },
   {
     "id": "481a4661c33e31d0",
@@ -1793,7 +1844,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "TurnTrout"
+    ]
   },
   {
     "id": "d0fc0ef73a576fd7",
@@ -2062,7 +2116,10 @@
     "topics": [
       "evals"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Jozdien"
+    ]
   },
   {
     "id": "9001c5af91c65b50",
@@ -2090,7 +2147,10 @@
     "topics": [
       "governance"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Shakeel Hashim"
+    ]
   },
   {
     "id": "36f081f508689465",
@@ -2104,7 +2164,10 @@
     "topics": [
       "alignment"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Joshua Landes"
+    ]
   },
   {
     "id": "a797ab7fb114bdc5",
@@ -2118,7 +2181,10 @@
     "topics": [
       "interpretability"
     ],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "ryan_greenblatt"
+    ]
   },
   {
     "id": "05e95ed0372d01f1",
@@ -2130,7 +2196,10 @@
     "fetched_at": "2026-09-23T10:45:44Z",
     "excerpt": "Architectures that incorporate opaque recurrence or allow for agents to communicate with each other using latents could rapidly make it much harder to monitor chains of thought or communication (we’ll refer to this property as “monitorability” going forward). [1] As companies begin to explore such architectures, we…",
     "topics": [],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "ryan_greenblatt"
+    ]
   },
   {
     "id": "1ef5285e671d0ace",
@@ -2156,7 +2225,10 @@
     "fetched_at": "2026-09-23T10:45:44Z",
     "excerpt": "Work done in a personal capacity TLDR : Astra has 8.6x better odds of doing a reasoning task without CoT than the next best model (Fable 5.1), and can do 7.2 serial arithmetic steps in a forward pass vs 4.1 for the next best model (Gemini 3.8 Flash/Fable 5.1) Epistemic status: Heavily LLM-dependent research, and the…",
     "topics": [],
-    "summary": null
+    "summary": null,
+    "authors": [
+      "Neel Nanda"
+    ]
   },
   {
     "id": "da08e42ebbbc0a98",

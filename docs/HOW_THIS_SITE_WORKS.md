@@ -319,7 +319,8 @@ A JSON list, newest first. An entry goes into the file of the month it was
     "fetched_at": "2026-09-23T10:45:44Z",
     "excerpt": "At most two sentences, HTML removed, max 320 characters.",
     "topics": ["alignment", "evals"],
-    "summary": null
+    "summary": null,
+    "authors": ["Sam Marks"]
   }
 ]
 ```
@@ -328,7 +329,20 @@ A JSON list, newest first. An entry goes into the file of the month it was
   same URL always gets the same id.
 - `source` is the label shown on the site; `source_id` matches the source's
   `id` in `config/sources.yaml` and in `status.json`.
-- arXiv entries also have `authors` (list) and `arxiv_id`.
+- `authors` (optional list): the names the feed gives for that item, exactly
+  as written there (LessWrong and the Alignment Forum give usernames such as
+  `owencb`; Zvi's feed says `TheZvi`). The field is **left out** when the feed
+  has no author for the item, or when the only "author" is the organisation
+  itself (the source's name or the feed's title), so the site doesn't repeat
+  it next to the source. Only the item's own author fields count, never the
+  feed-level author (which is usually the organisation). Nothing is ever
+  guessed. Today the sources with authors are the Alignment Forum, LessWrong,
+  the AI Safety Newsletter, Redwood, Transformer, Import AI, Zvi and BlueDot;
+  Transformer Circuits, METR, GovAI, OpenAI and Google DeepMind give none.
+  The site shows up to three names and "et al." after that, like arXiv.
+  Entries saved before 2026-09-24 got their authors once, only if the feed
+  still listed them then (26 of 46); the rest have none.
+- arXiv entries also have `authors` (every author, from the API) and `arxiv_id`.
 - Times are always **UTC** in ISO 8601 format (the `Z` at the end means UTC).
 - `summary` is always `null` for now: reserved for future AI summaries.
 
@@ -1797,6 +1811,7 @@ until I merge.
 | `jinja2.exceptions.UndefinedError: '…' is undefined` | A typo in a template variable, or a value the build doesn't pass to that template | Fix the name in the template, or pass the value in `render(...)` |
 | `OSError: [WinError 10048]` / "address already in use" with `--serve` | Another preview (or program) is using port 8000 | Stop the other one (`Ctrl+C` in its terminal) or use `--port 8001` |
 | The preview shows an old version | The browser cached it | Rebuild and reload with `Ctrl+F5` |
+| The published site shows an older version of a page than the others (e.g. the home page "up to" an earlier time) | Caching: GitHub Pages sends `Cache-Control: max-age=600`, so its CDN and my browser may keep a copy for up to 10 minutes after a deployment. Every deployment replaces the whole site at once; no page is left behind | Reload with `Ctrl+F5`, or wait 10 minutes. To check what GitHub serves: `curl -sI https://marcobm1.github.io/AiSafetyWeb/` shows `Last-Modified` (the deployment time) and `Age` |
 | Justified paragraphs have big gaps between words | The browser has no English hyphenation dictionary yet (Chrome/Edge download it on first use), or the page lost `lang="en"` | Reload later; check `<html lang="en">` in `base.html` (it comes from `language:` in `config/site.yaml`) |
 | The site stays dark (or light) although my system changed | I chose a theme with the header link; that choice wins | Click the link again, or clear the site's data in the browser |
 | `warning: data/papers.yaml entry N (...) not published (no synopsis yet)` | The entry has no `synopsis`, or a `TODO` in it or in a required field | Write the synopsis / replace the `TODO`s (section 9). It's a warning, the rest of the site builds |

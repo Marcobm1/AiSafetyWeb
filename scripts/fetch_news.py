@@ -305,6 +305,30 @@ def make_entry(url: str, title: str, source: dict, published: datetime,
     return entry
 
 
+def name_key(text: str) -> str:
+    """'Center for AI Safety' -> 'centerforaisafety' (to compare names loosely)."""
+    return re.sub(r"[^a-z0-9]+", "", text.lower())
+
+
+def item_authors(item, source: dict, feed_title: str) -> list[str]:
+    """The author names a feed item carries, as the feed writes them.
+
+    Only the item's own author fields are used (never the feed-level author,
+    which is usually the organisation). A name that is just the source's own
+    name or the feed's title is dropped, so the site doesn't repeat it next to
+    the source. Nothing is ever guessed: no author field, no authors.
+    """
+    names = [clean_text(a.get("name")) for a in item.get("authors", []) if a.get("name")]
+    if not names and item.get("author"):
+        names = [clean_text(item.get("author"))]
+    skip = {name_key(source["name"]), name_key(feed_title or "")}
+    kept = []
+    for name in names:
+        if name and name_key(name) not in skip and name not in kept:
+            kept.append(name)
+    return kept
+
+
 def fetch_feed(source: dict, session: requests.Session, settings: dict,
                matcher: TopicMatcher, cutoff: datetime,
                fetched_at: datetime) -> tuple[list[dict], int]:
@@ -334,8 +358,10 @@ def fetch_feed(source: dict, session: requests.Session, settings: dict,
                 topics.append(topic)
         if source.get("require_topic") and not topics:
             continue
+        authors = item_authors(item, source, feed.feed.get("title"))
+        extra = {"authors": authors} if authors else {}
         kept.append(make_entry(link, title, source, published, fetched_at,
-                               make_excerpt(description), topics))
+                               make_excerpt(description), topics, **extra))
     return kept, len(feed.entries)
 
 
@@ -506,7 +532,8 @@ def check_feed(url: str, config: dict) -> int:
     print(f"  {total} items in the feed; {len(kept)} from the last "
           f"{settings['max_age_days']} days that match a topic (require_topic).")
     for entry in kept[:5]:
-        print(f"  - {entry['published'][:10]}  {entry['title']}  [{', '.join(entry['topics'])}]")
+        by = f"  by {', '.join(entry['authors'])}" if entry.get("authors") else ""
+        print(f"  - {entry['published'][:10]}  {entry['title']}  [{', '.join(entry['topics'])}]{by}")
     return 0
 
 

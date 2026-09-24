@@ -1249,3 +1249,39 @@ Created: `static/favicon.svg`, `static/favicon.ico`. Changed:
 - Me: the two `TODO(Marco)` notes in the Timeline, and my own
   `why_it_matters` / `my_opinion` where I want them.
 - Everything else is in HOW_THIS_SITE_WORKS §12, "Future ideas".
+
+---
+
+## 2026-09-24 — Authors on news entries, and a stale home page that wasn't
+
+**What I did**
+- **Authors:** `fetch_news.py` now saves `authors` for feed items that carry
+  them (`item_authors()`), and the site shows them in the entry's line like
+  arXiv's ("A, B, C et al."). Only the item's own author fields are used;
+  names equal to the source's name or the feed's title are dropped, and
+  nothing is guessed. I surveyed every feed first: the Alignment Forum and
+  LessWrong (usernames), the AI Safety Newsletter, Redwood, Transformer,
+  Import AI, Zvi ("TheZvi") and BlueDot give per-item authors; Transformer
+  Circuits, METR, GovAI, OpenAI and Google DeepMind give none. Some feeds
+  have a feed-level author ("Anthropic Interpretability Team", "Center for AI
+  Safety") that is the organisation, which is why it's never used.
+- **Saved entries:** a one-time script matched them against the current
+  feeds (same key as duplicate detection) and added authors to 26 of the 46
+  non-arXiv entries. The others come from sources without authors or are no
+  longer in their feeds, so they stay without.
+- `--check-feed` also prints each item's authors.
+- **The home page that looked old:** I checked the published site. The home
+  page, News and About all had `Last-Modified: 24 Sep 05:55:50 GMT` (the last
+  deployment) and said "up to 24 Sep, 05:38 UTC", without MAVP or EMGBlend.
+  Every deployment replaces the whole site, so no page can be left behind.
+  GitHub Pages sends `Cache-Control: max-age=600`: its CDN or my browser can
+  keep a page for up to 10 minutes, which explains seeing the 23 Sep, 20:35
+  version of one page next to newer ones. Added to §11.
+
+**Files changed**
+`scripts/fetch_news.py`, `data/news/2026-09.json`, `docs/HOW_THIS_SITE_WORKS.md`,
+`docs/DEVLOG.md`.
+
+**Pending**
+- The dates question (news under 24 Sep that seem to be from the 23rd):
+  analysed, solution waiting for my approval.
