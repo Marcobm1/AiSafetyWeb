@@ -11,6 +11,11 @@
   </script>
   <link rel="preload" href="{{ url('static/fonts/literata-latin-wght-normal.woff2') }}" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="{{ url('static/css/style.css') }}">
+  {# Favicon: the ⁂ in ink on paper (SVG, swaps colours in dark mode), with a
+     .ico for browsers that don't take SVG. Under the base path, so the
+     browser never asks the domain root (/favicon.ico) for it. #}
+  <link rel="icon" href="{{ url('static/favicon.svg') }}" type="image/svg+xml">
+  <link rel="icon" href="{{ url('static/favicon.ico') }}" sizes="16x16 32x32 48x48">
   {% block head %}{% endblock %}
 </head>
 <body>

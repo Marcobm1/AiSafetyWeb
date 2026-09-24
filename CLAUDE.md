@@ -198,6 +198,7 @@ templates/               Jinja2 HTML templates (templates/local/: the local form
 static/css, static/js    styles and small vanilla JS modules (filters, reading-store,
                          tracker, my-shelf, library, theme, journal)
 static/fonts/            Literata (self-hosted .woff2) + its OFL licence
+static/favicon.svg|.ico  the ⁂ icon (SVG with dark mode, .ico fallback)
 docs/                    HOW_THIS_SITE_WORKS.md, DEVLOG.md
 .github/workflows/       update-and-deploy.yml (the only workflow)
 ```

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- AI Safety Web: the asterism (⁂) that opens every chapter, in ink on
+       sepia paper; the colours swap in dark mode, like the site. -->
+  <style>
+    .paper { fill: #f4ecd8; }
+    .ink { stroke: #221f1a; }
+    @media (prefers-color-scheme: dark) {
+      .paper { fill: #111110; }
+      .ink { stroke: #d9d5cc; }
+    }
+  </style>
+  <rect class="paper" width="32" height="32" rx="6"/>
+  <g class="ink" stroke-width="2.4" stroke-linecap="round">
+    <line x1="16.00" y1="4.40" x2="16.00" y2="14.40"/>
+    <line x1="11.67" y1="6.90" x2="20.33" y2="11.90"/>
+    <line x1="20.33" y1="6.90" x2="11.67" y2="11.90"/>
+    <line x1="9.20" y1="17.20" x2="9.20" y2="27.20"/>
+    <line x1="4.87" y1="19.70" x2="13.53" y2="24.70"/>
+    <line x1="13.53" y1="19.70" x2="4.87" y2="24.70"/>
+    <line x1="22.80" y1="17.20" x2="22.80" y2="27.20"/>
+    <line x1="18.47" y1="19.70" x2="27.13" y2="24.70"/>
+    <line x1="27.13" y1="19.70" x2="18.47" y2="24.70"/>
+  </g>
+</svg>

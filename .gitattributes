@@ -6,5 +6,6 @@
 *.ps1 text eol=crlf
 *.bat text eol=crlf
 
-# Fonts are binary: never touch their bytes
+# Fonts and icons are binary: never touch their bytes
 *.woff2 binary
+*.ico binary

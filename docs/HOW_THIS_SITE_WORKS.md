@@ -129,6 +129,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
 | `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
 | `static/css/style.css` | The whole design: colour tokens, light/dark, typography, layout (section 6.8) | ✅ |
+| `static/favicon.svg`, `static/favicon.ico` | The site's icon: the ⁂ in ink on paper (section 6.8) | ✅ |
 | `static/fonts/` | Literata (two `.woff2` files, roman and italic) and its licence `Literata-OFL.txt` | ✅ |
 | `static/js/theme.js` | The *Dark mode / Light mode* toggle in the header | ✅ |
 | `static/js/journal.js` | My Own Path Journal: month selector, Older / Newer, month in the URL | ✅ |
@@ -1085,6 +1086,15 @@ deliberately quiet. Everything is in `static/css/style.css`.
   everything focusable gets a 3px ink ring with a paper-coloured gap
   (`:focus-visible`), links also get a light background, and a book on the
   shelf gets the ring around cover and caption.
+
+- **Favicon:** the ⁂ that opens every chapter, drawn as strokes (not as a
+  character, so it doesn't depend on the fonts installed) in ink on a sepia
+  rounded square: `static/favicon.svg`. A `<style>` inside the SVG with
+  `prefers-color-scheme: dark` swaps the colours in dark mode, like the site.
+  `static/favicon.ico` (16, 32 and 48 px, light colours) is the fallback for
+  browsers without SVG icons. Both are linked from `base.html` with `url()`,
+  so they live under `/AiSafetyWeb/` and the browser doesn't ask the domain
+  root (`marcobm1.github.io/favicon.ico`, which isn't mine) for an icon.
 
 **Colour tokens and contrast.** Every colour is a CSS variable on `:root`
 (`--bg`, `--surface`, `--text`, `--muted`, `--line`), redefined for dark

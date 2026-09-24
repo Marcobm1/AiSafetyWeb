@@ -1161,3 +1161,29 @@ judged relevant, doubtful or not)
 **Files changed**
 `config/sources.yaml`, `scripts/fetch_news.py`, `data/news/2026-09.json`,
 `data/paper_candidates.json`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+---
+
+## 2026-09-24 — A favicon
+
+**What I did**
+- `static/favicon.svg`: the ⁂ that opens every chapter, three six-armed
+  asterisks drawn as round-capped strokes in ink on a sepia rounded square.
+  A `<style>` inside the SVG swaps to near-black paper and light ink when the
+  system is in dark mode. `static/favicon.ico` (16, 32, 48 px) is the fallback
+  for browsers without SVG icons. Both are linked from `base.html` through
+  `url()`, under `/AiSafetyWeb/`.
+- `.gitattributes`: `*.ico binary`, like the fonts.
+
+**What I decided and why**
+- **Strokes, not the ⁂ character:** a favicon can't count on Literata being
+  available, and the three asterisks stay readable at 16 px. I checked the SVG
+  in Edge at 16, 32 and 64 px in light and dark before adding it.
+- **Linked under the base path:** without a `<link rel="icon">`, browsers ask
+  `marcobm1.github.io/favicon.ico`, the root of a domain this project doesn't
+  own; that request was the only 404 in the Stage 8 checks.
+
+**Files created / changed**
+Created: `static/favicon.svg`, `static/favicon.ico`. Changed:
+`templates/base.html`, `.gitattributes`, `CLAUDE.md`,
+`docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
