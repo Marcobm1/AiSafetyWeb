@@ -1,14 +1,15 @@
 # How This Site Works
 
 > These are my notes on the **current** state of the project. I update them in
-> the same commit as every change. Sections marked **🚧 Not built yet** describe
-> the design I agreed on for a future stage.
+> the same commit as every change. What happened when, and why, is in
+> [DEVLOG.md](DEVLOG.md); ideas for later are in
+> [section 12](#12-future-ideas).
 >
 > I wrote them for someone with a technical background (my own is security
 > operations) who is new to web development. Unfamiliar terms are defined in the
 > [Glossary](#glossary).
 
-**Current status:** Stages 1–8 built and **published at https://marcobm1.github.io/AiSafetyWeb/**: news, Papers, the Library, Start Here (12 papers in 4 stages), My Own Path v2 (Timeline, Bookshelf and a monthly Journal, plus my local-only "Add entry" form) and My shelf, with the e-reader design (Literata, sepia paper, light and dark). A GitHub Actions workflow updates the data every day at 06:00 UTC and redeploys the site (section 7). Next: Stage 9 (final documentation review). The plan for the remaining stages is in [docs/DEVLOG.md](DEVLOG.md).
+**Current status:** all nine stages are done, and the site is **live at https://marcobm1.github.io/AiSafetyWeb/**: daily news from 14 sources and arXiv, Papers (13), the Library (20 books), Start Here (12 papers in 4 stages), My Own Path (Timeline, Bookshelf and a monthly Journal, plus my local-only "Add entry" form) and My shelf, with the e-reader design (Literata, sepia paper, light and dark). A GitHub Actions workflow updates the data every day at 06:00 UTC and redeploys the site (section 7).
 
 ## Contents
 1. [What this project is](#1-what-this-project-is)
@@ -22,7 +23,7 @@
 9. [How to…](#9-how-to)
 10. [Working from two computers](#10-working-from-two-computers)
 11. [Common problems and fixes](#11-common-problems-and-fixes)
-12. [Possible future extensions](#12-possible-future-extensions)
+12. [Future ideas](#12-future-ideas)
 13. [Glossary](#glossary)
 
 ---
@@ -34,13 +35,13 @@ at https://marcobm1.github.io/AiSafetyWeb/. It has:
 
 | Section | What it shows | Where the data comes from |
 |---|---|---|
-| **Today in AI Safety** (home) | Entries from the last 24–48 h, grouped by topic/source | Collected automatically every day |
+| **Today in AI Safety** (home) | Entries from the last 48 h before the latest fetch, one group per source, plus a block of new arXiv papers | Collected automatically every day |
 | **News archive** | All earlier entries, browsable by date, filterable by source/topic | Same automatic collection |
 | **Papers** | My curated list of papers, essays, reports, scenarios and posts, each with a short synopsis, filterable by year, type, topic and difficulty | `data/papers.yaml`, which I edit by hand |
 | **Library** | Books only, on six themed shelves, each shown with its real cover (Open Library) or a typographic one. Clicking a book opens its card; each book also has its own page | `data/books.yaml`, which I edit by hand |
 | **Start Here** | An ordered reading path for newcomers to AI Safety, in stages, each entry with a note on why it sits at that point (4 stages, 12 readings from Papers) | Also `data/papers.yaml`: the stage list plus a `start_here` block on each entry in the path |
 | **My Own Path** | My public learning log: a **Timeline** of courses, projects and milestones (with duration bars), a **Bookshelf** of the books I read, with my opinion, and a **Journal**: one month at a time (month selector), everything I did that month grouped by type, with an activity-per-month chart | `data/my_path/timeline.yaml` and `data/my_path/reading_log.yaml`, which I edit by hand or with my local "Add entry" form |
-| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library and Start Here) | The visitor's own browser (localStorage) |
+| **Reading tracker** | Each visitor marks entries as *To read* / *Read* (in Papers, the Library, Start Here and on my Bookshelf) | The visitor's own browser (localStorage) |
 | **My shelf** | The visitor's own marks in one page, with **Export / Import** to back them up or move them to another browser | The visitor's own browser (localStorage) |
 | **About** | What the site is, sources, how updates work, the typeface credit and a note that it was built with the help of Claude Code | Template text |
 
@@ -51,7 +52,7 @@ is my own *public* record, written by me in files in the repository.
 My content rules: the site only shows the **title, source, date, a short excerpt
 (max ~2 sentences) and a link** to each original. I never republish full
 articles. Each entry has an empty `summary` field that I'm reserving for future
-AI summaries.
+AI summaries (section 12).
 
 ## 2. Architecture
 
@@ -66,7 +67,7 @@ flowchart LR
         ARX["arXiv API"]
     end
 
-    subgraph Actions["GitHub Actions (daily cron)"]
+    subgraph Actions["GitHub Actions (daily 06:00 UTC, manual, or my push)"]
         F["scripts/fetch_news.py"]
         B["scripts/build_site.py"]
     end
@@ -76,7 +77,7 @@ flowchart LR
         NEWS["data/news/YYYY-MM.json"]
         CAND["data/paper_candidates.json<br/>(auto-pruned)"]
         PAP["data/papers.yaml + data/books.yaml<br/>(edited by hand)"]
-        PATH["data/my_path/<br/>timeline + reading log<br/>(edited by hand)"]
+        PATH["data/my_path/<br/>timeline + reading log<br/>(by hand or my local form)"]
         TPL["templates/ + static/"]
     end
 
@@ -90,7 +91,7 @@ flowchart LR
     PAP --> B
     PATH --> B
     TPL --> B
-    B -->|"_site/ (HTML, CSS, JS)"| PAGES["GitHub Pages<br/>marcobm1.github.io/AiSafetyWeb/"]
+    B -->|"_site/ (HTML, CSS, JS, fonts)<br/>deployed as an artifact"| PAGES["GitHub Pages<br/>marcobm1.github.io/AiSafetyWeb/"]
     PAGES --> V["Visitor's browser<br/>(My shelf marks in localStorage)"]
 ```
 
@@ -98,8 +99,9 @@ flowchart LR
 the fetch script has to be Python anyway. Writing the page generator in Python
 too means I only deal with one language and toolchain (no Node.js/npm), and
 Python is also the language I use for ML. The generated HTML is complete on its
-own, so the site works without JavaScript. JavaScript only adds filters, the
-dark-mode toggle and the reading tracker (My shelf).
+own, so the site works without JavaScript. JavaScript only adds extras: the
+filters, the dark-mode toggle, the reading tracker and My shelf, the book card
+dialog, the Journal's month selector and the "may be out of date" warning.
 
 ## 3. Folders and files
 
@@ -110,7 +112,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `requirements.txt` | Python dependencies with **pinned** (exact) versions | ✅ |
 | `.python-version` | The Python version (3.12). GitHub Actions reads this file too | ✅ |
 | `.gitignore` | Files Git must ignore (`.venv/`, `_site/`, caches) | ✅ |
-| `.gitattributes` | Forces LF line endings in the repo (avoids Windows/Linux diffs) | ✅ |
+| `.gitattributes` | Forces LF line endings in the repo (avoids Windows/Linux diffs); marks fonts and icons as binary | ✅ |
 | `docs/HOW_THIS_SITE_WORKS.md` | These notes | ✅ |
 | `docs/DEVLOG.md` | My chronological log of every change and why | ✅ |
 | `config/sources.yaml` | All news sources, arXiv query, karma thresholds, topic keywords | ✅ |
@@ -118,7 +120,7 @@ dark-mode toggle and the reading tracker (My shelf).
 | `scripts/fetch_news.py` | Downloads feeds + arXiv, deduplicates, saves JSON and paper candidates | ✅ |
 | `data/news/YYYY-MM.json` | Collected news, one file per month | ✅ |
 | `data/status.json` | Time of last run + status of each source | ✅ |
-| `data/paper_candidates.json` | New arXiv papers I might add to the archive. Written by the bot, old ones pruned automatically | ✅ |
+| `data/paper_candidates.json` | New arXiv papers I might add to Papers. Written by the bot, old ones pruned automatically | ✅ |
 | `data/papers.yaml` | Papers: my curated papers, essays, reports, scenarios and posts (13 so far); also the Start Here stage list | ✅ |
 | `data/books.yaml` | Library: 20 books on six themed shelves | ✅ |
 | `data/my_path/timeline.yaml` | My Own Path timeline (my first two courses) | ✅ |
@@ -127,17 +129,17 @@ dark-mode toggle and the reading tracker (My shelf).
 | `templates/local/add_entry.html` | The form's page; only ever rendered by the preview server, never into `_site/` | ✅ |
 | `scripts/promote_candidate.py` | Copies a candidate into `papers.yaml` as a new block | ✅ |
 | `scripts/build_site.py` | Turns templates + data into the `_site/` folder, checks links, local preview | ✅ |
-| `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, one per page type) | ✅ (more pages in Stages 4–5) |
+| `templates/` | Jinja2 HTML templates (`base.html`, `_macros.html`, `_book_dialog.html`, one per page type) | ✅ |
 | `static/css/style.css` | The whole design: colour tokens, light/dark, typography, layout (section 6.8) | ✅ |
 | `static/favicon.svg`, `static/favicon.ico` | The site's icon: the ⁂ in ink on paper (section 6.8) | ✅ |
 | `static/fonts/` | Literata (two `.woff2` files, roman and italic) and its licence `Literata-OFL.txt` | ✅ |
 | `static/js/theme.js` | The *Dark mode / Light mode* toggle in the header | ✅ |
 | `static/js/journal.js` | My Own Path Journal: month selector, Older / Newer, month in the URL | ✅ |
+| `static/js/stale.js` | The "This site may be out of date" warning, checked in the visitor's browser | ✅ |
 | `static/js/filters.js` | Filter menus for news and papers | ✅ |
 | `static/js/reading-store.js`, `tracker.js`, `my-shelf.js` | Reading tracker: the `ReadingStore`, the *To read / Read* buttons, the My shelf page with export/import | ✅ |
 | `static/js/library.js` | Library: cover fallback, reading marks on the shelves, the book card `<dialog>` | ✅ |
 | `.github/workflows/update-and-deploy.yml` | The one workflow: daily fetch + commit, build, deploy to GitHub Pages (section 7) | ✅ |
-| `static/js/stale.js` | The "This site may be out of date" warning, checked in the visitor's browser | ✅ |
 | `_site/` | Generated website. **Not committed**, rebuilt each time | ✅ |
 | `.venv/` | Python virtual environment. **Not committed**, one per computer | ✅ (local) |
 
@@ -295,7 +297,7 @@ entries:
 
 **Why Start Here has no file of its own:** a reading joins the path through its
 own `start_here` block, so its data exists only once and the path can never
-point to an entry that isn't in the Library. The build script groups the
+point to an entry that isn't in Papers. The build script groups the
 entries by `start_here.stage` and sorts them by `start_here.order`; the stage
 titles and intros come from `start_here_stages`. The build fails with a clear
 message if an entry names a stage that isn't in that list.
@@ -347,8 +349,9 @@ A JSON list, newest first. An entry goes into the file of the month it was
 
 Per source: `items_in_feed` is what the feed returned, `kept` is what passed
 the filters (age, topic), `new` is what wasn't already saved. When a source
-fails, `status` is `"error"` and `error` says why. The site will use
-`last_run` for its "This site may be out of date" warning (section 7.4).
+fails, `status` is `"error"` and `error` says why. A paused source
+(`enabled: false`) isn't listed. The site uses `last_run` for the footer and
+for its "This site may be out of date" warning (section 7.4).
 
 #### `data/paper_candidates.json` — arXiv papers I might curate (written by the bot)
 
@@ -433,13 +436,13 @@ entries:
       My opinion, because this book is not in books.yaml.
 ```
 
-- **`paper_ref` / `book_ref`** replace the old `library_ref`: a reading that is
-  already in Papers or the Library points to it by `id` instead of copying its
-  data.
+- **`paper_ref` / `book_ref`:** a reading that is already in Papers or the
+  Library points to it by `id` instead of copying its data.
 - **Books** can take several months, so they have `status` (reading /
   finished), an optional `started` month and `month` = the month I finished
-  (left out while reading). On My Own Path they appear on a **Bookshelf**
-  (same shelf style and book card as the Library, Stage 5).
+  (left out while reading). On My Own Path they appear on the **Bookshelf**
+  (same shelf style and book card as the Library) and, month by month, in the
+  **Journal**.
 - **Where my opinion lives:** in `my_opinion` in `papers.yaml` / `books.yaml`
   when the reading is there (so the Library and my Bookshelf show the same
   text); `notes` in the reading log only for readings that are *not* in Papers
@@ -473,6 +476,18 @@ the same functions, so the form can never accept something the build would
 reject. **Notes that still contain `TODO` are not
 shown**, so placeholders like my `TODO(Marco)` notes never go live.
 
+**Why two files instead of one `my_path.yaml` with two sections:**
+- They grow very differently. The timeline gets a new stage every few weeks;
+  the reading log gets entries every week. Keeping the long list apart means
+  the short one stays easy to read and edit.
+- Different shapes (days vs months, different fields and types). A separate
+  file per shape keeps each file's header comment and template short and exact.
+- Fewer indentation mistakes: a slip in a long YAML file can silently move an
+  entry into the wrong section; with two files it can't cross over.
+- Clearer Git history: "added 3 readings" and "finished a course" show up as
+  changes to different files.
+- The folder `data/my_path/` still keeps both halves of the section together.
+
 #### The visitor's marks (localStorage, never in the repo)
 
 The reading tracker saves one small JSON value in the visitor's browser, under
@@ -485,18 +500,6 @@ the key `aisafetyweb.reading.v1`:
 `status` is `to-read` or `read`; there is no entry for unmarked readings. The
 **export** file has the same `items` plus a header:
 `{"format": "aisafetyweb-reading", "version": 1, "exported": "...", "items": {...}}`.
-
-**Why two files instead of one `my_path.yaml` with two sections:**
-- They grow very differently. The timeline gets a new stage every few weeks;
-  the reading log gets entries every week. Keeping the long list apart means
-  the short one stays easy to read and edit.
-- Different shapes (days vs months, different fields and types). A separate
-  file per shape keeps each file's header comment and template short and exact.
-- Fewer indentation mistakes: a slip in a long YAML file can silently move an
-  entry into the wrong section; with two files it can't cross over.
-- Clearer Git history: "added 3 readings" and "finished a course" show up as
-  changes to different files.
-- The folder `data/my_path/` still keeps both halves of the section together.
 
 **How I write these docs:** every Markdown file meant for readers (`README.md`,
 everything in `docs/`) is written in first person, as my own technical notes,
@@ -587,7 +590,7 @@ venv with `py -3.12`, and the GitHub Actions workflow reads the same file.
 
 ## 5. The fetch script, step by step
 
-✅ **Built in Stage 2.** The script is `scripts/fetch_news.py` and all its
+The script is `scripts/fetch_news.py` and all its
 settings live in `config/sources.yaml`. I run it from the repository root
 with the venv active:
 
@@ -605,7 +608,8 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
    thresholds and the topic keywords are in this one file.
 2. **Download every RSS/Atom feed.** Each download has a 30-second timeout and
    one retry. If a source still fails, the error is recorded in `status.json`
-   and **the other sources carry on**.
+   and **the other sources carry on**. Sources with `enabled: false` (paused,
+   section 5.3) are skipped entirely.
    - LessWrong and the Alignment Forum filter by karma on their side: the
      script adds `karmaThreshold=30` (LessWrong) or `karmaThreshold=20` (AF) to
      the feed URL, so only posts that reached that karma come back.
@@ -622,7 +626,8 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
    - **drop items older than 14 days** (`settings.max_age_days`). Some feeds
      return their whole history (OpenAI's has 1,000+ items), and I don't want
      to import years of old posts;
-   - **assign topics** by keyword (section 5.2);
+   - **assign topics** by keyword (section 5.2; arXiv papers use stricter
+     *alignment* keywords);
    - for sources marked `require_topic: true`, **drop items that match no
      topic**. I use this for sources that also publish off-topic things
      (LessWrong, OpenAI, Google DeepMind, GovAI's job postings…).
@@ -829,10 +834,10 @@ candidates) and recomputed the topics of the rest from their full abstracts
 
 ## 6. Building and previewing the site locally
 
-✅ **Built in Stage 3.** The generator is `scripts/build_site.py`. It reads
-`config/site.yaml`, `config/sources.yaml` and the data files (news, status,
-`papers.yaml`), and writes the
-finished website into `_site/` (never committed; it's rebuilt every time).
+The generator is `scripts/build_site.py`. It reads `config/site.yaml`,
+`config/sources.yaml` and every data file (news, status, `papers.yaml`,
+`books.yaml`, `data/my_path/`), and writes the finished website into `_site/`
+(never committed; it's rebuilt every time).
 
 ```powershell
 python scripts\build_site.py                  # build into _site\
@@ -848,7 +853,8 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
 ### 6.1 What one build does
 
 1. **Delete `_site/` and create it again**, so pages I remove never linger.
-2. **Copy `static/`** (CSS and JavaScript) to `_site/static/`.
+2. **Copy `static/`** (CSS, JavaScript, the fonts and the favicon) to
+   `_site/static/`, and add an empty `.nojekyll` (section 8).
 3. **Render each page** from a Jinja2 template:
 
    | Output | Template | What it shows |
@@ -865,8 +871,8 @@ exactly like GitHub Pages, so a link that forgets the base path breaks here too
    | `about/index.html` | `about.html` | What the site is, the source list (from `sources.yaml`), the result of the last fetch (from `status.json`), the Literata credit and "Built with the help of Claude Code." |
    | `404.html` | `404.html` | "Page not found". GitHub Pages shows it for any unknown address |
 
-   Before rendering, `papers.yaml` and `books.yaml` are **validated** and the publishing rule is
-   applied (section 3.1). Skipped entries are listed as `warning: ... not
+   Before rendering, `papers.yaml`, `books.yaml` and the My Own Path files
+   are **validated** and the publishing rule is applied (section 3.1). Skipped entries are listed as `warning: ... not
    published (...)`; broken data stops the build with `BUILD FAILED`.
 4. **Check every internal link** (section 8). If one is broken, the build stops
    with `BUILD FAILED` and a list of the bad links, so a broken site never gets
@@ -880,8 +886,10 @@ fetching, the home page still shows the latest batch instead of going empty.
 
 ### 6.2 How the templates fit together
 
-- `base.html` is the page frame: `<head>`, header with the menu, footer with
-  the time of the last fetch. Every other template starts with
+- `base.html` is the page frame: `<head>` (stylesheet, font preload, favicon,
+  and the two-line script that applies a saved theme before painting), the
+  header with the menu, *My shelf* and the theme link, the hidden "may be out
+  of date" notice, and the footer with the time of the last fetch. Every other template starts with
   `{% extends "base.html" %}` and fills in `{% block content %}`.
 - `_macros.html` holds reusable pieces: `entry()` draws one news item (title
   linking to the original, source, date, topic tags, excerpt) and `filters()`
@@ -899,7 +907,7 @@ fetching, the home page still shows the latest batch instead of going empty.
   needs no menu item, and **My shelf** is a small separate link in the header,
   because it's the visitor's own page, not a section of the site. The current
   page is marked with `aria-current="page"` (screen readers announce it, and
-  the CSS makes it bold).
+  the CSS shows it upright in ink instead of grey italics).
 
 ### 6.3 Safety measures in the generator
 
@@ -927,7 +935,7 @@ always wins.
 ### 6.5 JavaScript: the reading tracker and My shelf
 
 Small scripts, loaded only on the pages that need them (Papers, the Library,
-book pages and My shelf), in this order:
+book pages, Start Here, My Own Path and My shelf), in this order:
 
 1. **`reading-store.js` — the `ReadingStore`.** All reading marks go through
    one small interface: `get(id)`, `set(id, status)` (`"to-read"`, `"read"`
@@ -1086,7 +1094,6 @@ deliberately quiet. Everything is in `static/css/style.css`.
   everything focusable gets a 3px ink ring with a paper-coloured gap
   (`:focus-visible`), links also get a light background, and a book on the
   shelf gets the ring around cover and caption.
-
 - **Favicon:** the ⁂ that opens every chapter, drawn as strokes (not as a
   character, so it doesn't depend on the fonts installed) in ink on a sepia
   rounded square: `static/favicon.svg`. A `<style>` inside the SVG with
@@ -1375,7 +1382,9 @@ the files as they are instead of running its own site generator (Jekyll) on them
   1. Find the site's real feed URL. I look in the page's HTML for
      `<link rel="alternate" type="application/rss+xml" href="...">`, or try the
      usual paths (`/feed`, `/rss.xml`, `/feed.xml`; Substack blogs always use
-     `/feed`). **I never add a URL I haven't opened.**
+     `/feed`, but feeds on `*.substack.com` are blocked from GitHub Actions, so
+     I look for the publication's own domain first: section 5.3). **I never add
+     a URL I haven't opened.**
   2. Add a block under `sources:` in `config/sources.yaml` with a new `id`, the
      `name` to show on the site and the `url`. If the source also publishes
      off-topic posts, add `require_topic: true`.
@@ -1398,10 +1407,14 @@ the files as they are instead of running its own site generator (Jekyll) on them
   not in `status.json` and not listed on About); to reactivate it, delete that
   line. To remove it for good, delete the block. Either way its old entries
   stay in `data/news/`, which is fine. Update section 5.3.
-- **Change the topic keywords or the arXiv phrases:** edit `topics:` or
-  `arxiv.phrases` in `config/sources.yaml`, then check with `--dry-run`. New
-  keywords only apply to entries fetched from then on; existing entries keep
-  their topics.
+- **Change the topic keywords or the arXiv query:** edit `topics:` (or
+  `arxiv.topic_overrides` for arXiv only), `arxiv.phrases` or
+  `arxiv.combinations` in `config/sources.yaml`. A keyword can be a list of
+  terms that must all appear. **Measure before and after** on a real week of
+  arXiv, reading the papers, as in section 5.4, and check that no clearly
+  relevant paper is lost; then `--dry-run`. New keywords only apply to entries
+  fetched from then on; existing entries keep their topics unless I clean
+  them up once (as I did on 2026-09-24).
 - **Check whether the last run went well:** open `data/status.json` (on GitHub
   or locally) and look for `"status": "error"`.
 - **Add a paper (or essay, report, scenario, post) by hand:**
@@ -1501,7 +1514,7 @@ the files as they are instead of running its own site generator (Jekyll) on them
 - **(Optional, later) Add a hidden page to review candidates:** I decided to
   keep candidates **only in the repo**: new arXiv papers already appear on the
   home page and in the news archive, so a public "Recent papers" page would
-  duplicate them and mix unreviewed papers with my curated Library. If reading
+  duplicate them and mix unreviewed papers with my curated Papers. If reading
   the JSON ever becomes tedious, this is how I'd add a private-ish review page:
   1. Create `templates/candidates.html` that lists the candidates (title,
      authors, date detected, topics, link, and the `id` to copy for
@@ -1814,98 +1827,127 @@ until I merge.
 | A source starts failing with `403 Forbidden` in GitHub Actions (but works from my computer) | The site blocks data-centre addresses, like Substack does (section 5.3) | 1. Confirm it: `python scripts\fetch_news.py --check-feed <URL>` works at home, and *Run workflow* with `check_feed` = the same URL fails with 403. 2. Look for another **official** feed of the same publication: its own domain (does the old address redirect somewhere?), the author's site or a WordPress/Ghost copy; check `<link rel="alternate">` and the usual paths. 3. Test each candidate from Actions with `check_feed`, and compare its newest titles with the old feed. 4. Switch `url` in `config/sources.yaml` with a comment saying why. 5. Before committing, check for repeats: saved entries from that source have the old URLs, so the most recent posts would come in again. Move the matching saved entries to the new URLs (as I did for Zvi and Import AI, section 5.3) and confirm with `--dry-run` that the new count only has genuinely new posts. 6. If there's no official alternative, pause it with `enabled: false` and a comment, so it doesn't fail every day |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
-## 12. Possible future extensions
+## 12. Future ideas
 
-- **Public My Own Path pages for other people (with accounts).** Today every
-  visitor's shelf is private to their browser, and My Own Path is only mine.
-  A future version could let people sign in and publish their own path. That
-  needs a server and a database (so no longer a purely static site), sign-in,
-  privacy choices and moderation. The `ReadingStore` interface (section 6.5)
-  is the hook: a server-backed store with the same methods could replace the
-  localStorage one, and export/import already gives people a way to move
-  their marks into an account.
-- **Several people in My Own Path.** The Journal is already built with the
-  person in mind: every month carries `data-person="<id>"` and the owner comes
-  from `my_path.person` in `config/site.yaml`. A multi-person version would:
-  keep one data folder per person (`data/my_path/<person>/timeline.yaml` and
-  `reading_log.yaml`), list the people in `config/site.yaml`, build each
-  person's Journal with the same `build_journal()`, and add a second
-  drop-down (person) next to the month selector in `journal.js` that shows
-  only that person's months. Without JavaScript, each person would get their
-  own section (or page).
+Things I decided to leave for later. None of them is built.
+
 - **Visitors' own path (Timeline, Bookshelf and Journal).** First step, like
   My shelf: stored only in the visitor's browser (localStorage behind an
   interface like `ReadingStore`), with export/import to a JSON file, and the
-  same Journal view built in the browser from that data. Second step, with
-  accounts: a server-backed store with the same methods, so paths can be kept
-  across devices and, if someone wants, published. That second step needs a
-  server and a database, sign-in, privacy choices and moderation, so the site
-  would no longer be purely static.
-- **A hidden page to review paper candidates** (section 9).
+  same Journal view built in the browser from that data. No accounts, no
+  server, still a static site.
+- **Accounts, and several people in My Own Path.** Second step: people sign
+  in and keep (and, if they want, publish) their path on a server. That needs
+  a server and a database, sign-in, privacy choices and moderation, so the
+  site would no longer be purely static. The hooks are already there:
+  - the `ReadingStore` interface (section 6.5): a server-backed store with
+    the same methods could replace the localStorage one, and export/import
+    already lets people move their marks into an account;
+  - the Journal is built with the person in mind: every month carries
+    `data-person="<id>"` and the owner comes from `my_path.person` in
+    `config/site.yaml`. A multi-person version would keep one data folder per
+    person (`data/my_path/<person>/timeline.yaml` and `reading_log.yaml`),
+    list the people in `config/site.yaml`, build each person's Journal with the
+    same `build_journal()`, and add a person drop-down next to the month
+    selector in `journal.js`. Without JavaScript, each person would get their
+    own section (or page).
+- **An "edit" mode in the local form.** Today "Add entry" only adds. An edit
+  mode would list the existing Timeline stages and readings, open one in the
+  same form, and save the change. The hard part is saving without rewriting
+  the YAML (my comments must survive): it would have to find the entry's
+  exact block of lines and replace only those, then validate the whole file
+  as the add path does. The obvious first use: finishing a course or a book
+  (adding `completed:` / `month:` and changing the status).
+- **AI summaries.** Every news entry already has an empty `summary` field. A
+  later version could fill it with a short summary written by a language
+  model, clearly labelled as AI-generated and never replacing the link to the
+  original (the content rules in section 1 still apply: no republishing). It
+  would need an API key kept as a GitHub Actions secret, a cost limit, and a
+  decision on which sources to summarise.
+- **A hidden page to review paper candidates** (the steps are in section 9):
+  only if reading `data/paper_candidates.json` in the repository becomes
+  tedious.
 
 ## Glossary
 
 - **API** — An interface through which a program requests data from a service (here the arXiv API returns paper listings as Atom/XML).
-- **Atom** — A feed format similar to RSS.
 - **`aria-pressed`** — An attribute that tells screen readers a button is a toggle and whether it is on (`true`) or off (`false`). The *To read / Read* buttons use it.
+- **Artifact** — A file (here a packed copy of `_site/`) that one job of a workflow uploads so another job can use it. The deploy job publishes the Pages artifact.
+- **Atom** — A feed format similar to RSS.
+- **Atomic write** — Writing a file to a temporary name first and then renaming it over the real one, so a crash halfway never leaves a half-written file. The fetch script and the local form do this.
 - **Base path** — The sub-folder a site lives under (`/AiSafetyWeb/`). All internal links must include it.
 - **Blob** — A chunk of data created in the browser. My shelf puts the export JSON in a Blob and offers it as a download, without any server.
 - **Branch / `main`** — A line of development in Git. `main` is the default and the one that is published. Other branches are for trying things without touching `main` (section 10).
-- **Merge** — Bringing the commits of one branch into another (`git merge design-spacing` while on `main`).
-- **Worktree** — A second folder linked to the same repository with another branch checked out, so two versions can be open (and previewed) at once.
 - **CI/CD** — *Continuous Integration / Continuous Deployment*: automatically building, testing and publishing on every change or schedule. GitHub Actions is my CI/CD here.
-- **Artifact** — A file (here a packed copy of `_site/`) that one job of a workflow uploads so another job can use it. The deploy job publishes the Pages artifact.
 - **Clone** — Download a full copy of a repository, including its history.
+- **Command injection** — When text from outside (e.g. a URL typed into a form) is pasted into a shell command and runs as a command. The workflow passes the `check_feed` URL through an environment variable to avoid it.
 - **Commit** — A saved snapshot of changes in Git, with a message and author.
 - **Concurrency (workflow)** — A setting that stops two runs of a workflow from running at the same time; a new run waits for the current one.
+- **Contrast ratio (WCAG)** — How different two colours are in brightness, from 1:1 (identical) to 21:1 (black on white). The Web Content Accessibility Guidelines (WCAG) level AA asks for at least 4.5:1 for normal text and 3:1 for large text.
 - **Cron** — A syntax for schedules (`minute hour day month weekday`). `0 6 * * *` = every day at 06:00 UTC.
 - **CSRF / Origin check** — *Cross-site request forgery*: a malicious website making my browser send a request to another site (here, my local form). Checking the `Origin` header (which site the request comes from) and a secret token stops it.
+- **CSS custom property (token)** — A named value in CSS such as `--text: #221f1a`, used everywhere as `var(--text)`. My colours are tokens, so dark mode only redefines them.
 - **Deduplication** — Making sure the same item is saved only once, even if several feeds (or several runs) return it.
-- **DNS rebinding** — An attack where a website's domain is switched to point to `127.0.0.1`, so a page from that site can talk to servers on my own computer. Checking the `Host` header defeats it: the browser still sends the attacker's domain.
 - **Deploy** — Publish a built version of the site so visitors can see it.
-- **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
-- **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
+- **`<details>` / `<summary>`** — A native HTML element that folds content away behind a clickable summary line, without any JavaScript. The Timeline stages and the synopses in Start Here use it.
+- **`<dialog>`** — A native HTML element for pop-up windows. Opened with `showModal()`, it takes the focus, makes the rest of the page inert and closes with `Esc`. The Library's book cards use it.
+- **DNS rebinding** — An attack where a website's domain is switched to point to `127.0.0.1`, so a page from that site can talk to servers on my own computer. Checking the `Host` header defeats it: the browser still sends the attacker's domain.
 - **Drop cap** — A large first letter that spans several lines at the start of a chapter. Here only on pages that open with an introduction.
+- **Dry run** — Running a program so it shows what it would do without changing anything (`--dry-run`).
+- **Environment (GitHub)** — A named deployment target in a repository's settings (here `github-pages`), with its own rules, such as which branch may deploy to it.
+- **Environment variable** — A named value a program receives from the system when it starts (e.g. `FEED_URL`), instead of in its command line.
 - **Escaping (autoescape)** — Turning characters like `<` into `&lt;` so text from outside can never become HTML or JavaScript on my page.
-- **Focus ring (`:focus-visible`)** — The outline that shows which element the keyboard is on. `:focus-visible` shows it for keyboard use without adding it to mouse clicks.
+- **Exit code** — The number a program returns when it ends: 0 = success, anything else = failure. GitHub Actions marks a step as failed when it's not 0.
+- **Favicon** — The small icon a browser shows in the tab. Mine is `static/favicon.svg`, with `favicon.ico` as a fallback.
 - **Feed** — A machine-readable list of a site's latest posts (RSS or Atom).
-- **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
-- **Hash (`#journal-2026-09`)** — The part of a URL after `#`. It points to a place inside the page and changes without reloading; the Journal keeps the chosen month there.
-- **Hyphenation (`hyphens: auto`)** — The browser splits long words at line ends ("read-ings") using a dictionary for the page's language (`lang`). It keeps justified lines from opening big gaps.
-- **`Host` header** — The part of an HTTP request that says which site the browser thinks it's talking to (`localhost:8000`).
-- **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
+- **Focus ring (`:focus-visible`)** — The outline that shows which element the keyboard is on. `:focus-visible` shows it for keyboard use without adding it to mouse clicks.
+- **Folded block (YAML `>`)** — A way to write long text in YAML over several indented lines; YAML joins the lines with spaces and keeps blank lines as paragraph breaks. My notes and synopses use it.
 - **GitHub Actions** — GitHub's automation service. It runs *workflows* (YAML files) on GitHub's servers when triggered.
 - **GitHub Pages** — GitHub's free hosting for static websites.
 - **`GITHUB_TOKEN`** — A temporary credential that GitHub gives each workflow run so it can commit or deploy.
+- **Hash (`#journal-2026-09`)** — The part of a URL after `#`. It points to a place inside the page and changes without reloading; the Journal keeps the chosen month there.
+- **Hash (SHA-1)** — A function that turns any text into a fixed-length fingerprint. The same input always gives the same hash, which makes it a handy stable id.
+- **Headless browser** — A real browser (here Edge) run without a window, driven by a script, to take screenshots and test pages automatically.
+- **`Host` header** — The part of an HTTP request that says which site the browser thinks it's talking to (`localhost:8000`).
+- **HTTP status code** — The number a web server answers with: 200 = OK, 404 = not found, 403 = forbidden, 5xx = server error.
+- **Hyphenation (`hyphens: auto`)** — The browser splits long words at line ends ("read-ings") using a dictionary for the page's language (`lang`). It keeps justified lines from opening big gaps.
 - **Jinja2** — A Python templating language: HTML files with placeholders like `{{ title }}` that a script fills with data.
 - **JSON / YAML** — Text formats for structured data. JSON is strict and machine-friendly. YAML is more readable for hand-edited files.
 - **Karma** — The community voting score of a LessWrong / Alignment Forum post. I use it as a noise filter.
-- **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
-- **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
-- **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
-- **OIDC token (`id-token: write`)** — A short-lived, signed token that a workflow run can request to prove its identity to another service (here GitHub Pages), instead of storing a password or key.
-- **`<dialog>`** — A native HTML element for pop-up windows. Opened with `showModal()`, it takes the focus, makes the rest of the page inert and closes with `Esc`. The Library's book cards use it.
-- **`<details>` / `<summary>`** — A native HTML element that folds content away behind a clickable summary line, without any JavaScript. The timeline stages, the reading-log months and the synopses in Start Here use it.
-- **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
 - **Localhost / port** — `localhost` (127.0.0.1) means "this computer"; the port (8000) picks which program on it answers. The preview is only reachable from my own machine.
-- **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.
+- **localStorage** — A small key-value store inside the visitor's browser, per website. Private to that browser. It can be unavailable (private mode, blocked storage), which is why every access is wrapped in `try/catch`.
+- **Merge** — Bringing the commits of one branch into another (`git merge design-spacing` while on `main`).
+- **Merge conflict** — When Git cannot automatically combine two edits of the same lines.
+- **Mermaid** — A text format for diagrams that GitHub draws automatically in Markdown files (the architecture diagram in section 2).
+- **Normalised URL** — A URL rewritten into one canonical form (https, lowercase host, no tracking parameters…) so two spellings of the same address compare as equal.
 - **OFL (SIL Open Font License)** — A free licence for fonts: they can be used, embedded and redistributed (not sold on their own), as long as the licence goes with them.
+- **OIDC token (`id-token: write`)** — A short-lived, signed token that a workflow run can request to prove its identity to another service (here GitHub Pages), instead of storing a password or key.
+- **Open Library / Covers API / OLID** — Open Library is the Internet Archive's open book catalogue. Its Covers API serves cover images (`covers.openlibrary.org`). An OLID is its id for a book: `OL…M` for an edition, `OL…W` for a work.
 - **Pinned version** — An exact package version (`==`) so every install is identical (reproducible builds).
+- **`prefers-color-scheme`** — A CSS media query that tells the page whether the visitor's system is in light or dark mode.
 - **Progressive enhancement** — Building the page so it fully works as plain HTML, then adding JavaScript extras (like filters) on top. If the script fails, nothing essential breaks.
 - **Pull / Push** — Download new commits from GitHub / upload my commits to GitHub.
-- **SHA pinning** — Referring to an action by the full commit hash of its code (`@3d3c42e5…`) instead of a movable tag (`@v7`), so the code that runs can't change behind my back.
-- **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
-- **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
-- **`prefers-color-scheme`** — A CSS media query that tells the page whether the visitor's system is in light or dark mode.
+- **Rate limit** — The maximum number of requests a service accepts in a given time (arXiv asks for a pause of at least 3 s; Open Library allows 100 ISBN lookups every 5 minutes).
+- **Rebase (`git pull --rebase`)** — Instead of merging, Git takes my new commits off, brings in the remote's commits, and puts mine back on top, so history stays a straight line. The workflow does this before pushing the data.
 - **Regular expression (regex)** — A small pattern language for searching text. The topic matcher turns each keyword into a regex such as `(?<!\w)AGI(?!\w)` ("AGI" as a whole word).
-- **Self-hosted font** — A font file served by the site itself instead of a font service like Google Fonts, so visitors' browsers don't contact a third party.
+- **Remote / `origin`** — The copy of the repository on GitHub. `origin` is its conventional name.
 - **Repository (repo)** — A project folder tracked by Git, including its full history.
 - **RSS** — *Really Simple Syndication*: a standard XML format for publishing a list of recent posts.
-- **Template inheritance** — In Jinja2, a page template `extends` a base template and only fills in the blocks that change, so the header and footer are written once.
-- **XSS (cross-site scripting)** — An attack where text from an outside source ends up running as JavaScript in a visitor's browser. Autoescaping and the http(s)-only link filter protect against it.
+- **Self-hosted font** — A font file served by the site itself instead of a font service like Google Fonts, so visitors' browsers don't contact a third party.
+- **SHA pinning** — Referring to an action by the full commit hash of its code (`@3d3c42e5…`) instead of a movable tag (`@v7`), so the code that runs can't change behind my back.
+- **Sitemap** — An XML file listing a site's pages for search engines (`sitemap.xml`). I searched Epoch AI's sitemaps for a feed.
+- **Slug** — A short, lowercase, URL-friendly identifier made of words and hyphens (`ai-2027`). I use slugs as the stable `id` of reading entries.
 - **Static site** — A website made of fixed files (HTML/CSS/JS) served as-is, with no server-side code or database. Fast, cheap (free here) and secure.
 - **Static site generator** — A program that builds a static site from templates + data (mine is `scripts/build_site.py`).
+- **Stemming** — Reducing words to a common root for search, so "misalignment" also finds "misaligned". arXiv's search does it, which is why some phrases catch more than expected.
+- **SVG** — *Scalable Vector Graphics*: an image described as shapes in XML, sharp at any size, and able to carry CSS (my favicon uses that for dark mode).
+- **`<template>`** — An HTML element whose content the browser parses but doesn't show or run; a script copies it when needed. The Library keeps each book's card in one.
+- **Template inheritance** — In Jinja2, a page template `extends` a base template and only fills in the blocks that change, so the header and footer are written once.
+- **TLS** — The encryption behind `https://`. A "TLS handshake" error means the secure connection couldn't be set up (for example, a company network blocking a site).
 - **User-Agent** — A header every HTTP request carries to say which program is asking. My script identifies itself as `AiSafetyWeb/1.0` with a link to the site, which is polite and what APIs like arXiv expect.
 - **UTC** — Coordinated Universal Time, the time zone-free reference clock. All times in the data files are UTC.
 - **Virtual environment (venv)** — A per-project folder with its own Python packages.
+- **WOFF2** — The compressed font format browsers download from websites; Literata comes as two `.woff2` files.
 - **Workflow** — A YAML file in `.github/workflows/` that tells GitHub Actions what to run and when.
+- **Worktree** — A second folder linked to the same repository with another branch checked out, so two versions can be open (and previewed) at once.
+- **XSS (cross-site scripting)** — An attack where text from an outside source ends up running as JavaScript in a visitor's browser. Autoescaping and the http(s)-only link filter protect against it.

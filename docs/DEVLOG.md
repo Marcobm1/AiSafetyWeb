@@ -295,7 +295,7 @@ Created: `data/my_path/reading_log.yaml`. Moved: `data/my_path.yaml` →
   under different URLs, and removed those three duplicates from
   `data/news/2026-09.json` (134 entries now).
 - I tested the preview: `/` redirects to `/AiSafetyWeb/`, every page returns
-  200, unknown pages return our 404 page, and `/static/…` without the base
+  200, unknown pages return my 404 page, and `/static/…` without the base
   path fails just like it would on GitHub Pages.
 
 **What I decided and why**
@@ -1187,3 +1187,65 @@ judged relevant, doubtful or not)
 Created: `static/favicon.svg`, `static/favicon.ico`. Changed:
 `templates/base.html`, `.gitattributes`, `CLAUDE.md`,
 `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+---
+
+## 2026-09-24 — Stage 9: final documentation review
+
+**What I did**
+- I reread `README.md`, `docs/HOW_THIS_SITE_WORKS.md`, this log and
+  `CLAUDE.md` from start to end, and fixed what no longer matched the project.
+- **HOW_THIS_SITE_WORKS:**
+  - the header no longer talks about "🚧 not built yet" sections, and the
+    status line says all nine stages are done, with the live URL;
+  - corrected details that were out of date: Today shows the last 48 hours
+    grouped by source (not "24–48 h by topic/source"); the list of JavaScript
+    extras; the data files the build reads and what it copies from `static/`;
+    what `base.html` holds; which pages load the reading-tracker scripts; the
+    current page in the menu is upright ink, not bold; Start Here entries come
+    from Papers, not the Library; `status.json` is already used by the site;
+    the `<details>` glossary entry no longer mentions the old reading-log
+    months;
+  - moved "Why two files instead of one `my_path.yaml`" back next to the My
+    Own Path formats (it had ended up under the localStorage section);
+  - "Add a news source" warns about Substack; "Change the topic keywords"
+    explains `arxiv.topic_overrides`, keyword combinations and measuring on a
+    real week first;
+  - section 12 is now **"Future ideas"**: visitors' own paths (in the browser
+    first), accounts and several people, an "edit" mode for the local form,
+    AI summaries, and the hidden candidates page;
+  - the glossary is in alphabetical order and has 17 more terms used in the
+    text (atomic write, command injection, contrast ratio / WCAG, CSS custom
+    property, environment (GitHub), environment variable, favicon, folded
+    block, headless browser, Mermaid, rate limit, rebase, sitemap, stemming,
+    SVG, TLS, WOFF2): 81 in total.
+- **README:** the site is live (no more "once deployed"), the sections are
+  listed (Papers, Library, Start Here, My Own Path, My shelf), the quick start
+  includes the local Git identity, and a short daily routine with the preview.
+- **CLAUDE.md:** plan finished (Stage 9 ✅, future ideas only when asked); the
+  full list of JavaScript extras; rules for sources (Substack, `enabled:
+  false`, migrating saved entries when a URL changes) and for changing the
+  arXiv query or keywords (measure on a real week); the folder list with
+  `stale.js`, `--dry-run` / `--check-feed` next to `fetch_news.py`, and the
+  `enabled` / `topic_overrides` options.
+- **This log:** one leftover "our 404 page" became "my 404 page". Older
+  entries otherwise stay as they were written: they record what I knew and
+  planned at the time.
+
+**How I checked it**
+- Every Markdown link and `#anchor` in the four files resolves (anchors
+  computed the way GitHub builds them from headings): 18 links, 0 problems.
+- Every "section X.Y" / "§X.Y" reference in HOW_THIS_SITE_WORKS, CLAUDE.md
+  and this log points to a section that exists (60 in HOW_THIS_SITE_WORKS).
+- The Mermaid architecture diagram renders with Mermaid 11 in a browser
+  without errors, and shows the current flow (triggers, local form, artifact).
+- No Spanish text and no second-person instructions outside `CLAUDE.md`; no
+  "we/our" except inside quoted titles.
+
+**Files changed**
+`README.md`, `CLAUDE.md`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- Me: the two `TODO(Marco)` notes in the Timeline, and my own
+  `why_it_matters` / `my_opinion` where I want them.
+- Everything else is in HOW_THIS_SITE_WORKS §12, "Future ideas".
