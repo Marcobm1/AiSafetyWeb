@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-09-24T05:38:38Z",
-  "duration_seconds": 6.4,
-  "new_entries": 17,
+  "last_run": "2026-09-24T10:52:06Z",
+  "duration_seconds": 9.5,
+  "new_entries": 18,
   "sources": [
     {
       "id": "alignment-forum",
@@ -9,7 +9,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 7,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -18,7 +18,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 6,
-      "new": 4,
+      "new": 0,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "status": "ok",
       "items_in_feed": 20,
       "kept": 5,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -90,7 +90,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 4,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -107,8 +107,8 @@
       "name": "OpenAI News",
       "status": "ok",
       "items_in_feed": 1229,
-      "kept": 7,
-      "new": 1,
+      "kept": 6,
+      "new": 0,
       "error": null
     },
     {
@@ -125,15 +125,15 @@
       "name": "arXiv",
       "status": "ok",
       "items_in_feed": 100,
-      "kept": 100,
-      "new": 9,
+      "kept": 94,
+      "new": 18,
       "error": null
     }
   ],
   "candidates": {
-    "added": 9,
+    "added": 18,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 112
+    "total": 94
   }
 }

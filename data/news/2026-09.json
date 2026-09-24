@@ -345,6 +345,23 @@
     ]
   },
   {
+    "id": "fda978e0b469e5c9",
+    "url": "https://arxiv.org/abs/2609.27038",
+    "title": "Are Stated Reasoning Steps Causally Load-Bearing?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-22T20:34:26Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring assumes that the reasoning a model writes reflects the computation that directly produces its answer. Previous faithfulness metrics have been predominantly behavioral, as they simply edit the reasoning text and observe the resulting answer.",
+    "topics": [],
+    "authors": [
+      "Abhiram Bhupatiraju",
+      "Rayan Nyaupane"
+    ],
+    "arxiv_id": "2609.27038",
+    "summary": null
+  },
+  {
     "id": "6715476f98f9e77f",
     "url": "https://www.lesswrong.com/posts/8eDaCvSRzzKCxKSEk/politics-gets-interested-in-those-trying-not-to-die",
     "title": "Politics Gets Interested In Those Trying Not To Die",
@@ -1028,6 +1045,27 @@
     "summary": null
   },
   {
+    "id": "ffd1b4ef846b10bb",
+    "url": "https://arxiv.org/abs/2609.22712",
+    "title": "Trustworthy Agentic AI: Failure Modes, Mitigation Strategies, and a Lifecycle Framework for Autonomous LLM Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-19T02:47:37Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Agentic AI systems built on large language models can plan over multiple steps, use external tools, retain information in memory, and coordinate with other agents. These capabilities make them more useful than static language models, but they also introduce new security and operational risks.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Fayeq Jeelani Syed",
+      "Rehan Ahmad",
+      "Ali Al Bataineh",
+      "Aakriti Adhikari"
+    ],
+    "arxiv_id": "2609.22712",
+    "summary": null
+  },
+  {
     "id": "e82021fddbfb1d5b",
     "url": "https://arxiv.org/abs/2609.21996",
     "title": "A Lie Detector Test for Language Models: Reading Knowledge a Model Won't Reveal",
@@ -1438,6 +1476,25 @@
       "Xing Sun"
     ],
     "arxiv_id": "2609.18461",
+    "summary": null
+  },
+  {
+    "id": "34feeeda93f5ba51",
+    "url": "https://arxiv.org/abs/2609.18346",
+    "title": "Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-16T09:09:26Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Large language models (LLM) deployed as autonomous pricing agents may sustain supracompetitive prices through tacit coordination. We develop a causal graph divergence framework that separately measures structural faithfulness and intent faithfulness of LLM pricing agents in Bertrand competition.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Dohun Lee",
+      "Hyunwoo Park"
+    ],
+    "arxiv_id": "2609.18346",
     "summary": null
   },
   {
@@ -2105,6 +2162,109 @@
     "summary": null
   },
   {
+    "id": "c6857ff5b5835aec",
+    "url": "https://arxiv.org/abs/2609.13624",
+    "title": "An Efficient and Modular Framework for Targeted Harm Mitigation in LLMS",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-12T00:24:49Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Large Language Models (LLMs) are powerful zero-shot learners but remain prone to misalignment with human preferences, often producing biased, toxic, or otherwise harmful outputs. Existing alignment methods, while effective, are costly and tightly coupled to the model, limiting flexibility and scalability.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Roberto Campbell",
+      "Momin Abbas",
+      "Muneeza Azmat",
+      "Michal Ulewicz",
+      "Raya Horesh",
+      "Kristjan Greenewald",
+      "Rogério Abreu de Paula",
+      "Nathalie Baracaldo"
+    ],
+    "arxiv_id": "2609.13624",
+    "summary": null
+  },
+  {
+    "id": "f9b2f9efa3076028",
+    "url": "https://arxiv.org/abs/2609.13579",
+    "title": "How User-AI Mistreatment Occurs and Matters in Conversational Systems?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T22:33:25Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Safety research often focuses on model-generated harms, but users may also direct hostility, coercion, and adversarial pressure at models. Understanding how and when that occurs is essential for accurately interpreting model behaviour, alignment drift, and real-world deployment risks.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Fanqi Zeng",
+      "Sadid A. Hasan",
+      "Chaocheng He"
+    ],
+    "arxiv_id": "2609.13579",
+    "summary": null
+  },
+  {
+    "id": "6dcd6cdbc0ed3df5",
+    "url": "https://arxiv.org/abs/2609.13556",
+    "title": "Domain-Specific Jargon in Large Language Models: A Comparative Analysis between General-Purpose and Specialist Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T21:35:04Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Large Language Models (LLMs) have shown remarkable proficiency on general-purpose tasks, yet their performance often degrades in highly-specialized technical domains. Moreover, little is known about how parametric knowledge of domain-specific terms is encoded within these models.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Darin Keng",
+      "Zhewei Sun"
+    ],
+    "arxiv_id": "2609.13556",
+    "summary": null
+  },
+  {
+    "id": "a757f7caf6182a3f",
+    "url": "https://arxiv.org/abs/2609.13534",
+    "title": "Harmfulness Propagation Dynamics: Layer-wise Trajectories of Adversarial Intent in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T21:04:55Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "We identify \\textbf{Harmfulness Propagation Dynamics (HPD)}: for harmful prompts, the projection of the last-token hidden state onto a learned harm direction rises monotonically with transformer depth, whereas benign prompts remain flat or oscillatory. This cross-layer signature reflects harmful intent as a…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Noor Islam S. Mohammad",
+      "Uluğ Bayazıt"
+    ],
+    "arxiv_id": "2609.13534",
+    "summary": null
+  },
+  {
+    "id": "73b655e68d6bd032",
+    "url": "https://arxiv.org/abs/2609.13466",
+    "title": "Governing at Machine Speed: An Adaptive Intelligence Architecture for Real-Time AI Policy Enforcement",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T19:35:00Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Enterprise AI adoption has reached 78% of organizations globally, yet the infrastructure to govern that adoption has not kept pace. This paper identifies and characterizes the attestation deficit, a structural condition in which organizations maintain governance policies but cannot produce auditable, tamper-evident…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Sandeep Bokkasam",
+      "B. Durgalakshmi"
+    ],
+    "arxiv_id": "2609.13466",
+    "summary": null
+  },
+  {
     "id": "ead6c4ad966cfc53",
     "url": "https://www.alignmentforum.org/posts/BbP2wCyDGdPWJ7PwP/cot-controllability-evals-seem-very-under-elicited",
     "title": "CoT controllability evals seem very under-elicited",
@@ -2153,6 +2313,176 @@
     ]
   },
   {
+    "id": "2f856a8b5e891dde",
+    "url": "https://arxiv.org/abs/2609.12841",
+    "title": "A Graph-Based Approach for Mapping Kernel-Level Telemetry to MITRE ATT&CK",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T13:35:27Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Mapping observed system behavior to standardized frameworks like MITRE ATT&CK is essential for threat-informed defense, but remains largely manual. Existing automated methods depend on Cyber Threat Intelligence reports, which offer only retrospective accounts of attacks.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Matteo Lupinacci",
+      "Luigi Arena",
+      "Francesco Blefari",
+      "Angelo Furfaro"
+    ],
+    "arxiv_id": "2609.12841",
+    "summary": null
+  },
+  {
+    "id": "ffaaa7c24f8a6dea",
+    "url": "https://arxiv.org/abs/2609.12651",
+    "title": "Distortion of AI Alignment Revisited: RLHF is a Decent Utilitarian Aligner",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T09:55:06Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "While Reinforcement Learning from Human Feedback (RLHF) is the standard paradigm for aligning large language models with human preferences, its effectiveness in pluralistic settings has been called into question. Notably, recent work by Gölz et al.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Kazusato Oko",
+      "Annie Ulichney",
+      "Nika Haghtalab",
+      "Han Bao"
+    ],
+    "arxiv_id": "2609.12651",
+    "summary": null
+  },
+  {
+    "id": "d3cd132d2c832fa1",
+    "url": "https://arxiv.org/abs/2609.12623",
+    "title": "SteerDuplex: Steerable Duplex Speech Dialogue Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T09:22:46Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Full-duplex spoken dialogue models support low-latency turn taking, interruption handling, and backchanneling, yet a key capability remains underexplored: steerability, the ability to reliably shift conversational behavior along attributes such as tone, persona, speaking rate, and voice style in response to user…",
+    "topics": [],
+    "authors": [
+      "Utkarsh Tyagi",
+      "Ramaneswaran Selvakumar",
+      "Advait Gosai",
+      "Sonal Kumar",
+      "Nikhil Barhate",
+      "Isabell Sagar",
+      "Steven Li",
+      "Miheer Bavare",
+      "Daniel Quigley",
+      "Fabiola Tapia Carrillo",
+      "Jose M Patron E",
+      "Diego Macías Gutiérrez",
+      "Paul Song",
+      "Ramani Duraiswami",
+      "Dinesh Manocha",
+      "Yunzhong He"
+    ],
+    "arxiv_id": "2609.12623",
+    "summary": null
+  },
+  {
+    "id": "8f5a439a42d57aab",
+    "url": "https://arxiv.org/abs/2609.12607",
+    "title": "Direct Preference Density Alignment for Conversational Audio Equalization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T09:05:08Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Large Language Model alignment typically relies on learned proxy reward models, which significantly increase the memory footprint during training and are notoriously prone to instability and reward hacking. While offline methods like Direct Preference Optimization (DPO) bypass the reward model, they lose the ability…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Ioannis Stylianou",
+      "Sven Ewan Shepstone",
+      "Jon Francombe",
+      "Pablo Martinez Nuevo",
+      "Zheng-Hua Tan"
+    ],
+    "arxiv_id": "2609.12607",
+    "summary": null
+  },
+  {
+    "id": "18e76567d9156801",
+    "url": "https://arxiv.org/abs/2609.12591",
+    "title": "Where Decoder Cosine Similarity Fails for SAE Feature Flow Discovery",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T08:44:13Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Foundation models are increasingly adapted through fine-tuning, model editing, and alignment procedures while retaining previously acquired capabilities. Understanding the internal computations that support these adaptations is therefore becoming increasingly important for continual model evolution.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Hendrik Droste",
+      "Christian Medeiros Adriano",
+      "Kathrin Korte",
+      "Holger Giese"
+    ],
+    "arxiv_id": "2609.12591",
+    "summary": null
+  },
+  {
+    "id": "7643d4dabd163c06",
+    "url": "https://arxiv.org/abs/2609.12459",
+    "title": "EvoRS: On-Policy Self-Evolution of Reward Systems for Open-Ended Reinforcement Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T05:40:59Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Open-ended reinforcement learning often relies on rubric-based rewards for tasks without directly verifiable answers. Yet the policy and reward system form a dynamic feedback loop: as the policy optimizes the current reward, an initially useful reward system may become unreliable due to reward hacking or reduced…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Weiyuan Li",
+      "Aili Chen",
+      "Xintao Wang",
+      "Yikai Zhang",
+      "Qingqing Dong",
+      "Jinghan Xu",
+      "Hongru Hou",
+      "Wenxuan Zhao",
+      "Chengkun Lang",
+      "Jun Gao",
+      "Yuanli Guo",
+      "Hongcheng Guo",
+      "Yanghua Xiao",
+      "Deqing Yang"
+    ],
+    "arxiv_id": "2609.12459",
+    "summary": null
+  },
+  {
+    "id": "8024f0432514a853",
+    "url": "https://arxiv.org/abs/2609.12413",
+    "title": "SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-11T04:04:11Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Large language models (LLMs) are rapidly evolving from conversational assistants into agentic AI systems that reason, plan, invoke tools, maintain persistent memory, communicate with other agents, and execute multi-step tasks. At the same time, modern models exhibit substantially stronger native safety alignment than…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Md Jueal Mia",
+      "Yanzhao Wu",
+      "Selcuk Uluagac",
+      "M. Hadi Amini"
+    ],
+    "arxiv_id": "2609.12413",
+    "summary": null
+  },
+  {
     "id": "36f081f508689465",
     "url": "https://blog.bluedot.org/p/can-you-teach-context",
     "title": "Can you teach context?",
@@ -2168,6 +2498,52 @@
     "authors": [
       "Joshua Landes"
     ]
+  },
+  {
+    "id": "3c4613f996d39923",
+    "url": "https://arxiv.org/abs/2609.12137",
+    "title": "GUIDE: Generative Utility Inference and Decision Engine",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-10T19:12:09Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Measuring the preferences of human users remains a fundamental challenge of AI alignment. Existing elicitation approaches struggle to efficiently discover multidimensional preferences or accurately ground these inferences in domain knowledge.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Anagha Tiwari",
+      "Alexander G. Gray",
+      "Nick Feamster",
+      "Brian Jabarian",
+      "Alex Imas",
+      "Alex Kale"
+    ],
+    "arxiv_id": "2609.12137",
+    "summary": null
+  },
+  {
+    "id": "b91228115048820a",
+    "url": "https://arxiv.org/abs/2609.12039",
+    "title": "Reality Is the Final Verifier: On Two Key Gaps in Agentic Software Engineering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-10T17:58:48Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Software development follows an implementation-verification loop in which developers or agents iteratively revise an implementation until an evaluator, such as a test suite, accepts it. The evaluator checks the implementation against a set of requirements under a model of the deployment environment.",
+    "topics": [],
+    "authors": [
+      "Alexander Krentsel",
+      "Shubham Agarwal",
+      "Mert Cemri",
+      "Shu Liu",
+      "Sidharth Sankhe",
+      "Ziming Mao",
+      "Matei Zaharia",
+      "Ion Stoica"
+    ],
+    "arxiv_id": "2609.12039",
+    "summary": null
   },
   {
     "id": "a797ab7fb114bdc5",
@@ -2200,6 +2576,23 @@
     "authors": [
       "ryan_greenblatt"
     ]
+  },
+  {
+    "id": "2844b16aeae8e789",
+    "url": "https://arxiv.org/abs/2609.11498",
+    "title": "ActMap: Single-Pass Uncertainty Quantification from Generation-Time Activation Maps",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-10T13:04:24Z",
+    "fetched_at": "2026-09-24T10:52:06Z",
+    "excerpt": "Practical uncertainty quantification (UQ) for large language models must decide, from a single generation, whether a specific answer should be trusted. Existing methods either sample multiple generations, read only output-token probabilities, or reduce the model's internal computation to a single hidden state.",
+    "topics": [],
+    "authors": [
+      "Jacopo Dardini",
+      "Roberta Calegari"
+    ],
+    "arxiv_id": "2609.11498",
+    "summary": null
   },
   {
     "id": "1ef5285e671d0ace",
