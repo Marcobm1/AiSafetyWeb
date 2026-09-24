@@ -1072,3 +1072,45 @@ Changed: `scripts/fetch_news.py`, `templates/base.html`, `static/css/style.css`,
 - The `ubuntu-latest` runner moves to Ubuntu 26 from 19 October 2026 (GitHub's
   notice in the run); nothing to change, Python comes from `setup-python`.
 - Stage 9: final documentation review.
+
+---
+
+## 2026-09-24 — Substack sources: new feeds, a one-time migration, Epoch paused
+
+**What I did**
+- **Redwood Research, Import AI and Zvi** now use feeds outside Substack,
+  which blocks GitHub's servers (403): `blog.redwoodresearch.org/feed`,
+  `jack-clark.net/feed/` and `thezvi.wordpress.com/feed/`. All three were
+  tested from GitHub Actions yesterday and carry the same posts.
+- **One-time migration** of saved entries to the new URLs, so the switch
+  doesn't bring back recent posts as repeats. Redwood needed nothing (its
+  Substack feed already linked to `blog.redwoodresearch.org`). Four entries
+  moved: one from Import AI and three from Zvi (their `id` recomputed from the
+  new URL). A simulation with the script's own functions showed, per source:
+  before, Import AI 1 of 1 "new" entries and Zvi 3 of 4 were repeats; after,
+  0 repeats. `fetch_news.py --dry-run`: 21 new entries before the migration,
+  17 after (0/14 sources failing).
+- **Epoch AI paused** with a new per-source option, `enabled: false`: a
+  paused source is not fetched, not in `status.json` and not listed on
+  About. I looked for a feed on `epoch.ai` itself (the page `<link>`s, its
+  sitemaps, the usual feed paths, the newsletter page) and found none: its
+  newsletter is only on Substack. So there was nothing official to test from
+  Actions.
+- HOW_THIS_SITE_WORKS §5.3, §9 and §11: the new feeds and why, the
+  migration, how to pause and reactivate a source, and step by step what to do
+  if another source starts answering 403 in Actions.
+
+**What I decided and why**
+- **Migrate instead of deduplicating by title within a source:** the title
+  check deliberately compares only *different* sources (OpenAI has two pages
+  with the same title). Changing that rule for a one-off switch would risk
+  merging real, different entries; moving four URLs once doesn't.
+- **Old entries not in the new feeds keep their Substack URLs:** they will
+  never be fetched again, so they can't repeat, and the links still work for
+  visitors.
+- **Pause rather than leave Epoch failing:** a source that fails every day
+  hides real problems in `status.json` and on About.
+
+**Files changed**
+`config/sources.yaml`, `scripts/fetch_news.py`, `scripts/build_site.py`,
+`data/news/2026-09.json`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.

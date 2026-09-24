@@ -533,7 +533,10 @@ def main() -> int:
     # --- 1. Fetch every source; one failure never stops the others ---------
     fetched: list[tuple[dict, list[dict]]] = []
     statuses = []
-    jobs = [(s, fetch_feed, s) for s in config["sources"]]
+    # A source with `enabled: false` is skipped entirely (not fetched, not in
+    # status.json); see the comment on it in sources.yaml for why.
+    sources = [s for s in config["sources"] if s.get("enabled", True)]
+    jobs = [(s, fetch_feed, s) for s in sources]
     if config.get("arxiv", {}).get("enabled"):
         jobs.append((ARXIV_SOURCE, fetch_arxiv, config["arxiv"]))
 
@@ -552,7 +555,7 @@ def main() -> int:
 
     # --- 2. Merge into the monthly files, skipping duplicates ---------------
     news = load_news()
-    seen = SeenIndex({s["id"] for s in config["sources"] if s.get("crossposts")})
+    seen = SeenIndex({s["id"] for s in sources if s.get("crossposts")})
     for month in news.values():
         for e in month:
             seen.add(e)

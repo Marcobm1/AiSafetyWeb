@@ -688,7 +688,7 @@ Keyword matching is simple and imperfect (a paper on "image-text alignment"
 counts as *alignment*). It's good enough for filtering and grouping; I can
 refine the lists at any time.
 
-### 5.3 The sources (checked 2026-09-23)
+### 5.3 The sources (checked 2026-09-23; Substack changes 2026-09-24)
 
 | id | Source | Filter |
 |---|---|---|
@@ -697,12 +697,12 @@ refine the lists at any time.
 | `lesswrong` | LessWrong | karma ≥ 30, on-topic only |
 | `ai-safety-newsletter` | AI Safety Newsletter (CAIS; its Substack, on the `newsletter.safe.ai` domain) | — |
 | `metr` | METR | — |
-| `redwood` | Redwood Research | — |
+| `redwood` | Redwood Research (its own domain, `blog.redwoodresearch.org`) | — |
 | `govai` | Centre for the Governance of AI | on-topic only |
 | `transformer` | Transformer | on-topic only |
-| `import-ai` | Import AI | — |
-| `zvi` | Don't Worry About the Vase | on-topic only |
-| `epoch` | Epoch AI | on-topic only |
+| `import-ai` | Import AI (Jack Clark's site, `jack-clark.net`) | — |
+| `zvi` | Don't Worry About the Vase (Zvi's WordPress copy, `thezvi.wordpress.com`) | on-topic only |
+| `epoch` | Epoch AI — **paused** (`enabled: false`, see below) | on-topic only |
 | `bluedot` | BlueDot Impact | on-topic only |
 | `openai` | OpenAI News | on-topic only |
 | `google-deepmind` | Google DeepMind | on-topic only |
@@ -724,14 +724,36 @@ Every URL was checked (HTTP 200 + a valid feed) before adding it.
   that `blog.google` leaves out, so I switched. From my work computer the
   `--dry-run` will show this one source as failing; that's expected, the daily
   run happens on GitHub's servers.
-- **Substack blocks GitHub's servers (found in Stage 8).** The four sources on
-  `*.substack.com` (Redwood Research, Import AI, Zvi, Epoch AI) answer
-  **403 Forbidden** to GitHub Actions, while from my home network, with the
-  same User-Agent, they work: Substack refuses requests from data-centre
-  addresses. Substack newsletters on their own domain (CAIS's
-  `newsletter.safe.ai`, Transformer) are not affected. Until I decide how to
-  replace them (see DEVLOG), those four show as failing in `status.json` and
-  on About, and the daily run carries on without them.
+- **Substack blocks GitHub's servers (found in Stage 8).** Feeds on
+  `*.substack.com` answer **403 Forbidden** to GitHub Actions, while from my
+  home network, with the same User-Agent, they work: Substack refuses
+  requests from data-centre addresses. Substack newsletters on their own
+  domain (CAIS's `newsletter.safe.ai`, Transformer) are not affected. So:
+  - **Redwood Research** → `blog.redwoodresearch.org/feed`, its own domain
+    (the Substack address redirects there).
+  - **Import AI** → `jack-clark.net/feed/`, Jack Clark's site, where
+    `importai.net` redirects; the same issues as the Substack.
+  - **Zvi** → `thezvi.wordpress.com/feed/`, his WordPress copy of every post.
+  - I tested all three from GitHub Actions (*check_feed*) and compared them
+    with the Substack feeds: the same posts (only the apostrophes differ).
+  - **One-time migration (2026-09-24):** entries already saved from Zvi and
+    Import AI had Substack URLs, so the new feeds would have added the four
+    most recent posts again under new URLs (the title check only compares
+    *different* sources). A one-off script matched saved entries to the new
+    feeds by title and moved them to the new URL (recomputing their `id`):
+    four entries. A `--dry-run` before it found 21 new entries (4 of them
+    repeats); after it, 17, with no repeats. Older entries that the new feeds
+    no longer list keep their Substack URL; nobody will fetch them again, and
+    the links still work for visitors (the block is only for data centres).
+  - **Epoch AI is paused** (`enabled: false` in `config/sources.yaml`): its
+    only feed is on Substack, and `epoch.ai` has none of its own (no
+    `<link rel="alternate">`, nothing in its sitemaps, `/rss.xml`,
+    `/feed.xml`, `/atom.xml`, `/blog/rss.xml`… are 404; its newsletter page
+    points to Substack). A paused source isn't fetched, isn't in
+    `status.json` and isn't listed on About; its old entries stay. **To
+    reactivate it:** find a feed that works, test it from Actions
+    (*Run workflow* → `check_feed`), put it in `url` and delete the
+    `enabled: false` line.
 - **`default_topics`:** a source can add fixed topics to all its entries. I use
   it for Transformer Circuits, whose titles ("HeadVis") often contain no keyword.
 
@@ -1312,8 +1334,11 @@ the files as they are instead of running its own site generator (Jekyll) on them
      line says `ok` and keeps a sensible number of items.
   5. Run it for real (or let the daily bot do it), update the source table in
      section 5.3, and commit.
-- **Remove or pause a source:** delete its block in `config/sources.yaml` (its
-  old entries stay in `data/news/`, which is fine), and update section 5.3.
+- **Remove or pause a source:** to pause it, add `enabled: false` to its block
+  in `config/sources.yaml` with a comment saying why (it's then not fetched,
+  not in `status.json` and not listed on About); to reactivate it, delete that
+  line. To remove it for good, delete the block. Either way its old entries
+  stay in `data/news/`, which is fine. Update section 5.3.
 - **Change the topic keywords or the arXiv phrases:** edit `topics:` or
   `arxiv.phrases` in `config/sources.yaml`, then check with `--dry-run`. New
   keywords only apply to entries fetched from then on; existing entries keep
@@ -1727,7 +1752,7 @@ until I merge.
 | The run fails with *"…must be pinned to a full-length commit SHA"* or *"…is not allowed to be used"* | A `uses:` line with a tag instead of a SHA, or an action not made by GitHub | Pin it to the full SHA (section 7.3) or use an official `actions/…` action |
 | The deploy job fails with a Pages error (404 or "Get Pages site failed") | Settings → Pages → Source is not "GitHub Actions" | Set it back to **GitHub Actions** (section 7.5) and re-run |
 | The published site shows unstyled pages or 404s for `/static/...` | A link or asset without the base path | Can't happen with a green build (the link check would fail); if it does, check `base_path` in `config/site.yaml` |
-| Redwood, Import AI, Zvi or Epoch fail with `403 Forbidden` only in GitHub Actions | Substack blocks requests from data-centre addresses (section 5.3) | Nothing to fix in the script; use an alternative feed of the same publication (test it with *check_feed*) or accept that source failing |
+| A source starts failing with `403 Forbidden` in GitHub Actions (but works from my computer) | The site blocks data-centre addresses, like Substack does (section 5.3) | 1. Confirm it: `python scripts\fetch_news.py --check-feed <URL>` works at home, and *Run workflow* with `check_feed` = the same URL fails with 403. 2. Look for another **official** feed of the same publication: its own domain (does the old address redirect somewhere?), the author's site or a WordPress/Ghost copy; check `<link rel="alternate">` and the usual paths. 3. Test each candidate from Actions with `check_feed`, and compare its newest titles with the old feed. 4. Switch `url` in `config/sources.yaml` with a comment saying why. 5. Before committing, check for repeats: saved entries from that source have the old URLs, so the most recent posts would come in again. Move the matching saved entries to the new URLs (as I did for Zvi and Import AI, section 5.3) and confirm with `--dry-run` that the new count only has genuinely new posts. 6. If there's no official alternative, pause it with `enabled: false` and a comment, so it doesn't fail every day |
 | A source keeps 0 items for days | Nothing new in 14 days, or `require_topic` filters everything out | Check the feed in a browser; adjust keywords or remove `require_topic` |
 
 ## 12. Possible future extensions

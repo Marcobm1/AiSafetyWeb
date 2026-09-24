@@ -817,7 +817,8 @@ def build() -> None:
 
     # --- About and 404 --------------------------------------------------------
     render(env, "about.html", "about/index.html",
-           sources=sources["sources"], arxiv=sources.get("arxiv", {}))
+           sources=[s for s in sources["sources"] if s.get("enabled", True)],
+           arxiv=sources.get("arxiv", {}))
     render(env, "404.html", "404.html")
 
     check_internal_links(site["base_path"])
