@@ -130,6 +130,15 @@ sources:
 # generic explainability. Measured on 2026-09-15..22: interpretability AND
 # safety = 12/week (mostly noise), AND alignment = 33 (noise: "cross-modal
 # alignment"...), so those were left out too.
+# Plain "misalignment" was removed on 2026-09-24 for the same reason: in papers
+# it often means misaligned sensors, images, channels or data. Measured on the
+# real week 2026-09-16..22: the old query returned 64 papers (31 relevant to AI
+# Safety, 4 doubtful, 29 not); this one returns 45 (the same 31 relevant, plus
+# one more relevant paper; 2 doubtful, 11 not). No relevant paper was lost.
+# A check of every saved arXiv entry (2026-09-13..23) found two relevant
+# papers only the old "misalignment" had caught (CoT-monitoring evasion,
+# inoculation training), so the three CoT-monitoring phrases and the
+# [inoculation, language model] combination were added for them.
 arxiv:
   enabled: true
   categories: [cs.AI, cs.LG, cs.CL]
@@ -146,7 +155,16 @@ arxiv:
     - dangerous capabilities
     - sandbagging
     - alignment faking
-    - misalignment
+    - emergent misalignment
+    - agentic misalignment
+    - AI misalignment
+    - misaligned AI
+    - misaligned model
+    - model misalignment
+    - goal misgeneralization
+    - chain-of-thought monitoring
+    - chain of thought monitoring
+    - CoT monitoring
     - AI control
     - AI governance
     - frontier AI
@@ -157,8 +175,64 @@ arxiv:
     - [interpretability, AI alignment]
     - [interpretability, deception]
     - [interpretability, deceptive]
+    - [misalignment, AI agent]
+    - [misalignment, human values]
+    - [inoculation, language model]
   max_results: 100
   pause_seconds: 3      # arXiv asks for at least 3 s between requests
+  # Stricter topic keywords for arXiv papers only (they replace the lists in
+  # `topics:` below for this source). In the blogs "alignment" means AI
+  # alignment; in papers it often means aligning images, sensors or data, so
+  # here it only counts in an AI sense. A list = all its terms must appear.
+  # Measured on 2026-09-16..22: papers tagged Alignment went from 32 (18 not
+  # about AI Safety) to 11 (2 borderline). Relevant papers that lost the tag
+  # kept their other topics.
+  topic_overrides:
+    alignment:
+      - AI safety
+      - AI alignment
+      - alignment research*
+      - alignment problem
+      - alignment faking
+      - alignment tax
+      - superalignment
+      - safety alignment
+      - value alignment
+      - aligned AI
+      - misaligned AI
+      - misaligned model*
+      - misaligned agent*
+      - misaligned LLM*
+      - misaligned checkpoint*
+      - AI misalignment
+      - model misalignment
+      - emergent misalignment
+      - emergent-misalign*
+      - agentic misalignment
+      - goal misgeneralization
+      - [alignment, RLHF]
+      - [alignment, human values]
+      - [alignment, human preferences]
+      - [alignment, reward model*]
+      - [misalign*, AI agent*]
+      - reward hacking
+      - RLHF
+      - constitutional AI
+      - scalable oversight
+      - deceptive alignment
+      - deceptive behavio*
+      - strategic deception
+      - scheming
+      - sycophan*
+      - specification gaming
+      - AI control
+      - corrigib*
+      - sandbagging
+      - superintelligen*
+      - AGI
+      - x-risk
+      - existential risk
+      - loss of control
 
 # Paper candidates (data/paper_candidates.json): new arXiv papers I might add
 # to the Library. Candidates older than this are deleted on every run.

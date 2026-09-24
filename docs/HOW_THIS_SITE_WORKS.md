@@ -682,11 +682,25 @@ feeds contain the whole post, and a long post mentions every topic in passing).
   match "agile".
 - A trailing `*` allows any ending: `misalign*` matches "misaligned" and
   "misalignment".
+- A keyword can also be a **list of terms that must all appear** somewhere in
+  the text: `[alignment, RLHF]` matches "alignment" only in a text that also
+  says "RLHF".
 - An entry can have several topics, or none.
+- **arXiv papers use stricter keywords for *alignment*** (`arxiv.topic_overrides`
+  in `config/sources.yaml`, which replace the normal list for that source
+  only). In the blogs I follow, "alignment" always means AI alignment; in
+  papers it often means aligning images, sensors, channels or data ("MAVP:
+  Map-Aware Visuomotor Policies" was tagged *Alignment* because of a
+  "misalignment" between a robot's base and arm). For arXiv, *alignment* needs
+  an AI sense: "AI alignment", "misaligned model", "emergent misalignment",
+  "reward hacking", `[alignment, RLHF]`, `[alignment, human values]`…
 
-Keyword matching is simple and imperfect (a paper on "image-text alignment"
-counts as *alignment*). It's good enough for filtering and grouping; I can
-refine the lists at any time.
+Keyword matching is still simple and imperfect, but good enough for filtering
+and grouping; I can refine the lists at any time. **Before changing them I
+measure** (section 5.4): applying the strict list to the blogs too would have
+removed the tag from real alignment posts ("Anthropic Looks At Some Of Its
+Alignment Problems", "Our framework for reporting model misalignment"), which
+is why it's for arXiv only.
 
 ### 5.3 The sources (checked 2026-09-23; Substack changes 2026-09-24)
 
@@ -776,6 +790,41 @@ So I keep "mechanistic interpretability" and "sparse autoencoder" as phrases
 and add the precise combinations under `arxiv.combinations`. The whole query
 went from 71 to 74 papers a week: most interpretability-and-safety papers were
 already caught by other phrases.
+
+**"misalignment" (2026-09-24).** The published home page showed papers such as
+"MAVP: Map-Aware Visuomotor Policies" and "EMGBlend" under *Alignment*: the
+query had the bare phrase "misalignment", which (with stemming) also finds
+"misaligned", and in papers that usually means misaligned sensors, images or
+data. I replaced it with AI-specific phrases ("emergent misalignment",
+"agentic misalignment", "AI misalignment", "misaligned AI", "misaligned
+model", "model misalignment", "goal misgeneralization") and two combinations
+(`[misalignment, AI agent]`, `[misalignment, human values]`). I measured the
+real week 2026-09-16 to 22 and read every paper to judge whether it was about
+AI Safety:
+
+| Query | Papers | Relevant | Doubtful | Not relevant |
+|---|---|---|---|---|
+| before | 64 | 31 | 4 | 29 |
+| after | 47 | 33 (the same 31 + 2 more) | 2 | 11 |
+| papers tagged *Alignment*: before → after | 32 → 11 | 12 → 9 | 2 → 0 | 18 → 2 |
+
+(The last row uses the stricter arXiv keywords of section 5.2; the relevant
+papers that lost the *Alignment* tag kept their other topics.)
+
+Then I checked **every arXiv entry already saved** (112, from 13 to 23
+September), asking arXiv which ones the new query matches (`search_query`
+plus `id_list` returns the intersection; the request is sent as POST because
+the id list makes it long). Two clearly relevant papers had only been caught
+by the bare "misalignment": one on evading chain-of-thought monitoring and
+one on inoculation training. So I added the phrases "chain-of-thought
+monitoring", "chain of thought monitoring" and "CoT monitoring" and the
+combination `[inoculation, language model]` (which also brought in two more
+relevant CoT-monitoring papers in the test week), and nothing relevant was
+lost. As a **one-time cleanup**, I removed the 36 saved papers the new query
+would never have fetched (from `data/news/2026-09.json` and from the
+candidates) and recomputed the topics of the rest from their full abstracts
+(7 news entries changed). The only borderline paper removed was "CAVEAT"
+(computer-use agents in environments with misaligned incentives).
 
 ## 6. Building and previewing the site locally
 

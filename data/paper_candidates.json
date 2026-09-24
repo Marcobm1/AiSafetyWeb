@@ -34,31 +34,6 @@
     "detected": "2026-09-24",
     "topics": []
   },
-  "arxiv:2609.27606": {
-    "id": "arxiv:2609.27606",
-    "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
-    "authors": [
-      "Qi Liu",
-      "Xiaoyang Yuan",
-      "Yubin Ruan",
-      "Zhuomeng Zhang",
-      "Wenjin Wang",
-      "Di Wu",
-      "Mingye Xu",
-      "Xinyi Mou",
-      "Xingxi Yin",
-      "Ke Feng",
-      "Zixun Sun"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27606",
-    "abstract": "We introduce State-Grounded Conditioning (SGC), a design principle for user-facing LLM agents that must condition on live user state (game state, session history, live inventory), and a distinct failure class we call direction drift: task-complete responses whose chosen direction misaligns with the current state. SGC…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
   "arxiv:2609.27572": {
     "id": "arxiv:2609.27572",
     "title": "DCRL: Decoupling and Coupling Reinforcement Learning via Policy-Reward Manifold Alignment",
@@ -120,48 +95,6 @@
       "evals"
     ]
   },
-  "arxiv:2609.27277": {
-    "id": "arxiv:2609.27277",
-    "title": "TimeEvo: Failure-Driven Self-Evolution of a Time Series Agent",
-    "authors": [
-      "Jie Yang",
-      "Yan Zheng",
-      "Jiarui Sun",
-      "Xiran Fan",
-      "Junpeng Wang",
-      "Liang Wang",
-      "Zelin Xu",
-      "Qinghua Liu",
-      "Zhengyu Fang",
-      "Yiwei Cai",
-      "Philip S. Yu"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27277",
-    "abstract": "Time series agents answer analytical questions by calling external tools, and which tools they carry is decided by people before the agent runs. However, we identify two failures in this setup.",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.27273": {
-    "id": "arxiv:2609.27273",
-    "title": "CAVEAT: Towards Robust Computer-Use Agents in Incentive-Misaligned Environments",
-    "authors": [
-      "Yuxuan Li",
-      "Will Epperson",
-      "Wesley Deng",
-      "Zezhou Huang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27273",
-    "abstract": "Computer-use agents (CUAs) increasingly act on behalf of users online. What happens when the environments they operate in have incentives that do not align with the user's?",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
   "arxiv:2609.26865": {
     "id": "arxiv:2609.26865",
     "title": "Safety Nudges: User-Facing Interventions for Real-Time AI Risk Awareness",
@@ -212,22 +145,6 @@
       "governance"
     ]
   },
-  "arxiv:2609.26378": {
-    "id": "arxiv:2609.26378",
-    "title": "MAVP: Map-Aware Visuomotor Policies for Mobile Manipulation",
-    "authors": [
-      "Jinhe Tang",
-      "Ruixiao Dai",
-      "Weiming Zhi"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.26378",
-    "abstract": "Successful mobile manipulation requires coordinated base and arm motion while maintaining accurate spatial positioning. However, demonstration-trained policies can struggle to realise the intended base motion reliably, leading to spatial misalignment and subsequent manipulation failures.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.25848": {
     "id": "arxiv:2609.25848",
     "title": "Optimizing the Score, Losing Sight of the Task: Reward Hacking Across Weights, Selection, and Prompts",
@@ -256,38 +173,6 @@
     "abstract": "Marketers now deploy generative AI agents as synthetic consumers to pretest visual assets such as logos, packaging, and advertising at a fraction of human-panel cost. However, this procedure assumes that a model seeing a visual cue can also perceive its consumer meaning, which is largely untested.",
     "detected": "2026-09-23",
     "topics": []
-  },
-  "arxiv:2609.25582": {
-    "id": "arxiv:2609.25582",
-    "title": "EMGBlend: Heterogeneity-Aware Self-Supervised Pretraining for Gesture and Force Decoding",
-    "authors": [
-      "Yuwei Jia",
-      "Cheng Zhong",
-      "Jinyang Yu",
-      "Zhe Cui"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.25582",
-    "abstract": "Public surface electromyography (EMG) datasets vary widely in electrode layout, channel count, frequency support, and size. Simply mixing them for pretraining can misalign channel semantics, introduce spectral targets that some devices cannot observe, and let large or high-channel-count datasets dominate learning.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.25575": {
-    "id": "arxiv:2609.25575",
-    "title": "Direct Optimization of Generators for Search in Automated Theorem Proving",
-    "authors": [
-      "Adam Ousherovitch",
-      "Ambuj Tewari"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.25575",
-    "abstract": "Fine-tuned Large Language Models (LLMs) significantly advance Automated Theorem Proving (ATP), but are often deployed as guiding policies within tree search rather than for single-attempt generation. Recent work shows cross entropy is suboptimal for an LLM used in flat search strategies such as aggregation or…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
   },
   "arxiv:2609.25518": {
     "id": "arxiv:2609.25518",
@@ -339,26 +224,6 @@
     "detected": "2026-09-23",
     "topics": [
       "alignment"
-    ]
-  },
-  "arxiv:2609.24921": {
-    "id": "arxiv:2609.24921",
-    "title": "BackTrend: Evaluating Scientific Weak-Signal Prediction via Backward Reconstruction",
-    "authors": [
-      "Xiao Zhou",
-      "Yilun Zhao",
-      "Owen Jiang",
-      "Tiansheng Hu",
-      "Cai Xu",
-      "Manasi Patwardhan",
-      "Arman Cohan"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.24921",
-    "abstract": "Scientific weak signals are early, low-visibility research directions that later become central to mature scientific topics, yet existing resources such as trend tracking, citation forecasting, and foresight reports rarely provide validated reference sets that link concrete early precursors to later paradigms. We…",
-    "detected": "2026-09-23",
-    "topics": [
-      "evals"
     ]
   },
   "arxiv:2609.24801": {
@@ -423,30 +288,6 @@
       "alignment"
     ]
   },
-  "arxiv:2609.24444": {
-    "id": "arxiv:2609.24444",
-    "title": "WPBench: A Comprehensive Benchmark for Wind Power Forecasting",
-    "authors": [
-      "Yuhan Zhu",
-      "Jilin Hu",
-      "Xinying Cai",
-      "Yingshan Li",
-      "Li Ma",
-      "Xiangfei Qiu Linsen Li",
-      "Kai Zhang",
-      "Yao Fu",
-      "Weihao Jiang",
-      "Bin Yang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.24444",
-    "abstract": "Accurate, reliable, and deployable wind power forecasting is critical for power system dispatch, renewable energy integration, and electricity market operations. Progress in this field hinges on the ability to empirically and comprehensively benchmark forecasting methods.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
   "arxiv:2609.24440": {
     "id": "arxiv:2609.24440",
     "title": "Comparing Latent Concept Formation in State Space Models and Transformers via Sparse Autoencoders",
@@ -480,22 +321,6 @@
       "interpretability"
     ]
   },
-  "arxiv:2609.24372": {
-    "id": "arxiv:2609.24372",
-    "title": "URA-NER: A Unified Retrieval-Augmented Framework with Retrieval Alignment and Uncertainty Reduction for Low-Resource NER",
-    "authors": [
-      "Jingyu Wang",
-      "Shijie Wu",
-      "Fusheng Jin"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.24372",
-    "abstract": "In-context learning (ICL) based on large language models (LLMs) has shown promising potential in alleviating performance bottlenecks caused by the limited availability of annotated data in Named Entity Recognition (NER). However, existing methods still face issues of retrieval misalignment and generation uncertainty…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.24369": {
     "id": "arxiv:2609.24369",
     "title": "DeceptionAnalyser: A Web-Based AI Tool for Performing Structured Deception Analysis with Argumentation Schemes and LLMs",
@@ -509,9 +334,7 @@
     "url": "https://arxiv.org/abs/2609.24369",
     "abstract": "Deception plays a central role in Intelligence operations, yet it remains difficult to analyse systematically without expert knowledge of reasoning patterns and cognitive manipulation. In computational argumentation, for instance, no scheme-level ground-truth corpora currently exist to support statistical validation.",
     "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
+    "topics": []
   },
   "arxiv:2609.24243": {
     "id": "arxiv:2609.24243",
@@ -531,23 +354,6 @@
     "detected": "2026-09-23",
     "topics": [
       "interpretability"
-    ]
-  },
-  "arxiv:2609.24127": {
-    "id": "arxiv:2609.24127",
-    "title": "Action-Slot: Structured Action-Centric Representation Learning for Multi-Agent Atomic Activity Understanding",
-    "authors": [
-      "Yu-Ho Chang",
-      "Chi-Hsi Kung",
-      "Yi-Hsuan Tsai",
-      "Yi-Ting Chen"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.24127",
-    "abstract": "Atomic activity understanding aims to recognize and localize structured traffic behaviors that jointly encode motion patterns and their grounding in road topology. Unlike conventional action recognition, atomic activities are multi-agent, multi-label, and topology-aware: multiple activities co-occur while many agents…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
     ]
   },
   "arxiv:2609.24016": {
@@ -583,25 +389,6 @@
     "topics": [
       "evals",
       "governance"
-    ]
-  },
-  "arxiv:2609.23999": {
-    "id": "arxiv:2609.23999",
-    "title": "Misaligned Clinical Risk Classification and Cost Asymmetry in Open-Weight Large Language Models",
-    "authors": [
-      "Star S. D. Liu",
-      "Xiyu Ding",
-      "Robert B. Barrett",
-      "Alberto Santamaria-Pang",
-      "Nic Dobbins",
-      "Harold P. Lehmann"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.23999",
-    "abstract": "How large language models (LLMs) integrate patient risk with clinical cost tradeoffs remains poorly understood. We investigated how four open-weight LLMs (Qwen-2.5-7B/32B and Llama-3.1-8B/70B) internally represent cost tradeoffs, how these representations relate to clinical predictions, and whether decisions shift as…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
     ]
   },
   "arxiv:2609.23954": {
@@ -652,28 +439,6 @@
       "interpretability"
     ]
   },
-  "arxiv:2609.23753": {
-    "id": "arxiv:2609.23753",
-    "title": "OnlineWM: Causality-Aware Active Online Learning for Effective World Modeling",
-    "authors": [
-      "Yikun Miao",
-      "Fangqi Zhu",
-      "Quanxin Shou",
-      "Xiaoyi Pang",
-      "Zhengyang Yan",
-      "Junhao Li",
-      "Haodong Wang",
-      "Zicong Hong",
-      "Song Guo"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.23753",
-    "abstract": "Generative world models aim to predict future states conditioned on actions, where action controllability is fundamental for reliable dynamics modeling. While recent efforts leverage simulator-generated data to enhance this capability, existing training pipelines face two fundamental limitations.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.23587": {
     "id": "arxiv:2609.23587",
     "title": "On the Efficiency-Safety Dilemma in Large Reasoning Models",
@@ -694,42 +459,6 @@
       "security"
     ]
   },
-  "arxiv:2609.23442": {
-    "id": "arxiv:2609.23442",
-    "title": "PhysReflect: Geometry and Perception Guided Diffusion for Physically-Plausible Mirror Reflections",
-    "authors": [
-      "Shuheng Ge",
-      "Hongwei Ren",
-      "Li Zhang",
-      "Xiangqian Wu"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.23442",
-    "abstract": "Diffusion models generate high-quality images, yet often violate the physical laws governing mirror reflections. Reflections often suffer from geometric aberrations, including positional offsets, directional misalignment, proportional imbalance, and structural distortion.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.23267": {
-    "id": "arxiv:2609.23267",
-    "title": "Knowing When to Trust Images: Reliability-Aware Multi-modal Entity Alignment",
-    "authors": [
-      "Chenxiao Li",
-      "Yunhe Feng",
-      "Dongfang Liu",
-      "Dong Nie",
-      "Yan Huang",
-      "Heng Fan"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.23267",
-    "abstract": "The visual modality, i.e., images, plays a key role in multi-modal entity alignment (MMEA). Existing approaches often directly fuse the image with other modalities to align different entities.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.23065": {
     "id": "arxiv:2609.23065",
     "title": "From Concept Alignment to Causal Grounding: An Intervention Test of Chain-of-Thought Faithfulness",
@@ -747,7 +476,6 @@
     "abstract": "Chain-of-thought (CoT) can sound plausible yet be unfaithful to the model's underlying reasoning. Most prior work probes CoT faithfulness through input--output behavior or input attributions, leaving internal computation largely underexplored.",
     "detected": "2026-09-23",
     "topics": [
-      "alignment",
       "interpretability"
     ]
   },
@@ -794,40 +522,7 @@
     "abstract": "Technology cannot steer itself. Strategy provides that steering, establishing the rule that purpose and judgment must precede compute capital.",
     "detected": "2026-09-23",
     "topics": [
-      "alignment",
       "governance"
-    ]
-  },
-  "arxiv:2609.22836": {
-    "id": "arxiv:2609.22836",
-    "title": "A Hybrid Attention Model Learning Unified Time-aware Patch Representation for Irregular Multivariate Time Series Forecasting",
-    "authors": [
-      "Zhihao Lin",
-      "Li Lin",
-      "Qi Zhang",
-      "Kaiwen Xia",
-      "Shuai Wang",
-      "Jialin Qiao"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.22836",
-    "abstract": "Time series foundation models (TSFMs) have recently delivered impressive zero-shot performance across diverse forecasting tasks. However, real-world decision-making frequently relies on \\emph{irregular multivariate time series} (IMTS), where inconsistent inter-observation intervals and asynchronous sampling across…",
-    "detected": "2026-09-23",
-    "topics": []
-  },
-  "arxiv:2609.22008": {
-    "id": "arxiv:2609.22008",
-    "title": "DiaVLo: Diagnosing Behaviours of Vision-Language Models",
-    "authors": [
-      "Lorenzo Corti",
-      "Jie Yang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.22008",
-    "abstract": "Vision-language models (VLMs) rely on storing and transferring appropriate information across their sub-components. Verifying that the VLMs exhibit desired behaviours, while avoiding harmful ones, is central to their reliable deployment.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
     ]
   },
   "arxiv:2609.21996": {
@@ -858,58 +553,6 @@
     "topics": [
       "evals",
       "security"
-    ]
-  },
-  "arxiv:2609.21735": {
-    "id": "arxiv:2609.21735",
-    "title": "GEM-MPC: Balancing Exploration and Exploitation through Expert-Guided Planning",
-    "authors": [
-      "Alvaro Serra-Gomez",
-      "Thomas Moerland"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.21735",
-    "abstract": "Effective exploration in high-dimensional continuous control remains a central challenge in reinforcement learning. Planning-based methods address this by combining online planning with learned policies and value functions, but their components can become misaligned during training: learned sampling policies may…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.21626": {
-    "id": "arxiv:2609.21626",
-    "title": "One Prompt Does Not Fit All: Self-Meta-Evolve for Personalized Information Extraction",
-    "authors": [
-      "Hongliang Li",
-      "Lu Wang",
-      "Yong Xu",
-      "Hanyang Chen",
-      "Zhitao Hou",
-      "Xiaoting Qin",
-      "Song Ge",
-      "Qingwei Lin",
-      "Dongmei Zhang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.21626",
-    "abstract": "Large language models (LLMs) are increasingly deployed for enterprise information extraction (IE), where the same document must be reorganized differently for each user. Existing prompt optimization methods, however, rely on a single prompt optimized against a global objective, which is misaligned with the inherent…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.21600": {
-    "id": "arxiv:2609.21600",
-    "title": "Reducing Barriers to Academic Support: Evaluating a Course-Specific RAG System for Addressing Help-Seeking Disparities in Higher Education",
-    "authors": [
-      "Andy Gray",
-      "Jake Hobbs"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.21600",
-    "abstract": "Access to academic support is a key determinant of student success, yet students experience it unequally: some readily seek help from lecturers or tutors, while others hesitate due to anxiety, fear of judgement, uncertainty about expectations, or low confidence in their understanding. This may be especially evident in…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
     ]
   },
   "arxiv:2609.21484": {
@@ -981,7 +624,6 @@
     "abstract": "Large language models are usually interpreted through concepts that humans already possess: truthfulness, refusal, deception, personality, harmfulness, and related categories. This paper asks whether models may also represent and use distinctions for which no adequate human concept exists.",
     "detected": "2026-09-23",
     "topics": [
-      "alignment",
       "interpretability"
     ]
   },
@@ -998,9 +640,7 @@
     "url": "https://arxiv.org/abs/2609.20336",
     "abstract": "Deceptive online job advertisements have emerged as a primary pathway into forced labour, yet systematic detection methods remain underdeveloped due to data scarcity and absence of empirically validated indicators. We formalise this detection challenge as a classification problem under signalling theory, where…",
     "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
+    "topics": []
   },
   "arxiv:2609.20143": {
     "id": "arxiv:2609.20143",
@@ -1014,32 +654,6 @@
     "year": 2026,
     "url": "https://arxiv.org/abs/2609.20143",
     "abstract": "Cognitive offloading to AI can reduce opportunities to practice skills, creating risks of deskilling. However, it remains unclear how to prevent deskilling without restricting access to AI.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.20130": {
-    "id": "arxiv:2609.20130",
-    "title": "AdaRepair-Mem: Adaptive Experience Orchestration for Repository-Level Program Repair",
-    "authors": [
-      "Z. C. Luo",
-      "J. C. Guo",
-      "W. J. He",
-      "S. Y. Wang",
-      "J. C. Yu",
-      "F. M. Zhao",
-      "Y. Chen",
-      "T. Cao",
-      "L. Q. Liu",
-      "N. Zheng",
-      "W. Xu",
-      "J. Jiang",
-      "Z. M. Zhao"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.20130",
-    "abstract": "Recent memory-augmented repository-level program repair methods reuse historical repair experiences to improve LLM-based issue resolution. However, our analysis reveals three limitations in existing repository-level memory retrieval.",
     "detected": "2026-09-23",
     "topics": [
       "alignment"
@@ -1059,25 +673,6 @@
     "abstract": "Deployment-time safety methods for large language models (LLMs) are predominantly supervised and assume access to unsafe training data. Nevertheless, new attacks and harm categories regularly arise, not captured by models trained in such a supervised fashion.",
     "detected": "2026-09-23",
     "topics": []
-  },
-  "arxiv:2609.20082": {
-    "id": "arxiv:2609.20082",
-    "title": "MATCH: Model-Aware Tool Learning with Curriculum Scheduling and Hierarchically Gated Rewards",
-    "authors": [
-      "Shihao Liu",
-      "Hao Yin",
-      "Lijun Liu",
-      "Zhengzong Chen",
-      "Yuanyuan Zhao",
-      "Fei Huang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.20082",
-    "abstract": "Tool learning enables large language models (LLMs) to use external tools for tasks beyond parametric knowledge. Reinforcement learning can optimize tool-call behavior from feedback, but current methods still face two problems: fixed-threshold curricula can become misaligned with the policy's evolving capability…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
   },
   "arxiv:2609.19866": {
     "id": "arxiv:2609.19866",
@@ -1121,25 +716,9 @@
     "abstract": "To keep coding agents from going off the rails, production systems now review each proposed action with a blocking monitor that can reject it before it runs (Auto Mode in Claude Code, Guardian in OpenAI's Codex). Prior evaluations of such monitors largely measure robustness to accidental harm or prompt injections from…",
     "detected": "2026-09-23",
     "topics": [
-      "alignment",
       "evals",
       "security"
     ]
-  },
-  "arxiv:2609.19213": {
-    "id": "arxiv:2609.19213",
-    "title": "Layer-wise Curriculum Learning for Efficient LLM Compression",
-    "authors": [
-      "Donggeon Lee",
-      "Dooyeon Na",
-      "Seungmin Oh",
-      "Jongbin Ryu"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.19213",
-    "abstract": "In this paper, we introduce layer-wise curriculum learning for efficient LLM compression. The proposed method facilitates the knowledge transfer from the teacher model to the student model, utilizing a curriculum learning approach that begins with easier optimization tasks and progressively tackles harder ones.",
-    "detected": "2026-09-23",
-    "topics": []
   },
   "arxiv:2609.19101": {
     "id": "arxiv:2609.19101",
@@ -1243,23 +822,6 @@
     "detected": "2026-09-23",
     "topics": []
   },
-  "arxiv:2609.18163": {
-    "id": "arxiv:2609.18163",
-    "title": "Time-Aligned Evolving Concept Graphs for Scientific Relation Forecasting",
-    "authors": [
-      "Fred Sun",
-      "Jingze Wang",
-      "Minkun Xu",
-      "Shangqi Guo"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.18163",
-    "abstract": "Forecasting scientific relations can guide discovery by identifying promising connections before they emerge. Existing approaches often model concept semantics and graph structure separately or summarize semantics over coarse historical snapshots, leaving semantic representations potentially misaligned with rapidly…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.18080": {
     "id": "arxiv:2609.18080",
     "title": "Decodability is Not Causality: Dissociating Probe Readouts from Behavioral Drivers via SAE Decomposition",
@@ -1322,53 +884,6 @@
     "abstract": "Vision Transformers (ViTs) are central to most modern vision models, yet obtaining input attributions that are fine-grained, faithful, and stable remains challenging. Layer-wise Relevance Propagation (LRP) has been adapted to transformer attention, but in ViTs it often produces noisy, unfaithful explanations.",
     "detected": "2026-09-23",
     "topics": []
-  },
-  "arxiv:2609.16878": {
-    "id": "arxiv:2609.16878",
-    "title": "VOR-Bench: A Human Perception-Driven Benchmark for Video Object Removal",
-    "authors": [
-      "Haonan Huang",
-      "Tianrui Qiu",
-      "Xianghao Zang",
-      "Yinan Du",
-      "Zhixiang He",
-      "Chi Zhang",
-      "Hao Sun",
-      "Zhongjiang He",
-      "Tianwei Cao",
-      "Xuchong Zhang",
-      "Hongbin Sun",
-      "Kongming Liang",
-      "Zhanyu Ma"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.16878",
-    "abstract": "Despite its crucial role in video object removal (VOR), existing evaluation paradigms face two critical limitations: questionable references and a misalignment between tradi- tional metrics and human preference. To address these challenges, we introduce VOR- Bench, which advances VOR evaluation through three…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
-  "arxiv:2609.16832": {
-    "id": "arxiv:2609.16832",
-    "title": "What Breaks Local Watermarks? A Robustness Benchmark for Local Invisible Image Watermarking",
-    "authors": [
-      "Kai Yao",
-      "Bence Szilágyi",
-      "Sebestyén Kamp",
-      "Máté Poór",
-      "Máté Szilveszter",
-      "Matyas K. Zsoldos",
-      "Marc Juarez"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.16832",
-    "abstract": "Local image watermarking embeds an invisible signal into selected image regions rather than spreading it across the entire image, enabling payload recovery from specific objects or regions without perceptibly altering the image. Existing studies evaluate the robustness of payload recovery and localization under image…",
-    "detected": "2026-09-23",
-    "topics": [
-      "evals"
-    ]
   },
   "arxiv:2609.16777": {
     "id": "arxiv:2609.16777",
@@ -1475,20 +990,6 @@
     "detected": "2026-09-23",
     "topics": []
   },
-  "arxiv:2609.16366": {
-    "id": "arxiv:2609.16366",
-    "title": "How Humans and LLMs Read Gender into \"Gender-Neutral\" Physical Descriptions",
-    "authors": [
-      "Yingjia Wan",
-      "Lin Lin",
-      "Elisa Kreiss"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.16366",
-    "abstract": "When foundation models describe people, recent work in AI fairness, accessibility, and ethics recommends avoiding inferred identity labels (e.g., \"she\", \"his\") in favor of seemingly \"objective\" physical descriptions (e.g., \"short hair\", \"a defined jawline\"). Yet whether such descriptive language achieves…",
-    "detected": "2026-09-23",
-    "topics": []
-  },
   "arxiv:2609.16260": {
     "id": "arxiv:2609.16260",
     "title": "Mapping U.S. Federal AI Governance Against Sector Vulnerability",
@@ -1561,26 +1062,8 @@
     "abstract": "Chain-of-thought (CoT) monitoring is a safety strategy where the reasoning of a large language model \"actor\" is inspected by a \"monitor\" (often another language model) for signs of unsafe planning, deception, or misalignment. We find that planting harmful but benign-sounding reasoning in the actor's context can steer…",
     "detected": "2026-09-23",
     "topics": [
-      "alignment",
       "interpretability",
       "security"
-    ]
-  },
-  "arxiv:2609.15950": {
-    "id": "arxiv:2609.15950",
-    "title": "Privacy-Aligned Personalized Federated Learning with Compact Adaptation and Variable-Length Gaussian Communication",
-    "authors": [
-      "Yilin Xu",
-      "Chun Hei Michael Shiu",
-      "Chih Wei Ling",
-      "Linqi Song"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15950",
-    "abstract": "Record-level differential privacy exposes a structural misalignment in personalized federated learning when client-specific variation is low-dimensional while training repeatedly releases high-dimensional updates. In this paper, we address this misalignment by releasing a private client context once and confining…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
     ]
   },
   "arxiv:2609.15886": {
@@ -1601,20 +1084,6 @@
     "detected": "2026-09-23",
     "topics": []
   },
-  "arxiv:2609.15825": {
-    "id": "arxiv:2609.15825",
-    "title": "Sharp Rates and a One-Line Correction for Spectral Representation Learning",
-    "authors": [
-      "Dier Tang",
-      "Jing Yee Tan",
-      "Guangyue Han"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15825",
-    "abstract": "A self-supervised encoder is trained once, frozen, and reused through lightweight probes on tasks nobody named at training time; the practitioner's question is when the off-the-shelf features are good enough and when they need fixing. Canonical correlation analysis, HGR maximal correlation, and the population optimum…",
-    "detected": "2026-09-23",
-    "topics": []
-  },
   "arxiv:2609.15803": {
     "id": "arxiv:2609.15803",
     "title": "Delegating Authorization to Misaligned Agents: Coalitional Alignment and Safe Control",
@@ -1631,40 +1100,6 @@
     "topics": [
       "alignment"
     ]
-  },
-  "arxiv:2609.15740": {
-    "id": "arxiv:2609.15740",
-    "title": "A Language-Guided Multimodal Foundation Model for Zero-Shot and Multi-Task Brain Signal Analysis",
-    "authors": [
-      "Mingzhi Chen",
-      "Yiyu Gui",
-      "Guibo Luo",
-      "Yuchao Yang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15740",
-    "abstract": "Brain signal analysis is essential for both neuroscience research and clinical diagnostics, yet current approaches face critical limitations. End-to-end models require task-specific retraining and exhibit limited generalization, while pre-trained models lack semantic depth and still depend on extensive fine-tuning.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.15643": {
-    "id": "arxiv:2609.15643",
-    "title": "Principal-timestep Restricted Init via Sparse Matrix-decomposition in Flow-matching",
-    "authors": [
-      "Jiayang Gu",
-      "Zheng Fang",
-      "Lichaun Xiang",
-      "Fanghui Liu",
-      "Xu Cai",
-      "Hongkai Wen"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15643",
-    "abstract": "Flow-matching diffusion models have recently emerged as a strong paradigm for high-fidelity visual generation. However, their prohibitively high fine-tuning cost limits scalability to downstream tasks.",
-    "detected": "2026-09-23",
-    "topics": []
   },
   "arxiv:2609.15533": {
     "id": "arxiv:2609.15533",
@@ -1747,28 +1182,6 @@
       "interpretability"
     ]
   },
-  "arxiv:2609.15087": {
-    "id": "arxiv:2609.15087",
-    "title": "Beyond Numerical Time Series: A Unified Benchmark for Multimodal Forecasting with Heterogeneous Context",
-    "authors": [
-      "Peng Chen",
-      "Zhihao Zhuang",
-      "Hongzhou Chen",
-      "Junhao Huang",
-      "Aiping Yang",
-      "Mengsen Wu",
-      "Yiding Liu",
-      "Xilin Dai",
-      "Zewei Dong"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15087",
-    "abstract": "Most time series forecasting benchmarks remain numerical-centric and provide limited support for evaluating contextual information that shapes real-world temporal dynamics. Existing multimodal benchmarks also suffer from limited data and context coverage, fragmented evaluation settings, and overreliance on aggregate…",
-    "detected": "2026-09-23",
-    "topics": [
-      "evals"
-    ]
-  },
   "arxiv:2609.15064": {
     "id": "arxiv:2609.15064",
     "title": "What Does an LLM Learn from Reinforcement Learning? A Mechanistic Interpretability Perspective with Fixed-SAE Track",
@@ -1786,23 +1199,6 @@
       "interpretability"
     ]
   },
-  "arxiv:2609.15045": {
-    "id": "arxiv:2609.15045",
-    "title": "Mirror, Mirror on the Wall: Prompt Echoing in Small Instruct Language Models",
-    "authors": [
-      "Inez Okulska",
-      "Bartosz Naskręcki",
-      "Jan Piotrowski",
-      "Tomasz Steifer"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.15045",
-    "abstract": "Prompt echoing is a recognized failure mode of instruct language models, in which a model instead of generating a response, mirrors the provided prompt, even though it did not receive a specific instruction to do so. Is this phenomenon a sign of the model leaking the content of its training dataset, or is it rather…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
   "arxiv:2609.14998": {
     "id": "arxiv:2609.14998",
     "title": "Shallow Beliefs: Synthetic document finetuning does not inoculate against emergent misalignment from reward hacking",
@@ -1817,22 +1213,6 @@
     "topics": [
       "alignment"
     ]
-  },
-  "arxiv:2609.14902": {
-    "id": "arxiv:2609.14902",
-    "title": "Shapley Value Estimation for Multi-Site Data with Blockwise-Missing Features",
-    "authors": [
-      "Siqi Li",
-      "Wangxuan Fan",
-      "Yiming Li",
-      "Doudou Zhou",
-      "Molei Liu"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.14902",
-    "abstract": "Shapley value (SV)-based methods are the prevailing framework for feature attribution in machine learning, yet existing population-level Shapley estimators generally assume that observations used to evaluate the coalitional game are fully observed under a common feature space. This assumption is routinely violated in…",
-    "detected": "2026-09-23",
-    "topics": []
   },
   "arxiv:2609.14896": {
     "id": "arxiv:2609.14896",
@@ -1850,9 +1230,7 @@
     "url": "https://arxiv.org/abs/2609.14896",
     "abstract": "A notable byproduct of LLM alignment training is mode collapse: the progressive loss of output diversity that narrows a model's expressivity at inference time. This degradation is especially limiting for applications requiring open-ended exploration and pluralistic perspectives, such as scientific ideation and…",
     "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
+    "topics": []
   },
   "arxiv:2609.14843": {
     "id": "arxiv:2609.14843",
@@ -1867,23 +1245,6 @@
     "abstract": "AI companions provide socially engaging interaction through availability, personalization, memory, roleplay, and emotionally responsive language. For teens, these systems may support sensitive self-disclosure, identity exploration, and relationship rehearsal while shaping intimacy expectations, offline relationships…",
     "detected": "2026-09-23",
     "topics": []
-  },
-  "arxiv:2609.14833": {
-    "id": "arxiv:2609.14833",
-    "title": "One Model, Two Physical Stories: Auditing Misalignment in Multi-Modal World Modeling",
-    "authors": [
-      "Geigh Zollicoffer",
-      "Minh Vu",
-      "Rajiv Ranasinghe",
-      "Manish Bhattarai"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.14833",
-    "abstract": "World models, systems that generate what happens next given current environmental conditions, are increasingly being implemented with multi-modal generation in mind. However, generating multiple modalities simultaneously, such as visual simulations alongside physical state predictions in the form of text, introduces…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
   },
   "arxiv:2609.14803": {
     "id": "arxiv:2609.14803",
@@ -1914,40 +1275,6 @@
     "year": 2026,
     "url": "https://arxiv.org/abs/2609.14648",
     "abstract": "Aligning multi-turn dialogue agents is usually framed as matching turn-level human preferences, yet direct optimization of long-term outcomes is often ineffective and prone to reward hacking. We formulate long-horizon dialogue optimization as a multi-objective reinforcement learning problem and train a multi-head…",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.14646": {
-    "id": "arxiv:2609.14646",
-    "title": "CompCQR: Compositional Query Generation for Training-Free Conversational Search",
-    "authors": [
-      "Yunah Jang",
-      "Kang-il Lee",
-      "Joongbo Shin",
-      "Kyomin Jung"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.14646",
-    "abstract": "Multi-turn interactions with LLMs are becoming increasingly common in information-seeking scenarios. However, user queries are often ambiguous and context-dependent, making them ill-suited for direct use as retriever queries.",
-    "detected": "2026-09-23",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.14595": {
-    "id": "arxiv:2609.14595",
-    "title": "Diagnosing Temporal Misalignment in Multichannel Time-Series Classification with Minimum Description Length",
-    "authors": [
-      "Sebastian Buschjäger",
-      "Michael Frichert",
-      "Daniel Kuhe",
-      "Jian-Jia Chen"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.14595",
-    "abstract": "Multichannel time-series classification commonly assumes synchronized sensor streams, although latency, clock drift, and preprocessing can introduce relative delays during data collection or after deployment. Existing synchronization solutions are often hardware-specific and difficult to apply retrospectively.",
     "detected": "2026-09-23",
     "topics": [
       "alignment"

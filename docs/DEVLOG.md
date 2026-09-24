@@ -1114,3 +1114,50 @@ Changed: `scripts/fetch_news.py`, `templates/base.html`, `static/css/style.css`,
 **Files changed**
 `config/sources.yaml`, `scripts/fetch_news.py`, `scripts/build_site.py`,
 `data/news/2026-09.json`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+---
+
+## 2026-09-24 — Less noise from arXiv: a stricter query and AI-only "alignment"
+
+**What I did**
+- On the published home page, at least 3 of the day's 8 arXiv papers weren't
+  about AI Safety and were tagged *Alignment* ("MAVP: Map-Aware Visuomotor
+  Policies", "EMGBlend"...): "misalignment" there meant misaligned robot parts,
+  sensors or data.
+- **Query:** removed the bare phrase "misalignment" and added AI-specific
+  phrases and combinations (HOW_THIS_SITE_WORKS §5.4).
+- **Topics:** `TopicMatcher` now accepts a keyword that is a list of terms
+  that must all appear (`[alignment, RLHF]`), and arXiv papers use a stricter
+  *alignment* list (`arxiv.topic_overrides`). The blogs keep the normal list.
+- **One-time cleanup** of saved data: 36 arXiv papers removed (news and
+  candidates) and topics recomputed from full abstracts.
+
+**How I measured it** (the real week 2026-09-16..22, every paper read and
+judged relevant, doubtful or not)
+- Before: 64 papers (31 relevant, 4 doubtful, 29 not); 32 tagged *Alignment*,
+  18 of them not about AI Safety.
+- After: 47 papers (33 relevant: the same 31 plus 2; 2 doubtful; 11 not);
+  11 tagged *Alignment*, 2 borderline.
+- A check of all 112 saved arXiv entries (13–23 September) found two relevant
+  papers that only the bare "misalignment" had caught (CoT-monitoring evasion,
+  inoculation training); I added "chain-of-thought monitoring", "CoT
+  monitoring" and `[inoculation, language model]` for them, and re-checked:
+  nothing relevant lost. Only one borderline paper was removed ("CAVEAT").
+- Applying the strict *alignment* list to the blogs as well would have
+  removed the tag from real posts (Zvi's "Anthropic Looks At Some Of Its
+  Alignment Problems", OpenAI's "Our framework for reporting model
+  misalignment"), so it applies to arXiv only.
+- `fetch_news.py --dry-run` after the change: 0/14 sources failing; the build
+  passes (122 news entries after the cleanup).
+
+**What I decided and why**
+- **Remove, not just re-tag, the old noise:** the home page and the archive
+  should look as if the new query had always been in place; the removed
+  papers are listed in the check output and remain in Git history.
+- **Known leftover:** "AI control" also matches "no-AI control" (one
+  education paper in the test week). Fixing it would change how every keyword
+  is matched, so I left it.
+
+**Files changed**
+`config/sources.yaml`, `scripts/fetch_news.py`, `data/news/2026-09.json`,
+`data/paper_candidates.json`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.

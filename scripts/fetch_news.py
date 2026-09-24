@@ -228,22 +228,27 @@ class TopicMatcher:
     """Assigns topics to a text using the keyword lists in sources.yaml.
 
     Keywords match whole words, case insensitive. A trailing * allows any
-    ending ("misalign*" matches "misaligned" and "misalignment").
+    ending ("misalign*" matches "misaligned" and "misalignment"). A keyword
+    can also be a list of terms that must ALL appear somewhere in the text:
+    [alignment, RLHF] matches "alignment" only next to "RLHF".
     """
 
-    def __init__(self, topics: dict[str, list[str]]):
-        self.patterns = {}
+    def __init__(self, topics: dict[str, list]):
+        self.rules = {}   # topic -> list of rules; a rule = patterns that must all match
         for topic, keywords in topics.items():
-            parts = []
-            for keyword in keywords:
-                prefix = keyword.endswith("*")
-                word = re.escape(keyword.rstrip("*"))
-                parts.append(rf"(?<!\w){word}" + ("" if prefix else r"(?!\w)"))
-            self.patterns[topic] = re.compile("|".join(parts), re.IGNORECASE)
+            self.rules[topic] = [[self._pattern(term) for term in (k if isinstance(k, list) else [k])]
+                                 for k in keywords]
+
+    @staticmethod
+    def _pattern(keyword: str) -> re.Pattern:
+        prefix = keyword.endswith("*")
+        word = re.escape(keyword.rstrip("*"))
+        return re.compile(rf"(?<!\w){word}" + ("" if prefix else r"(?!\w)"), re.IGNORECASE)
 
     def match(self, text: str) -> list[str]:
-        """Topics whose keywords appear in the text, in config order."""
-        return [topic for topic, pattern in self.patterns.items() if pattern.search(text)]
+        """Topics with at least one rule whose terms all appear, in config order."""
+        return [topic for topic, rules in self.rules.items()
+                if any(all(p.search(text) for p in rule) for rule in rules)]
 
 
 # ---------------------------------------------------------------------------
@@ -524,6 +529,9 @@ def main() -> int:
         return check_feed(args.check_feed, config)
     settings = config["settings"]
     matcher = TopicMatcher(config["topics"])
+    # arXiv papers use stricter keywords for some topics (arxiv.topic_overrides):
+    # in papers "alignment" often means aligning images, sensors or data.
+    arxiv_matcher = TopicMatcher({**config["topics"], **config.get("arxiv", {}).get("topic_overrides", {})})
     now = datetime.now(timezone.utc)
     cutoff = now - timedelta(days=settings["max_age_days"])
 
@@ -544,7 +552,8 @@ def main() -> int:
         status = {"id": source["id"], "name": source["name"], "status": "ok",
                   "items_in_feed": 0, "kept": 0, "new": 0, "error": None}
         try:
-            entries, total = fetch(source_config, session, settings, matcher, cutoff, now)
+            entries, total = fetch(source_config, session, settings,
+                                   arxiv_matcher if source is ARXIV_SOURCE else matcher, cutoff, now)
             status.update(items_in_feed=total, kept=len(entries))
             fetched.append((source, entries))
             log.info("ok    %-22s %3d in feed, %3d kept", source["id"], total, len(entries))
