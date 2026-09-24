@@ -1,4 +1,186 @@
 {
+  "arxiv:2609.28335": {
+    "id": "arxiv:2609.28335",
+    "title": "An Open Pipeline and Dashboard for Systemic-Risk Evidence under the EU AI Act's Code of Practice",
+    "authors": [
+      "Jacob T. Emmerson",
+      "Phuong-Anh Nguyen-Le",
+      "Ronan Romano",
+      "Wilber Sean V. Anterola",
+      "Yann Billeter",
+      "Zhijing Jin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.28335",
+    "abstract": "Claims about AI safety reach audiences well beyond the AI community, yet many rely on opaque evidence or static assessments, when supporting evidence is accessible at all. We present the Systemic Risk Index, an open evaluation pipeline and dashboard built to make empirical evidence more transparent and traceable to…",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment",
+      "evals",
+      "governance",
+      "security"
+    ]
+  },
+  "arxiv:2609.28137": {
+    "id": "arxiv:2609.28137",
+    "title": "\"We'll Fix It Later\": Education, AI, and the Deferral of Privacy in EdTech",
+    "authors": [
+      "Meghna Manoj Nair",
+      "Rachel Greenstadt"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.28137",
+    "abstract": "Educational technology (EdTech) platforms collect highly sensitive student data, including behavioral logs, disability records, and academic histories. However, privacy considerations are often postponed rather than treated as a foundational design requirement.",
+    "detected": "2026-09-24",
+    "topics": []
+  },
+  "arxiv:2609.27606": {
+    "id": "arxiv:2609.27606",
+    "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
+    "authors": [
+      "Qi Liu",
+      "Xiaoyang Yuan",
+      "Yubin Ruan",
+      "Zhuomeng Zhang",
+      "Wenjin Wang",
+      "Di Wu",
+      "Mingye Xu",
+      "Xinyi Mou",
+      "Xingxi Yin",
+      "Ke Feng",
+      "Zixun Sun"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27606",
+    "abstract": "We introduce State-Grounded Conditioning (SGC), a design principle for user-facing LLM agents that must condition on live user state (game state, session history, live inventory), and a distinct failure class we call direction drift: task-complete responses whose chosen direction misaligns with the current state. SGC…",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.27572": {
+    "id": "arxiv:2609.27572",
+    "title": "DCRL: Decoupling and Coupling Reinforcement Learning via Policy-Reward Manifold Alignment",
+    "authors": [
+      "Henan Sun",
+      "Zehua Li",
+      "Haitao Hu",
+      "Qifan Zhang",
+      "Jianfeng Zhang",
+      "Nuo Chen",
+      "Jia Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27572",
+    "abstract": "Reinforcement learning (RL) has emerged as a key paradigm for improving the reasoning capabilities of large language models (LLMs). However, existing reward systems, such as rule-based and reward-model-based, often exhibit issues such as unstable optimization and reward hacking.",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.27378": {
+    "id": "arxiv:2609.27378",
+    "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+    "authors": [
+      "Kian Shamsaie",
+      "Iman Modarressi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27378",
+    "abstract": "End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the…",
+    "detected": "2026-09-24",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2609.27336": {
+    "id": "arxiv:2609.27336",
+    "title": "CART: Closed-Loop Adaptive Red Teaming for Large Language Models",
+    "authors": [
+      "Dongdong Zhang",
+      "Tengchao Lv",
+      "Yilin Jia",
+      "Yuzhong Zhao",
+      "Yupan Huang",
+      "Wenshan Wu",
+      "Xiangyang Zhou",
+      "Shaohan Huang",
+      "Nan Yang",
+      "Li Dong",
+      "Lei Cui",
+      "Furu Wei"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27336",
+    "abstract": "Automated red teaming often replays a fixed set of prompts, which measures known risks but cannot learn from failures found during testing. We present CART (Closed-Loop Adaptive Red Teaming), a framework that uses each result to guide what it tests next.",
+    "detected": "2026-09-24",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2609.27277": {
+    "id": "arxiv:2609.27277",
+    "title": "TimeEvo: Failure-Driven Self-Evolution of a Time Series Agent",
+    "authors": [
+      "Jie Yang",
+      "Yan Zheng",
+      "Jiarui Sun",
+      "Xiran Fan",
+      "Junpeng Wang",
+      "Liang Wang",
+      "Zelin Xu",
+      "Qinghua Liu",
+      "Zhengyu Fang",
+      "Yiwei Cai",
+      "Philip S. Yu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27277",
+    "abstract": "Time series agents answer analytical questions by calling external tools, and which tools they carry is decided by people before the agent runs. However, we identify two failures in this setup.",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.27273": {
+    "id": "arxiv:2609.27273",
+    "title": "CAVEAT: Towards Robust Computer-Use Agents in Incentive-Misaligned Environments",
+    "authors": [
+      "Yuxuan Li",
+      "Will Epperson",
+      "Wesley Deng",
+      "Zezhou Huang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.27273",
+    "abstract": "Computer-use agents (CUAs) increasingly act on behalf of users online. What happens when the environments they operate in have incentives that do not align with the user's?",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.26865": {
+    "id": "arxiv:2609.26865",
+    "title": "Safety Nudges: User-Facing Interventions for Real-Time AI Risk Awareness",
+    "authors": [
+      "Varshini Elangovan",
+      "James Wedgwood",
+      "Chhavi Yadav",
+      "William Agnew",
+      "Sauvik Das",
+      "Virginia Smith"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.26865",
+    "abstract": "Conversational AI systems can pose safety risks to their users such as hallucination, sycophancy, overconfidence, and anthropomorphism, but these risks are difficult for users to detect during everyday use. We introduce Safety Nudges, a browser-based tool that provides lightweight, in situ flags when concerning…",
+    "detected": "2026-09-24",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2609.26457": {
     "id": "arxiv:2609.26457",
     "title": "Recursive self-improvement of AI research agents",

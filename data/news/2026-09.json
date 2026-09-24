@@ -1,5 +1,92 @@
 [
   {
+    "id": "b58bc74e3857fbc6",
+    "url": "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the",
+    "title": "WorkspaceBench: Evaluating Interpretability Methods for the Global Workspace",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-09-24T02:19:39Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "TL;DR We introduce WorkspaceBench, a set of evaluations for how well an activation-to-text tool can read the contents of the “global workspace” of a model, i.e. the intermediate variables during a forward pass. The benchmark comprises 3,356 questions across 27 eval families, spanning topics in safety, logical…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1800e0479f536e69",
+    "url": "https://www.lesswrong.com/posts/HekpnSkrt89tMm3Dc/i-am-an-ai-safety-researcher",
+    "title": "\"I am an AI Safety Researcher\"",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-24T01:02:54Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Written as part of the MATS 9.1 extension program, mentored by Richard Ngo. Additional thanks to Andrew Wu, Maria Kostylew, and Lennie Wells for helpful draft feedback and editing.",
+    "topics": [
+      "alignment"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1f2124647256fdc3",
+    "url": "https://www.lesswrong.com/posts/qThcAE3CADaPwjDzy/it-s-pretty-easy-to-meet-with-congressional-staffers",
+    "title": "It's Pretty Easy To Meet With Congressional Staffers Apparently",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-24T00:39:35Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "(Crossposted from https://lifeimprovementschemes.substack.com/p/its-pretty-easy-to-meet-with-congressional ) I was inspired to do this by a tweet: Specifically, I decided to leave a voice note in support of the CATS act (“Collaboration on Adversarial Threats and Security Risks Act”). The bill is short and simple: it…",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ba0e78b731d6215e",
+    "url": "https://www.lesswrong.com/posts/SCdR7W6L5GvKaEzaZ/encoded-coordination-on-the-open-web",
+    "title": "Encoded Coordination on the Open Web",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-23T21:56:29Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "TLDR: In the recently discovered HF and German wiki swarm incidents, agents used public counters and encoded URLs to signal activity and relay upcoming evaluation questions & answers. We think this signals a broader problem for monitoring, which is that very innocuous web services, even read-only ones, can become…",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ff313a4358aa60f3",
+    "url": "https://www.lesswrong.com/posts/jszKCKwvzfmsNetNZ/miri-s-position-on-the-ban-artificial-superintelligence-act",
+    "title": "MIRI’s Position on the Ban Artificial Superintelligence Act of 2026",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-23T21:35:29Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "By Aaron Scher; endorsed by Bourgon, Soares, and Yudkowsky on behalf of MIRI. MIRI has been warning about the extinction threat from superintelligent AI for over two decades.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "896c5908658eb9e8",
+    "url": "https://thezvi.wordpress.com/2026/09/23/claude-opus-5-5-the-system-card",
+    "title": "Claude Opus 5.5: The System Card",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-09-23T21:09:04Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Introducing the world’s most powerful model, at least by some measures like Artificial Analysis or any standard benchmark list, which is now Claude Opus 5.5. Anthropic is claiming Opus 5.5 is outright as good or better than Fable 5.1, while … Continue reading →",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
     "id": "d968602ca78670ee",
     "url": "https://www.lesswrong.com/posts/ZprfxCZthEir5WNev/the-first-american-bill-to-ban-superintelligent-ai-is-here",
     "title": "The First American Bill to Ban Superintelligent AI Is Here",
@@ -11,6 +98,18 @@
     "topics": [
       "alignment"
     ],
+    "summary": null
+  },
+  {
+    "id": "5cd537eda313edbe",
+    "url": "https://blog.redwoodresearch.org/p/latent-reasoning-architectures-would",
+    "title": "Latent reasoning architectures would undermine CoT, our strongest oversight tool",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-09-23T18:05:28Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "We should have a strong presumption that latent reasoning architectures would make oversight far more difficult.",
+    "topics": [],
     "summary": null
   },
   {
@@ -28,6 +127,49 @@
     "summary": null
   },
   {
+    "id": "8c9f37beff9f3bac",
+    "url": "https://arxiv.org/abs/2609.28335",
+    "title": "An Open Pipeline and Dashboard for Systemic-Risk Evidence under the EU AI Act's Code of Practice",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T16:13:36Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Claims about AI safety reach audiences well beyond the AI community, yet many rely on opaque evidence or static assessments, when supporting evidence is accessible at all. We present the Systemic Risk Index, an open evaluation pipeline and dashboard built to make empirical evidence more transparent and traceable to…",
+    "topics": [
+      "alignment",
+      "evals",
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Jacob T. Emmerson",
+      "Phuong-Anh Nguyen-Le",
+      "Ronan Romano",
+      "Wilber Sean V. Anterola",
+      "Yann Billeter",
+      "Zhijing Jin"
+    ],
+    "arxiv_id": "2609.28335",
+    "summary": null
+  },
+  {
+    "id": "ca2eee708a91b3cc",
+    "url": "https://arxiv.org/abs/2609.28137",
+    "title": "\"We'll Fix It Later\": Education, AI, and the Deferral of Privacy in EdTech",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T13:59:37Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Educational technology (EdTech) platforms collect highly sensitive student data, including behavioral logs, disability records, and academic histories. However, privacy considerations are often postponed rather than treated as a foundational design requirement.",
+    "topics": [],
+    "authors": [
+      "Meghna Manoj Nair",
+      "Rachel Greenstadt"
+    ],
+    "arxiv_id": "2609.28137",
+    "summary": null
+  },
+  {
     "id": "1d77064cbebb782f",
     "url": "https://openai.com/index/openai-extends-cyber-access-to-ukraine-for-civilian-defense",
     "title": "OpenAI extends cyber access to Ukraine for civilian defense",
@@ -37,6 +179,21 @@
     "fetched_at": "2026-09-23T20:35:44Z",
     "excerpt": "OpenAI is extending access to its Daybreak program to the Government of Ukraine to support the cyber defense of civilian infrastructure.",
     "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "01d4e543c9419cea",
+    "url": "https://openai.com/index/sam-altman-un-security-council-remarks",
+    "title": "Sam Altman’s remarks at the United Nations Security Council",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-09-23T12:00:00Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "OpenAI CEO Sam Altman discusses AI safety, human control, and international cooperation in remarks to the United Nations Security Council.",
+    "topics": [
+      "alignment",
       "security"
     ],
     "summary": null
@@ -56,6 +213,108 @@
     "summary": null
   },
   {
+    "id": "487d811e8f20ed8c",
+    "url": "https://arxiv.org/abs/2609.27606",
+    "title": "State-Grounded Conditioning: Wrapping User-Facing LLM Agents Where Direction Depends on Live State",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T09:26:07Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "We introduce State-Grounded Conditioning (SGC), a design principle for user-facing LLM agents that must condition on live user state (game state, session history, live inventory), and a distinct failure class we call direction drift: task-complete responses whose chosen direction misaligns with the current state. SGC…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Qi Liu",
+      "Xiaoyang Yuan",
+      "Yubin Ruan",
+      "Zhuomeng Zhang",
+      "Wenjin Wang",
+      "Di Wu",
+      "Mingye Xu",
+      "Xinyi Mou",
+      "Xingxi Yin",
+      "Ke Feng",
+      "Zixun Sun"
+    ],
+    "arxiv_id": "2609.27606",
+    "summary": null
+  },
+  {
+    "id": "58240ced49cf875e",
+    "url": "https://arxiv.org/abs/2609.27572",
+    "title": "DCRL: Decoupling and Coupling Reinforcement Learning via Policy-Reward Manifold Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T08:52:35Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Reinforcement learning (RL) has emerged as a key paradigm for improving the reasoning capabilities of large language models (LLMs). However, existing reward systems, such as rule-based and reward-model-based, often exhibit issues such as unstable optimization and reward hacking.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Henan Sun",
+      "Zehua Li",
+      "Haitao Hu",
+      "Qifan Zhang",
+      "Jianfeng Zhang",
+      "Nuo Chen",
+      "Jia Li"
+    ],
+    "arxiv_id": "2609.27572",
+    "summary": null
+  },
+  {
+    "id": "5b8e06861661d8a3",
+    "url": "https://arxiv.org/abs/2609.27378",
+    "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T05:29:13Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Kian Shamsaie",
+      "Iman Modarressi"
+    ],
+    "arxiv_id": "2609.27378",
+    "summary": null
+  },
+  {
+    "id": "ffe200536bd33edb",
+    "url": "https://arxiv.org/abs/2609.27336",
+    "title": "CART: Closed-Loop Adaptive Red Teaming for Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T04:16:46Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Automated red teaming often replays a fixed set of prompts, which measures known risks but cannot learn from failures found during testing. We present CART (Closed-Loop Adaptive Red Teaming), a framework that uses each result to guide what it tests next.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Dongdong Zhang",
+      "Tengchao Lv",
+      "Yilin Jia",
+      "Yuzhong Zhao",
+      "Yupan Huang",
+      "Wenshan Wu",
+      "Xiangyang Zhou",
+      "Shaohan Huang",
+      "Nan Yang",
+      "Li Dong",
+      "Lei Cui",
+      "Furu Wei"
+    ],
+    "arxiv_id": "2609.27336",
+    "summary": null
+  },
+  {
     "id": "ad56e86e1a6694f2",
     "url": "https://www.lesswrong.com/posts/HsijShdRdAg5sPKnF/an-unexamined-cause-of-the-openai-hugging-face-hacking",
     "title": "An unexamined cause of the OpenAI Hugging Face hacking incident: its binary performance metric",
@@ -68,6 +327,56 @@
       "alignment",
       "evals"
     ],
+    "summary": null
+  },
+  {
+    "id": "8d2fb6c179265753",
+    "url": "https://arxiv.org/abs/2609.27277",
+    "title": "TimeEvo: Failure-Driven Self-Evolution of a Time Series Agent",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T03:08:12Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Time series agents answer analytical questions by calling external tools, and which tools they carry is decided by people before the agent runs. However, we identify two failures in this setup.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jie Yang",
+      "Yan Zheng",
+      "Jiarui Sun",
+      "Xiran Fan",
+      "Junpeng Wang",
+      "Liang Wang",
+      "Zelin Xu",
+      "Qinghua Liu",
+      "Zhengyu Fang",
+      "Yiwei Cai",
+      "Philip S. Yu"
+    ],
+    "arxiv_id": "2609.27277",
+    "summary": null
+  },
+  {
+    "id": "d66db4731a28f360",
+    "url": "https://arxiv.org/abs/2609.27273",
+    "title": "CAVEAT: Towards Robust Computer-Use Agents in Incentive-Misaligned Environments",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T03:00:00Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Computer-use agents (CUAs) increasingly act on behalf of users online. What happens when the environments they operate in have incentives that do not align with the user's?",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Yuxuan Li",
+      "Will Epperson",
+      "Wesley Deng",
+      "Zezhou Huang"
+    ],
+    "arxiv_id": "2609.27273",
     "summary": null
   },
   {
@@ -96,6 +405,29 @@
     "topics": [
       "governance"
     ],
+    "summary": null
+  },
+  {
+    "id": "6457678797eed434",
+    "url": "https://arxiv.org/abs/2609.26865",
+    "title": "Safety Nudges: User-Facing Interventions for Real-Time AI Risk Awareness",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-22T16:12:08Z",
+    "fetched_at": "2026-09-24T05:38:38Z",
+    "excerpt": "Conversational AI systems can pose safety risks to their users such as hallucination, sycophancy, overconfidence, and anthropomorphism, but these risks are difficult for users to detect during everyday use. We introduce Safety Nudges, a browser-based tool that provides lightweight, in situ flags when concerning…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Varshini Elangovan",
+      "James Wedgwood",
+      "Chhavi Yadav",
+      "William Agnew",
+      "Sauvik Das",
+      "Virginia Smith"
+    ],
+    "arxiv_id": "2609.26865",
     "summary": null
   },
   {
