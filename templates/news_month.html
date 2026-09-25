@@ -6,14 +6,14 @@
 {% block content %}
 <p class="breadcrumb"><a href="{{ url('news/') }}">News archive</a></p>
 <h1>{{ month | month_label }}</h1>
-<p class="lede">{{ count }} items, newest first.</p>
+<p class="lede">{{ count }} items, newest first. Days and times are in UTC.</p>
 
 <div data-filter-root>
   {{ m.filters(filters) }}
   {% for day, items in by_day.items() %}
-  <section class="day-group" data-filter-group>
-    <h2><time datetime="{{ day }}">{{ items[0].published_dt | date("%A %d %B") }}</time></h2>
-    {% for e in items %}{{ m.entry(e, show_date=False) }}{% endfor %}
+  <section class="day-group" data-filter-group data-day="{{ day }}">
+    <h2><time datetime="{{ day }}">{{ items[0].published_dt | date("%A %d %B") }}</time> <span class="count">(UTC)</span></h2>
+    {% for e in items %}{{ m.entry(e) }}{% endfor %}
   </section>
   {% endfor %}
   <p class="empty" data-filter-empty hidden>No items match these filters.</p>

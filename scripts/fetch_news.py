@@ -25,6 +25,7 @@ from __future__ import annotations
 
 import argparse
 import calendar
+import email.utils
 import hashlib
 import html
 import json
@@ -77,6 +78,31 @@ def entry_date(item) -> datetime | None:
             # feedparser gives a UTC time tuple; timegm turns it into a timestamp.
             return datetime.fromtimestamp(calendar.timegm(parsed), tz=timezone.utc)
     return None
+
+
+def date_only_day(item) -> datetime | None:
+    """If the feed gives only a DAY for this item, that day at 00:00 UTC.
+
+    Some feeds (METR, Transformer Circuits) publish dates without a time, as
+    midnight in their own time zone: "Tue, 22 Sep 2026 00:00:00 -0700".
+    Converted to UTC that would be 07:00 on the 22nd (or even the previous
+    day, for zones east of UTC), and showing that time would be inventing it.
+    So a time of exactly 00:00:00 in the feed's own zone means "day only":
+    the entry keeps the feed's calendar day and is marked `date_only`.
+    """
+    raw = item.get("published") or item.get("updated")
+    if not raw:
+        return None
+    try:
+        local = email.utils.parsedate_to_datetime(raw)            # RFC 822 (RSS)
+    except (TypeError, ValueError):
+        try:
+            local = datetime.fromisoformat(raw.replace("Z", "+00:00"))  # ISO 8601 (Atom)
+        except ValueError:
+            return None
+    if (local.hour, local.minute, local.second) != (0, 0, 0):
+        return None
+    return datetime(local.year, local.month, local.day, tzinfo=timezone.utc)
 
 
 TAG_RE = re.compile(r"<[^>]+>")
@@ -348,7 +374,8 @@ def fetch_feed(source: dict, session: requests.Session, settings: dict,
         title = clean_text(item.get("title"))
         if not link or not title:
             continue
-        published = entry_date(item) or fetched_at
+        day_only = date_only_day(item)
+        published = day_only or entry_date(item) or fetched_at
         if published < cutoff:
             continue
         description = clean_text(item.get("summary"))
@@ -360,6 +387,8 @@ def fetch_feed(source: dict, session: requests.Session, settings: dict,
             continue
         authors = item_authors(item, source, feed.feed.get("title"))
         extra = {"authors": authors} if authors else {}
+        if day_only:
+            extra["date_only"] = True
         kept.append(make_entry(link, title, source, published, fetched_at,
                                make_excerpt(description), topics, **extra))
     return kept, len(feed.entries)

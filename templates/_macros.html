@@ -1,13 +1,17 @@
 {# Reusable pieces of HTML. Import with: {% import "_macros.html" as m %} #}
 
 {# One news entry: title (link to the original), meta line, excerpt.
-   data-filter-item and the data-* attributes are what static/js/filters.js reads. #}
-{% macro entry(e, show_source=True, show_date=True) %}
+   data-filter-item and the data-* attributes are what static/js/filters.js reads.
+   The date is always UTC and says so; `data-day` is the UTC day the build uses
+   to group entries (build_site.check_entry_dates() compares them). With
+   `today` (home page) it's relative: "Today, 00:39 UTC"; static/js/relative-days.js
+   recomputes the word if the visitor's UTC day has moved on since the build. #}
+{% macro entry(e, show_source=True, show_date=True, today=None) %}
 <article class="entry" data-filter-item data-source="{{ e.source_id }}" data-topics="{{ e.topics | join(' ') }}">
   <h3 class="entry-title"><a href="{{ e.url | safe_url }}" rel="noopener">{{ e.title }}</a></h3>
   <p class="entry-meta">
     {% if show_source %}<span class="entry-source">{{ e.source }}</span>{% endif %}
-    {% if show_date %}<time datetime="{{ e.published }}">{{ e.published_dt | date }}</time>{% endif %}
+    {% if show_date %}<time class="entry-time" datetime="{{ e.published }}" data-day="{{ e.published[:10] }}"{% if e.date_only %} data-date-only{% endif %}{% if today %} data-relative{% endif %}>{{ e | when(today) }}</time>{% endif %}
     {% if e.authors is defined and e.authors %}
       <span class="entry-authors">{{ e.authors[:3] | join(", ") }}{% if e.authors | length > 3 %} et al.{% endif %}</span>
     {% endif %}

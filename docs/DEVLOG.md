@@ -1285,3 +1285,47 @@ Created: `static/favicon.svg`, `static/favicon.ico`. Changed:
 **Pending**
 - The dates question (news under 24 Sep that seem to be from the 23rd):
   analysed, solution waiting for my approval.
+
+---
+
+## 2026-09-25 — News dates in UTC (work in progress, branch `news-dates-utc`)
+
+This is the solution to the dates question from yesterday's entry. It lives
+on the branch `news-dates-utc` and is **not merged yet**.
+
+**What the branch does so far**
+- Every news date says it is UTC and shows the time: "24 Sep 2026, 00:39 UTC"
+  (`entry_when()` in `build_site.py`, the `when` filter). On the home page the
+  day is relative: "Today, 00:39 UTC", "Yesterday, 21:09 UTC". Month pages now
+  show each entry's date too, and their day headings say "(UTC)".
+- Feeds that give only a day (METR, Transformer Circuits, some OpenAI items)
+  write it as midnight in their own time zone ("00:00:00 -0700"). Converted
+  to UTC that becomes 07:00, or even the day before, which is a time I would
+  be inventing. `date_only_day()` in `fetch_news.py` keeps the feed's calendar
+  day and marks the entry `date_only: true`; the site then shows no time.
+- `static/js/relative-days.js` recomputes "Today" / "Yesterday" from the
+  visitor's clock (still in UTC) when their UTC day is later than the build's.
+  Without JavaScript the page says which day "today" means.
+- `check_entry_dates()` fails the build if a shown date disagrees with its
+  data or with its day group.
+- I tried an optional home-page title and subtitle in `config/site.yaml` at
+  the same time, and decided to drop it: it isn't part of this change.
+
+**Why the data migration is not on the branch**
+The two saved entries that need `date_only` (METR's Claude Opus 5.5 summary
+and OpenAI's "Priorities and principles for effective third party
+assessments") were migrated by hand in my working copy. I didn't commit
+that: the bot rewrites `data/news/2026-09.json` every day, and until this
+branch is merged it keeps saving new date-only items with the old, invented
+times. So the migration has to run on whatever data `main` has at merge time.
+The hand-edited file is kept as a backup in the stash
+"date_only migration backup".
+
+**Pending before merging**
+- `docs/HOW_THIS_SITE_WORKS.md`: the `date_only` field, the UTC dates,
+  `relative-days.js` and `check_entry_dates()`.
+- The OpenAI entry of 2026-09-10 saved at `07:00:00Z`: check against the
+  feed whether it is date-only too, and include it in the migration.
+- A one-time migration script that marks `date_only` on saved entries (by
+  matching them against the current feeds, as for authors), run right after
+  a `git pull` at merge time, then build, commit and push in one go.

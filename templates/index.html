@@ -8,16 +8,19 @@
   {% if last_run %}(up to {{ last_run | date("%d %b, %H:%M UTC") }}){% endif %}.
   Older items are in the <a href="{{ url('news/') }}">news archive</a>.
 </p>
+{# The anchor for "Today" / "Yesterday": the UTC day this page was built.
+   relative-days.js updates it (and the labels) if the visitor's UTC day is later. #}
+<p class="note">Times are in UTC; “today” here means <time datetime="{{ today.isoformat() }}" data-today>{{ today.strftime("%d %b %Y") }}</time>.</p>
 
 {% if not by_source and not papers %}
   <p class="empty">Nothing new in the last {{ window_hours }} hours. Here are the latest items:</p>
-  {% for e in latest %}{{ m.entry(e) }}{% endfor %}
+  {% for e in latest %}{{ m.entry(e, today=today) }}{% endfor %}
 {% endif %}
 
 {% for source, items in by_source.items() %}
 <section class="source-group">
   <h2>{{ source }} <span class="count">{{ items | length }}</span></h2>
-  {% for e in items %}{{ m.entry(e, show_source=False) }}{% endfor %}
+  {% for e in items %}{{ m.entry(e, show_source=False, today=today) }}{% endfor %}
 </section>
 {% endfor %}
 
@@ -25,8 +28,12 @@
 <section class="source-group">
   <details>
     <summary><h2>New papers on arXiv <span class="count">{{ papers | length }}</span></h2></summary>
-    {% for e in papers %}{{ m.entry(e, show_source=False) }}{% endfor %}
+    {% for e in papers %}{{ m.entry(e, show_source=False, today=today) }}{% endfor %}
   </details>
 </section>
 {% endif %}
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url('static/js/relative-days.js') }}" defer></script>
 {% endblock %}

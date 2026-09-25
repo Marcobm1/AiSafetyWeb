@@ -104,6 +104,7 @@ def load_news() -> list[dict]:
         for entry in load_json(path, []):
             entry = dict(entry)
             entry["published_dt"] = parse_time(entry["published"])
+            entry.setdefault("date_only", False)
             entries.append(entry)
     entries.sort(key=lambda e: e["published_dt"], reverse=True)
     return entries
@@ -664,6 +665,21 @@ def format_date(dt: datetime | None, fmt: str = "%d %b %Y") -> str:
     return dt.astimezone(timezone.utc).strftime(fmt) if dt else ""
 
 
+def entry_when(e: dict, today: dt.date | None = None) -> str:
+    """The date shown on a news entry, always in UTC and always saying so.
+
+    '24 Sep 2026, 00:39 UTC', or '24 Sep 2026' when the feed gives only a day
+    (`date_only`). With `today` (the home page), the day becomes relative:
+    'Today, 00:39 UTC', 'Yesterday, 21:09 UTC'. Its day is always the first
+    10 characters of `published`, the same key the day groups use.
+    """
+    day = dt.date.fromisoformat(e["published"][:10])
+    time_part = "" if e["date_only"] else e["published_dt"].astimezone(timezone.utc).strftime(", %H:%M UTC")
+    if today is not None and (today - day).days in (0, 1):
+        return ("Today" if day == today else "Yesterday") + time_part
+    return day.strftime("%d %b %Y") + time_part
+
+
 def month_label(month: str) -> str:
     """'2026-09' -> 'September 2026'."""
     return datetime.strptime(month, "%Y-%m").strftime("%B %Y")
@@ -702,6 +718,7 @@ def make_env(site: dict, status: dict) -> Environment:
         safe_url=safe_external_url,
         date=format_date,
         month_label=month_label,
+        when=entry_when,
         month_short=month_short,
     )
     return env
@@ -782,7 +799,7 @@ def build() -> None:
     recent_papers = [e for e in recent if e["source_id"] == "arxiv"]
     # One group per source, the source with the newest post first.
     by_source = group_by(recent_posts, key=lambda e: e["source"])
-    render(env, "index.html", "index.html",
+    render(env, "index.html", "index.html", today=today,
            by_source=by_source, papers=recent_papers,
            window_hours=site["home"]["window_hours"], latest=entries[:10])
 
@@ -823,6 +840,7 @@ def build() -> None:
 
     check_internal_links(site["base_path"])
     check_no_local_tools()
+    check_entry_dates()
     pages = sum(1 for _ in OUTPUT_DIR.rglob("*.html"))
     print(f"Built {pages} pages from {len(entries)} news entries, {len(papers)} papers"
           f" and {len(books)} books into {OUTPUT_DIR.name}/ (internal links OK)")
@@ -858,6 +876,49 @@ def check_internal_links(base_path: str) -> None:
                 problems.append(f"{where}: {target} (no such file)")
     if problems:
         raise BuildError("broken internal links:\n  " + "\n  ".join(problems))
+
+
+# ---------------------------------------------------------------------------
+# Date check: the date shown on a news entry and its day group always agree
+# ---------------------------------------------------------------------------
+
+TIME_RE = re.compile(r'<time class="entry-time" datetime="([^"]+)" data-day="([^"]+)"([^>]*)>([^<]*)</time>')
+GROUP_RE = re.compile(r'<section class="day-group"[^>]*data-day="([^"]+)"[^>]*>(.*?)</section>', re.S)
+TODAY_RE = re.compile(r'<time datetime="([^"]+)" data-today>')
+
+
+def check_entry_dates() -> None:
+    """Fail the build if any news entry's shown date disagrees with its data.
+
+    For every entry date in _site/: `data-day` is the UTC day of `datetime`;
+    the text shows that day ("24 Sep 2026", or Today / Yesterday relative to
+    the page's stated "today") and, unless the feed gave only a day, that UTC
+    time ("00:39 UTC"); and an entry inside a day group has the group's day.
+    """
+    problems = []
+    for page in sorted(OUTPUT_DIR.rglob("*.html")):
+        html = page.read_text(encoding="utf-8")
+        where = page.relative_to(OUTPUT_DIR).as_posix()
+        anchor = TODAY_RE.search(html)
+        today = dt.date.fromisoformat(anchor.group(1)) if anchor else None
+        for stamp, day, attrs, text in TIME_RE.findall(html):
+            instant = parse_time(stamp).astimezone(timezone.utc)
+            shown_day = dt.date.fromisoformat(day)
+            expected = []
+            if "data-relative" in attrs and today and (today - shown_day).days in (0, 1):
+                expected.append("Today" if shown_day == today else "Yesterday")
+            else:
+                expected.append(shown_day.strftime("%d %b %Y"))
+            if "data-date-only" not in attrs:
+                expected.append(instant.strftime("%H:%M UTC"))
+            if instant.date() != shown_day or not all(part in text for part in expected):
+                problems.append(f"{where}: '{text}' for {stamp} (day {day})")
+        for group_day, body in GROUP_RE.findall(html):
+            for _, day, _, text in TIME_RE.findall(body):
+                if day != group_day:
+                    problems.append(f"{where}: '{text}' is in the day group {group_day}")
+    if problems:
+        raise BuildError("news dates that don't match their day:\n  " + "\n  ".join(problems[:20]))
 
 
 # The local "Add entry" form (scripts/local_form.py) is only ever generated by
