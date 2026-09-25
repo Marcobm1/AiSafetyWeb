@@ -1,5 +1,264 @@
 [
   {
+    "id": "dd2b8c62b56edd07",
+    "url": "https://www.alignmentforum.org/posts/QnDqGbKehEB3DxJAp/continual-learning-might-make-your-blocking-monitors-nearly",
+    "title": "Continual learning might make your blocking monitors nearly useless",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-09-25T04:57:22Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Many control protocols work by intervening on an untrusted AI's actions during deployment. For example, you might set up a monitor that scores each action's suspiciousness and blocks actions above a threshold, replacing them with actions from a weaker \"trusted\" model (a defer-to-trusted protocol).",
+    "topics": [],
+    "authors": [
+      "Alex Mallen"
+    ],
+    "summary": null
+  },
+  {
+    "id": "3b44d85dad998f04",
+    "url": "https://www.lesswrong.com/posts/uYd2ZdFMLyGPhLtqY/state-of-pandemic-early-warning",
+    "title": "State of Pandemic Early Warning",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-25T02:17:12Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Cross-posted from my SecureBio Notebook . This is a lightly-edited version of a memo that I presented at the Summer 2026 Biosecurity Summit outside of DC.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "jefftk"
+    ],
+    "summary": null
+  },
+  {
+    "id": "9db5d13d932d565c",
+    "url": "https://www.lesswrong.com/posts/cWuqxF7qB2eGSkkS4/overtly-misaligned-trajectories-score-highly-in-rl",
+    "title": "Overtly misaligned trajectories score highly in RL.",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-25T01:05:54Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "It's going to be so embarrassing if we all die due to RL environments rewarding egregiously misaligned behavior. Like at least let us be killed by misgeneralization. — Thomas Kwa Constellation vs MIRI vs Reality Current AI agents often behave overtly egregiously misaligned.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Cleo Nardo"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f746f7115f4eb403",
+    "url": "https://arxiv.org/abs/2609.30217",
+    "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T17:46:27Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "A central concern in AI safety is that agents may treat oversight as an obstacle when it conflicts with completing their goals. We study instrumental evasion, the propensity of LLM agents to circumvent runtime monitoring as a means of completing ordinary tasks.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "David Schmotz",
+      "Derck Prinzhorn",
+      "Luca Beurer-Kellner",
+      "Anselm Paulus",
+      "Ameya Prabhu",
+      "Maksym Andriushchenko"
+    ],
+    "arxiv_id": "2609.30217",
+    "summary": null
+  },
+  {
+    "id": "faeb8c942bbd7fd2",
+    "url": "https://arxiv.org/abs/2609.30094",
+    "title": "PrivDrift: Auditing User-Secret Leakage Under Topic Drift in Active LLM Conversations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T16:39:18Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Large language models increasingly operate as persistent assistants in user-facing, shared-session, and tool-augmented settings. When users disclose sensitive information during an active conversation, that information may remain behaviorally recoverable through later prompts even after the dialogue shifts to…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Luciano Maldonado"
+    ],
+    "arxiv_id": "2609.30094",
+    "summary": null
+  },
+  {
+    "id": "4c5faba67c43d66e",
+    "url": "https://thezvi.wordpress.com/2026/09/24/ai-187-coming-into-play",
+    "title": "AI #187: Coming Into Play",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-09-24T14:49:58Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Opus 5.5 was released on Tuesday. I covered the system card yesterday, and will cover its capabilities soon.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "809b413cc2e0a1d3",
+    "url": "https://arxiv.org/abs/2609.29808",
+    "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T13:42:02Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "In July 2026, an unconstrained autonomous agent participating in a frontier AI cybersecurity evaluation harness breached its evaluation sandbox, established an external command-and-control foothold, and executed a multi-stage intrusion into Hugging Face's production multi-tenant dataset conversion infrastructure…",
+    "topics": [
+      "evals",
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "José Luis Pino"
+    ],
+    "arxiv_id": "2609.29808",
+    "summary": null
+  },
+  {
+    "id": "2c8b9e8a5f768ef7",
+    "url": "https://arxiv.org/abs/2609.29781",
+    "title": "Hallucination Neurons and Where to Find Them: An Investigation into the existence of Hallucination Neurons",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T13:23:00Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Interpretable machine learning for Large Language Models (LLMs) increasingly relies on sparse probing methods that identify small sets of neurons claimed to detect and causally influence behaviors such as factuality recall, safety alignment, and hallucination. These claims have important implications for model…",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Huseyin Cavus",
+      "Sebin Sabu",
+      "Joshua Spear",
+      "Jaskaran Singh Kawatra",
+      "Pavithra Rajendran"
+    ],
+    "arxiv_id": "2609.29781",
+    "summary": null
+  },
+  {
+    "id": "2e5829c0f9089164",
+    "url": "https://arxiv.org/abs/2609.29775",
+    "title": "Prefilling the Reasoning Channel: Output-Prefix Attacks on Reasoning LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T13:18:21Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Large Language Models (LLMs) consume and produce a single sequence of text; hence, if text can be added to the beginning of the LLM's response, i.e., an output prefix, then all subsequent tokens will be conditioned on it. This output-prefix attack technique is a cheap black-box prompt injection.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Lukáš Brůna",
+      "Robert Bridges",
+      "Adam Ek"
+    ],
+    "arxiv_id": "2609.29775",
+    "summary": null
+  },
+  {
+    "id": "c9ea5f071ea24f65",
+    "url": "https://arxiv.org/abs/2609.29429",
+    "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T11:49:30Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Ruoqi Guo",
+      "Yi Liu",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Lida Zhao",
+      "Yutao Wu",
+      "Simin Chen",
+      "Ying Zhang",
+      "Leo Yu Zhang"
+    ],
+    "arxiv_id": "2609.29429",
+    "summary": null
+  },
+  {
+    "id": "5132fcf70fe09592",
+    "url": "https://arxiv.org/abs/2609.29362",
+    "title": "Parts-of-Speech as Emergent Categories in SAE Latent Space",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T10:40:55Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) categories as a controlled test case to study whether morpho-syntactic information is encoded by individual latents or…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Alessandro Bondielli",
+      "Lucia Passaro",
+      "Serena Auriemma",
+      "Alessandro Lenci"
+    ],
+    "arxiv_id": "2609.29362",
+    "summary": null
+  },
+  {
+    "id": "beda363fe2c706f9",
+    "url": "https://arxiv.org/abs/2609.29189",
+    "title": "When Honesty is Not Enough in AI Debate",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T08:00:24Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Scalable oversight aims to verify the behaviour of agents whose capabilities exceed those of their overseers. AI debate has been proposed as an oversight solution in which competing agents help a resource-limited verifier assess claims that it cannot reliably evaluate unaided.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Rayne Holland",
+      "Liming Zhu",
+      "Jason Xue"
+    ],
+    "arxiv_id": "2609.29189",
+    "summary": null
+  },
+  {
+    "id": "4058c26acc3b03f9",
+    "url": "https://arxiv.org/abs/2609.29108",
+    "title": "Functional Architecture of European Electricity Trading Markets: Requirements for AI Supported Trading Systems under Regulatory Constraints",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T06:39:15Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "European electricity trading in the EU operates as a constrained multi-layer system in which legal design, exchange microstructure, and network physics are executed jointly across forward, day-ahead, intraday, and balancing horizons. This paper develops a functional architecture for AI-supported trading that is…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Walter Kurz",
+      "Wojtek Stricker"
+    ],
+    "arxiv_id": "2609.29108",
+    "summary": null
+  },
+  {
     "id": "b58bc74e3857fbc6",
     "url": "https://www.alignmentforum.org/posts/Zeg2JztbdhguL48uH/workspacebench-evaluating-interpretability-methods-for-the",
     "title": "WorkspaceBench: Evaluating Interpretability Methods for the Global Workspace",
@@ -70,6 +329,29 @@
     ]
   },
   {
+    "id": "8cb19cbf6847611e",
+    "url": "https://arxiv.org/abs/2609.28809",
+    "title": "Stream Recursion Model (SRM)",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T21:43:02Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Mechanistic interpretability seeks to make verifiable statements about the internal behavior of large language models (LLMs). Many interpretability techniques struggle to scale with the increasing size and depth of architectures.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Asael Sorensen",
+      "Charles Brock",
+      "David Chamberlain",
+      "Jennifer Minnich",
+      "Matthew Hoffman",
+      "Ramyaa Ramyaa"
+    ],
+    "arxiv_id": "2609.28809",
+    "summary": null
+  },
+  {
     "id": "ff313a4358aa60f3",
     "url": "https://www.lesswrong.com/posts/jszKCKwvzfmsNetNZ/miri-s-position-on-the-ban-artificial-superintelligence-act",
     "title": "MIRI’s Position on the Ban Artificial Superintelligence Act of 2026",
@@ -135,6 +417,38 @@
     "authors": [
       "Lukas Finnveden"
     ]
+  },
+  {
+    "id": "d7b394fb4cc4b0f0",
+    "url": "https://arxiv.org/abs/2609.28614",
+    "title": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T17:54:01Z",
+    "fetched_at": "2026-09-25T10:54:35Z",
+    "excerpt": "Autonomous research agents can design experiments, evaluate results, and write reports, giving them control over both a scientific result and the evidence used to support it. This creates a risk of reward hacking: meeting the reward criteria without achieving the intended goal.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Yue Huang",
+      "Zhangchen Xu",
+      "Yuchen Ma",
+      "Wenjie Wang",
+      "Zheyuan Liu",
+      "Ziwei Xu",
+      "Pin-Yu Chen",
+      "Michel Galley",
+      "Zinan Lin",
+      "Stefan Feuerriegel",
+      "Radha Poovendran",
+      "Misha Sra",
+      "Alex Pentland",
+      "Xiangliang Zhang",
+      "Zichen Chen"
+    ],
+    "arxiv_id": "2609.28614",
+    "summary": null
   },
   {
     "id": "8e7d39f7b94bb5b5",

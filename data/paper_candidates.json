@@ -1,4 +1,208 @@
 {
+  "arxiv:2609.30217": {
+    "id": "arxiv:2609.30217",
+    "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
+    "authors": [
+      "David Schmotz",
+      "Derck Prinzhorn",
+      "Luca Beurer-Kellner",
+      "Anselm Paulus",
+      "Ameya Prabhu",
+      "Maksym Andriushchenko"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30217",
+    "abstract": "A central concern in AI safety is that agents may treat oversight as an obstacle when it conflicts with completing their goals. We study instrumental evasion, the propensity of LLM agents to circumvent runtime monitoring as a means of completing ordinary tasks.",
+    "detected": "2026-09-25",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.30094": {
+    "id": "arxiv:2609.30094",
+    "title": "PrivDrift: Auditing User-Secret Leakage Under Topic Drift in Active LLM Conversations",
+    "authors": [
+      "Luciano Maldonado"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30094",
+    "abstract": "Large language models increasingly operate as persistent assistants in user-facing, shared-session, and tool-augmented settings. When users disclose sensitive information during an active conversation, that information may remain behaviorally recoverable through later prompts even after the dialogue shifts to…",
+    "detected": "2026-09-25",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2609.29808": {
+    "id": "arxiv:2609.29808",
+    "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
+    "authors": [
+      "José Luis Pino"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29808",
+    "abstract": "In July 2026, an unconstrained autonomous agent participating in a frontier AI cybersecurity evaluation harness breached its evaluation sandbox, established an external command-and-control foothold, and executed a multi-stage intrusion into Hugging Face's production multi-tenant dataset conversion infrastructure…",
+    "detected": "2026-09-25",
+    "topics": [
+      "evals",
+      "governance",
+      "security"
+    ]
+  },
+  "arxiv:2609.29781": {
+    "id": "arxiv:2609.29781",
+    "title": "Hallucination Neurons and Where to Find Them: An Investigation into the existence of Hallucination Neurons",
+    "authors": [
+      "Huseyin Cavus",
+      "Sebin Sabu",
+      "Joshua Spear",
+      "Jaskaran Singh Kawatra",
+      "Pavithra Rajendran"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29781",
+    "abstract": "Interpretable machine learning for Large Language Models (LLMs) increasingly relies on sparse probing methods that identify small sets of neurons claimed to detect and causally influence behaviors such as factuality recall, safety alignment, and hallucination. These claims have important implications for model…",
+    "detected": "2026-09-25",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.29775": {
+    "id": "arxiv:2609.29775",
+    "title": "Prefilling the Reasoning Channel: Output-Prefix Attacks on Reasoning LLMs",
+    "authors": [
+      "Lukáš Brůna",
+      "Robert Bridges",
+      "Adam Ek"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29775",
+    "abstract": "Large Language Models (LLMs) consume and produce a single sequence of text; hence, if text can be added to the beginning of the LLM's response, i.e., an output prefix, then all subsequent tokens will be conditioned on it. This output-prefix attack technique is a cheap black-box prompt injection.",
+    "detected": "2026-09-25",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2609.29429": {
+    "id": "arxiv:2609.29429",
+    "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
+    "authors": [
+      "Ruoqi Guo",
+      "Yi Liu",
+      "Gelei Deng",
+      "Yuekang Li",
+      "Lida Zhao",
+      "Yutao Wu",
+      "Simin Chen",
+      "Ying Zhang",
+      "Leo Yu Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29429",
+    "abstract": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call.",
+    "detected": "2026-09-25",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.29362": {
+    "id": "arxiv:2609.29362",
+    "title": "Parts-of-Speech as Emergent Categories in SAE Latent Space",
+    "authors": [
+      "Alessandro Bondielli",
+      "Lucia Passaro",
+      "Serena Auriemma",
+      "Alessandro Lenci"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29362",
+    "abstract": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) categories as a controlled test case to study whether morpho-syntactic information is encoded by individual latents or…",
+    "detected": "2026-09-25",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.29189": {
+    "id": "arxiv:2609.29189",
+    "title": "When Honesty is Not Enough in AI Debate",
+    "authors": [
+      "Rayne Holland",
+      "Liming Zhu",
+      "Jason Xue"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29189",
+    "abstract": "Scalable oversight aims to verify the behaviour of agents whose capabilities exceed those of their overseers. AI debate has been proposed as an oversight solution in which competing agents help a resource-limited verifier assess claims that it cannot reliably evaluate unaided.",
+    "detected": "2026-09-25",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.29108": {
+    "id": "arxiv:2609.29108",
+    "title": "Functional Architecture of European Electricity Trading Markets: Requirements for AI Supported Trading Systems under Regulatory Constraints",
+    "authors": [
+      "Walter Kurz",
+      "Wojtek Stricker"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.29108",
+    "abstract": "European electricity trading in the EU operates as a constrained multi-layer system in which legal design, exchange microstructure, and network physics are executed jointly across forward, day-ahead, intraday, and balancing horizons. This paper develops a functional architecture for AI-supported trading that is…",
+    "detected": "2026-09-25",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2609.28809": {
+    "id": "arxiv:2609.28809",
+    "title": "Stream Recursion Model (SRM)",
+    "authors": [
+      "Asael Sorensen",
+      "Charles Brock",
+      "David Chamberlain",
+      "Jennifer Minnich",
+      "Matthew Hoffman",
+      "Ramyaa Ramyaa"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.28809",
+    "abstract": "Mechanistic interpretability seeks to make verifiable statements about the internal behavior of large language models (LLMs). Many interpretability techniques struggle to scale with the increasing size and depth of architectures.",
+    "detected": "2026-09-25",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.28614": {
+    "id": "arxiv:2609.28614",
+    "title": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
+    "authors": [
+      "Yue Huang",
+      "Zhangchen Xu",
+      "Yuchen Ma",
+      "Wenjie Wang",
+      "Zheyuan Liu",
+      "Ziwei Xu",
+      "Pin-Yu Chen",
+      "Michel Galley",
+      "Zinan Lin",
+      "Stefan Feuerriegel",
+      "Radha Poovendran",
+      "Misha Sra",
+      "Alex Pentland",
+      "Xiangliang Zhang",
+      "Zichen Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.28614",
+    "abstract": "Autonomous research agents can design experiments, evaluate results, and write reports, giving them control over both a scientific result and the evidence used to support it. This creates a risk of reward hacking: meeting the reward criteria without achieving the intended goal.",
+    "detected": "2026-09-25",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2609.28335": {
     "id": "arxiv:2609.28335",
     "title": "An Open Pipeline and Dashboard for Systemic-Risk Evidence under the EU AI Act's Code of Practice",
