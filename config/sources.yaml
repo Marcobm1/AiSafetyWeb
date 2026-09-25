@@ -23,7 +23,8 @@
 #                    only after seeing a real cross-post in the data.
 #
 # Order matters for cross-posts: the same post can be on the Alignment Forum and
-# on LessWrong. The first source that sees it keeps it, so AF goes first.
+# on LessWrong. The first source that sees it keeps it, so AF goes first, and
+# Zvi's blog goes before LessWrong too.
 
 settings:
   user_agent: "AiSafetyWeb/1.0 (+https://marcobm1.github.io/AiSafetyWeb/)"
@@ -38,6 +39,17 @@ sources:
     url: https://www.alignmentforum.org/feed.xml?view=community-rss
     crossposts: true   # seen: Redwood posts also published here
     karma_threshold: 20
+
+  - id: zvi
+    name: Don't Worry About the Vase
+    # Zvi's WordPress copy of the same posts; thezvi.substack.com/feed answers
+    # 403 to GitHub Actions. Checked from Actions on 2026-09-23.
+    url: https://thezvi.wordpress.com/feed/
+    # seen: his posts also on LessWrong ("Politics Gets Interested In Those
+    # Trying Not To Die", "Claude Opus 5.5: The System Card"). Before
+    # LessWrong so that his blog's copy is the one kept.
+    crossposts: true
+    require_topic: true
 
   - id: lesswrong
     name: LessWrong
@@ -84,13 +96,6 @@ sources:
     # Substack. importai.substack.com/feed answers 403 to GitHub Actions.
     # Checked from Actions on 2026-09-23.
     url: https://jack-clark.net/feed/
-
-  - id: zvi
-    name: Don't Worry About the Vase
-    # Zvi's WordPress copy of the same posts; thezvi.substack.com/feed answers
-    # 403 to GitHub Actions. Checked from Actions on 2026-09-23.
-    url: https://thezvi.wordpress.com/feed/
-    require_topic: true
 
   - id: epoch
     name: Epoch AI

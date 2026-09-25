@@ -654,10 +654,12 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
    compared, but **only between two different sources marked
    `crossposts: true`** in `config/sources.yaml`. Those are sources I have
    *seen* publish the same post under different URLs: the Alignment Forum,
-   LessWrong, Redwood Research (its posts also go to the AF) and METR (one joint
-   investigation appeared on both METR's and Redwood's blogs). Titles shorter
-   than 4 words are never compared. The first source in the config keeps the
-   item, which is why the Alignment Forum is listed first.
+   LessWrong, Redwood Research (its posts also go to the AF), METR (one joint
+   investigation appeared on both METR's and Redwood's blogs) and Zvi's blog
+   (he also posts almost everything on LessWrong, with the same title). Titles
+   shorter than 4 words are never compared. The first source in the config
+   keeps the item, which is why the Alignment Forum is listed first and Zvi's
+   blog goes before LessWrong: I prefer the original to the copy.
 
    Why so narrow: comparing titles across *all* sources would merge unrelated
    posts with generic titles ("Weekly update on AI safety research") from two
@@ -672,6 +674,12 @@ and how many it kept) and a summary at the end. A full run takes ~15 seconds.
    (1,611 items without any filter): those 3 plus the METR/Redwood joint post.
    No false positives. **To mark a new source**, I add `crossposts: true` only
    after seeing a real cross-post in the data.
+
+   Measured again on 2026-09-25, when I marked Zvi: in the 140 saved entries
+   there was no duplicate pair to clean up, and a dry run of the live feeds
+   with Zvi marked skipped exactly one more item than without: LessWrong's
+   copy of "Claude Opus 5.5: The System Card", already saved from his blog.
+   The other title matches were the Redwood/AF pairs as before.
 6. **Save** new entries into `data/news/YYYY-MM.json` by publication month.
    arXiv papers go there too, so they appear on the home page like any other news.
 7. **Update the paper candidates** (`data/paper_candidates.json`): add the new
@@ -727,6 +735,7 @@ is why it's for arXiv only.
 | id | Source | Filter |
 |---|---|---|
 | `alignment-forum` | AI Alignment Forum | karma ≥ 20 |
+| `zvi` | Don't Worry About the Vase (Zvi's WordPress copy, `thezvi.wordpress.com`) | on-topic only |
 | `transformer-circuits` | Transformer Circuits Thread (Anthropic's interpretability research) | always tagged *interpretability* |
 | `lesswrong` | LessWrong | karma ≥ 30, on-topic only |
 | `ai-safety-newsletter` | AI Safety Newsletter (CAIS; its Substack, on the `newsletter.safe.ai` domain) | — |
@@ -735,7 +744,6 @@ is why it's for arXiv only.
 | `govai` | Centre for the Governance of AI | on-topic only |
 | `transformer` | Transformer | on-topic only |
 | `import-ai` | Import AI (Jack Clark's site, `jack-clark.net`) | — |
-| `zvi` | Don't Worry About the Vase (Zvi's WordPress copy, `thezvi.wordpress.com`) | on-topic only |
 | `epoch` | Epoch AI — **paused** (`enabled: false`, see below) | on-topic only |
 | `bluedot` | BlueDot Impact | on-topic only |
 | `openai` | OpenAI News | on-topic only |

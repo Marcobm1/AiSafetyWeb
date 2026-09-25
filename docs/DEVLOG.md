@@ -1285,3 +1285,39 @@ Created: `static/favicon.svg`, `static/favicon.ico`. Changed:
 **Pending**
 - The dates question (news under 24 Sep that seem to be from the 23rd):
   analysed, solution waiting for my approval.
+
+---
+
+## 2026-09-25 — Zvi's blog marked as a cross-posting source
+
+**What I did**
+- Marked `zvi` with `crossposts: true` in `config/sources.yaml` and moved it
+  above LessWrong.
+- **Why:** Zvi posts almost everything on LessWrong too, with the same
+  title, and the title check only works between sources marked
+  `crossposts`. The saved data already had one of his posts from LessWrong
+  ("Politics Gets Interested In Those Trying Not To Die"), and LessWrong's
+  copy of "Claude Opus 5.5: The System Card" had just reached 30 karma, the
+  LessWrong threshold, so the next run would have saved it a second time
+  next to the copy from his blog. I found the same problem in Cairn first.
+- **Why above LessWrong:** the first source in the config keeps a post that
+  is new on both feeds in the same run. I prefer his blog, the original, to
+  the LessWrong copy.
+
+**How I checked it**
+- Zvi's recent LessWrong posts (LessWrong API) have the same titles as his
+  blog posts.
+- In the 140 saved entries, marking Zvi finds no duplicate pair, so there
+  was nothing to clean up (the LessWrong copy hadn't been saved yet).
+- A `--dry-run` of the live feeds in a copy of the repository, with and
+  without the change: the only difference is that LessWrong's copy of the
+  System Card is skipped as a title duplicate of Zvi's (4 new entries
+  instead of 5). The other title matches were the Redwood ↔ Alignment Forum
+  pairs, as before. No false positives.
+
+**Files changed**
+`config/sources.yaml`, `docs/HOW_THIS_SITE_WORKS.md`, `docs/DEVLOG.md`.
+
+**Pending**
+- The news dates in UTC, on the branch `news-dates-utc` (see its own DEVLOG
+  entry there).
