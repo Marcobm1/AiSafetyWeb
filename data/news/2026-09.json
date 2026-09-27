@@ -1,5 +1,22 @@
 [
   {
+    "id": "f0a9aca38db31936",
+    "url": "https://www.lesswrong.com/posts/rtPiip9igy3QvxYdM/claude-opus-5-5-should-raise-your-ambitions",
+    "title": "Claude Opus 5.5 Should Raise Your Ambitions",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-26T16:48:18Z",
+    "fetched_at": "2026-09-27T11:07:39Z",
+    "excerpt": "When it comes to making things, or doing most things in general, Fable 5.1 and especially GPT-6 Astra raised my ambition level. They should have raised yours, too.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
     "id": "7c507c0aef1f5563",
     "url": "https://www.lesswrong.com/posts/n8u3BfqFoGh4jnzpo/plan-r-ai-safety-by-asics",
     "title": "Plan R: AI Safety by ASICs",
