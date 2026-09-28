@@ -1,5 +1,54 @@
 [
   {
+    "id": "7cb616c0b0b940d0",
+    "url": "https://www.lesswrong.com/posts/zPiQqQ6JJn6ysPpKW/when-they-can-perform-a-task-ais-are-much-cheaper-than",
+    "title": "When they can perform a task, AIs are much cheaper than humans",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-28T01:16:27Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "AI systems are increasingly capable of substantial work. I'm old enough to remember 2025, when METR's time-horizon graph climbed from seven-minute tasks at 80% reliability at the start of the year to tasks taking more than an hour by the end.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "djbinder"
+    ],
+    "summary": null
+  },
+  {
+    "id": "11a9ac49fdff1625",
+    "url": "https://www.lesswrong.com/posts/i4yswYDSrPFHWpCbi/why-research-personas-despite-rl-scaling",
+    "title": "Why research personas despite RL scaling?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-27T21:34:49Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "RL seeming to shape much of the motivations and behaviour of the agents, \"washing out\" their initial personas — c.f. Thoughts on the persona selection model (Sam Marks, 24th Sep 2026).",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Cleo Nardo"
+    ],
+    "summary": null
+  },
+  {
+    "id": "b59f28a3cbec7f44",
+    "url": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor",
+    "title": "Implementing and Evaluating a Basic Per-Action Monitor for Safer Evals",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-09-27T07:00:00Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "In light of recent incidents (e.g. those from OpenAI , Anthropic , and UK AISI ), we developed and deployed a basic live per-action monitor to reduce the likelihood of incidents involving harmful actions from agents during our own evaluations. The monitor is intended to reliably detect actions that could plausibly…",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
     "id": "f0a9aca38db31936",
     "url": "https://www.lesswrong.com/posts/rtPiip9igy3QvxYdM/claude-opus-5-5-should-raise-your-ambitions",
     "title": "Claude Opus 5.5 Should Raise Your Ambitions",
@@ -105,6 +154,27 @@
     "summary": null
   },
   {
+    "id": "f41736e60fbc4d35",
+    "url": "https://arxiv.org/abs/2609.31603",
+    "title": "User Model Extraction via Belief Self-Distillation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T17:54:32Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Ali Holmov",
+      "Yiran Huang",
+      "Kirill Bykov",
+      "Zeynep Akata"
+    ],
+    "arxiv_id": "2609.31603",
+    "summary": null
+  },
+  {
     "id": "08bcc94cd1f4df23",
     "url": "https://www.transformernews.ai/p/trump-cant-stop-ai-governance",
     "title": "AI governance is coming, with or without Trump",
@@ -119,6 +189,133 @@
     "authors": [
       "Shakeel Hashim"
     ],
+    "summary": null
+  },
+  {
+    "id": "ecd3ef5d4a510100",
+    "url": "https://arxiv.org/abs/2609.31318",
+    "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T14:26:04Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "AI agents combine language models with external data and tools that can modify files, call APIs, or execute code. Security failures can arise when adversarial content changes an agent's tool use or when the surrounding software contains vulnerabilities such as path traversal or command injection.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Weida Liang",
+      "Shi Qiu",
+      "Zhun Wang",
+      "Simon Sure",
+      "Xiaoyuan Liu",
+      "Tianneng Shi",
+      "Zhaorun Chen",
+      "Wenbo Guo",
+      "Dawn Song"
+    ],
+    "arxiv_id": "2609.31318",
+    "summary": null
+  },
+  {
+    "id": "a8bd4630652384cd",
+    "url": "https://arxiv.org/abs/2609.31121",
+    "title": "Monitor Jailbreaking: Evading Chain-of-Thought Monitoring Without Encoded Reasoning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T11:13:03Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring is a promising safety technique for reasoning models, enabling detection of problematic reasoning before models act. A key concern is encoded reasoning, where models hide their true reasoning in ways that monitors and humans cannot interpret.",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Julian Schulz"
+    ],
+    "arxiv_id": "2609.31121",
+    "summary": null
+  },
+  {
+    "id": "862c12a522df8174",
+    "url": "https://arxiv.org/abs/2609.31056",
+    "title": "Neuralyzing the Trace: Selective Representation-Level Unlearning with Contrastive Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T09:51:52Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Machine unlearning aims to remove targeted information while preserving a model's other abilities. In realistic settings, such as privacy requests under the EU GDPR, the target may be narrow, for example information associated with a single person.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Itai Zehavi",
+      "Fanny Jourdan",
+      "Ulrich Aivodji"
+    ],
+    "arxiv_id": "2609.31056",
+    "summary": null
+  },
+  {
+    "id": "4f6d507a08b57749",
+    "url": "https://arxiv.org/abs/2609.30993",
+    "title": "FLIP: Final Layer Inference-Time Probing for Vision-Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T08:38:54Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "We present FLIP, a final-layer inference-time probe for testing whether a logit-facing intervention site in an open-weight vision-language model (VLM) supports structured, task-linked computation rather than generic perturbation. Behavioral change under internal intervention is otherwise mechanistically ambiguous: it…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Drandreb Earl O. Juanico",
+      "Rowel O. Atienza"
+    ],
+    "arxiv_id": "2609.30993",
+    "summary": null
+  },
+  {
+    "id": "44c3fd479258b5a8",
+    "url": "https://arxiv.org/abs/2609.30940",
+    "title": "Financial Fragility in Societies of LLM Agents: Coordination Failures and Stabilizing Mechanisms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T07:55:14Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Individually protective decisions can produce avoidable collective failures. As large language model (LLM) agents take on greater roles in financial decision-making, financial AI safety must therefore be considered not only at the level of individual agents, but also at the level of the systems they jointly create.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zhenhao Fu",
+      "Ruipeng Xu",
+      "Qibing Ren"
+    ],
+    "arxiv_id": "2609.30940",
+    "summary": null
+  },
+  {
+    "id": "b7c0b24b68fcce2c",
+    "url": "https://arxiv.org/abs/2609.30841",
+    "title": "Why Jailbreaks Succeed in Diffusion Language Models: An Energy Landscape Analysis",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-25T05:35:36Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Existing attacks and defenses for diffusion-based large language models (dLLMs) target specific vulnerabilities but lack a shared framework explaining why attacks succeed. We propose one by interpreting safety alignment as shaping the denoising energy landscape: a well-aligned model routes harmful queries toward safe…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Thong Bach",
+      "Dung Nguyen",
+      "Thao Minh Le",
+      "Truyen Tran"
+    ],
+    "arxiv_id": "2609.30841",
     "summary": null
   },
   {
@@ -168,6 +365,25 @@
     "authors": [
       "Cleo Nardo"
     ],
+    "summary": null
+  },
+  {
+    "id": "378c7e6a655962f9",
+    "url": "https://arxiv.org/abs/2609.30383",
+    "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-24T18:00:18Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "A skill is a modular package of natural-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a specific task. Skill-based agent systems therefore enable flexible reuse of third-party capabilities, but the openness of this skill ecosystem…",
+    "topics": [],
+    "authors": [
+      "Zihao Zhu",
+      "Siwei Lyu",
+      "Adel Bibi",
+      "Baoyuan Wu"
+    ],
+    "arxiv_id": "2609.30383",
     "summary": null
   },
   {
@@ -490,6 +706,24 @@
     "authors": [
       "Aaron_Scher"
     ]
+  },
+  {
+    "id": "3b6ee14a2bf74dc5",
+    "url": "https://arxiv.org/abs/2609.30326",
+    "title": "Guarded Gradient-Based Activation Steering of Shutdown Responses in Qwen3.5-0.8B: A Minimum-Step Policy",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-23T21:30:52Z",
+    "fetched_at": "2026-09-28T12:32:13Z",
+    "excerpt": "Activation steering changes a model's internal activations during inference without updating its weights, but a useful intervention must determine both how and when to steer. Motivated by the AI-safety concern that a model expected to accept shutdown may instead produce a shutdown-avoidance response, this study…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Farhad Davaripour"
+    ],
+    "arxiv_id": "2609.30326",
+    "summary": null
   },
   {
     "id": "896c5908658eb9e8",

@@ -1,4 +1,153 @@
 {
+  "arxiv:2609.31603": {
+    "id": "arxiv:2609.31603",
+    "title": "User Model Extraction via Belief Self-Distillation",
+    "authors": [
+      "Ali Holmov",
+      "Yiran Huang",
+      "Kirill Bykov",
+      "Zeynep Akata"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.31603",
+    "abstract": "Large language models (LLMs) implicitly infer attributes of their users and adapt their behavior accordingly, yet these beliefs remain difficult to inspect and causally manipulate. We introduce Belief Self-Distillation (BSD), a unified read-write framework that bridges linear and causal probing by learning a compact…",
+    "detected": "2026-09-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.31318": {
+    "id": "arxiv:2609.31318",
+    "title": "AgentXploit: Autonomous Repository-to-Runtime Red-Teaming for AI Agents",
+    "authors": [
+      "Weida Liang",
+      "Shi Qiu",
+      "Zhun Wang",
+      "Simon Sure",
+      "Xiaoyuan Liu",
+      "Tianneng Shi",
+      "Zhaorun Chen",
+      "Wenbo Guo",
+      "Dawn Song"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.31318",
+    "abstract": "AI agents combine language models with external data and tools that can modify files, call APIs, or execute code. Security failures can arise when adversarial content changes an agent's tool use or when the surrounding software contains vulnerabilities such as path traversal or command injection.",
+    "detected": "2026-09-28",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2609.31121": {
+    "id": "arxiv:2609.31121",
+    "title": "Monitor Jailbreaking: Evading Chain-of-Thought Monitoring Without Encoded Reasoning",
+    "authors": [
+      "Julian Schulz"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.31121",
+    "abstract": "Chain-of-thought (CoT) monitoring is a promising safety technique for reasoning models, enabling detection of problematic reasoning before models act. A key concern is encoded reasoning, where models hide their true reasoning in ways that monitors and humans cannot interpret.",
+    "detected": "2026-09-28",
+    "topics": [
+      "interpretability",
+      "security"
+    ]
+  },
+  "arxiv:2609.31056": {
+    "id": "arxiv:2609.31056",
+    "title": "Neuralyzing the Trace: Selective Representation-Level Unlearning with Contrastive Sparse Autoencoders",
+    "authors": [
+      "Itai Zehavi",
+      "Fanny Jourdan",
+      "Ulrich Aivodji"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.31056",
+    "abstract": "Machine unlearning aims to remove targeted information while preserving a model's other abilities. In realistic settings, such as privacy requests under the EU GDPR, the target may be narrow, for example information associated with a single person.",
+    "detected": "2026-09-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.30993": {
+    "id": "arxiv:2609.30993",
+    "title": "FLIP: Final Layer Inference-Time Probing for Vision-Language Models",
+    "authors": [
+      "Drandreb Earl O. Juanico",
+      "Rowel O. Atienza"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30993",
+    "abstract": "We present FLIP, a final-layer inference-time probe for testing whether a logit-facing intervention site in an open-weight vision-language model (VLM) supports structured, task-linked computation rather than generic perturbation. Behavioral change under internal intervention is otherwise mechanistically ambiguous: it…",
+    "detected": "2026-09-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.30940": {
+    "id": "arxiv:2609.30940",
+    "title": "Financial Fragility in Societies of LLM Agents: Coordination Failures and Stabilizing Mechanisms",
+    "authors": [
+      "Zhenhao Fu",
+      "Ruipeng Xu",
+      "Qibing Ren"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30940",
+    "abstract": "Individually protective decisions can produce avoidable collective failures. As large language model (LLM) agents take on greater roles in financial decision-making, financial AI safety must therefore be considered not only at the level of individual agents, but also at the level of the systems they jointly create.",
+    "detected": "2026-09-28",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.30841": {
+    "id": "arxiv:2609.30841",
+    "title": "Why Jailbreaks Succeed in Diffusion Language Models: An Energy Landscape Analysis",
+    "authors": [
+      "Thong Bach",
+      "Dung Nguyen",
+      "Thao Minh Le",
+      "Truyen Tran"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30841",
+    "abstract": "Existing attacks and defenses for diffusion-based large language models (dLLMs) target specific vulnerabilities but lack a shared framework explaining why attacks succeed. We propose one by interpreting safety alignment as shaping the denoising energy landscape: a well-aligned model routes harmful queries toward safe…",
+    "detected": "2026-09-28",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.30383": {
+    "id": "arxiv:2609.30383",
+    "title": "Stealth Apart, Harm Together: Skill Cascading Attacks on Skill-Based Agent Systems",
+    "authors": [
+      "Zihao Zhu",
+      "Siwei Lyu",
+      "Adel Bibi",
+      "Baoyuan Wu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30383",
+    "abstract": "A skill is a modular package of natural-language instructions, executable scripts, and reference resources that an agent can load at runtime to extend its capabilities for a specific task. Skill-based agent systems therefore enable flexible reuse of third-party capabilities, but the openness of this skill ecosystem…",
+    "detected": "2026-09-28",
+    "topics": []
+  },
+  "arxiv:2609.30326": {
+    "id": "arxiv:2609.30326",
+    "title": "Guarded Gradient-Based Activation Steering of Shutdown Responses in Qwen3.5-0.8B: A Minimum-Step Policy",
+    "authors": [
+      "Farhad Davaripour"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.30326",
+    "abstract": "Activation steering changes a model's internal activations during inference without updating its weights, but a useful intervention must determine both how and when to steer. Motivated by the AI-safety concern that a model expected to accept shutdown may instead produce a shutdown-avoidance response, this study…",
+    "detected": "2026-09-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2609.30217": {
     "id": "arxiv:2609.30217",
     "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
