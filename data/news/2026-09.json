@@ -1,5 +1,551 @@
 [
   {
+    "id": "f34e13321545f255",
+    "url": "https://www.lesswrong.com/posts/jbttuCF4wFZmXakcj/the-world-s-best-gradual-disempowerment-model-organism",
+    "title": "The world's best gradual disempowerment model organism: Frontier AI labs",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-30T03:17:00Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Subtitle: And maybe second best is AI safety? Further reading: So many things, but: Gradual Disempowerment , The Normalization of Deviance in AI Development , Let’s Think About Slowing Down AI , Doom as a bad method, not a utopia tradeoff , Teleoperated Humans Thank you to JennaS for extensive edits and long-term…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "June Jimenez"
+    ],
+    "summary": null
+  },
+  {
+    "id": "50011c4ede3abe13",
+    "url": "https://www.lesswrong.com/posts/7NZ6ZWjenzzCbCJ5b/frog-and-toad-and-the-increasingly-capable-machines",
+    "title": "Frog and Toad and the Increasingly Capable Machines",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-30T01:58:02Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Want to start a conversation about HuggingFace with your mom but she's inexplicably bouncing off the METR report? Try this explainer I wrote in the style of Arnold Lobel's Frog and Toad.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Elizabeth"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ddd9e9c6a1607846",
+    "url": "https://www.lesswrong.com/posts/gEDNSiCY2GGQrFS65/astra-6-1-pulled-as-insufficiently-aligned",
+    "title": "Astra 6.1 Pulled As Insufficiently Aligned",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-29T18:37:48Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "We once again got a new set of warnings yesterday, and new movement towards living in a sane world. On the heels of its pause in inference and training due to its latest sandbox escape, OpenAI has cancelled the planned release of their next frontier model, which would have become Astra 6.1.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e9a8487757bbf56d",
+    "url": "https://arxiv.org/abs/2609.38107",
+    "title": "Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T17:46:55Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Chain-of-thought traces are widely read as records of how models reach their answers, informing debugging, agent auditing, and claims about reasoning. Testing this interpretation is difficult because natural-language thinking traces are rarely mechanically verifiable.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Ratish Puduppully",
+      "Pranabendu Misra",
+      "Paarth Iyer",
+      "Durgesh Kalwar",
+      "Vardhan Palod",
+      "Subbarao Kambhampati"
+    ],
+    "arxiv_id": "2609.38107",
+    "summary": null
+  },
+  {
+    "id": "cdd3c575aab08353",
+    "url": "https://arxiv.org/abs/2609.38093",
+    "title": "Character Training for Risk-Averse Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T17:42:54Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Risk aversion in resources could prevent misaligned AI agents from causing catastrophic harm. Misaligned but risk-averse agents would tend to favor safer strategies like making deals with humans over riskier strategies like rebelling.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Arav Dhoot",
+      "Punya Syon Pandey",
+      "Jamie Johnson",
+      "Daniel Tan",
+      "Elliott Thornley",
+      "David Demitri Africa"
+    ],
+    "arxiv_id": "2609.38093",
+    "summary": null
+  },
+  {
+    "id": "35734abc5b4ea0cd",
+    "url": "https://arxiv.org/abs/2609.38081",
+    "title": "Traversing the solution space of neural networks with Hessian Null Space Continuation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T17:38:24Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "On a single task, deep networks can learn many solutions, depending on their optimizer, training data, architecture, and hyperparameters. Many of these solutions are mode-connected: rather than isolated points in weight space, they are connected by low-loss regions.",
+    "topics": [],
+    "authors": [
+      "Ann Huang",
+      "Mitchell Ostrow",
+      "Zhouyang Lu",
+      "William T. Redman",
+      "Leo Kozachkov",
+      "Kanaka Rajan"
+    ],
+    "arxiv_id": "2609.38081",
+    "summary": null
+  },
+  {
+    "id": "8824511a552f7f46",
+    "url": "https://arxiv.org/abs/2609.37991",
+    "title": "Which Attention Heads are like the Human Head? Not the Ones that Compute",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T16:51:03Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Brain-AI alignment is often interpreted as a sign that model and brain perform similar computations. Whether the aligned units are causally involved in model computation is rarely checked.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Christopher Pinier",
+      "Gustaw Opiełka",
+      "Hannes Rosenbusch",
+      "Taylor Webb",
+      "Michael D. Nunez",
+      "Claire E. Stevenson"
+    ],
+    "arxiv_id": "2609.37991",
+    "summary": null
+  },
+  {
+    "id": "4c7212f636f5b779",
+    "url": "https://arxiv.org/abs/2609.37914",
+    "title": "The Unequal Influence of Bad Advice: Using Training Data Attribution to Modulate Emergent Misalignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T16:08:34Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Fine-tuning large language models on narrow, misaligned tasks can undo their post-training alignment and induce novel misaligned behaviors -- a phenomenon known as \\emph{emergent misalignment} (EM). EM has been linked to persona-like representations, where fine-tuning might reduce loss by amplifying a harmful or…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Gonçalo Paulo",
+      "Louis Jaburi",
+      "Nora Belrose",
+      "Lucia Quirke",
+      "Stella Biderman"
+    ],
+    "arxiv_id": "2609.37914",
+    "summary": null
+  },
+  {
+    "id": "074c98e42c595023",
+    "url": "https://arxiv.org/abs/2609.37857",
+    "title": "Active Budget Can Kill Sensitivity: Diagnosing and Repairing TopK Sparse Autoencoder Reliability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T15:44:41Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Sparse autoencoders (SAEs) are increasingly scaled to wider dictionaries to recover fine-grained structure from large language model activations. However, a feature is useful for interpretation only if it remains a stable unit of analysis when the same meaning is expressed in different surface forms.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Zhenting Huang",
+      "Junnan Liu",
+      "Qianren Mao",
+      "Zhixing Tan",
+      "Bo Jiang"
+    ],
+    "arxiv_id": "2609.37857",
+    "summary": null
+  },
+  {
+    "id": "571debfec9bc5690",
+    "url": "https://arxiv.org/abs/2609.37680",
+    "title": "When Models Don't Manipulate Manifolds: The Geometry of a Comparison Task",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T14:29:51Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "One of the current premises of mechanistic interpretability research is that detailed accounts of the geometry of neural network representations can tell us how models perform computations, and how to effectively intervene on them. While low dimensional manifolds have been observed for multiple concepts in the…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Sai Sumedh R. Hindupur",
+      "Hadas Orgad",
+      "Thomas Fel",
+      "Demba Ba"
+    ],
+    "arxiv_id": "2609.37680",
+    "summary": null
+  },
+  {
+    "id": "938dc1f3bafd8f79",
+    "url": "https://www.lesswrong.com/posts/PeKE5oxzqf3cg2L8a/thank-you-to-the-ai-safety-people",
+    "title": "Thank you to the AI safety people",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-09-29T14:24:17Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "I was born at the end of the cold war, unaware of the danger we were emerging from. Duck and cover drills (as if those could protect schoolchildren from a nuclear blast) were a curiosity of the past.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "juliawise"
+    ],
+    "summary": null
+  },
+  {
+    "id": "93370df2bc2a9b11",
+    "url": "https://arxiv.org/abs/2609.37624",
+    "title": "Correct, Don't Delete: Mitigating Emergent Misalignment with Corrective Supervision",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T14:01:56Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Fine-tuning a language model on a narrow set of harmful demonstrations, such as bad medical advice, can make it broadly misaligned on unrelated questions, a phenomenon known as emergent misalignment (EM). The usual defense is to find the offending rows and delete them, but a row locator failed our held-out test and…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jacob Epifano"
+    ],
+    "arxiv_id": "2609.37624",
+    "summary": null
+  },
+  {
+    "id": "fd6cd7295e28c234",
+    "url": "https://newsletter.safe.ai/p/aisn-82-the-us-and-china-begin-a",
+    "title": "AISN #82: The US and China Begin a Dialogue on AI",
+    "source": "AI Safety Newsletter (CAIS)",
+    "source_id": "ai-safety-newsletter",
+    "published": "2026-09-29T13:30:27Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Also, AI companies’ discussions about auditing each other, and a new benchmark testing models’ tendencies to cheat.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Laura Hiscott"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6def6c6238514bb0",
+    "url": "https://arxiv.org/abs/2609.37312",
+    "title": "Hidden Reasoning Must Leak, but Need Not Be Readable: Fundamental Opportunities and Limits for Chain-of-Thought Monitoring",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T11:46:24Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Can reasoning models trick chain of thought (CoT) monitors and perform hidden computation without revealing it in their thinking traces? We show that the answer depends on the underlying task difficulty and the model size.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Mohammadali Mohammadkhani",
+      "Madhava Krishna",
+      "Yash Sarrof",
+      "Michael Hahn"
+    ],
+    "arxiv_id": "2609.37312",
+    "summary": null
+  },
+  {
+    "id": "19db7cc5ca5cc5ea",
+    "url": "https://openai.com/index/devday-2026-recap",
+    "title": "DevDay 2026 Recap",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-09-29T10:00:00Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Explore more than 20 announcements from OpenAI DevDay 2026, including GPT-6 Astra, ChatGPT, Codex, APIs, security, and new tools for builders.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6f893bcbb17f1f3c",
+    "url": "https://arxiv.org/abs/2609.37054",
+    "title": "actr: aligning thoughts and responses for multilingual safety in reasoning llms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T08:58:55Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Ensuring the safety of reasoning large language models (LLMs) across languages is essential for their reliable deployment. However, when exposed to jailbreak attacks in non-high-resource languages, these models may generate unsafe responses even when their reasoning traces identify safety risks.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Xianhui Zhang",
+      "Jian Yu",
+      "Chengyu Xie",
+      "Chenhang Cui",
+      "Shuyi Miao",
+      "Pengyang Shao",
+      "Yu Zheng",
+      "Fei Shen",
+      "Tat-Seng Chua"
+    ],
+    "arxiv_id": "2609.37054",
+    "summary": null
+  },
+  {
+    "id": "b8a92f7b4adc6837",
+    "url": "https://arxiv.org/abs/2609.36956",
+    "title": "Controlled Decoding Attacks on Black-Box LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T07:58:49Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Manipulating next-token probabilities during generation can bypass the safety alignment of large language models. Existing approaches, however, rely on access to model weights or numerical token probabilities and therefore do not apply to interfaces that return only sampled text.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Jesson Wang",
+      "Shawn Li",
+      "Wei Yang",
+      "Franck Dernoncourt",
+      "Ryan A. Rossi",
+      "Charith Peris",
+      "Yue Zhao"
+    ],
+    "arxiv_id": "2609.36956",
+    "summary": null
+  },
+  {
+    "id": "33137b80b476c51a",
+    "url": "https://arxiv.org/abs/2609.36900",
+    "title": "STAR-GRPO: Canonical Anchoring and Reliability-First Advantages against Representation-Dependent Reward Hacking",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T07:25:06Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Reward hacking occurs when policy optimization exploits a brittle reward interface or an overly permissive proxy objective, improving the training score without improving the underlying response quality. This phenomenon is amplified in group-relative policy optimization: an unsupported reward can shift the group…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Wan Tian",
+      "Zhongyi Li",
+      "Xiang Xu",
+      "Minhao Zou",
+      "Yijie Peng",
+      "Fuzhen Zhuang"
+    ],
+    "arxiv_id": "2609.36900",
+    "summary": null
+  },
+  {
+    "id": "8b796f673fee6c66",
+    "url": "https://arxiv.org/abs/2609.36849",
+    "title": "Does the Unsafe Gradient Survive a Conversation? On the Fragility of Gradient-Based Jailbreak Detection in Multi-Turn Dialogue",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T06:59:37Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Safety-aligned language models are commonly deployed as multi-turn assistants, which lets adversaries spread unsafe intent across several user turns instead of a single prompt. Gradient-based jailbreak detectors such as GradSafe were developed for single prompts: they score an input by the alignment between its…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Omar Sheta",
+      "Rinku Deuja",
+      "Hadi Masoudi",
+      "Minghong Fang"
+    ],
+    "arxiv_id": "2609.36849",
+    "summary": null
+  },
+  {
+    "id": "0ca3f7c42f4d9aa6",
+    "url": "https://arxiv.org/abs/2609.36813",
+    "title": "RESCUE: Repairing Language Model Errors to Sparse Circuits via Reinforcement Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T06:25:19Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Large language models (LLMs) exhibit strong general capabilities that mechanistic interpretability has attributed to sparse computational circuits. However, existing circuit studies emphasize preserving functionality or explaining safety, leaving the mechanisms underlying failures across a broader range of tasks…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Chuanpu Liu",
+      "Miao Yu",
+      "Yikai Cai",
+      "Yuanhe Zhang",
+      "Zhenhong Zhou",
+      "Li Sun",
+      "Zuming Jiang",
+      "Yufei Guo"
+    ],
+    "arxiv_id": "2609.36813",
+    "summary": null
+  },
+  {
+    "id": "d125cc7b318198f7",
+    "url": "https://arxiv.org/abs/2609.36739",
+    "title": "Frontier Autolab: Organizational Memory, Adversarial Dissent and Temporal Leakage in Multi-Agent LLM Firms Across Fifty Years of Technological Change",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T05:12:12Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Multi-agent LLM systems are increasingly structured like organizations, with roles, critics and shared memory, yet they are evaluated on tasks that last minutes. We ask how such an organization behaves when the ground it stands on keeps moving.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Bravish Ghosh"
+    ],
+    "arxiv_id": "2609.36739",
+    "summary": null
+  },
+  {
+    "id": "c099381b6e416b70",
+    "url": "https://arxiv.org/abs/2609.36657",
+    "title": "Constitutional adapters: Inference-time interventions for misalignment and misuse",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T03:59:09Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Training models to act in accordance with an explicitly defined set of principles, or \"constitution,\" has shown promise as a robust and transparent mechanism for AI alignment. However, the generality and flexibility of such methods remain unclear.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Adam S. Lowet",
+      "Mark Kurzeja"
+    ],
+    "arxiv_id": "2609.36657",
+    "summary": null
+  },
+  {
+    "id": "841027011500616f",
+    "url": "https://arxiv.org/abs/2609.36570",
+    "title": "CounterSteer: Suppressing Indirect Prompt Injection with Activation Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T02:51:31Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Indirect prompt injection makes an LLM agent treat untrusted retrieved text as instructions. We present CounterSteer, an inference-time defense that suppresses this behavior inside the model.",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Mark Russinovich"
+    ],
+    "arxiv_id": "2609.36570",
+    "summary": null
+  },
+  {
+    "id": "97eeb849ce7bc839",
+    "url": "https://arxiv.org/abs/2609.36474",
+    "title": "FinRT: Distilling Adaptive Red-Teaming Strategies into Reusable Adversarial Generators in Consumer Finance",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T01:33:31Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "In regulated industries like consumer finance, seemingly harmless user queries can exploit large language model vulnerabilities, triggering safety failures and pushing responses dangerously close to policy limits. Existing automated red-teaming methods trade off attack effectiveness against generation cost, while…",
+    "topics": [
+      "evals",
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Rikhiya Ghosh",
+      "Himanshu Kumar",
+      "Sriram Venkatapathy",
+      "Sahil Wadhwa",
+      "Alexandre G. R. Day",
+      "Pranab Mohanty"
+    ],
+    "arxiv_id": "2609.36474",
+    "summary": null
+  },
+  {
+    "id": "93d4ea53de5f622a",
+    "url": "https://arxiv.org/abs/2609.36294",
+    "title": "When Trees Are Not Enough: Learning Mixed-Topology Feature Graphs with Adaptive Graph Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-28T21:24:47Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Sparse autoencoders (SAEs) expose interpretable features in large language model activations, yet existing structured SAEs impose single-parent trees or forests, while post-hoc graphs permit multiple parents but neither guide feature learning nor ensure reliable relation recovery. We introduce the Adaptive Graph…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Xiaozuo Shen",
+      "Yifei Cai",
+      "Tian Tan",
+      "Rui Ning",
+      "Chunsheng Xin",
+      "Hongyi Wu"
+    ],
+    "arxiv_id": "2609.36294",
+    "summary": null
+  },
+  {
+    "id": "502931b06b3bb130",
+    "url": "https://arxiv.org/abs/2609.36245",
+    "title": "CoRe: Co-Evolving Reward Models for Mitigating Latent Reward Hacking in Video Diffusion Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-28T20:38:50Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Latent reward models (LRMs) enable efficient alignment of video diffusion models by scoring intermediate states directly in latent space. However, we find that optimizing against a fixed latent reward rapidly leads to latent reward hacking: the predicted reward stays high while perceptual and motion quality…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zhaolong Su",
+      "Yujin Han",
+      "Feng Wang",
+      "Jameson Dong",
+      "Hins Hu",
+      "Difan Zou"
+    ],
+    "arxiv_id": "2609.36245",
+    "summary": null
+  },
+  {
     "id": "09aa97e497a0ecc3",
     "url": "https://www.lesswrong.com/posts/PgbAnqdqdJcrS2Gsy/the-likely-outcome-of-an-ai-pause-is-that-we-unpause-too",
     "title": "The likely outcome of an AI pause is that we unpause too early and everyone dies",
@@ -60,6 +606,29 @@
       "alignment",
       "governance"
     ],
+    "summary": null
+  },
+  {
+    "id": "9aa5c2c056bfc540",
+    "url": "https://arxiv.org/abs/2609.36049",
+    "title": "Improving scalable oversight with co-trained monitors",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-28T18:10:36Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Worker-monitor setups are a promising approach to AI oversight, but training workers against fixed monitors can incentivize monitor evasion. We study whether this failure mode can be avoided by co-training the monitor alongside the worker, and explore both supervised and self-supervised approaches.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Joseph H. Rudoler",
+      "Kevin Tan",
+      "Benedict Tessler",
+      "Timothy Kong",
+      "Enric Boix Adserà"
+    ],
+    "arxiv_id": "2609.36049",
     "summary": null
   },
   {
@@ -734,6 +1303,25 @@
     "summary": null
   },
   {
+    "id": "2a9fc40127325a04",
+    "url": "https://arxiv.org/abs/2609.35890",
+    "title": "Representational Simplicity and Circuit Size Dissociate in a Threshold-Dependent Way: A Controlled Test via Adversarial Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-27T07:35:31Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Sparse-autoencoder decomposability and concentrated feature attribution are increasingly treated as evidence that a model's computation is easier to reverse-engineer. Whether this representational and attributional cleanliness actually predicts a smaller or more tractable causal circuit remains an open question.",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Adam Elimadi"
+    ],
+    "arxiv_id": "2609.35890",
+    "summary": null
+  },
+  {
     "id": "b59f28a3cbec7f44",
     "url": "https://metr.org/notes/2026-09-27-implementing-a-basic-blocking-action-monitor",
     "title": "Implementing and Evaluating a Basic Per-Action Monitor for Safer Evals",
@@ -787,6 +1375,25 @@
       "Lijie Chen"
     ],
     "arxiv_id": "2609.33150",
+    "summary": null
+  },
+  {
+    "id": "059c77140b7b1d5b",
+    "url": "https://arxiv.org/abs/2609.35886",
+    "title": "Agentic Commerce Bench: Measuring Fraud Detection for Agents That Spend Money",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-27T00:58:39Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "AI agents now hold spend authority and settle payments without per-action human confirmation. The resulting loss is often not a security failure: a counterparty with the correct domain, the correct settlement address and a genuinely delivered service can charge more than it should, and no check keyed on identity will…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Ankit Srivastava",
+      "Debjyoti Paul"
+    ],
+    "arxiv_id": "2609.35886",
     "summary": null
   },
   {
@@ -1780,6 +2387,21 @@
     "authors": [
       "TheZvi"
     ]
+  },
+  {
+    "id": "3e1692acef5d933f",
+    "url": "https://www.alignmentforum.org/posts/6m29SfjbittooYojj/latent-reasoning-architectures-would-likely-undermine-cot",
+    "title": "Latent reasoning architectures would likely undermine CoT, our strongest oversight tool",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-09-23T18:49:39Z",
+    "fetched_at": "2026-09-30T11:41:30Z",
+    "excerpt": "Edited 2026-09-29 ; see note at the start of the conclusion . Summary: Currently, “chain of thought” (CoT) is our most valuable tool for understanding the reasoning and cognition of AI systems.",
+    "topics": [],
+    "authors": [
+      "Lukas Finnveden"
+    ],
+    "summary": null
   },
   {
     "id": "d968602ca78670ee",

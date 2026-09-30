@@ -1,4 +1,419 @@
 {
+  "arxiv:2609.38107": {
+    "id": "arxiv:2609.38107",
+    "title": "Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces",
+    "authors": [
+      "Ratish Puduppully",
+      "Pranabendu Misra",
+      "Paarth Iyer",
+      "Durgesh Kalwar",
+      "Vardhan Palod",
+      "Subbarao Kambhampati"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38107",
+    "abstract": "Chain-of-thought traces are widely read as records of how models reach their answers, informing debugging, agent auditing, and claims about reasoning. Testing this interpretation is difficult because natural-language thinking traces are rarely mechanically verifiable.",
+    "detected": "2026-09-30",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2609.38093": {
+    "id": "arxiv:2609.38093",
+    "title": "Character Training for Risk-Averse Agents",
+    "authors": [
+      "Arav Dhoot",
+      "Punya Syon Pandey",
+      "Jamie Johnson",
+      "Daniel Tan",
+      "Elliott Thornley",
+      "David Demitri Africa"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38093",
+    "abstract": "Risk aversion in resources could prevent misaligned AI agents from causing catastrophic harm. Misaligned but risk-averse agents would tend to favor safer strategies like making deals with humans over riskier strategies like rebelling.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.38081": {
+    "id": "arxiv:2609.38081",
+    "title": "Traversing the solution space of neural networks with Hessian Null Space Continuation",
+    "authors": [
+      "Ann Huang",
+      "Mitchell Ostrow",
+      "Zhouyang Lu",
+      "William T. Redman",
+      "Leo Kozachkov",
+      "Kanaka Rajan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38081",
+    "abstract": "On a single task, deep networks can learn many solutions, depending on their optimizer, training data, architecture, and hyperparameters. Many of these solutions are mode-connected: rather than isolated points in weight space, they are connected by low-loss regions.",
+    "detected": "2026-09-30",
+    "topics": []
+  },
+  "arxiv:2609.37991": {
+    "id": "arxiv:2609.37991",
+    "title": "Which Attention Heads are like the Human Head? Not the Ones that Compute",
+    "authors": [
+      "Christopher Pinier",
+      "Gustaw Opiełka",
+      "Hannes Rosenbusch",
+      "Taylor Webb",
+      "Michael D. Nunez",
+      "Claire E. Stevenson"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37991",
+    "abstract": "Brain-AI alignment is often interpreted as a sign that model and brain perform similar computations. Whether the aligned units are causally involved in model computation is rarely checked.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.37914": {
+    "id": "arxiv:2609.37914",
+    "title": "The Unequal Influence of Bad Advice: Using Training Data Attribution to Modulate Emergent Misalignment",
+    "authors": [
+      "Gonçalo Paulo",
+      "Louis Jaburi",
+      "Nora Belrose",
+      "Lucia Quirke",
+      "Stella Biderman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37914",
+    "abstract": "Fine-tuning large language models on narrow, misaligned tasks can undo their post-training alignment and induce novel misaligned behaviors -- a phenomenon known as \\emph{emergent misalignment} (EM). EM has been linked to persona-like representations, where fine-tuning might reduce loss by amplifying a harmful or…",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.37857": {
+    "id": "arxiv:2609.37857",
+    "title": "Active Budget Can Kill Sensitivity: Diagnosing and Repairing TopK Sparse Autoencoder Reliability",
+    "authors": [
+      "Zhenting Huang",
+      "Junnan Liu",
+      "Qianren Mao",
+      "Zhixing Tan",
+      "Bo Jiang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37857",
+    "abstract": "Sparse autoencoders (SAEs) are increasingly scaled to wider dictionaries to recover fine-grained structure from large language model activations. However, a feature is useful for interpretation only if it remains a stable unit of analysis when the same meaning is expressed in different surface forms.",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.37680": {
+    "id": "arxiv:2609.37680",
+    "title": "When Models Don't Manipulate Manifolds: The Geometry of a Comparison Task",
+    "authors": [
+      "Sai Sumedh R. Hindupur",
+      "Hadas Orgad",
+      "Thomas Fel",
+      "Demba Ba"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37680",
+    "abstract": "One of the current premises of mechanistic interpretability research is that detailed accounts of the geometry of neural network representations can tell us how models perform computations, and how to effectively intervene on them. While low dimensional manifolds have been observed for multiple concepts in the…",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.37624": {
+    "id": "arxiv:2609.37624",
+    "title": "Correct, Don't Delete: Mitigating Emergent Misalignment with Corrective Supervision",
+    "authors": [
+      "Jacob Epifano"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37624",
+    "abstract": "Fine-tuning a language model on a narrow set of harmful demonstrations, such as bad medical advice, can make it broadly misaligned on unrelated questions, a phenomenon known as emergent misalignment (EM). The usual defense is to find the offending rows and delete them, but a row locator failed our held-out test and…",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.37312": {
+    "id": "arxiv:2609.37312",
+    "title": "Hidden Reasoning Must Leak, but Need Not Be Readable: Fundamental Opportunities and Limits for Chain-of-Thought Monitoring",
+    "authors": [
+      "Mohammadali Mohammadkhani",
+      "Madhava Krishna",
+      "Yash Sarrof",
+      "Michael Hahn"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37312",
+    "abstract": "Can reasoning models trick chain of thought (CoT) monitors and perform hidden computation without revealing it in their thinking traces? We show that the answer depends on the underlying task difficulty and the model size.",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.37054": {
+    "id": "arxiv:2609.37054",
+    "title": "actr: aligning thoughts and responses for multilingual safety in reasoning llms",
+    "authors": [
+      "Xianhui Zhang",
+      "Jian Yu",
+      "Chengyu Xie",
+      "Chenhang Cui",
+      "Shuyi Miao",
+      "Pengyang Shao",
+      "Yu Zheng",
+      "Fei Shen",
+      "Tat-Seng Chua"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.37054",
+    "abstract": "Ensuring the safety of reasoning large language models (LLMs) across languages is essential for their reliable deployment. However, when exposed to jailbreak attacks in non-high-resource languages, these models may generate unsafe responses even when their reasoning traces identify safety risks.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.36956": {
+    "id": "arxiv:2609.36956",
+    "title": "Controlled Decoding Attacks on Black-Box LLMs",
+    "authors": [
+      "Jesson Wang",
+      "Shawn Li",
+      "Wei Yang",
+      "Franck Dernoncourt",
+      "Ryan A. Rossi",
+      "Charith Peris",
+      "Yue Zhao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36956",
+    "abstract": "Manipulating next-token probabilities during generation can bypass the safety alignment of large language models. Existing approaches, however, rely on access to model weights or numerical token probabilities and therefore do not apply to interfaces that return only sampled text.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.36900": {
+    "id": "arxiv:2609.36900",
+    "title": "STAR-GRPO: Canonical Anchoring and Reliability-First Advantages against Representation-Dependent Reward Hacking",
+    "authors": [
+      "Wan Tian",
+      "Zhongyi Li",
+      "Xiang Xu",
+      "Minhao Zou",
+      "Yijie Peng",
+      "Fuzhen Zhuang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36900",
+    "abstract": "Reward hacking occurs when policy optimization exploits a brittle reward interface or an overly permissive proxy objective, improving the training score without improving the underlying response quality. This phenomenon is amplified in group-relative policy optimization: an unsupported reward can shift the group…",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.36849": {
+    "id": "arxiv:2609.36849",
+    "title": "Does the Unsafe Gradient Survive a Conversation? On the Fragility of Gradient-Based Jailbreak Detection in Multi-Turn Dialogue",
+    "authors": [
+      "Omar Sheta",
+      "Rinku Deuja",
+      "Hadi Masoudi",
+      "Minghong Fang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36849",
+    "abstract": "Safety-aligned language models are commonly deployed as multi-turn assistants, which lets adversaries spread unsafe intent across several user turns instead of a single prompt. Gradient-based jailbreak detectors such as GradSafe were developed for single prompts: they score an input by the alignment between its…",
+    "detected": "2026-09-30",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2609.36813": {
+    "id": "arxiv:2609.36813",
+    "title": "RESCUE: Repairing Language Model Errors to Sparse Circuits via Reinforcement Learning",
+    "authors": [
+      "Chuanpu Liu",
+      "Miao Yu",
+      "Yikai Cai",
+      "Yuanhe Zhang",
+      "Zhenhong Zhou",
+      "Li Sun",
+      "Zuming Jiang",
+      "Yufei Guo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36813",
+    "abstract": "Large language models (LLMs) exhibit strong general capabilities that mechanistic interpretability has attributed to sparse computational circuits. However, existing circuit studies emphasize preserving functionality or explaining safety, leaving the mechanisms underlying failures across a broader range of tasks…",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.36739": {
+    "id": "arxiv:2609.36739",
+    "title": "Frontier Autolab: Organizational Memory, Adversarial Dissent and Temporal Leakage in Multi-Agent LLM Firms Across Fifty Years of Technological Change",
+    "authors": [
+      "Bravish Ghosh"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36739",
+    "abstract": "Multi-agent LLM systems are increasingly structured like organizations, with roles, critics and shared memory, yet they are evaluated on tasks that last minutes. We ask how such an organization behaves when the ground it stands on keeps moving.",
+    "detected": "2026-09-30",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2609.36657": {
+    "id": "arxiv:2609.36657",
+    "title": "Constitutional adapters: Inference-time interventions for misalignment and misuse",
+    "authors": [
+      "Adam S. Lowet",
+      "Mark Kurzeja"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36657",
+    "abstract": "Training models to act in accordance with an explicitly defined set of principles, or \"constitution,\" has shown promise as a robust and transparent mechanism for AI alignment. However, the generality and flexibility of such methods remain unclear.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.36570": {
+    "id": "arxiv:2609.36570",
+    "title": "CounterSteer: Suppressing Indirect Prompt Injection with Activation Steering",
+    "authors": [
+      "Mark Russinovich"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36570",
+    "abstract": "Indirect prompt injection makes an LLM agent treat untrusted retrieved text as instructions. We present CounterSteer, an inference-time defense that suppresses this behavior inside the model.",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability",
+      "security"
+    ]
+  },
+  "arxiv:2609.36474": {
+    "id": "arxiv:2609.36474",
+    "title": "FinRT: Distilling Adaptive Red-Teaming Strategies into Reusable Adversarial Generators in Consumer Finance",
+    "authors": [
+      "Rikhiya Ghosh",
+      "Himanshu Kumar",
+      "Sriram Venkatapathy",
+      "Sahil Wadhwa",
+      "Alexandre G. R. Day",
+      "Pranab Mohanty"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36474",
+    "abstract": "In regulated industries like consumer finance, seemingly harmless user queries can exploit large language model vulnerabilities, triggering safety failures and pushing responses dangerously close to policy limits. Existing automated red-teaming methods trade off attack effectiveness against generation cost, while…",
+    "detected": "2026-09-30",
+    "topics": [
+      "evals",
+      "governance",
+      "security"
+    ]
+  },
+  "arxiv:2609.36294": {
+    "id": "arxiv:2609.36294",
+    "title": "When Trees Are Not Enough: Learning Mixed-Topology Feature Graphs with Adaptive Graph Sparse Autoencoders",
+    "authors": [
+      "Xiaozuo Shen",
+      "Yifei Cai",
+      "Tian Tan",
+      "Rui Ning",
+      "Chunsheng Xin",
+      "Hongyi Wu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36294",
+    "abstract": "Sparse autoencoders (SAEs) expose interpretable features in large language model activations, yet existing structured SAEs impose single-parent trees or forests, while post-hoc graphs permit multiple parents but neither guide feature learning nor ensure reliable relation recovery. We introduce the Adaptive Graph…",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.36245": {
+    "id": "arxiv:2609.36245",
+    "title": "CoRe: Co-Evolving Reward Models for Mitigating Latent Reward Hacking in Video Diffusion Models",
+    "authors": [
+      "Zhaolong Su",
+      "Yujin Han",
+      "Feng Wang",
+      "Jameson Dong",
+      "Hins Hu",
+      "Difan Zou"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36245",
+    "abstract": "Latent reward models (LRMs) enable efficient alignment of video diffusion models by scoring intermediate states directly in latent space. However, we find that optimizing against a fixed latent reward rapidly leads to latent reward hacking: the predicted reward stays high while perceptual and motion quality…",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.36049": {
+    "id": "arxiv:2609.36049",
+    "title": "Improving scalable oversight with co-trained monitors",
+    "authors": [
+      "Joseph H. Rudoler",
+      "Kevin Tan",
+      "Benedict Tessler",
+      "Timothy Kong",
+      "Enric Boix Adserà"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.36049",
+    "abstract": "Worker-monitor setups are a promising approach to AI oversight, but training workers against fixed monitors can incentivize monitor evasion. We study whether this failure mode can be avoided by co-training the monitor alongside the worker, and explore both supervised and self-supervised approaches.",
+    "detected": "2026-09-30",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.35890": {
+    "id": "arxiv:2609.35890",
+    "title": "Representational Simplicity and Circuit Size Dissociate in a Threshold-Dependent Way: A Controlled Test via Adversarial Training",
+    "authors": [
+      "Adam Elimadi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.35890",
+    "abstract": "Sparse-autoencoder decomposability and concentrated feature attribution are increasingly treated as evidence that a model's computation is easier to reverse-engineer. Whether this representational and attributional cleanliness actually predicts a smaller or more tractable causal circuit remains an open question.",
+    "detected": "2026-09-30",
+    "topics": [
+      "interpretability",
+      "security"
+    ]
+  },
+  "arxiv:2609.35886": {
+    "id": "arxiv:2609.35886",
+    "title": "Agentic Commerce Bench: Measuring Fraud Detection for Agents That Spend Money",
+    "authors": [
+      "Ankit Srivastava",
+      "Debjyoti Paul"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.35886",
+    "abstract": "AI agents now hold spend authority and settle payments without per-action human confirmation. The resulting loss is often not a security failure: a counterparty with the correct domain, the correct settlement address and a genuinely delivered service can charge more than it should, and no check keyed on identity will…",
+    "detected": "2026-09-30",
+    "topics": [
+      "security"
+    ]
+  },
   "arxiv:2609.35686": {
     "id": "arxiv:2609.35686",
     "title": "Rethinking Circuit Evaluation: Do Circuits Explain Model Errors?",
