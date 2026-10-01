@@ -1,0 +1,36 @@
+[
+  {
+    "id": "13a9da88cd50e5e0",
+    "url": "https://www.lesswrong.com/posts/fDE6k8SGr9ANtMFcj/by-default-chinese-ai-falls-very-behind",
+    "title": "By default, Chinese AI falls very behind",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T08:52:50Z",
+    "fetched_at": "2026-10-01T12:10:31Z",
+    "excerpt": "This work is hosted on MCNAIR , but does not reflect the views of my employer or the Center. In the last couple of weeks, domestic coordination on mitigating AI risks has looked more likely .",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Parv Mahajan"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c0e8ac771b451b6e",
+    "url": "https://www.lesswrong.com/posts/u973rQm56oijS5Adf/launching-babel-translation",
+    "title": "Launching Babel Translation",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T03:39:56Z",
+    "fetched_at": "2026-10-01T12:10:31Z",
+    "excerpt": "Celeste and I are excited to launch Babel Translation , a nonprofit organization translating English-language writing on AI safety to be accessible to a global audience! We’re starting with Mandarin Chinese, Spanish, and Japanese.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jasmine Li"
+    ],
+    "summary": null
+  }
+]

@@ -1,4 +1,253 @@
 {
+  "arxiv:2609.40067": {
+    "id": "arxiv:2609.40067",
+    "title": "Community-Driven API and AI Writer Design for Openly Scaling Community Notes",
+    "authors": [
+      "Brad Miller",
+      "Jay Baxter",
+      "Jiansong Chao",
+      "Keith Coleman",
+      "Sophie Hilgard",
+      "Daniel Ortiz"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.40067",
+    "abstract": "Community Notes is a crowd-sourced approach for adding context to posts on X. Contributors propose and rate notes, forming the inputs to an open-source, open-data algorithm that determines which notes show broadly to users.",
+    "detected": "2026-10-01",
+    "topics": []
+  },
+  "arxiv:2609.40027": {
+    "id": "arxiv:2609.40027",
+    "title": "Who Verifies the Graph? Misspecification Attacks on Causal Action Verification for Language Agents",
+    "authors": [
+      "Fabio Rovai"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.40027",
+    "abstract": "Causal action verifiers gate an agent's state-changing tool calls by checking whether each proposed intervention is identifiable against a committed action-state graph, and they issue a certificate that carries the identification argument and a one-sided lower confidence bound. One such verifier, CIVeX, reports zero…",
+    "detected": "2026-10-01",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2609.39902": {
+    "id": "arxiv:2609.39902",
+    "title": "CodeMimicry: Exploiting Safety Generalization Lag in Large Language Models via Structured Code Completion",
+    "authors": [
+      "Zhen Liang",
+      "Hai Huang",
+      "Wentao Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.39902",
+    "abstract": "Large language models have achieved remarkable capabilities across diverse domains, yet their safety alignment remains vulnerable to jailbreak attacks. In this work, we identify a previously underexplored failure mode - safety generalization lag - where alignment trained predominantly on natural language fails to…",
+    "detected": "2026-10-01",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2609.39838": {
+    "id": "arxiv:2609.39838",
+    "title": "Learning Steganography Is Easy, Learning Steganographic Reasoning Is Hard",
+    "authors": [
+      "Julian Schulz",
+      "Lukas Fülle",
+      "Rieke Fruengel"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.39838",
+    "abstract": "Chain-of-thought monitoring as an approach for AI oversight and control is threatened by the possibility of steganographic reasoning, where LLMs conceal their reasoning inside innocuous-looking text. Two neighbouring capabilities, steganographic messaging (passing a concealed message) and encoded reasoning (reasoning…",
+    "detected": "2026-10-01",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.39625": {
+    "id": "arxiv:2609.39625",
+    "title": "D-Scope: Decomposing and Steering Diffusion Transformers with Sparse Autoencoders",
+    "authors": [
+      "Xinyue Xu",
+      "Jiahao Zhang",
+      "Lijie Hu",
+      "Peter Hase",
+      "Hao Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.39625",
+    "abstract": "Sparse autoencoders (SAEs) reveal visual structure in diffusion transformers (DiTs), but interpreting a feature does not establish whether it can be used to control generation. We introduce D-Scope (Diffusion Scope), a framework that connects feature interpretation to generation control through shared visual evidence.",
+    "detected": "2026-10-01",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2609.39533": {
+    "id": "arxiv:2609.39533",
+    "title": "CATCH: A Controllable Analysis Testbed for Reward Hacking in Coding RL",
+    "authors": [
+      "Shouli Wang",
+      "Yanfeng Jia",
+      "Zhihao Ou",
+      "Zitao Su",
+      "Ruize He",
+      "Haotong Xie",
+      "Hao Peng",
+      "Juanzi Li",
+      "Xiaozhi Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.39533",
+    "abstract": "During reinforcement learning with verifiable rewards (RLVR), large language models (LLMs) can exploit loopholes in their environments to obtain high rewards without improving the intended capabilities, i.e., reward hacking. Despite its risks to training efficiency and safety, monitoring and mitigating reward hacking…",
+    "detected": "2026-10-01",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.38899": {
+    "id": "arxiv:2609.38899",
+    "title": "SceneJail: Exploiting Video Scenario Context to Jailbreak Multimodal LLMs",
+    "authors": [
+      "Wenyu Chen",
+      "Li Wang",
+      "Chuanchao Zang",
+      "Xiangtao Meng",
+      "Xinyu Gao",
+      "Jianing Wang",
+      "Zheng Li",
+      "Shanqing Guo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38899",
+    "abstract": "Video Multimodal Large Language Models (Video-MLLMs) support reasoning over video inputs, yet remain vulnerable to jailbreak attacks that elicit policy-violating responses. Existing video jailbreaks primarily manipulate how harmful queries are visually presented, thereby treating video merely as a carrier.",
+    "detected": "2026-10-01",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2609.38847": {
+    "id": "arxiv:2609.38847",
+    "title": "Scoring Higher, Answering Worse: Mitigating Reward Hacking in Rubric-Based RL via Protocol-Level Rubrics",
+    "authors": [
+      "Maoqi Liu",
+      "Junwei He",
+      "Bowen Zhang",
+      "Feiran Li",
+      "Wentao Ma",
+      "Rongyi Lin",
+      "Shuhan Zhong",
+      "Quan Fang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38847",
+    "abstract": "Rubric-based reinforcement learning (Rubric-RL) trains language models where no verifier exists. A judge checks each criterion of a rubric, and the verdicts are aggregated into a reward, most often by a weighted sum.",
+    "detected": "2026-10-01",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.38645": {
+    "id": "arxiv:2609.38645",
+    "title": "Alignment via Training Against Probes Without Losing Monitorability",
+    "authors": [
+      "Lena Libon",
+      "Alexander Panfilov",
+      "Ben Rank",
+      "Xin Chen",
+      "Jonas Geiping",
+      "Maksym Andriushchenko"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38645",
+    "abstract": "Models are usually aligned based on their observed outputs, using demonstrations, preference data, or reward signals. These objectives reward responses that look aligned.",
+    "detected": "2026-10-01",
+    "topics": []
+  },
+  "arxiv:2609.38526": {
+    "id": "arxiv:2609.38526",
+    "title": "Revisiting scaling laws for reward optimization",
+    "authors": [
+      "Ali Aouad",
+      "Aymane El Gadarri",
+      "Vivek F. Farias"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38526",
+    "abstract": "Scaling laws for optimization against reward models in AI alignment have pinned down how performance depends on optimization effort---measured by a KL-divergence budget relative to a reference policy. Beyond a certain budget, over-optimization (or reward hacking) can arise: because we optimize against a proxy reward…",
+    "detected": "2026-10-01",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2609.38379": {
+    "id": "arxiv:2609.38379",
+    "title": "Aligned Data Can Induce Misalignment via Context Confusion",
+    "authors": [
+      "Yavuz Bakman",
+      "Duygu Nur Yaldiz",
+      "Baris Askin",
+      "Swastik Roy",
+      "Morteza Ziyadi",
+      "Salman Avestimehr",
+      "Sai Praneeth Karimireddy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38379",
+    "abstract": "Large language models (LLMs) are frequently updated for various use cases, where filtering out misaligned training samples is a common practice for preventing post-update misalignment. However, alignment is inherently context-dependent: a recommendation that is aligned in one context may be inappropriate in another.",
+    "detected": "2026-10-01",
+    "topics": []
+  },
+  "arxiv:2609.38260": {
+    "id": "arxiv:2609.38260",
+    "title": "ContextAdapt: Evaluating Contextual Adaptation and Value Alignment in LLMs",
+    "authors": [
+      "Olivia Macmillan-Scott",
+      "Mirco Musolesi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38260",
+    "abstract": "Values such as honesty, autonomy, and confidentiality are often regarded as general principles underpinning AI alignment. However, what it means to act in accordance with these values can depend on the context in which a decision is made.",
+    "detected": "2026-10-01",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2609.38253": {
+    "id": "arxiv:2609.38253",
+    "title": "CollageAttack: Exploiting Cross-Modal Alignment Flaws in T2I Models through Spatial Text Composition",
+    "authors": [
+      "Zhiyi Mou",
+      "Yao Lu",
+      "Wangze Ni",
+      "Di Hong",
+      "Dakun Shen",
+      "Haoyang Li",
+      "Chen Jason Zhang",
+      "Alexander Zhou",
+      "Kui Ren"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38253",
+    "abstract": "Text-to-image (T2I) models have substantially improved in language understanding, in-image text rendering, and visual composition, while their safety mechanisms do not always keep pace with these capabilities. This creates a cross-modal attack surface in which harmful semantics can remain inconspicuous in a serialized…",
+    "detected": "2026-10-01",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2609.38239": {
+    "id": "arxiv:2609.38239",
+    "title": "Inference-Layer Security: Defending Against Adversarial Inference and Infrastructure Abuse",
+    "authors": [
+      "Keifer Lee"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2609.38239",
+    "abstract": "A Technical Report: Operating a large language model (LLM) as a service requires more than inference infrastructure: the provider must also defend against adversarial interactions that seek to exploit the service, including jailbreaking for harmful use, sophisticated denial of service, and distillation attacks. We…",
+    "detected": "2026-10-01",
+    "topics": [
+      "security"
+    ]
+  },
   "arxiv:2609.38107": {
     "id": "arxiv:2609.38107",
     "title": "Correct Answers, Invalid Traces: What Verifiable Grade-School Math Reveals About Chain-of-Thought Traces",
