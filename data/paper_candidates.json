@@ -1,4 +1,322 @@
 {
+  "arxiv:2610.02189": {
+    "id": "arxiv:2610.02189",
+    "title": "Generative modeling of intrinsically disordered protein regions by reinforcing sparse autoencoder features",
+    "authors": [
+      "Jason X. Liu",
+      "Sebastian Ibarraran",
+      "Frank Hu",
+      "Soojung Yang",
+      "Xinyu A. Feng",
+      "Abigail Park",
+      "Anagha Aneesh",
+      "Lacramioara Bintu",
+      "Alexander R. Dunn",
+      "Grant M. Rotskoff"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.02189",
+    "abstract": "Intrinsically disordered protein regions (IDRs) play central roles in cellular processes such as transcriptional regulation, signal transduction, and subcellular localization, yet their functional design remains challenging. Structure-based design methods do not readily apply to IDRs, and existing protein language…",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability",
+      "governance"
+    ]
+  },
+  "arxiv:2610.02098": {
+    "id": "arxiv:2610.02098",
+    "title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+    "authors": [
+      "Chuqin Geng",
+      "Li Zhang",
+      "Haolin Ye",
+      "Mark Zhang",
+      "Luke Zhang",
+      "Xujie Si"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.02098",
+    "abstract": "Mechanistic interpretability aims to recover the internal computations responsible for model behavior. Progress in automated circuit discovery is often framed as a search problem: better attribution or optimization should identify better mechanisms.",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.02015": {
+    "id": "arxiv:2610.02015",
+    "title": "On Language Drift during RLVR Post-Training",
+    "authors": [
+      "Michael Sullivan",
+      "Alexander Koller"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.02015",
+    "abstract": "Recent advances in LLM reasoning models---driven primarily by the paradigm of post-training via reinforcement learning with verifiable reward (RLVR)---have enabled them to accomplish impressively complex tasks. However, in parallel with their rising capabilities, LLMs have increasingly displayed signs of language…",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.01995": {
+    "id": "arxiv:2610.01995",
+    "title": "Can AI Oversight Be Zero Knowledge?",
+    "authors": [
+      "Alessandro Chiesa",
+      "Ziyi Guan",
+      "Burcu Yildiz"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01995",
+    "abstract": "AI systems increasingly produce outputs from confidential data, such as a fitness-for-duty assessment from medical records or the predicted properties of a drug candidate from its secret structure. It is important to verify that such outputs are correct without revealing the underlying data.",
+    "detected": "2026-10-02",
+    "topics": []
+  },
+  "arxiv:2610.01864": {
+    "id": "arxiv:2610.01864",
+    "title": "From Isolated Feature to Orbits: Discovering Music Concepts via Multi-SAE Alignment",
+    "authors": [
+      "Liwei Lin",
+      "Gus Xia"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01864",
+    "abstract": "How can we understand what a music foundation model has learned \\textit{internally}? Most interpretability approaches, such as probing and Sparse Autoencoders (SAEs), focus on identifying individual features with minimal structural assumptions.",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.01821": {
+    "id": "arxiv:2610.01821",
+    "title": "Beyond Linear Concepts: Discovering and Aligning Non-Linear Concept Manifolds in Large Language Models",
+    "authors": [
+      "Tido Specht",
+      "Elias Benedict Krey",
+      "Nils Neukirch",
+      "Nils Strodthoff"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01821",
+    "abstract": "Understanding information processing in large language models (LLMs) requires dissecting the geometric organization of their internal token representations. While existing mechanistic interpretability (MI) methods seek to extract concepts, they are constrained by a strong linearity assumption challenged by evidence of…",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.01800": {
+    "id": "arxiv:2610.01800",
+    "title": "LineupRL: Verifiable Reinforcement Learning for Time Series Captioning via Caption-to-Series Identification",
+    "authors": [
+      "Haochen Zhang",
+      "Laura Yao",
+      "Zachary Plotkin",
+      "Gengwei Zhang",
+      "Tianlong Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01800",
+    "abstract": "Time series captioning is a fundamental step in time series understanding and can also serve as the bridge between signal and natural language. Supervised fine-tuning (SFT) relies on a larger model's captions and cannot exceed their quality.",
+    "detected": "2026-10-02",
+    "topics": []
+  },
+  "arxiv:2610.01716": {
+    "id": "arxiv:2610.01716",
+    "title": "Architecture Without an Architect? Global Governance of Artificial Intelligence in a Divided World",
+    "authors": [
+      "Simon Chesterman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01716",
+    "abstract": "Artificial intelligence presents an unusually difficult problem for global governance. The technology develops rapidly, crosses borders easily, and is shaped by actors whose resources and capabilities may rival those of states.",
+    "detected": "2026-10-02",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2610.01062": {
+    "id": "arxiv:2610.01062",
+    "title": "Kernelized Activation Steering",
+    "authors": [
+      "Laziz U. Abdullaev",
+      "Minh-Hieu Pham",
+      "Bach Do",
+      "Khoat Than",
+      "Tan M. Nguyen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01062",
+    "abstract": "Activation steering provides a simple, training-free mechanism for controlling attributes of generative models such as sentiment, style, and helpfulness. However, standard approaches such as Difference-in-Means apply a single input-independent steering vector across all activations, limiting expressivity and ignoring…",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.01058": {
+    "id": "arxiv:2610.01058",
+    "title": "MOMAT: Mixture of Multiple Atlases for Low-Power Jailbreak Defense of Quantized LLMs",
+    "authors": [
+      "Boyang Li",
+      "Bingyu Shen",
+      "Weihao Hong",
+      "Zhiyuan Jiang",
+      "Xinlei Guan",
+      "Yan Ma",
+      "Miles Q. Li",
+      "Yi Sheng",
+      "Ruiyang Qin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.01058",
+    "abstract": "Quantized large language models are increasingly deployed on edge devices for their low latency and energy efficiency. However, model quantization weakens alignment safeguards, leaving qLLMs (quantized large language models) highly vulnerable to jailbreak attacks.",
+    "detected": "2026-10-02",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.00902": {
+    "id": "arxiv:2610.00902",
+    "title": "Mean field games as a tool for AI safety: a worked example from the July 2026 Hugging Face incident",
+    "authors": [
+      "P. Jameson Graber"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00902",
+    "abstract": "One way to make AI systems safe is to shape what the system is: its objective and dispositions. We take a complementary route: treat the agents' characteristics as partly unknown and ask what structure of interaction ensures that bad collective outcomes are not equilibria.",
+    "detected": "2026-10-02",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.00895": {
+    "id": "arxiv:2610.00895",
+    "title": "Towards Fast and Disentangled Counterfactuals for Visual Foundation Models",
+    "authors": [
+      "Sidney Bender",
+      "Benedikt Kunz",
+      "Ahmed Zeid",
+      "Shinichi Nakajima",
+      "Klaus-Robert Müller",
+      "Marco Morik"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00895",
+    "abstract": "Foundation models remain vulnerable to spurious correlations and ``Clever Hans'' strategies. Explainable machine learning can find and remove such strategies for classifiers without metadata.",
+    "detected": "2026-10-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.00850": {
+    "id": "arxiv:2610.00850",
+    "title": "AuraForge: Scaling Security Supervision for Training Coding Agents",
+    "authors": [
+      "Danqing Wang",
+      "Songwen Zhao",
+      "Harsh Sharma",
+      "Jierui Wang",
+      "Andre Vicente Duarte",
+      "Ivan Bercovich",
+      "Lei Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00850",
+    "abstract": "Coding agents are now proficient enough to generate complex software applications from a single prompt. As their capabilities have grown, human oversight has increasingly shifted from line-by-line code review toward hands-off evaluation of outcomes.",
+    "detected": "2026-10-02",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.00767": {
+    "id": "arxiv:2610.00767",
+    "title": "Pre-training interventions, ex post facto: Grafting model beliefs across checkpoints",
+    "authors": [
+      "Peter Nutter",
+      "Dani Roytburg",
+      "Clément Dumas",
+      "Jinghua Ou",
+      "Shi Feng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00767",
+    "abstract": "Pre-training interventions are critical to alignment research, since beliefs formed during pre-training shape how a model generalizes from later training. One recently popular technique for such interventions is synthetic document fine-tuning (SDF), which aims to alter what the model believes.",
+    "detected": "2026-10-02",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.00590": {
+    "id": "arxiv:2610.00590",
+    "title": "Towards Hierarchical Cyber Defense with Large Language Models: From Planning to Execution",
+    "authors": [
+      "Harshith Doppalapudi",
+      "Nathaniel D. Bastian",
+      "Ankit Shah"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00590",
+    "abstract": "An autonomous cyber defender trained with reinforcement learning (RL) is typically tied to the network on which it was trained, limiting its ability to generalize as network scale changes. Hierarchical RL reduces decision complexity by separating strategic targeting from tactical execution, but it does not eliminate…",
+    "detected": "2026-10-02",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.00557": {
+    "id": "arxiv:2610.00557",
+    "title": "No One Architecture Fits All: A Cross-Environment Evaluation of Hierarchical Red Team Agents",
+    "authors": [
+      "Ayan Javeed Shaikh",
+      "Arunesh Sinha",
+      "Nathaniel D. Bastian",
+      "Ankit Shah"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00557",
+    "abstract": "Autonomous red team agents increasingly stress-test AI-enabled cyber defenses by planning strategy and executing multistage attacks. Reinforcement learning (RL) and large language models (LLMs) offer complementary mechanisms for the planning and execution such agents require, and prior work has combined them in hybrid…",
+    "detected": "2026-10-02",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.00531": {
+    "id": "arxiv:2610.00531",
+    "title": "Science or Slop?: Benchmarking and Mitigating Scientific Slop in AI-Generated Papers",
+    "authors": [
+      "Yerim Oh",
+      "Young-Jun Lee",
+      "Jaewoo Ahn",
+      "Gunhee Kim",
+      "Dongyeop Kang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00531",
+    "abstract": "AI-generated content, often called AI slop, is increasingly common everywhere, particularly in academia. Slop in AI-generated scientific papers, however, has more complex patterns that cannot be easily detected by existing token-based AI detectors.",
+    "detected": "2026-10-02",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.00332": {
+    "id": "arxiv:2610.00332",
+    "title": "The Weakest Link: Distilling LLM Reasoning with Worst-Case Constrained Reinforcement Learning",
+    "authors": [
+      "Matthieu Zimmer",
+      "Xiaotong Ji",
+      "Tu Nguyen",
+      "Haitham Bou-Ammar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.00332",
+    "abstract": "Distilling the reasoning capabilities of large language models (LLMs) into smaller students is a central challenge for efficient deployment. Current approaches face a fundamental tension: optimizing purely for verifiable task rewards (e.g., via GRPO) leads to reward hacking, where students arrive at correct final…",
+    "detected": "2026-10-02",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2609.40067": {
     "id": "arxiv:2609.40067",
     "title": "Community-Driven API and AI Writer Design for Openly Scaling Community Notes",

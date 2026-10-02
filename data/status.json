@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-10-01T12:10:31Z",
-  "duration_seconds": 11.8,
-  "new_entries": 20,
+  "last_run": "2026-10-02T11:40:36Z",
+  "duration_seconds": 8.1,
+  "new_entries": 23,
   "sources": [
     {
       "id": "alignment-forum",
@@ -17,7 +17,7 @@
       "name": "Don't Worry About the Vase",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 4,
+      "kept": 5,
       "new": 1,
       "error": null
     },
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 6,
-      "new": 3,
+      "kept": 5,
+      "new": 4,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "status": "ok",
       "items_in_feed": 103,
       "kept": 3,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -106,9 +106,9 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1240,
+      "items_in_feed": 1243,
       "kept": 9,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 14,
+      "new": 18,
       "error": null
     }
   ],
   "candidates": {
-    "added": 14,
+    "added": 18,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 193
+    "total": 211
   }
 }

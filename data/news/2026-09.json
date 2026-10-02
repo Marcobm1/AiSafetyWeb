@@ -1,5 +1,91 @@
 [
   {
+    "id": "d732be805d47f79d",
+    "url": "https://arxiv.org/abs/2610.00767",
+    "title": "Pre-training interventions, ex post facto: Grafting model beliefs across checkpoints",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-30T22:02:46Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Pre-training interventions are critical to alignment research, since beliefs formed during pre-training shape how a model generalizes from later training. One recently popular technique for such interventions is synthetic document fine-tuning (SDF), which aims to alter what the model believes.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Peter Nutter",
+      "Dani Roytburg",
+      "Clément Dumas",
+      "Jinghua Ou",
+      "Shi Feng"
+    ],
+    "arxiv_id": "2610.00767",
+    "summary": null
+  },
+  {
+    "id": "aeba94ad9266841e",
+    "url": "https://arxiv.org/abs/2610.00590",
+    "title": "Towards Hierarchical Cyber Defense with Large Language Models: From Planning to Execution",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-30T18:53:03Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "An autonomous cyber defender trained with reinforcement learning (RL) is typically tied to the network on which it was trained, limiting its ability to generalize as network scale changes. Hierarchical RL reduces decision complexity by separating strategic targeting from tactical execution, but it does not eliminate…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Harshith Doppalapudi",
+      "Nathaniel D. Bastian",
+      "Ankit Shah"
+    ],
+    "arxiv_id": "2610.00590",
+    "summary": null
+  },
+  {
+    "id": "4f5c554ccd203cb3",
+    "url": "https://arxiv.org/abs/2610.00557",
+    "title": "No One Architecture Fits All: A Cross-Environment Evaluation of Hierarchical Red Team Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-30T18:32:50Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Autonomous red team agents increasingly stress-test AI-enabled cyber defenses by planning strategy and executing multistage attacks. Reinforcement learning (RL) and large language models (LLMs) offer complementary mechanisms for the planning and execution such agents require, and prior work has combined them in hybrid…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Ayan Javeed Shaikh",
+      "Arunesh Sinha",
+      "Nathaniel D. Bastian",
+      "Ankit Shah"
+    ],
+    "arxiv_id": "2610.00557",
+    "summary": null
+  },
+  {
+    "id": "1f94155a570b5733",
+    "url": "https://arxiv.org/abs/2610.00531",
+    "title": "Science or Slop?: Benchmarking and Mitigating Scientific Slop in AI-Generated Papers",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-30T18:16:42Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "AI-generated content, often called AI slop, is increasingly common everywhere, particularly in academia. Slop in AI-generated scientific papers, however, has more complex patterns that cannot be easily detected by existing token-based AI detectors.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Yerim Oh",
+      "Young-Jun Lee",
+      "Jaewoo Ahn",
+      "Gunhee Kim",
+      "Dongyeop Kang"
+    ],
+    "arxiv_id": "2610.00531",
+    "summary": null
+  },
+  {
     "id": "3f07838302884c44",
     "url": "https://www.lesswrong.com/posts/3uJqhrC2idf4eNj5h/corrigibility-prizes-for-existing-work",
     "title": "Corrigibility Prizes for Existing Work",
@@ -544,6 +630,27 @@
       "Jacob Epifano"
     ],
     "arxiv_id": "2609.37624",
+    "summary": null
+  },
+  {
+    "id": "7b6d1fcd2f0101de",
+    "url": "https://arxiv.org/abs/2610.00332",
+    "title": "The Weakest Link: Distilling LLM Reasoning with Worst-Case Constrained Reinforcement Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-09-29T13:51:52Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Distilling the reasoning capabilities of large language models (LLMs) into smaller students is a central challenge for efficient deployment. Current approaches face a fundamental tension: optimizing purely for verifiable task rewards (e.g., via GRPO) leads to reward hacking, where students arrive at correct final…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Matthieu Zimmer",
+      "Xiaotong Ji",
+      "Tu Nguyen",
+      "Haitham Bou-Ammar"
+    ],
+    "arxiv_id": "2610.00332",
     "summary": null
   },
   {

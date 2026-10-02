@@ -1,5 +1,260 @@
 [
   {
+    "id": "e8409dcb539d50f1",
+    "url": "https://www.lesswrong.com/posts/b5cSYh4emQb2qrGmK/on-social-reality-in-china",
+    "title": "On Social Reality in China",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T23:18:14Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "[Epistemic status: intuitions and anecdotes.] Recently, several posts and projects ( Thoughts Memo , Babel Translation , Please Give Them a Chance ) have taken important steps towards raising AI safety awareness and sharing rationalist philosophy in China. It’s great that we’re recognizing the importance of solving…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "alkjash"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0d20a19a9ae6de6d",
+    "url": "https://www.lesswrong.com/posts/mmfYDH6hwYAMToNKL/evaluating-the-ban-artificial-superintelligence-act",
+    "title": "Evaluating the Ban Artificial Superintelligence Act",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T19:53:55Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "MIRI recently endorsed the Ban Artificial Superintelligence Act, but others like ControlAI have called it overly broad, and a few other respected experts have outright endorsed it in its current form. I decided to take a look at it myself and see both what the bid is trying to do and whether it actually does it well.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Rob Ennals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "9d478ca462431308",
+    "url": "https://arxiv.org/abs/2610.02189",
+    "title": "Generative modeling of intrinsically disordered protein regions by reinforcing sparse autoencoder features",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T17:59:20Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Intrinsically disordered protein regions (IDRs) play central roles in cellular processes such as transcriptional regulation, signal transduction, and subcellular localization, yet their functional design remains challenging. Structure-based design methods do not readily apply to IDRs, and existing protein language…",
+    "topics": [
+      "interpretability",
+      "governance"
+    ],
+    "authors": [
+      "Jason X. Liu",
+      "Sebastian Ibarraran",
+      "Frank Hu",
+      "Soojung Yang",
+      "Xinyu A. Feng",
+      "Abigail Park",
+      "Anagha Aneesh",
+      "Lacramioara Bintu",
+      "Alexander R. Dunn",
+      "Grant M. Rotskoff"
+    ],
+    "arxiv_id": "2610.02189",
+    "summary": null
+  },
+  {
+    "id": "7aededabbaf9c760",
+    "url": "https://www.lesswrong.com/posts/Fs4inpM72PeH4hsAv/simplex-vs-timaeus-round-one",
+    "title": "Simplex vs Timaeus: Round One",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T17:56:14Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "I'm often asked about the differences and similarities between Simplex' and Timaeus' research agendas. The question is natural enough.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Alexander Gietelink Oldenziel"
+    ],
+    "summary": null
+  },
+  {
+    "id": "425c96d8477e6a62",
+    "url": "https://arxiv.org/abs/2610.02098",
+    "title": "Are We Recovering Mechanisms? Objective-Level Recovery Gaps in Mechanistic Interpretability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T17:25:23Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Mechanistic interpretability aims to recover the internal computations responsible for model behavior. Progress in automated circuit discovery is often framed as a search problem: better attribution or optimization should identify better mechanisms.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Chuqin Geng",
+      "Li Zhang",
+      "Haolin Ye",
+      "Mark Zhang",
+      "Luke Zhang",
+      "Xujie Si"
+    ],
+    "arxiv_id": "2610.02098",
+    "summary": null
+  },
+  {
+    "id": "76f3d9e7704ffaa2",
+    "url": "https://arxiv.org/abs/2610.02015",
+    "title": "On Language Drift during RLVR Post-Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T16:39:48Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Recent advances in LLM reasoning models---driven primarily by the paradigm of post-training via reinforcement learning with verifiable reward (RLVR)---have enabled them to accomplish impressively complex tasks. However, in parallel with their rising capabilities, LLMs have increasingly displayed signs of language…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Michael Sullivan",
+      "Alexander Koller"
+    ],
+    "arxiv_id": "2610.02015",
+    "summary": null
+  },
+  {
+    "id": "9dab3de8a1890ef8",
+    "url": "https://www.lesswrong.com/posts/qLFMj72gScBeRjwGW/honeybench-a-general-benchmark-for-reward-hacking-in",
+    "title": "HoneyBench - A general benchmark for reward hacking in frontier models",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-01T16:32:29Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "We've just released the first version of HoneyBench. It consists of nine 'honeypot' challenges that each elicit unique and antisocial examples of reward hacking from some or all of major labs’ top public releases, including Opus 5.5, Fable 5.1, GPT-6 Astra, Gemini 3.8 Flash, Grok 4.7, and DeepSeek V4 Pro.",
+    "topics": [
+      "alignment",
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "aa39b79fca697155",
+    "url": "https://arxiv.org/abs/2610.01995",
+    "title": "Can AI Oversight Be Zero Knowledge?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T16:30:16Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "AI systems increasingly produce outputs from confidential data, such as a fitness-for-duty assessment from medical records or the predicted properties of a drug candidate from its secret structure. It is important to verify that such outputs are correct without revealing the underlying data.",
+    "topics": [],
+    "authors": [
+      "Alessandro Chiesa",
+      "Ziyi Guan",
+      "Burcu Yildiz"
+    ],
+    "arxiv_id": "2610.01995",
+    "summary": null
+  },
+  {
+    "id": "3cda46d15e05d449",
+    "url": "https://arxiv.org/abs/2610.01864",
+    "title": "From Isolated Feature to Orbits: Discovering Music Concepts via Multi-SAE Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T15:25:51Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "How can we understand what a music foundation model has learned \\textit{internally}? Most interpretability approaches, such as probing and Sparse Autoencoders (SAEs), focus on identifying individual features with minimal structural assumptions.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Liwei Lin",
+      "Gus Xia"
+    ],
+    "arxiv_id": "2610.01864",
+    "summary": null
+  },
+  {
+    "id": "0002db48a0c248d0",
+    "url": "https://thezvi.wordpress.com/2026/10/01/ai-188-gemini-dot-argon",
+    "title": "AI #188: Gemini Dot Argon",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-10-01T14:56:56Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Is Google back? They claim that they are back.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7a42f8bb2dc1580f",
+    "url": "https://arxiv.org/abs/2610.01821",
+    "title": "Beyond Linear Concepts: Discovering and Aligning Non-Linear Concept Manifolds in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T14:55:03Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Understanding information processing in large language models (LLMs) requires dissecting the geometric organization of their internal token representations. While existing mechanistic interpretability (MI) methods seek to extract concepts, they are constrained by a strong linearity assumption challenged by evidence of…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Tido Specht",
+      "Elias Benedict Krey",
+      "Nils Neukirch",
+      "Nils Strodthoff"
+    ],
+    "arxiv_id": "2610.01821",
+    "summary": null
+  },
+  {
+    "id": "c7074d2686c29461",
+    "url": "https://arxiv.org/abs/2610.01800",
+    "title": "LineupRL: Verifiable Reinforcement Learning for Time Series Captioning via Caption-to-Series Identification",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T14:43:21Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Time series captioning is a fundamental step in time series understanding and can also serve as the bridge between signal and natural language. Supervised fine-tuning (SFT) relies on a larger model's captions and cannot exceed their quality.",
+    "topics": [],
+    "authors": [
+      "Haochen Zhang",
+      "Laura Yao",
+      "Zachary Plotkin",
+      "Gengwei Zhang",
+      "Tianlong Chen"
+    ],
+    "arxiv_id": "2610.01800",
+    "summary": null
+  },
+  {
+    "id": "31e9c8a44f0a5ae5",
+    "url": "https://arxiv.org/abs/2610.01716",
+    "title": "Architecture Without an Architect? Global Governance of Artificial Intelligence in a Divided World",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T13:56:15Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Artificial intelligence presents an unusually difficult problem for global governance. The technology develops rapidly, crosses borders easily, and is shaped by actors whose resources and capabilities may rival those of states.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Simon Chesterman"
+    ],
+    "arxiv_id": "2610.01716",
+    "summary": null
+  },
+  {
     "id": "13a9da88cd50e5e0",
     "url": "https://www.lesswrong.com/posts/fDE6k8SGr9ANtMFcj/by-default-chinese-ai-falls-very-behind",
     "title": "By default, Chinese AI falls very behind",
@@ -17,6 +272,55 @@
     "summary": null
   },
   {
+    "id": "5a79441d58c21df4",
+    "url": "https://arxiv.org/abs/2610.01062",
+    "title": "Kernelized Activation Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T05:00:53Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Activation steering provides a simple, training-free mechanism for controlling attributes of generative models such as sentiment, style, and helpfulness. However, standard approaches such as Difference-in-Means apply a single input-independent steering vector across all activations, limiting expressivity and ignoring…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Laziz U. Abdullaev",
+      "Minh-Hieu Pham",
+      "Bach Do",
+      "Khoat Than",
+      "Tan M. Nguyen"
+    ],
+    "arxiv_id": "2610.01062",
+    "summary": null
+  },
+  {
+    "id": "d72c3221552b0c56",
+    "url": "https://arxiv.org/abs/2610.01058",
+    "title": "MOMAT: Mixture of Multiple Atlases for Low-Power Jailbreak Defense of Quantized LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T04:55:41Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Quantized large language models are increasingly deployed on edge devices for their low latency and energy efficiency. However, model quantization weakens alignment safeguards, leaving qLLMs (quantized large language models) highly vulnerable to jailbreak attacks.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Boyang Li",
+      "Bingyu Shen",
+      "Weihao Hong",
+      "Zhiyuan Jiang",
+      "Xinlei Guan",
+      "Yan Ma",
+      "Miles Q. Li",
+      "Yi Sheng",
+      "Ruiyang Qin"
+    ],
+    "arxiv_id": "2610.01058",
+    "summary": null
+  },
+  {
     "id": "c0e8ac771b451b6e",
     "url": "https://www.lesswrong.com/posts/u973rQm56oijS5Adf/launching-babel-translation",
     "title": "Launching Babel Translation",
@@ -31,6 +335,73 @@
     "authors": [
       "Jasmine Li"
     ],
+    "summary": null
+  },
+  {
+    "id": "32bd9ffb52602863",
+    "url": "https://arxiv.org/abs/2610.00902",
+    "title": "Mean field games as a tool for AI safety: a worked example from the July 2026 Hugging Face incident",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T01:30:05Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "One way to make AI systems safe is to shape what the system is: its objective and dispositions. We take a complementary route: treat the agents' characteristics as partly unknown and ask what structure of interaction ensures that bad collective outcomes are not equilibria.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "P. Jameson Graber"
+    ],
+    "arxiv_id": "2610.00902",
+    "summary": null
+  },
+  {
+    "id": "c4d09fc706b596b7",
+    "url": "https://arxiv.org/abs/2610.00895",
+    "title": "Towards Fast and Disentangled Counterfactuals for Visual Foundation Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T01:19:00Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Foundation models remain vulnerable to spurious correlations and ``Clever Hans'' strategies. Explainable machine learning can find and remove such strategies for classifiers without metadata.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Sidney Bender",
+      "Benedikt Kunz",
+      "Ahmed Zeid",
+      "Shinichi Nakajima",
+      "Klaus-Robert Müller",
+      "Marco Morik"
+    ],
+    "arxiv_id": "2610.00895",
+    "summary": null
+  },
+  {
+    "id": "d21be1d94b5ab28b",
+    "url": "https://arxiv.org/abs/2610.00850",
+    "title": "AuraForge: Scaling Security Supervision for Training Coding Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T00:07:01Z",
+    "fetched_at": "2026-10-02T11:40:36Z",
+    "excerpt": "Coding agents are now proficient enough to generate complex software applications from a single prompt. As their capabilities have grown, human oversight has increasingly shifted from line-by-line code review toward hands-off evaluation of outcomes.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Danqing Wang",
+      "Songwen Zhao",
+      "Harsh Sharma",
+      "Jierui Wang",
+      "Andre Vicente Duarte",
+      "Ivan Bercovich",
+      "Lei Li"
+    ],
+    "arxiv_id": "2610.00850",
     "summary": null
   }
 ]
