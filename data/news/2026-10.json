@@ -1,5 +1,56 @@
 [
   {
+    "id": "573b05d008b613dc",
+    "url": "https://www.lesswrong.com/posts/PiP4JqQFKhoqHGG2n/how-to-apply-to-ai-safety-fellowships-and-beyond",
+    "title": "How to apply to AI safety fellowships (and beyond)",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-03T02:28:12Z",
+    "fetched_at": "2026-10-03T10:54:01Z",
+    "excerpt": "About a year ago, I decided to go all-in on applying to AI safety fellowships, and around the end of 2025 I got into MATS. I think there's a small art to communicating your skills legibly.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "beyarkay (Boyd Kane)"
+    ],
+    "summary": null
+  },
+  {
+    "id": "9d2118c9a75dd8c6",
+    "url": "https://blog.redwoodresearch.org/p/capabilities-research-expands-the",
+    "title": "Capabilities research expands the safety-usefulness Pareto frontier too",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-10-02T18:22:37Z",
+    "fetched_at": "2026-10-03T10:54:01Z",
+    "excerpt": "A model of why capabilities research usually increases risk despite enabling safety—and when it can reduce risk",
+    "topics": [],
+    "authors": [
+      "Alex Mallen"
+    ],
+    "summary": null
+  },
+  {
+    "id": "63baede7b012be19",
+    "url": "https://www.lesswrong.com/posts/zGaQ3SS9C6So9NXFg/lessons-from-building-an-automated-research-scaffold",
+    "title": "Lessons from building an automated research scaffold",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-02T15:29:04Z",
+    "fetched_at": "2026-10-03T10:54:01Z",
+    "excerpt": "TL;DR. We built a scaffold to speed up our own research and gather data on automated alignment research (AAR).",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Alejandro Aristizabal"
+    ],
+    "summary": null
+  },
+  {
     "id": "e8409dcb539d50f1",
     "url": "https://www.lesswrong.com/posts/b5cSYh4emQb2qrGmK/on-social-reality-in-china",
     "title": "On Social Reality in China",

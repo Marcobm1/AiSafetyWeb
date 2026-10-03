@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-10-02T11:40:36Z",
-  "duration_seconds": 8.1,
-  "new_entries": 23,
+  "last_run": "2026-10-03T10:54:01Z",
+  "duration_seconds": 24.6,
+  "new_entries": 3,
   "sources": [
     {
       "id": "alignment-forum",
@@ -18,7 +18,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 5,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 5,
-      "new": 4,
+      "kept": 4,
+      "new": 2,
       "error": null
     },
     {
@@ -62,8 +62,8 @@
       "name": "Redwood Research",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 3,
-      "new": 0,
+      "kept": 4,
+      "new": 1,
       "error": null
     },
     {
@@ -106,7 +106,7 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1243,
+      "items_in_feed": 1245,
       "kept": 9,
       "new": 0,
       "error": null
@@ -126,12 +126,12 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 18,
+      "new": 0,
       "error": null
     }
   ],
   "candidates": {
-    "added": 18,
+    "added": 0,
     "removed_promoted": 0,
     "pruned": 0,
     "total": 211
