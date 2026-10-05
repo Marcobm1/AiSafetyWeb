@@ -1,5 +1,72 @@
 [
   {
+    "id": "ece62f0713c1cba7",
+    "url": "https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy",
+    "title": "Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-10-05T12:32:30Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d6e741d3ac45bae1",
+    "url": "https://www.lesswrong.com/posts/isyxM8LGF3vxyr3eW/positive-and-negative-updates-re-lab-leak-in-russia",
+    "title": "Positive and Negative Updates Re: Lab Leak in Russia",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-05T07:17:48Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "In case you missed it, there appears to have been a recent lab leak of pneumonic plague in Russia that killed a lab worker. Some negative updates: At least four Irkutsk hospitals are now under mandatory three-week quarantine .",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Caleb Horn"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5c9e8cb792755b43",
+    "url": "https://www.lesswrong.com/posts/TYfpTRxGH9frTymwN/how-much-should-we-worry-about-the-pneumonic-plague-lableak",
+    "title": "How much should we worry about the pneumonic plague lableak in Siberia?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-05T07:11:30Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Epistemic status: I wrote this up hoping people can poke holes in it because I am quite worried. Here's what we've heard so far: Local media is reporting that an employee of a BSL-3 lab in Irkutsk, Russia, died of pneumonic plague on Oct 1st.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Drew Spartz"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d63a3081be7e037a",
+    "url": "https://www.lesswrong.com/posts/FogmcDHA6AdMGukum/alignment-engineering-vs-misalignment-science",
+    "title": "“Alignment Engineering” vs. “Misalignment Science”",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-05T05:40:12Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "There has been much discussion recently around whether a large portion of alignment research is net negative. Without endorsing or refuting them, the basic arguments here are: Prosaic alignment of models is becoming a bottleneck for capabilities.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Edward James Young"
+    ],
+    "summary": null
+  },
+  {
     "id": "2e2fe30add374207",
     "url": "https://www.lesswrong.com/posts/bnyvXhrdnpXxDqFi7/humans-are-not-aligned-either",
     "title": "Humans are not aligned either",
@@ -85,6 +152,70 @@
     "summary": null
   },
   {
+    "id": "54c31baf225239ab",
+    "url": "https://arxiv.org/abs/2610.03641",
+    "title": "IDRF: Inverse-Distilled Reward Fine-tuning of Masked Discrete Diffusion Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T17:29:22Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Masked discrete diffusion models offer a promising alternative to autoregressive generation, but iterative sampling can be costly, and intractable sequence likelihoods complicate reward fine-tuning. We introduce IDRF, a framework for reward fine-tuning of few-step masked discrete diffusion generators.",
+    "topics": [],
+    "authors": [
+      "Vladislav Gromadskii",
+      "David Li",
+      "Samson Gourevitch",
+      "Yazid Janati",
+      "Eric Moulines",
+      "Maxim Panov",
+      "Alexander Korotin"
+    ],
+    "arxiv_id": "2610.03641",
+    "summary": null
+  },
+  {
+    "id": "60ec440ee2e8d3e3",
+    "url": "https://arxiv.org/abs/2610.03498",
+    "title": "Detect and Suppress: A Mechanistic Defense against Adversarial Patches in VLA Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T15:57:04Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Adversarial patches can disrupt Vision-Language-Action (VLA) models by manipulating visual observations, leading to failures in robot control. However, it remains poorly understood which internal mechanisms underlie these failures and how targeted interventions can mitigate them.",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Yukiya Horiba",
+      "Koshiro Aoki",
+      "Shunsuke Yasuki",
+      "Bum Jun Kim",
+      "Taiki Miyanishi"
+    ],
+    "arxiv_id": "2610.03498",
+    "summary": null
+  },
+  {
+    "id": "3c31d30f4c114b5d",
+    "url": "https://arxiv.org/abs/2610.03458",
+    "title": "A Near-Zero Monitor Readout Is Not Evidence of Behavioral Control",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T15:33:56Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Post-training with verifiable rewards can induce reward hacking, motivating the use of monitors within the training objective rather than solely for offline auditing. We show that a low monitor readout does not identify whether such an intervention controls behavior.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zhe Zhou",
+      "Tianhua Tao"
+    ],
+    "arxiv_id": "2610.03458",
+    "summary": null
+  },
+  {
     "id": "63baede7b012be19",
     "url": "https://www.lesswrong.com/posts/zGaQ3SS9C6So9NXFg/lessons-from-building-an-automated-research-scaffold",
     "title": "Lessons from building an automated research scaffold",
@@ -100,6 +231,274 @@
     "authors": [
       "Alejandro Aristizabal"
     ],
+    "summary": null
+  },
+  {
+    "id": "334eaf8fc4d90f50",
+    "url": "https://arxiv.org/abs/2610.03389",
+    "title": "From Patching to Pruning Visual Computation in Vision Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T14:37:53Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Vision language models (VLMs) incur substantial inference cost because every visual token is processed by the attention and MLP projections of every decoder layer, even when token-specific visual computation is unnecessary at many depths. We introduce Patch-to-Prune (P2P), inspired by Mechanistic Interpretability, a…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Rahul Chowdhury",
+      "Timothy A Rupprecht",
+      "Xuan Shen",
+      "Shaoyi Huang",
+      "Pu Zhao",
+      "Yanzhi Wang"
+    ],
+    "arxiv_id": "2610.03389",
+    "summary": null
+  },
+  {
+    "id": "2e9ff109cc56d9f0",
+    "url": "https://arxiv.org/abs/2610.03185",
+    "title": "Gains and Collapse in On-Policy Distillation:A Reinforcement Learning Perspective",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T11:57:36Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "On-policy distillation (OPD) has become an important approach to language model post-training. However, despite its performance gains, OPD can also collapse into excessively long and repetitive generation, and the mechanism underlying these divergent outcomes remains poorly understood.",
+    "topics": [],
+    "authors": [
+      "Han Cui",
+      "Jianhao Yan",
+      "Yun Luo",
+      "Hongbo Zhang",
+      "Zhizhang Fu",
+      "Yue Zhang"
+    ],
+    "arxiv_id": "2610.03185",
+    "summary": null
+  },
+  {
+    "id": "2900a211394e2a1c",
+    "url": "https://arxiv.org/abs/2610.03055",
+    "title": "hacktrace: behavior-supervised detection of reward hacking during code generation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T09:35:59Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "A coding agent can earn a passing grade by fixing its code, or by deleting the test that exposes the bug. Detecting such reward hacking requires recognizing attempted shortcuts, including those that fail.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Hao Jiang",
+      "Xin Li",
+      "Annan Wang",
+      "Yichi Zhang",
+      "Weisi Lin"
+    ],
+    "arxiv_id": "2610.03055",
+    "summary": null
+  },
+  {
+    "id": "b68da31e88100bb3",
+    "url": "https://arxiv.org/abs/2610.02967",
+    "title": "Post-Training Frontier Text-to-Image Models by Composing Preference and Rubric Rewards",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T08:05:34Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Recent text-to-image generation models have achieved remarkable visual quality, but improving them through post-training remains challenging because no single reward signal captures the full range of human preference. In this work, we develop a simple and effective post-training recipe for open-domain text-to-image…",
+    "topics": [],
+    "authors": [
+      "Yuanhao Ban",
+      "I-Hung Hsu",
+      "Anastasios Angelopoulos",
+      "Wei-Lin Chiang",
+      "Ion Stoica",
+      "Cho-Jui Hsieh"
+    ],
+    "arxiv_id": "2610.02967",
+    "summary": null
+  },
+  {
+    "id": "ec7282daa71056e3",
+    "url": "https://arxiv.org/abs/2610.02853",
+    "title": "Bounded Reachability & Jailbreak Detection via Contraction-Constrained State Space Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T05:39:06Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Safety heads are lightweight classifiers attached to pretrained language models for flagging harmful inputs before generation. Their empirical detection performance has been studied, but their formal robustness properties remain largely unexplored.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Omanshu Thapliyal"
+    ],
+    "arxiv_id": "2610.02853",
+    "summary": null
+  },
+  {
+    "id": "fb2895c35ab979db",
+    "url": "https://arxiv.org/abs/2610.02829",
+    "title": "Clinical Concept Centers in LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T05:22:12Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Large language models are increasingly used in clinical settings. However, research into the reliability and performance of these models has focused almost entirely on the language substrate, scoring what the model says.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Aishik Nagar",
+      "Abhishek Vaidyanathan",
+      "Arun-Kumar Kaliya-Perumal",
+      "Elijah Tzen Hsuen Boey",
+      "Stefan Winkler"
+    ],
+    "arxiv_id": "2610.02829",
+    "summary": null
+  },
+  {
+    "id": "fe5f3faaccfb1931",
+    "url": "https://arxiv.org/abs/2610.02827",
+    "title": "MLCommons Jailbreak Benchmark v1.0",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T05:17:56Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Modern AI systems are designed to refuse hazardous requests. A jailbreak is a prompt crafted to bypass those safeguards and elicit outputs that the system would normally refuse to provide.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Carsten Maple",
+      "Cagatay Yucel",
+      "Isaac Holeman",
+      "Chris Knotz",
+      "Peter Mattson",
+      "James Goel",
+      "Jonathan Petit",
+      "Sean McGregor",
+      "James Ezick",
+      "Abhishek Kumar",
+      "Alicia Parrish",
+      "Murali Emani",
+      "Kashyap Iyer",
+      "Faiza Khan Khattak",
+      "Washington Mbonu",
+      "Daniel Machlab",
+      "Eileen Long",
+      "Shaona Ghosh",
+      "Jibin Varghese",
+      "Roman Lutz",
+      "Andrew Gruen",
+      "Bennett Hillenbrand",
+      "Prabal Gupta",
+      "Mohammed Serrhini",
+      "Dhivya Nagasubramanian",
+      "Aakash Gupta",
+      "Jun",
+      "Lu",
+      "Kurt Bollacker",
+      "Chang Liu",
+      "Jonathan Petit",
+      "Cong Chen",
+      "Jean-Philippe Monteuuis",
+      "Brent Miller",
+      "Apurv Verma",
+      "Roman Eng",
+      "Armstrong Foundjem",
+      "Mohammed Serrhini"
+    ],
+    "arxiv_id": "2610.02827",
+    "summary": null
+  },
+  {
+    "id": "6da98112ea268964",
+    "url": "https://arxiv.org/abs/2610.02781",
+    "title": "OPD Before RL: Warm-Starting Rubric-Based RL with On-Policy Distillation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T04:14:57Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Many useful language-model tasks cannot be evaluated by exact outcome verification. Rubric-based reinforcement learning (RL) addresses this issue by scoring open-ended responses against explicit criteria.",
+    "topics": [],
+    "authors": [
+      "Xinpeng Wang",
+      "Wei Shi",
+      "Yu-Chia Chen",
+      "Maria Zontak",
+      "Yun He",
+      "Richard Yuanzhe Pang"
+    ],
+    "arxiv_id": "2610.02781",
+    "summary": null
+  },
+  {
+    "id": "5c092186239518af",
+    "url": "https://arxiv.org/abs/2610.02741",
+    "title": "On the Chain-of-Thought Monitorability of Looped Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T03:12:54Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring provides a promising approach for detecting undesirable model behavior. Looped language models (LoopLMs) repeatedly apply shared transformer layers, increasing effective computational depth and enabling additional latent computation without increasing model size.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Han Wang",
+      "Ishwar B Balappanawar",
+      "Huan Zhang"
+    ],
+    "arxiv_id": "2610.02741",
+    "summary": null
+  },
+  {
+    "id": "d0caec92adba4cb1",
+    "url": "https://arxiv.org/abs/2610.02662",
+    "title": "Mind the Refinement Gap: When Safe High-Level Robot Plans Produce Unsafe Executions",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T01:31:57Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Language-enabled robot systems increasingly combine semantic-graph planning with temporal-logic safety monitors. We investigate a trace-completeness assumption in these systems: whether the high-level action sequence checked by a monitor represents the navigation and implicit action effects induced during execution.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Stabak Das",
+      "Priyesh Ranjan",
+      "Xiangfang Li",
+      "Lijun Qian"
+    ],
+    "arxiv_id": "2610.02662",
+    "summary": null
+  },
+  {
+    "id": "351842ab36644395",
+    "url": "https://arxiv.org/abs/2610.02588",
+    "title": "Open-Endedness Bench: Measuring Epistemic Process from Agent Records",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T23:34:37Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Agents are increasingly given open-ended research tasks: discovering an empirical law from self-designed experiments, improving a heuristic whose optimum nobody knows, or beating a standing record. Their execution logs record every step of this research, yet the runs are still judged by their outcome score.",
+    "topics": [],
+    "authors": [
+      "Chengyang Shi",
+      "Xianglin Ji",
+      "Jintao Huang",
+      "Jicheng Wang",
+      "Yifeng He",
+      "Jiachen Liu"
+    ],
+    "arxiv_id": "2610.02588",
     "summary": null
   },
   {
@@ -120,6 +519,29 @@
     "summary": null
   },
   {
+    "id": "47fcfc700225d230",
+    "url": "https://arxiv.org/abs/2610.02439",
+    "title": "A Generative Model of Complex Networks Using Graphons and Neural Inverse Operators",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T20:06:33Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Generative graph models are central to understanding and simulating complex networks. However, existing approaches have complementary strengths and limitations.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Wooseong Choi",
+      "Italo'Ivo Lima Dias Pinto",
+      "Chen Sun",
+      "Gaurav Gupta",
+      "Dong Song",
+      "Paul Bogdan"
+    ],
+    "arxiv_id": "2610.02439",
+    "summary": null
+  },
+  {
     "id": "0d20a19a9ae6de6d",
     "url": "https://www.lesswrong.com/posts/mmfYDH6hwYAMToNKL/evaluating-the-ban-artificial-superintelligence-act",
     "title": "Evaluating the Ban Artificial Superintelligence Act",
@@ -134,6 +556,44 @@
     "authors": [
       "Rob Ennals"
     ],
+    "summary": null
+  },
+  {
+    "id": "cee740c440dbe8e8",
+    "url": "https://arxiv.org/abs/2610.02418",
+    "title": "Mitigating Private Data Leakage in LLMs with Whiteout",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T19:40:38Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Modern large language models (LLMs) are trained on massive, largely unfiltered datasets, including content scraped from nearly every accessible website and user inputs. As a result, LLMs often memorize and reproduce personally sensitive information (PSI) such as birth dates, phone numbers, and home addresses.",
+    "topics": [],
+    "authors": [
+      "Anna Yoo Jeong Ha",
+      "Ronik Bhaskar",
+      "Haitao Zheng",
+      "Ben Y. Zhao"
+    ],
+    "arxiv_id": "2610.02418",
+    "summary": null
+  },
+  {
+    "id": "c202361132b0e729",
+    "url": "https://arxiv.org/abs/2610.02413",
+    "title": "Prompted to Discriminate: Generalizing Malicious-Input Probes in the Wild",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T19:36:57Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "LLM agents increasingly rely on activation probes as runtime monitors for prompt injection, jailbreaks, and unsafe requests, reading the model's own hidden state to catch a harmful input before the agent acts on it. A cheap, increasingly common move, borrowed from LLM-as-judge prompting, is to append a short…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Elad David",
+      "Max Fomin"
+    ],
+    "arxiv_id": "2610.02413",
     "summary": null
   },
   {
@@ -162,6 +622,25 @@
       "Grant M. Rotskoff"
     ],
     "arxiv_id": "2610.02189",
+    "summary": null
+  },
+  {
+    "id": "3f9980681713d118",
+    "url": "https://arxiv.org/abs/2610.02302",
+    "title": "Intent-Hiding Jailbreaks: An Information-Theoretic Framework for Compositional Attacks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-01T17:57:04Z",
+    "fetched_at": "2026-10-05T13:12:27Z",
+    "excerpt": "Recent work has shown that large language models (LLMs) can be vulnerable to jailbreak attacks in which harmful intent is obscured through composition with benign tasks. A harmful request refused in isolation may elicit a different response when embedded within a larger, seemingly benign query.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Fengwei Tian",
+      "Ravi Tandon"
+    ],
+    "arxiv_id": "2610.02302",
     "summary": null
   },
   {
