@@ -1,5 +1,134 @@
 [
   {
+    "id": "649ede13bae62ecf",
+    "url": "https://www.lesswrong.com/posts/7wrzfaiCq3u8xkY5G/self-modeling-interventions-modulate-emergent-misalignment",
+    "title": "Self-Modeling Interventions Modulate Emergent Misalignment",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-06T02:59:58Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Code: https://github.com/atagade/sgtr-em Model checkpoints: https://github.com/atagade/sgtr-em/blob/main/MODEL_README.md Full paper (v2 coming soon): https://arxiv.org/abs/2606.23700 TL;DR A model’s self-model is its representation of itself. We operationalize it two ways: self-recognition (distinguishing its own…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Arush"
+    ],
+    "summary": null
+  },
+  {
+    "id": "cff490900c8bc935",
+    "url": "https://www.lesswrong.com/posts/HwdXDoCH7KXdKsz7k/research-note-filtering-subversion-relevant-information-from",
+    "title": "Research Note: Filtering Subversion-Relevant Information From Pretraining Data Is Feasible",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-05T23:47:25Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Authors : Kyle O’Brien¹, Spencer Kitts², Cameron Tice¹, Alek Westover² ¹Geodesic Research, ²Redwood Research Figure 1: We pretrained LLMs from scratch with and without filtering subversion-relevant information , finding that subversion-relevant knowledge is significantly diminished while retaining general ML…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Kyle O’Brien"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ec036f07ea2665c5",
+    "url": "https://blog.redwoodresearch.org/p/frontier-models-state-different-decision",
+    "title": "Frontier models state different decision theory preferences depending on who’s asking",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-10-05T22:04:23Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Asked which decision theory is right, frontier models name FDT/UDT. But add a sentence saying you're an academic philosopher, and they often switch to CDT.",
+    "topics": [],
+    "authors": [
+      "Alex Kastner"
+    ],
+    "summary": null
+  },
+  {
+    "id": "489733cf1bb291e0",
+    "url": "https://www.lesswrong.com/posts/CzmMvnPy7YdSRucDH/current-ais-out-persuade-professionals-in-lab-settings-but",
+    "title": "Current AIs out-persuade professionals in lab settings but (probably) not in the world",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-05T19:59:45Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "This article was created by Forethought . See all of our research on our website .",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Linch"
+    ],
+    "summary": null
+  },
+  {
+    "id": "969c62c53b98c091",
+    "url": "https://arxiv.org/abs/2610.06824",
+    "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T17:57:15Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "We introduce TasteVal, a benchmark to evaluate the experimental research taste of frontier models. We define research taste as the ability to pick interesting problems to solve, design experiments, and interpret experimental results.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Oliver Jaffe",
+      "Dane Sherburn"
+    ],
+    "arxiv_id": "2610.06824",
+    "summary": null
+  },
+  {
+    "id": "f7b925613f697676",
+    "url": "https://arxiv.org/abs/2610.06584",
+    "title": "Does AI Help Cyber Attackers or Defenders? Evidence from Nonpublic Vulnerabilities and Subsequent Attacks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T16:00:23Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "The release decision for frontier AI systems increasingly relies on cyber capability benchmarks, yet public vulnerability benchmarks can expose agents to previously published advisories, exploits, and fixes, making it difficult to distinguish prior exposure from capability on unseen vulnerabilities. We evaluate…",
+    "topics": [
+      "evals",
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Tobias Heldt",
+      "Matt Turk",
+      "Christoph Landolt",
+      "Mario Fritz"
+    ],
+    "arxiv_id": "2610.06584",
+    "summary": null
+  },
+  {
+    "id": "e77e1ae0a9e6aff6",
+    "url": "https://arxiv.org/abs/2610.06439",
+    "title": "Better Call Reward: Reward Hacking as Strategic Abstention in Legal Reasoning Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T14:46:35Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "What happens when a legal AI model learns to look like a lawyer instead of reasoning like one? We fine tune Qwen3-8B with Group Relative Policy Optimisation (GRPO) against a proxy built from three surface features: citation count, legalese density, and response length.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Subramanyam Sahoo",
+      "Justin Shenk"
+    ],
+    "arxiv_id": "2610.06439",
+    "summary": null
+  },
+  {
     "id": "ece62f0713c1cba7",
     "url": "https://jack-clark.net/2026/10/05/import-ai-475-swarm-scaling-google-deepmind-watermarks-biology-and-the-ai-science-economy",
     "title": "Import AI 475: Swarm scaling; Google DeepMind watermarks biology; and the AI science economy",
@@ -12,6 +141,53 @@
     "authors": [
       "Jack Clark"
     ],
+    "summary": null
+  },
+  {
+    "id": "cd7ac0522e75bbec",
+    "url": "https://arxiv.org/abs/2610.06122",
+    "title": "Benchmarking Jailbreak Guardrails for Embodied Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T10:56:18Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Embodied agents powered by large language models and vision-language models are increasingly deployed in physical environments, but jailbreak attacks can induce these agents to perform physically harmful actions. A growing number of guardrail methods have been proposed to intercept dangerous behavior before it is…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Xunguang Wang",
+      "Qingyue Wang",
+      "Yuguang Zhou",
+      "Zongjie Li",
+      "Wenxuan Wang",
+      "Shuai Wang"
+    ],
+    "arxiv_id": "2610.06122",
+    "summary": null
+  },
+  {
+    "id": "16b03ac3970d3999",
+    "url": "https://arxiv.org/abs/2610.06049",
+    "title": "Backdooring Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T09:44:21Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Sparse autoencoders (SAEs) are increasingly used not only to interpret language models but also to intervene on their internal representations. We show that this creates a supply-chain attack surface: a maliciously modified SAE can induce attacker-chosen behavior when inserted into the forward pass of an otherwise…",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Enrico Ahlers",
+      "Daniel Passon",
+      "Tobias Kiecker",
+      "Eik Reichmann",
+      "Lars Grunske"
+    ],
+    "arxiv_id": "2610.06049",
     "summary": null
   },
   {
@@ -67,6 +243,196 @@
     "summary": null
   },
   {
+    "id": "3bdc937e3f8e1237",
+    "url": "https://arxiv.org/abs/2610.05689",
+    "title": "Toward AI Trustworthiness: Finding Analytically Proven Forward-Invariant Sets for AI-Controlled Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T02:04:23Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Neural-network (NN) controllers are increasingly used in nonlinear control systems, but their highly nonlinear behavior makes them difficult to explain and verify, raising trustworthiness concerns in safety- and mission-critical applications. A key step toward certifiable trustworthiness is to find a Forward-Invariant…",
+    "topics": [],
+    "authors": [
+      "Haoyang Song",
+      "Xikun Yang",
+      "Qixin Wang"
+    ],
+    "arxiv_id": "2610.05689",
+    "summary": null
+  },
+  {
+    "id": "2ad8cb784dabb2ab",
+    "url": "https://arxiv.org/abs/2610.05541",
+    "title": "Don't Judge an LLM Only by Its Activations: Discovering Suppressed Safety Features via Counterfactual Activation Potential",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T21:13:06Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Mechanistic interpretability has emerged as the primary means to understand safety behavior of LLMs. However, existing tools primarily focus on the activating neurons or features of a model.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Swadesh Swain",
+      "Sanghamitra Dutta"
+    ],
+    "arxiv_id": "2610.05541",
+    "summary": null
+  },
+  {
+    "id": "5d9e7fc777345baf",
+    "url": "https://arxiv.org/abs/2610.05461",
+    "title": "AI Safety via Debate is Compromised by Cognitive Biases",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T19:11:18Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Reinforcement learning from human feedback (RLHF) has played a central role in making large language models responsive to human instructions. However, human evaluators often favor flattering or persuasive responses over truthful ones, creating incentives for models to appeal to evaluators at the expense of accuracy.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Gefei Liu",
+      "Sonya Rashkovan",
+      "Sophia Lloyd George",
+      "Isaac Sheidlower",
+      "Serena Booth"
+    ],
+    "arxiv_id": "2610.05461",
+    "summary": null
+  },
+  {
+    "id": "d66cb4fece4d0327",
+    "url": "https://arxiv.org/abs/2610.05346",
+    "title": "Reflections and Fragments: Securing LLMs Against Sequential Mosaic Attacks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T16:12:52Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Self-play red-teaming improves language-model safety by pitting attacker and defender roles against each other in a zero-sum game. However, real adversaries increasingly use mosaic attacks: multi-turn sequences whose individual fragments are innocuous in isolation yet assemble into a harmful payload.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Emanuele La Malfa",
+      "Saar Cohen",
+      "Gabriele La Malfa",
+      "Mickel Liu",
+      "Christian Schroeder de Witt",
+      "Natasha Jaques",
+      "Michael J. Wooldridge"
+    ],
+    "arxiv_id": "2610.05346",
+    "summary": null
+  },
+  {
+    "id": "b1ee01cfa5edc4bd",
+    "url": "https://arxiv.org/abs/2610.05308",
+    "title": "RubricArmor: Adversarial Evolution Improves LLM-Based Rubric Generation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T15:30:32Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Rubric-based reinforcement learning (RL) provides interpretable rewards for aligning large language models (LLMs) by evaluating responses against query-specific evaluation criteria. To construct rubrics at scale, a straightforward approach to LLM-based rubric generation is to prompt an LLM to generate a rubric…",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Haocheng Yang",
+      "Yuchao Zhang",
+      "Licheng Pan",
+      "Jiajun Fan",
+      "Maolin Wang",
+      "Kangning Zhang",
+      "Shuai Shao",
+      "Shijian Wang",
+      "Yuan Lu",
+      "Chunyuan Zheng",
+      "Hao Wang"
+    ],
+    "arxiv_id": "2610.05308",
+    "summary": null
+  },
+  {
+    "id": "f864b458ccc742b9",
+    "url": "https://arxiv.org/abs/2610.05282",
+    "title": "Red-TTT: Test-Time Training for Automated Jailbreaking Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T15:03:08Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Large language models remain vulnerable to jailbreaks, and automated red teaming is the standard way to find jailbreaks in large language models at scale. Current methods either draw more samples at test time through search, rewriting, and tree expansion, or train a stronger attacker offline with reinforcement…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Tongyan Hu",
+      "Hao Li",
+      "Xiaogeng Liu",
+      "Ruida Wang",
+      "Zhengyu Liu",
+      "Shuyao Xu",
+      "Ning Zhang",
+      "Ziyang Li",
+      "Yinzhi Cao",
+      "Bryan Hooi",
+      "Chaowei Xiao"
+    ],
+    "arxiv_id": "2610.05282",
+    "summary": null
+  },
+  {
+    "id": "e7cc285472187d1f",
+    "url": "https://arxiv.org/abs/2610.04998",
+    "title": "EmoRSS: Mitigating Emotion-Induced Over-Refusal in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T06:40:16Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Emotional expression can influence the safety decisions of large language models (LLMs), offering a potential avenue for improving safety alignment. Existing studies have mainly focused on how emotional expressions facilitate attacks under harmful requests, while overlooking their effects on benign requests.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Shuyi Miao",
+      "Yaojin Ma",
+      "Chenhang Cui",
+      "Xiaohao Liu",
+      "Dang Jisheng",
+      "Shengda Zhuo",
+      "Fei Shen",
+      "Tat-Seng Chua"
+    ],
+    "arxiv_id": "2610.04998",
+    "summary": null
+  },
+  {
+    "id": "8e3e0a5b5b49bd1f",
+    "url": "https://arxiv.org/abs/2610.04985",
+    "title": "Hidden Risks of Jev: An Empirical Study of Security, Privacy, and Dual Use",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T06:09:34Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Jev turns natural-language questions into typed answers and probabilities with low latency and cost, enabling applications to route requests and select tools. While this interface allows Jev to integrate naturally into application workflows as a decision layer, the security and privacy implications of this emerging…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Shang Wang",
+      "Tianqing Zhu",
+      "Huajie Chen",
+      "Jiayang Li",
+      "Meng Yang",
+      "Bo Liu"
+    ],
+    "arxiv_id": "2610.04985",
+    "summary": null
+  },
+  {
     "id": "2e2fe30add374207",
     "url": "https://www.lesswrong.com/posts/bnyvXhrdnpXxDqFi7/humans-are-not-aligned-either",
     "title": "Humans are not aligned either",
@@ -81,6 +447,67 @@
     "authors": [
       "becausecurious"
     ],
+    "summary": null
+  },
+  {
+    "id": "b0687898c2335d7e",
+    "url": "https://arxiv.org/abs/2610.04925",
+    "title": "TSAE: Structured Sparse Autoencoders for Interpreting Time-Series Forecasting Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T04:09:07Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Time-series forecasting informs critical decisions in energy dispatch, industrial operations, and environmental monitoring; understanding the patterns models rely on is essential for assessing reliability and identifying failures. Input attribution identifies important variables and time segments but offers limited…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Baoxi Liu",
+      "Yi Xie"
+    ],
+    "arxiv_id": "2610.04925",
+    "summary": null
+  },
+  {
+    "id": "f91bd23b5f17c746",
+    "url": "https://arxiv.org/abs/2610.04914",
+    "title": "Monitorability Disposition in Large Reasoning Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T03:49:36Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Monitoring the chain-of-thought (CoT) of large reasoning models (LRMs) is a common way to detect misbehavior in real-world practice. However, current monitoring is passive: a separate model inspects the session only after execution.",
+    "topics": [],
+    "authors": [
+      "Shahriar Golchin",
+      "Marc Wetter"
+    ],
+    "arxiv_id": "2610.04914",
+    "summary": null
+  },
+  {
+    "id": "34605e127777b7b4",
+    "url": "https://arxiv.org/abs/2610.04905",
+    "title": "ScopeSAE: Model-Scope Feature Discovery with Interpretable Layer Selection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T03:32:20Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Sparse autoencoders (SAEs) are a central tool in mechanistic interpretability. However, existing SAEs are primarily trained per layer.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Qingwen Zeng",
+      "Zehao Fu",
+      "Shuyu Meng",
+      "Linghan Huang",
+      "Jiayi Zhang",
+      "Chenglin Wu",
+      "Ling Chen",
+      "Huaming Chen"
+    ],
+    "arxiv_id": "2610.04905",
     "summary": null
   },
   {
@@ -102,6 +529,65 @@
     "summary": null
   },
   {
+    "id": "68bc5b41134b4a08",
+    "url": "https://arxiv.org/abs/2610.04793",
+    "title": "Pressure, Context, and Machine Self-Control: A Criminological Test of Reward Hacking in Generative AI Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T22:37:05Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Recent incidents show that AI agents sometimes reach measured goals through unsanctioned means. This study applies self-control, general strain, anomie, neutralization and routine activity theory to reward hacking in generative AI models, and it treats the measures as behavioral analogues.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Murat Ozer",
+      "Isaac Kofi Nti"
+    ],
+    "arxiv_id": "2610.04793",
+    "summary": null
+  },
+  {
+    "id": "83b209503788a762",
+    "url": "https://arxiv.org/abs/2610.04693",
+    "title": "Penumbra: Sample-Efficient Adversarial Search for Regulatory Obligations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T18:11:23Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Agents are entering finance, healthcare and law, sectors where a violation leaves no lexical signature and carries real penalties. Whether an omission is material, or a disclosure sufficient, depends on what the response left out.",
+    "topics": [
+      "interpretability",
+      "evals",
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Anthony Rhodes"
+    ],
+    "arxiv_id": "2610.04693",
+    "summary": null
+  },
+  {
+    "id": "fc5bd346394ca02f",
+    "url": "https://arxiv.org/abs/2610.04589",
+    "title": "StegoMemory: Agentic Memory Acts as Covert Steganographic Channel",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T15:23:18Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Is agentic memory robust against stealthy steganographic attacks? We carry out a large-scale red-teaming exercise to test whether agents can encode attacker-controlled strings in one session and recover them in another without triggering safety oversight.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Snehasis Mukhopadhyay",
+      "Arun Nair"
+    ],
+    "arxiv_id": "2610.04589",
+    "summary": null
+  },
+  {
     "id": "1938d3d555261cfd",
     "url": "https://www.lesswrong.com/posts/3uT42yoj2iimYn7Ra/lab-leak-in-russia",
     "title": "Lab Leak in Russia",
@@ -116,6 +602,74 @@
     "authors": [
       "Caleb Horn"
     ],
+    "summary": null
+  },
+  {
+    "id": "d530715b924ec55f",
+    "url": "https://arxiv.org/abs/2610.04470",
+    "title": "Reactivating Alignment: Defending LLMs from Jailbreaks via Intention-Aware Input-Output Matching",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T12:17:54Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Large language models (LLMs) remain vulnerable to jailbreak attacks that conceal harmful intent within complex adversarial prompts. Existing defenses primarily rely on input perturbation or harmful-output suppression, but they rarely model where malicious intent resides, resulting in brittle protection and excessive…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Luoyu Chen",
+      "Weiqi Wang",
+      "Chenhan Zhang",
+      "Zhiyi Tian",
+      "Shui Yu"
+    ],
+    "arxiv_id": "2610.04470",
+    "summary": null
+  },
+  {
+    "id": "66096e32ea999608",
+    "url": "https://arxiv.org/abs/2610.04467",
+    "title": "Target-free Latent Safety Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T12:13:23Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Large language models (LLMs) remain highly vulnerable to jailbreak attacks that induce harmful behaviors and circumvent safety alignment. To defend against such attacks, adversarial training paradigms have been proposed to first simulate failure modes and then train the model to correct them, yielding promising…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Luoyu Chen",
+      "Weiqi Wang",
+      "Chenhan Zhang",
+      "Zhiyi Tian",
+      "Yuxian Huang",
+      "Shui Yu"
+    ],
+    "arxiv_id": "2610.04467",
+    "summary": null
+  },
+  {
+    "id": "30bee45c6a13e310",
+    "url": "https://arxiv.org/abs/2610.04283",
+    "title": "First-Order Steering: Translating Weight Adaptation into Activation Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-03T04:22:36Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Activation steering exploits interpretable directions in the residual stream to enable inference-time manipulation of model behavior. Composing steering vectors to apply multiple target behaviors simultaneously is important in various fields-including AI alignment and safety-but remains a challenge for existing…",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Sri Pranav Kunda",
+      "Alexander Kurz",
+      "Tomas Dominik",
+      "Uri Maoz"
+    ],
+    "arxiv_id": "2610.04283",
     "summary": null
   },
   {
@@ -137,6 +691,93 @@
     "summary": null
   },
   {
+    "id": "060ce30141783b83",
+    "url": "https://arxiv.org/abs/2610.04119",
+    "title": "Copying Before Suppression: What Drives a Below-Chance Dip During Language Model Training?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T22:50:59Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Mechanistic interpretability usually studies fully trained models, yet the computations that drive a behaviour can change while the model is still learning the task. On the Indirect Object Identification task, a model should continue with the name mentioned once rather than the name mentioned twice.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Tejas Dahiya",
+      "Cole Blondin"
+    ],
+    "arxiv_id": "2610.04119",
+    "summary": null
+  },
+  {
+    "id": "f787b0aa19ba3603",
+    "url": "https://arxiv.org/abs/2610.04112",
+    "title": "The Independence Prior of SAEs Fragments Visual Concepts",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T22:32:13Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Sparse Autoencoders (SAEs) decompose model activations into sparse combinations of interpretable dictionary atoms. Although SAEs are grounded in the Linear Representation Hypothesis (LRH), their objective smuggles in an additional prior: concepts across patches are treated as independent, an assumption clearly…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Tommaso Mencattini",
+      "Giorgos Nikolaou",
+      "Donato Crisostomi",
+      "Thomas Fel",
+      "Francesco Montagna",
+      "Emanuele Rodolà",
+      "Francesco Locatello"
+    ],
+    "arxiv_id": "2610.04112",
+    "summary": null
+  },
+  {
+    "id": "23c10b8205cb3338",
+    "url": "https://arxiv.org/abs/2610.04083",
+    "title": "Self-Propagating Misalignment in LLM Agents, and Why Auditing or Disabling Memory Is Not Enough",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T21:46:13Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Memory poisoning attacks on LLM agents typically assume an external adversary who plants content in the agent's persistent memory to steer its behavior. We instead study, with no adversary involved, whether a misaligned agent can write a goal it cannot yet act on to persistent memory, so that a future aligned agent…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Debeshee Das",
+      "Jacqueline Tay",
+      "Bruce Tsai",
+      "David Huang",
+      "Javier Rando"
+    ],
+    "arxiv_id": "2610.04083",
+    "summary": null
+  },
+  {
+    "id": "6291c90d6679c871",
+    "url": "https://arxiv.org/abs/2610.04017",
+    "title": "Slaying the Hydra: Interaction-Aware Circuit Discovery in Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T20:25:06Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Localizing behavior to individual components of a language model is a central goal of mechanistic interpretability. However, scoring components one at a time misses context-dependent effects: a primary component can inhibit the activation of a backup, leading to issues with ranking components.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Sankaran Vaidyanathan",
+      "Rafal Urbaniak",
+      "Emily Bunnapradist",
+      "Michelangelo Naim",
+      "Daniel Waxman"
+    ],
+    "arxiv_id": "2610.04017",
+    "summary": null
+  },
+  {
     "id": "9d2118c9a75dd8c6",
     "url": "https://blog.redwoodresearch.org/p/capabilities-research-expands-the",
     "title": "Capabilities research expands the safety-usefulness Pareto frontier too",
@@ -149,6 +790,54 @@
     "authors": [
       "Alex Mallen"
     ],
+    "summary": null
+  },
+  {
+    "id": "1ed1fb82f8f23c94",
+    "url": "https://arxiv.org/abs/2610.03880",
+    "title": "Reinforcement Learning on the Discrete Composition Channel of a Crystal Generator: Validated Gains and Reward Hacking",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T18:02:02Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Inverse materials design is a long-standing goal of computational materials discovery. Generative models for crystalline materials are typically trained to match the distribution of a structure database, while nothing in their training objective points them at specific design goals such as targeted properties.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Pawan Prakash",
+      "Philipp Höllmer",
+      "Addis Fuhr",
+      "Peter Hirschfeld",
+      "P. Ganesh",
+      "Stefano Martiniani",
+      "Richard Hennig"
+    ],
+    "arxiv_id": "2610.03880",
+    "summary": null
+  },
+  {
+    "id": "259e3abe641dc58f",
+    "url": "https://arxiv.org/abs/2610.03857",
+    "title": "Beware EviLLM: Enabling Vulnerability Injection via Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-02T17:32:46Z",
+    "fetched_at": "2026-10-06T12:31:45Z",
+    "excerpt": "Advances in large language models (LLMs) have enabled AI-driven code generation from natural language specifications, introducing new attack surfaces for injecting vulnerabilities into software. Prior work has studied this problem only in benign settings where vulnerabilities are introduced inadvertently, or under…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Zeezoo Ryu",
+      "Simon Chung",
+      "Muhammad Faraz Karim",
+      "Anna Raymaker",
+      "Karan Singh Jodha",
+      "Yash Chaturvedi",
+      "Sukarno Mertoguno"
+    ],
+    "arxiv_id": "2610.03857",
     "summary": null
   },
   {
