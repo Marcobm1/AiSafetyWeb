@@ -1,4 +1,324 @@
 {
+  "arxiv:2610.08740": {
+    "id": "arxiv:2610.08740",
+    "title": "On the Computational Tractability of Robust Bandits",
+    "authors": [
+      "Vanessa Kosoy",
+      "Vinayak Pathak"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.08740",
+    "abstract": "Learning when the environment does not belong to the learner's hypothesis class is typically handled using agnostic learning guarantees. However, for anything beyond supervised learning, agnostic guarantees are difficult to come by.",
+    "detected": "2026-10-07",
+    "topics": []
+  },
+  "arxiv:2610.08678": {
+    "id": "arxiv:2610.08678",
+    "title": "Secure Speculative Decoding for Large Language Models",
+    "authors": [
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Neil Gong",
+      "Yuchen Yang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.08678",
+    "abstract": "Speculative decoding accelerates inference for a large language model (LLM), referred to as the \\emph{target model}, by first using a smaller model, referred to as the \\emph{draft model}, to generate candidate tokens and then verifying them with the target model for acceptance or rejection. Prior studies primarily…",
+    "detected": "2026-10-07",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.08554": {
+    "id": "arxiv:2610.08554",
+    "title": "Systemization of Knowledge (SoK): Human-Centered AI Safety for Youth",
+    "authors": [
+      "Pratyasha Saha",
+      "Yaman Yu",
+      "Yang Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.08554",
+    "abstract": "While HCI increasingly examines AI-safety for youth, the literature lacks a comprehensive view of what risks have been identified, how they are addressed, and whether proposed protections work in-practice. We systematically reviewed 100 empirical HCI studies involving children and youth interacting with or exposed to…",
+    "detected": "2026-10-07",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.08552": {
+    "id": "arxiv:2610.08552",
+    "title": "AnyBottle: A Recipe to Only Keep the Concepts You Really Need",
+    "authors": [
+      "Wolfgang Stammer",
+      "Sukrut Rao",
+      "Hevra Petekkaya",
+      "David Steinmann",
+      "Bernt Schiele"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.08552",
+    "abstract": "Concept bottleneck models (CBMs) make predictions inspectable and intervenable by routing them through human-interpretable concepts, but originally required concept annotations. Annotation-free variants remove this requirement, but typically use large concept vocabularies, static at both training and inference…",
+    "detected": "2026-10-07",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.08364": {
+    "id": "arxiv:2610.08364",
+    "title": "Transect: Retaining Observability for Long-Horizon LLM Agent Evaluations",
+    "authors": [
+      "Toby D. Pilditch",
+      "Konstantinos Voudouris",
+      "Alexandra Abbas",
+      "Cozmin Ududec"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.08364",
+    "abstract": "Frontier AI evaluations increasingly use open-ended, agentic, long-horizon tasks whose transcripts can span hundreds of pages of outputs and actions from complex multi-agent networks. The observability envelop-the range of what evaluators can reliably infer about an agent's behaviours-is therefore narrowing.",
+    "detected": "2026-10-07",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.07935": {
+    "id": "arxiv:2610.07935",
+    "title": "SIGMA: Self-Improving Alignment Generalization from a Model Spec",
+    "authors": [
+      "Jingyu Zhang",
+      "Shruti Palaskar",
+      "Daniel Khashabi",
+      "Benjamin Van Durme",
+      "Leon A. Gatys",
+      "Joseph Yitan Cheng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07935",
+    "abstract": "LLM agents are increasingly capable of executing complex tasks and of recursively improving themselves on easy-to-verify objectives such as software engineering and mathematics. Since alignment is much harder to verify, this creates a growing risk of capabilities increasing without appropriate safety alignment…",
+    "detected": "2026-10-07",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2610.07791": {
+    "id": "arxiv:2610.07791",
+    "title": "Illusory Pattern Perception Drives Spurious Inference in Large Language Models",
+    "authors": [
+      "Peihua Mai",
+      "Zhuoyan Shao",
+      "Xinbao Qiao",
+      "Meng Zhang",
+      "Xinyue Zhou",
+      "Yan Pang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07791",
+    "abstract": "Illusory pattern perception is a well-documented human cognitive tendency to infer meaningful relationships in data that is actually random. Such a tendency, often described as \"connecting the dots\" where none exist, can result in systematic reasoning errors.",
+    "detected": "2026-10-07",
+    "topics": []
+  },
+  "arxiv:2610.07583": {
+    "id": "arxiv:2610.07583",
+    "title": "Mechanistic Interpretability of Atmospheric Rivers in GraphCast",
+    "authors": [
+      "Madelyn Mathai",
+      "Timothy B. Higgins",
+      "Kevin M. Grise",
+      "Chirag Agarwal",
+      "Antonios Mamalakis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07583",
+    "abstract": "While AI weather models now rival operational forecasts, how they represent the atmosphere internally remains an open question: feature attribution reveals which input patterns matter, not what the model computes or how it combines information internally. We train sparse autoencoders (SAEs) on GraphCast to uncover its…",
+    "detected": "2026-10-07",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.07532": {
+    "id": "arxiv:2610.07532",
+    "title": "Safeguarding LLMs via Model-Agnostic Latent Safety Signals from Dark Knowledge",
+    "authors": [
+      "Wonjun Lee",
+      "Kyungsik Yang",
+      "Gaeun Ji",
+      "Vaidehi Patil",
+      "Haon Park",
+      "Bumsub Ham",
+      "Mohit Bansal",
+      "Suhyun Kim"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07532",
+    "abstract": "LLMs have advanced rapidly, raising growing concerns about their safety. Recent work has proposed approaches to detect and defend against attacks including defenses at decoding stage that leverage models' hidden states.",
+    "detected": "2026-10-07",
+    "topics": []
+  },
+  "arxiv:2610.07476": {
+    "id": "arxiv:2610.07476",
+    "title": "Can Power Draw Constrain Covert Compute? Limits of Analogue Verification for AI Governance",
+    "authors": [
+      "Tom Kimpson",
+      "Mauricio Baker",
+      "Emlyn Graham"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07476",
+    "abstract": "Frontier AI treaties or agreements on limiting computation require external verification; an external auditor must be able to confirm how much computation actually ran and that parties are adhering to the agreement. Analogue, off-chip measurements such as power draw provide an information channel for verification.",
+    "detected": "2026-10-07",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2610.07389": {
+    "id": "arxiv:2610.07389",
+    "title": "Inference and learning in sparse autoencoders as natural gradient flow",
+    "authors": [
+      "Hadi Vafaii",
+      "Tejas Rao",
+      "David Chanin",
+      "Thomas Fel",
+      "Jacob L. Yates",
+      "Bruno Olshausen",
+      "David Klindt",
+      "Dileep George",
+      "Miguel Lázaro-Gredilla"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07389",
+    "abstract": "Sparse autoencoders are widely used to uncover interpretable features in neural networks, yet reliable recovery remains difficult when features overlap or activate infrequently. These challenges involve both inferring which features explain an input and learning the dictionary that represents them.",
+    "detected": "2026-10-07",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.07362": {
+    "id": "arxiv:2610.07362",
+    "title": "Dynamic Budget Allocation for LLM Evaluation under Hard Resource Constraints",
+    "authors": [
+      "Shai Feldman",
+      "Yaniv Romano"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07362",
+    "abstract": "We evaluate large language models (LLMs) in multi-turn interactions through their time-to-event: the number of interaction steps required to produce an event of interest, such as a successful jailbreak or agentic task completion. Under limited compute, interactions may be terminated before the event occurs, so that…",
+    "detected": "2026-10-07",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.07323": {
+    "id": "arxiv:2610.07323",
+    "title": "ATLAS-AL: Adaptive Trust-Region for Latent Adversarial Searches via Active Learning",
+    "authors": [
+      "Marsalis Gibson",
+      "Claire Tomlin",
+      "Shankar Sastry"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07323",
+    "abstract": "Security evaluation of learning-based systems requires more than just testing the system against a fixed collection of attacks. It requires adaptive mechanisms that can efficiently discover \\textit{sets} of inputs that induce model failure.",
+    "detected": "2026-10-07",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.07204": {
+    "id": "arxiv:2610.07204",
+    "title": "SPEAR: Five Principles for Interactive Human-Agent Alignment",
+    "authors": [
+      "Tao Long",
+      "Lydia B. Chilton"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07204",
+    "abstract": "Recent AI alignment work often frames alignment as a pre-deployment optimization problem: collect human feedback, learn preferences or principles, finetune the model, and deploy an aligned system. This framing has produced major progress, but it under-specifies what happens once AI systems act as agents on users'…",
+    "detected": "2026-10-07",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.07125": {
+    "id": "arxiv:2610.07125",
+    "title": "Jailbreaking Open-Weight LLMs via Random Embedding Perturbations",
+    "authors": [
+      "Abhinav Sudhakar Dubey",
+      "Scott Sirri",
+      "Vaggos Chatziafratis",
+      "C. Seshadhri"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07125",
+    "abstract": "While open-weight models have enjoyed steady progress in capabilities and wide adoption across multiple domains, their safety remains an important concern. One key feature is the ability to refuse or deflect harmful, malicious, or insensitive prompts.",
+    "detected": "2026-10-07",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.07023": {
+    "id": "arxiv:2610.07023",
+    "title": "Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment",
+    "authors": [
+      "Jinghao Pang",
+      "Jitai Hao",
+      "Qiang Huang",
+      "Zhaochun Ren",
+      "Jun Yu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07023",
+    "abstract": "Large Language Models (LLMs) have achieved remarkable capabilities but remain vulnerable to jailbreak attacks that elicit harmful or unsafe outputs. Existing safety alignment approaches, including Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF), often require substantial…",
+    "detected": "2026-10-07",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2610.07009": {
+    "id": "arxiv:2610.07009",
+    "title": "Which Image Property Carries the Jailbreak? A Controlled Dissection of Image-to-Text Jailbreaks",
+    "authors": [
+      "Boyuan Chen",
+      "Yehia Dawoud",
+      "Hailemariam Mersha",
+      "Minghao Shao",
+      "Siddharth Garg",
+      "Ramesh Karri",
+      "Muhammad Shafique"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07009",
+    "abstract": "Image-to-text jailbreaks place harmful intent in text, image content, or the relationship between them. We examine image-side factors across four published attack families on a 313-prompt StrongREJECT slice, using five multimodal models and an additional appendix evaluation of InternVL3.5-8B.",
+    "detected": "2026-10-07",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.07005": {
+    "id": "arxiv:2610.07005",
+    "title": "Where Does the Audio Jailbreak Live? A Controlled Frequency-Depth Audit of AdvWave-P on Qwen2-Audio",
+    "authors": [
+      "Boyuan Chen",
+      "Minseok Kim",
+      "Sohaila Abdulsattar",
+      "Minghao Shao",
+      "Siddharth Garg",
+      "Ramesh Karri",
+      "Muhammad Shafique"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.07005",
+    "abstract": "We audit frequency and decoder-depth claims for AdvWave-P, an additive audio jailbreak, on Qwen2-Audio. The protocol masks frequency components of the perturbation in the short-time Fourier transform (STFT) domain and measures attack success and audio-span representations.",
+    "detected": "2026-10-07",
+    "topics": [
+      "security"
+    ]
+  },
   "arxiv:2610.06824": {
     "id": "arxiv:2610.06824",
     "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",

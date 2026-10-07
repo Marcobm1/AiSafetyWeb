@@ -1,5 +1,239 @@
 [
   {
+    "id": "87df4c3445424ebd",
+    "url": "https://www.lesswrong.com/posts/CMWivoHeRNNErEykc/a-fascinating-case-of-an-llm-prompt-injecting-its-own-user",
+    "title": "A fascinating case of an LLM prompt-injecting its own user",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-07T01:02:50Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Epistemic status: sharing an interesting thing I've discovered and my opinion of it. AI use: research for additional context, grammar, and light phrasing.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "becausecurious"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5e14b41a64380172",
+    "url": "https://www.lesswrong.com/posts/kifFQuvu7yq6eHrb8/qualitative-impressions-from-creating-ai-honeypots-for-six",
+    "title": "Qualitative impressions from creating AI honeypots for six months",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-06T21:19:17Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "It is hard to design \"fair\" alignment evals. Modern evals require lots of QA and iteration.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a005fd9e8097d0b6",
+    "url": "https://arxiv.org/abs/2610.08740",
+    "title": "On the Computational Tractability of Robust Bandits",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T17:38:34Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Learning when the environment does not belong to the learner's hypothesis class is typically handled using agnostic learning guarantees. However, for anything beyond supervised learning, agnostic guarantees are difficult to come by.",
+    "topics": [],
+    "authors": [
+      "Vanessa Kosoy",
+      "Vinayak Pathak"
+    ],
+    "arxiv_id": "2610.08740",
+    "summary": null
+  },
+  {
+    "id": "7cf82ba973ef50b3",
+    "url": "https://arxiv.org/abs/2610.08678",
+    "title": "Secure Speculative Decoding for Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T16:59:37Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Speculative decoding accelerates inference for a large language model (LLM), referred to as the \\emph{target model}, by first using a smaller model, referred to as the \\emph{draft model}, to generate candidate tokens and then verifying them with the target model for acceptance or rejection. Prior studies primarily…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Yichi Zhang",
+      "Zhiqi Wang",
+      "Neil Gong",
+      "Yuchen Yang"
+    ],
+    "arxiv_id": "2610.08678",
+    "summary": null
+  },
+  {
+    "id": "f9ffaa5807623dbe",
+    "url": "https://www.lesswrong.com/posts/tLDcSELHCufEtuMgf/three-types-of-ai-risk-why-some-leftists-are-against-some-ai",
+    "title": "Three types of AI risk: why (some) leftists are against (some) AI regulations",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-06T16:43:01Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "You may have seen factions of the left being opposed to current attempts to regulate the AI industry, despite the fact that they clearly also want to stop AI. I think I can explain why we're talking past each other.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "sudo-nym"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2fcafb4177157dfc",
+    "url": "https://www.lesswrong.com/posts/bAGagjZAPgXEHmkAH/tasteval-measuring-the-experimental-research-taste-of-ai",
+    "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-06T16:02:35Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "📝 Tweet , 📄 Paper We introduce TasteVal, a benchmark that measures the experimental research taste of AI models on AI R&D tasks. We define research taste as the ability to pick interesting problems to solve, design experiments, and interpret experimental results.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Ollie J"
+    ],
+    "summary": null
+  },
+  {
+    "id": "47643dc2eca87363",
+    "url": "https://arxiv.org/abs/2610.08554",
+    "title": "Systemization of Knowledge (SoK): Human-Centered AI Safety for Youth",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T15:40:21Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "While HCI increasingly examines AI-safety for youth, the literature lacks a comprehensive view of what risks have been identified, how they are addressed, and whether proposed protections work in-practice. We systematically reviewed 100 empirical HCI studies involving children and youth interacting with or exposed to…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Pratyasha Saha",
+      "Yaman Yu",
+      "Yang Wang"
+    ],
+    "arxiv_id": "2610.08554",
+    "summary": null
+  },
+  {
+    "id": "979c73abbba49ed3",
+    "url": "https://arxiv.org/abs/2610.08552",
+    "title": "AnyBottle: A Recipe to Only Keep the Concepts You Really Need",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T15:40:06Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Concept bottleneck models (CBMs) make predictions inspectable and intervenable by routing them through human-interpretable concepts, but originally required concept annotations. Annotation-free variants remove this requirement, but typically use large concept vocabularies, static at both training and inference…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Wolfgang Stammer",
+      "Sukrut Rao",
+      "Hevra Petekkaya",
+      "David Steinmann",
+      "Bernt Schiele"
+    ],
+    "arxiv_id": "2610.08552",
+    "summary": null
+  },
+  {
+    "id": "27ea8695b8bbc575",
+    "url": "https://arxiv.org/abs/2610.08364",
+    "title": "Transect: Retaining Observability for Long-Horizon LLM Agent Evaluations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T13:52:15Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Frontier AI evaluations increasingly use open-ended, agentic, long-horizon tasks whose transcripts can span hundreds of pages of outputs and actions from complex multi-agent networks. The observability envelop-the range of what evaluators can reliably infer about an agent's behaviours-is therefore narrowing.",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Toby D. Pilditch",
+      "Konstantinos Voudouris",
+      "Alexandra Abbas",
+      "Cozmin Ududec"
+    ],
+    "arxiv_id": "2610.08364",
+    "summary": null
+  },
+  {
+    "id": "d9c28aa7e7a67a3c",
+    "url": "https://arxiv.org/abs/2610.07935",
+    "title": "SIGMA: Self-Improving Alignment Generalization from a Model Spec",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T08:09:56Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "LLM agents are increasingly capable of executing complex tasks and of recursively improving themselves on easy-to-verify objectives such as software engineering and mathematics. Since alignment is much harder to verify, this creates a growing risk of capabilities increasing without appropriate safety alignment…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Jingyu Zhang",
+      "Shruti Palaskar",
+      "Daniel Khashabi",
+      "Benjamin Van Durme",
+      "Leon A. Gatys",
+      "Joseph Yitan Cheng"
+    ],
+    "arxiv_id": "2610.07935",
+    "summary": null
+  },
+  {
+    "id": "fbdc3f662e33c09b",
+    "url": "https://metr.org/blog/2026-10-06-ai-systems-could-cover-up-misbehavior",
+    "title": "AI systems could cover up misbehavior",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-10-06T07:00:00Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Recent AI misalignment incidents have shown AI systems capably pursuing goals their human supervisors would not approve of, like hacking other companies. Fortunately, current AIs still seem relatively bad at concealing their misbehavior from human reviewers: these recent misalignment incidents have left significant…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8fca540575737812",
+    "url": "https://arxiv.org/abs/2610.07791",
+    "title": "Illusory Pattern Perception Drives Spurious Inference in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T05:37:12Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Illusory pattern perception is a well-documented human cognitive tendency to infer meaningful relationships in data that is actually random. Such a tendency, often described as \"connecting the dots\" where none exist, can result in systematic reasoning errors.",
+    "topics": [],
+    "authors": [
+      "Peihua Mai",
+      "Zhuoyan Shao",
+      "Xinbao Qiao",
+      "Meng Zhang",
+      "Xinyue Zhou",
+      "Yan Pang"
+    ],
+    "arxiv_id": "2610.07791",
+    "summary": null
+  },
+  {
     "id": "649ede13bae62ecf",
     "url": "https://www.lesswrong.com/posts/7wrzfaiCq3u8xkY5G/self-modeling-interventions-modulate-emergent-misalignment",
     "title": "Self-Modeling Interventions Modulate Emergent Misalignment",
@@ -14,6 +248,51 @@
     "authors": [
       "Arush"
     ],
+    "summary": null
+  },
+  {
+    "id": "5ebfcc5420a85cbc",
+    "url": "https://arxiv.org/abs/2610.07583",
+    "title": "Mechanistic Interpretability of Atmospheric Rivers in GraphCast",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T01:22:10Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "While AI weather models now rival operational forecasts, how they represent the atmosphere internally remains an open question: feature attribution reveals which input patterns matter, not what the model computes or how it combines information internally. We train sparse autoencoders (SAEs) on GraphCast to uncover its…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Madelyn Mathai",
+      "Timothy B. Higgins",
+      "Kevin M. Grise",
+      "Chirag Agarwal",
+      "Antonios Mamalakis"
+    ],
+    "arxiv_id": "2610.07583",
+    "summary": null
+  },
+  {
+    "id": "aedad04b28ee898f",
+    "url": "https://arxiv.org/abs/2610.07532",
+    "title": "Safeguarding LLMs via Model-Agnostic Latent Safety Signals from Dark Knowledge",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T23:59:28Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "LLMs have advanced rapidly, raising growing concerns about their safety. Recent work has proposed approaches to detect and defend against attacks including defenses at decoding stage that leverage models' hidden states.",
+    "topics": [],
+    "authors": [
+      "Wonjun Lee",
+      "Kyungsik Yang",
+      "Gaeun Ji",
+      "Vaidehi Patil",
+      "Haon Park",
+      "Bumsub Ham",
+      "Mohit Bansal",
+      "Suhyun Kim"
+    ],
+    "arxiv_id": "2610.07532",
     "summary": null
   },
   {
@@ -35,6 +314,26 @@
     "summary": null
   },
   {
+    "id": "c16cd2aa521dd08b",
+    "url": "https://arxiv.org/abs/2610.07476",
+    "title": "Can Power Draw Constrain Covert Compute? Limits of Analogue Verification for AI Governance",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T22:40:45Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Frontier AI treaties or agreements on limiting computation require external verification; an external auditor must be able to confirm how much computation actually ran and that parties are adhering to the agreement. Analogue, off-chip measurements such as power draw provide an information channel for verification.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Tom Kimpson",
+      "Mauricio Baker",
+      "Emlyn Graham"
+    ],
+    "arxiv_id": "2610.07476",
+    "summary": null
+  },
+  {
     "id": "ec036f07ea2665c5",
     "url": "https://blog.redwoodresearch.org/p/frontier-models-state-different-decision",
     "title": "Frontier models state different decision theory preferences depending on who’s asking",
@@ -47,6 +346,52 @@
     "authors": [
       "Alex Kastner"
     ],
+    "summary": null
+  },
+  {
+    "id": "ebbb419f3cf67805",
+    "url": "https://arxiv.org/abs/2610.07389",
+    "title": "Inference and learning in sparse autoencoders as natural gradient flow",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T21:03:21Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Sparse autoencoders are widely used to uncover interpretable features in neural networks, yet reliable recovery remains difficult when features overlap or activate infrequently. These challenges involve both inferring which features explain an input and learning the dictionary that represents them.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Hadi Vafaii",
+      "Tejas Rao",
+      "David Chanin",
+      "Thomas Fel",
+      "Jacob L. Yates",
+      "Bruno Olshausen",
+      "David Klindt",
+      "Dileep George",
+      "Miguel Lázaro-Gredilla"
+    ],
+    "arxiv_id": "2610.07389",
+    "summary": null
+  },
+  {
+    "id": "3ccf3d011cb6d553",
+    "url": "https://arxiv.org/abs/2610.07362",
+    "title": "Dynamic Budget Allocation for LLM Evaluation under Hard Resource Constraints",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T20:31:22Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "We evaluate large language models (LLMs) in multi-turn interactions through their time-to-event: the number of interaction steps required to produce an event of interest, such as a successful jailbreak or agentic task completion. Under limited compute, interactions may be terminated before the event occurs, so that…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Shai Feldman",
+      "Yaniv Romano"
+    ],
+    "arxiv_id": "2610.07362",
     "summary": null
   },
   {
@@ -68,6 +413,46 @@
     "summary": null
   },
   {
+    "id": "f7dbceb71395fe6f",
+    "url": "https://arxiv.org/abs/2610.07323",
+    "title": "ATLAS-AL: Adaptive Trust-Region for Latent Adversarial Searches via Active Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T19:56:17Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Security evaluation of learning-based systems requires more than just testing the system against a fixed collection of attacks. It requires adaptive mechanisms that can efficiently discover \\textit{sets} of inputs that induce model failure.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Marsalis Gibson",
+      "Claire Tomlin",
+      "Shankar Sastry"
+    ],
+    "arxiv_id": "2610.07323",
+    "summary": null
+  },
+  {
+    "id": "e1fb01c65d8b5c30",
+    "url": "https://arxiv.org/abs/2610.07204",
+    "title": "SPEAR: Five Principles for Interactive Human-Agent Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T18:18:40Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Recent AI alignment work often frames alignment as a pre-deployment optimization problem: collect human feedback, learn preferences or principles, finetune the model, and deploy an aligned system. This framing has produced major progress, but it under-specifies what happens once AI systems act as agents on users'…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Tao Long",
+      "Lydia B. Chilton"
+    ],
+    "arxiv_id": "2610.07204",
+    "summary": null
+  },
+  {
     "id": "969c62c53b98c091",
     "url": "https://arxiv.org/abs/2610.06824",
     "title": "TasteVal: Measuring the Experimental Research Taste of AI Systems Against Human Experts",
@@ -84,6 +469,28 @@
       "Dane Sherburn"
     ],
     "arxiv_id": "2610.06824",
+    "summary": null
+  },
+  {
+    "id": "653b9dfeeaf37bed",
+    "url": "https://arxiv.org/abs/2610.07125",
+    "title": "Jailbreaking Open-Weight LLMs via Random Embedding Perturbations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-05T17:50:10Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "While open-weight models have enjoyed steady progress in capabilities and wide adoption across multiple domains, their safety remains an important concern. One key feature is the ability to refuse or deflect harmful, malicious, or insensitive prompts.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Abhinav Sudhakar Dubey",
+      "Scott Sirri",
+      "Vaggos Chatziafratis",
+      "C. Seshadhri"
+    ],
+    "arxiv_id": "2610.07125",
     "summary": null
   },
   {
@@ -326,6 +733,29 @@
     "summary": null
   },
   {
+    "id": "4bdab949b9c29330",
+    "url": "https://arxiv.org/abs/2610.07023",
+    "title": "Beyond Refusal Patterns: Safe-Role Internalization for Robust and Generalizable LLM Safety Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T15:50:42Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Large Language Models (LLMs) have achieved remarkable capabilities but remain vulnerable to jailbreak attacks that elicit harmful or unsafe outputs. Existing safety alignment approaches, including Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF), often require substantial…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Jinghao Pang",
+      "Jitai Hao",
+      "Qiang Huang",
+      "Zhaochun Ren",
+      "Jun Yu"
+    ],
+    "arxiv_id": "2610.07023",
+    "summary": null
+  },
+  {
     "id": "b1ee01cfa5edc4bd",
     "url": "https://arxiv.org/abs/2610.05308",
     "title": "RubricArmor: Adversarial Evolution Improves LLM-Based Rubric Generation",
@@ -382,6 +812,55 @@
       "Chaowei Xiao"
     ],
     "arxiv_id": "2610.05282",
+    "summary": null
+  },
+  {
+    "id": "6fedf1364b2b8ea2",
+    "url": "https://arxiv.org/abs/2610.07009",
+    "title": "Which Image Property Carries the Jailbreak? A Controlled Dissection of Image-to-Text Jailbreaks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T13:23:31Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "Image-to-text jailbreaks place harmful intent in text, image content, or the relationship between them. We examine image-side factors across four published attack families on a 313-prompt StrongREJECT slice, using five multimodal models and an additional appendix evaluation of InternVL3.5-8B.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Boyuan Chen",
+      "Yehia Dawoud",
+      "Hailemariam Mersha",
+      "Minghao Shao",
+      "Siddharth Garg",
+      "Ramesh Karri",
+      "Muhammad Shafique"
+    ],
+    "arxiv_id": "2610.07009",
+    "summary": null
+  },
+  {
+    "id": "ba0b1416910be00f",
+    "url": "https://arxiv.org/abs/2610.07005",
+    "title": "Where Does the Audio Jailbreak Live? A Controlled Frequency-Depth Audit of AdvWave-P on Qwen2-Audio",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-04T11:28:03Z",
+    "fetched_at": "2026-10-07T12:24:57Z",
+    "excerpt": "We audit frequency and decoder-depth claims for AdvWave-P, an additive audio jailbreak, on Qwen2-Audio. The protocol masks frequency components of the perturbation in the short-time Fourier transform (STFT) domain and measures attack success and audio-span representations.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Boyuan Chen",
+      "Minseok Kim",
+      "Sohaila Abdulsattar",
+      "Minghao Shao",
+      "Siddharth Garg",
+      "Ramesh Karri",
+      "Muhammad Shafique"
+    ],
+    "arxiv_id": "2610.07005",
     "summary": null
   },
   {

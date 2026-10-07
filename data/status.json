@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-10-06T12:31:45Z",
-  "duration_seconds": 7.7,
-  "new_entries": 32,
+  "last_run": "2026-10-07T12:24:57Z",
+  "duration_seconds": 8.4,
+  "new_entries": 23,
   "sources": [
     {
       "id": "alignment-forum",
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 6,
-      "new": 3,
+      "kept": 7,
+      "new": 4,
       "error": null
     },
     {
@@ -52,9 +52,9 @@
       "id": "metr",
       "name": "METR",
       "status": "ok",
-      "items_in_feed": 103,
-      "kept": 2,
-      "new": 0,
+      "items_in_feed": 104,
+      "kept": 3,
+      "new": 1,
       "error": null
     },
     {
@@ -62,8 +62,8 @@
       "name": "Redwood Research",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 5,
-      "new": 1,
+      "kept": 4,
+      "new": 0,
       "error": null
     },
     {
@@ -106,8 +106,8 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1247,
-      "kept": 7,
+      "items_in_feed": 1251,
+      "kept": 5,
       "new": 0,
       "error": null
     },
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 28,
+      "new": 18,
       "error": null
     }
   ],
   "candidates": {
-    "added": 28,
+    "added": 18,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 257
+    "total": 275
   }
 }
