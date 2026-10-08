@@ -1,4 +1,284 @@
 {
+  "arxiv:2610.10405": {
+    "id": "arxiv:2610.10405",
+    "title": "Reasoning-Token Spikes Under Prompted Untruthful Responding in Large Language Models",
+    "authors": [
+      "Maverick Morales",
+      "Tomáš Dominik",
+      "Vermut Gao",
+      "Katrina Shirey",
+      "Paulius Rimkevičius",
+      "Aaron Schurger",
+      "Uri Maoz"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10405",
+    "abstract": "Monitoring the chain-of-thought of reasoning artificial intelligence (AI) models remains a key approach to detecting deception and other forms of misbehavior in such models. However, semantic chain-of-thought monitoring depends on reasoning traces being legible and sufficiently faithful to the underlying computations…",
+    "detected": "2026-10-08",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.10301": {
+    "id": "arxiv:2610.10301",
+    "title": "Revisiting Explainable AI through Model-Independent Concept Dictionaries",
+    "authors": [
+      "Thomas Schnake",
+      "Doreen Schöppenthau",
+      "Alexander Meyer",
+      "Jacques Corbeil",
+      "Klaus-Robert Müller",
+      "Grégoire Montavon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10301",
+    "abstract": "Modern applications of AI rely on increasingly complex models. Explainable AI (XAI) has emerged as a set of techniques aimed at improving model transparency.",
+    "detected": "2026-10-08",
+    "topics": []
+  },
+  "arxiv:2610.10285": {
+    "id": "arxiv:2610.10285",
+    "title": "AI Safety Considerations for Agents With Limited Time to Act",
+    "authors": [
+      "Leo Zeitler",
+      "Jack Richings",
+      "Victoria Nockles"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10285",
+    "abstract": "In the wake of the increasingly public discussion about AI alignment, recent work has tried to propose specific AI architectures that behave safely. However, the proposed arguments that seemingly demonstrate proved alignment mostly neglect the environment the agent needs to act in.",
+    "detected": "2026-10-08",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.10276": {
+    "id": "arxiv:2610.10276",
+    "title": "PatchBench: Measuring Collateral Damage in Activation Patching",
+    "authors": [
+      "Alexi Canesse",
+      "Mathis Le Bail",
+      "Maël Jenny",
+      "Clément Elliker",
+      "Mahammed El Sharkawy",
+      "Sonia Vanier"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10276",
+    "abstract": "An LLM safety patch can pass a benchmark while still being a poor repair. This risk is especially acute for jailbreak repairs, where the goal is to correct a specific unsafe behaviour without changing unrelated behaviours.",
+    "detected": "2026-10-08",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.10064": {
+    "id": "arxiv:2610.10064",
+    "title": "Comprehension Audits to Mitigate Risks from Automated AI Research",
+    "authors": [
+      "Ronald J. Bodkin",
+      "Bahrad A. Sokhansanj",
+      "Gillian K. Hadfield"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10064",
+    "abstract": "AI is already writing a majority of code for frontier AI labs. This creates a safety risk if there is insufficient human oversight.",
+    "detected": "2026-10-08",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2610.09973": {
+    "id": "arxiv:2610.09973",
+    "title": "From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents",
+    "authors": [
+      "Juanyang Xu",
+      "Zheng Wang",
+      "Xingyu Zhao",
+      "Siddartha Khastgir",
+      "Andi Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09973",
+    "abstract": "When the harmfulness of an LLM agent's output can be quantified, a natural jailbreaking objective is to maximize expected harmfulness over admissible input modifications. An alternative approach constructs or selects harmful target outputs and modifies the input to increase their likelihood.",
+    "detected": "2026-10-08",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.09906": {
+    "id": "arxiv:2610.09906",
+    "title": "Constrained-Action AI Remediation for SIEM/XDR via a NeMo-Guardrails Proxy",
+    "authors": [
+      "Georgios Koutidis",
+      "Nikolaos Kekatos",
+      "Tom Nianios",
+      "Alexios Lekidis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09906",
+    "abstract": "Security Operations Centers (SOCs) for information technology and operational technology share one incident-response problem: a flood of correlated alerts and too few analysts. Large Language Models (LLMs) are increasingly proposed as reasoning engines that triage alerts and, in autonomous deployments, issue commands…",
+    "detected": "2026-10-08",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.09892": {
+    "id": "arxiv:2610.09892",
+    "title": "Defensive Sufficiency in a Stackelberg Model of AI Security",
+    "authors": [
+      "Subhabrata Majumdar",
+      "Rajlakshmi Chavan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09892",
+    "abstract": "Feedback from automated testing, human red teaming, and incident response can strengthen an AI system's defenses when discovered failures lead to effective repairs. We study when this feedback process provides sufficient protection and when investing in it is economically worthwhile.",
+    "detected": "2026-10-08",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.09891": {
+    "id": "arxiv:2610.09891",
+    "title": "A Scoping Review and Experimental Study on Reinforcement Learning from Human Feedback for Human-Robot Collaboration",
+    "authors": [
+      "Alexandra Coroiu",
+      "Andrea Vogt",
+      "Viktor Werbilo",
+      "Andreas Poppele",
+      "Johann Christensen",
+      "Sven Hallerbach"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09891",
+    "abstract": "Human-Robot Collaboration (HRC) can facilitate mass customisation in Industry 4.0, with Reinforcement Learning from Human Feedback (RLHF) representing a promising approach for developing safe AI-based robots. Practical challenges remain regarding safety during AI development, human feedback quality, and bidirectional…",
+    "detected": "2026-10-08",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.09703": {
+    "id": "arxiv:2610.09703",
+    "title": "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs",
+    "authors": [
+      "Shuailong Wang",
+      "Xinyu Lyu",
+      "Shengming Yuan",
+      "Jingkuan Song",
+      "Heng Tao Shen",
+      "Lianli Gao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09703",
+    "abstract": "Token-Pruning accelerates Vision-Language Models by removing redundant visual tokens, yet its safety implications remain underexplored. In this work, we present the first comprehensive safety evaluation of Token-Pruning mechanisms and find that: most pruning strategies significantly degrade safety as pruning ratios…",
+    "detected": "2026-10-08",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.09496": {
+    "id": "arxiv:2610.09496",
+    "title": "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
+    "authors": [
+      "Jiho Lee",
+      "Jeongeun Park",
+      "Heayoun Choi",
+      "Taekyung Kim",
+      "Eunwoo Kim"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09496",
+    "abstract": "Vision-Language-Action (VLA) models have shown strong generalization in robotic manipulation by leveraging rich representations from pretrained vision-language models. However, their deployment in real-world environments remains limited by recurring unreliable behaviors.",
+    "detected": "2026-10-08",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.09384": {
+    "id": "arxiv:2610.09384",
+    "title": "The Persona Hierarchy Model: Understanding Contextual Generalization in Fine-Tuning LLMs",
+    "authors": [
+      "Jiachen Zhao",
+      "Zhengxuan Wu",
+      "David Bau",
+      "Weiyan Shi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09384",
+    "abstract": "Language models are routinely fine-tuned under a fixed context, such as a generic system prompt, persona or domain-specific instruction, yet the learned behavior sometimes stays confined to that context and sometimes broadly generalizes to unseen contexts. We propose the Persona Hierarchy Model to explain this: a…",
+    "detected": "2026-10-08",
+    "topics": []
+  },
+  "arxiv:2610.09240": {
+    "id": "arxiv:2610.09240",
+    "title": "Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution",
+    "authors": [
+      "Wanjing Han",
+      "Levi Taiji Li",
+      "Mu Zhang",
+      "Yue Jiang",
+      "Guanhong Tao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09240",
+    "abstract": "Modern web agents built on large vision-language models process webpages, select relevant UI elements, and translate model outputs into browser actions. Existing visual red-teaming approaches use adversarial visual content to manipulate this process.",
+    "detected": "2026-10-08",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.09159": {
+    "id": "arxiv:2610.09159",
+    "title": "SpecGuard: Proving a Task Is Broken Before the Agent Cheats",
+    "authors": [
+      "Param Biyani",
+      "Krishnamurthy Dvijotham"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09159",
+    "abstract": "As autonomous coding agents get increasingly deployed, the risk that accidental or adversarially injected misspecifications in tasks lead to dangerous agent behavior is critical to address. Prior work has shown that agents given such tasks rarely flag the conflict and instead cheat, editing tests or hard-coding…",
+    "detected": "2026-10-08",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.09087": {
+    "id": "arxiv:2610.09087",
+    "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+    "authors": [
+      "Tobias Braun",
+      "Nils Loose",
+      "Alexander Herzog",
+      "Virginia Ceccatelli",
+      "Marcus Rohrbach",
+      "Thomas Eisenbarth",
+      "Lorenzo Cavallaro"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09087",
+    "abstract": "Large language models are informing decisions with ever-higher stakes. As the consequences of their errors grow, a central question becomes harder to ignore: how much can we trust an individual answer?",
+    "detected": "2026-10-08",
+    "topics": []
+  },
+  "arxiv:2610.09043": {
+    "id": "arxiv:2610.09043",
+    "title": "Careful Judge: Safe and Efficient Human-AI Collaborative Decision Making",
+    "authors": [
+      "Chenyu Zhang",
+      "Rachel Luo",
+      "Boyi Li",
+      "Anjali Parashar",
+      "Marco Pavone",
+      "Apoorva Sharma"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.09043",
+    "abstract": "In human-AI collaborative decision making, human review can prevent unsafe AI decisions, but each human judgment is costly. Treating human intervention after AI abstention as a one-off fallback misses the opportunity to improve future AI decisions for greater automation, yet AI adaptively learning from selectively…",
+    "detected": "2026-10-08",
+    "topics": []
+  },
   "arxiv:2610.08740": {
     "id": "arxiv:2610.08740",
     "title": "On the Computational Tractability of Robust Bandits",

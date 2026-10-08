@@ -1,5 +1,367 @@
 [
   {
+    "id": "47761f38b43a76e6",
+    "url": "https://www.lesswrong.com/posts/o8roRrdisBAjngHJN/a-summary-of-a-viral-chinese-essay-on-what-a-deepseek-kernel",
+    "title": "A summary of a viral Chinese essay on what a DeepSeek kernel engineer's opinion on automating his own job",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-08T05:57:18Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "A summary of a Chinese essay, with a few short translated excerpts. All views below are the author's; quotes are my translations.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Skdk"
+    ],
+    "summary": null
+  },
+  {
+    "id": "cdf93d8c75b20725",
+    "url": "https://www.lesswrong.com/posts/qFa5qpw9bJiQMpJks/the-curve-bends-you",
+    "title": "The Curve Bends You",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-08T01:19:48Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "The plan is no plan. That is not the worst possible plan.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "accb3bfe8f587e38",
+    "url": "https://www.lesswrong.com/posts/neHiCSdL4tJDg7Hrm/are-openai-s-math-results-creative-in-an-important-way",
+    "title": "Are OpenAI's math results \"creative\" in an important way?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-07T22:22:39Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Many people expect the AI paradigm to approximately AGI complete, and expect it to smoothly scale to AI that can do innovative science. i.e. the kind of science you'd need to do to develop a plague from scratch that actually kills all humans, with very limited opportunity to experiment. Or, the kind of science you'd…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Raemon"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d04bf5af49268c25",
+    "url": "https://arxiv.org/abs/2610.10405",
+    "title": "Reasoning-Token Spikes Under Prompted Untruthful Responding in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T16:53:11Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Monitoring the chain-of-thought of reasoning artificial intelligence (AI) models remains a key approach to detecting deception and other forms of misbehavior in such models. However, semantic chain-of-thought monitoring depends on reasoning traces being legible and sufficiently faithful to the underlying computations…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Maverick Morales",
+      "Tomáš Dominik",
+      "Vermut Gao",
+      "Katrina Shirey",
+      "Paulius Rimkevičius",
+      "Aaron Schurger",
+      "Uri Maoz"
+    ],
+    "arxiv_id": "2610.10405",
+    "summary": null
+  },
+  {
+    "id": "a6f5cd0518175f58",
+    "url": "https://arxiv.org/abs/2610.10301",
+    "title": "Revisiting Explainable AI through Model-Independent Concept Dictionaries",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T15:56:15Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Modern applications of AI rely on increasingly complex models. Explainable AI (XAI) has emerged as a set of techniques aimed at improving model transparency.",
+    "topics": [],
+    "authors": [
+      "Thomas Schnake",
+      "Doreen Schöppenthau",
+      "Alexander Meyer",
+      "Jacques Corbeil",
+      "Klaus-Robert Müller",
+      "Grégoire Montavon"
+    ],
+    "arxiv_id": "2610.10301",
+    "summary": null
+  },
+  {
+    "id": "a8a482ac90a01bd8",
+    "url": "https://arxiv.org/abs/2610.10285",
+    "title": "AI Safety Considerations for Agents With Limited Time to Act",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T15:49:06Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "In the wake of the increasingly public discussion about AI alignment, recent work has tried to propose specific AI architectures that behave safely. However, the proposed arguments that seemingly demonstrate proved alignment mostly neglect the environment the agent needs to act in.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Leo Zeitler",
+      "Jack Richings",
+      "Victoria Nockles"
+    ],
+    "arxiv_id": "2610.10285",
+    "summary": null
+  },
+  {
+    "id": "5894b61d06ac1269",
+    "url": "https://arxiv.org/abs/2610.10276",
+    "title": "PatchBench: Measuring Collateral Damage in Activation Patching",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T15:43:28Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "An LLM safety patch can pass a benchmark while still being a poor repair. This risk is especially acute for jailbreak repairs, where the goal is to correct a specific unsafe behaviour without changing unrelated behaviours.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Alexi Canesse",
+      "Mathis Le Bail",
+      "Maël Jenny",
+      "Clément Elliker",
+      "Mahammed El Sharkawy",
+      "Sonia Vanier"
+    ],
+    "arxiv_id": "2610.10276",
+    "summary": null
+  },
+  {
+    "id": "14e0b08baae3b34e",
+    "url": "https://www.lesswrong.com/posts/QW2kPrAyZQvRtBXHG/benchmarking-jev-against-no-cot-llms",
+    "title": "Benchmarking Jev against no-CoT LLMs",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-07T14:33:24Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "TL;DR. We ran Jev 1.13 — TypeSafe's non-autoregressive model, which answers questions with probabilities and cannot emit text, on the ThinkFast no-CoT suite and Neel Nanda’s NCRI .",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Dewi Gould"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5db2f77770b82ea3",
+    "url": "https://www.lesswrong.com/posts/uvWhi8FrMD3bo7YRY/why-did-we-get-warning-shots",
+    "title": "Why did we get warning shots?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-07T13:35:28Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Cross-posted from https://padastra.substack.com/p/why-did-we-get-warning-shots?r=n2jpq&utm_campaign=post&utm_medium=web I come from outside the EA / rationalist / LessWrong community. I would strongly prefer for AI to be a normal positive technology and to dismiss AI X-risk as a sci-fi scenario created by smart…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "p(mike)"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e1117d2a58ddb80c",
+    "url": "https://arxiv.org/abs/2610.10064",
+    "title": "Comprehension Audits to Mitigate Risks from Automated AI Research",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T13:30:47Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "AI is already writing a majority of code for frontier AI labs. This creates a safety risk if there is insufficient human oversight.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Ronald J. Bodkin",
+      "Bahrad A. Sokhansanj",
+      "Gillian K. Hadfield"
+    ],
+    "arxiv_id": "2610.10064",
+    "summary": null
+  },
+  {
+    "id": "695dc35b704d893d",
+    "url": "https://arxiv.org/abs/2610.09973",
+    "title": "From Expected Harmfulness to Likelihood: A Probabilistic Reformulation of Jailbreaking LLM Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T12:40:20Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "When the harmfulness of an LLM agent's output can be quantified, a natural jailbreaking objective is to maximize expected harmfulness over admissible input modifications. An alternative approach constructs or selects harmful target outputs and modifies the input to increase their likelihood.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Juanyang Xu",
+      "Zheng Wang",
+      "Xingyu Zhao",
+      "Siddartha Khastgir",
+      "Andi Zhang"
+    ],
+    "arxiv_id": "2610.09973",
+    "summary": null
+  },
+  {
+    "id": "63ed12021b409020",
+    "url": "https://www.lesswrong.com/posts/E4Jpmo3igPnGnXtL4/an-overview-of-frontier-ai-company-monitoring-practices-in",
+    "title": "An overview of frontier AI company monitoring practices in mid 2026",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-07T12:40:18Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "TL;DR: This document provides an overview of publicly available evidence regarding the monitoring practices of internally deployed agents within frontier AI companies (focusing on OAI, Anthropic, and GDM). [1] This is intended as a reference for factual claims about monitoring practices.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Francis Rhys Ward"
+    ],
+    "summary": null
+  },
+  {
+    "id": "142ff44d477b6318",
+    "url": "https://arxiv.org/abs/2610.09906",
+    "title": "Constrained-Action AI Remediation for SIEM/XDR via a NeMo-Guardrails Proxy",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T12:00:51Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Security Operations Centers (SOCs) for information technology and operational technology share one incident-response problem: a flood of correlated alerts and too few analysts. Large Language Models (LLMs) are increasingly proposed as reasoning engines that triage alerts and, in autonomous deployments, issue commands…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Georgios Koutidis",
+      "Nikolaos Kekatos",
+      "Tom Nianios",
+      "Alexios Lekidis"
+    ],
+    "arxiv_id": "2610.09906",
+    "summary": null
+  },
+  {
+    "id": "5f09e33ab2b82bc9",
+    "url": "https://arxiv.org/abs/2610.09892",
+    "title": "Defensive Sufficiency in a Stackelberg Model of AI Security",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T11:51:56Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Feedback from automated testing, human red teaming, and incident response can strengthen an AI system's defenses when discovered failures lead to effective repairs. We study when this feedback process provides sufficient protection and when investing in it is economically worthwhile.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Subhabrata Majumdar",
+      "Rajlakshmi Chavan"
+    ],
+    "arxiv_id": "2610.09892",
+    "summary": null
+  },
+  {
+    "id": "911809734a61d68f",
+    "url": "https://arxiv.org/abs/2610.09891",
+    "title": "A Scoping Review and Experimental Study on Reinforcement Learning from Human Feedback for Human-Robot Collaboration",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T11:51:54Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Human-Robot Collaboration (HRC) can facilitate mass customisation in Industry 4.0, with Reinforcement Learning from Human Feedback (RLHF) representing a promising approach for developing safe AI-based robots. Practical challenges remain regarding safety during AI development, human feedback quality, and bidirectional…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Alexandra Coroiu",
+      "Andrea Vogt",
+      "Viktor Werbilo",
+      "Andreas Poppele",
+      "Johann Christensen",
+      "Sven Hallerbach"
+    ],
+    "arxiv_id": "2610.09891",
+    "summary": null
+  },
+  {
+    "id": "5eb373401e65003e",
+    "url": "https://arxiv.org/abs/2610.09703",
+    "title": "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T09:01:09Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Token-Pruning accelerates Vision-Language Models by removing redundant visual tokens, yet its safety implications remain underexplored. In this work, we present the first comprehensive safety evaluation of Token-Pruning mechanisms and find that: most pruning strategies significantly degrade safety as pruning ratios…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Shuailong Wang",
+      "Xinyu Lyu",
+      "Shengming Yuan",
+      "Jingkuan Song",
+      "Heng Tao Shen",
+      "Lianli Gao"
+    ],
+    "arxiv_id": "2610.09703",
+    "summary": null
+  },
+  {
+    "id": "80a9d9c09c32f02e",
+    "url": "https://arxiv.org/abs/2610.09496",
+    "title": "Sparse Feature Policy Unlearning Mitigates State Hallucination in Vision-Language-Action Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T05:52:02Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Vision-Language-Action (VLA) models have shown strong generalization in robotic manipulation by leveraging rich representations from pretrained vision-language models. However, their deployment in real-world environments remains limited by recurring unreliable behaviors.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Jiho Lee",
+      "Jeongeun Park",
+      "Heayoun Choi",
+      "Taekyung Kim",
+      "Eunwoo Kim"
+    ],
+    "arxiv_id": "2610.09496",
+    "summary": null
+  },
+  {
+    "id": "c8b5e309bb3290f1",
+    "url": "https://arxiv.org/abs/2610.09384",
+    "title": "The Persona Hierarchy Model: Understanding Contextual Generalization in Fine-Tuning LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T03:40:44Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Language models are routinely fine-tuned under a fixed context, such as a generic system prompt, persona or domain-specific instruction, yet the learned behavior sometimes stays confined to that context and sometimes broadly generalizes to unseen contexts. We propose the Persona Hierarchy Model to explain this: a…",
+    "topics": [],
+    "authors": [
+      "Jiachen Zhao",
+      "Zhengxuan Wu",
+      "David Bau",
+      "Weiyan Shi"
+    ],
+    "arxiv_id": "2610.09384",
+    "summary": null
+  },
+  {
     "id": "87df4c3445424ebd",
     "url": "https://www.lesswrong.com/posts/CMWivoHeRNNErEykc/a-fascinating-case-of-an-llm-prompt-injecting-its-own-user",
     "title": "A fascinating case of an LLM prompt-injecting its own user",
@@ -18,6 +380,48 @@
     "summary": null
   },
   {
+    "id": "b699d5fcfd98ec33",
+    "url": "https://arxiv.org/abs/2610.09240",
+    "title": "Adversarial Images Hijack Web Agents from Visual Grounding to Browser Execution",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T00:05:53Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Modern web agents built on large vision-language models process webpages, select relevant UI elements, and translate model outputs into browser actions. Existing visual red-teaming approaches use adversarial visual content to manipulate this process.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Wanjing Han",
+      "Levi Taiji Li",
+      "Mu Zhang",
+      "Yue Jiang",
+      "Guanhong Tao"
+    ],
+    "arxiv_id": "2610.09240",
+    "summary": null
+  },
+  {
+    "id": "be060c571582c734",
+    "url": "https://arxiv.org/abs/2610.09159",
+    "title": "SpecGuard: Proving a Task Is Broken Before the Agent Cheats",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T22:00:49Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "As autonomous coding agents get increasingly deployed, the risk that accidental or adversarially injected misspecifications in tasks lead to dangerous agent behavior is critical to address. Prior work has shown that agents given such tasks rarely flag the conflict and instead cheat, editing tests or hard-coding…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Param Biyani",
+      "Krishnamurthy Dvijotham"
+    ],
+    "arxiv_id": "2610.09159",
+    "summary": null
+  },
+  {
     "id": "5e14b41a64380172",
     "url": "https://www.lesswrong.com/posts/kifFQuvu7yq6eHrb8/qualitative-impressions-from-creating-ai-honeypots-for-six",
     "title": "Qualitative impressions from creating AI honeypots for six months",
@@ -33,6 +437,49 @@
     "authors": [
       "Dean Valentine"
     ],
+    "summary": null
+  },
+  {
+    "id": "240abd08083215c2",
+    "url": "https://arxiv.org/abs/2610.09087",
+    "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T20:40:29Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "Large language models are informing decisions with ever-higher stakes. As the consequences of their errors grow, a central question becomes harder to ignore: how much can we trust an individual answer?",
+    "topics": [],
+    "authors": [
+      "Tobias Braun",
+      "Nils Loose",
+      "Alexander Herzog",
+      "Virginia Ceccatelli",
+      "Marcus Rohrbach",
+      "Thomas Eisenbarth",
+      "Lorenzo Cavallaro"
+    ],
+    "arxiv_id": "2610.09087",
+    "summary": null
+  },
+  {
+    "id": "328bd7c938879932",
+    "url": "https://arxiv.org/abs/2610.09043",
+    "title": "Careful Judge: Safe and Efficient Human-AI Collaborative Decision Making",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-06T19:44:15Z",
+    "fetched_at": "2026-10-08T12:34:23Z",
+    "excerpt": "In human-AI collaborative decision making, human review can prevent unsafe AI decisions, but each human judgment is costly. Treating human intervention after AI abstention as a one-off fallback misses the opportunity to improve future AI decisions for greater automation, yet AI adaptively learning from selectively…",
+    "topics": [],
+    "authors": [
+      "Chenyu Zhang",
+      "Rachel Luo",
+      "Boyi Li",
+      "Anjali Parashar",
+      "Marco Pavone",
+      "Apoorva Sharma"
+    ],
+    "arxiv_id": "2610.09043",
     "summary": null
   },
   {
