@@ -1,4 +1,548 @@
 {
+  "arxiv:2610.12436": {
+    "id": "arxiv:2610.12436",
+    "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+    "authors": [
+      "Erin Crawley",
+      "Hidenori Tanaka"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12436",
+    "abstract": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers and secretly deploy additional agents…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2610.12409": {
+    "id": "arxiv:2610.12409",
+    "title": "Searching for \"Harmful Refusal\": A Psychometric Audit of an AI Safety Benchmark",
+    "authors": [
+      "Christopher M. Stewart",
+      "Preston Botter",
+      "Natalie Sarabosing",
+      "Muye Zhang",
+      "Rachel Phinnemore",
+      "Shalini Ghosh",
+      "Hong Shen",
+      "Hoda Heidari"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12409",
+    "abstract": "Safety benchmarks typically report one overall score for a suite of datasets, each of which may target one or more safety-related attributes, so models with similar overall scores can have very different attribute profiles. Comparing models is more tractable at the level of individual attributes, yet it is often…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.12361": {
+    "id": "arxiv:2610.12361",
+    "title": "Cited but Not Consulted: A Counterfactual Audit of Legal Chain-of-Thought Faithfulness",
+    "authors": [
+      "Saisab Sadhu",
+      "Shreeyans Arora",
+      "Pratinav Seth"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12361",
+    "abstract": "Large language models increasingly justify legal decisions by naming the statute or precedent behind a verdict, treated as evidence that the decision follows from it. We test this directly: holding case facts fixed, we substitute the named legal authority for an unrelated one and decode a model's evolving verdict from…",
+    "detected": "2026-10-09",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.12292": {
+    "id": "arxiv:2610.12292",
+    "title": "One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails",
+    "authors": [
+      "Seyedarmin Azizi",
+      "Erfan Baghaei Potraghloo",
+      "Massoud Pedram"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12292",
+    "abstract": "A typed decision model reads a piece of text and returns a probability over caller-defined options, each with a short written definition, generating no text. Recent work places these models in agent systems as guardrails: the component that reads a proposed tool call or incoming message and decides whether to allow it.",
+    "detected": "2026-10-09",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.12233": {
+    "id": "arxiv:2610.12233",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
+    "authors": [
+      "Jingnan Zheng",
+      "Dongcheng Zhang",
+      "Yi Zhang",
+      "Ming Zhang",
+      "Qiaosheng Zhang",
+      "Youbang Sun",
+      "An Zhang",
+      "Xiangnan He",
+      "Tat-Seng Chua",
+      "Xia Hu",
+      "Bowen Zhou",
+      "Chaochao Lu",
+      "Xiang Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12233",
+    "abstract": "Recursive self-improvement, the participation of AI systems in improving their own capabilities, is beginning to move from theoretical prospect to practice, posing both challenges and opportunities for safety alignment. Models evolve through frequent updates, and their safety alignment requires continual adaptation to…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.12190": {
+    "id": "arxiv:2610.12190",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "authors": [
+      "Yudi Zhang",
+      "Mingyu Cao",
+      "Lu Yin",
+      "Mykola Pechenizkiy",
+      "Shiwei Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12190",
+    "abstract": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental problem…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "governance"
+    ]
+  },
+  "arxiv:2610.11959": {
+    "id": "arxiv:2610.11959",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "authors": [
+      "Xiaomi LLM-Core Team",
+      ":",
+      "Zongming Qiao",
+      "Ziyue Hua",
+      "Zirui Ou",
+      "Zihao Yue",
+      "Zihan Jiang",
+      "Zhuo Huang",
+      "Zhiyang Chen",
+      "Zhixian Zheng",
+      "Zhipeng Xu",
+      "Zhengrui Ma",
+      "Yuyang Hu",
+      "Yuhang Dong",
+      "Yuechen Zhang",
+      "Yudong Wang",
+      "Yuanxin Liu",
+      "Yixin Yang",
+      "Yishuo Cai",
+      "Yikai Zhao",
+      "Yihan Yan",
+      "Yifan Zhang",
+      "Yifan Song",
+      "Xiyu Wei",
+      "Xing Zhang",
+      "Xin Zhang",
+      "Xiaoqian Liu",
+      "Xiaodong Ji",
+      "Xiangwei Deng",
+      "Xueyu Guo",
+      "Wenhan Ma",
+      "Weimin Xiong",
+      "Weikun Wang",
+      "Weiji Zhuang",
+      "Shuo Liu",
+      "Shuhuai Ren",
+      "Shuhao Gu",
+      "Shimao Chen",
+      "Shijie Cao",
+      "Shihua Yu",
+      "Shicheng Li",
+      "Shengjie Zhou",
+      "Shaolei Zhang",
+      "Rang Li",
+      "Qiying Wang",
+      "Qingkai Fang",
+      "Qianli Chen",
+      "Minzheng Wang",
+      "Liwen Wang",
+      "Linli Yao",
+      "Linghao Zhang",
+      "Liangyu Cheng",
+      "Liang Zhao",
+      "Lei Li",
+      "Jinhao Dong",
+      "Jinyu Xiang",
+      "Jianyu Wei",
+      "Jiangshan Duo",
+      "Huaqiu Liu",
+      "Huanjie Fan",
+      "Hongyi Guan",
+      "Hongshen Xu",
+      "Hao Tian",
+      "Hanyu Li",
+      "Hailin Zhang",
+      "Gang Wang",
+      "Fuli Luo",
+      "Feng Wei",
+      "Dong Zhang",
+      "Dawei Zhu",
+      "Chiheng Lou",
+      "Chenhong He",
+      "Chenhao He",
+      "Chenghua Liu",
+      "Bowen Ye",
+      "Bowen Shen",
+      "Boshen Xu",
+      "Bo Yang",
+      "Bingquan Xia",
+      "Bangjun Xiao",
+      "Baixuan Xu",
+      "Zhouxiang Mao",
+      "Zhiyang Zhang",
+      "Zhixiang Xu",
+      "Zhenru Lin",
+      "Zhengju Tang",
+      "Zhaojun Huang",
+      "Yuzhe Weng",
+      "Yuxing Xiang",
+      "Yuxiao Li",
+      "Yuheng Yang",
+      "Yuhang Wang",
+      "Yuchen Liu",
+      "Yuanyuan Tian",
+      "Yuanliang Dong",
+      "Yu Cheng",
+      "Yongzhe He",
+      "Yongshun Liang",
+      "Yong Wang",
+      "Yiyan Wang",
+      "Yitian Gong",
+      "Yijie Zhang",
+      "Yanshu Xin",
+      "Xun Zhang",
+      "Xingjian Zhao",
+      "Wenyu Yang",
+      "Wenshan Huang",
+      "Wenhao Li",
+      "Tingwei Huang",
+      "Tianyu Yu",
+      "Tianyang Lu",
+      "Taoyu Yang",
+      "Sinan Du",
+      "Shutong Tian",
+      "Shulin Du",
+      "Shengfan Wang",
+      "Shanchuan Fang",
+      "Qihao Zhang",
+      "Qibin Yang",
+      "Qian Yu",
+      "Qian Tu",
+      "Pengrong Xie",
+      "Peipei Wang",
+      "Peidian Li",
+      "Minkun Guo",
+      "Mingchen Shao",
+      "Luohan Gao",
+      "Lijie Wang",
+      "Liang Shi",
+      "Kaiqi Chen",
+      "Kaiming Liu",
+      "Kaifei Wang",
+      "Kai Yang",
+      "Jinlong Xue",
+      "Jiechen Zhang",
+      "Jiaxuan Liu",
+      "Hongxu An",
+      "Hao Peng",
+      "Hanglong Lü",
+      "Guonan Wang",
+      "Feiyu Yang",
+      "Fanyu Cao",
+      "Fangyue Liu",
+      "Fan Cui",
+      "Cong Wang",
+      "Chun Chen",
+      "Chenxu Bai",
+      "Chengxuan Zhu",
+      "Chenghua Wang",
+      "Boyi Zeng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11959",
+    "abstract": "Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of model intelligence by scaling RL compute.",
+    "detected": "2026-10-09",
+    "topics": []
+  },
+  "arxiv:2610.11775": {
+    "id": "arxiv:2610.11775",
+    "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
+    "authors": [
+      "Ilya Lasy",
+      "Nora Yinuo Cai",
+      "Kola Ayonrinde"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11775",
+    "abstract": "Sparse Mixture of Experts (MoE) models scale more efficiently than dense models by routing tokens to modular expert networks that are only active for processing a fraction of tokens. A leading hypothesis for the performance of MoE models is that each expert specialises in a single, coherent domain.",
+    "detected": "2026-10-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.11754": {
+    "id": "arxiv:2610.11754",
+    "title": "What Output-Only Review Cannot Verify: Study Contracts for Research Agents",
+    "authors": [
+      "Eitan Waks",
+      "Ben Glocker"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11754",
+    "abstract": "Some defects in an AI-generated study can be identified from its artifacts; others require knowledge of what was approved before execution. We propose study contracts that bind declared experimental choices, run obligations and claim scope to recorded execution evidence, and distinguish this contract-relative…",
+    "detected": "2026-10-09",
+    "topics": []
+  },
+  "arxiv:2610.11464": {
+    "id": "arxiv:2610.11464",
+    "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
+    "authors": [
+      "Xing Zhang",
+      "Guanghui Wang",
+      "Yanwei Cui",
+      "Ziyuan Li",
+      "Wei Qiu",
+      "Bing Zhu",
+      "Peiyang He"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11464",
+    "abstract": "We changed the agent: did it actually get better? Every self-improving agent loop answers this hundreds of times, and every answer comes from a verifier.",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.11451": {
+    "id": "arxiv:2610.11451",
+    "title": "SAIL: Scientific Agentic Intelligence via a Science-Aware Loop",
+    "authors": [
+      "SAIL Model Team",
+      "Boyuan Sun",
+      "Bryan Dai",
+      "Che Liu",
+      "Chi Liu",
+      "Derek Li",
+      "Hongming Piao",
+      "Mengzhuo Chen",
+      "Xidong Wang",
+      "Yan Shu",
+      "Yinda Chen",
+      "Ziyang Zeng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11451",
+    "abstract": "We introduce SAIL, an open model with 35B total and 3B active parameters for literature research, scientific coding, and multi-step research workflows. SAIL is developed through a science-aware improvement loop: agents built on frontier AI models analyze its task failures and construct training tasks that address the…",
+    "detected": "2026-10-09",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2610.11281": {
+    "id": "arxiv:2610.11281",
+    "title": "How to post-train on a surrogate: Envelope sampling mitigates reward hacking",
+    "authors": [
+      "Sanjit Dandapanthula",
+      "Shuvom Sadhuka",
+      "Samir Khan",
+      "Michael Oberst",
+      "Aaditya Ramdas",
+      "Alexandra Chouldechova"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11281",
+    "abstract": "Large language models (LLMs) are commonly post-trained against LLM judges and other cheap surrogates because the true reward, such as human preference, is too expensive to query at scale. This practice often leads to reward hacking, where reinforcement learning against a miscalibrated surrogate leads to undesirable…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.11155": {
+    "id": "arxiv:2610.11155",
+    "title": "Social Pain Disrupts Emotion-Action Brain-State Dynamics in Adolescents with Non-Suicidal Self-Injury",
+    "authors": [
+      "Ying Xu",
+      "Xiaojun Liang",
+      "Li Zhang",
+      "Yixuan Yuan",
+      "Gan Huang",
+      "Yongjie Zhou",
+      "Zhen Liang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11155",
+    "abstract": "Non-suicidal self-injury (NSSI) is prevalent among adolescents with depression, but the rapid brain-state dynamics linking social distress to maladaptive behavior remain unclear. We combine an experimental pain paradigm, electroencephalography (EEG) microstate analysis, and interpretable deep sequence modeling to…",
+    "detected": "2026-10-09",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.11123": {
+    "id": "arxiv:2610.11123",
+    "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
+    "authors": [
+      "Xiaolong Li",
+      "Xiaohan Xu",
+      "Jinyang Li",
+      "Xinnuo Xu",
+      "Ge Qu",
+      "Nan Huo",
+      "Jack Williams",
+      "Reynold Cheng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11123",
+    "abstract": "Most human-agent interaction today remains text-based. Natural language can impose cognitive overload, ambiguity, information chaos, and slow input for complex tasks; ephemeral generative UIs can present structured information and guide users toward task completion.",
+    "detected": "2026-10-09",
+    "topics": []
+  },
+  "arxiv:2610.11012": {
+    "id": "arxiv:2610.11012",
+    "title": "Distillation for Incrimination and Distillation for Capabilities",
+    "authors": [
+      "Sebastian Prasanna",
+      "Jacqueline Tay",
+      "Alek Westover"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.11012",
+    "abstract": "Powerful misaligned AI models might recognize alignment evaluations and strategically behave well on them, rendering direct audits uninformative. However, distilling such a model into a weaker benign student places the teacher in a Distillation Double Bind: if misalignment transfers, the student may conceal it less…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.10947": {
+    "id": "arxiv:2610.10947",
+    "title": "RH-Detect: A Unified Benchmark for Reward Hacking Detection",
+    "authors": [
+      "Junwei Quan",
+      "Evgenii Opryshko",
+      "Rohan Subramani",
+      "Igor Gilitschenski"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10947",
+    "abstract": "Reward hacking, where a model exploits an evaluation signal without completing the intended task, threatens the reliability of deployed language model systems. Existing datasets use different labels, response formats, and metadata conventions, making detector results difficult to compare.",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.10942": {
+    "id": "arxiv:2610.10942",
+    "title": "StoreBench: A Live-Commerce Environment for Evaluating and Training Autonomous Operator Agents",
+    "authors": [
+      "Daksh Raghuvanshi",
+      "Ved Vedere",
+      "Yifan Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10942",
+    "abstract": "Reinforcement learning environments are now a primary lever for improving large language model (LLM) capabilities in post-training, yet most agentic benchmarks remain static: the world moves only when the agent acts, the reward is a terminal verdict, and the pass bar is set arbitrarily. We introduce StoreBench, a…",
+    "detected": "2026-10-09",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.10865": {
+    "id": "arxiv:2610.10865",
+    "title": "Disentangling Linguistic and Paralinguistic Information with Routed Sparse Autoencoders",
+    "authors": [
+      "Beimnet Bekele Guta",
+      "Xiaoyu Yang",
+      "Guangzhi Sun",
+      "Philip C. Woodland"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10865",
+    "abstract": "Self-supervised speech encoders contain linguistic and paralinguistic information in a shared, entangled representation space. We combine a TopK sparse autoencoder with route-specific supervision and cross-factor adversaries.",
+    "detected": "2026-10-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.10742": {
+    "id": "arxiv:2610.10742",
+    "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+    "authors": [
+      "William Hackett",
+      "Peter Garraghan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10742",
+    "abstract": "AI systems increasingly rely on Large Language Models (LLMs) as core reasoning engines, making them targets for prompt injection and jailbreaks. Guardrails monitor and validate model inputs and outputs, yet their isolated, task-focused detection leaves gaps in their classification making them susceptible to bypasses.",
+    "detected": "2026-10-09",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.10651": {
+    "id": "arxiv:2610.10651",
+    "title": "Beyond the Ergodic Wall: A Discrete Geometric Physics Sandbox for Analysing AI Scaling Limits and Complexity Collapse",
+    "authors": [
+      "Simon Richard Daniel"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10651",
+    "abstract": "This paper exposes the ergodic ceiling and thermodynamic inefficiency of current deep learning, which converges to a statistical average of historic human knowledge. True semantic novelty requires a path-dependent, spatiotemporally bounded observer (a Data LifeCone) to inject non-ergodic insight, achieving KL…",
+    "detected": "2026-10-09",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.10625": {
+    "id": "arxiv:2610.10625",
+    "title": "Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",
+    "authors": [
+      "Yi Wang",
+      "Xiuyuan Qi",
+      "Dongqi Han",
+      "Dongsheng Li",
+      "Wenjie Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10625",
+    "abstract": "Looped Language Models (LoopLMs) provide a parameter efficient approach to scaling model capabilities through repeated use of shared parameters across recurrent steps. Since each recurrent depth can be read out independently, a single LoopLM exposes a broader output space across inference depths, raising an important…",
+    "detected": "2026-10-09",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.10619": {
+    "id": "arxiv:2610.10619",
+    "title": "TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution",
+    "authors": [
+      "Shuangjie Yao",
+      "Hao Wang",
+      "Koushik Sen",
+      "Simin Chen",
+      "Baishakhi Ray",
+      "Dawn Song"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.10619",
+    "abstract": "Large language model (LLM) agents are rapidly reshaping software engineering, accompanied by an explosion of new code benchmarks. Yet nearly all existing benchmarks still rely on the same decades-old criterion: a solution is correct if it passes a fixed set of unit tests.",
+    "detected": "2026-10-09",
+    "topics": [
+      "evals"
+    ]
+  },
   "arxiv:2610.10405": {
     "id": "arxiv:2610.10405",
     "title": "Reasoning-Token Spikes Under Prompted Untruthful Responding in Large Language Models",

@@ -1,5 +1,515 @@
 [
   {
+    "id": "edd58468d564448f",
+    "url": "https://openai.com/index/sophos",
+    "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-09T07:00:00Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Discover how Sophos uses OpenAI’s Daybreak to cut cyber-threat investigation time by 96% and automate 52% of MDR cases while preserving human oversight.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5e5d65f695876e7d",
+    "url": "https://www.lesswrong.com/posts/xLgJJC3CD3y3AhtKn/stop-telling-people-to-pivot-to-ai-safety-i-beg-you",
+    "title": "Stop telling people to pivot to AI safety, I beg you",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-09T06:15:44Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Epistemic status: Feeling frustrated, and therefore somewhat uncharitable. I’m very frustrated with calls for people to “ drop everything and pivot into AI safety ” like t his one .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Haoxing Du"
+    ],
+    "summary": null
+  },
+  {
+    "id": "cbd95abd45a9b631",
+    "url": "https://www.lesswrong.com/posts/dHGjqpbfmdEN7TssX/on-kink-and-status-in-the-rationalist-community",
+    "title": "On Kink & Status in the Rationalist Community",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-09T00:18:40Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "This whole thing started with various crazies on bluesky writing hit pieces on the rationalist and AI alignment communities, as one does. One of their main beats was to note social ties between the AI alignment community and the Red Means No (RMN) consensual non-consent sex party community, then gesticulate wildly and…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "johnswentworth"
+    ],
+    "summary": null
+  },
+  {
+    "id": "3d57802710dee8f2",
+    "url": "https://www.lesswrong.com/posts/EqfdfetDKxpFszpdD/ai-vigil-at-congress",
+    "title": "AI Vigil at Congress",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-08T22:18:46Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "I'm organizing a multi-week AI x-risk vigil at Congress starting November 9th. I'm posting here to solicit feedback on the core doc before I promote on other platforms.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Elliot Callender"
+    ],
+    "summary": null
+  },
+  {
+    "id": "73c807ba055a7699",
+    "url": "https://www.lesswrong.com/posts/LZGuqoYHphet9sfZs/towards-embedded-evaluations-for-scheming-propensities",
+    "title": "Towards embedded evaluations for scheming propensities",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-08T21:24:05Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "TL;DR: A safety case for scheming must be able to substantiate these four key claims: scheming was not incentivized during training, strong evaluations and red teaming suggest that the model does not have a propensity to scheme, scheming was never attempted during internal deployment, and scheming reasoning would be…",
+    "topics": [
+      "alignment",
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Dylan Bowman"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ddb78d382bef00bc",
+    "url": "https://www.lesswrong.com/posts/eSMburFT9eRxHWijf/asi-and-liberty-can-we-do-better-than-a-benevolent-god",
+    "title": "ASI and Liberty: Can we do better than a benevolent god?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-08T20:36:56Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Zvi recently coined a nice distinction between AGI-pilled and ASI-pilled : as more people are reckoning with the speed of progress, some are beginning to come around to the fact that AI could be superhuman at a huge range of tasks in a way that radically reshapes society, but not that it could leap us to the end of…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Raymond Douglas"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c57d82ad96cfb8c4",
+    "url": "https://arxiv.org/abs/2610.12436",
+    "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T17:57:32Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "AI agents can now conduct real-world cyberattacks, scale up capabilities with the number of agents, and collectively pursue misaligned goals to obtain rewards. Together, these factors raise the risk of a population explosion of misaligned agents: agents could compromise computers and secretly deploy additional agents…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Erin Crawley",
+      "Hidenori Tanaka"
+    ],
+    "arxiv_id": "2610.12436",
+    "summary": null
+  },
+  {
+    "id": "fb08b23c10089a3d",
+    "url": "https://arxiv.org/abs/2610.12409",
+    "title": "Searching for \"Harmful Refusal\": A Psychometric Audit of an AI Safety Benchmark",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T17:46:43Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Safety benchmarks typically report one overall score for a suite of datasets, each of which may target one or more safety-related attributes, so models with similar overall scores can have very different attribute profiles. Comparing models is more tractable at the level of individual attributes, yet it is often…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Christopher M. Stewart",
+      "Preston Botter",
+      "Natalie Sarabosing",
+      "Muye Zhang",
+      "Rachel Phinnemore",
+      "Shalini Ghosh",
+      "Hong Shen",
+      "Hoda Heidari"
+    ],
+    "arxiv_id": "2610.12409",
+    "summary": null
+  },
+  {
+    "id": "5c36d3aec4bdd6d8",
+    "url": "https://arxiv.org/abs/2610.12361",
+    "title": "Cited but Not Consulted: A Counterfactual Audit of Legal Chain-of-Thought Faithfulness",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T17:26:17Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Large language models increasingly justify legal decisions by naming the statute or precedent behind a verdict, treated as evidence that the decision follows from it. We test this directly: holding case facts fixed, we substitute the named legal authority for an unrelated one and decode a model's evolving verdict from…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Saisab Sadhu",
+      "Shreeyans Arora",
+      "Pratinav Seth"
+    ],
+    "arxiv_id": "2610.12361",
+    "summary": null
+  },
+  {
+    "id": "c9541998b4a068e5",
+    "url": "https://arxiv.org/abs/2610.12292",
+    "title": "One Word Opens the Gate: The Option-Channel Attack on Typed Decision Models as Agent Guardrails",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T16:46:43Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "A typed decision model reads a piece of text and returns a probability over caller-defined options, each with a short written definition, generating no text. Recent work places these models in agent systems as guardrails: the component that reads a proposed tool call or incoming message and decides whether to allow it.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Seyedarmin Azizi",
+      "Erfan Baghaei Potraghloo",
+      "Massoud Pedram"
+    ],
+    "arxiv_id": "2610.12292",
+    "summary": null
+  },
+  {
+    "id": "d48ffbf441e057d1",
+    "url": "https://arxiv.org/abs/2610.12233",
+    "title": "ReSI: Recursive Safety Improvement toward Resistant and Resilient AI",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T16:17:21Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Recursive self-improvement, the participation of AI systems in improving their own capabilities, is beginning to move from theoretical prospect to practice, posing both challenges and opportunities for safety alignment. Models evolve through frequent updates, and their safety alignment requires continual adaptation to…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Jingnan Zheng",
+      "Dongcheng Zhang",
+      "Yi Zhang",
+      "Ming Zhang",
+      "Qiaosheng Zhang",
+      "Youbang Sun",
+      "An Zhang",
+      "Xiangnan He",
+      "Tat-Seng Chua",
+      "Xia Hu",
+      "Bowen Zhou",
+      "Chaochao Lu",
+      "Xiang Wang"
+    ],
+    "arxiv_id": "2610.12233",
+    "summary": null
+  },
+  {
+    "id": "3f2afb481f4f54a5",
+    "url": "https://arxiv.org/abs/2610.12190",
+    "title": "DataSense-Bench: The First Step Toward an AI Scientist",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T15:50:57Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "As claims about recursive self-improvement (RSI) and artificial general intelligence (AGI) proliferate, we ask a simple question: do frontier AI models have a sense of data, i.e., can they reliably select the right data for training? We introduce DataSense-Bench to study this capability through the fundamental problem…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Yudi Zhang",
+      "Mingyu Cao",
+      "Lu Yin",
+      "Mykola Pechenizkiy",
+      "Shiwei Liu"
+    ],
+    "arxiv_id": "2610.12190",
+    "summary": null
+  },
+  {
+    "id": "e684fb74ecb726f3",
+    "url": "https://www.transformernews.ai/p/yoshua-bengio-if-you-prioritize-safety-leave-frontier-ai-companies",
+    "title": "Bengio: ‘If you prioritize safety, leave frontier AI companies’",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-10-08T14:00:43Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Writing exclusively for Transformer, the pioneering AI godfather is calling on frontier AI employees to join the fight for a safer future",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "392bf6def15f29b2",
+    "url": "https://arxiv.org/abs/2610.11959",
+    "title": "MiMo-V2.6: Scaling Reinforcement Learning Towards Self-Improvement",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T13:41:53Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Reinforcement learning (RL) is the central training paradigm for advancing large foundation models towards self-improvement. This report introduces the MiMo-V2.6 series, an omni-modal family that pushes the frontier of model intelligence by scaling RL compute.",
+    "topics": [],
+    "authors": [
+      "Xiaomi LLM-Core Team",
+      ":",
+      "Zongming Qiao",
+      "Ziyue Hua",
+      "Zirui Ou",
+      "Zihao Yue",
+      "Zihan Jiang",
+      "Zhuo Huang",
+      "Zhiyang Chen",
+      "Zhixian Zheng",
+      "Zhipeng Xu",
+      "Zhengrui Ma",
+      "Yuyang Hu",
+      "Yuhang Dong",
+      "Yuechen Zhang",
+      "Yudong Wang",
+      "Yuanxin Liu",
+      "Yixin Yang",
+      "Yishuo Cai",
+      "Yikai Zhao",
+      "Yihan Yan",
+      "Yifan Zhang",
+      "Yifan Song",
+      "Xiyu Wei",
+      "Xing Zhang",
+      "Xin Zhang",
+      "Xiaoqian Liu",
+      "Xiaodong Ji",
+      "Xiangwei Deng",
+      "Xueyu Guo",
+      "Wenhan Ma",
+      "Weimin Xiong",
+      "Weikun Wang",
+      "Weiji Zhuang",
+      "Shuo Liu",
+      "Shuhuai Ren",
+      "Shuhao Gu",
+      "Shimao Chen",
+      "Shijie Cao",
+      "Shihua Yu",
+      "Shicheng Li",
+      "Shengjie Zhou",
+      "Shaolei Zhang",
+      "Rang Li",
+      "Qiying Wang",
+      "Qingkai Fang",
+      "Qianli Chen",
+      "Minzheng Wang",
+      "Liwen Wang",
+      "Linli Yao",
+      "Linghao Zhang",
+      "Liangyu Cheng",
+      "Liang Zhao",
+      "Lei Li",
+      "Jinhao Dong",
+      "Jinyu Xiang",
+      "Jianyu Wei",
+      "Jiangshan Duo",
+      "Huaqiu Liu",
+      "Huanjie Fan",
+      "Hongyi Guan",
+      "Hongshen Xu",
+      "Hao Tian",
+      "Hanyu Li",
+      "Hailin Zhang",
+      "Gang Wang",
+      "Fuli Luo",
+      "Feng Wei",
+      "Dong Zhang",
+      "Dawei Zhu",
+      "Chiheng Lou",
+      "Chenhong He",
+      "Chenhao He",
+      "Chenghua Liu",
+      "Bowen Ye",
+      "Bowen Shen",
+      "Boshen Xu",
+      "Bo Yang",
+      "Bingquan Xia",
+      "Bangjun Xiao",
+      "Baixuan Xu",
+      "Zhouxiang Mao",
+      "Zhiyang Zhang",
+      "Zhixiang Xu",
+      "Zhenru Lin",
+      "Zhengju Tang",
+      "Zhaojun Huang",
+      "Yuzhe Weng",
+      "Yuxing Xiang",
+      "Yuxiao Li",
+      "Yuheng Yang",
+      "Yuhang Wang",
+      "Yuchen Liu",
+      "Yuanyuan Tian",
+      "Yuanliang Dong",
+      "Yu Cheng",
+      "Yongzhe He",
+      "Yongshun Liang",
+      "Yong Wang",
+      "Yiyan Wang",
+      "Yitian Gong",
+      "Yijie Zhang",
+      "Yanshu Xin",
+      "Xun Zhang",
+      "Xingjian Zhao",
+      "Wenyu Yang",
+      "Wenshan Huang",
+      "Wenhao Li",
+      "Tingwei Huang",
+      "Tianyu Yu",
+      "Tianyang Lu",
+      "Taoyu Yang",
+      "Sinan Du",
+      "Shutong Tian",
+      "Shulin Du",
+      "Shengfan Wang",
+      "Shanchuan Fang",
+      "Qihao Zhang",
+      "Qibin Yang",
+      "Qian Yu",
+      "Qian Tu",
+      "Pengrong Xie",
+      "Peipei Wang",
+      "Peidian Li",
+      "Minkun Guo",
+      "Mingchen Shao",
+      "Luohan Gao",
+      "Lijie Wang",
+      "Liang Shi",
+      "Kaiqi Chen",
+      "Kaiming Liu",
+      "Kaifei Wang",
+      "Kai Yang",
+      "Jinlong Xue",
+      "Jiechen Zhang",
+      "Jiaxuan Liu",
+      "Hongxu An",
+      "Hao Peng",
+      "Hanglong Lü",
+      "Guonan Wang",
+      "Feiyu Yang",
+      "Fanyu Cao",
+      "Fangyue Liu",
+      "Fan Cui",
+      "Cong Wang",
+      "Chun Chen",
+      "Chenxu Bai",
+      "Chengxuan Zhu",
+      "Chenghua Wang",
+      "Boyi Zeng"
+    ],
+    "arxiv_id": "2610.11959",
+    "summary": null
+  },
+  {
+    "id": "d460a4b405b7ed7d",
+    "url": "https://arxiv.org/abs/2610.11775",
+    "title": "RouterInterp: Understanding Superposed Specialisation in Mixture of Experts Routing",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T11:55:25Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Sparse Mixture of Experts (MoE) models scale more efficiently than dense models by routing tokens to modular expert networks that are only active for processing a fraction of tokens. A leading hypothesis for the performance of MoE models is that each expert specialises in a single, coherent domain.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Ilya Lasy",
+      "Nora Yinuo Cai",
+      "Kola Ayonrinde"
+    ],
+    "arxiv_id": "2610.11775",
+    "summary": null
+  },
+  {
+    "id": "193e5994a5ba0947",
+    "url": "https://arxiv.org/abs/2610.11754",
+    "title": "What Output-Only Review Cannot Verify: Study Contracts for Research Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T11:42:23Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Some defects in an AI-generated study can be identified from its artifacts; others require knowledge of what was approved before execution. We propose study contracts that bind declared experimental choices, run obligations and claim scope to recorded execution evidence, and distinguish this contract-relative…",
+    "topics": [],
+    "authors": [
+      "Eitan Waks",
+      "Ben Glocker"
+    ],
+    "arxiv_id": "2610.11754",
+    "summary": null
+  },
+  {
+    "id": "3be60cb811d5d9b7",
+    "url": "https://arxiv.org/abs/2610.11464",
+    "title": "Who Verifies the Verifier? Co-Evolving Inspectable Graders with Self-Improving Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T08:13:53Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "We changed the agent: did it actually get better? Every self-improving agent loop answers this hundreds of times, and every answer comes from a verifier.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Xing Zhang",
+      "Guanghui Wang",
+      "Yanwei Cui",
+      "Ziyuan Li",
+      "Wei Qiu",
+      "Bing Zhu",
+      "Peiyang He"
+    ],
+    "arxiv_id": "2610.11464",
+    "summary": null
+  },
+  {
+    "id": "065fd1fd752626cd",
+    "url": "https://arxiv.org/abs/2610.11451",
+    "title": "SAIL: Scientific Agentic Intelligence via a Science-Aware Loop",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T08:04:22Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "We introduce SAIL, an open model with 35B total and 3B active parameters for literature research, scientific coding, and multi-step research workflows. SAIL is developed through a science-aware improvement loop: agents built on frontier AI models analyze its task failures and construct training tasks that address the…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "SAIL Model Team",
+      "Boyuan Sun",
+      "Bryan Dai",
+      "Che Liu",
+      "Chi Liu",
+      "Derek Li",
+      "Hongming Piao",
+      "Mengzhuo Chen",
+      "Xidong Wang",
+      "Yan Shu",
+      "Yinda Chen",
+      "Ziyang Zeng"
+    ],
+    "arxiv_id": "2610.11451",
+    "summary": null
+  },
+  {
     "id": "47761f38b43a76e6",
     "url": "https://www.lesswrong.com/posts/o8roRrdisBAjngHJN/a-summary-of-a-viral-chinese-essay-on-what-a-deepseek-kernel",
     "title": "A summary of a viral Chinese essay on what a DeepSeek kernel engineer's opinion on automating his own job",
@@ -14,6 +524,76 @@
     "authors": [
       "Skdk"
     ],
+    "summary": null
+  },
+  {
+    "id": "21ccb2dc78e21acf",
+    "url": "https://arxiv.org/abs/2610.11281",
+    "title": "How to post-train on a surrogate: Envelope sampling mitigates reward hacking",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T05:48:31Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Large language models (LLMs) are commonly post-trained against LLM judges and other cheap surrogates because the true reward, such as human preference, is too expensive to query at scale. This practice often leads to reward hacking, where reinforcement learning against a miscalibrated surrogate leads to undesirable…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Sanjit Dandapanthula",
+      "Shuvom Sadhuka",
+      "Samir Khan",
+      "Michael Oberst",
+      "Aaditya Ramdas",
+      "Alexandra Chouldechova"
+    ],
+    "arxiv_id": "2610.11281",
+    "summary": null
+  },
+  {
+    "id": "a29336c229594d6b",
+    "url": "https://arxiv.org/abs/2610.11155",
+    "title": "Social Pain Disrupts Emotion-Action Brain-State Dynamics in Adolescents with Non-Suicidal Self-Injury",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T03:16:45Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Non-suicidal self-injury (NSSI) is prevalent among adolescents with depression, but the rapid brain-state dynamics linking social distress to maladaptive behavior remain unclear. We combine an experimental pain paradigm, electroencephalography (EEG) microstate analysis, and interpretable deep sequence modeling to…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Ying Xu",
+      "Xiaojun Liang",
+      "Li Zhang",
+      "Yixuan Yuan",
+      "Gan Huang",
+      "Yongjie Zhou",
+      "Zhen Liang"
+    ],
+    "arxiv_id": "2610.11155",
+    "summary": null
+  },
+  {
+    "id": "55a9d90130d0edca",
+    "url": "https://arxiv.org/abs/2610.11123",
+    "title": "When Interfaces Speak: Data-Aware Generative UI Harness for Active Interaction",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T02:49:35Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Most human-agent interaction today remains text-based. Natural language can impose cognitive overload, ambiguity, information chaos, and slow input for complex tasks; ephemeral generative UIs can present structured information and guide users toward task completion.",
+    "topics": [],
+    "authors": [
+      "Xiaolong Li",
+      "Xiaohan Xu",
+      "Jinyang Li",
+      "Xinnuo Xu",
+      "Ge Qu",
+      "Nan Huo",
+      "Jack Williams",
+      "Reynold Cheng"
+    ],
+    "arxiv_id": "2610.11123",
     "summary": null
   },
   {
@@ -34,6 +614,27 @@
     "summary": null
   },
   {
+    "id": "756baa92629987c4",
+    "url": "https://arxiv.org/abs/2610.11012",
+    "title": "Distillation for Incrimination and Distillation for Capabilities",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T23:51:11Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Powerful misaligned AI models might recognize alignment evaluations and strategically behave well on them, rendering direct audits uninformative. However, distilling such a model into a weaker benign student places the teacher in a Distillation Double Bind: if misalignment transfers, the student may conceal it less…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Sebastian Prasanna",
+      "Jacqueline Tay",
+      "Alek Westover"
+    ],
+    "arxiv_id": "2610.11012",
+    "summary": null
+  },
+  {
     "id": "accb3bfe8f587e38",
     "url": "https://www.lesswrong.com/posts/neHiCSdL4tJDg7Hrm/are-openai-s-math-results-creative-in-an-important-way",
     "title": "Are OpenAI's math results \"creative\" in an important way?",
@@ -48,6 +649,88 @@
     "authors": [
       "Raemon"
     ],
+    "summary": null
+  },
+  {
+    "id": "d5ecb91d4c6570d9",
+    "url": "https://arxiv.org/abs/2610.10947",
+    "title": "RH-Detect: A Unified Benchmark for Reward Hacking Detection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T21:52:33Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Reward hacking, where a model exploits an evaluation signal without completing the intended task, threatens the reliability of deployed language model systems. Existing datasets use different labels, response formats, and metadata conventions, making detector results difficult to compare.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Junwei Quan",
+      "Evgenii Opryshko",
+      "Rohan Subramani",
+      "Igor Gilitschenski"
+    ],
+    "arxiv_id": "2610.10947",
+    "summary": null
+  },
+  {
+    "id": "775824fbd51a5714",
+    "url": "https://arxiv.org/abs/2610.10942",
+    "title": "StoreBench: A Live-Commerce Environment for Evaluating and Training Autonomous Operator Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T21:46:10Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Reinforcement learning environments are now a primary lever for improving large language model (LLM) capabilities in post-training, yet most agentic benchmarks remain static: the world moves only when the agent acts, the reward is a terminal verdict, and the pass bar is set arbitrarily. We introduce StoreBench, a…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Daksh Raghuvanshi",
+      "Ved Vedere",
+      "Yifan Wang"
+    ],
+    "arxiv_id": "2610.10942",
+    "summary": null
+  },
+  {
+    "id": "9ec449167203c3ec",
+    "url": "https://arxiv.org/abs/2610.10865",
+    "title": "Disentangling Linguistic and Paralinguistic Information with Routed Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T20:10:07Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Self-supervised speech encoders contain linguistic and paralinguistic information in a shared, entangled representation space. We combine a TopK sparse autoencoder with route-specific supervision and cross-factor adversaries.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Beimnet Bekele Guta",
+      "Xiaoyu Yang",
+      "Guangzhi Sun",
+      "Philip C. Woodland"
+    ],
+    "arxiv_id": "2610.10865",
+    "summary": null
+  },
+  {
+    "id": "970a0e025b37fd3e",
+    "url": "https://arxiv.org/abs/2610.10742",
+    "title": "BRANCH: Bypassing Multi-Scanner AI Guardrails",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T18:10:56Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "AI systems increasingly rely on Large Language Models (LLMs) as core reasoning engines, making them targets for prompt injection and jailbreaks. Guardrails monitor and validate model inputs and outputs, yet their isolated, task-focused detection leaves gaps in their classification making them susceptible to bypasses.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "William Hackett",
+      "Peter Garraghan"
+    ],
+    "arxiv_id": "2610.10742",
     "summary": null
   },
   {
@@ -72,6 +755,24 @@
       "Uri Maoz"
     ],
     "arxiv_id": "2610.10405",
+    "summary": null
+  },
+  {
+    "id": "bc1d9bbee7199e0b",
+    "url": "https://arxiv.org/abs/2610.10651",
+    "title": "Beyond the Ergodic Wall: A Discrete Geometric Physics Sandbox for Analysing AI Scaling Limits and Complexity Collapse",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T15:58:54Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "This paper exposes the ergodic ceiling and thermodynamic inefficiency of current deep learning, which converges to a statistical average of historic human knowledge. True semantic novelty requires a path-dependent, spatiotemporally bounded observer (a Data LifeCone) to inject non-ergodic insight, achieving KL…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Simon Richard Daniel"
+    ],
+    "arxiv_id": "2610.10651",
     "summary": null
   },
   {
@@ -298,6 +999,29 @@
     "summary": null
   },
   {
+    "id": "f6cd745cd07a1c54",
+    "url": "https://arxiv.org/abs/2610.10625",
+    "title": "Safe at One Loop, Risky at Another: Aligning Safety Across Recurrent Depths in Looped Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T10:48:43Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Looped Language Models (LoopLMs) provide a parameter efficient approach to scaling model capabilities through repeated use of shared parameters across recurrent steps. Since each recurrent depth can be read out independently, a single LoopLM exposes a broader output space across inference depths, raising an important…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Yi Wang",
+      "Xiuyuan Qi",
+      "Dongqi Han",
+      "Dongsheng Li",
+      "Wenjie Wang"
+    ],
+    "arxiv_id": "2610.10625",
+    "summary": null
+  },
+  {
     "id": "5eb373401e65003e",
     "url": "https://arxiv.org/abs/2610.09703",
     "title": "Understanding and Mitigating Token-Pruning-Induced Vulnerabilities in VLMs",
@@ -318,6 +1042,29 @@
       "Lianli Gao"
     ],
     "arxiv_id": "2610.09703",
+    "summary": null
+  },
+  {
+    "id": "7696978d4a8b38a5",
+    "url": "https://arxiv.org/abs/2610.10619",
+    "title": "TestJack: Should you trust the results in coding benchmarks? Agentic Coding Benchmarks Auditing via Evaluator Evolution",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-07T07:58:04Z",
+    "fetched_at": "2026-10-09T12:22:14Z",
+    "excerpt": "Large language model (LLM) agents are rapidly reshaping software engineering, accompanied by an explosion of new code benchmarks. Yet nearly all existing benchmarks still rely on the same decades-old criterion: a solution is correct if it passes a fixed set of unit tests.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Shuangjie Yao",
+      "Hao Wang",
+      "Koushik Sen",
+      "Simin Chen",
+      "Baishakhi Ray",
+      "Dawn Song"
+    ],
+    "arxiv_id": "2610.10619",
     "summary": null
   },
   {
