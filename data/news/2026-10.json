@@ -1,5 +1,73 @@
 [
   {
+    "id": "0f4a92a5b96bf851",
+    "url": "https://www.lesswrong.com/posts/KhmMXnR7s5HwXRLqB/an-alignment-forum-for-ais-or-verification-in-the-age-of",
+    "title": "An Alignment Forum for AIs? (or: Verification in the Age of Slop)",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-10T05:00:02Z",
+    "fetched_at": "2026-10-10T11:41:07Z",
+    "excerpt": "A thing you might want, is a legitimate way for AIs to contribute to the AI alignment problem (human guided at scales that humans can't individually review, or perhaps autonomous). A problem you might want to solve, whether you are trying to do that or not, is generally figure out \"in the age of prolific AI agents…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Raemon"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5dcfe01ec66dce8e",
+    "url": "https://www.lesswrong.com/posts/qwk7Xc2qhMChXqntK/paper-distillation-for-incrimination-and-distillation-for",
+    "title": "[Paper] Distillation for Incrimination and Distillation for Capabilities",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-10T00:41:38Z",
+    "fetched_at": "2026-10-10T11:41:07Z",
+    "excerpt": "TL;DR: We previously motivated two complementary ways to use distillation for AI safety; we’re releasing a paper empirically testing those ideas. Distillation for Incrimination (DFI) distills an untrusted model into a weaker, trusted one, aiming to transfer the teacher's misalignment but not its ability to hide it, so…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "sebastian_prasanna"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f3fa0c1a30ece68b",
+    "url": "https://www.lesswrong.com/posts/NAHnayEuQ2PdFRXHQ/why-you-should-run-a-rationality-group-at-your-university",
+    "title": "Why you should run a rationality group at your university",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-09T18:39:38Z",
+    "fetched_at": "2026-10-10T11:41:07Z",
+    "excerpt": "This post was crossposted to the EA Forum TL;DR: If you enjoy LessWrong (and/or do EA/AI safety field building), you should consider starting a rationality reading group at your university. It’s fun, cheap, a good way to meet like-minded friends, and it can reach rationalist-ish people who’ve never encountered EA or…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "carolanne"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2ee15e5e5538178b",
+    "url": "https://www.transformernews.ai/p/democrats-prepare-to-battle-over-ai-regulation",
+    "title": "Democrats prepare to battle over AI regulation",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-10-09T14:34:34Z",
+    "fetched_at": "2026-10-10T11:41:07Z",
+    "excerpt": "Transformer Weekly: OpenAI fires safety staff, Clayton leads White House taskforce, and Guthrie supports a kill switch",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Shakeel Hashim"
+    ],
+    "summary": null
+  },
+  {
     "id": "edd58468d564448f",
     "url": "https://openai.com/index/sophos",
     "title": "Sophos cuts threat investigation time by 96% with OpenAI Daybreak",
