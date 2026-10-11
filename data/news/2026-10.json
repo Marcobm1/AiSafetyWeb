@@ -1,5 +1,22 @@
 [
   {
+    "id": "8c4e6784fa7d9e74",
+    "url": "https://www.lesswrong.com/posts/e6w8DuiW44kkDCSgG/agi-as-an-infinite-digital-spain",
+    "title": "AGI as an Infinite Digital Spain",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-10T22:33:33Z",
+    "fetched_at": "2026-10-11T11:54:00Z",
+    "excerpt": "Much of the communication around AI takeover seems to rely on the assumption that AI will develop better technology than humans. They will then leverage this technology to conquer humanity much like how European technologies allowed a relatively small number of Spaniards to conquer the Aztecs.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Bearly Legible"
+    ],
+    "summary": null
+  },
+  {
     "id": "0f4a92a5b96bf851",
     "url": "https://www.lesswrong.com/posts/KhmMXnR7s5HwXRLqB/an-alignment-forum-for-ais-or-verification-in-the-age-of",
     "title": "An Alignment Forum for AIs? (or: Verification in the Age of Slop)",
