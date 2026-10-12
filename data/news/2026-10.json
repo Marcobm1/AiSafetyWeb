@@ -1,5 +1,56 @@
 [
   {
+    "id": "8635d0995c1deba4",
+    "url": "https://jack-clark.net/2026/10/12/import-ai-476-creativity-and-rsi-worse-than-china-open-weight-models-ai-goes-to-space",
+    "title": "Import AI 476: Creativity and RSI; worse-than-China open weight models; AI goes to space",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-10-12T12:30:39Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ca00ad22f2268526",
+    "url": "https://www.lesswrong.com/posts/f6zuAfteYtupddiqF/game-design-creativity-evals",
+    "title": "Game Design Creativity evals",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-12T11:16:04Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "A personal eval I run on new AI models is “design a novel game, with mechanics that have never been seen before.” I do this because this is a domain I have enough taste in that I think I can tell if they are doing something actually creatively interesting. [1] For a long time, they would always say “time manipulation…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Raemon"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8bde83731b6a5595",
+    "url": "https://www.alignmentforum.org/posts/ZWSstGSwmaxTjQ8W7/minimum-required-pacing-finish-aligning-it-before-you-train",
+    "title": "Minimum required pacing: finish aligning it before you train the next one",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-11T23:39:06Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Let's say we coordinate to pace the frontier, but we don't coordinate on an outright pause. What should the standard of pacing be?",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "orthonormal"
+    ],
+    "summary": null
+  },
+  {
     "id": "8c4e6784fa7d9e74",
     "url": "https://www.lesswrong.com/posts/e6w8DuiW44kkDCSgG/agi-as-an-infinite-digital-spain",
     "title": "AGI as an Infinite Digital Spain",
@@ -68,6 +119,31 @@
     "summary": null
   },
   {
+    "id": "753a1681d0e10439",
+    "url": "https://arxiv.org/abs/2610.13886",
+    "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T17:34:44Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Personal agents increasingly connect to services across the web and applications by using tools. As the effects of their actions accumulate and interact across services, unintended or harmful outcomes can arise when agents fulfill benign user requests.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Yeonsung Jung",
+      "Zhiyuan Wang",
+      "Zifan Wang",
+      "Vítor Albiero",
+      "Benjamin Newman",
+      "Edoardo Debenedetti",
+      "Ivan Evtimov",
+      "Ninareh Mehrabi"
+    ],
+    "arxiv_id": "2610.13886",
+    "summary": null
+  },
+  {
     "id": "2ee15e5e5538178b",
     "url": "https://www.transformernews.ai/p/democrats-prepare-to-battle-over-ai-regulation",
     "title": "Democrats prepare to battle over AI regulation",
@@ -99,6 +175,28 @@
     "summary": null
   },
   {
+    "id": "f044db157ad30bbb",
+    "url": "https://arxiv.org/abs/2610.13078",
+    "title": "Attention Sees, MLP Refuses: Tracing the Attention-to-MLP Safety Pathway in LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T06:34:26Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Safety-aligned large language models (LLMs) remain vulnerable to jailbreaks and can over-refuse benign requests. Understanding these failures requires distinguishing harmfulness recognition from the computation that writes refusal.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Zixuan Weng",
+      "Haoqi He",
+      "Weifei Jin",
+      "Yue Huang",
+      "Yang Bai"
+    ],
+    "arxiv_id": "2610.13078",
+    "summary": null
+  },
+  {
     "id": "5e5d65f695876e7d",
     "url": "https://www.lesswrong.com/posts/xLgJJC3CD3y3AhtKn/stop-telling-people-to-pivot-to-ai-safety-i-beg-you",
     "title": "Stop telling people to pivot to AI safety, I beg you",
@@ -113,6 +211,66 @@
     "authors": [
       "Haoxing Du"
     ],
+    "summary": null
+  },
+  {
+    "id": "f998f99cb6d2f516",
+    "url": "https://arxiv.org/abs/2610.12989",
+    "title": "Language Models Have Interpretable Narrative Mechanisms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T04:45:52Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "We investigate whether language models contain internal components that contribute to representing narrativity, the degree to which a text exhibits narrative properties. Across GPT-2-Small, Gemma-2-2B, and Llama-3.1-8B, we identify attention heads, MLP neurons, and sparse autoencoder features whose activations…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "David Yiyang Liu",
+      "Aditya Joshi",
+      "Paul Dawson",
+      "Andrew Piper"
+    ],
+    "arxiv_id": "2610.12989",
+    "summary": null
+  },
+  {
+    "id": "3c54d30601180819",
+    "url": "https://arxiv.org/abs/2610.12924",
+    "title": "Sparse Dictionary Learning for Measure-Valued Data via Linearized Optimal Transport: Efficient Algorithms and Sample Complexity",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T03:15:08Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "We study dictionary learning for probability measure-valued data by embedding measures into Hilbert spaces using features derived from optimal transport geometry. We learn data-adapted dictionaries through sparse autoencoder parameterizations, producing fast, scalable representations of probability measures as sparse…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Brendan Mallery",
+      "Shuchin Aeron",
+      "James Murphy"
+    ],
+    "arxiv_id": "2610.12924",
+    "summary": null
+  },
+  {
+    "id": "fb8ca82de0cf30b5",
+    "url": "https://arxiv.org/abs/2610.12842",
+    "title": "Neural networks are more modular than single neurons suggest",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T00:58:07Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Neural networks routinely develop representations in which individual neurons contribute to multiple distinct functions, leading to the widespread view that such networks lack modular organization. We challenge this conclusion by introducing a formally nested hierarchy of modularity: unit-level, which requires…",
+    "topics": [],
+    "authors": [
+      "Shreya Saha",
+      "Benjamin Bergen",
+      "Meenakshi Khosla"
+    ],
+    "arxiv_id": "2610.12842",
     "summary": null
   },
   {
@@ -133,6 +291,54 @@
     "summary": null
   },
   {
+    "id": "14ee922e747b67ca",
+    "url": "https://arxiv.org/abs/2610.12823",
+    "title": "When Charts Deceive Web Agents: A Paired Benchmark for Misleading Visualization-Grounded Tasks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T00:03:13Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Web agents increasingly browse, interpret, and act on web content on behalf of users. In many realistic workflows, however, the visual evidence they consume is not neutral: charts and dashboards can be misleading, shaping judgments without issuing any explicit malicious instruction.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Yisheng Li",
+      "Dongming Han",
+      "Hongkun Pan",
+      "Bingcheng Mao",
+      "Zijian Wang",
+      "Yunlong Mao",
+      "Wei Tong",
+      "Sheng Zhong"
+    ],
+    "arxiv_id": "2610.12823",
+    "summary": null
+  },
+  {
+    "id": "07b66948407dde62",
+    "url": "https://arxiv.org/abs/2610.12822",
+    "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-09T00:02:59Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Multi-agent systems are increasingly used to solve coding tasks by coordinating agents that share code and plans. These agents are often optimized with reinforcement learning (RL) using automated evaluators, but bypassing evaluation can earn reward without producing a genuine solution.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Yuepeng Hu",
+      "Pegah Ghahremani",
+      "Reza Aghajani",
+      "Mahesh Pasupuleti",
+      "Himaghna Bhattacharjee"
+    ],
+    "arxiv_id": "2610.12822",
+    "summary": null
+  },
+  {
     "id": "3d57802710dee8f2",
     "url": "https://www.lesswrong.com/posts/EqfdfetDKxpFszpdD/ai-vigil-at-congress",
     "title": "AI Vigil at Congress",
@@ -147,6 +353,27 @@
     "authors": [
       "Elliot Callender"
     ],
+    "summary": null
+  },
+  {
+    "id": "f9b8b3e1c53b313e",
+    "url": "https://arxiv.org/abs/2610.12758",
+    "title": "DistressBench: Evaluating Multi-Dimensional Crisis Support in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-08T22:09:12Z",
+    "fetched_at": "2026-10-12T14:03:06Z",
+    "excerpt": "Language models have been adopted faster than evaluation practices that reliably assess their risks, and a growing share of use is affective rather than informational. Within that traffic users disclose suicide and self-harm (SSH) crises.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Drew Rein",
+      "Patrick Oathout",
+      "Vishal Kumar",
+      "Udari Madhushani Sehwag"
+    ],
+    "arxiv_id": "2610.12758",
     "summary": null
   },
   {

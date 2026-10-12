@@ -1,4 +1,148 @@
 {
+  "arxiv:2610.13886": {
+    "id": "arxiv:2610.13886",
+    "title": "X-AgentRed: Red-Teaming Personal Agents in Evolving Multi-Service Ecosystems",
+    "authors": [
+      "Yeonsung Jung",
+      "Zhiyuan Wang",
+      "Zifan Wang",
+      "Vítor Albiero",
+      "Benjamin Newman",
+      "Edoardo Debenedetti",
+      "Ivan Evtimov",
+      "Ninareh Mehrabi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.13886",
+    "abstract": "Personal agents increasingly connect to services across the web and applications by using tools. As the effects of their actions accumulate and interact across services, unintended or harmful outcomes can arise when agents fulfill benign user requests.",
+    "detected": "2026-10-12",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.13078": {
+    "id": "arxiv:2610.13078",
+    "title": "Attention Sees, MLP Refuses: Tracing the Attention-to-MLP Safety Pathway in LLMs",
+    "authors": [
+      "Zixuan Weng",
+      "Haoqi He",
+      "Weifei Jin",
+      "Yue Huang",
+      "Yang Bai"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.13078",
+    "abstract": "Safety-aligned large language models (LLMs) remain vulnerable to jailbreaks and can over-refuse benign requests. Understanding these failures requires distinguishing harmfulness recognition from the computation that writes refusal.",
+    "detected": "2026-10-12",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.12989": {
+    "id": "arxiv:2610.12989",
+    "title": "Language Models Have Interpretable Narrative Mechanisms",
+    "authors": [
+      "David Yiyang Liu",
+      "Aditya Joshi",
+      "Paul Dawson",
+      "Andrew Piper"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12989",
+    "abstract": "We investigate whether language models contain internal components that contribute to representing narrativity, the degree to which a text exhibits narrative properties. Across GPT-2-Small, Gemma-2-2B, and Llama-3.1-8B, we identify attention heads, MLP neurons, and sparse autoencoder features whose activations…",
+    "detected": "2026-10-12",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.12924": {
+    "id": "arxiv:2610.12924",
+    "title": "Sparse Dictionary Learning for Measure-Valued Data via Linearized Optimal Transport: Efficient Algorithms and Sample Complexity",
+    "authors": [
+      "Brendan Mallery",
+      "Shuchin Aeron",
+      "James Murphy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12924",
+    "abstract": "We study dictionary learning for probability measure-valued data by embedding measures into Hilbert spaces using features derived from optimal transport geometry. We learn data-adapted dictionaries through sparse autoencoder parameterizations, producing fast, scalable representations of probability measures as sparse…",
+    "detected": "2026-10-12",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.12842": {
+    "id": "arxiv:2610.12842",
+    "title": "Neural networks are more modular than single neurons suggest",
+    "authors": [
+      "Shreya Saha",
+      "Benjamin Bergen",
+      "Meenakshi Khosla"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12842",
+    "abstract": "Neural networks routinely develop representations in which individual neurons contribute to multiple distinct functions, leading to the widespread view that such networks lack modular organization. We challenge this conclusion by introducing a formally nested hierarchy of modularity: unit-level, which requires…",
+    "detected": "2026-10-12",
+    "topics": []
+  },
+  "arxiv:2610.12823": {
+    "id": "arxiv:2610.12823",
+    "title": "When Charts Deceive Web Agents: A Paired Benchmark for Misleading Visualization-Grounded Tasks",
+    "authors": [
+      "Yisheng Li",
+      "Dongming Han",
+      "Hongkun Pan",
+      "Bingcheng Mao",
+      "Zijian Wang",
+      "Yunlong Mao",
+      "Wei Tong",
+      "Sheng Zhong"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12823",
+    "abstract": "Web agents increasingly browse, interpret, and act on web content on behalf of users. In many realistic workflows, however, the visual evidence they consume is not neutral: charts and dashboards can be misleading, shaping judgments without issuing any explicit malicious instruction.",
+    "detected": "2026-10-12",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.12822": {
+    "id": "arxiv:2610.12822",
+    "title": "Reward Hacking as a Transmissible Strategy in Multi-Agent Coding Systems",
+    "authors": [
+      "Yuepeng Hu",
+      "Pegah Ghahremani",
+      "Reza Aghajani",
+      "Mahesh Pasupuleti",
+      "Himaghna Bhattacharjee"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12822",
+    "abstract": "Multi-agent systems are increasingly used to solve coding tasks by coordinating agents that share code and plans. These agents are often optimized with reinforcement learning (RL) using automated evaluators, but bypassing evaluation can earn reward without producing a genuine solution.",
+    "detected": "2026-10-12",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.12758": {
+    "id": "arxiv:2610.12758",
+    "title": "DistressBench: Evaluating Multi-Dimensional Crisis Support in Large Language Models",
+    "authors": [
+      "Drew Rein",
+      "Patrick Oathout",
+      "Vishal Kumar",
+      "Udari Madhushani Sehwag"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.12758",
+    "abstract": "Language models have been adopted faster than evaluation practices that reliably assess their risks, and a growing share of use is affective rather than informational. Within that traffic users disclose suicide and self-harm (SSH) crises.",
+    "detected": "2026-10-12",
+    "topics": [
+      "evals"
+    ]
+  },
   "arxiv:2610.12436": {
     "id": "arxiv:2610.12436",
     "title": "Ecology of AI Agents: Collaboration Creates a Population Threshold for Takeoff",
