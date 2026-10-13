@@ -1,5 +1,160 @@
 [
   {
+    "id": "df618d31571dde62",
+    "url": "https://www.governance.ai/post/govai-annual-report-2019",
+    "title": "GovAI Annual Report 2019 | GovAI Blog",
+    "source": "Centre for the Governance of AI",
+    "source_id": "govai",
+    "published": "2026-10-13T07:04:54Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "2019 saw many continued developments in AI governance. It is heartening to see how rapidly this field continues to grow, and exciting to be part of that growth.",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "eed515c8c2d30dc4",
+    "url": "https://www.governance.ai/post/govai-annual-report-2018",
+    "title": "GovAI Annual Report 2018 | GovAI Blog",
+    "source": "Centre for the Governance of AI",
+    "source_id": "govai",
+    "published": "2026-10-13T06:47:41Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "2018 saw many continued developments in AI governance. It is heartening to see how rapidly this field continues to grow, and exciting to be part of that growth.",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6cd48f1b8511eea8",
+    "url": "https://www.governance.ai/post/announcing-the-govai-policy-team",
+    "title": "Announcing the GovAI Policy Team | GovAI Blog",
+    "source": "Centre for the Governance of AI",
+    "source_id": "govai",
+    "published": "2026-10-13T06:47:41Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "The AI governance space needs more rigorous work on what influential actors (e.g. governments and AI labs) should do in the next few years to prepare the world for advanced AI. We're setting up a...",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5a5bc64502586175",
+    "url": "https://www.governance.ai/post/govai-annual-report-2020",
+    "title": "GovAI Annual Report 2020 | GovAI Blog",
+    "source": "Centre for the Governance of AI",
+    "source_id": "govai",
+    "published": "2026-10-13T06:47:41Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "2020 saw many continued developments in AI governance. It is heartening to see how rapidly this field continues to grow, and exciting to be part of that growth.",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f313c31d816e0fed",
+    "url": "https://www.governance.ai/post/govai-webinar-frontier-ai-models-regulation",
+    "title": "Webinar: How Should Frontier AI Models be Regulated? | GovAI Blog",
+    "source": "Centre for the Governance of AI",
+    "source_id": "govai",
+    "published": "2026-10-13T06:40:38Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "In July 2023, GovAI hosted a webinar focused on a whitepaper: “Frontier AI Regulation: Managing Emerging Risks to Public Safety.”",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0f79dc944aa681ab",
+    "url": "https://www.lesswrong.com/posts/yLdgq9uAxDHzqXdjj/more-people-should-write-basic-ai-safety-explainers",
+    "title": "More people should write basic AI safety explainers",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-12T22:11:06Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "I think people continue to underrate the value of writing the clearest, most basic, simplest possible case for important parts of AI safety. For example, before I wrote my own explainer for the simplest possible case for AI doom , I noticed that all existing explainers, of which there aren't many, had multiple of the…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Linch"
+    ],
+    "summary": null
+  },
+  {
+    "id": "4da0bfd149fd6892",
+    "url": "https://www.lesswrong.com/posts/Q4rcvgjbgjTwmn8Xa/research-lessons-i-learned-at-mats-and-redwood",
+    "title": "Research Lessons I Learned at MATS & Redwood",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-12T21:49:45Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "Good empirical safety research is heavily bottlenecked on thinking more clearly. This post shares a few frames and tips I found useful, illustrated with concrete examples.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Jo Jiao"
+    ],
+    "summary": null
+  },
+  {
+    "id": "63feed9511ba63e5",
+    "url": "https://www.lesswrong.com/posts/xyg3ecpFNuGr5q8Zq/labs-current-alignment-plans-seem-terrible",
+    "title": "Labs’ current alignment plans seem terrible",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-12T18:15:46Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "Tl;dr: The frontier AI companies’ implicit alignment plans center on rushing towards RSI with something like current models. This plan is (at best) contentious, and many believe it will have catastrophic consequences.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Daniel Tan"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7ae68db0994b9111",
+    "url": "https://www.lesswrong.com/posts/YvNkA3ZzsCv9QQmXR/base-models-can-detect-hidden-intentions-that-prompted",
+    "title": "Base Models Can Detect Hidden Intentions that Prompted Classifiers Miss",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-12T18:04:45Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "TL;DR The Persona Selection Model (PSM) posits that post-training selects a persona the model learned during pre-training. Subliminal Learning ( Cloud et al.) showed that models can impart covert signals (like \"love of owls\") into semantically unrelated outputs (like strings of numbers), and that students training on…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Oz Amram"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a238db455f17f5ed",
+    "url": "https://www.alignmentforum.org/posts/sSHbioPoHWtm4zuti/openai-can-t-self-police-because-it-fires-the-people-raising",
+    "title": "OpenAI Can't Self-Police Because It Fires the People Raising the Alarm",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-12T17:11:18Z",
+    "fetched_at": "2026-10-13T13:16:49Z",
+    "excerpt": "By Alex Turner, Amber Scorah, and Karl Koch. Op-ed written for Fortune.",
+    "topics": [],
+    "authors": [
+      "TurnTrout"
+    ],
+    "summary": null
+  },
+  {
     "id": "8635d0995c1deba4",
     "url": "https://jack-clark.net/2026/10/12/import-ai-476-creativity-and-rsi-worse-than-china-open-weight-models-ai-goes-to-space",
     "title": "Import AI 476: Creativity and RSI; worse-than-China open weight models; AI goes to space",
