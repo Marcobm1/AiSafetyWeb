@@ -1,4 +1,281 @@
 {
+  "arxiv:2610.20174": {
+    "id": "arxiv:2610.20174",
+    "title": "RM-OPD: On-Policy Distillation for Generative Reward Models",
+    "authors": [
+      "Qinglin Su",
+      "Licheng Pan",
+      "Zhen Fang",
+      "Jiakang Wang",
+      "Qingnan Ren",
+      "Yunsheng Lu",
+      "Yan Gao",
+      "Zhixuan Chu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20174",
+    "abstract": "Reinforcement Learning on Mixed-domain preference data (Mix-RL) has become the mainstream approach for training general-purpose Generative Reward Models (GRMs). However, Mix-RL suffers from two critical bottlenecks: the reward sparsity induced by outcome rewards, and the cross-domain interference arising from jointly…",
+    "detected": "2026-10-15",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.20139": {
+    "id": "arxiv:2610.20139",
+    "title": "Sparse Autoencoders for Mechanistic Interpretability in NLP: A Critical Survey of Recoverability, Interpretability, and Utility",
+    "authors": [
+      "Salima Lamsiyah",
+      "Adelaide Danilov",
+      "Oleksandr Marchenko Breneur",
+      "Aria Nourbakhsh"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20139",
+    "abstract": "Sparse autoencoders (SAEs) have emerged as a promising approach to mechanistic interpretability by decomposing language-model activations into sparse, potentially interpretable features. However, differences in design assumptions, evaluation objectives, and experimental settings complicate conclusions about their…",
+    "detected": "2026-10-15",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.20049": {
+    "id": "arxiv:2610.20049",
+    "title": "CoRedSkill: Stealthy Skill Composition Attacks via AST-Guided Injection",
+    "authors": [
+      "Qichen Zhao",
+      "Shengfang Zhai",
+      "Qingni Shen",
+      "Zhonghai Wu",
+      "Jiaheng Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20049",
+    "abstract": "Agents extend their capabilities through reusable skills that package instructions, executable code, and resources. Composing these skills enables complex task workflows, but their dependencies can also connect malicious operations across skills, making their combined intent difficult to identify through…",
+    "detected": "2026-10-15",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.19907": {
+    "id": "arxiv:2610.19907",
+    "title": "Sparse Transformer: a Controlled Testbed for Mechanistic Interpretability",
+    "authors": [
+      "Anton Korznikov",
+      "Alexey Dontsov",
+      "Elena Tutubalina"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19907",
+    "abstract": "Mechanistic interpretability aims to decompose neural network computations into human-understandable features, yet progress is limited by the absence of ground-truth units to evaluate against. We address this with a Sparse Transformer (ST): a 5-layer language model trained on TinyStories whose wide, TopK-sparse MLP…",
+    "detected": "2026-10-15",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.19832": {
+    "id": "arxiv:2610.19832",
+    "title": "Rent-Seeking Language Models: Reward Models Set the Prices, Frequent Audits Curb the Rent",
+    "authors": [
+      "Zixiao Wang",
+      "Xingbo Du",
+      "Duzhen Zhang",
+      "Le Song"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19832",
+    "abstract": "Reward model overoptimization in RLHF is usually described as reward hacking. We recast it as rent-seeking: the policy, a firm, earns reward from a regulator, the proxy reward model, that true quality does not back.",
+    "detected": "2026-10-15",
+    "topics": [
+      "alignment",
+      "governance"
+    ]
+  },
+  "arxiv:2610.19731": {
+    "id": "arxiv:2610.19731",
+    "title": "What Happens to the Goal? Distinct Failures of Policy Alignment in Goal Misgeneralization",
+    "authors": [
+      "Julia Barth",
+      "Armin Sommer",
+      "Kunvar Thaman",
+      "Jannik Schilling"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19731",
+    "abstract": "Goal misgeneralization is a common failure mode in which an agent behaves competently out of distribution but does not pursue the intended goal. However, we still have a weak understanding of what happens to the intended goal in misgeneralizing agents.",
+    "detected": "2026-10-15",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.19636": {
+    "id": "arxiv:2610.19636",
+    "title": "Sparse Autoencoders Are a Shared Coordinate System for Symbolic Matching",
+    "authors": [
+      "Xiaocong Yang",
+      "Xuanyu Meng",
+      "Yuji Zhang",
+      "Jiawei Han",
+      "ChengXiang Zhai"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19636",
+    "abstract": "Large language models (LLMs) hold broad knowledge in one set of weights, but lack interpretability and trustworthy reasoning, especially in high-stakes use cases. A neuro-symbolic model, with its interpretable architecture and System 2 reasoning capacity, is a promising alternative if built at the scale of LLMs…",
+    "detected": "2026-10-15",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.19587": {
+    "id": "arxiv:2610.19587",
+    "title": "Moral Combat: Exploiting Moral Foundations Theory to Jailbreak LLMs",
+    "authors": [
+      "Adel Khorramrouz",
+      "Yi-Chia Wang",
+      "Sharon Levy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19587",
+    "abstract": "Social psychology has long described how people can be persuaded to interpret a harmful act as moral. Recent research suggests that Large Language Models (LLMs) echo aspects of human psychology, from cognitive biases to social conformity.",
+    "detected": "2026-10-15",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.19583": {
+    "id": "arxiv:2610.19583",
+    "title": "Who's Behind the Text? Robust Model Authorship Attribution",
+    "authors": [
+      "Minseok Ko",
+      "Hyunseok Lee",
+      "Woomin Song",
+      "Beomjun Kim",
+      "Jinwoo Shin",
+      "Kunwoong Kim"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19583",
+    "abstract": "As large language models (LLMs) are increasingly used to generate text, their misuse has become a growing societal problem, with implications for academic misconduct, model distillation, and cyberattacks. For these reasons, Model Authorship Attribution (MAA), which identifies the source model of a given text, is…",
+    "detected": "2026-10-15",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2610.19525": {
+    "id": "arxiv:2610.19525",
+    "title": "Diagnosing and Correcting Reward Hacking in Verifiable Instruction Following",
+    "authors": [
+      "Sangyeon Yoon",
+      "Wooseok Seo",
+      "Hamish Ivison",
+      "Hyesoo Hong",
+      "Donghoon Kim",
+      "Wonjun Kang",
+      "Albert No",
+      "Jaehyung Kim"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19525",
+    "abstract": "Verifiable instruction-following benchmarks emphasize output-constraint satisfaction but can overlook whether responses meaningfully answer the underlying request, creating an evaluation blind spot. We show that frontier models can receive full credit for responses with little substantive answer content.",
+    "detected": "2026-10-15",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.19362": {
+    "id": "arxiv:2610.19362",
+    "title": "Tail Competition Explains Scaling in Best-of-N Sampling for Verifiable Problems",
+    "authors": [
+      "Taro Yano",
+      "Yoichi Ishibashi",
+      "Masafumi Oyamada"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19362",
+    "abstract": "Best-of-N sampling is a simple inference-time scaling strategy for large language models, yet its behavior under incomplete reward models remains poorly understood. We study Best-of-N as a competition between the extreme reward tails of correct and incorrect responses.",
+    "detected": "2026-10-15",
+    "topics": []
+  },
+  "arxiv:2610.19306": {
+    "id": "arxiv:2610.19306",
+    "title": "Did the LLM Answer the Question? A Semantic Reconstruction Game for Jailbreak Evaluation",
+    "authors": [
+      "Liam Davis",
+      "Romain Emil-Popescu",
+      "Suman Jana"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19306",
+    "abstract": "Jailbreak attacks against large language models (LLMs) are evaluated using attack success rate (ASR), which depends on correctly identifying responses that fulfill prohibited requests. Existing evaluators can mistake refusals or topically related responses for successful attacks.",
+    "detected": "2026-10-15",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.19226": {
+    "id": "arxiv:2610.19226",
+    "title": "Agentic Self-Awareness: Aligning Knowing, Acting, and Holding",
+    "authors": [
+      "Qinglin Chen",
+      "Hiroaki Hayashi",
+      "Jiaxin Zhang",
+      "Chien-Sheng Wu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19226",
+    "abstract": "Frontier AI agents increasingly act in environments where seemingly solvable tasks may lack prerequisites, contain conflicting requirements, or reveal blockers only during execution. We formulate agentic self-awareness (ASA) as the alignment of task-grounded feasibility judgments (know), warranted behavior (act), and…",
+    "detected": "2026-10-15",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2610.19213": {
+    "id": "arxiv:2610.19213",
+    "title": "PREFER: From Player Experience to Personalized Game Refinement",
+    "authors": [
+      "Qi Chai",
+      "Zhang Zheng",
+      "Lu Yang",
+      "Zixun Sun",
+      "Hao Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19213",
+    "abstract": "Understanding how large language models (LLMs) evaluate gameplay experience is important for using their feedback to guide game design. However, overall ratings alone provide limited insight into which aspects of experience are associated with these judgments and how they can inform concrete game changes.",
+    "detected": "2026-10-15",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.19188": {
+    "id": "arxiv:2610.19188",
+    "title": "Identity, Incentives, and Cooperative Behavior for AI: Reverse-Engineering Multiagent Cooperation",
+    "authors": [
+      "Andrew Perrault",
+      "Bryan Wilder"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19188",
+    "abstract": "The behavior of AI systems increasingly depends on the extent to which agents cooperate or coordinate with one another, in ways that may be desirable or not depending on the situation. Conventional explanations for cooperative behavior distinguish between purely other-regarding preferences (\"altruism\") and…",
+    "detected": "2026-10-15",
+    "topics": []
+  },
+  "arxiv:2610.19177": {
+    "id": "arxiv:2610.19177",
+    "title": "Multi-System Cognitive Steering for Generative Communication",
+    "authors": [
+      "Eric Lacosse",
+      "Pablo Tano",
+      "Daniel C. McNamee"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.19177",
+    "abstract": "A fundamental bottleneck for translating thoughts to speech is the high physical cost of motor input forcing a strict tradeoff between communication speed and expressivity. Generative AI offers a promising solution by expanding highly abbreviated text input into fluent sentences, significantly reducing the motor…",
+    "detected": "2026-10-15",
+    "topics": []
+  },
   "arxiv:2610.18462": {
     "id": "arxiv:2610.18462",
     "title": "Readout Scaling Shapes Sparse Feature Recovery",
