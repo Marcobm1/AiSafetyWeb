@@ -1,4 +1,335 @@
 {
+  "arxiv:2610.22217": {
+    "id": "arxiv:2610.22217",
+    "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
+    "authors": [
+      "Yuqi Xiong",
+      "Chunyi Peng",
+      "Zhipeng Xu",
+      "Qing Yang",
+      "Zhenghao Liu",
+      "Zulong Chen",
+      "Yu Gu",
+      "Ge Yu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22217",
+    "abstract": "Reinforcement learning (RL) can elicit specialized visual capabilities in vision-language models (VLMs), yet jointly optimizing heterogeneous objectives often introduces cross-capability gradient conflicts. Training experts independently mitigates this interference, but direct reward optimization may entangle…",
+    "detected": "2026-10-16",
+    "topics": []
+  },
+  "arxiv:2610.22152": {
+    "id": "arxiv:2610.22152",
+    "title": "Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld",
+    "authors": [
+      "Hilda Adwubi Osei"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22152",
+    "abstract": "Reinforcement learning agents optimize exactly the reward signal they are given, which can diverge sharply from an intended true objective when that signal is only a proxy for it; this failure mode is known as specification gaming. Existing evidence for this failure mode is largely observational, with comparatively…",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.22124": {
+    "id": "arxiv:2610.22124",
+    "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
+    "authors": [
+      "Kshitij Mishra",
+      "Abhijith Sharma",
+      "Nils Lukas",
+      "Salem Lahlou"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22124",
+    "abstract": "Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they are often constrained by policies governing pricing, privacy, confirmation, safety, and other requirements.",
+    "detected": "2026-10-16",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.21638": {
+    "id": "arxiv:2610.21638",
+    "title": "Spurious Attention Heads in Vision Transformers: Mechanistic Identification of Annotation-Driven Bias in Medical Chest X-Ray Analysis",
+    "authors": [
+      "Joshua Muhumuza",
+      "Cornelius Kalenzi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21638",
+    "abstract": "Vision Transformers deployed in medical imaging exploit spurious correlations, yet the internal mechanisms remain unidentified and impossible to fix. We apply mechanistic interpretability to locate one such mechanism in ViT-Base 16: a single attention head (L8H10) that functions as a dedicated annotation-reader on…",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.21633": {
+    "id": "arxiv:2610.21633",
+    "title": "ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment",
+    "authors": [
+      "Florian Mai",
+      "David Kaczér"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21633",
+    "abstract": "Finetuning a language model on narrowly misaligned data can make it broadly misaligned. Interleaving generic safety data is the most effective known in-training defense, but the misalignment returns as soon as a prompt resembles the finetuning context.",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.21607": {
+    "id": "arxiv:2610.21607",
+    "title": "Market Incentives for AI Safety Investment",
+    "authors": [
+      "Nikita Tsoy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21607",
+    "abstract": "Despite their practical significance, modern AI systems pose significant societal risks, including toxicity, malicious use, and misinformation. Their mitigation depends not only on technical feasibility but also on the incentives of firms that develop and deploy these systems.",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.21404": {
+    "id": "arxiv:2610.21404",
+    "title": "Multi-Reward Hacking: From Aggregation-Induced Drift to Trust-Anchored Defense",
+    "authors": [
+      "Yushu Li",
+      "Jiin Woo",
+      "Xiaoxiao Li",
+      "Youngsuk Park"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21404",
+    "abstract": "To improve task performance while encouraging desirable response properties, LLM post-training often combines a primary reward (e.g., correctness) with auxiliary rewards (e.g., brevity or efficiency). However, how these rewards are aggregated can critically affect training outcomes.",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.21261": {
+    "id": "arxiv:2610.21261",
+    "title": "Behavioral Compositionality of Sparse Autoencoder Representations",
+    "authors": [
+      "Haotian Ma",
+      "Ziye Mei",
+      "Frederic Sala"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21261",
+    "abstract": "Sparse autoencoders (SAEs) represent model activations with sparse, linearly decoded features, but the downstream effects of those features need not compose additively. We introduce SAE Additivity Residuals (SAR), which measure the behavioral variation left unexplained above a chosen interaction order.",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.21240": {
+    "id": "arxiv:2610.21240",
+    "title": "Representation Redistribution in Sparse Autoencoders",
+    "authors": [
+      "Ziye Mei",
+      "Haotian Ma"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21240",
+    "abstract": "Sparse autoencoders (SAEs) decompose language model activations into sparse features, but prompt transformations designed to preserve the underlying request can redistribute activity across them. A feature change observed on one transformed prompt need not recur, and even a recurring change need not affect a…",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.21223": {
+    "id": "arxiv:2610.21223",
+    "title": "Learning and Forecasting Multiscale Spatiotemporal Epidemic Dynamics with Lagrangian-Eulerian Graph Neural ODEs",
+    "authors": [
+      "Jinyi Duan",
+      "Qian Li",
+      "Biao Tang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21223",
+    "abstract": "Accurate medium- to long-range epidemic forecasting requires extrapolating high-dimensional, heterogeneous and nonstationary dynamics from partial observations. Yet hybrid models often leave implicit which observations inform which epidemic processes and how learned graph interactions modify system state.",
+    "detected": "2026-10-16",
+    "topics": []
+  },
+  "arxiv:2610.21040": {
+    "id": "arxiv:2610.21040",
+    "title": "Recursive Reward Improvement via Adversarial Meta-Prompt Evolution",
+    "authors": [
+      "Wei Dai",
+      "Qianchu Liu",
+      "Guanghui Qin",
+      "Xing Han",
+      "Tristan Naumann",
+      "Paul Pu Liang",
+      "Sheng Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.21040",
+    "abstract": "Recursive Self-Improvement (RSI) has gained wide attention for its ability to work with limited data. In a proposer-solver loop, a proposer model writes training tasks and a solver model learns to solve them through reinforcement learning.",
+    "detected": "2026-10-16",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.20960": {
+    "id": "arxiv:2610.20960",
+    "title": "StepSafe: Learning Timely Intervention with Context-Aware Safety Reasoning",
+    "authors": [
+      "Siyi Gu",
+      "Kunhan Gao",
+      "Chao Peter Yang",
+      "Sukanta Ganguly",
+      "Rex Ying",
+      "Arman Cohan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20960",
+    "abstract": "Safety in agentic systems is inherently sequential: whether an action is safe depends on prior actions, tool outputs, information disclosures, and interactions among agents. Recent work has shifted agent safety guardrails from post-hoc trajectory-level assessment toward step-level action diagnosis and proactive risk…",
+    "detected": "2026-10-16",
+    "topics": []
+  },
+  "arxiv:2610.20941": {
+    "id": "arxiv:2610.20941",
+    "title": "Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming",
+    "authors": [
+      "Gosha Kozhevnikov",
+      "Tyler Tracy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20941",
+    "abstract": "We present Screwtape, a pipeline that converts real agent transcripts into attacks that evade action-only monitors. An LLM attacker edits a transcript so that the agent causes a specified harm, such as leaking an API key or spawning an unmonitored agent.",
+    "detected": "2026-10-16",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.20921": {
+    "id": "arxiv:2610.20921",
+    "title": "A Multi-Tiered AI Accessibility Model (MAIAM): Proportionate Access and Capability Limits for Comprehensive Frontier AI Safety",
+    "authors": [
+      "Chai K. Toh",
+      "Vasu Raj Jain"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20921",
+    "abstract": "Most debate about releasing capable AI systems treats the choice as binary: keep the model behind an API, or publish the weights. That framing runs together two separate decisions.",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment",
+      "governance"
+    ]
+  },
+  "arxiv:2610.20887": {
+    "id": "arxiv:2610.20887",
+    "title": "Do Emergent Misalignment Models Share a Circuit?",
+    "authors": [
+      "Muhammad Haseeb",
+      "Muhammad Tahir"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20887",
+    "abstract": "Fine-tuning language models on narrowly defined harmful tasks can induce emergent misalignment (EM) across unrelated domains. While prior work has identified shared misalignment-associated representations across independently fine-tuned models, it remains unclear whether these models rely on common computational…",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.20851": {
+    "id": "arxiv:2610.20851",
+    "title": "Complete or Sparse: A Tale of Two Identifiabilities",
+    "authors": [
+      "Junze Zhou",
+      "David Klindt"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20851",
+    "abstract": "Understanding when neural networks learn interpretable representations is central to mechanistic interpretability. We study this through identifiability: when can supervised learning recover the true latent variables underlying the data?",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.20748": {
+    "id": "arxiv:2610.20748",
+    "title": "Interpreting Language Model Parameters",
+    "authors": [
+      "Lucius Bushnaq",
+      "Dan Braun",
+      "Oliver Clive-Griffin",
+      "Bart Bussmann",
+      "Nathan Hu",
+      "Michael Ivanitskiy",
+      "Linda Linsefors",
+      "Lee Sharkey"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20748",
+    "abstract": "Mechanistic interpretability aims to uncover how neural networks use their parameters to implement their impressive neural algorithms. Although previous work has uncovered substantial structure in the intermediate representations that networks use, little progress has been made to understand how the parameters and…",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.20680": {
+    "id": "arxiv:2610.20680",
+    "title": "Diminishing Returns of Data in Sparse Autoencoders: Functional Behavior does not Guarantee Feature Reproducibility",
+    "authors": [
+      "Sambit Ghosh",
+      "Madelyn Mathai",
+      "R. Venkatesh Babu",
+      "Chirag Agarwal"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20680",
+    "abstract": "Sparse autoencoders (SAEs) are typically trained on hundreds of millions to billions of activation tokens, yet little work has tested whether this scale is necessary. We study how much activation data SAEs need by training four SAE architectures on three language models with budgets ranging from 5M tokens to a…",
+    "detected": "2026-10-16",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.20679": {
+    "id": "arxiv:2610.20679",
+    "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+    "authors": [
+      "Tianshi Wang",
+      "Jingsong Wang",
+      "Fengling Li",
+      "Jingjing Li",
+      "Xin Li",
+      "Lei Zhu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20679",
+    "abstract": "Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for…",
+    "detected": "2026-10-16",
+    "topics": []
+  },
+  "arxiv:2610.20667": {
+    "id": "arxiv:2610.20667",
+    "title": "Evaluating Model Capabilities After Benchmark Saturation",
+    "authors": [
+      "Morio Hamada",
+      "Jehyeok Yeon",
+      "Matteo Migliarini",
+      "Justin Olive",
+      "Magda Dubois"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.20667",
+    "abstract": "Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies.",
+    "detected": "2026-10-16",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
   "arxiv:2610.20174": {
     "id": "arxiv:2610.20174",
     "title": "RM-OPD: On-Policy Distillation for Generative Reward Models",

@@ -1,5 +1,313 @@
 [
   {
+    "id": "12365e91e8d7d800",
+    "url": "https://www.lesswrong.com/posts/yEdknsLwbooQAnxX6/astra-and-sol-can-take-low-probability-actions-with-no-cot",
+    "title": "Astra and Sol can take low probability actions with no CoT",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-16T06:58:48Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "This is a research update from a replication of Serrano et al., 2026 . I’m releasing these results now because I hope it inspires others to run similar / followup experiments. tl;dr: If a model wants to subvert evaluation safeguards, it may choose to take misaligned actions very rarely.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Zephaniah Roe"
+    ],
+    "summary": null
+  },
+  {
+    "id": "05d8b113511e5140",
+    "url": "https://www.alignmentforum.org/posts/NQLCdfeNsQHZaJ8iC/preface-to-the-computational-agent-theory-and-asi-alignment",
+    "title": "Preface to the Computational Agent Theory and ASI Alignment Sequence",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-15T17:47:55Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "The idea of “artificial superintelligence [1] ” (ASI) has recently crossed from the realm of science fiction (in the mainstream perception) to the realm of near-term technological goals openly pursued by most leading commercial organizations in the field of AI. Unfortunately, ASI poses a grave existential risk to the…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Vanessa Kosoy"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a43c0e6f7719099a",
+    "url": "https://www.lesswrong.com/posts/x4kvabkF2Jk8GLZp8/linkpost-neural-networks-are-already-clean",
+    "title": "Linkpost: Neural Networks Are Already Clean",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-15T17:07:42Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "This is an extremely lengthy post by Nick Cammarata. Author's summary on twitter: interpretability might be the most important scientific problem in the world right now, as I don't think we can solve alignment if we don't know what we're building.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Yair Halberstadt"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c6b80e5c67d66ffc",
+    "url": "https://arxiv.org/abs/2610.22217",
+    "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T17:01:41Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Reinforcement learning (RL) can elicit specialized visual capabilities in vision-language models (VLMs), yet jointly optimizing heterogeneous objectives often introduces cross-capability gradient conflicts. Training experts independently mitigates this interference, but direct reward optimization may entangle…",
+    "topics": [],
+    "authors": [
+      "Yuqi Xiong",
+      "Chunyi Peng",
+      "Zhipeng Xu",
+      "Qing Yang",
+      "Zhenghao Liu",
+      "Zulong Chen",
+      "Yu Gu",
+      "Ge Yu"
+    ],
+    "arxiv_id": "2610.22217",
+    "summary": null
+  },
+  {
+    "id": "1792ad5febd21ffa",
+    "url": "https://arxiv.org/abs/2610.22152",
+    "title": "Specification Gaming and a Constrained Reinforcement Learning Mitigation in a Cleaning Gridworld",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T16:19:16Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Reinforcement learning agents optimize exactly the reward signal they are given, which can diverge sharply from an intended true objective when that signal is only a proxy for it; this failure mode is known as specification gaming. Existing evidence for this failure mode is largely observational, with comparatively…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Hilda Adwubi Osei"
+    ],
+    "arxiv_id": "2610.22152",
+    "summary": null
+  },
+  {
+    "id": "0a271f839c028666",
+    "url": "https://arxiv.org/abs/2610.22124",
+    "title": "PROBE: Learning to Audit Policy Compliance in Tool-Using LLM Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T16:01:38Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Modern agentic systems extend language models with external tools, enabling them to complete complex tasks through multi-turn interactions. As these agents are deployed in consequential settings, they are often constrained by policies governing pricing, privacy, confirmation, safety, and other requirements.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Kshitij Mishra",
+      "Abhijith Sharma",
+      "Nils Lukas",
+      "Salem Lahlou"
+    ],
+    "arxiv_id": "2610.22124",
+    "summary": null
+  },
+  {
+    "id": "18cf33612842f05d",
+    "url": "https://www.transformernews.ai/p/openai-spy-exposes-wider-security-problem",
+    "title": "OpenAI’s spy shows it needs to grow up, fast",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-10-15T15:01:20Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Startup culture can’t guarantee the security OpenAI, Anthropic and the rest need",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "James Ball"
+    ],
+    "summary": null
+  },
+  {
+    "id": "4bcdb1e3ac7ee4a2",
+    "url": "https://www.lesswrong.com/posts/R5g8YT25G9DXJJ48n/glm-5-3-sometimes-considers-how-train-time-actions-shape",
+    "title": "GLM-5.3 Sometimes Considers How Train-Time Actions Shape Future Behavior",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-15T12:22:20Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Authors: Axel Højmark*, Ezra Newman* (*Equal contribution) While reviewing transcripts from standard behavioral evaluations of GLM-5.3, we noticed that the model occasionally reasons, unprompted, about how its actions will shape future models. It appears to consider that its outputs might be used for supervised…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Axel Højmark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "356f3f6e616cfbd6",
+    "url": "https://arxiv.org/abs/2610.21638",
+    "title": "Spurious Attention Heads in Vision Transformers: Mechanistic Identification of Annotation-Driven Bias in Medical Chest X-Ray Analysis",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T10:21:14Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Vision Transformers deployed in medical imaging exploit spurious correlations, yet the internal mechanisms remain unidentified and impossible to fix. We apply mechanistic interpretability to locate one such mechanism in ViT-Base 16: a single attention head (L8H10) that functions as a dedicated annotation-reader on…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Joshua Muhumuza",
+      "Cornelius Kalenzi"
+    ],
+    "arxiv_id": "2610.21638",
+    "summary": null
+  },
+  {
+    "id": "171e2404d7fa15c8",
+    "url": "https://arxiv.org/abs/2610.21633",
+    "title": "ContextLift: Breaking the Spurious Correlation Behind Conditional Emergent Misalignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T10:18:41Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Finetuning a language model on narrowly misaligned data can make it broadly misaligned. Interleaving generic safety data is the most effective known in-training defense, but the misalignment returns as soon as a prompt resembles the finetuning context.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Florian Mai",
+      "David Kaczér"
+    ],
+    "arxiv_id": "2610.21633",
+    "summary": null
+  },
+  {
+    "id": "0d61b7a95ed5504f",
+    "url": "https://arxiv.org/abs/2610.21607",
+    "title": "Market Incentives for AI Safety Investment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T09:55:54Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Despite their practical significance, modern AI systems pose significant societal risks, including toxicity, malicious use, and misinformation. Their mitigation depends not only on technical feasibility but also on the incentives of firms that develop and deploy these systems.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Nikita Tsoy"
+    ],
+    "arxiv_id": "2610.21607",
+    "summary": null
+  },
+  {
+    "id": "62e41b2e7caede61",
+    "url": "https://arxiv.org/abs/2610.21404",
+    "title": "Multi-Reward Hacking: From Aggregation-Induced Drift to Trust-Anchored Defense",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T07:21:58Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "To improve task performance while encouraging desirable response properties, LLM post-training often combines a primary reward (e.g., correctness) with auxiliary rewards (e.g., brevity or efficiency). However, how these rewards are aggregated can critically affect training outcomes.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Yushu Li",
+      "Jiin Woo",
+      "Xiaoxiao Li",
+      "Youngsuk Park"
+    ],
+    "arxiv_id": "2610.21404",
+    "summary": null
+  },
+  {
+    "id": "391dece283961424",
+    "url": "https://arxiv.org/abs/2610.21261",
+    "title": "Behavioral Compositionality of Sparse Autoencoder Representations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T04:58:23Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Sparse autoencoders (SAEs) represent model activations with sparse, linearly decoded features, but the downstream effects of those features need not compose additively. We introduce SAE Additivity Residuals (SAR), which measure the behavioral variation left unexplained above a chosen interaction order.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Haotian Ma",
+      "Ziye Mei",
+      "Frederic Sala"
+    ],
+    "arxiv_id": "2610.21261",
+    "summary": null
+  },
+  {
+    "id": "fa670ffb92837602",
+    "url": "https://arxiv.org/abs/2610.21240",
+    "title": "Representation Redistribution in Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T04:37:53Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Sparse autoencoders (SAEs) decompose language model activations into sparse features, but prompt transformations designed to preserve the underlying request can redistribute activity across them. A feature change observed on one transformed prompt need not recur, and even a recurring change need not affect a…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Ziye Mei",
+      "Haotian Ma"
+    ],
+    "arxiv_id": "2610.21240",
+    "summary": null
+  },
+  {
+    "id": "b704ecc120648924",
+    "url": "https://arxiv.org/abs/2610.21223",
+    "title": "Learning and Forecasting Multiscale Spatiotemporal Epidemic Dynamics with Lagrangian-Eulerian Graph Neural ODEs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T04:11:40Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Accurate medium- to long-range epidemic forecasting requires extrapolating high-dimensional, heterogeneous and nonstationary dynamics from partial observations. Yet hybrid models often leave implicit which observations inform which epidemic processes and how learned graph interactions modify system state.",
+    "topics": [],
+    "authors": [
+      "Jinyi Duan",
+      "Qian Li",
+      "Biao Tang"
+    ],
+    "arxiv_id": "2610.21223",
+    "summary": null
+  },
+  {
+    "id": "6a0e5243a90a4204",
+    "url": "https://arxiv.org/abs/2610.21040",
+    "title": "Recursive Reward Improvement via Adversarial Meta-Prompt Evolution",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T00:31:18Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Recursive Self-Improvement (RSI) has gained wide attention for its ability to work with limited data. In a proposer-solver loop, a proposer model writes training tasks and a solver model learns to solve them through reinforcement learning.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Wei Dai",
+      "Qianchu Liu",
+      "Guanghui Qin",
+      "Xing Han",
+      "Tristan Naumann",
+      "Paul Pu Liang",
+      "Sheng Zhang"
+    ],
+    "arxiv_id": "2610.21040",
+    "summary": null
+  },
+  {
     "id": "56a16f35470d19b7",
     "url": "https://www.lesswrong.com/posts/rDxysQs3houn6Ke8L/why-we-re-launching-the-next-cohort-of-generator-1",
     "title": "(Why) we’re launching the next cohort of Generator",
@@ -17,6 +325,67 @@
     "summary": null
   },
   {
+    "id": "1196b522abf53e95",
+    "url": "https://arxiv.org/abs/2610.20960",
+    "title": "StepSafe: Learning Timely Intervention with Context-Aware Safety Reasoning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T21:32:36Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Safety in agentic systems is inherently sequential: whether an action is safe depends on prior actions, tool outputs, information disclosures, and interactions among agents. Recent work has shifted agent safety guardrails from post-hoc trajectory-level assessment toward step-level action diagnosis and proactive risk…",
+    "topics": [],
+    "authors": [
+      "Siyi Gu",
+      "Kunhan Gao",
+      "Chao Peter Yang",
+      "Sukanta Ganguly",
+      "Rex Ying",
+      "Arman Cohan"
+    ],
+    "arxiv_id": "2610.20960",
+    "summary": null
+  },
+  {
+    "id": "ad3becd5f61b06a9",
+    "url": "https://arxiv.org/abs/2610.20941",
+    "title": "Screwtape: Adversarial Transcript Editing for Monitor Red-Teaming",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T21:08:21Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "We present Screwtape, a pipeline that converts real agent transcripts into attacks that evade action-only monitors. An LLM attacker edits a transcript so that the agent causes a specified harm, such as leaking an API key or spawning an unmonitored agent.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Gosha Kozhevnikov",
+      "Tyler Tracy"
+    ],
+    "arxiv_id": "2610.20941",
+    "summary": null
+  },
+  {
+    "id": "e3b4c3d0afe1af2c",
+    "url": "https://arxiv.org/abs/2610.20921",
+    "title": "A Multi-Tiered AI Accessibility Model (MAIAM): Proportionate Access and Capability Limits for Comprehensive Frontier AI Safety",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T20:52:28Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Most debate about releasing capable AI systems treats the choice as binary: keep the model behind an API, or publish the weights. That framing runs together two separate decisions.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Chai K. Toh",
+      "Vasu Raj Jain"
+    ],
+    "arxiv_id": "2610.20921",
+    "summary": null
+  },
+  {
     "id": "3a395bd902b56822",
     "url": "https://www.alignmentforum.org/posts/c9woewdY9ddsPqf3J/the-continual-constitutional-convention-how-language-models",
     "title": "The Continual Constitutional Convention: How language models revise the documents that govern them",
@@ -31,6 +400,113 @@
     "authors": [
       "peterkirgis"
     ],
+    "summary": null
+  },
+  {
+    "id": "35c36195b1152561",
+    "url": "https://arxiv.org/abs/2610.20887",
+    "title": "Do Emergent Misalignment Models Share a Circuit?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T20:16:32Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Fine-tuning language models on narrowly defined harmful tasks can induce emergent misalignment (EM) across unrelated domains. While prior work has identified shared misalignment-associated representations across independently fine-tuned models, it remains unclear whether these models rely on common computational…",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Muhammad Haseeb",
+      "Muhammad Tahir"
+    ],
+    "arxiv_id": "2610.20887",
+    "summary": null
+  },
+  {
+    "id": "7fddf9f9282c8634",
+    "url": "https://arxiv.org/abs/2610.20851",
+    "title": "Complete or Sparse: A Tale of Two Identifiabilities",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T19:37:20Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Understanding when neural networks learn interpretable representations is central to mechanistic interpretability. We study this through identifiability: when can supervised learning recover the true latent variables underlying the data?",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Junze Zhou",
+      "David Klindt"
+    ],
+    "arxiv_id": "2610.20851",
+    "summary": null
+  },
+  {
+    "id": "dba0912e4204a726",
+    "url": "https://arxiv.org/abs/2610.20748",
+    "title": "Interpreting Language Model Parameters",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T18:06:00Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Mechanistic interpretability aims to uncover how neural networks use their parameters to implement their impressive neural algorithms. Although previous work has uncovered substantial structure in the intermediate representations that networks use, little progress has been made to understand how the parameters and…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Lucius Bushnaq",
+      "Dan Braun",
+      "Oliver Clive-Griffin",
+      "Bart Bussmann",
+      "Nathan Hu",
+      "Michael Ivanitskiy",
+      "Linda Linsefors",
+      "Lee Sharkey"
+    ],
+    "arxiv_id": "2610.20748",
+    "summary": null
+  },
+  {
+    "id": "571821b2035048e5",
+    "url": "https://arxiv.org/abs/2610.20680",
+    "title": "Diminishing Returns of Data in Sparse Autoencoders: Functional Behavior does not Guarantee Feature Reproducibility",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T16:12:42Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Sparse autoencoders (SAEs) are typically trained on hundreds of millions to billions of activation tokens, yet little work has tested whether this scale is necessary. We study how much activation data SAEs need by training four SAE architectures on three language models with budgets ranging from 5M tokens to a…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Sambit Ghosh",
+      "Madelyn Mathai",
+      "R. Venkatesh Babu",
+      "Chirag Agarwal"
+    ],
+    "arxiv_id": "2610.20680",
+    "summary": null
+  },
+  {
+    "id": "07977627d9db2939",
+    "url": "https://arxiv.org/abs/2610.20679",
+    "title": "Counterfactual Neighborhood Risk Fields: Evidence-Grounded Selective Safety for Vision-Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T16:08:14Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Representation-based safety defenses for vision-language models (VLMs) often learn to separate harmful from benign inputs, but separation alone does not establish what a risk score means or when it should be trusted. We introduce Counterfactual Neighborhood Risk Fields (CNRF), an evidence-grounded framework for…",
+    "topics": [],
+    "authors": [
+      "Tianshi Wang",
+      "Jingsong Wang",
+      "Fengling Li",
+      "Jingjing Li",
+      "Xin Li",
+      "Lei Zhu"
+    ],
+    "arxiv_id": "2610.20679",
     "summary": null
   },
   {
@@ -100,6 +576,29 @@
       "Jiaheng Zhang"
     ],
     "arxiv_id": "2610.20049",
+    "summary": null
+  },
+  {
+    "id": "4f5a3d65e49a4075",
+    "url": "https://arxiv.org/abs/2610.20667",
+    "title": "Evaluating Model Capabilities After Benchmark Saturation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-14T10:08:04Z",
+    "fetched_at": "2026-10-16T10:25:37Z",
+    "excerpt": "Rapid advances in AI capabilities are causing benchmarks to saturate. Once several models approach perfect scores, a benchmark loses its power to differentiate between them, and with it its utility for informing AI safety cases and frontier policies.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Morio Hamada",
+      "Jehyeok Yeon",
+      "Matteo Migliarini",
+      "Justin Olive",
+      "Magda Dubois"
+    ],
+    "arxiv_id": "2610.20667",
     "summary": null
   },
   {

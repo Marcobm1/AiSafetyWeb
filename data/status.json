@@ -1,6 +1,6 @@
 {
-  "last_run": "2026-10-15T10:38:38Z",
-  "duration_seconds": 11.1,
+  "last_run": "2026-10-16T10:25:37Z",
+  "duration_seconds": 10.3,
   "new_entries": 25,
   "sources": [
     {
@@ -8,7 +8,7 @@
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 3,
+      "kept": 4,
       "new": 1,
       "error": null
     },
@@ -17,7 +17,7 @@
       "name": "Don't Worry About the Vase",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 1,
+      "kept": 0,
       "new": 0,
       "error": null
     },
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 2,
-      "new": 1,
+      "kept": 4,
+      "new": 3,
       "error": null
     },
     {
@@ -54,7 +54,7 @@
       "status": "ok",
       "items_in_feed": 110,
       "kept": 6,
-      "new": 5,
+      "new": 0,
       "error": null
     },
     {
@@ -70,7 +70,7 @@
       "id": "govai",
       "name": "Centre for the Governance of AI",
       "status": "ok",
-      "items_in_feed": 55,
+      "items_in_feed": 54,
       "kept": 7,
       "new": 0,
       "error": null
@@ -80,8 +80,8 @@
       "name": "Transformer",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 2,
-      "new": 0,
+      "kept": 3,
+      "new": 1,
       "error": null
     },
     {
@@ -106,9 +106,9 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1293,
+      "items_in_feed": 1296,
       "kept": 3,
-      "new": 2,
+      "new": 0,
       "error": null
     },
     {
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 16,
+      "new": 20,
       "error": null
     }
   ],
   "candidates": {
-    "added": 16,
+    "added": 20,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 368
+    "total": 388
   }
 }
