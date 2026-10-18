@@ -1,5 +1,40 @@
 [
   {
+    "id": "72288140e4eaf877",
+    "url": "https://www.lesswrong.com/posts/GK9p6NHEk8bkZQxH4/holy-shit-graphs-and-how-to-get-more-of-them-1",
+    "title": "\"Holy shit\" graphs and how to get more of them",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-18T06:17:45Z",
+    "fetched_at": "2026-10-18T10:10:23Z",
+    "excerpt": "We are likely in a situation where the most powerful models in the world are internal models, and, here's a key distinction, potentially even models that are never intended to be released to the public (i.e. a model designed to provide internal uplift on capabilities during training but that is not intended to be /…",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "June Jimenez"
+    ],
+    "summary": null
+  },
+  {
+    "id": "46ae680087f09847",
+    "url": "https://thezvi.wordpress.com/2026/10/17/leaked-anthropic-draft-ai-regulatory-bill-is-unacceptable-and-troubling",
+    "title": "Leaked Anthropic Draft AI Regulatory Bill Is Unacceptable and Troubling",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-10-17T14:43:03Z",
+    "fetched_at": "2026-10-18T10:10:23Z",
+    "excerpt": "There is a newly leaked bill that Anthropic is purportedly shopping around is (if you assume its bugs get fixed). It is similar to the FRONTIER Act, with stronger preemption of state laws, stronger transparency provisions and weaker enforcement provisions. … Continue reading →",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
     "id": "399389ad77053567",
     "url": "https://www.lesswrong.com/posts/AdM6Sdg5fZPnrHWSe/headwinds-everywhere-in-the-chinese-ai-safety-field",
     "title": "Headwinds Everywhere (in the Chinese AI Safety Field)",
