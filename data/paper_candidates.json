@@ -1,4 +1,309 @@
 {
+  "arxiv:2610.23801": {
+    "id": "arxiv:2610.23801",
+    "title": "Beyond SAEs: Consistent Concept Discovery with Sparse Coding",
+    "authors": [
+      "Jinho Choi",
+      "Hyesu Lim",
+      "Jaegul Choo",
+      "Steffen Schneider"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23801",
+    "abstract": "Sparse autoencoders (SAEs) explain foundation model representations by decomposing activations into sparse combinations of learned dictionary atoms. However, the learned dictionaries can vary across training runs, limiting the reliability and reproducibility of SAE-based analyses.",
+    "detected": "2026-10-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.23726": {
+    "id": "arxiv:2610.23726",
+    "title": "RedDarwin: Evolving Jailbreak Skills against Frontier LLMs",
+    "authors": [
+      "Zhouyuan Ma",
+      "Yutao Wu",
+      "Hanxun Huang",
+      "Xiang Zheng",
+      "Yi Liu",
+      "Xingjun Ma"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23726",
+    "abstract": "Red teaming must continually adapt as frontier LLM safeguards evolve, yet existing approaches largely search for adversarial prompts or optimize within fixed attack procedures. We observe that even when an attack becomes ineffective, its underlying mechanisms can remain useful and can be revised or recombined to…",
+    "detected": "2026-10-19",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.23670": {
+    "id": "arxiv:2610.23670",
+    "title": "OwlSight: A Panoramic Monitor for Chain-of-Thought Reasoning",
+    "authors": [
+      "Lewen Yan",
+      "Yanxu Zhu",
+      "Jie Zhang",
+      "Jing Shao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23670",
+    "abstract": "Chain-of-Thought (CoT) monitoring offers actionable evidence for oversight AI systems, with the potential to enable early detection and intervention. However, existing approaches are focused on specific tasks, whereas the regulation of AI, particularly reasoning models, requires monitoring a broader range of tasks.",
+    "detected": "2026-10-19",
+    "topics": [
+      "interpretability",
+      "governance"
+    ]
+  },
+  "arxiv:2610.23362": {
+    "id": "arxiv:2610.23362",
+    "title": "Monitor-Validity Failures: LLM Safety Evidence Paths at Evolving Framework Boundaries",
+    "authors": [
+      "Junchi Liao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23362",
+    "abstract": "Modern LLM applications rely on runtime monitors that inspect tool calls, traces, streams, detector outputs, and verifier inputs. This creates an interface-reliability problem: a framework path may remain operational while policy-relevant evidence never reaches its decision point.",
+    "detected": "2026-10-19",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.23257": {
+    "id": "arxiv:2610.23257",
+    "title": "Reasoning Models Can Control Their Chains of Thought When They Tell Themselves To",
+    "authors": [
+      "Uriel Dolev",
+      "Idan Schwartz",
+      "Yoav Goldberg"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23257",
+    "abstract": "Chain-of-thought (CoT) controllability, the ability of reasoning models to control properties of their CoT, is consequential for both their usefulness and reliable oversight. Recent work evaluates this capability by measuring whether models follow CoT constraints given in the user prompt, and reports very low…",
+    "detected": "2026-10-19",
+    "topics": []
+  },
+  "arxiv:2610.23030": {
+    "id": "arxiv:2610.23030",
+    "title": "ECHO: Replacing the Compliance Proxy with Response Harmfulness in Optimization-Based Jailbreak Attack",
+    "authors": [
+      "Yuanwei Wu",
+      "Lingdong Huang",
+      "Yunlong Mao",
+      "Kanye Ye Wang",
+      "Jingyu Hua",
+      "Sheng Zhong"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.23030",
+    "abstract": "Despite extensive safety alignment, large language models remain vulnerable to jailbreak attacks. Existing optimization-based attacks share a single objective: maximize a token-level proxy of victim compliance---such as the likelihood of an affirmative prefix---computed on the prompt rather than the decoded reply.",
+    "detected": "2026-10-19",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.22928": {
+    "id": "arxiv:2610.22928",
+    "title": "Multiple Turns, Short Horizons: Measuring Effective-Horizon Compression in Jailbreaks",
+    "authors": [
+      "Zhipeng Wei",
+      "Michael Lee",
+      "N. Benjamin Erichson"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22928",
+    "abstract": "Multi-turn jailbreaks use feedback from a victim large language model to adapt their queries over several turns. However, once an effective trajectory has been found, it is unclear how much of the earlier query history is still needed.",
+    "detected": "2026-10-19",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.22841": {
+    "id": "arxiv:2610.22841",
+    "title": "The Reliance Hypothesis: Chain-of-Thought Faithfulness Rises as Language Resource Level Falls",
+    "authors": [
+      "Lucas Resck",
+      "Jingyi Sun",
+      "Qianli Wang",
+      "Isabelle Augenstein",
+      "Anna Korhonen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22841",
+    "abstract": "Chain-of-Thought (CoT) faithfulness matters for monitoring, explaining and safely deploying large language models, yet it has been studied mostly in English. Languages differ in level, the amount of text available to learn from, so models know less in lower-resource languages, which may change how much they rely on…",
+    "detected": "2026-10-19",
+    "topics": []
+  },
+  "arxiv:2610.22805": {
+    "id": "arxiv:2610.22805",
+    "title": "Compression Precedes, Content Decides: Emergent Misalignment in Reward Models",
+    "authors": [
+      "Dhruv Puri",
+      "Nikhil Prakash"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22805",
+    "abstract": "Emergent Misalignment - the out of domain generalization of narrow harmful fine-tuning first shown by Betley et al. [2025] has been widely studied in language models but not in reward models that supervise them.",
+    "detected": "2026-10-19",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.22760": {
+    "id": "arxiv:2610.22760",
+    "title": "Between Spoilers and Guesswork: Avoiding Over-Specification in Coding Benchmarks",
+    "authors": [
+      "Yuanzhe Liu",
+      "Bastian Lipka",
+      "Avraham Shinnar",
+      "Jatin Ganhotra",
+      "Yao Ma",
+      "Martin Hirzel"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22760",
+    "abstract": "Benchmarks drive AI progress, but are hampered by task under-specification and over-specification. Task under-specification causes guesswork, where solutions have to make things up, or worse, resort to contamination or reward hacking.",
+    "detected": "2026-10-19",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.22754": {
+    "id": "arxiv:2610.22754",
+    "title": "Refusal Is Not Robustness: Measuring Harmful Reachability in Autoregressive Language Models",
+    "authors": [
+      "Parv Kapoor",
+      "Teresa Fortes",
+      "Claudia Mamede",
+      "Rui Abreu",
+      "Jonathan Aldrich",
+      "Eunsuk Kang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22754",
+    "abstract": "LLM safety evaluations via jailbreaking typically index on attack success rate (ASR): whether a generated response violates safeguards. However, ASR only evaluates sampled outputs and provides little information on the underlying generation process.",
+    "detected": "2026-10-19",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.22749": {
+    "id": "arxiv:2610.22749",
+    "title": "Native Geometry vs. Linear Recoverability: How Alignment Changes Platonic Scaling",
+    "authors": [
+      "Angus Hoy",
+      "Austin Lutterbach",
+      "Jasper Chong",
+      "Aman Kumar",
+      "Michael J. Smith"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22749",
+    "abstract": "Do larger models learn increasingly similar representations of the same world? The Platonic Representation Hypothesis (PRH) predicts that they should, but similar can mean native cosine geometry---nearest-neighbour structure induced by cosine similarity before any learned alignment---or linear recoverability…",
+    "detected": "2026-10-19",
+    "topics": []
+  },
+  "arxiv:2610.22723": {
+    "id": "arxiv:2610.22723",
+    "title": "LEMON: Equivariant Learning over Attention Maps for Zero-Shot Misbehavior Monitoring on New LLMs",
+    "authors": [
+      "Guy Bar-Shalom",
+      "Mor Geva",
+      "Fabrizio Frasca",
+      "Haggai Maron"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22723",
+    "abstract": "Large language models exhibit misbehaviors that hinder deployment in high-stakes settings. One approach to monitor such failures is to use an external LLM as a monitor, but this is prohibitively expensive.",
+    "detected": "2026-10-19",
+    "topics": []
+  },
+  "arxiv:2610.22722": {
+    "id": "arxiv:2610.22722",
+    "title": "The LLM-Attacker: A Unified Red-Team Framework for Privacy Evaluation of Split and Distributed LLM Systems",
+    "authors": [
+      "Georgios Politis",
+      "Evangelos Pappas"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22722",
+    "abstract": "Split language models keep input text on a client but send intermediate representations to a server. Attacks can reconstruct text from these messages.",
+    "detected": "2026-10-19",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.22640": {
+    "id": "arxiv:2610.22640",
+    "title": "SAFETYEDIT: Sparse Internal Targets with Prompt-Wide Control for LLM Jailbreak Backdoors",
+    "authors": [
+      "Yutong Ke",
+      "Yansu Wang",
+      "Zeyu Zhang",
+      "Xihao Guo",
+      "Chongwen Zhao",
+      "Kaizhu Huang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22640",
+    "abstract": "Model-editing backdoors aim to induce harmful responses under a trigger while preserving ordinary behavior on untriggered input. Recent model-editing approaches target affirmative response prefixes through rank-one updates to a small subset of model weights.",
+    "detected": "2026-10-19",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.22460": {
+    "id": "arxiv:2610.22460",
+    "title": "Functional Welfare for AI Safety",
+    "authors": [
+      "Rikhil Jhaveri",
+      "Jamie Johnson",
+      "Punya Syon Pandey",
+      "David Demitri Africa"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22460",
+    "abstract": "AI welfare is generally treated purely as an ethical issue rather than also as a safety issue. We argue this is a mistake.",
+    "detected": "2026-10-19",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.22445": {
+    "id": "arxiv:2610.22445",
+    "title": "Null Controls Are Necessary but Not Sufficient: Evaluating Acceptance Guards for Scientific Discovery and Interpretability",
+    "authors": [
+      "Tianyu Wu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22445",
+    "abstract": "Automated discovery systems propose scientific explanations and test which to accept. Does passing a test establish the intended claim?",
+    "detected": "2026-10-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.22439": {
+    "id": "arxiv:2610.22439",
+    "title": "Sparse Autoencoders Can Induce Local Geometry for Mitigating Catastrophic Forgetting",
+    "authors": [
+      "Kamil Faber",
+      "Katarzyna Filus",
+      "Łukasz Pawela"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.22439",
+    "abstract": "Catastrophic forgetting remains a challenge in supervised continual learning, as adapting to new tasks causes representation drift and loss of previously learned information. This raises the question of which representational changes should be constrained while preserving plasticity.",
+    "detected": "2026-10-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2610.22217": {
     "id": "arxiv:2610.22217",
     "title": "Skill-Decoupled On-Policy Expert Distillation for Unified Vision-Language Models",
