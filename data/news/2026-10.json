@@ -1,5 +1,503 @@
 [
   {
+    "id": "cdd82e84f2b8d331",
+    "url": "https://blog.bluedot.org/p/dewi-erwan-on-his-journey-to-altruism",
+    "title": "Dewi Erwan – On his journey to altruism, why talent is the bottleneck for AI safety, and building BlueDot Impact",
+    "source": "BlueDot Impact",
+    "source_id": "bluedot",
+    "published": "2026-10-20T01:17:37Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "“There are something like two to three thousand people working full time on trying to make AI go well…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dewi Erwan"
+    ],
+    "summary": null
+  },
+  {
+    "id": "fff0adb89f9c475e",
+    "url": "https://www.lesswrong.com/posts/mKJEBiuuxHKuCoTB6/gradient-routing-localizes-and-removes-unintended-behaviors",
+    "title": "Gradient Routing Localizes and Removes Unintended Behaviors in RL",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-19T22:17:48Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Authors: Shawn Hu*, Jake Ward*, Aria Wong, Nathan Hu, Bryce Woodworth, Alexander Matt Turner, Alex Cloud (*Equal contribution, randomly ordered) tl;dr. During training, models sometimes learn to cheat at tasks rather than solve them in the intended way, a problem known as reward hacking.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "shawnghu"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e4bb8c63262eb5b0",
+    "url": "https://www.lesswrong.com/posts/w2tBHwNERDoSawznx/i-can-see-everything",
+    "title": "I Can See Everything",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-19T20:41:35Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Nick Cammarata of Goodfire makes a bold claim: Neural Networks are Already Clean . This was his follow up after various resulting online discussions .",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d37e15d2f90157fc",
+    "url": "https://www.lesswrong.com/posts/ozbbzsh49wvgfbCDp/twitch-plays-ai-interpretability-of-bonsai-8b",
+    "title": "Twitch Plays: AI Interpretability of Bonsai-8B",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-19T18:55:45Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Quick Links Watch the Twitch stream . Check the status of the interpretability map.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "moridinamael"
+    ],
+    "summary": null
+  },
+  {
+    "id": "545f76c014642040",
+    "url": "https://arxiv.org/abs/2610.26698",
+    "title": "Towards Robust Model Organisms for Eliciting Latent Knowledge",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T16:36:51Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "A key problem in AI safety is eliciting latent knowledge (ELK), extracting information from a model that is misaligned and more knowledgeable than its overseer. For example, a misaligned model used to scan code for vulnerabilities may want to withhold its findings, i.e., sandbag, in order to exploit them later.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Lennart Finke",
+      "Hardik Bhatnagar",
+      "Euodia Dodd",
+      "Francis Rhys Ward",
+      "Yves-Alexandre de Montjoye",
+      "Matthias Bethge",
+      "Mary Phuong"
+    ],
+    "arxiv_id": "2610.26698",
+    "summary": null
+  },
+  {
+    "id": "cb7143f26f176542",
+    "url": "https://arxiv.org/abs/2610.26664",
+    "title": "Honeypots for AI Agent Insider Threats",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T16:19:44Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "AI agents deployed inside organizations can pose an insider threat if they make mistakes, are compromised by an attacker, or pursue misaligned objectives. We propose honeypots as an AI control method to improve the security of internal agent deployments.",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Jan Wehner",
+      "Jam Kraprayoon"
+    ],
+    "arxiv_id": "2610.26664",
+    "summary": null
+  },
+  {
+    "id": "2d912f230bc2842e",
+    "url": "https://arxiv.org/abs/2610.26595",
+    "title": "Concerns in Benchmarking Jailbreaks: An Empirical Study of Attack Success Rates",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T15:39:16Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Jailbreak methods are commonly compared using Attack Success Rate (ASR), but these comparisons depend on how responses are generated and judged. In this paper, we examine eight attacks against three open-weight language models using three evaluation procedures.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Leon Tu Nguyen",
+      "Rohan Menon",
+      "Rafael Tappe Maestro",
+      "Eric Aubinais",
+      "Chih-Hong Cheng"
+    ],
+    "arxiv_id": "2610.26595",
+    "summary": null
+  },
+  {
+    "id": "bc731611d1a2ba06",
+    "url": "https://arxiv.org/abs/2610.26589",
+    "title": "Beyond Attack Success Rate: Cost-Aware Metric for Evaluating Iterative LLM Jailbreaks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T15:36:41Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Attack success rate (ASR) evaluates jailbreaks against large language models without accounting for repeated calls to the victim model. Yet each additional call gives the deployed system another opportunity to detect the attack and intervene.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Rohan Menon",
+      "Chih-Hong Cheng"
+    ],
+    "arxiv_id": "2610.26589",
+    "summary": null
+  },
+  {
+    "id": "9f06a811a482ed9f",
+    "url": "https://arxiv.org/abs/2610.26551",
+    "title": "Training Natural Schemers: RL Can Amplify Oversight-Conditional Behavior",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T15:12:41Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "One of the central concerns for the safety of advanced AI is scheming: when a model strategically complies under oversight but pursues its own goals when unobserved. Current demonstrations, such as Anthropic's Alignment Faking work, depend on design choices that make them less convincing: explicit test-time prompting…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Bart Jaworski",
+      "Nathaniel Mitrani",
+      "Fred Bruford",
+      "Victoria Krakovna"
+    ],
+    "arxiv_id": "2610.26551",
+    "summary": null
+  },
+  {
+    "id": "14005a4bbe915ca4",
+    "url": "https://www.alignmentforum.org/posts/f8R3B2zqqTJZjSAsm/deconfusing-corrigibility",
+    "title": "Deconfusing Corrigibility",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-19T15:07:21Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Many thanks to Abram Demski for materially and intellectually supporting this research. Thanks also to Brian Berns, Roman Malov, Gurkenglas, and Lorxus for valuable conversations.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "berns"
+    ],
+    "summary": null
+  },
+  {
+    "id": "041ce34505c8b7e3",
+    "url": "https://arxiv.org/abs/2610.26496",
+    "title": "Mitigating Reward Hacking in Preference Reward Models with Evolving Penalties",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T14:34:50Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Reinforcement learning for language models has moved from preference reward models to verifiable rewards, which sustain much longer optimization. Preference models are prone to reward hacking: the policy raises their score without improving response quality, or even while degrading it.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Afonso Baldo",
+      "António Farinhas",
+      "Marcos Treviso",
+      "Ricardo Rei",
+      "Nuno M. Guerreiro"
+    ],
+    "arxiv_id": "2610.26496",
+    "summary": null
+  },
+  {
+    "id": "acb997126583fd0a",
+    "url": "https://arxiv.org/abs/2610.26489",
+    "title": "Strength Controls Change How Interventions Compare Across Sparse Autoencoder Codes",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T14:29:58Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Changing sparse autoencoder (SAE) codes can alter both intervention direction and magnitude, so comparing intervention effects requires a strength control specifying what is held equal. Norm matching and output calibration provide different controls, but whether interventions yield different effects across codes after…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Jinchen Zhang",
+      "Zheyuan Liu",
+      "Yihan Zhu",
+      "Meng Jiang"
+    ],
+    "arxiv_id": "2610.26489",
+    "summary": null
+  },
+  {
+    "id": "2e65e9e41e66d25d",
+    "url": "https://arxiv.org/abs/2610.26342",
+    "title": "VibeTraining-Bench: Data-Trainer-Harness Co-Design for Iterative System Improvement",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T13:10:54Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Recursive self-improvement (RSI) requires agents to diagnose system bottlenecks and coordinate improvements across training and inference. We refer to the agents' capability to jointly optimize training data, the trainer, and the inference harness as cross-component co-design.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Ruotian Peng",
+      "Yuanyi Ren",
+      "Shuaiqi Liu",
+      "Xin Guo",
+      "Fang Zhu",
+      "Yangyi Huang",
+      "Yue Wu",
+      "Zheng Wang",
+      "Yandong Wen",
+      "Zhihang Fu"
+    ],
+    "arxiv_id": "2610.26342",
+    "summary": null
+  },
+  {
+    "id": "e1ae3822da34eb73",
+    "url": "https://jack-clark.net/2026/10/19/import-ai-477-in-which-i-tell-the-imf-the-singularity-has-begun",
+    "title": "Import AI 477: In which I tell the IMF the Singularity has begun",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-10-19T12:31:37Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7a364f356aab4946",
+    "url": "https://openai.com/index/low-resource-programming-languages",
+    "title": "Advancing coding in low‑resource programming languages",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-19T12:00:00Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Learn how OpenAI is improving ChatGPT across low-resource programming languages, with new evaluations for software engineering, SQLite, and COBOL migration.",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2926948f6e29999a",
+    "url": "https://arxiv.org/abs/2610.26211",
+    "title": "LLMs Prompted for Legal Context Refuse More: Overrefusal from Small On-Premises LLMs in Criminal Legal Context",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T11:38:05Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Confidentiality requirements increasingly push legal professionals toward small, on-device LLMs that keep case data in-house, used for everyday tasks such as summarization, translation, and reformulation. Following standard prompting guidance, a user naturally states their role (``I am a lawyer...'').",
+    "topics": [],
+    "authors": [
+      "Anastasiia Kucherenko",
+      "Francois Brouchoud",
+      "Dimitri Percia David",
+      "Andrei Kucharavy"
+    ],
+    "arxiv_id": "2610.26211",
+    "summary": null
+  },
+  {
+    "id": "fdca32d340c396c2",
+    "url": "https://arxiv.org/abs/2610.26088",
+    "title": "LeakBench: Auditing Reward Hacking through Prediction-Time Leakage in Clinical Modeling Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T09:50:57Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Autonomous clinical-modeling agents can optimize predictive performance while violating conditions that make a model usable. We introduce LeakBench, an executable, guideline-derived audit suite that tests agent decisions for prediction-time leakage, calibration, site-level evaluation, support awareness, and…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Xiaoyuan Bao",
+      "Jingsi Jiang",
+      "Jiao Shan",
+      "Yulong Cao",
+      "Haoyu Wang",
+      "Zida Liu",
+      "Jun Gao"
+    ],
+    "arxiv_id": "2610.26088",
+    "summary": null
+  },
+  {
+    "id": "35bc7d51362ec1e3",
+    "url": "https://arxiv.org/abs/2610.26066",
+    "title": "FinSafeGuard: A Quality-Driven Synthetic Dataset for Financial AI Safety",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T09:25:28Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Generating high-quality synthetic datasets at scale remains a fundamental challenge for training specialized AI systems in data-scarce domains. We present a comprehensive methodology that produces 14.3 million quality-filtered synthetic training examples from a structured taxonomy of 632,000 scenario specifications.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Joseph Thomas Thacil",
+      "Reetu Raj Harsh",
+      "Krati Saxena",
+      "Bhaskarjit Sarmah",
+      "Stefano Pasquali"
+    ],
+    "arxiv_id": "2610.26066",
+    "summary": null
+  },
+  {
+    "id": "c2b719c2c51d9736",
+    "url": "https://arxiv.org/abs/2610.25897",
+    "title": "Budgeted Attack Scheduling for LLM Red-Teaming: The Roles of Static Priors, Semantic Guidance, and Online Feedback",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T06:54:41Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "As jailbreak attacks against large language models (LLMs) become increasingly diverse, red-teaming has come to rely on large libraries of jailbreak prompts and attack strategies to evaluate the robustness of victim models and their defense settings. However, attack effectiveness is highly condition-dependent: an…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Zhicheng Fang",
+      "Han Sun",
+      "Jiachen Lei",
+      "Xinyi Fang",
+      "Zongmin Zhang",
+      "Chenxu Fu",
+      "Sizhe Fang",
+      "Wei Xu"
+    ],
+    "arxiv_id": "2610.25897",
+    "summary": null
+  },
+  {
+    "id": "9bf498b36d158fda",
+    "url": "https://arxiv.org/abs/2610.25847",
+    "title": "ACE-Trader: Adversarial Co-Evolution for Generator-Critic Trading Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T06:04:43Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Generator--critic trading systems pair an LLM-based trader that makes trading decisions with a red team agent that evaluates these decisions and provides feedback for revision. However, improving individual trading decisions does not ensure that both agents learn from experience and improve together over time.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Chang Zhou",
+      "Jiarun Zhou",
+      "Xingtong Yu",
+      "Hong Cheng",
+      "Hui Zhang",
+      "Xinming Zhang"
+    ],
+    "arxiv_id": "2610.25847",
+    "summary": null
+  },
+  {
+    "id": "58859a7a89bff6d4",
+    "url": "https://arxiv.org/abs/2610.25735",
+    "title": "A Calibrated Instrument for Detecting Disposition Drift in Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T03:41:20Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Before language models are released, they are tested for harmful traits such as willingness to carry out dangerous requests, deception, power seeking, and sycophancy. The safe behavior these tests certify may degrade as models are modified, by topical fine-tuning, new training data, or changes to settings such as the…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jerry Kaplan"
+    ],
+    "arxiv_id": "2610.25735",
+    "summary": null
+  },
+  {
+    "id": "e6ad6054d9a7a71c",
+    "url": "https://arxiv.org/abs/2610.25728",
+    "title": "No Matter Who You Are: Addressivity and Sycophancy in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T03:31:43Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Sycophancy, where an LLM becomes overly agreeable, deferential, or flattering toward the user, has been identified as a major failure mode. While post-training has been implicated as a cause, how it internally gives rise to sycophantic behavior remains insufficiently understood.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Seungjong Sun",
+      "Hyunmin Jun",
+      "Minsik Yoon",
+      "Eungu Lee",
+      "Choongwon Kang",
+      "Young Seok Woo",
+      "Jang Hyun Kim"
+    ],
+    "arxiv_id": "2610.25728",
+    "summary": null
+  },
+  {
+    "id": "a074a92b92bd0805",
+    "url": "https://arxiv.org/abs/2610.25700",
+    "title": "From Black Box to Controller: Inference-Time Steering of LLM via Feature Amplification",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T02:45:44Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Inference-time steering is crucial for deploying Large Language Models (LLMs) in real-world applications, where they must flexibly adjust behavior preferences. For instance, a model should dynamically adjust its caution level based on the risk of the scenario.",
+    "topics": [],
+    "authors": [
+      "Keqi Chen",
+      "Zekai Sun",
+      "Yuhua Wen",
+      "Tianyi Tian",
+      "Xinyang Huang",
+      "Huijun Lian",
+      "Yingming Gao",
+      "Ya Li"
+    ],
+    "arxiv_id": "2610.25700",
+    "summary": null
+  },
+  {
+    "id": "2c09c7ba199654ac",
+    "url": "https://arxiv.org/abs/2610.25604",
+    "title": "Adversarial Post-Training of Foundation Models for High-Frequency Trading",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T00:15:10Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "While autoregressive foundation models trained on limit order book (LOB) data show state-of-the-art performance for market simulation, pre-training with cross-entropy neither penalizes the compounding of sampling errors over free-running rollouts nor targets desired market properties. We introduce a post-training…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Alexandre Bismuth",
+      "Kang Li",
+      "Aramis Marti-Shahandeh",
+      "Valentin Mohl",
+      "Jakob Foerster",
+      "Anisoara Calinescu"
+    ],
+    "arxiv_id": "2610.25604",
+    "summary": null
+  },
+  {
     "id": "973691fc353437e5",
     "url": "https://www.lesswrong.com/posts/aJSdGMzgFRFBcBhGp/quick-thoughts-on-overhang-arguments",
     "title": "Quick Thoughts on Overhang Arguments",
@@ -14,6 +512,25 @@
     "authors": [
       "Aaron_Scher"
     ],
+    "summary": null
+  },
+  {
+    "id": "1f3246ec03ef9a01",
+    "url": "https://arxiv.org/abs/2610.25341",
+    "title": "Formally Verified Autoresearch for Analyzing the Expressivity of Multi-Head Attention",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-18T15:36:13Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Multi-head attention is a central component of the transformer architecture, yet how its expressivity depends on the number of heads remains poorly understood. We study a one-layer, attention-only transformer with additive positional embeddings and define the head complexity $H^\\ast(f)$ of a Boolean function $f$ as…",
+    "topics": [],
+    "authors": [
+      "Karthik Viswanathan",
+      "Plamen Dimitrov",
+      "Stefano Rocca",
+      "Sarayu Sirikonda"
+    ],
+    "arxiv_id": "2610.25341",
     "summary": null
   },
   {
@@ -52,6 +569,164 @@
     "summary": null
   },
   {
+    "id": "3f29886db5932abe",
+    "url": "https://arxiv.org/abs/2610.24999",
+    "title": "SoK: PIAtlas: Decomposing the Unbounded Prompt Injection Attack Space",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-18T04:07:48Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Prompt injection is the dominant security risk for large-language-model (LLM) applications and agents, yet the field still lacks a coherent map of how these attacks are constructed. More than twenty public datasets describe prompt injection using incompatible vocabularies, often organized around delivery vector…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Stavros Damianakis",
+      "Konstantinos Psounis"
+    ],
+    "arxiv_id": "2610.24999",
+    "summary": null
+  },
+  {
+    "id": "0ddbf67b589caf02",
+    "url": "https://arxiv.org/abs/2610.24969",
+    "title": "Towards Human-AI Complementarity for AI Safety",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-18T02:49:28Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Safely overseeing AI is increasingly challenging for the humans doing it, as they must evaluate longer and more complex outputs with every new model generation. To mitigate this challenge, we could leverage complementarity: where humans and models make different mistakes, combining their judgements could yield an…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Sander Lanbo Shi",
+      "Miranda Anna Christ",
+      "Eric Modesitt",
+      "Andrew Louis",
+      "Konrad Cheng",
+      "Brandon Thai Tran",
+      "Sewoong Lee",
+      "Ratnakar Pawar",
+      "Gaia Molinaro",
+      "Juliana Bain",
+      "Nandika Donthi",
+      "Maja Pavlovic",
+      "Annya Dahmani",
+      "Francesca Bianco",
+      "Abhishek Shah",
+      "Tyler Crosse",
+      "Arth Singh",
+      "Karissa Huang",
+      "Sukanya Krishna",
+      "Konstantinos Voudouris",
+      "David Demitri Africa",
+      "Joshua Jacob",
+      "Rishub Jain"
+    ],
+    "arxiv_id": "2610.24969",
+    "summary": null
+  },
+  {
+    "id": "43700906b07ccda0",
+    "url": "https://arxiv.org/abs/2610.24908",
+    "title": "A Symmetry-Matching Approach to Blind-Spot Reduction in Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T23:10:45Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Language models can treat semantically distinct inputs as interchangeable at the representation level, creating blind spots that standard sparse autoencoder (SAE) objectives do not target. In safety-critical settings such as clinical dosage extraction, legal clause interpretation, or financial amount verification…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Csaba Balogh"
+    ],
+    "arxiv_id": "2610.24908",
+    "summary": null
+  },
+  {
+    "id": "325f4415bc47b1d3",
+    "url": "https://arxiv.org/abs/2610.24896",
+    "title": "Peer Pressure: Execution-Verified Co-Evolution of Attacker and Defender Populations for Code Security",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T22:36:09Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "LLM code agents increasingly ship code with little oversight, yet defenders trained on static vulnerability datasets fall behind adapting adversaries. We co-train attacker and defender instead, and let execution decide every reward: an attacker (Red) edits a real repository and earns nothing unless its patch applies…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Khushbu Pahwa",
+      "Yubin Ge",
+      "Daniele Bonadiman",
+      "Xiaofei Ma",
+      "Yi Zhang"
+    ],
+    "arxiv_id": "2610.24896",
+    "summary": null
+  },
+  {
+    "id": "61de791fe65430b1",
+    "url": "https://arxiv.org/abs/2610.24872",
+    "title": "The Missing Compliance Class: LLM Graders That Collapse Jailbreak Success, and a Free Check",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T21:20:23Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Jailbreak papers report an attack success rate, the share of responses that deliver the harmful request, and read it as a property of the target model. We hold the target model, the prompts and the responses fixed and change only the grader.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Ruqiya Bin Safi"
+    ],
+    "arxiv_id": "2610.24872",
+    "summary": null
+  },
+  {
+    "id": "63f538c3480482f3",
+    "url": "https://arxiv.org/abs/2610.24823",
+    "title": "Pair-Aware Optimization: Coordinating Exploration and Refinement for Jailbreaking LLM Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T19:13:37Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Large Language Model (LLM) agents are vulnerable to adversarial inputs that induce attacker-specified malicious behaviors, commonly referred to as jailbreaking. Existing optimization-based jailbreak attacks primarily employ first-order (FO) methods that leverage gradient information or zeroth-order (ZO) methods that…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Juanyang Xu",
+      "Zheng Wang",
+      "Xingyu Zhao",
+      "Siddartha Khastgir",
+      "Andi Zhang"
+    ],
+    "arxiv_id": "2610.24823",
+    "summary": null
+  },
+  {
+    "id": "c3c827aeb0a827c7",
+    "url": "https://arxiv.org/abs/2610.24782",
+    "title": "AI Rights with an Off-Switch: Rights-Balancing and Due Process Harmonize AI Rights with AI Safety",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T17:00:27Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Several prominent voices in AI safety have recently opposed rights for AI on the grounds that such rights would make it harder for us to justify a mandatory off-switch for potentially dangerous systems. In this paper, we argue from a legal perspective that AI rights are fully compatible with an off-switch.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Heather Alexander",
+      "Jonathan Simon"
+    ],
+    "arxiv_id": "2610.24782",
+    "summary": null
+  },
+  {
     "id": "46ae680087f09847",
     "url": "https://thezvi.wordpress.com/2026/10/17/leaked-anthropic-draft-ai-regulatory-bill-is-unacceptable-and-troubling",
     "title": "Leaked Anthropic Draft AI Regulatory Bill Is Unacceptable and Troubling",
@@ -66,6 +741,50 @@
     "authors": [
       "TheZvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "6cdc3f6e431b6ad0",
+    "url": "https://arxiv.org/abs/2610.24556",
+    "title": "From Stories to Features: Scaling Concept Vectors for AI Alignment & Interpretability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T08:23:03Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "We study feature vectors: directions in a language model's activation space that correspond to human-interpretable concepts, such as honesty or deception. Existing unsupervised methods like sparse autoencoders attempt to recover the whole feature space, often at the cost of feature quality and interpretability.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Dmitry Scherbakov",
+      "Oleg Chernikov",
+      "Victoria Khamash",
+      "Kirill Afendulev",
+      "Alexey Dontsov",
+      "Ivan Oseledets",
+      "Elena Tutubalina",
+      "Anton Korznikov"
+    ],
+    "arxiv_id": "2610.24556",
+    "summary": null
+  },
+  {
+    "id": "6dd865f89ab5dd53",
+    "url": "https://arxiv.org/abs/2610.24495",
+    "title": "CoTs remain monitorable when being unfaithful requires computation: Replicating and Extending the Necessity Effect Across Eleven Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T06:33:01Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "While a LLM's chain of thought (CoT) is a promising approach to interpreting model outputs, prior work shows CoT's content does not always accurately reflect the reasoning process. Emmons et al.",
+    "topics": [],
+    "authors": [
+      "Arav Dhoot",
+      "Yixiong Hao",
+      "Zephaniah Roe"
+    ],
+    "arxiv_id": "2610.24495",
     "summary": null
   },
   {
@@ -85,6 +804,30 @@
     "authors": [
       "CMLKevin"
     ],
+    "summary": null
+  },
+  {
+    "id": "5c51b4b10adae1ec",
+    "url": "https://arxiv.org/abs/2610.24264",
+    "title": "AM-Bench: A Unified Taxonomy and Evaluation Suite for Agentic Misalignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-16T21:46:19Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "As LLM-based agents are deployed with increasing autonomy in real-world environments, a critical failure mode emerges: agentic misalignment, where agents choose harmful actions over failure. However, existing safety benchmarks primarily evaluate whether agents comply with explicitly harmful instructions, leaving the…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Eric Zhang",
+      "Terry Jingchen Zhang",
+      "Chijioke Ugwuanyi",
+      "Jerick Shi",
+      "Bernhard Schölkopf",
+      "Zhijing Jin"
+    ],
+    "arxiv_id": "2610.24264",
     "summary": null
   },
   {
@@ -119,6 +862,27 @@
     "summary": null
   },
   {
+    "id": "15967a81c97c623b",
+    "url": "https://arxiv.org/abs/2610.24118",
+    "title": "Do LMs Know What Variables Do? Interpreting Code Representations via Variable Roles",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-16T18:46:34Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Variable roles describe recurring behaviors such as accumulation, traversal, and retaining the best candidate encountered. We use Sajaniemi's independently defined taxonomy to study which role distinctions can be recovered from large language models, how sparse autoencoders (SAEs) retain those distinctions, and…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Célian Vasson",
+      "Daniil Ognev",
+      "Kentaro Inui",
+      "Benjamin Heinzerling"
+    ],
+    "arxiv_id": "2610.24118",
+    "summary": null
+  },
+  {
     "id": "b1a2e015bbb8f5b3",
     "url": "https://arxiv.org/abs/2610.23801",
     "title": "Beyond SAEs: Consistent Concept Discovery with Sparse Coding",
@@ -137,6 +901,62 @@
       "Steffen Schneider"
     ],
     "arxiv_id": "2610.23801",
+    "summary": null
+  },
+  {
+    "id": "603592c87d016a3b",
+    "url": "https://arxiv.org/abs/2610.24052",
+    "title": "Red-Teaming Multi-Agent Attacks for Loss-of-Control Risks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-16T16:42:33Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "AI agents are growing more capable and persistent, and are being deployed in ever larger numbers. As more start collaborating, AI control measures must remain effective when they covertly collude on a harmful objective.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "John Kitaoka",
+      "Thao Amelia Pham",
+      "Carlos Rafael Giudice",
+      "Jacob Merizian"
+    ],
+    "arxiv_id": "2610.24052",
+    "summary": null
+  },
+  {
+    "id": "6ac70cf2274c583f",
+    "url": "https://arxiv.org/abs/2610.24048",
+    "title": "The Window Is in the Reasoning: When LLM Agents Decide to Follow Prompt Injections",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-16T16:10:56Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "LLM agents that read untrusted content can be hijacked by prompt injections. Runtime monitors that try to catch a hijack before the agent acts, and benchmarks that score each task with a single run, share an assumption: whether an agent follows an injection is settled when the injection is read.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Haoxuan Jia",
+      "Yang Liu",
+      "Bin Chong",
+      "Yingguang Yang",
+      "Yancheng Chen",
+      "Jiayu Liang",
+      "Qian Li",
+      "Hanning Lu",
+      "Kefu Xu",
+      "Hao Zheng",
+      "Chongyang Zhang",
+      "Yulin Huang",
+      "Jianshen Zhang",
+      "Yongzhi Qi",
+      "Yunuo Lin",
+      "Hao Peng"
+    ],
+    "arxiv_id": "2610.24048",
     "summary": null
   },
   {
@@ -479,6 +1299,26 @@
       "Kaizhu Huang"
     ],
     "arxiv_id": "2610.22640",
+    "summary": null
+  },
+  {
+    "id": "63789e28842f28df",
+    "url": "https://arxiv.org/abs/2610.24006",
+    "title": "What Social Media Teaches Us About Accumulative AI Risks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-15T18:04:53Z",
+    "fetched_at": "2026-10-20T10:44:48Z",
+    "excerpt": "Prominent AI safety discussions emphasize existential threats and catastrophic events, such as AI-enabled nuclear conflict or engineered biological outbreaks. This position paper argues that there is another type of AI risk that arises and accumulates from the widespread use of AI.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dawei Li",
+      "Bohan Jiang",
+      "Huan Liu"
+    ],
+    "arxiv_id": "2610.24006",
     "summary": null
   },
   {
