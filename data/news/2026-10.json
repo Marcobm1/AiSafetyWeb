@@ -1,5 +1,243 @@
 [
   {
+    "id": "fe90b984b2417187",
+    "url": "https://www.lesswrong.com/posts/qxAroimgs4BvBHz2i/anthropic-does-not-understand-why-its-draft-bill-was",
+    "title": "Anthropic Does Not Understand Why Its Draft Bill Was Unacceptable and Troubling",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-21T05:41:28Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Anthony Cimino offered the closest thing to an official response we have seen on the leaked Anthropic draft bill I covered on Saturday. His response indicates that Anthropic address specific concerns on the margin.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c11ccc78fa623ad9",
+    "url": "https://arxiv.org/abs/2610.28607",
+    "title": "Benchmarking Arabic Dialects for Math Problems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T17:50:13Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Mathematical reasoning remains underexplored for low-resource languages, including Dialectal Arabic. To bridge this gap, we introduce the DAR-MGSM (Dialectal Arabic Multilingual Grade School Math) Benchmark, the first manually curated benchmark for evaluating mathematical reasoning in Dialectal Arabic.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Noor Abo Mokh",
+      "Teresa Lynn",
+      "Nizar Habash",
+      "Ahmed Elshabrawy",
+      "Sara Alhajeri",
+      "Alaa Elsetohy",
+      "Preslav Nakov",
+      "Alham Fikri Aji"
+    ],
+    "arxiv_id": "2610.28607",
+    "summary": null
+  },
+  {
+    "id": "e8ca1f355da8b53c",
+    "url": "https://www.lesswrong.com/posts/uFBhZhdKLaZ6qF8mn/there-will-be-hells",
+    "title": "There Will Be Hells",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-20T17:24:08Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "As our understanding of mechanistic interpretability and steering techniques increase, for both LLMs and uploaded connectomes, there is a corresponding \"hellish capabilities\" increase. We get better at torturing the digital minds we create.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Stephen Martin"
+    ],
+    "summary": null
+  },
+  {
+    "id": "10e267962d11ab72",
+    "url": "https://arxiv.org/abs/2610.28539",
+    "title": "Humans Correct Their Judgments Through Debate, but Weaker AI Models Do Not",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T17:10:36Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "How can we effectively oversee AI systems that surpass human intelligence? AI Safety via Debate proposes that two AI systems argue opposing positions and a judge, either a human or a weaker model, decides which is correct.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Maria Victoria Carro",
+      "Denise Alejandra Mester",
+      "Facundo Nieto",
+      "Oscar Agustin Stanchi",
+      "Guido Ernesto Bergman",
+      "Giovanni Franco Gabriel Marrafini",
+      "Trinidad Borrell",
+      "Guido Freire",
+      "Joaquin Salvador Machulsky",
+      "Mario Alejandro Leiva",
+      "Ana Lopez",
+      "Nicolas Spinelli",
+      "Luca Nicolas Forziati Gangi",
+      "Eitan Sprejer",
+      "Federico Barrera Lemarchand",
+      "Gerardo Simari",
+      "Maria Vanina Martinez"
+    ],
+    "arxiv_id": "2610.28539",
+    "summary": null
+  },
+  {
+    "id": "b2d7d6666793165d",
+    "url": "https://arxiv.org/abs/2610.28303",
+    "title": "Reward Misspecification Degrades Chain-of-Thought Monitorability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T14:45:29Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Monitoring the chain-of-thought (CoT) of language models (LMs) is a key strategy for detecting and preventing misbehaviors for AI safety. As such, it is critical to identify reinforcement learning (RL) practices that lead to unmonitorable chain-of-thought.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Tianyi Lorena Yan",
+      "John Hewitt"
+    ],
+    "arxiv_id": "2610.28303",
+    "summary": null
+  },
+  {
+    "id": "ead175e27f3abd3d",
+    "url": "https://www.lesswrong.com/posts/F532cjfTZHMbJqkNA/1000-years-of-ai-safety",
+    "title": "1000 Years of AI Safety",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-20T13:42:42Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "A three-year AI pause could buy 1000 years' worth of AI safety work. See: https://1000yearsofaisafety.com How much AI safety work a pause produces, in years of the whole 2025 AI safety field's work .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Simon Steshin"
+    ],
+    "summary": null
+  },
+  {
+    "id": "65cf14acac91395f",
+    "url": "https://arxiv.org/abs/2610.27790",
+    "title": "Are Linguistic and Arithmetic Circuits Dissociated in LLMs?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T07:52:47Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Large language models (LLMs) exhibit both knowledge of language, rendered by, for example, grammatical judgment ability, and abilities to perform tasks through language, such as math-word problem solving. Motivated by neurolinguistic studies of their neural dissociation in human brains, in this study, we investigate…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Riku Kisako",
+      "Tatsuki Kuribayashi",
+      "Ryohei Sasano"
+    ],
+    "arxiv_id": "2610.27790",
+    "summary": null
+  },
+  {
+    "id": "e0286890c657917d",
+    "url": "https://metr.org/blog/2026-10-20-misalignment-risk-report-august-2026-review",
+    "title": "Review of the \"Misalignment in high-stakes settings\" section in Anthropic's Risk Report (August 2026)",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-10-20T07:00:00Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Scope and access: this review was written based solely on Anthropic’s internal Risk Report from August 2026 and is relatively lightweight. The authors of this review were engaged prior to the “ An update on independent evaluators ” announcement and did not have the level of access to information described in that post.",
+    "topics": [
+      "alignment"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a84b6a7bee5c68a6",
+    "url": "https://openai.com/index/terminal-x",
+    "title": "Terminal X matches senior investor judgment 88.6% with GPT-6.1",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-20T07:00:00Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Terminal X’s Eval Agent grades outputs against a 54-criterion rubric, catching 25% more deviances from a fund’s mandate with GPT-6.1 Sol.",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6cd71bb162eb2ee4",
+    "url": "https://arxiv.org/abs/2610.27735",
+    "title": "RSI Control: Can AI Models Perform Covert Sabotage in the Self-Improvement Process?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T06:57:59Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Recursive self-improvement, in which frontier AI models work on training the next generation, is quickly becoming a reality. However, the safety of this process has received far less attention than it should.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Kaiwen Zhou",
+      "Udari Madhushani Sehwag"
+    ],
+    "arxiv_id": "2610.27735",
+    "summary": null
+  },
+  {
+    "id": "032e3da7133a9365",
+    "url": "https://arxiv.org/abs/2610.27577",
+    "title": "Why Static Probes Fail: Context Determines Deception Feature Composition",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T03:42:51Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "With increasing autonomy, Large Language Models (LLMs) may engage in deceptive behaviors, such as scheming to pursue misaligned goals or sandbagging to escape oversight. Monitoring outputs alone is insufficient, as models can produce seemingly benign responses while harboring misaligned internal objectives.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Yao Huang",
+      "Siyuan Chen",
+      "Zhenghan Zhou",
+      "Yinpeng Dong"
+    ],
+    "arxiv_id": "2610.27577",
+    "summary": null
+  },
+  {
+    "id": "0c40794c6e953cea",
+    "url": "https://arxiv.org/abs/2610.27490",
+    "title": "Orthogonal Boundary Unlearning for Dual-Use Concepts in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T02:09:21Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Mitigating catastrophic risks from large language models requires excising hazardous operational capabilities, such as cyberwarfare exploitation and pathogen enhancement, without degrading benign scientific utility. In these dual-use domains, legitimate defensive science and malicious attacks share vocabulary, syntax…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Niccolò Ronchetti"
+    ],
+    "arxiv_id": "2610.27490",
+    "summary": null
+  },
+  {
     "id": "cdd82e84f2b8d331",
     "url": "https://blog.bluedot.org/p/dewi-erwan-on-his-journey-to-altruism",
     "title": "Dewi Erwan – On his journey to altruism, why talent is the bottleneck for AI safety, and building BlueDot Impact",
@@ -14,6 +252,118 @@
     "authors": [
       "Dewi Erwan"
     ],
+    "summary": null
+  },
+  {
+    "id": "7fefdf4c0b92c326",
+    "url": "https://arxiv.org/abs/2610.27446",
+    "title": "Decision Sufficiency of Learned Representation Interfaces for Safe Generative Control",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T00:49:26Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "A controller can guide a language model toward safe and useful responses by choosing when to assist, ask for clarification, or refuse. When the controller uses selected internal features, poor performance alone cannot distinguish missing information from limitations of its decision rules or training.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jipeng Li",
+      "Yanning Shen"
+    ],
+    "arxiv_id": "2610.27446",
+    "summary": null
+  },
+  {
+    "id": "daf18ce8934be530",
+    "url": "https://arxiv.org/abs/2610.27402",
+    "title": "Communication Complexity of Universal Features",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T23:50:21Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Motivated by the notion of features from machine learning, we study the complexity of representing data that allows for evaluation with a given family of functions. Concretely, we consider a deterministic encoder that observes $X\\sim D$ and produces a finite encoding before a task…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Lunjia Hu",
+      "Anish Jayant",
+      "Peter Li",
+      "Princewill Okoroafor",
+      "Abhishek Shetty"
+    ],
+    "arxiv_id": "2610.27402",
+    "summary": null
+  },
+  {
+    "id": "c71014a6b182c7ef",
+    "url": "https://arxiv.org/abs/2610.27393",
+    "title": "Correcting Attribution Patching with a Few Exact Measurements",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T23:35:50Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Mechanistic interpretability asks which language model components matter for a behavior, and activation patching answers by changing one component's activation and measuring its effect, at a cost growing with components and prompts. Attribution patching estimates these effects from one gradient pass, but its estimates…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Luyang Zhang",
+      "Minxing Zheng",
+      "Jialu Wang"
+    ],
+    "arxiv_id": "2610.27393",
+    "summary": null
+  },
+  {
+    "id": "b9c4aca14dc71aeb",
+    "url": "https://arxiv.org/abs/2610.27375",
+    "title": "Shaped SAEs: Expanding the Toolkit for Mechanistic Interpretability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T22:58:53Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Sparse autoencoders (SAEs) seek to decompose the dense activations of large language models (LLMs) into sparse, potentially interpretable features using a learned overcomplete dictionary. In this work, we ask whether it is possible to enhance the semantic selectivity of the learned dictionary atoms by linearly…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Oveys Delafrooz Noroozi",
+      "Bhagyashree Puranik",
+      "Upamanyu Madhow"
+    ],
+    "arxiv_id": "2610.27375",
+    "summary": null
+  },
+  {
+    "id": "9ea11554d9795c4d",
+    "url": "https://arxiv.org/abs/2610.27373",
+    "title": "Fundamental Impossibility Results in AI Safety: Trading Off between Desiderata",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T22:57:06Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Is there a fundamental tradeoff between desiderata for safe AI systems, such as harmlessness and helpfulness? We answer by formalizing the interaction between AI systems and users as a game with three players: a defender and an attacker that are computationally or informationally bounded, and an AI that provides…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Ida Mattsson",
+      "Ratip Emin Berker",
+      "Emanuel Tewolde",
+      "Ioannis Anagnostides",
+      "Kiriaki Fragkia",
+      "Xinyu Liu",
+      "Alexander Heckett",
+      "Jiayuan Liu",
+      "Eden Hartman",
+      "Vojtěch Kovařík",
+      "Sven Neth",
+      "Maria-Florina Balcan",
+      "Tuomas Sandholm",
+      "Vincent Conitzer"
+    ],
+    "arxiv_id": "2610.27373",
     "summary": null
   },
   {
@@ -34,6 +384,27 @@
     "summary": null
   },
   {
+    "id": "b88435c8539e9d03",
+    "url": "https://arxiv.org/abs/2610.27269",
+    "title": "African Languages AI Safety Readiness Report",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T20:43:16Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "With the widespread adoption of large language models (LLMs) across languages and domains, AI safety has emerged as a critical global concern. However, due to resource constraints, research and development efforts tend to prioritize a limited number of high-resource languages, leaving many others, especially those…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Israel Abebe Azime",
+      "Jesujoba O. Alabi",
+      "Tajuddeen Gwadabe",
+      "David Ifeoluwa Adelani"
+    ],
+    "arxiv_id": "2610.27269",
+    "summary": null
+  },
+  {
     "id": "e4bb8c63262eb5b0",
     "url": "https://www.lesswrong.com/posts/w2tBHwNERDoSawznx/i-can-see-everything",
     "title": "I Can See Everything",
@@ -48,6 +419,52 @@
     "authors": [
       "Zvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "d5fcfd36e3a11ab8",
+    "url": "https://arxiv.org/abs/2610.27244",
+    "title": "AutoRedClaw: Automated Red-Teaming for Claw-Style Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T20:15:39Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Agent systems are shifting from task-scoped tool-use agents to persistent, personalized assistants such as OpenClaw. These claw-style agents maintain configuration files (e.g., AGENTS.md), long-term memory, and reusable skills.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Hao Li",
+      "Tongyan Hu",
+      "Weidi Luo",
+      "Shanghao Shi",
+      "Xiaogeng Liu",
+      "Aiden Suh",
+      "Yulong Cao",
+      "Ning Zhang",
+      "William Yeoh",
+      "Yevgeniy Vorobeychik",
+      "Chaowei Xiao"
+    ],
+    "arxiv_id": "2610.27244",
+    "summary": null
+  },
+  {
+    "id": "3e8bc7f2ea82989d",
+    "url": "https://arxiv.org/abs/2610.27214",
+    "title": "Deep catastrophic-risk-aware reinforcement learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T19:44:22Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "Estimating extreme risk in reinforcement learning becomes increasingly difficult as the confidence level increases, since only a small number of observations contribute to empirical estimates of Conditional Value-at-Risk (CVaR). In this paper, we extend an Extreme Value Theory (EVT) approach for CVaR optimization to…",
+    "topics": [],
+    "authors": [
+      "Carlos Pérez Octavio Mendoza",
+      "Frédéric Godin"
+    ],
+    "arxiv_id": "2610.27214",
     "summary": null
   },
   {
@@ -665,6 +1082,26 @@
       "Yi Zhang"
     ],
     "arxiv_id": "2610.24896",
+    "summary": null
+  },
+  {
+    "id": "a8717f23fc3fd308",
+    "url": "https://arxiv.org/abs/2610.26935",
+    "title": "How Intervention History Changes AI Agent Sabotage on Subsequent Tasks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-17T21:24:33Z",
+    "fetched_at": "2026-10-21T10:56:45Z",
+    "excerpt": "AI control evaluations often reset agents' memory between tasks, although deployed agents may retain records of prior interventions. We ask whether learning that an earlier attack was caught changes an agent's ability to evade defer-to-trusted (DtT), a protocol that replaces suspicious work with a trusted model's…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Daniel Saeedi",
+      "Amirali Aghazadeh"
+    ],
+    "arxiv_id": "2610.26935",
     "summary": null
   },
   {

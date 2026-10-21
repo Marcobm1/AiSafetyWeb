@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-10-20T10:44:48Z",
-  "duration_seconds": 6.7,
-  "new_entries": 39,
+  "last_run": "2026-10-21T10:56:45Z",
+  "duration_seconds": 6.8,
+  "new_entries": 21,
   "sources": [
     {
       "id": "alignment-forum",
@@ -9,7 +9,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 6,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -52,9 +52,9 @@
       "id": "metr",
       "name": "METR",
       "status": "ok",
-      "items_in_feed": 98,
-      "kept": 5,
-      "new": 0,
+      "items_in_feed": 99,
+      "kept": 6,
+      "new": 1,
       "error": null
     },
     {
@@ -90,7 +90,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 2,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -99,15 +99,15 @@
       "status": "ok",
       "items_in_feed": 20,
       "kept": 2,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1300,
-      "kept": 5,
+      "items_in_feed": 1303,
+      "kept": 6,
       "new": 1,
       "error": null
     },
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 32,
+      "new": 16,
       "error": null
     }
   ],
   "candidates": {
-    "added": 32,
+    "added": 16,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 438
+    "total": 454
   }
 }
