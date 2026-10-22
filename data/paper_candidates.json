@@ -1,4 +1,229 @@
 {
+  "arxiv:2610.30051": {
+    "id": "arxiv:2610.30051",
+    "title": "From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks",
+    "authors": [
+      "May Espinola",
+      "Qifan Zhang",
+      "Yu Xiang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30051",
+    "abstract": "Recent advances in frontier AI models have demonstrated remarkable capabilities in visual understanding, reasoning, planning, and tool use, raising the possibility of using general-purpose AI models for robot manipulation without task-specific training. However, their manipulation capabilities have not been…",
+    "detected": "2026-10-22",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.30006": {
+    "id": "arxiv:2610.30006",
+    "title": "Building Auditable AI Text Detectors with Sparse Autoencoders",
+    "authors": [
+      "Liam Dugan",
+      "Callum McDougall",
+      "Matthew Denton",
+      "Philip Pham",
+      "Christine Kaeser-Chen",
+      "Chris Callison-Burch"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30006",
+    "abstract": "AI-generated text detectors are increasingly deployed in consequential settings---peer review, education, admissions, journalism, and content moderation---where their outputs directly affect individuals. Yet the strongest detectors are fine-tuned neural classifiers whose decisions are opaque, while transparent…",
+    "detected": "2026-10-22",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.29734": {
+    "id": "arxiv:2610.29734",
+    "title": "Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability",
+    "authors": [
+      "Usman Anwar",
+      "Tim Bakker",
+      "Christos Louizos",
+      "David Krueger"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.29734",
+    "abstract": "Chain-of-thought (CoT) monitoring is one of the few practical tools available for overseeing capable AI systems, but it is fragile: a model's reasoning is only useful to a monitor if it remains coupled to what the model actually does. This coupling can be degraded during training through, for example, CoT compression…",
+    "detected": "2026-10-22",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.29225": {
+    "id": "arxiv:2610.29225",
+    "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
+    "authors": [
+      "Hongyu Li",
+      "Xinlong Huang",
+      "Zhan Yu",
+      "Jing Zhao",
+      "Zhe Zhao",
+      "Juntao Zhong",
+      "Xiong Kuang",
+      "Rui Yuan",
+      "ZhenXiang Yan",
+      "Huilin Xu",
+      "Haitao Yu",
+      "Lilin Wang",
+      "Rui Chen",
+      "Blaze Chen",
+      "Fengzong Lian",
+      "Renfen Hu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.29225",
+    "abstract": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics.",
+    "detected": "2026-10-22",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.29129": {
+    "id": "arxiv:2610.29129",
+    "title": "Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering",
+    "authors": [
+      "Austin Meek",
+      "Kyle Cox",
+      "Matthew Nguyen",
+      "Austin J. Brockmeier",
+      "Steven Basart"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.29129",
+    "abstract": "Reward hacking is a major problem in current production machine learning systems, resulting in costly and dangerous failures. Here we study how to monitor for and mitigate reward hacking in realistic settings, including tool calls and long contexts.",
+    "detected": "2026-10-22",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.28992": {
+    "id": "arxiv:2610.28992",
+    "title": "Language Impairment as a Lens onto Large Language Models",
+    "authors": [
+      "Muxuan He",
+      "Wang Bill Zhu",
+      "Yue Chen",
+      "Elsi Kaiser",
+      "Weizhi Du",
+      "Yao Du",
+      "Samuel Nastase",
+      "Yanjun Gao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28992",
+    "abstract": "Although large language models (LLMs) encode language in highly distributed spaces, they remain vulnerable to focal disruptions---a phenomenon strikingly similar to how localized brain damage causes clinical aphasia in humans. To investigate this theoretical tension, we ask whether LLMs possess a functional structure…",
+    "detected": "2026-10-22",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.28966": {
+    "id": "arxiv:2610.28966",
+    "title": "Black-Box Red-Teaming of Multi-Agent Systems via Reinforcement Learning",
+    "authors": [
+      "Yuqi Jia",
+      "Hangsheng Zhang",
+      "Chenxi Liu",
+      "Junjie Liang",
+      "Xun Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28966",
+    "abstract": "Large language model (LLM) agents are increasingly deployed in multi-agent systems (MAS) to accomplish complex tasks. Prior black-box red-teaming attacks mainly focus on single agents, but we find that these methods are far less effective in MAS, where multiple sub-agents may not directly interact with the user.",
+    "detected": "2026-10-22",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.28904": {
+    "id": "arxiv:2610.28904",
+    "title": "Tropical Cyclone Attributes in Sparse Autoencoder Features of an AI Weather Model",
+    "authors": [
+      "Jiapei Liu",
+      "Ruidong Li",
+      "Ting Sun",
+      "Guangheng Ni"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28904",
+    "abstract": "Artificial intelligence (AI) weather models now forecast weather events skillfully, but how they represent these events internally remains unknown. Sparse autoencoders (SAEs) provide sparse features for probing hidden states, but how information about multiple physical attributes of an event is organized across them…",
+    "detected": "2026-10-22",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.28819": {
+    "id": "arxiv:2610.28819",
+    "title": "LIFT: Scoped Constraints for Evaluating and Training Instruction Following",
+    "authors": [
+      "Eran Goldstein",
+      "Yuval Belfer",
+      "Yonatan Belinkov",
+      "Daniel Gissin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28819",
+    "abstract": "Common instruction following (IF) benchmarks, such as IFEval, evaluate the ability of language models (LMs) to follow simple constraints that can easily be verified programmatically. These same constraints, in turn, are used as reward signals for reinforcement learning.",
+    "detected": "2026-10-22",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.28810": {
+    "id": "arxiv:2610.28810",
+    "title": "Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise",
+    "authors": [
+      "Pedro H. Barcha Correia",
+      "Matheus Azevedo de Sá",
+      "Paulo H. Gomes de Senna",
+      "Giovanni Mandel Martignago",
+      "Victor Takashi Hayashi",
+      "Charles Christian Miers",
+      "Marcos A. Simplicio"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28810",
+    "abstract": "The widespread adoption of generative artificial intelligence in recent years has brought a parallel rise in prompt injection and jailbreak attacks. By embedding malicious instructions, these exploits manipulate language models to bypass intended behavior and operational boundaries.",
+    "detected": "2026-10-22",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.28799": {
+    "id": "arxiv:2610.28799",
+    "title": "Where Do Legal Factors Live in LLMs?",
+    "authors": [
+      "Li Zhang",
+      "Kevin Ashley"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28799",
+    "abstract": "In case-based legal reasoning, legal professionals identify legally significant fact patterns in a new dispute and compare them with those of decided cases. In AI & Law, HYPO dimensions and CATO factors represent these patterns symbolically, organizing expert knowledge distilled from case narratives as explicit…",
+    "detected": "2026-10-22",
+    "topics": []
+  },
+  "arxiv:2610.28707": {
+    "id": "arxiv:2610.28707",
+    "title": "SimHack: Predicting the onset of detectable reward hacking before RL training",
+    "authors": [
+      "Junwei Deng",
+      "Alex Bie",
+      "Natalia Ponomareva"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.28707",
+    "abstract": "When training LLMs to code with reinforcement learning, reward hacking is often detectable but difficult to prevent, since (a) environment hardening is increasingly difficult as training environments grow more complex; and (b) training-time interventions incentivize models to obfuscate hacking behavior to bypass…",
+    "detected": "2026-10-22",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2610.28607": {
     "id": "arxiv:2610.28607",
     "title": "Benchmarking Arabic Dialects for Math Problems",

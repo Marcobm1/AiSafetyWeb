@@ -1,5 +1,185 @@
 [
   {
+    "id": "4b022e64773d76b0",
+    "url": "https://www.alignmentforum.org/posts/eCR373J3NZwFbacnd/neural-nets-are-exceptionally-vulnerable-to-goal-self-hack",
+    "title": "Neural nets are exceptionally vulnerable to goal self-hack",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-22T05:19:33Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Suppose we have an AI CEO, ruthlessly devoted to maximising shareholder value. Fortunately, we haven't been completely stupid, and have given it a rich definition of shareholder value, encompassing the success, flourishing, safety, preference satisfaction, and moral values of the shareholders, not just the stock price.",
+    "topics": [],
+    "authors": [
+      "Stuart_Armstrong"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1b1337f2259519df",
+    "url": "https://www.lesswrong.com/posts/WgroAK7N3jAfBBpct/autonomous-researchers-will-strain-peer-review-funding-and",
+    "title": "Autonomous researchers will strain peer review, funding, and oversight",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-22T04:07:18Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Summary : Autonomous AI researchers could greatly accelerate AI safety research, but even if we solve sabotage, they will strain the research ecosystem. They will multiply the volume of research and make researchers homogeneous.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jason Fantl"
+    ],
+    "summary": null
+  },
+  {
+    "id": "77abc53d2fbed0ee",
+    "url": "https://www.lesswrong.com/posts/TB49wHkqpEb7KdxM2/misaligned",
+    "title": "Misaligned!",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-22T03:44:11Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "A lot of AIs were misaligned this week. A fun little survey.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6d1119312a3a1482",
+    "url": "https://thezvi.wordpress.com/2026/10/21/misaligned",
+    "title": "Misaligned!",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-10-21T22:25:05Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "A lot of AIs were misaligned this week. A fun little survey.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "552cb49aa5b02d42",
+    "url": "https://www.lesswrong.com/posts/qGS3SJ9TSKdSSycRz/why-i-m-becoming-a-professor-in-ai-safety-in-beijing",
+    "title": "Why I’m becoming a professor in AI safety in Beijing",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-21T19:54:38Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Cross-posted from Sören Mindermann's substack ( I am not Sören ). Should be of general interest to the LW community.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Buddenbroke"
+    ],
+    "summary": null
+  },
+  {
+    "id": "65a0534d66feb473",
+    "url": "https://arxiv.org/abs/2610.30051",
+    "title": "From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T17:11:52Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Recent advances in frontier AI models have demonstrated remarkable capabilities in visual understanding, reasoning, planning, and tool use, raising the possibility of using general-purpose AI models for robot manipulation without task-specific training. However, their manipulation capabilities have not been…",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "May Espinola",
+      "Qifan Zhang",
+      "Yu Xiang"
+    ],
+    "arxiv_id": "2610.30051",
+    "summary": null
+  },
+  {
+    "id": "eee8ff2ad8c9bb17",
+    "url": "https://www.lesswrong.com/posts/oePzacZn6wNcJPvH3/circuit-priors-in-nn-bayes-more-results",
+    "title": "Circuit priors in NN-bayes: more results",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-21T16:51:49Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "We're posting lots of papers written with GPT-6 Astra on generalization properties of bayesian neural net learning. [1] The following picture emerges: For various reasonable priors on MLP weights, [2] the induced prior on functions is a circuit prior: for fixed depth, the ordering of functions by negative log prior is…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Kaarel"
+    ],
+    "summary": null
+  },
+  {
+    "id": "27260301886a20aa",
+    "url": "https://arxiv.org/abs/2610.30006",
+    "title": "Building Auditable AI Text Detectors with Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T16:41:14Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "AI-generated text detectors are increasingly deployed in consequential settings---peer review, education, admissions, journalism, and content moderation---where their outputs directly affect individuals. Yet the strongest detectors are fine-tuned neural classifiers whose decisions are opaque, while transparent…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Liam Dugan",
+      "Callum McDougall",
+      "Matthew Denton",
+      "Philip Pham",
+      "Christine Kaeser-Chen",
+      "Chris Callison-Burch"
+    ],
+    "arxiv_id": "2610.30006",
+    "summary": null
+  },
+  {
+    "id": "1b9c59f9a0a660cf",
+    "url": "https://arxiv.org/abs/2610.29734",
+    "title": "Monitorability Is Trainable: Post-Training for Chain-of-Thought Monitorability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T13:35:57Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring is one of the few practical tools available for overseeing capable AI systems, but it is fragile: a model's reasoning is only useful to a monitor if it remains coupled to what the model actually does. This coupling can be degraded during training through, for example, CoT compression…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Usman Anwar",
+      "Tim Bakker",
+      "Christos Louizos",
+      "David Krueger"
+    ],
+    "arxiv_id": "2610.29734",
+    "summary": null
+  },
+  {
+    "id": "d3f519557f32dd3d",
+    "url": "https://openai.com/index/coordinated-disclosure-of-critical-vulnerabilities",
+    "title": "Patch the Planet: global response coordination as agents uncover critical vulnerabilities",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-21T07:00:00Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Patch the Planet connects security researchers, maintainers, and incident responders to help address critical vulnerabilities across open source.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
     "id": "fe90b984b2417187",
     "url": "https://www.lesswrong.com/posts/qxAroimgs4BvBHz2i/anthropic-does-not-understand-why-its-draft-bill-was",
     "title": "Anthropic Does Not Understand Why Its Draft Bill Was Unacceptable and Troubling",
@@ -14,6 +194,209 @@
     "authors": [
       "Zvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "4703a3914cee16f0",
+    "url": "https://arxiv.org/abs/2610.29225",
+    "title": "Beyond Binary Labels: Diagnostic Evaluation of LLM Safety with Prompt-Level Rubrics",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T05:33:50Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Current LLM safety benchmarks predominantly rely on binary safe or unsafe labels, lacking explanatory depth and suffering from low consistency across automated judges. To address this, we introduce DiagSafe, a diagnostic evaluation framework that moves beyond binary classification by employing prompt-level rubrics.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Hongyu Li",
+      "Xinlong Huang",
+      "Zhan Yu",
+      "Jing Zhao",
+      "Zhe Zhao",
+      "Juntao Zhong",
+      "Xiong Kuang",
+      "Rui Yuan",
+      "ZhenXiang Yan",
+      "Huilin Xu",
+      "Haitao Yu",
+      "Lilin Wang",
+      "Rui Chen",
+      "Blaze Chen",
+      "Fengzong Lian",
+      "Renfen Hu"
+    ],
+    "arxiv_id": "2610.29225",
+    "summary": null
+  },
+  {
+    "id": "9097d17fe421c98a",
+    "url": "https://arxiv.org/abs/2610.29129",
+    "title": "Mitigating Reward Hacking in Realistic Scenarios Through Representation Engineering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T03:12:22Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Reward hacking is a major problem in current production machine learning systems, resulting in costly and dangerous failures. Here we study how to monitor for and mitigate reward hacking in realistic settings, including tool calls and long contexts.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Austin Meek",
+      "Kyle Cox",
+      "Matthew Nguyen",
+      "Austin J. Brockmeier",
+      "Steven Basart"
+    ],
+    "arxiv_id": "2610.29129",
+    "summary": null
+  },
+  {
+    "id": "b2deaf97c98cf0ff",
+    "url": "https://openai.com/index/empowering-cyber-defenders",
+    "title": "Democratic governance of frontier AI, part II: Empowering cyber defenders",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-21T00:00:00Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "OpenAI outlines a blueprint for empowering cyber defenders with frontier AI, stronger safeguards, modernized cybersecurity, and more resilient public institutions.",
+    "topics": [
+      "governance",
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e77b1b5704c4e157",
+    "url": "https://arxiv.org/abs/2610.28992",
+    "title": "Language Impairment as a Lens onto Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T23:42:36Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Although large language models (LLMs) encode language in highly distributed spaces, they remain vulnerable to focal disruptions---a phenomenon strikingly similar to how localized brain damage causes clinical aphasia in humans. To investigate this theoretical tension, we ask whether LLMs possess a functional structure…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Muxuan He",
+      "Wang Bill Zhu",
+      "Yue Chen",
+      "Elsi Kaiser",
+      "Weizhi Du",
+      "Yao Du",
+      "Samuel Nastase",
+      "Yanjun Gao"
+    ],
+    "arxiv_id": "2610.28992",
+    "summary": null
+  },
+  {
+    "id": "ca34b7f265a3d619",
+    "url": "https://arxiv.org/abs/2610.28966",
+    "title": "Black-Box Red-Teaming of Multi-Agent Systems via Reinforcement Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T22:32:22Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Large language model (LLM) agents are increasingly deployed in multi-agent systems (MAS) to accomplish complex tasks. Prior black-box red-teaming attacks mainly focus on single agents, but we find that these methods are far less effective in MAS, where multiple sub-agents may not directly interact with the user.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Yuqi Jia",
+      "Hangsheng Zhang",
+      "Chenxi Liu",
+      "Junjie Liang",
+      "Xun Chen"
+    ],
+    "arxiv_id": "2610.28966",
+    "summary": null
+  },
+  {
+    "id": "f1356c3f91b40798",
+    "url": "https://arxiv.org/abs/2610.28904",
+    "title": "Tropical Cyclone Attributes in Sparse Autoencoder Features of an AI Weather Model",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T20:30:30Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Artificial intelligence (AI) weather models now forecast weather events skillfully, but how they represent these events internally remains unknown. Sparse autoencoders (SAEs) provide sparse features for probing hidden states, but how information about multiple physical attributes of an event is organized across them…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Jiapei Liu",
+      "Ruidong Li",
+      "Ting Sun",
+      "Guangheng Ni"
+    ],
+    "arxiv_id": "2610.28904",
+    "summary": null
+  },
+  {
+    "id": "3fdb47a75df66ebc",
+    "url": "https://arxiv.org/abs/2610.28819",
+    "title": "LIFT: Scoped Constraints for Evaluating and Training Instruction Following",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T18:40:22Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "Common instruction following (IF) benchmarks, such as IFEval, evaluate the ability of language models (LMs) to follow simple constraints that can easily be verified programmatically. These same constraints, in turn, are used as reward signals for reinforcement learning.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Eran Goldstein",
+      "Yuval Belfer",
+      "Yonatan Belinkov",
+      "Daniel Gissin"
+    ],
+    "arxiv_id": "2610.28819",
+    "summary": null
+  },
+  {
+    "id": "8c2c9f2087d4b51a",
+    "url": "https://arxiv.org/abs/2610.28810",
+    "title": "Combining Long-Term Memory and LLMs Comes at a High Cost: From Prompt Injection to Persistent Compromise",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T18:33:05Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "The widespread adoption of generative artificial intelligence in recent years has brought a parallel rise in prompt injection and jailbreak attacks. By embedding malicious instructions, these exploits manipulate language models to bypass intended behavior and operational boundaries.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Pedro H. Barcha Correia",
+      "Matheus Azevedo de Sá",
+      "Paulo H. Gomes de Senna",
+      "Giovanni Mandel Martignago",
+      "Victor Takashi Hayashi",
+      "Charles Christian Miers",
+      "Marcos A. Simplicio"
+    ],
+    "arxiv_id": "2610.28810",
+    "summary": null
+  },
+  {
+    "id": "32df88a373b91c9e",
+    "url": "https://arxiv.org/abs/2610.28799",
+    "title": "Where Do Legal Factors Live in LLMs?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T18:24:37Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "In case-based legal reasoning, legal professionals identify legally significant fact patterns in a new dispute and compare them with those of decided cases. In AI & Law, HYPO dimensions and CATO factors represent these patterns symbolically, organizing expert knowledge distilled from case narratives as explicit…",
+    "topics": [],
+    "authors": [
+      "Li Zhang",
+      "Kevin Ashley"
+    ],
+    "arxiv_id": "2610.28799",
     "summary": null
   },
   {
@@ -90,6 +473,26 @@
       "Maria Vanina Martinez"
     ],
     "arxiv_id": "2610.28539",
+    "summary": null
+  },
+  {
+    "id": "cf364b8521f73c25",
+    "url": "https://arxiv.org/abs/2610.28707",
+    "title": "SimHack: Predicting the onset of detectable reward hacking before RL training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-20T15:58:47Z",
+    "fetched_at": "2026-10-22T10:55:56Z",
+    "excerpt": "When training LLMs to code with reinforcement learning, reward hacking is often detectable but difficult to prevent, since (a) environment hardening is increasingly difficult as training environments grow more complex; and (b) training-time interventions incentivize models to obfuscate hacking behavior to bypass…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Junwei Deng",
+      "Alex Bie",
+      "Natalia Ponomareva"
+    ],
+    "arxiv_id": "2610.28707",
     "summary": null
   },
   {
