@@ -1,5 +1,210 @@
 [
   {
+    "id": "15c1f8ef7a582594",
+    "url": "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+    "title": "OpenAI and Poland’s NASK partner to advance AI safety and security",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-23T00:00:00Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "OpenAI and Poland’s NASK are partnering on AI safety, security, and technical research to strengthen safeguards and support a more resilient digital ecosystem.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "430474a9af0e6a44",
+    "url": "https://www.alignmentforum.org/posts/zAczYuHQS6jdG5DTg/monitorability-evaluations-and-policy-proposals",
+    "title": "Monitorability evaluations and policy proposals",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-10-22T16:55:00Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "There has been a lot of discussion recently of policy proposals around monitorability, such as Redwood's proposal and my counter-proposal . I'd like to say a bit more generally about how I'm thinking about monitorability.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "evhub"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8027b1869b1fb307",
+    "url": "https://arxiv.org/abs/2610.31520",
+    "title": "The Geometry of Metaphor: Probing and Steering Metaphor Representations in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T16:33:01Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Metaphor is a crucial aspect of human cognition. As such, we would like to understand how it is represented in large language models (LLMs) and how it might be controlled.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Shihui Li",
+      "Mette Andersen",
+      "Martha Lewis"
+    ],
+    "arxiv_id": "2610.31520",
+    "summary": null
+  },
+  {
+    "id": "4a20a90b026153d8",
+    "url": "https://www.lesswrong.com/posts/WRvxRHMCmc3Qt4axz/greater-good-arguments-in-ai-safety",
+    "title": "Greater good arguments in AI safety",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-22T16:32:56Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Back in the before-time of the 2010s, when EA was still known mostly for funding health efforts in the developing world, there were many baskets of criticism floating around from the left. The most prominent was a cluster centered around EAs being white men, and therefore suspicious.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "b52acb1dbd0028ee",
+    "url": "https://www.lesswrong.com/posts/xGucXHQ3NLkHZL3Cg/the-alignment-journal-our-approach-and-related-projects",
+    "title": "The Alignment Journal: Our Approach and Related Projects",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-22T16:27:14Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "The Alignment Journal is now open for submissions! This is the fifth post in a series: the announcement post introduced the journal's core premise and its three key innovations: paid attributed review, published review summaries, [1] and LLM-assisted workflow; the features and policies post examined the shortcomings…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dan MacKinlay"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0b6ea312f8884a57",
+    "url": "https://thezvi.wordpress.com/2026/10/22/ai-191-the-hackening-begins",
+    "title": "AI #191: The Hackening Begins",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-10-22T15:13:35Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "It was the probably worst day in cybersecurity history. So far.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d5f40d13298d2827",
+    "url": "https://arxiv.org/abs/2610.31331",
+    "title": "Harmful Responses Are Jailbreak Templates: Transferring Autoregressive Jailbreaks to Diffusion Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T14:20:36Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Diffusion large language models (dLLMs) enable flexible masked generation through bidirectional context modeling, but this capability also introduces a distinct jailbreak attack surface. We find that a harmful response to a given query naturally serves as an effective jailbreak template: simply masking a subset of its…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Jinwei Gan",
+      "Zifeng Cheng",
+      "Zhiwei Jiang",
+      "Ran Sun",
+      "Shiping Ge",
+      "Qing Gu"
+    ],
+    "arxiv_id": "2610.31331",
+    "summary": null
+  },
+  {
+    "id": "8baf301aae99b6bb",
+    "url": "https://arxiv.org/abs/2610.30934",
+    "title": "Verbalizing Activation Differences with Natural Language Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T08:54:58Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Activation verbalizers translate the internal representations of large language models into human-readable text. The recently proposed natural language autoencoders (NLAs) learn this by reconstructing activations through a natural language bottleneck.",
+    "topics": [],
+    "authors": [
+      "Andrea Blasi Núñez",
+      "Gianluca Barmina",
+      "Federico Torrielli",
+      "Thiusius Rajeeth Savarimuthu",
+      "Peter Schneider-Kamp",
+      "Lukas Galke Poech"
+    ],
+    "arxiv_id": "2610.30934",
+    "summary": null
+  },
+  {
+    "id": "04830a680922fb6c",
+    "url": "https://metr.org/blog/2026-10-22-red-teaming-openai-agent-monitoring",
+    "title": "Red-Teaming OpenAI's Internal Agent Monitoring Systems",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-10-22T07:00:00Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "For three weeks, from July 21st to August 11th, a METR employee and a Redwood Research employee conducted a pilot high-access exercise to stress-test OpenAI’s internal misalignment monitoring system. 1 The output of this exercise was a 61-page internal report that was shared with OpenAI researchers and security staff…",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "3464ae700fda370d",
+    "url": "https://arxiv.org/abs/2610.30822",
+    "title": "TESSA: A Governance-Oriented Custom GPT for SME Guidance under the EU AI Act: Design, Implementation, and Evaluation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T06:52:56Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "The increasing adoption of generative AI presents new opportunities while raising AI governance and regulatory challenges, particularly for small and medium-sized enterprises (SMEs) navigating the European Union Artificial Intelligence Act (EU AI Act). To support AI governance education, this study developed TESSA, a…",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Chalisa Veesommai Sillberga",
+      "Kai-Kristian Kemella",
+      "Pekka Sillberga",
+      "Katri Harjuveteläinenb",
+      "Mika Saaria",
+      "Pekka Abrahamssona"
+    ],
+    "arxiv_id": "2610.30822",
+    "summary": null
+  },
+  {
+    "id": "0979872279ce4ffd",
+    "url": "https://arxiv.org/abs/2610.30803",
+    "title": "What Lies Beyond Perception: A Partition Theory of the Limits of AI Evaluation and Oversight",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T06:28:29Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Replacing the judge can move a benchmark score, and models can be trained to hide capabilities. Both put the evaluator in question: what can it certify?",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Ahmed M. Mahran"
+    ],
+    "arxiv_id": "2610.30803",
+    "summary": null
+  },
+  {
     "id": "4b022e64773d76b0",
     "url": "https://www.alignmentforum.org/posts/eCR373J3NZwFbacnd/neural-nets-are-exceptionally-vulnerable-to-goal-self-hack",
     "title": "Neural nets are exceptionally vulnerable to goal self-hack",
@@ -12,6 +217,24 @@
     "authors": [
       "Stuart_Armstrong"
     ],
+    "summary": null
+  },
+  {
+    "id": "e8f86ef2ec5af08c",
+    "url": "https://arxiv.org/abs/2610.30727",
+    "title": "Faithful Latent Harm Monitors Work No Better Than the Models Own Behaviour at a Matched False Alarm Rate",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T04:54:53Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Large language models have been reported to encode the harmfulness of a request separately from their decision to refuse it, and latent safety monitors such as Latent Guard build on this report by classifying prompts as harmful from the internal activations of the model, with the aim of catching harmful intent even…",
+    "topics": [],
+    "authors": [
+      "Abhishek Mishra",
+      "Sagnik Chatterjee",
+      "Suyash Maniyar"
+    ],
+    "arxiv_id": "2610.30727",
     "summary": null
   },
   {
@@ -49,6 +272,32 @@
     "summary": null
   },
   {
+    "id": "f214c7e037e174c2",
+    "url": "https://arxiv.org/abs/2610.30582",
+    "title": "Model Organisms of Collusion: Corrective Transfer in Untrusted Monitors",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-22T01:22:48Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "AI control protocols aim to get useful work from models that may be misaligned by monitoring their behaviour. One approach uses a second copy of the same model as the monitor.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Juan-Pablo Rivera",
+      "Ari Spiesberger",
+      "Juan J Vazquez",
+      "Arun Jose",
+      "Axel Ahlqvist",
+      "Adeline Kassler",
+      "Meru Gopalan",
+      "Sandy Tanwisuth",
+      "John Hughes"
+    ],
+    "arxiv_id": "2610.30582",
+    "summary": null
+  },
+  {
     "id": "6d1119312a3a1482",
     "url": "https://thezvi.wordpress.com/2026/10/21/misaligned",
     "title": "Misaligned!",
@@ -63,6 +312,26 @@
     "authors": [
       "TheZvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "58f7c4f6daec076a",
+    "url": "https://arxiv.org/abs/2610.30474",
+    "title": "Rethinking SAE Evaluation: An Atomic Interpretable Unit Framework Reveals Hidden Polysemanticity and Redundancy",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-21T21:47:27Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "Sparse autoencoders (SAEs) were originally motivated by discovering monosemantic features, a property that characterizes individual features but does not specify what the learned feature set should look like as a whole. As SAEs have increasingly been adopted for attribution, circuit discovery, and intervention…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Riteng Zhang",
+      "Xiaoqian Wang"
+    ],
+    "arxiv_id": "2610.30474",
     "summary": null
   },
   {
@@ -784,6 +1053,27 @@
     "authors": [
       "shawnghu"
     ],
+    "summary": null
+  },
+  {
+    "id": "13eed581480dabd9",
+    "url": "https://arxiv.org/abs/2610.30182",
+    "title": "Detecting AI Training in Datacentre Power",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-19T21:42:56Z",
+    "fetched_at": "2026-10-23T10:47:58Z",
+    "excerpt": "AI governance agreements require methods to detect large model training runs on a monitored computing cluster, without trusting the operator. We develop a method to detect synchronous model training in facility-level power by Viterbi tracking of the wandering iteration cadence.",
+    "topics": [
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Tom Kimpson",
+      "Mauricio Baker",
+      "Emlyn Graham"
+    ],
+    "arxiv_id": "2610.30182",
     "summary": null
   },
   {

@@ -1,4 +1,159 @@
 {
+  "arxiv:2610.31520": {
+    "id": "arxiv:2610.31520",
+    "title": "The Geometry of Metaphor: Probing and Steering Metaphor Representations in Large Language Models",
+    "authors": [
+      "Shihui Li",
+      "Mette Andersen",
+      "Martha Lewis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31520",
+    "abstract": "Metaphor is a crucial aspect of human cognition. As such, we would like to understand how it is represented in large language models (LLMs) and how it might be controlled.",
+    "detected": "2026-10-23",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.31331": {
+    "id": "arxiv:2610.31331",
+    "title": "Harmful Responses Are Jailbreak Templates: Transferring Autoregressive Jailbreaks to Diffusion Language Models",
+    "authors": [
+      "Jinwei Gan",
+      "Zifeng Cheng",
+      "Zhiwei Jiang",
+      "Ran Sun",
+      "Shiping Ge",
+      "Qing Gu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31331",
+    "abstract": "Diffusion large language models (dLLMs) enable flexible masked generation through bidirectional context modeling, but this capability also introduces a distinct jailbreak attack surface. We find that a harmful response to a given query naturally serves as an effective jailbreak template: simply masking a subset of its…",
+    "detected": "2026-10-23",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.30934": {
+    "id": "arxiv:2610.30934",
+    "title": "Verbalizing Activation Differences with Natural Language Autoencoders",
+    "authors": [
+      "Andrea Blasi Núñez",
+      "Gianluca Barmina",
+      "Federico Torrielli",
+      "Thiusius Rajeeth Savarimuthu",
+      "Peter Schneider-Kamp",
+      "Lukas Galke Poech"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30934",
+    "abstract": "Activation verbalizers translate the internal representations of large language models into human-readable text. The recently proposed natural language autoencoders (NLAs) learn this by reconstructing activations through a natural language bottleneck.",
+    "detected": "2026-10-23",
+    "topics": []
+  },
+  "arxiv:2610.30822": {
+    "id": "arxiv:2610.30822",
+    "title": "TESSA: A Governance-Oriented Custom GPT for SME Guidance under the EU AI Act: Design, Implementation, and Evaluation",
+    "authors": [
+      "Chalisa Veesommai Sillberga",
+      "Kai-Kristian Kemella",
+      "Pekka Sillberga",
+      "Katri Harjuveteläinenb",
+      "Mika Saaria",
+      "Pekka Abrahamssona"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30822",
+    "abstract": "The increasing adoption of generative AI presents new opportunities while raising AI governance and regulatory challenges, particularly for small and medium-sized enterprises (SMEs) navigating the European Union Artificial Intelligence Act (EU AI Act). To support AI governance education, this study developed TESSA, a…",
+    "detected": "2026-10-23",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.30803": {
+    "id": "arxiv:2610.30803",
+    "title": "What Lies Beyond Perception: A Partition Theory of the Limits of AI Evaluation and Oversight",
+    "authors": [
+      "Ahmed M. Mahran"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30803",
+    "abstract": "Replacing the judge can move a benchmark score, and models can be trained to hide capabilities. Both put the evaluator in question: what can it certify?",
+    "detected": "2026-10-23",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.30727": {
+    "id": "arxiv:2610.30727",
+    "title": "Faithful Latent Harm Monitors Work No Better Than the Models Own Behaviour at a Matched False Alarm Rate",
+    "authors": [
+      "Abhishek Mishra",
+      "Sagnik Chatterjee",
+      "Suyash Maniyar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30727",
+    "abstract": "Large language models have been reported to encode the harmfulness of a request separately from their decision to refuse it, and latent safety monitors such as Latent Guard build on this report by classifying prompts as harmful from the internal activations of the model, with the aim of catching harmful intent even…",
+    "detected": "2026-10-23",
+    "topics": []
+  },
+  "arxiv:2610.30582": {
+    "id": "arxiv:2610.30582",
+    "title": "Model Organisms of Collusion: Corrective Transfer in Untrusted Monitors",
+    "authors": [
+      "Juan-Pablo Rivera",
+      "Ari Spiesberger",
+      "Juan J Vazquez",
+      "Arun Jose",
+      "Axel Ahlqvist",
+      "Adeline Kassler",
+      "Meru Gopalan",
+      "Sandy Tanwisuth",
+      "John Hughes"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30582",
+    "abstract": "AI control protocols aim to get useful work from models that may be misaligned by monitoring their behaviour. One approach uses a second copy of the same model as the monitor.",
+    "detected": "2026-10-23",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.30474": {
+    "id": "arxiv:2610.30474",
+    "title": "Rethinking SAE Evaluation: An Atomic Interpretable Unit Framework Reveals Hidden Polysemanticity and Redundancy",
+    "authors": [
+      "Riteng Zhang",
+      "Xiaoqian Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30474",
+    "abstract": "Sparse autoencoders (SAEs) were originally motivated by discovering monosemantic features, a property that characterizes individual features but does not specify what the learned feature set should look like as a whole. As SAEs have increasingly been adopted for attribution, circuit discovery, and intervention…",
+    "detected": "2026-10-23",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.30182": {
+    "id": "arxiv:2610.30182",
+    "title": "Detecting AI Training in Datacentre Power",
+    "authors": [
+      "Tom Kimpson",
+      "Mauricio Baker",
+      "Emlyn Graham"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.30182",
+    "abstract": "AI governance agreements require methods to detect large model training runs on a monitored computing cluster, without trusting the operator. We develop a method to detect synchronous model training in facility-level power by Viterbi tracking of the wandering iteration cadence.",
+    "detected": "2026-10-23",
+    "topics": [
+      "governance",
+      "security"
+    ]
+  },
   "arxiv:2610.30051": {
     "id": "arxiv:2610.30051",
     "title": "From Reasoning to Action: Benchmarking Frontier AI Models on LIBERO-10 Robot Manipulation Tasks",
