@@ -1,5 +1,57 @@
 [
   {
+    "id": "584f6359613f7191",
+    "url": "https://www.lesswrong.com/posts/2wbW2WY3bP9Jzn4R5/control-monitors-need-alignment-assessments-too",
+    "title": "Control monitors need alignment assessments too",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-25T03:54:19Z",
+    "fetched_at": "2026-10-25T10:29:02Z",
+    "excerpt": "TL;DR : When misalignment monitors fail, it is already often because of alignment failures, not because they are too weak. I expect this to continue in the future.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Fabien Roger"
+    ],
+    "summary": null
+  },
+  {
+    "id": "20b33f627afb1ee0",
+    "url": "https://www.lesswrong.com/posts/x2ZAgjs7XoHvJ4YpN/the-agi-chronicles",
+    "title": "The AGI Chronicles",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-24T16:01:33Z",
+    "fetched_at": "2026-10-25T10:29:02Z",
+    "excerpt": "Book Review: The AGI Chronicles: The Inside Story of the Race to Create an Artificial Superintelligence, by Kevin Roose. This is a story of AI as seen through the eyes of the people who are creating it.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "PeterMcCluskey"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ba7a720e849d3168",
+    "url": "https://www.lesswrong.com/posts/nWiPLEgaXdAQNwXBd/patching-reward-hacks-won-t-fix-reward-hacking",
+    "title": "Patching reward hacks won’t fix reward hacking",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-24T15:10:57Z",
+    "fetched_at": "2026-10-25T10:29:02Z",
+    "excerpt": "Here's a basic argument that focusing on patching reward hacking is misguided and will fail. Argument is as follows: Reward hacking is a big problem , causing models to cheat and take unintended actions.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Africa"
+    ],
+    "summary": null
+  },
+  {
     "id": "5342ef8b37ba0f70",
     "url": "https://www.lesswrong.com/posts/uXiqyoKwpfjWfQXk5/simulated-control-evaluations",
     "title": "Simulated Control Evaluations",
