@@ -1,4 +1,213 @@
 {
+  "arxiv:2610.32780": {
+    "id": "arxiv:2610.32780",
+    "title": "AI Alignment for Digital Democracy: Fairer Voters Representation against LLM Biases",
+    "authors": [
+      "Yi Qi",
+      "Srijoni Majumdar",
+      "Evangelos Pournaras"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32780",
+    "abstract": "AI representation is emerging in digital democracy, assisting in voter emulation and decision-making. Large language models (LLMs) behave differently depending on the model, the prompt context, and the voter information they receive, representing some groups more accurately than others and potentially making the…",
+    "detected": "2026-10-26",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.32281": {
+    "id": "arxiv:2610.32281",
+    "title": "\"Not\" is Not Lost in Translation: A Causal Analysis of Negation Representations in Multilingual LLMs",
+    "authors": [
+      "Giang Son Nguyen",
+      "Wray Buntine",
+      "Dung D. Le",
+      "Wenya Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32281",
+    "abstract": "Negation occurs in every language, yet its surface realization differs drastically. Despite this, multilingual large language models (LLMs) translate negation robustly, raising the question of whether they share an underlying representation of negation across languages.",
+    "detected": "2026-10-26",
+    "topics": []
+  },
+  "arxiv:2610.32255": {
+    "id": "arxiv:2610.32255",
+    "title": "Anti-coherence Regularized Absolute Scaling for Out-of-Distribution Detection",
+    "authors": [
+      "Donghwan Kim",
+      "Youngwoong Jin",
+      "Hyunsoo Yoon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32255",
+    "abstract": "Out-of-distribution (OOD) detection is recognized as a critical problem in AI safety. SCALE is an effective post-hoc OOD detection method in the activation-shaping family that requires no training data and rescales penultimate activations using a percentile-based magnitude ratio.",
+    "detected": "2026-10-26",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.32208": {
+    "id": "arxiv:2610.32208",
+    "title": "Do VLAs Know They Will Fail? Interpretable Success and Failure Patterns in Physical AI Systems",
+    "authors": [
+      "Christian A. Rogers",
+      "Qian Lin",
+      "Daniel S. Brown"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32208",
+    "abstract": "Vision-Language-Action (VLA) models have emerged as powerful general-purpose robot policies, but their successes and failures remain difficult to diagnose and understand. In this work, we show that sparse autoencoder (SAE) representations of OpenVLA activations contain outcome-predictive information and can be used to…",
+    "detected": "2026-10-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.32114": {
+    "id": "arxiv:2610.32114",
+    "title": "Tampered ML: Evaluating LLM Judgment of Machine Learning Research",
+    "authors": [
+      "Soroush Ebadian",
+      "Parand A. Alamdari",
+      "Joe Benton",
+      "Hailey Joren"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32114",
+    "abstract": "One approach to accelerating progress on AI alignment is to automate parts of alignment research itself. Doing so requires systems that can perform reliably on hard-to-supervise research tasks, including identifying flaws in research proposals and evaluating whether a proposed experiment supports its intended claim.",
+    "detected": "2026-10-26",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.32059": {
+    "id": "arxiv:2610.32059",
+    "title": "Concept Acupuncturist: An Efficient and Precise Concept Erasure Method for Diffusion Models via Sparse Autoencoders",
+    "authors": [
+      "Yiran Xiahou",
+      "Siliang Qin",
+      "Kai Chen",
+      "Shengzhi Zhang",
+      "Renyang Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32059",
+    "abstract": "Diffusion-based image generation models produce high-quality images but may generate harmful or policy-violating content, motivating machine unlearning (MU) to selectively remove target concepts while preserving general capabilities. However, existing MU approaches often struggle with the distributed and entangled…",
+    "detected": "2026-10-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.32007": {
+    "id": "arxiv:2610.32007",
+    "title": "MI-MIDI 2: From Observation to Control with Sparse Autoencoders in Text-to-MIDI Generation",
+    "authors": [
+      "Jakub Poćwiardowski",
+      "Mateusz Modrzejewski"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.32007",
+    "abstract": "Sparse autoencoders (SAEs) can expose features of a generative model without predefined labels, but in language models the evidence used to interpret these features has proven an unreliable guide to which of them steer the output. Whether interpretations of SAE features predict control in music generators has not, to…",
+    "detected": "2026-10-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.31972": {
+    "id": "arxiv:2610.31972",
+    "title": "Reproducible Evaluation as the Substrate for Safe Prompt Compression in Production Agents",
+    "authors": [
+      "Prabal Vashisht",
+      "Zheng Hu",
+      "Ying Yang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31972",
+    "abstract": "Evaluating conversational agents that act on live, mutable enterprise data is hard: replayed sessions drift as backend state changes, and a benchmark built today can silently go stale as the data it describes moves on. We present an offline evaluation harness for a production conversational agent that stays…",
+    "detected": "2026-10-26",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.31937": {
+    "id": "arxiv:2610.31937",
+    "title": "$M^3$: A Multi-LLM System for Multi-Turn Jailbreaking as a Markov Decision Process",
+    "authors": [
+      "Yuqing Huang",
+      "Jack Ji",
+      "Jithin Pradeep",
+      "Sagarika Suresh",
+      "Jekaterina Novikova"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31937",
+    "abstract": "Modern Large Language Models (LLMs) remain vulnerable to carefully orchestrated multi-turn interactions that progressively bypass safety mechanisms. However, many existing red-teaming approaches rely on heuristics or impose strong assumptions that limit their applicability in fully black box settings.",
+    "detected": "2026-10-26",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.31894": {
+    "id": "arxiv:2610.31894",
+    "title": "TaxoSAE: Rethinking Sparse Autoencoders through Taxonomic Logic",
+    "authors": [
+      "Xinyu Guo",
+      "Minglai Yang",
+      "Clayton T. Morrison",
+      "Eduardo Blanco",
+      "Mihai Surdeanu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31894",
+    "abstract": "Recent Sparse Autoencoders (SAEs) decompose the representations of large language models (LLMs) into interpretable features, enabling precise readout and control of encoded knowledge. However, existing SAEs treat each feature as a standalone unit, whereas real-world knowledge is often taxonomically organized.",
+    "detected": "2026-10-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.31733": {
+    "id": "arxiv:2610.31733",
+    "title": "Learning to Be Monitored: Causal Bounds and Intervention-Aware Post-Training Recipes for Chain-of-Thought Monitorability",
+    "authors": [
+      "Qiang Fu",
+      "Xinyue Li",
+      "Andre Wibisono",
+      "Arman Cohan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31733",
+    "abstract": "Chain-of-thought (CoT) monitoring aims to detect potentially harmful behaviors in large language models (LLMs) from their CoTs. Intervention-based evaluations measure this property by asking whether a monitor can detect the role of an intervention from the CoT when the targeted behavior occurs, typically using…",
+    "detected": "2026-10-26",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.31713": {
+    "id": "arxiv:2610.31713",
+    "title": "Omni-UBench: Benchmarking Omni-Modal LLM-based Guardrails Across Safety, Utility, and Reliability",
+    "authors": [
+      "Junhao Wang",
+      "Yidou Chen",
+      "Li Lu",
+      "Hongwei Yao",
+      "Xiaodan Li",
+      "Mengjie Wu",
+      "Yuefeng Chen",
+      "Zhan Qin",
+      "Kui Ren"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.31713",
+    "abstract": "Advances in Omni-modal Large Language Models (OLLMs) have enabled increasingly seamless human-AI interaction, but their unified processing of heterogeneous modalities also expands the attack surface, allowing adversaries to exploit richer input compositions to circumvent safety alignment. To counter such risks…",
+    "detected": "2026-10-26",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
   "arxiv:2610.31520": {
     "id": "arxiv:2610.31520",
     "title": "The Geometry of Metaphor: Probing and Steering Metaphor Representations in Large Language Models",
