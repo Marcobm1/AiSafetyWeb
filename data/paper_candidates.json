@@ -1,4 +1,427 @@
 {
+  "arxiv:2610.35835": {
+    "id": "arxiv:2610.35835",
+    "title": "I-HITL: Inalienable Human-in-the-Loop",
+    "authors": [
+      "Samuel Breckenridge",
+      "Dani Vilardell",
+      "Wenhao Wang",
+      "Fan Zhang",
+      "Ari Juels"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.35835",
+    "abstract": "Human oversight is a pillar of AI safety. It is often exercised by a human in the loop (HITL) who approves critical actions taken by an AI agent.",
+    "detected": "2026-10-27",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.35743": {
+    "id": "arxiv:2610.35743",
+    "title": "SEMA-Auto: Sighted and Efficient Multi-Turn Attack with Autonomy",
+    "authors": [
+      "Mingqian Feng",
+      "Xiaodong Liu",
+      "Weiwei Yang",
+      "Chenliang Xu",
+      "Jialin Song",
+      "Qiyao Ma",
+      "Chengquan Guo",
+      "Carolyn Buractaon",
+      "Christopher White",
+      "Jianfeng Gao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.35743",
+    "abstract": "Existing jailbreak attackers fall into two classes: static planners fix their single- or multi-turn adversarial plans in advance, remaining simple but losing sight of the victim's replies, wasting turns and limiting transferability; interactive generators read each victim reply to generate the next-turn attack but…",
+    "detected": "2026-10-27",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.35725": {
+    "id": "arxiv:2610.35725",
+    "title": "The Watchtower Imperative: Lifespan-Calibrated Evaluation for Frontier AI",
+    "authors": [
+      "Casey M. Williams",
+      "Jennifer Victoria Scurrell"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.35725",
+    "abstract": "The gap between AI capability deployment and safety assurance is structural and cannot be closed through internal evaluations alone. Analyzing documented harms (2017-2026) across the human lifespan reveals that disparate incidents --- from voice assistants endangering children to AI companions implicated in adolescent…",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.35716": {
+    "id": "arxiv:2610.35716",
+    "title": "Audit Where Hacks Pay: Budgeted Strong-Verifier Audits Against Reward Hacking in GRPO",
+    "authors": [
+      "Shurun Li",
+      "Michael Hua Wang",
+      "Haibo Zeng",
+      "Long Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.35716",
+    "abstract": "Reinforcement learning with verifiable rewards trains on cheap checks, such as unit tests, that a policy can learn to game, while a stronger check is too expensive to run on every rollout. We study how to spend a limited strong-verifier budget in GRPO, separating which weakly passing rollouts to audit from what reward…",
+    "detected": "2026-10-27",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.35497": {
+    "id": "arxiv:2610.35497",
+    "title": "When Fine-Grained Credit Assignment Helps and Hurts: Multimodal Agentic Reinforcement Learning through Video Editing",
+    "authors": [
+      "Lei Zhao",
+      "Zongheng Cao",
+      "Xinyu Hu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.35497",
+    "abstract": "Reinforcement learning (RL) has shown promise for training multimodal agents to reason and use tools. However, it remains unclear when fine-grained credit assignment improves learning and when it fails to improve task performance.",
+    "detected": "2026-10-27",
+    "topics": []
+  },
+  "arxiv:2610.34965": {
+    "id": "arxiv:2610.34965",
+    "title": "The Target Agent Is Its Own Best Critic but a Poor Proposer: Self-Improved Red Teaming",
+    "authors": [
+      "Mintong Kang",
+      "Stephen Rawls",
+      "Melissa Kazemi Rad",
+      "Jian Ni",
+      "Bo Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34965",
+    "abstract": "Automatic red teaming increasingly relies on large language models (LLMs) to iteratively diagnose failed attacks and propose improved adversarial prompts or injections. Although prior work strengthens this loop through prompt engineering and search-harness design, the mechanisms underlying its two core roles…",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.34855": {
+    "id": "arxiv:2610.34855",
+    "title": "DecoyCount: Evaluating Visual-Reasoning Misalignment in Counting",
+    "authors": [
+      "Qiuyi",
+      "Zhang",
+      "Zhen Xu",
+      "Jing Gu",
+      "Seojin Bang",
+      "Arnav Mohanty Das",
+      "Yaning Hu",
+      "Gautam Kumar",
+      "Jared Lichtarge",
+      "Le Xue",
+      "Bettina Catoto",
+      "Akul Datta",
+      "Daniel Luo",
+      "Farha Khan",
+      "Marcella Valentine",
+      "Yinfei Yang",
+      "Andrew M. Dai"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34855",
+    "abstract": "Visual counting benchmarks report whether vision-language models produce the correct number, but not whether errors arise from perception or reasoning. We introduce DecoyCount, a benchmark built from 1,660 real-world images with designed decoys across seven mechanisms, along with paired prompts: a neutral question, a…",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.34770": {
+    "id": "arxiv:2610.34770",
+    "title": "The Impact of Personalized AI Response Suggestions on Content Creators' Direct Messaging",
+    "authors": [
+      "Eun Jeong Kang",
+      "Jingruo Chen",
+      "Jadon Geathers",
+      "Susan Fussell"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34770",
+    "abstract": "Direct messaging is often employed by social media content creators to directly interact with followers. Those creators attempt to engage with followers in private communication, but they often encounter a large volume of messages.",
+    "detected": "2026-10-27",
+    "topics": []
+  },
+  "arxiv:2610.34756": {
+    "id": "arxiv:2610.34756",
+    "title": "Mechanistic Insights into LoRA: Layer Sparsity for Adaptive Fine-Tuning via Path Patching",
+    "authors": [
+      "Fei Zuo",
+      "Yizhou Huang",
+      "Kezhi Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34756",
+    "abstract": "Low-Rank Adaptation (LoRA) has emerged as the dominant paradigm for parameter-efficient fine-tuning of large language models. Standard all-layer LoRA applies adaptation throughout the transformer, despite heterogeneous contributions from its components.",
+    "detected": "2026-10-27",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.34711": {
+    "id": "arxiv:2610.34711",
+    "title": "Intervene, Calibrate, Discover: Learning Causal Structure from Pixels",
+    "authors": [
+      "Ziyi Ding",
+      "Xiaodi Huang",
+      "Xianxin Lai",
+      "Haijier Chen",
+      "Zhang Zhang",
+      "Xiao-Ping Zhang",
+      "Jiayu Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34711",
+    "abstract": "Learning high-level causal variables from low-level observations is a central problem for artificial intelligence. With known node semantics but an unknown graph, visual readout errors can misalign model settings with environment intervention values.",
+    "detected": "2026-10-27",
+    "topics": []
+  },
+  "arxiv:2610.34705": {
+    "id": "arxiv:2610.34705",
+    "title": "Safe by Benchmark, Unsafe in Practice: Lessons from 1331 Child-Related AI Incidents",
+    "authors": [
+      "Junfeng Jiao",
+      "Kevin Chen",
+      "Shrestha Mishra",
+      "Abhejay Murali",
+      "David Atkinson",
+      "Shriti Raj",
+      "Saleh Afroogh"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34705",
+    "abstract": "AI systems are increasingly present in children's everyday environments: education, entertainment, social networks, and toys. Their safety is typically assessed at the model level, through benchmarks, red-teaming, and content filtering.",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2610.34535": {
+    "id": "arxiv:2610.34535",
+    "title": "SentryBench: A Cost-Sensitive Benchmark for Adversarial Robustness of Tool-Using LLM Agents in Public-Safety Deployments",
+    "authors": [
+      "Md Abu Yusuf",
+      "Oyshi Tabassum Aditi",
+      "Md Faysal Hosain Mazed"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34535",
+    "abstract": "Large language model (LLM) agents are increasingly wired to consequential tools that send public alerts, dispatch responders, and query citizen records, where one erroneous tool call carries real-world cost. Existing agent-safety benchmarks measure generic harm or prompt-injection success and implicitly treat refusing…",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.34375": {
+    "id": "arxiv:2610.34375",
+    "title": "Whether or Where? Tail Calibration Signals Finite-Budget Reward Hacking in Best-of-N Selection",
+    "authors": [
+      "Cheng Gui",
+      "Yihua Shao",
+      "Lei Li",
+      "Jingcai Guo",
+      "Maolin Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34375",
+    "abstract": "Best-of-N (BoN) inference returns the candidate with the highest proxy reward, so a larger $N$ tests the proxy's extreme tail more than its average ranking quality. We show that the exact BoN value is a Beta-weighted integral of conditional true reward over within-prompt score quantiles.",
+    "detected": "2026-10-27",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.34365": {
+    "id": "arxiv:2610.34365",
+    "title": "SEEK: Skill Extraction with Evolving Knowledge against Frontier Science Agents",
+    "authors": [
+      "Cheng Gui",
+      "Xiang Zheng",
+      "Xingjun Ma",
+      "Kaidi Xu",
+      "Cong Wang",
+      "Weiying Ma"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34365",
+    "abstract": "Science agents increasingly package domain expertise as reusable skills that plan analyses, select tools, and execute workflows. This modularity creates a confidentiality risk: the interactions that deliver a skill's capability can also reveal the skill itself.",
+    "detected": "2026-10-27",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2610.34074": {
+    "id": "arxiv:2610.34074",
+    "title": "Identically Trained Language Models Break on Different Jailbreaks",
+    "authors": [
+      "Chi-Wei Chang",
+      "Mu-Tien Kuo",
+      "Kuan-Wei Lee",
+      "Meng-Hsun Tsai"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.34074",
+    "abstract": "Jailbreak benchmarks test one checkpoint and treat which jailbreaks break it as a property of its pretraining data and safety training. We ask whether another pretraining run of the same data, given the same safety training, would break on the same jailbreaks.",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.33813": {
+    "id": "arxiv:2610.33813",
+    "title": "Task Format as a Factor in Adaptation: A Controlled Comparison of LoRA and Full Fine-Tuning for Prompt-Safety Classification",
+    "authors": [
+      "John Alderete",
+      "Srirakshith Betageri",
+      "Jennifer Flynn",
+      "Alex Greenhalgh",
+      "Josh Rubin",
+      "Yoshita Varma Annam"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33813",
+    "abstract": "Fine-tuning a language model for classification involves many design decisions. Comparisons of low-rank adaptation (LoRA) with full fine-tuning are common but often confounded, and task format is rarely studied.",
+    "detected": "2026-10-27",
+    "topics": []
+  },
+  "arxiv:2610.33605": {
+    "id": "arxiv:2610.33605",
+    "title": "Data Governance for Generative and Agentic AI : Technology, Law, Economics, and Security",
+    "authors": [
+      "Narayana Darapaneni",
+      "Padmaja K",
+      "Gnana Chaithra D"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33605",
+    "abstract": "This book develops a unified governance framework for systems that retrieve, generate, infer, remember and act on information from large language models and retrieval augmented pipelines to autonomous multi agent systems. Eleven chapters and eight appendices integrate three disciplinary lenses-technology, law and…",
+    "detected": "2026-10-27",
+    "topics": [
+      "governance",
+      "security"
+    ]
+  },
+  "arxiv:2610.33512": {
+    "id": "arxiv:2610.33512",
+    "title": "Eat Your Precision: Precision Objective Mitigates Reward Hacking in Rubric-based RL",
+    "authors": [
+      "Hyun Ryu",
+      "Jong-Heon Kim",
+      "Yiqing Xie",
+      "Seungone Kim",
+      "Carolyn Rose",
+      "Eunho Yang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33512",
+    "abstract": "Rubric-based rewards enable effective reinforcement learning on non-verifiable tasks. However, because these rewards are typically defined as a weighted measure of rubric coverage, models are trained primarily to maximize a recall objective.",
+    "detected": "2026-10-27",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.33353": {
+    "id": "arxiv:2610.33353",
+    "title": "Detecting Temporal Concepts in Video Transformers via a No-False-Positives Test",
+    "authors": [
+      "Jianghuai Li",
+      "Andrew Ren",
+      "Greg Shakhnarovich"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33353",
+    "abstract": "Video models have the architecture to support encoding temporal aspects of the input, i.e. concepts that require more than one frame to define, like object movement. However, because motion and appearance change are entangled, a feature that appears to encode temporal concepts like object movement may instead encode…",
+    "detected": "2026-10-27",
+    "topics": []
+  },
+  "arxiv:2610.33240": {
+    "id": "arxiv:2610.33240",
+    "title": "NewsBench: Expert-Grounded Evaluation of Epistemic Quality in AI News Reporting",
+    "authors": [
+      "Matt Wilde",
+      "Jillian Fisher",
+      "Andrew B. Hall",
+      "Kathryn Salam",
+      "Robbie Goldfarb"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33240",
+    "abstract": "As frontier AI systems increasingly serve as sources of political and current-events information, evaluating the epistemic quality of their responses is now especially consequential. Existing evaluations often focus narrowly on ideological alignment, rely on measures not validated for this setting, or depend on…",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.33233": {
+    "id": "arxiv:2610.33233",
+    "title": "Distilling Expert Judgment at Scale",
+    "authors": [
+      "Robbie Goldfarb",
+      "Andrew B. Hall",
+      "Jillian Fisher",
+      "Kathryn Salam",
+      "Matt Wilde"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33233",
+    "abstract": "Frontier AI models are increasingly deployed on topics where the stakes are high and expert judgment is required, including healthcare, defense, finance, governance, and politics. We present a general methodology for distilling expert human judgment into automated evaluation systems that operate at scale.",
+    "detected": "2026-10-27",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.33180": {
+    "id": "arxiv:2610.33180",
+    "title": "Propensities Please: Exposing Alignment-Faking LLMs using Synthetic Document Finetuning",
+    "authors": [
+      "Ardy Haroen",
+      "Florian Lorkowski",
+      "Samuel Nellessen",
+      "Felix Hofstätter"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33180",
+    "abstract": "Alignment evaluations aim to assess whether large language models would engage in dangerous misaligned behaviour. Misaligned and evaluation-aware models might engage in alignment faking, where they pursue a hidden goal, but conceal this behaviour when they suspect effective oversight such as during training…",
+    "detected": "2026-10-27",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2610.33072": {
+    "id": "arxiv:2610.33072",
+    "title": "VLMProbe: An Open-source Library for VLM Probing and Interpretation",
+    "authors": [
+      "Gexin Huang",
+      "Haisheng Fu",
+      "Yanting Yang",
+      "Chen Zhao",
+      "Ruinan Jin",
+      "Jiaqi Liu",
+      "Xiaoxiao Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.33072",
+    "abstract": "Understanding how vision-language models use visual information requires connecting internal representations to model behavior. We present vlmprobe, an open-source library that integrates lens readouts, attention attribution, causal interventions, and sparse autoencoder (SAE) analysis within a common model interface.",
+    "detected": "2026-10-27",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
   "arxiv:2610.32780": {
     "id": "arxiv:2610.32780",
     "title": "AI Alignment for Digital Democracy: Fairer Voters Representation against LLM Biases",

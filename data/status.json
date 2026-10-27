@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-10-26T12:00:10Z",
-  "duration_seconds": 9.3,
-  "new_entries": 13,
+  "last_run": "2026-10-27T11:21:07Z",
+  "duration_seconds": 8.0,
+  "new_entries": 31,
   "sources": [
     {
       "id": "alignment-forum",
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 7,
+      "kept": 6,
       "new": 0,
       "error": null
     },
@@ -17,8 +17,8 @@
       "name": "Don't Worry About the Vase",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 3,
-      "new": 0,
+      "kept": 4,
+      "new": 1,
       "error": null
     },
     {
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 2,
-      "new": 1,
+      "kept": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -62,8 +62,8 @@
       "name": "Redwood Research",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 3,
-      "new": 0,
+      "kept": 4,
+      "new": 1,
       "error": null
     },
     {
@@ -71,8 +71,8 @@
       "name": "Centre for the Governance of AI",
       "status": "ok",
       "items_in_feed": 55,
-      "kept": 5,
-      "new": 0,
+      "kept": 8,
+      "new": 2,
       "error": null
     },
     {
@@ -90,7 +90,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 2,
-      "new": 0,
+      "new": 1,
       "error": null
     },
     {
@@ -106,9 +106,9 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1318,
-      "kept": 9,
-      "new": 0,
+      "items_in_feed": 1325,
+      "kept": 12,
+      "new": 3,
       "error": null
     },
     {
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 12,
+      "new": 23,
       "error": null
     }
   ],
   "candidates": {
-    "added": 12,
+    "added": 23,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 487
+    "total": 510
   }
 }
