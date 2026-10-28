@@ -1,4 +1,105 @@
 {
+  "arxiv:2610.37481": {
+    "id": "arxiv:2610.37481",
+    "title": "Follow the Gradient: Tracing Safety Degradation Back to Training Data",
+    "authors": [
+      "Saket Reddy",
+      "Amro Abbas",
+      "Anshuman Suri",
+      "Ari Morcos",
+      "David Schwab",
+      "Pratyush Maini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.37481",
+    "abstract": "Fine-tuning Large Language Models (LLMs) on instruction data can quietly erode their safety, even when no training example looks harmful. Because this safety-degrading data looks benign, standard content filters struggle to catch it.",
+    "detected": "2026-10-28",
+    "topics": []
+  },
+  "arxiv:2610.37451": {
+    "id": "arxiv:2610.37451",
+    "title": "Interpretable Meta-Policies for Neural Decision Making",
+    "authors": [
+      "Raban Emunds",
+      "Jannis Blüml",
+      "Quentin Delfosse",
+      "Kristian Kersting"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.37451",
+    "abstract": "Deep Reinforcement Learning remains difficult to interpret and align due to the black-box nature of neural networks. While (neuro-)symbolic approaches improve transparency by incorporating symbolic reasoning, applying them directly to low-level actions results in overly complex, unreadable policies.",
+    "detected": "2026-10-28",
+    "topics": []
+  },
+  "arxiv:2610.37157": {
+    "id": "arxiv:2610.37157",
+    "title": "What Survives Distillation? A Mechanistic Interpretability Study of GPT-2 and DistilGPT-2",
+    "authors": [
+      "Nabeelah Faumi",
+      "Deshan Sumanathilaka"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.37157",
+    "abstract": "Knowledge distillation compresses large language models into compact students that preserve aggregate metrics, yet the mechanistic consequences of depth-reduction distillation remain largely uncharacterized. This work applies linear CKA, logit lens analysis, attention pattern decomposition, sparse autoencoder feature…",
+    "detected": "2026-10-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.37058": {
+    "id": "arxiv:2610.37058",
+    "title": "Exploring the Limits of the Delta Learning Hypothesis: Single-Pair Generator Biases in Direct Preference Optimization",
+    "authors": [
+      "Giuseppe Curci",
+      "Stefano Simonazzi",
+      "Andrea Molinari",
+      "Andrea Zugarini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.37058",
+    "abstract": "Direct Preference Optimization (DPO) typically relies on preference pairs generated from diverse model pools and ranked by an external LLM judge. The recently proposed delta-learning hypothesis suggests that comparable supervision can instead be obtained from a single pair of models by treating the larger model's…",
+    "detected": "2026-10-28",
+    "topics": []
+  },
+  "arxiv:2610.36763": {
+    "id": "arxiv:2610.36763",
+    "title": "The Vocabulary Is Already Here: Adapting Pretrained Interpretable Features for Generative Recommendation",
+    "authors": [
+      "Ziluowen Luo",
+      "Ruochen Liu",
+      "Jun Yin",
+      "Hao Yan",
+      "Zhengxuan Hu",
+      "Xinze Shi",
+      "Chaozhuo Li",
+      "Chengqi Zhang",
+      "Senzhang Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.36763",
+    "abstract": "Generative recommendation (GR) predicts the next item through its semantic ID (SID). Existing methods commonly fit SID vocabularies to pretrained language model (PLM) representations of item descriptions, incurring additional training costs and making vocabulary coverage dependent on the fitting domains.",
+    "detected": "2026-10-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.36226": {
+    "id": "arxiv:2610.36226",
+    "title": "Structure, Not Sequence: Tracking and Validating Folding Mechanisms in ESMFold's Trunk with Sparse Autoencoders",
+    "authors": [
+      "Bohan Liu",
+      "Xiaohan Fan",
+      "Wenqian Ye",
+      "Aidong Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.36226",
+    "abstract": "Structure predictors like ESMFold fold proteins using neural network computation and have transformed structural biology. However, the driving mechanism from amino-acid (AA) sequence to 3D structure is insufficiently understood, and biological meaning remains locked in the dense network.",
+    "detected": "2026-10-28",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2610.35835": {
     "id": "arxiv:2610.35835",
     "title": "I-HITL: Inalienable Human-in-the-Loop",
