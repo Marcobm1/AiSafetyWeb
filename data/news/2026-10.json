@@ -1,5 +1,57 @@
 [
   {
+    "id": "dadf7a40c07d20ce",
+    "url": "https://www.lesswrong.com/posts/F3P5BSjNeAazKB7wm/reconceptualize-things-as-your-top-affordances",
+    "title": "Reconceptualize things as your top affordances",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-28T22:32:29Z",
+    "fetched_at": "2026-10-29T12:03:18Z",
+    "excerpt": "Everyone has some actions that come naturally to them, and some actions that are more unnatural, and some actions that wouldn’t even occur to them. For me, blogging comes naturally.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "KatjaGrace"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5f431e298d9533b4",
+    "url": "https://www.lesswrong.com/posts/yMPR6Pkv6jQXM4rWu/subtly-wrong-advice-misaligns-models-more-than-obviously",
+    "title": "Subtly wrong advice misaligns models more than obviously wrong advice - Replication",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-28T16:51:57Z",
+    "fetched_at": "2026-10-29T12:03:18Z",
+    "excerpt": "tl;dr We fine-tune 12 open-weight models on correct, obviously incorrect, and subtly incorrect advice across 8 narrow domains We replicate the OpenAI result and find that subtly incorrect data produces more emergent misalignment than obviously incorrect data +10.6 points pooled over all model-domain pairs (95% CI…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Christine Corry"
+    ],
+    "summary": null
+  },
+  {
+    "id": "59db2761b55e7e38",
+    "url": "https://www.lesswrong.com/posts/dbdz6zb6qjaq6yHKs/anthropic-files-its-s-1",
+    "title": "Anthropic Files Its S-1",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-28T15:47:45Z",
+    "fetched_at": "2026-10-29T12:03:18Z",
+    "excerpt": "The full text is finally here , so we are giving it the full RTFB of model card treatment. First, a recap of the state of Anthropic finances, then a close reading of the relevant parts of the S-1.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
     "id": "6070f6c261c1599b",
     "url": "https://www.lesswrong.com/posts/drt7CEAtERECKiYpn/quantity-has-a-quality-of-its-own",
     "title": "Quantity has a quality of its own",
