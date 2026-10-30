@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-10-29T12:03:18Z",
-  "duration_seconds": 8.9,
-  "new_entries": 3,
+  "last_run": "2026-10-30T11:56:03Z",
+  "duration_seconds": 6.9,
+  "new_entries": 22,
   "sources": [
     {
       "id": "alignment-forum",
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 5,
+      "kept": 4,
       "new": 0,
       "error": null
     },
@@ -26,17 +26,17 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 3,
-      "new": 3,
+      "kept": 4,
+      "new": 2,
       "error": null
     },
     {
       "id": "transformer-circuits",
       "name": "Transformer Circuits Thread (Anthropic)",
       "status": "ok",
-      "items_in_feed": 56,
-      "kept": 0,
-      "new": 0,
+      "items_in_feed": 57,
+      "kept": 1,
+      "new": 1,
       "error": null
     },
     {
@@ -80,7 +80,7 @@
       "name": "Transformer",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 4,
+      "kept": 3,
       "new": 0,
       "error": null
     },
@@ -106,9 +106,9 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1334,
-      "kept": 12,
-      "new": 0,
+      "items_in_feed": 1337,
+      "kept": 13,
+      "new": 1,
       "error": null
     },
     {
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 0,
+      "new": 18,
       "error": null
     }
   ],
   "candidates": {
-    "added": 0,
+    "added": 18,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 516
+    "total": 534
   }
 }

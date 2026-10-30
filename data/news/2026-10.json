@@ -1,5 +1,237 @@
 [
   {
+    "id": "84dfcce68d4b16a9",
+    "url": "https://www.lesswrong.com/posts/KxbeqePFBooJteoeC/what-is-openai-s-mission-advisory-council-1",
+    "title": "What is OpenAI's Mission Advisory Council?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-30T02:06:46Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "In Mikita Balesni’s letter to OpenAI , three parties are addressed as holding “oversight responsibility for safety at OpenAI.” These are: the Safety and Security Committee (SSC), the Safety Advisory Group (SAG), and the Mission Advisory Council (MAC) The Safety and Security Committee (SSC) is a part of the OpenAI…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "hersheys"
+    ],
+    "summary": null
+  },
+  {
+    "id": "622bd9ba81f1fb38",
+    "url": "https://www.lesswrong.com/posts/mBDkupZa3NagfLW86/ai-192-anthropic-is-going-public",
+    "title": "AI #192: Anthropic Is Going Public",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-29T19:10:18Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Anthropic filed its S-1 this week to prepare for its IPO. They still have to fill a lot of the numbers including the share price.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ae6a54c3c455486e",
+    "url": "https://arxiv.org/abs/2610.40637",
+    "title": "world2vec: Mechanistic world models through latent dynamics learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T17:58:23Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "World models can achieve strong control performance without faithfully capturing the dynamics of their environment, limiting their potential for mechanistic interpretability and scientific discovery. Here, we introduce world2vec to learn mechanistic world models without reward information directly from observations…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Tobias Schmidt",
+      "Rodrigo Gonzalez Laiz",
+      "Krisztián Szuppinger",
+      "Steffen Schneider"
+    ],
+    "arxiv_id": "2610.40637",
+    "summary": null
+  },
+  {
+    "id": "3afbffaaadf89ebc",
+    "url": "https://arxiv.org/abs/2610.40535",
+    "title": "Efficient Scalable Oversight via Rewinding",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T17:34:28Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Scalable oversight asks how a weak verifier can check the outputs of computations performed by more powerful AI systems. One proposed approach uses relativizing interactive proofs, in which a weak verifier checks the output of a complex oracle-aided computation by interacting with one or more powerful provers.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Ziyi Guan",
+      "Yael Tauman Kalai",
+      "Ron Rothblum",
+      "Zoe Xi"
+    ],
+    "arxiv_id": "2610.40535",
+    "summary": null
+  },
+  {
+    "id": "2d907d698161a90c",
+    "url": "https://arxiv.org/abs/2610.40505",
+    "title": "Discovering Interpretable Acoustic Features in Autoregressive Voice-Cloning TTS Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T17:21:36Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Voice-cloning TTS models synthesize an unseen speaker's voice from brief speech prompts, but it remains unclear which acoustic properties they represent and use. We introduce a feature-based interpretability framework for autoregressive voice-cloning TTS models, analyzing features from sparse autoencoders (SAEs), PCA…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Anuj Diwan",
+      "David Harwath",
+      "Eunsol Choi"
+    ],
+    "arxiv_id": "2610.40505",
+    "summary": null
+  },
+  {
+    "id": "fc6218dedb7b8479",
+    "url": "https://arxiv.org/abs/2610.39835",
+    "title": "Aligning Medical Vision Language Models at the Capability Boundary with Entropy Adaptive Rubric Grounding",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T11:15:12Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Medical diagnostic reasoning requires verifiable links between visual evidence and clinical knowledge, yet current medical vision language models are aligned with objectives that reward the wrong behavior. Uniform supervised fine tuning lets easy cases dominate updates while clinically critical boundary cases saturate…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Hongyu Bai",
+      "Jiaqi Zeng",
+      "Chunzheng Zhu"
+    ],
+    "arxiv_id": "2610.39835",
+    "summary": null
+  },
+  {
+    "id": "d28967fce9c692cd",
+    "url": "https://openai.com/index/how-we-detect-frontier-model-misalignment",
+    "title": "How we detect frontier model misalignment",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-10-29T09:00:00Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "OpenAI uses layered monitoring to detect frontier model misalignment and unauthorized agent behavior so responders can intervene before incidents escalate.",
+    "topics": [
+      "alignment"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7c639920eff7c13b",
+    "url": "https://arxiv.org/abs/2610.39590",
+    "title": "Red-Teaming Large Language Models in Low-Resource African Languages: A Case Study of Yoruba and Nigerian Pidgin",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T08:30:29Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "As large language models (LLMs) become more widespread in Africa, their safety in low-resource languages remains largely untested since most red-teaming work focuses on English. This study evaluates six state-of-the-art LLMs using 400 explicit adversarial prompts in Yoruba and Nigerian Pidgin, categorised into four…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Paula Chikaodinaka Anyanwu",
+      "Valdini Douglace Lemofouet",
+      "Blessing Ngozi Uzor",
+      "Ifeoluwa Dorcas Awotunde",
+      "Danielle Blanche Kapsa",
+      "Tassallah Abdullahi",
+      "Clemencia Siro",
+      "Idris Abdulmumin",
+      "Seid Muhie Yimam",
+      "Shamsuddeen Hassan Muhammad"
+    ],
+    "arxiv_id": "2610.39590",
+    "summary": null
+  },
+  {
+    "id": "cf6e1afd5fa836e1",
+    "url": "https://arxiv.org/abs/2610.39205",
+    "title": "Sparse Autoencoders as Implicit Diversification Regularisers for Cross-Sectional Cryptocurrency Returns",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T02:28:10Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Factor models are central to asset pricing and portfolio construction, but neural factors are often difficult to interpret, and their effect on portfolio risk is unclear. A sparse autoencoder (SAE) may address both concerns by describing daily returns across many assets with only a few active features.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Weijia Han",
+      "Lisha Qu"
+    ],
+    "arxiv_id": "2610.39205",
+    "summary": null
+  },
+  {
+    "id": "8b5374fc5b05999e",
+    "url": "https://arxiv.org/abs/2610.39182",
+    "title": "Reasoning or Pattern Exploitation? Mechanistic Insights from RL-Trained Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T02:09:38Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Large language models (LLMs) are increasingly described as acquiring \"reasoning\" skills after reinforcement learning with verifiable rewards. However, whether these gains reflect genuine reasoning or more superficial adaptations remains underexplored.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Aishik Nagar",
+      "Cheston Tan"
+    ],
+    "arxiv_id": "2610.39182",
+    "summary": null
+  },
+  {
+    "id": "b25436362664eabf",
+    "url": "https://arxiv.org/abs/2610.39124",
+    "title": "Clean Sheets and Checkpoints: Evidence Complexity for Certifying Sequential Agent Risk",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T01:13:00Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Dangerous-capability evaluations often test an AI agent from prepared states at ordered milestones. A clean sheet records no successes.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Rohith Yanambaka Venkata",
+      "Don McBride",
+      "Tiago Sequeira",
+      "Md. Al Amin"
+    ],
+    "arxiv_id": "2610.39124",
+    "summary": null
+  },
+  {
+    "id": "bc335a29f221fb63",
+    "url": "https://transformer-circuits.pub/2026/october-update/index.html",
+    "title": "Circuits Updates — October 2026",
+    "source": "Transformer Circuits Thread (Anthropic)",
+    "source_id": "transformer-circuits",
+    "published": "2026-10-29T00:00:00Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "A short update on an extension to the Jacobian lens.",
+    "topics": [
+      "interpretability"
+    ],
+    "summary": null
+  },
+  {
     "id": "dadf7a40c07d20ce",
     "url": "https://www.lesswrong.com/posts/F3P5BSjNeAazKB7wm/reconceptualize-things-as-your-top-affordances",
     "title": "Reconceptualize things as your top affordances",
@@ -14,6 +246,78 @@
     "authors": [
       "KatjaGrace"
     ],
+    "summary": null
+  },
+  {
+    "id": "a587c3adaeef73e7",
+    "url": "https://arxiv.org/abs/2610.38895",
+    "title": "FlipJev: Fast Black-Box Red Teaming Finds Universal Adversarial Suffixes for Typed Decision Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T20:53:38Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Typed decision models are an emerging class of language models that make decisions instead of generating free-text responses. They answer in a single fast and cheap query and are increasingly used, including in security-sensitive tasks.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Xiaogeng Liu",
+      "Xinyan Wang",
+      "Chaowei Xiao"
+    ],
+    "arxiv_id": "2610.38895",
+    "summary": null
+  },
+  {
+    "id": "18cf2f56822a9163",
+    "url": "https://arxiv.org/abs/2610.38882",
+    "title": "Aligning Autoresearch: Co-Improvement between Agents and Humans",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T20:47:10Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Autoresearch agents can now attempt long-horizon AI research end-to-end, i.e., self-improvement. However, best results are still obtained by research agents interacting with human researchers, and improving AI's ability to perform this co-research will only reinforce this effect---a process termed co-improvement…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Tianjian Li",
+      "Chuanyang Jin",
+      "Seungone Kim",
+      "Tong Chen",
+      "John Hoffman",
+      "Yoram Bachrach amd Pedro Rodriguez",
+      "Ping Yu",
+      "Eryk Helenowski",
+      "Swarnadeep Saha",
+      "Jack Lanchantin",
+      "Weizhe Yuan",
+      "Ilia Kulikov",
+      "Jason Weston"
+    ],
+    "arxiv_id": "2610.38882",
+    "summary": null
+  },
+  {
+    "id": "d2242c8087a18bd4",
+    "url": "https://arxiv.org/abs/2610.38833",
+    "title": "Discovering Jailbreaks via Curriculum of Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T20:23:32Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Automated jailbreak discovery aims to find prompts that elicit prohibited behaviors from safety-trained language models, helping developers identify vulnerabilities before deployment. One class of approaches uses reinforcement learning to train an investigator model to generate prompts that elicit a specified behavior…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Michał Burzyński",
+      "Noah T. Rossi",
+      "Shomit Basu",
+      "Andy Arditi"
+    ],
+    "arxiv_id": "2610.38833",
     "summary": null
   },
   {
@@ -52,6 +356,61 @@
     "summary": null
   },
   {
+    "id": "81801eacb8c343dc",
+    "url": "https://arxiv.org/abs/2610.38595",
+    "title": "Rethinking LLM Jailbreak Evaluation: Continuous Risk Landscapes Beyond Binary Outcomes",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T10:23:27Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "A binary success indicator is a natural representation for discriminative tasks such as image classification under adversarial perturbations, where each input is mapped to a single prediction. However, generative tasks are fundamentally different: an LLM jailbreak prompt induces a distribution over open-ended…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Yukai Zhou",
+      "Wenjie Wang"
+    ],
+    "arxiv_id": "2610.38595",
+    "summary": null
+  },
+  {
+    "id": "9facc3037dde480f",
+    "url": "https://arxiv.org/abs/2610.38526",
+    "title": "Value Probes: Learned Value Functions for Beam-Search Red Teaming",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T09:36:18Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Automated red-team auditing of language models is an important way to evaluate safety-relevant behaviors. These audits implicitly search a tree of possible conversation pathways: at each turn an auditor model decides which conversation to continue, and an LLM judge scores the dialogue.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jonathan F. Jao",
+      "Andrew Kyle Lampinen"
+    ],
+    "arxiv_id": "2610.38526",
+    "summary": null
+  },
+  {
+    "id": "186a704fcab39dd3",
+    "url": "https://arxiv.org/abs/2610.38433",
+    "title": "Does Chain-of-Thought Reliance Follow a Scaling Law?Larger Models Follow Their Steps More, Independent of Post-Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T08:16:28Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Monitoring a model's chain of thought (CoT) is useful for safety only if the final answer depends on the written steps. Prior measurements use natural tasks where true reasoning is unknown.",
+    "topics": [],
+    "authors": [
+      "Esther Xin"
+    ],
+    "arxiv_id": "2610.38433",
+    "summary": null
+  },
+  {
     "id": "6070f6c261c1599b",
     "url": "https://www.lesswrong.com/posts/drt7CEAtERECKiYpn/quantity-has-a-quality-of-its-own",
     "title": "Quantity has a quality of its own",
@@ -69,6 +428,27 @@
     "summary": null
   },
   {
+    "id": "a1ea0489433b3ece",
+    "url": "https://arxiv.org/abs/2610.38326",
+    "title": "Can LLMs Faithfully Solve Ontology Engineering Tasks? A Mechanistic Interpretability Study",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T06:23:58Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Ontological knowledge underpins large language model (LLM) performance on knowledge-intensive tasks. However, existing evaluations of LLMs' ontological understanding largely rely on behavioral correctness, leaving the underlying mechanisms unexplained.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Bohui Zhang",
+      "Albert Meroño-Peñuela",
+      "Elena Simperl"
+    ],
+    "arxiv_id": "2610.38326",
+    "summary": null
+  },
+  {
     "id": "9e0693a4231abcdd",
     "url": "https://www.lesswrong.com/posts/ZSrX8gucWsKahsitk/anthropic-versus-anthropic",
     "title": "Anthropic Versus Anthropic",
@@ -83,6 +463,48 @@
     "authors": [
       "Zvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "bb113c0a544e93c3",
+    "url": "https://arxiv.org/abs/2610.38091",
+    "title": "Jailbreak Connectivity: Towards Diverse, Transferable, and Universal Multimodal Large Language Model Jailbreak",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-28T00:13:19Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Multimodal large language models (MLLMs) are vulnerable to visual jailbreak attacks that bypass safety safeguards. Existing methods typically optimize isolated adversarial examples, limiting attack diversity, transferability, and generalization.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Xu Zhang",
+      "Ziqing Hu",
+      "Shuo Han",
+      "Ren Wang"
+    ],
+    "arxiv_id": "2610.38091",
+    "summary": null
+  },
+  {
+    "id": "c40e464b26802cc6",
+    "url": "https://arxiv.org/abs/2610.38067",
+    "title": "From Error Prediction to Causal Influence: Auditing SAE Features in Multiple-Choice QA",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-27T23:34:33Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Sparse autoencoders (SAEs) can predict internal features associated with model errors, but association alone does not establish causal influence. We study this distinction in multiple-choice question answering, where answer preference can be measured by the logit margin between the correct answer and the competing…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Aria Nourbakhsh",
+      "Adelaide Danilov",
+      "Oleksandr Marchenko Breneur",
+      "Salima Lamsiyah"
+    ],
+    "arxiv_id": "2610.38067",
     "summary": null
   },
   {
@@ -158,6 +580,25 @@
       "Kristian Kersting"
     ],
     "arxiv_id": "2610.37451",
+    "summary": null
+  },
+  {
+    "id": "3f4fa025be9c285c",
+    "url": "https://arxiv.org/abs/2610.37738",
+    "title": "Poisoned Skills: Propagating Jailbreaks Through Agent Markdown Files",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-27T15:29:41Z",
+    "fetched_at": "2026-10-30T11:56:03Z",
+    "excerpt": "Modern agent frameworks allow users to provide Markdown files containing system prompts, tool descriptions, and skill definitions (e.g., SKILL.md), which are incorporated into the agent's context during initialization. In this work, we investigate whether this configuration mechanism can also serve as an injection…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Kashyap R Manjusha",
+      "Murali Emani"
+    ],
+    "arxiv_id": "2610.37738",
     "summary": null
   },
   {
