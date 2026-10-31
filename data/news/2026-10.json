@@ -1,5 +1,23 @@
 [
   {
+    "id": "8417f15817c5ffdd",
+    "url": "https://www.lesswrong.com/posts/dbStc8ZFESqfihwAd/lessons-from-red-teaming-auto-review-openai-s-blocking-1",
+    "title": "Lessons From Red-teaming Auto-review, OpenAI's Blocking Monitor",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-30T21:47:40Z",
+    "fetched_at": "2026-10-31T11:29:42Z",
+    "excerpt": "This work and the report were done by Giovanni Occhipinti, as part of the ERA fellowship and mentored by Monika Jotautaitė (Apollo Research). Summary We red-teamed synchronous control measures in Codex, with a focus on its blocking monitor Auto-review .",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "monika_j"
+    ],
+    "summary": null
+  },
+  {
     "id": "84dfcce68d4b16a9",
     "url": "https://www.lesswrong.com/posts/KxbeqePFBooJteoeC/what-is-openai-s-mission-advisory-council-1",
     "title": "What is OpenAI's Mission Advisory Council?",
