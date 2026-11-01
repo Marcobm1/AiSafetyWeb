@@ -1,5 +1,22 @@
 [
   {
+    "id": "2f57da1c99b919de",
+    "url": "https://www.lesswrong.com/posts/xikGZ8fuhdG6DApAo/against-sura",
+    "title": "Against SURA",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-10-31T20:31:25Z",
+    "fetched_at": "2026-11-01T12:26:48Z",
+    "excerpt": "The AI Futures Project [1] distinguishes several different plans for navigating the AI transition, which I'll lump into two broader categories: Plan A (my combination of their Plan A/S/Other) involves working for a global pause on AI development, hopefully lasting decades. During this pause, we either research…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Scott Alexander"
+    ],
+    "summary": null
+  },
+  {
     "id": "8417f15817c5ffdd",
     "url": "https://www.lesswrong.com/posts/dbStc8ZFESqfihwAd/lessons-from-red-teaming-auto-review-openai-s-blocking-1",
     "title": "Lessons From Red-teaming Auto-review, OpenAI's Blocking Monitor",
