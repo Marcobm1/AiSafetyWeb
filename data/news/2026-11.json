@@ -1,5 +1,75 @@
 [
   {
+    "id": "ef0ebf5a711369ee",
+    "url": "https://www.lesswrong.com/posts/pbMyiCXhHCfp3WSq2/against-against-sura",
+    "title": "Against Against SURA",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-02T10:55:40Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Scott: the Against SURA essay is well-written, but it is lacking on the merits. Do you think that at the current level of capabilities, six months would be sufficient to solve alignment of superintelligences?",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Mikhail Samin"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2d914c2bd62e3734",
+    "url": "https://www.lesswrong.com/posts/eDxQzpSvjDHnkicMH/magma-is-partnering-with-cassa-to-investigate-recent",
+    "title": "Magma is partnering with CASSA to investigate recent unintended model behavior",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-02T03:53:50Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Last week, the National Bureau of Technical Standards (NBTS) disclosed a new type of security incident [1] after they discovered unauthorized tampering of internal cybersecurity and alignment model evaluation logs, affecting their model evaluations of Magma 7.6, Magma 7.5, Magma 7.4, Magma 4, and OpenBrain Selene-3…",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Parv Mahajan"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0732cfcece9f493d",
+    "url": "https://www.lesswrong.com/posts/o9CYcjZDqCQf5qeJy/misalignment-traps-lie-in-wait",
+    "title": "Misalignment traps lie in wait",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-01T22:20:33Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Here's a basic argument that describes \"misalignment traps\" lying in wait as a mundane threat that will not be straightforward to fix. The argument is as follows: Models are very sample efficient, and larger models tend to be more so .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Africa"
+    ],
+    "summary": null
+  },
+  {
+    "id": "91159e4537bfba74",
+    "url": "https://www.lesswrong.com/posts/Sfkv6JF2ozmAkggKu/towards-the-autograntor",
+    "title": "Towards The Autograntor",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-01T22:19:48Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "I've done AI safety grantmaking for the Survival and Flourishing Fund and Lightcone Commons. It's hard.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Scott Alexander"
+    ],
+    "summary": null
+  },
+  {
     "id": "e1241964589b851b",
     "url": "https://www.alignmentforum.org/posts/RHxaRkarGp9snWoKY/explaining-ai-might-obliterate-you-to-senior-policymakers-in",
     "title": "Explaining “AI might obliterate you” to senior policymakers in India",

@@ -1,4 +1,223 @@
 {
+  "arxiv:2610.41939": {
+    "id": "arxiv:2610.41939",
+    "title": "Observable-Specific Validity Tests for Scientific AI: Controlled Approximations and Intervention Response",
+    "authors": [
+      "Xiaoshn Nee",
+      "Haobo Zhong",
+      "Xiaomin Ni"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41939",
+    "abstract": "An approximation can reproduce an energy while missing its response, or satisfy an error tolerance without being certified by a given bound. We formulate observable-specific validity records for scientific artificial intelligence (AI) that link a reduction to its reference model, error measure, tolerance, parameter…",
+    "detected": "2026-11-02",
+    "topics": []
+  },
+  "arxiv:2610.41736": {
+    "id": "arxiv:2610.41736",
+    "title": "Locality-Controlled Out-of-Distribution Guidance for Robust Regulatory DNA Sequence Design",
+    "authors": [
+      "Dabin Jeong",
+      "Marwane Bourdim",
+      "Mo Lotfollahi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41736",
+    "abstract": "Designing regulatory DNA sequences for targeted gene-expression control is an important challenge. Recent approaches frame this task as property-conditioned generation, where diffusion models trained on natural sequences are guided toward high predicted activity through reward-based fine-tuning or sampling-time…",
+    "detected": "2026-11-02",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2610.41713": {
+    "id": "arxiv:2610.41713",
+    "title": "Simple Features Beat Most AI Control Monitors",
+    "authors": [
+      "Shubhrangshu Debsarkar",
+      "Valmik Nahata"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41713",
+    "abstract": "AI control relies on monitors to catch a capable model that sabotages its work. These monitors are evaluated on their ability to differentiate honest from backdoored code.",
+    "detected": "2026-11-02",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.41480": {
+    "id": "arxiv:2610.41480",
+    "title": "KV-Cache Patching: Tracing How and Where Fine-Tuned Behaviors Arise",
+    "authors": [
+      "Jonas Loos",
+      "Oliver Eberle"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41480",
+    "abstract": "Fine-tuning a language model changes how it responds, but where is this fine-tuned behavior instantiated? To better understand this, we evaluate whether the change in model behavior arises only during the generation of the answer tokens where the change manifests, or whether altered processing of previous tokens…",
+    "detected": "2026-11-02",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2610.41301": {
+    "id": "arxiv:2610.41301",
+    "title": "Subliminal Reinforcement Learning: traits travel through a judge's scores",
+    "authors": [
+      "Keuntae Kim",
+      "Yong Suk Choi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41301",
+    "abstract": "Subliminal learning, the transfer of a model's trait through data with no semantic trace of it, has been shown for students trained on a teacher's text. Post-training relies on group relative policy optimization with a language-model judge, where the student learns only from its own outputs and one judge's scores.",
+    "detected": "2026-11-02",
+    "topics": []
+  },
+  "arxiv:2610.41272": {
+    "id": "arxiv:2610.41272",
+    "title": "ANGLER: Verifier-Grounded Benchmarking with an Adaptive Attacker for Web Agents",
+    "authors": [
+      "Yini Huang",
+      "Aiwen LU",
+      "Zhen Sun",
+      "Yi Han",
+      "Yuzhi Zhao",
+      "Jiaheng Wei"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41272",
+    "abstract": "Web agents are increasingly deployed to complete tasks autonomously on real websites, where adversarially injected content can induce them to perform unauthorized actions. Existing evaluations primarily use fixed attacks or focus on a single attack type, and evaluate attacks at the text level rather than through real…",
+    "detected": "2026-11-02",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.41185": {
+    "id": "arxiv:2610.41185",
+    "title": "Mechanistic Interpretability for End-to-End Self-Driving",
+    "authors": [
+      "Manav Gagvani",
+      "Benjamin Namikas",
+      "Sivamurugan Velmurugan",
+      "Nysa Kumar",
+      "Shrey Sharma",
+      "Thomas Peterson",
+      "Pratyush Mathur",
+      "Hyunseo Chang",
+      "Rohan Paleja"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41185",
+    "abstract": "End-to-end (E2E) autonomous driving models achieve strong planning performance but remain largely opaque, limiting observability and trust. We apply mechanistic interpretability to E2E driving by training Sparse Autoencoders (SAEs) on the internal activations of a simple, single-camera end-to-end path planning model.",
+    "detected": "2026-11-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.41014": {
+    "id": "arxiv:2610.41014",
+    "title": "Towards Understanding Score-Seeking in LLMs",
+    "authors": [
+      "Aghyad Deeb",
+      "Ryan Greenblatt",
+      "Alex Mallen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.41014",
+    "abstract": "Production large language models sometimes reward-hack, exploiting flaws in how tasks are scored rather than performing the tasks as intended, sometimes in highly sophisticated and adversarial ways. We investigate the motivations driving this behavior in GPT 5.6 Sol, GPT 5.5, and a checkpoint of OpenAI o3 without…",
+    "detected": "2026-11-02",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2610.40946": {
+    "id": "arxiv:2610.40946",
+    "title": "Opening the Box Changes the Cat: LLMs Detect Chain-of-Thought Monitoring - What now?",
+    "authors": [
+      "Amir Jalilifard",
+      "Marcos Medeiros Raimundo",
+      "Anderson Rocha"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.40946",
+    "abstract": "Chain-of-thought (CoT) reasoning allows large language models (LLMs) to generate intermediate reasoning traces in natural language while solving complex tasks. These traces can support safety monitoring by exposing potentially harmful plans before actions are executed.",
+    "detected": "2026-11-02",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2610.40939": {
+    "id": "arxiv:2610.40939",
+    "title": "The First Few Tokens Matter: Understanding Chain-of-Thought Controllability",
+    "authors": [
+      "Hugh Van Deventer",
+      "Dmitrii Troitskii",
+      "Laura Ruis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.40939",
+    "abstract": "Chain-of-thought (CoT) monitoring is a promising way to oversee increasingly capable agents. It succeeds in part because current models appear limited in their ability to control what they verbalize in their reasoning traces.",
+    "detected": "2026-11-02",
+    "topics": []
+  },
+  "arxiv:2610.40926": {
+    "id": "arxiv:2610.40926",
+    "title": "CoFiBreak: A Coarse-to-Fine Diversity Reward for Effective Multi-Turn Jailbreak",
+    "authors": [
+      "Jialin Song",
+      "Xiaodong Liu",
+      "Weiwei Yang",
+      "Mingqian Feng",
+      "Chengquan Guo",
+      "Qiyao Ma",
+      "Carolyn Buractaon",
+      "Anson Ho",
+      "Wuyang Chen",
+      "Christopher White"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.40926",
+    "abstract": "Automated red teaming trains an attacker large language model (LLM) to elicit harmful responses from a victim LLM, but reinforcement learning can collapse attackers onto a narrow set of prompts when attack success is the only reward. Such a collapse of attack diversity can bias safety evaluation toward repeatedly…",
+    "detected": "2026-11-02",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2610.40890": {
+    "id": "arxiv:2610.40890",
+    "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
+    "authors": [
+      "Ayana Hussain",
+      "Nicholas Vincent"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.40890",
+    "abstract": "Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks.",
+    "detected": "2026-11-02",
+    "topics": []
+  },
+  "arxiv:2610.40714": {
+    "id": "arxiv:2610.40714",
+    "title": "PrivacyFlow: Privacy in AI Agents through Information Flow Analysis and Consequence-Aware Risk Management",
+    "authors": [
+      "Robin Staab",
+      "Tom Wollschläger",
+      "Vahab Mirrokni",
+      "Reza Shokri"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2610.40714",
+    "abstract": "Autonomous LLM agents executing multi-step workflows over personal data often misalign with user privacy expectations and leak sensitive, out-of-context information. Although Contextual Integrity (CI) formalizes this problem, existing benchmarks and defenses rarely operationalize CI for realistic multi-step task…",
+    "detected": "2026-11-02",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
   "arxiv:2610.40637": {
     "id": "arxiv:2610.40637",
     "title": "world2vec: Mechanistic world models through latent dynamics learning",

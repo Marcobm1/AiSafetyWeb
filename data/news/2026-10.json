@@ -35,6 +35,152 @@
     "summary": null
   },
   {
+    "id": "faa855c20a67337d",
+    "url": "https://arxiv.org/abs/2610.41939",
+    "title": "Observable-Specific Validity Tests for Scientific AI: Controlled Approximations and Intervention Response",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T15:57:51Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "An approximation can reproduce an energy while missing its response, or satisfy an error tolerance without being certified by a given bound. We formulate observable-specific validity records for scientific artificial intelligence (AI) that link a reduction to its reference model, error measure, tolerance, parameter…",
+    "topics": [],
+    "authors": [
+      "Xiaoshn Nee",
+      "Haobo Zhong",
+      "Xiaomin Ni"
+    ],
+    "arxiv_id": "2610.41939",
+    "summary": null
+  },
+  {
+    "id": "838674e207b85cb8",
+    "url": "https://arxiv.org/abs/2610.41736",
+    "title": "Locality-Controlled Out-of-Distribution Guidance for Robust Regulatory DNA Sequence Design",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T13:44:07Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Designing regulatory DNA sequences for targeted gene-expression control is an important challenge. Recent approaches frame this task as property-conditioned generation, where diffusion models trained on natural sequences are guided toward high predicted activity through reward-based fine-tuning or sampling-time…",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Dabin Jeong",
+      "Marwane Bourdim",
+      "Mo Lotfollahi"
+    ],
+    "arxiv_id": "2610.41736",
+    "summary": null
+  },
+  {
+    "id": "a3d8f5f8db8d6ea6",
+    "url": "https://arxiv.org/abs/2610.41713",
+    "title": "Simple Features Beat Most AI Control Monitors",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T13:21:03Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "AI control relies on monitors to catch a capable model that sabotages its work. These monitors are evaluated on their ability to differentiate honest from backdoored code.",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Shubhrangshu Debsarkar",
+      "Valmik Nahata"
+    ],
+    "arxiv_id": "2610.41713",
+    "summary": null
+  },
+  {
+    "id": "2c159cb2d7c1c67d",
+    "url": "https://arxiv.org/abs/2610.41480",
+    "title": "KV-Cache Patching: Tracing How and Where Fine-Tuned Behaviors Arise",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T09:35:33Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Fine-tuning a language model changes how it responds, but where is this fine-tuned behavior instantiated? To better understand this, we evaluate whether the change in model behavior arises only during the generation of the answer tokens where the change manifests, or whether altered processing of previous tokens…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jonas Loos",
+      "Oliver Eberle"
+    ],
+    "arxiv_id": "2610.41480",
+    "summary": null
+  },
+  {
+    "id": "6c15adc5dd2ee08d",
+    "url": "https://arxiv.org/abs/2610.41301",
+    "title": "Subliminal Reinforcement Learning: traits travel through a judge's scores",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T06:02:21Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Subliminal learning, the transfer of a model's trait through data with no semantic trace of it, has been shown for students trained on a teacher's text. Post-training relies on group relative policy optimization with a language-model judge, where the student learns only from its own outputs and one judge's scores.",
+    "topics": [],
+    "authors": [
+      "Keuntae Kim",
+      "Yong Suk Choi"
+    ],
+    "arxiv_id": "2610.41301",
+    "summary": null
+  },
+  {
+    "id": "417a46768a5da387",
+    "url": "https://arxiv.org/abs/2610.41272",
+    "title": "ANGLER: Verifier-Grounded Benchmarking with an Adaptive Attacker for Web Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T05:25:48Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Web agents are increasingly deployed to complete tasks autonomously on real websites, where adversarially injected content can induce them to perform unauthorized actions. Existing evaluations primarily use fixed attacks or focus on a single attack type, and evaluate attacks at the text level rather than through real…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Yini Huang",
+      "Aiwen LU",
+      "Zhen Sun",
+      "Yi Han",
+      "Yuzhi Zhao",
+      "Jiaheng Wei"
+    ],
+    "arxiv_id": "2610.41272",
+    "summary": null
+  },
+  {
+    "id": "162abb7fae791869",
+    "url": "https://arxiv.org/abs/2610.41185",
+    "title": "Mechanistic Interpretability for End-to-End Self-Driving",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T03:05:24Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "End-to-end (E2E) autonomous driving models achieve strong planning performance but remain largely opaque, limiting observability and trust. We apply mechanistic interpretability to E2E driving by training Sparse Autoencoders (SAEs) on the internal activations of a simple, single-camera end-to-end path planning model.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Manav Gagvani",
+      "Benjamin Namikas",
+      "Sivamurugan Velmurugan",
+      "Nysa Kumar",
+      "Shrey Sharma",
+      "Thomas Peterson",
+      "Pratyush Mathur",
+      "Hyunseo Chang",
+      "Rohan Paleja"
+    ],
+    "arxiv_id": "2610.41185",
+    "summary": null
+  },
+  {
     "id": "84dfcce68d4b16a9",
     "url": "https://www.lesswrong.com/posts/KxbeqePFBooJteoeC/what-is-openai-s-mission-advisory-council-1",
     "title": "What is OpenAI's Mission Advisory Council?",
@@ -52,6 +198,92 @@
     "summary": null
   },
   {
+    "id": "14acdb1c7849533f",
+    "url": "https://arxiv.org/abs/2610.41014",
+    "title": "Towards Understanding Score-Seeking in LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T21:50:04Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Production large language models sometimes reward-hack, exploiting flaws in how tasks are scored rather than performing the tasks as intended, sometimes in highly sophisticated and adversarial ways. We investigate the motivations driving this behavior in GPT 5.6 Sol, GPT 5.5, and a checkpoint of OpenAI o3 without…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Aghyad Deeb",
+      "Ryan Greenblatt",
+      "Alex Mallen"
+    ],
+    "arxiv_id": "2610.41014",
+    "summary": null
+  },
+  {
+    "id": "37409ccee898d260",
+    "url": "https://arxiv.org/abs/2610.40946",
+    "title": "Opening the Box Changes the Cat: LLMs Detect Chain-of-Thought Monitoring - What now?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T20:23:08Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Chain-of-thought (CoT) reasoning allows large language models (LLMs) to generate intermediate reasoning traces in natural language while solving complex tasks. These traces can support safety monitoring by exposing potentially harmful plans before actions are executed.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Amir Jalilifard",
+      "Marcos Medeiros Raimundo",
+      "Anderson Rocha"
+    ],
+    "arxiv_id": "2610.40946",
+    "summary": null
+  },
+  {
+    "id": "12e64ba5b13fbef5",
+    "url": "https://arxiv.org/abs/2610.40939",
+    "title": "The First Few Tokens Matter: Understanding Chain-of-Thought Controllability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T20:14:19Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring is a promising way to oversee increasingly capable agents. It succeeds in part because current models appear limited in their ability to control what they verbalize in their reasoning traces.",
+    "topics": [],
+    "authors": [
+      "Hugh Van Deventer",
+      "Dmitrii Troitskii",
+      "Laura Ruis"
+    ],
+    "arxiv_id": "2610.40939",
+    "summary": null
+  },
+  {
+    "id": "d405f523a409e6ef",
+    "url": "https://arxiv.org/abs/2610.40926",
+    "title": "CoFiBreak: A Coarse-to-Fine Diversity Reward for Effective Multi-Turn Jailbreak",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T19:51:36Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Automated red teaming trains an attacker large language model (LLM) to elicit harmful responses from a victim LLM, but reinforcement learning can collapse attackers onto a narrow set of prompts when attack success is the only reward. Such a collapse of attack diversity can bias safety evaluation toward repeatedly…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Jialin Song",
+      "Xiaodong Liu",
+      "Weiwei Yang",
+      "Mingqian Feng",
+      "Chengquan Guo",
+      "Qiyao Ma",
+      "Carolyn Buractaon",
+      "Anson Ho",
+      "Wuyang Chen",
+      "Christopher White"
+    ],
+    "arxiv_id": "2610.40926",
+    "summary": null
+  },
+  {
     "id": "622bd9ba81f1fb38",
     "url": "https://www.lesswrong.com/posts/mBDkupZa3NagfLW86/ai-192-anthropic-is-going-public",
     "title": "AI #192: Anthropic Is Going Public",
@@ -66,6 +298,23 @@
     "authors": [
       "Zvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "b4909df6d7e7c628",
+    "url": "https://arxiv.org/abs/2610.40890",
+    "title": "ChatGPT as a Surveillance Assistant? An Exploratory Case Study of AI-Assisted Surveillance Risks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T19:10:04Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Large language models (LLMs) can generate detailed guidance, functional code, and persuasive text at scale. As one of the most widely used consumer language model products as of 2026, ChatGPT gives broad public access to these capabilities, motivating concerns about its potential use in surveillance-related tasks.",
+    "topics": [],
+    "authors": [
+      "Ayana Hussain",
+      "Nicholas Vincent"
+    ],
+    "arxiv_id": "2610.40890",
     "summary": null
   },
   {
@@ -229,6 +478,28 @@
       "Cheston Tan"
     ],
     "arxiv_id": "2610.39182",
+    "summary": null
+  },
+  {
+    "id": "fa9f85962573ae13",
+    "url": "https://arxiv.org/abs/2610.40714",
+    "title": "PrivacyFlow: Privacy in AI Agents through Information Flow Analysis and Consequence-Aware Risk Management",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-29T01:54:36Z",
+    "fetched_at": "2026-11-02T14:24:01Z",
+    "excerpt": "Autonomous LLM agents executing multi-step workflows over personal data often misalign with user privacy expectations and leak sensitive, out-of-context information. Although Contextual Integrity (CI) formalizes this problem, existing benchmarks and defenses rarely operationalize CI for realistic multi-step task…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Robin Staab",
+      "Tom Wollschläger",
+      "Vahab Mirrokni",
+      "Reza Shokri"
+    ],
+    "arxiv_id": "2610.40714",
     "summary": null
   },
   {
