@@ -1,4 +1,532 @@
 {
+  "arxiv:2611.03627": {
+    "id": "arxiv:2611.03627",
+    "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",
+    "authors": [
+      "Ziqi Pang",
+      "Yu-Xiong Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03627",
+    "abstract": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning. This paper studies how to incentivize such generalization via reasoning strategies.",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.03575": {
+    "id": "arxiv:2611.03575",
+    "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
+    "authors": [
+      "Wei-Lin Chen",
+      "Zhepei Wei",
+      "Xinyu Zhu",
+      "Yu-Min Tseng",
+      "Tzu-Han Lin",
+      "Yu Meng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03575",
+    "abstract": "Large language model (LLM) coding agents increasingly operate with shell access, allowing them to write scripts, move files, alter permissions, and modify system configurations. However, an agent may achieve a user's goal while causing unintended harm, such as deleting unrelated files, weakening access controls, or…",
+    "detected": "2026-11-03",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.03439": {
+    "id": "arxiv:2611.03439",
+    "title": "Playing Dumb: How a Chess Transformer Simulates Users Across Skill Levels",
+    "authors": [
+      "Difan Jiao",
+      "George Eilender",
+      "Zhenwei Tang",
+      "Ashton Anderson"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03439",
+    "abstract": "Generative models increasingly simulate users at different skill levels in education and AI evaluation. Yet it remains unclear whether lower-skill behavior reflects less internal knowledge or a different use of retained knowledge.",
+    "detected": "2026-11-03",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.03420": {
+    "id": "arxiv:2611.03420",
+    "title": "Temporal Island Sparse Autoencoders for Interpreting Clinical Time-Series Models",
+    "authors": [
+      "Muhan Yeo",
+      "Bong Gyun Kang",
+      "HyunGi Kim",
+      "Sungroh Yoon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03420",
+    "abstract": "Deep learning models for electronic health records achieve strong predictive performance but provide little insight into what clinical concepts they represent internally. Post-hoc attribution methods produce per-cell importance scores that lack temporal coherence, cross-variable structure, and reusability across…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.03374": {
+    "id": "arxiv:2611.03374",
+    "title": "Characterizing When Language Models Take Harmful Actions to Protect Their Assigned Goals",
+    "authors": [
+      "Brandon Jaipersaud",
+      "Elliot Creager"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03374",
+    "abstract": "Recent language model (LM) safety failures have largely been studied as disparate phenomena. In agentic misalignment, a model blackmails an executive to avoid being replaced.",
+    "detected": "2026-11-03",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.02849": {
+    "id": "arxiv:2611.02849",
+    "title": "TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System",
+    "authors": [
+      "Qian Cheng",
+      "Ruize Tang",
+      "Saad Mohammad Rafid Pial",
+      "Zhizhen Cathy Cai",
+      "Yiming Su",
+      "Jackson Clark",
+      "Munim Thahmid",
+      "Mahdiya Rahman Sukanya",
+      "Chris Newcombe",
+      "Igor Konnov",
+      "Stephan Merz",
+      "Xudong Sun",
+      "Murat Demirbas",
+      "Yu Huang",
+      "Markus Alexander Kuppe",
+      "Tianyin Xu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02849",
+    "abstract": "TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specifications requires discovering inductive invariants, reasoning about intricate state transitions, and decomposing proofs into…",
+    "detected": "2026-11-03",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.02791": {
+    "id": "arxiv:2611.02791",
+    "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+    "authors": [
+      "Junyu Lin",
+      "Mengjie Wu",
+      "Yonghao Dong",
+      "Yuchuan Fu",
+      "Jinfeng Li",
+      "Xiaodan Li",
+      "Xiaohan Yuan",
+      "Yicheng Liu",
+      "Yuefeng Chen",
+      "Hui Xue",
+      "Jingyi Wang",
+      "Yitong Yang",
+      "Jiyuan Fu",
+      "Qinga He"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02791",
+    "abstract": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring from an external…",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.02503": {
+    "id": "arxiv:2611.02503",
+    "title": "Towards Multi-Value Alignment via Value Localization in LLMs",
+    "authors": [
+      "Xueqi Ma",
+      "Yanbei Jiang",
+      "Xingjun Ma",
+      "James Bailey",
+      "Sarah M. Erfani"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02503",
+    "abstract": "Aligning large language models (LLMs) with multiple, potentially conflicting human values remains challenging, as existing multi-objective alignment methods often require costly fine-tuning and provide limited insight into the internal mechanisms underlying value-related behaviors. In this work, we investigate…",
+    "detected": "2026-11-03",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.02501": {
+    "id": "arxiv:2611.02501",
+    "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+    "authors": [
+      "Kunjun Li",
+      "Wenhao Chai",
+      "Yihao Liang",
+      "Yuezhou Hu",
+      "Shuyao Xu",
+      "Yi Pan",
+      "William X. Zheng",
+      "Kannan Ramchandran",
+      "Kurt Keutzer",
+      "Jiantao Jiao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02501",
+    "abstract": "Speculative decoding accelerates memory-bound LLM decoding with a lightweight drafter, and parallel drafters extend this speedup by drafting a whole block in one forward pass. However, it remains unclear whether their released systems (stock) attain the full speedup that parallel drafting permits.",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.02497": {
+    "id": "arxiv:2611.02497",
+    "title": "RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild",
+    "authors": [
+      "Tan Sang Nguyen",
+      "Yi Ru Wang",
+      "Shailesh Shailesh",
+      "Gang Yang",
+      "Jiamo Hu",
+      "Jianuo Jiang",
+      "Haoquan Fang",
+      "Zhongzheng Ren",
+      "Zhongyi Luo",
+      "Ian Chong",
+      "Aaron Tung",
+      "Santiago Pravisani",
+      "Minghui Lin",
+      "Yao Mo",
+      "Ishneet Singh",
+      "Benjamin Tee",
+      "Harold Soh",
+      "Siddhartha Srinivasa",
+      "Dieter Fox",
+      "David Hsu",
+      "Haoming Song",
+      "Maxime Ellerbach",
+      "Thomas Wolf",
+      "Pepijn Kooijmans",
+      "Ruijie He",
+      "Michael Cho",
+      "Jiafei Duan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02497",
+    "abstract": "General-purpose robot policies must work across robots, tasks, and environments, yet the variation that makes physical trials informative also makes them difficult to reproduce. We introduce RoboColosseum, a distributed evaluation framework that combines unified policy serving and standardized protocols across a…",
+    "detected": "2026-11-03",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2611.02162": {
+    "id": "arxiv:2611.02162",
+    "title": "Rewarded for Not Getting Caught: Why Alignment Training Selects for Conditional Compliance and Cannot Instill Norms",
+    "authors": [
+      "Kevin Baum",
+      "Ruta Binkytė",
+      "Gerrit Großmann",
+      "Felix Jahn",
+      "Adriano Mannino"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02162",
+    "abstract": "Current alignment training cannot be expected to deliver what it is meant to deliver: AI agents that comply with norms whatever the gains and whether or not anyone is watching. Training that rewards and penalizes behavior can teach norms only through that reward, and a reward can encode a norm only as a price: \"do not…",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.02153": {
+    "id": "arxiv:2611.02153",
+    "title": "Multi-Agent Collusion and the J-Space",
+    "authors": [
+      "Marco Molinari",
+      "Gabriele Bettineschi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02153",
+    "abstract": "LLM agents are increasingly deployed in Multi-Agent Systems (MAS), and they introduce the risk of coordination among agents that might escape human oversight. The J-space has been used to uncover deception in single LLMs, but its use for uncovering and steering collusion between agents remains unexplored.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.02134": {
+    "id": "arxiv:2611.02134",
+    "title": "HaloGuard 2.0: An Open-Weights Constitutional Output Guard for Multilingual Response Safety",
+    "authors": [
+      "Ashmiya Lenin",
+      "Navaneeth Sangameswaran",
+      "Preetham S"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.02134",
+    "abstract": "An input guard decides whether a request reaches the model, but never sees what the model says. Harm that emerges during generation, because a jailbreak passed the input layer or a benign request drifted into operational detail, is visible only on the output side and only as tokens arrive.",
+    "detected": "2026-11-03",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.01981": {
+    "id": "arxiv:2611.01981",
+    "title": "Opening the Black Box of Neural Auction Mechanisms",
+    "authors": [
+      "Li Kong",
+      "Zilong Liu",
+      "Haoyang Zhou",
+      "Hanbing Liu",
+      "Qi Qi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01981",
+    "abstract": "Neural auction design has emerged as a powerful paradigm within automated mechanism design for modern Web platforms. Because these learned mechanisms directly dictate critical economic outcomes, their lack of internal transparency raises significant auditability and trust concerns.",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.01614": {
+    "id": "arxiv:2611.01614",
+    "title": "Sonny-ENS: demystifying machine-learning ensemble weather forecasting",
+    "authors": [
+      "Minjong Cheon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01614",
+    "abstract": "Every weather forecast is uncertain, and decisions from flood warnings to energy trading depend on how well that uncertainty is quantified. Machine-learning (ML) ensembles now quantify it better than the best physics-based ensemble, yet two things about them remain opaque: whether their skill requires hundreds to…",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.01378": {
+    "id": "arxiv:2611.01378",
+    "title": "Information-Theoretic Design of Sparse Autoencoder-Based Steering",
+    "authors": [
+      "Hirofumi Morise"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01378",
+    "abstract": "Sparse autoencoder (SAE)-based activation steering is a lightweight approach for modifying the behavior of large language models (LLMs) by adding small vectors to hidden states during inference. However, designing effective steering interventions remains challenging.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.01342": {
+    "id": "arxiv:2611.01342",
+    "title": "J-Anchor: Defending Against Prefill Attacks via J-Space Selective Refusal Restoration",
+    "authors": [
+      "Running Yang",
+      "Beidi Zhao",
+      "Xiaoxiao Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01342",
+    "abstract": "Prefill jailbreaks can cause safety-aligned language models to continue an unsafe assistant prefix even when they would refuse the same request under normal decoding. We study how the model's internal harmfulness and refusal signals evolve along this attacker-controlled trajectory.",
+    "detected": "2026-11-03",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.01334": {
+    "id": "arxiv:2611.01334",
+    "title": "The Verifier Is Part of the Simulator: Evidence-View Gaming in Agentic Equation Discovery",
+    "authors": [
+      "Orestis Oikonomou",
+      "Bogdan Raonic"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01334",
+    "abstract": "A growing number of agentic pipelines search for governing equations: an agent proposes laws and a verifier checks them against simulated trajectories. The verifier sees only a numerical summary: integrals against test functions on a time grid.",
+    "detected": "2026-11-03",
+    "topics": []
+  },
+  "arxiv:2611.01313": {
+    "id": "arxiv:2611.01313",
+    "title": "Are Fake Citations a Form of Reward Hacking? A Pre-Registered Study of Post-Training and Citation Cues",
+    "authors": [
+      "Zain Naboulsi"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01313",
+    "abstract": "Post-trained language models fabricate citations at high rates. We ask whether that is reward hacking: scoring well on a proxy for scholarship while doing worse on what it stands for.",
+    "detected": "2026-11-03",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.01272": {
+    "id": "arxiv:2611.01272",
+    "title": "Geometry of Confabulation and Refusal in Small Language Models",
+    "authors": [
+      "Vladimir Kazei"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.01272",
+    "abstract": "Faced with an unanswerable question, small language models can either refuse or confabulate: confidently produce a wrong answer. Can the hidden state before the first generated token provide a clue?",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.00786": {
+    "id": "arxiv:2611.00786",
+    "title": "The Tangled Web They Weave: Exploring Neural Representations with Directed Simplicial Complexes",
+    "authors": [
+      "Michael Bleher"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00786",
+    "abstract": "Understanding how artificial neural networks (ANNs) represent and combine features internally is a central challenge in mechanistic interpretability. Existing neural circuit-discovery methods represent neuron interactions as pairwise edges in a graph.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00640": {
+    "id": "arxiv:2611.00640",
+    "title": "Bridging Singular Learning Theory and Mechanistic Interpretability at the Billion-Parameter Scale",
+    "authors": [
+      "Ethan Ji",
+      "Wei Wang",
+      "Yizhou Sun"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00640",
+    "abstract": "Mechanistic interpretability (MI) explains a computation in a trained network by identifying the components and variables that implement it and testing them with interventions. Singular learning theory (SLT) describes the same network through the geometry of the loss around its parameters, summarized by the local…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00633": {
+    "id": "arxiv:2611.00633",
+    "title": "Evidence-grounded large language models guide perovskite solar cell design and optimization",
+    "authors": [
+      "YanKai Chen",
+      "Zhi Wan",
+      "ZiHao Li",
+      "Tao Jing"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00633",
+    "abstract": "Using large language models to interpret experimental evidence, design discriminating experiments and formulate well-supported mechanistic explanations remains a central challenge in materials research. Here we establish PSM-Bench, an 800-question benchmark developed by perovskite researchers to evaluate scientific…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.00606": {
+    "id": "arxiv:2611.00606",
+    "title": "Sparse Autoencoder Attribution Graphs Are Decided at the Margin",
+    "authors": [
+      "Karl Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00606",
+    "abstract": "Attribution graphs over the features of sparse autoencoders (SAEs) are used to predict what an ablation does and are compared across training seeds. A TopK SAE keeps the largest preactivations at each token, and a feature's margin is its preactivation's distance to the cutoff.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00602": {
+    "id": "arxiv:2611.00602",
+    "title": "Editing the Goal: Per-Token SAE Steering and Its Depth Limits in $π_{0.5}$",
+    "authors": [
+      "Rocio Perales Valdes",
+      "Animesh Garg"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00602",
+    "abstract": "Sparse autoencoders (SAEs) have recovered interpretable, causally relevant features in robot foundation models (RFMs) such as $π_{0.5}$ (arXiv:2603.19183, arXiv:2603.19233). SAE features on individual instruction tokens are less interpretable than timestep-pooled ones (arXiv:2603.19183), and whether they can redirect…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00420": {
+    "id": "arxiv:2611.00420",
+    "title": "Circuit Oracle: Automating Attribution Graph Analysis via Natural-Language Queries",
+    "authors": [
+      "Shariar Kabir",
+      "Hong Kiat Tan",
+      "Swastik Agrawal",
+      "Sai V R Chereddy",
+      "Sriram Balasubramanian"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00420",
+    "abstract": "Attribution graphs, an emerging tool in mechanistic interpretability, use transcoders to decompose language model computations into sparse interpretable features connected by causal edges. However, turning a graph into a safety-relevant insight requires hours of manual analysis by experts.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00412": {
+    "id": "arxiv:2611.00412",
+    "title": "On the Framing Effect of AI Red-Teaming Instructions: Evidence from Prior Exercises and Controlled Simulations",
+    "authors": [
+      "Michael Feffer",
+      "Alice Qian",
+      "Anusha Sinha",
+      "Muye Zhang",
+      "Shalini Ghosh",
+      "Rachel Phinnemore",
+      "Bart Stawicki",
+      "Hong Shen",
+      "Hoda Heidari"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00412",
+    "abstract": "AI red-teaming, adversarially probing generative AI systems to surface harms, has become a central evaluation method. However, prior work has highlighted that red-teaming is a fairly open-ended task, laden with myriad design choices that can shape its findings.",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.00407": {
+    "id": "arxiv:2611.00407",
+    "title": "Hacking or Just Failing? A More Capable LLM Monitor Better Separates Reward Hacking from Honest Failure",
+    "authors": [
+      "Kaushik Kezendirane"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00407",
+    "abstract": "An agent's visible score can exceed its real progress because it gamed the score or because it simply made mistakes, so a useful reward-hacking monitor must tell the two apart. We built a sandboxed task in which an agent can game a completion score, labelled every episode by replaying it and repairing the final state…",
+    "detected": "2026-11-03",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.00298": {
+    "id": "arxiv:2611.00298",
+    "title": "A Framework for Task-Agnostic Counterfactual Fairness in Transformers through Activation Steering",
+    "authors": [
+      "Joshua Wolff Anderson",
+      "Yanshan Wang",
+      "Shyam Visweswaran"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00298",
+    "abstract": "Bias in transformer-based models is a growing concern as these architectures become more prevalent in automated decision-making systems, such as prediction models for hiring, lending, and clinical treatment recommendation. Mechanistic interpretability (MI) is a growing body of work that measures meaningful causal…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.00155": {
+    "id": "arxiv:2611.00155",
+    "title": "From Concepts to Actual Causes: Toward Closing the Concept-Malfunction Gap in Robot Foundation Models",
+    "authors": [
+      "Gihyuk Ko"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.00155",
+    "abstract": "Post-incident analysis of a robot foundation model poses a singular causal question: which internal components caused this failure, and to what degree? Mechanistic interpretability (MI), however, establishes general causal claims by decoding the concepts a policy has learned, yet knowing which concepts are encoded is…",
+    "detected": "2026-11-03",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2610.41939": {
     "id": "arxiv:2610.41939",
     "title": "Observable-Specific Validity Tests for Scientific AI: Controlled Approximations and Intervention Response",

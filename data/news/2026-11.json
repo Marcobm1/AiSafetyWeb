@@ -1,5 +1,216 @@
 [
   {
+    "id": "13750b703b2f3940",
+    "url": "https://www.lesswrong.com/posts/enzpS72uDmomiWN7a/against-strawmanning-unilateral-pauses",
+    "title": "Against strawmanning unilateral pauses",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-03T01:38:34Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Summary: Scott Alexander’s Against SURA post is arguing against a strawman version of unilateral pauses. He admits as much deep into the post.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Geoffrey Irving"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e62a44a56b3200b5",
+    "url": "https://www.lesswrong.com/posts/35yw2qGK7naFLAvcq/teaching-qwen-why-1",
+    "title": "Teaching Qwen Why",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-02T22:56:02Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Anastasia Wei*, Jack Thompson*, Zephaniah Roe, Yixiong Hao, and Stewart Slocum* *Core contributors, correspondence to astwei@secondlookresearch.com This post is a partial replication and extension of Teaching Claude Why , conducted through Second Look Research’s summer fellowship. Introduction Anthropic’s “ Teaching…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "astwei"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d26a4dce2b8f636b",
+    "url": "https://www.lesswrong.com/posts/CDMozTX7ShiqbFLrf/towards-understanding-score-seeking-in-llms-1",
+    "title": "Towards understanding score-seeking in LLMs",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-02T20:32:16Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "The field of AI alignment understands surprisingly little about the details of AIs’ current misaligned motivations. Production LLMs sometimes reward-hack, exploiting flaws in how tasks are scored rather than performing the tasks as intended [1] , and we've recently seen AIs reward-hack in some particularly egregious…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Alex Mallen"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a5cc8e0fd09f1fd9",
+    "url": "https://arxiv.org/abs/2611.03627",
+    "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T18:53:54Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Reinforcement learning with verifiable rewards (RLVR) can enable generalizable improvement for large language model (LLM) reasoning. This paper studies how to incentivize such generalization via reasoning strategies.",
+    "topics": [],
+    "authors": [
+      "Ziqi Pang",
+      "Yu-Xiong Wang"
+    ],
+    "arxiv_id": "2611.03627",
+    "summary": null
+  },
+  {
+    "id": "2d694f5dcd1892e3",
+    "url": "https://arxiv.org/abs/2611.03575",
+    "title": "VeriHarm-Bench: Measuring Harmful Success in LLM Coding Agents Verifiably",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T18:27:55Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Large language model (LLM) coding agents increasingly operate with shell access, allowing them to write scripts, move files, alter permissions, and modify system configurations. However, an agent may achieve a user's goal while causing unintended harm, such as deleting unrelated files, weakening access controls, or…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Wei-Lin Chen",
+      "Zhepei Wei",
+      "Xinyu Zhu",
+      "Yu-Min Tseng",
+      "Tzu-Han Lin",
+      "Yu Meng"
+    ],
+    "arxiv_id": "2611.03575",
+    "summary": null
+  },
+  {
+    "id": "6fd6ad7938fa5bc5",
+    "url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+    "title": "Rewarding defenders with bigger bug bounties",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-02T18:00:00Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "262cfa35f4308cc0",
+    "url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+    "title": "Preparing our next security sprint to harden OpenAI",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-02T18:00:00Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6bef22c306558373",
+    "url": "https://arxiv.org/abs/2611.03439",
+    "title": "Playing Dumb: How a Chess Transformer Simulates Users Across Skill Levels",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T16:54:20Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Generative models increasingly simulate users at different skill levels in education and AI evaluation. Yet it remains unclear whether lower-skill behavior reflects less internal knowledge or a different use of retained knowledge.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Difan Jiao",
+      "George Eilender",
+      "Zhenwei Tang",
+      "Ashton Anderson"
+    ],
+    "arxiv_id": "2611.03439",
+    "summary": null
+  },
+  {
+    "id": "deb501d42f9b9b3d",
+    "url": "https://arxiv.org/abs/2611.03420",
+    "title": "Temporal Island Sparse Autoencoders for Interpreting Clinical Time-Series Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T16:43:03Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Deep learning models for electronic health records achieve strong predictive performance but provide little insight into what clinical concepts they represent internally. Post-hoc attribution methods produce per-cell importance scores that lack temporal coherence, cross-variable structure, and reusability across…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Muhan Yeo",
+      "Bong Gyun Kang",
+      "HyunGi Kim",
+      "Sungroh Yoon"
+    ],
+    "arxiv_id": "2611.03420",
+    "summary": null
+  },
+  {
+    "id": "2c6467559603042e",
+    "url": "https://arxiv.org/abs/2611.03374",
+    "title": "Characterizing When Language Models Take Harmful Actions to Protect Their Assigned Goals",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T16:17:54Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Recent language model (LM) safety failures have largely been studied as disparate phenomena. In agentic misalignment, a model blackmails an executive to avoid being replaced.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Brandon Jaipersaud",
+      "Elliot Creager"
+    ],
+    "arxiv_id": "2611.03374",
+    "summary": null
+  },
+  {
+    "id": "1f9c702dba12545d",
+    "url": "https://www.alignmentforum.org/posts/5a4tuSNDNodPsiS26/some-coherence-arguments-are-two-different-things-in-a",
+    "title": "Some “coherence arguments” are two different things in a trenchcoat",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-02T15:48:08Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "The “two kids in a trenchcoat” trope , in case you haven’t heard of it. Image sources: 1 , 2 tl;dr I go through three “coherence arguments”, related to (1) market competition, (2) AI self-reflection and self-modification, and (3) AI training algorithms.",
+    "topics": [],
+    "authors": [
+      "Steven Byrnes"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e5f6124c68728d81",
+    "url": "https://jack-clark.net/2026/11/02/import-ai-479-spacewar-low-latency-tasks-versus-llms-genie-4",
+    "title": "Import AI 479: Spacewar; low-latency tasks versus LLMs; Genie 4",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-11-02T14:30:54Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
     "id": "ef0ebf5a711369ee",
     "url": "https://www.lesswrong.com/posts/pbMyiCXhHCfp3WSq2/against-against-sura",
     "title": "Against Against SURA",
@@ -14,6 +225,176 @@
     "authors": [
       "Mikhail Samin"
     ],
+    "summary": null
+  },
+  {
+    "id": "41258fb3a8be27da",
+    "url": "https://arxiv.org/abs/2611.02849",
+    "title": "TLAPS-Bench: Formally Proving Correctness of Real-World System Specifications with TLA+ Proof System",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T09:51:18Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "TLAPS-Bench is a benchmark and execution harness for constructing machine-checked proofs for real-world system specifications in TLA+ with agentic AI. Proving correctness of complex system specifications requires discovering inductive invariants, reasoning about intricate state transitions, and decomposing proofs into…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Qian Cheng",
+      "Ruize Tang",
+      "Saad Mohammad Rafid Pial",
+      "Zhizhen Cathy Cai",
+      "Yiming Su",
+      "Jackson Clark",
+      "Munim Thahmid",
+      "Mahdiya Rahman Sukanya",
+      "Chris Newcombe",
+      "Igor Konnov",
+      "Stephan Merz",
+      "Xudong Sun",
+      "Murat Demirbas",
+      "Yu Huang",
+      "Markus Alexander Kuppe",
+      "Tianyin Xu"
+    ],
+    "arxiv_id": "2611.02849",
+    "summary": null
+  },
+  {
+    "id": "390ae613f2a75548",
+    "url": "https://arxiv.org/abs/2611.02791",
+    "title": "PGuard: A Native, Streaming, and Plug-in Guardrail for Multimodal Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T09:03:39Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "As streaming generation becomes the dominant serving paradigm for both text-only and multimodal large language models, ensuring safety throughout the generation process has become a critical challenge. We introduce PGuard, a native, streaming, and plug-in guardrail that transforms safety monitoring from an external…",
+    "topics": [],
+    "authors": [
+      "Junyu Lin",
+      "Mengjie Wu",
+      "Yonghao Dong",
+      "Yuchuan Fu",
+      "Jinfeng Li",
+      "Xiaodan Li",
+      "Xiaohan Yuan",
+      "Yicheng Liu",
+      "Yuefeng Chen",
+      "Hui Xue",
+      "Jingyi Wang",
+      "Yitong Yang",
+      "Jiyuan Fu",
+      "Qinga He"
+    ],
+    "arxiv_id": "2611.02791",
+    "summary": null
+  },
+  {
+    "id": "ed4b58253682640f",
+    "url": "https://openai.com/index/lifeval",
+    "title": "LifeVal",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-02T09:00:00Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
+    "topics": [
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8724c2bb6b170b1f",
+    "url": "https://arxiv.org/abs/2611.02503",
+    "title": "Towards Multi-Value Alignment via Value Localization in LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T04:24:59Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Aligning large language models (LLMs) with multiple, potentially conflicting human values remains challenging, as existing multi-objective alignment methods often require costly fine-tuning and provide limited insight into the internal mechanisms underlying value-related behaviors. In this work, we investigate…",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Xueqi Ma",
+      "Yanbei Jiang",
+      "Xingjun Ma",
+      "James Bailey",
+      "Sarah M. Erfani"
+    ],
+    "arxiv_id": "2611.02503",
+    "summary": null
+  },
+  {
+    "id": "838082ddb6d048e8",
+    "url": "https://arxiv.org/abs/2611.02501",
+    "title": "SpecPilot: Autonomous Algorithm Discovery and Systems Optimization for Speculative Decoding",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T04:21:47Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Speculative decoding accelerates memory-bound LLM decoding with a lightweight drafter, and parallel drafters extend this speedup by drafting a whole block in one forward pass. However, it remains unclear whether their released systems (stock) attain the full speedup that parallel drafting permits.",
+    "topics": [],
+    "authors": [
+      "Kunjun Li",
+      "Wenhao Chai",
+      "Yihao Liang",
+      "Yuezhou Hu",
+      "Shuyao Xu",
+      "Yi Pan",
+      "William X. Zheng",
+      "Kannan Ramchandran",
+      "Kurt Keutzer",
+      "Jiantao Jiao"
+    ],
+    "arxiv_id": "2611.02501",
+    "summary": null
+  },
+  {
+    "id": "689d787db43db5ea",
+    "url": "https://arxiv.org/abs/2611.02497",
+    "title": "RoboColosseum: Evaluating Physical Intelligence at Scale In-The-Wild",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T04:16:47Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "General-purpose robot policies must work across robots, tasks, and environments, yet the variation that makes physical trials informative also makes them difficult to reproduce. We introduce RoboColosseum, a distributed evaluation framework that combines unified policy serving and standardized protocols across a…",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Tan Sang Nguyen",
+      "Yi Ru Wang",
+      "Shailesh Shailesh",
+      "Gang Yang",
+      "Jiamo Hu",
+      "Jianuo Jiang",
+      "Haoquan Fang",
+      "Zhongzheng Ren",
+      "Zhongyi Luo",
+      "Ian Chong",
+      "Aaron Tung",
+      "Santiago Pravisani",
+      "Minghui Lin",
+      "Yao Mo",
+      "Ishneet Singh",
+      "Benjamin Tee",
+      "Harold Soh",
+      "Siddhartha Srinivasa",
+      "Dieter Fox",
+      "David Hsu",
+      "Haoming Song",
+      "Maxime Ellerbach",
+      "Thomas Wolf",
+      "Pepijn Kooijmans",
+      "Ruijie He",
+      "Michael Cho",
+      "Jiafei Duan"
+    ],
+    "arxiv_id": "2611.02497",
     "summary": null
   },
   {
@@ -32,6 +413,20 @@
     ],
     "authors": [
       "Parv Mahajan"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ff138f709a7e7c37",
+    "url": "https://openai.com/index/dan-driscoll-joins-openai",
+    "title": "OpenAI appoints Dan Driscoll as Senior Counselor for National Security Modernization",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-02T00:00:00Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "OpenAI appoints Dan Driscoll to advise on responsible AI for national security modernization, cyber resilience, and collaboration with U.S. allies.",
+    "topics": [
+      "security"
     ],
     "summary": null
   },
@@ -70,6 +465,102 @@
     "summary": null
   },
   {
+    "id": "08c9d42774c26614",
+    "url": "https://arxiv.org/abs/2611.02162",
+    "title": "Rewarded for Not Getting Caught: Why Alignment Training Selects for Conditional Compliance and Cannot Instill Norms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T19:59:19Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Current alignment training cannot be expected to deliver what it is meant to deliver: AI agents that comply with norms whatever the gains and whether or not anyone is watching. Training that rewards and penalizes behavior can teach norms only through that reward, and a reward can encode a norm only as a price: \"do not…",
+    "topics": [],
+    "authors": [
+      "Kevin Baum",
+      "Ruta Binkytė",
+      "Gerrit Großmann",
+      "Felix Jahn",
+      "Adriano Mannino"
+    ],
+    "arxiv_id": "2611.02162",
+    "summary": null
+  },
+  {
+    "id": "17c0e6095fa4a773",
+    "url": "https://arxiv.org/abs/2611.02153",
+    "title": "Multi-Agent Collusion and the J-Space",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T19:36:13Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "LLM agents are increasingly deployed in Multi-Agent Systems (MAS), and they introduce the risk of coordination among agents that might escape human oversight. The J-space has been used to uncover deception in single LLMs, but its use for uncovering and steering collusion between agents remains unexplored.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Marco Molinari",
+      "Gabriele Bettineschi"
+    ],
+    "arxiv_id": "2611.02153",
+    "summary": null
+  },
+  {
+    "id": "43435471e0fc425e",
+    "url": "https://arxiv.org/abs/2611.02134",
+    "title": "HaloGuard 2.0: An Open-Weights Constitutional Output Guard for Multilingual Response Safety",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T19:09:12Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "An input guard decides whether a request reaches the model, but never sees what the model says. Harm that emerges during generation, because a jailbreak passed the input layer or a benign request drifted into operational detail, is visible only on the output side and only as tokens arrive.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Ashmiya Lenin",
+      "Navaneeth Sangameswaran",
+      "Preetham S"
+    ],
+    "arxiv_id": "2611.02134",
+    "summary": null
+  },
+  {
+    "id": "3bc35de4719fded6",
+    "url": "https://arxiv.org/abs/2611.01981",
+    "title": "Opening the Black Box of Neural Auction Mechanisms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T15:18:05Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Neural auction design has emerged as a powerful paradigm within automated mechanism design for modern Web platforms. Because these learned mechanisms directly dictate critical economic outcomes, their lack of internal transparency raises significant auditability and trust concerns.",
+    "topics": [],
+    "authors": [
+      "Li Kong",
+      "Zilong Liu",
+      "Haoyang Zhou",
+      "Hanbing Liu",
+      "Qi Qi"
+    ],
+    "arxiv_id": "2611.01981",
+    "summary": null
+  },
+  {
+    "id": "3d2b1f1785cf711d",
+    "url": "https://arxiv.org/abs/2611.01614",
+    "title": "Sonny-ENS: demystifying machine-learning ensemble weather forecasting",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T06:04:43Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Every weather forecast is uncertain, and decisions from flood warnings to energy trading depend on how well that uncertainty is quantified. Machine-learning (ML) ensembles now quantify it better than the best physics-based ensemble, yet two things about them remain opaque: whether their skill requires hundreds to…",
+    "topics": [],
+    "authors": [
+      "Minjong Cheon"
+    ],
+    "arxiv_id": "2611.01614",
+    "summary": null
+  },
+  {
     "id": "e1241964589b851b",
     "url": "https://www.alignmentforum.org/posts/RHxaRkarGp9snWoKY/explaining-ai-might-obliterate-you-to-senior-policymakers-in",
     "title": "Explaining “AI might obliterate you” to senior policymakers in India",
@@ -82,6 +573,24 @@
     "authors": [
       "TurnTrout"
     ],
+    "summary": null
+  },
+  {
+    "id": "d9dae9662637eb14",
+    "url": "https://arxiv.org/abs/2611.01378",
+    "title": "Information-Theoretic Design of Sparse Autoencoder-Based Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-01T00:33:01Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Sparse autoencoder (SAE)-based activation steering is a lightweight approach for modifying the behavior of large language models (LLMs) by adding small vectors to hidden states during inference. However, designing effective steering interventions remains challenging.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Hirofumi Morise"
+    ],
+    "arxiv_id": "2611.01378",
     "summary": null
   }
 ]

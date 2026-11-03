@@ -1,5 +1,79 @@
 [
   {
+    "id": "6412641130bf80fd",
+    "url": "https://arxiv.org/abs/2611.01342",
+    "title": "J-Anchor: Defending Against Prefill Attacks via J-Space Selective Refusal Restoration",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T23:19:05Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Prefill jailbreaks can cause safety-aligned language models to continue an unsafe assistant prefix even when they would refuse the same request under normal decoding. We study how the model's internal harmfulness and refusal signals evolve along this attacker-controlled trajectory.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Running Yang",
+      "Beidi Zhao",
+      "Xiaoxiao Li"
+    ],
+    "arxiv_id": "2611.01342",
+    "summary": null
+  },
+  {
+    "id": "44ecbc07b7f756d8",
+    "url": "https://arxiv.org/abs/2611.01334",
+    "title": "The Verifier Is Part of the Simulator: Evidence-View Gaming in Agentic Equation Discovery",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T23:02:00Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "A growing number of agentic pipelines search for governing equations: an agent proposes laws and a verifier checks them against simulated trajectories. The verifier sees only a numerical summary: integrals against test functions on a time grid.",
+    "topics": [],
+    "authors": [
+      "Orestis Oikonomou",
+      "Bogdan Raonic"
+    ],
+    "arxiv_id": "2611.01334",
+    "summary": null
+  },
+  {
+    "id": "a090322ce89699bf",
+    "url": "https://arxiv.org/abs/2611.01313",
+    "title": "Are Fake Citations a Form of Reward Hacking? A Pre-Registered Study of Post-Training and Citation Cues",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T22:24:28Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Post-trained language models fabricate citations at high rates. We ask whether that is reward hacking: scoring well on a proxy for scholarship while doing worse on what it stands for.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zain Naboulsi"
+    ],
+    "arxiv_id": "2611.01313",
+    "summary": null
+  },
+  {
+    "id": "399b1b8050c1ca58",
+    "url": "https://arxiv.org/abs/2611.01272",
+    "title": "Geometry of Confabulation and Refusal in Small Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T21:14:26Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Faced with an unanswerable question, small language models can either refuse or confabulate: confidently produce a wrong answer. Can the hidden state before the first generated token provide a clue?",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Vladimir Kazei"
+    ],
+    "arxiv_id": "2611.01272",
+    "summary": null
+  },
+  {
     "id": "2f57da1c99b919de",
     "url": "https://www.lesswrong.com/posts/xikGZ8fuhdG6DApAo/against-sura",
     "title": "Against SURA",
@@ -14,6 +88,170 @@
     "authors": [
       "Scott Alexander"
     ],
+    "summary": null
+  },
+  {
+    "id": "f3b987356de9248e",
+    "url": "https://arxiv.org/abs/2611.00786",
+    "title": "The Tangled Web They Weave: Exploring Neural Representations with Directed Simplicial Complexes",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T09:58:53Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Understanding how artificial neural networks (ANNs) represent and combine features internally is a central challenge in mechanistic interpretability. Existing neural circuit-discovery methods represent neuron interactions as pairwise edges in a graph.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Michael Bleher"
+    ],
+    "arxiv_id": "2611.00786",
+    "summary": null
+  },
+  {
+    "id": "d43c7f319539ba48",
+    "url": "https://arxiv.org/abs/2611.00640",
+    "title": "Bridging Singular Learning Theory and Mechanistic Interpretability at the Billion-Parameter Scale",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T05:06:06Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Mechanistic interpretability (MI) explains a computation in a trained network by identifying the components and variables that implement it and testing them with interventions. Singular learning theory (SLT) describes the same network through the geometry of the loss around its parameters, summarized by the local…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Ethan Ji",
+      "Wei Wang",
+      "Yizhou Sun"
+    ],
+    "arxiv_id": "2611.00640",
+    "summary": null
+  },
+  {
+    "id": "9c9baad335e4df9b",
+    "url": "https://arxiv.org/abs/2611.00633",
+    "title": "Evidence-grounded large language models guide perovskite solar cell design and optimization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T04:57:32Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Using large language models to interpret experimental evidence, design discriminating experiments and formulate well-supported mechanistic explanations remains a central challenge in materials research. Here we establish PSM-Bench, an 800-question benchmark developed by perovskite researchers to evaluate scientific…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "YanKai Chen",
+      "Zhi Wan",
+      "ZiHao Li",
+      "Tao Jing"
+    ],
+    "arxiv_id": "2611.00633",
+    "summary": null
+  },
+  {
+    "id": "aa8fc37a6de20897",
+    "url": "https://arxiv.org/abs/2611.00606",
+    "title": "Sparse Autoencoder Attribution Graphs Are Decided at the Margin",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T04:03:14Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Attribution graphs over the features of sparse autoencoders (SAEs) are used to predict what an ablation does and are compared across training seeds. A TopK SAE keeps the largest preactivations at each token, and a feature's margin is its preactivation's distance to the cutoff.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Karl Li"
+    ],
+    "arxiv_id": "2611.00606",
+    "summary": null
+  },
+  {
+    "id": "0be045e5d3eb76cf",
+    "url": "https://arxiv.org/abs/2611.00602",
+    "title": "Editing the Goal: Per-Token SAE Steering and Its Depth Limits in $π_{0.5}$",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-31T03:56:08Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Sparse autoencoders (SAEs) have recovered interpretable, causally relevant features in robot foundation models (RFMs) such as $π_{0.5}$ (arXiv:2603.19183, arXiv:2603.19233). SAE features on individual instruction tokens are less interpretable than timestep-pooled ones (arXiv:2603.19183), and whether they can redirect…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Rocio Perales Valdes",
+      "Animesh Garg"
+    ],
+    "arxiv_id": "2611.00602",
+    "summary": null
+  },
+  {
+    "id": "27e37e721bc031e7",
+    "url": "https://arxiv.org/abs/2611.00420",
+    "title": "Circuit Oracle: Automating Attribution Graph Analysis via Natural-Language Queries",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T22:12:53Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Attribution graphs, an emerging tool in mechanistic interpretability, use transcoders to decompose language model computations into sparse interpretable features connected by causal edges. However, turning a graph into a safety-relevant insight requires hours of manual analysis by experts.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Shariar Kabir",
+      "Hong Kiat Tan",
+      "Swastik Agrawal",
+      "Sai V R Chereddy",
+      "Sriram Balasubramanian"
+    ],
+    "arxiv_id": "2611.00420",
+    "summary": null
+  },
+  {
+    "id": "3f3ec7372cb8b362",
+    "url": "https://arxiv.org/abs/2611.00412",
+    "title": "On the Framing Effect of AI Red-Teaming Instructions: Evidence from Prior Exercises and Controlled Simulations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T22:02:40Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "AI red-teaming, adversarially probing generative AI systems to surface harms, has become a central evaluation method. However, prior work has highlighted that red-teaming is a fairly open-ended task, laden with myriad design choices that can shape its findings.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Michael Feffer",
+      "Alice Qian",
+      "Anusha Sinha",
+      "Muye Zhang",
+      "Shalini Ghosh",
+      "Rachel Phinnemore",
+      "Bart Stawicki",
+      "Hong Shen",
+      "Hoda Heidari"
+    ],
+    "arxiv_id": "2611.00412",
+    "summary": null
+  },
+  {
+    "id": "fda8be5d8ecf3f7b",
+    "url": "https://arxiv.org/abs/2611.00407",
+    "title": "Hacking or Just Failing? A More Capable LLM Monitor Better Separates Reward Hacking from Honest Failure",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T21:52:47Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "An agent's visible score can exceed its real progress because it gamed the score or because it simply made mistakes, so a useful reward-hacking monitor must tell the two apart. We built a sandboxed task in which an agent can game a completion score, labelled every episode by replaying it and repairing the final state…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Kaushik Kezendirane"
+    ],
+    "arxiv_id": "2611.00407",
     "summary": null
   },
   {
@@ -32,6 +270,26 @@
     "authors": [
       "monika_j"
     ],
+    "summary": null
+  },
+  {
+    "id": "dbd42abb05d78539",
+    "url": "https://arxiv.org/abs/2611.00298",
+    "title": "A Framework for Task-Agnostic Counterfactual Fairness in Transformers through Activation Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T19:22:10Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Bias in transformer-based models is a growing concern as these architectures become more prevalent in automated decision-making systems, such as prediction models for hiring, lending, and clinical treatment recommendation. Mechanistic interpretability (MI) is a growing body of work that measures meaningful causal…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Joshua Wolff Anderson",
+      "Yanshan Wang",
+      "Shyam Visweswaran"
+    ],
+    "arxiv_id": "2611.00298",
     "summary": null
   },
   {
@@ -111,6 +369,24 @@
       "Oliver Eberle"
     ],
     "arxiv_id": "2610.41480",
+    "summary": null
+  },
+  {
+    "id": "365e92ade178ac2e",
+    "url": "https://arxiv.org/abs/2611.00155",
+    "title": "From Concepts to Actual Causes: Toward Closing the Concept-Malfunction Gap in Robot Foundation Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-10-30T07:57:06Z",
+    "fetched_at": "2026-11-03T13:23:06Z",
+    "excerpt": "Post-incident analysis of a robot foundation model poses a singular causal question: which internal components caused this failure, and to what degree? Mechanistic interpretability (MI), however, establishes general causal claims by decoding the concepts a policy has learned, yet knowing which concepts are encoded is…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Gihyuk Ko"
+    ],
+    "arxiv_id": "2611.00155",
     "summary": null
   },
   {
