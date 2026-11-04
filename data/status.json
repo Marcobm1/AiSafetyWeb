@@ -1,14 +1,14 @@
 {
-  "last_run": "2026-11-03T13:23:06Z",
-  "duration_seconds": 9.1,
-  "new_entries": 39,
+  "last_run": "2026-11-04T13:34:22Z",
+  "duration_seconds": 8.4,
+  "new_entries": 13,
   "sources": [
     {
       "id": "alignment-forum",
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 4,
+      "kept": 5,
       "new": 1,
       "error": null
     },
@@ -27,7 +27,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 6,
-      "new": 3,
+      "new": 1,
       "error": null
     },
     {
@@ -62,8 +62,8 @@
       "name": "Redwood Research",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 4,
-      "new": 0,
+      "kept": 5,
+      "new": 1,
       "error": null
     },
     {
@@ -90,7 +90,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 2,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -106,9 +106,9 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1349,
-      "kept": 14,
-      "new": 4,
+      "items_in_feed": 1354,
+      "kept": 13,
+      "new": 1,
       "error": null
     },
     {
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 30,
+      "new": 9,
       "error": null
     }
   ],
   "candidates": {
-    "added": 30,
+    "added": 9,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 577
+    "total": 586
   }
 }

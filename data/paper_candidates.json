@@ -1,4 +1,161 @@
 {
+  "arxiv:2611.05151": {
+    "id": "arxiv:2611.05151",
+    "title": "Catalyzing Interactive HTML Generation Capabilities via High-Fidelity Reinforcement Learning",
+    "authors": [
+      "Xujia Wang",
+      "Yixuan Liu",
+      "Shaohan Huang",
+      "Furu Wei",
+      "Lei Hou",
+      "Bin Xu",
+      "Juanzi Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.05151",
+    "abstract": "Generating HTML from natural-language specifications is an important application of code large language models (LLMs). Despite producing renderable pages, current models often fail to ensure functionality and visual quality during actual interaction.",
+    "detected": "2026-11-04",
+    "topics": []
+  },
+  "arxiv:2611.05003": {
+    "id": "arxiv:2611.05003",
+    "title": "Unifying and Beyond the Theory of Pervasive Capability Degradation in LLM Post-training SFT from Feature Interference",
+    "authors": [
+      "Hang Chen",
+      "Jiaying Zhu",
+      "Wenya Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.05003",
+    "abstract": "Pervasive Capability Degradation (PCD) refers to the phenomenon in which supervised fine-tuning (SFT), while adapting a large language model (LLM) to a target task, often erodes the general capabilities acquired during pre-training. Prevailing explanations attribute PCD to macroscopic distribution shift and therefore…",
+    "detected": "2026-11-04",
+    "topics": []
+  },
+  "arxiv:2611.04878": {
+    "id": "arxiv:2611.04878",
+    "title": "TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport",
+    "authors": [
+      "Chuancheng Shi",
+      "Shangze Li",
+      "Wenhua Wu",
+      "Hengzhi Chen",
+      "Fei Shen",
+      "Li Zhuo",
+      "Zhiyong Wang",
+      "Tat-Seng Chua"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.04878",
+    "abstract": "Despite their remarkable capabilities, large foundation models (LFMs) remain susceptible to adversarial manipulation. Current safety intervention methods primarily rely on the \\textit{locality hypothesis}, rigidly suppressing isolated neurons or features.",
+    "detected": "2026-11-04",
+    "topics": [
+      "interpretability",
+      "security"
+    ]
+  },
+  "arxiv:2611.04356": {
+    "id": "arxiv:2611.04356",
+    "title": "CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion",
+    "authors": [
+      "Li Zheng",
+      "Simin Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.04356",
+    "abstract": "Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to \\emph{efficiency attacks} remains largely unexplored. An adversary can craft syntactically valid and runnable FEM programs that complete successfully while forcing excessive computational work…",
+    "detected": "2026-11-04",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.04260": {
+    "id": "arxiv:2611.04260",
+    "title": "Neologism Inoculation Prompting",
+    "authors": [
+      "David Demitri Africa",
+      "Cameron Holmes"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.04260",
+    "abstract": "Inoculation prompting is a method to reduce undesired behaviours such as reward hacking in frontier models. It works by training a model on harmful examples under a prompt that specifies the undesired behaviour, which reduces the model's tendency to exhibit it unless prompted.",
+    "detected": "2026-11-04",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.04085": {
+    "id": "arxiv:2611.04085",
+    "title": "Follow the Features: SAE Feature-Guided Data-Efficient Instruction-Tuning of Large Language Models",
+    "authors": [
+      "Ryan Swift",
+      "Konstantinos Psounis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.04085",
+    "abstract": "Selecting small, effective instruction-tuning datasets requires identifying which aspects of the original data to retain. We introduce Follow the Features (FtF), a data-selection method that uses sparse autoencoder (SAE) features to characterize training data and guide subset construction.",
+    "detected": "2026-11-04",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.03862": {
+    "id": "arxiv:2611.03862",
+    "title": "Dr. No: Feature Steering for Abstention in Vision-Language Models",
+    "authors": [
+      "Farid Hasanov",
+      "Riccardo Renzulli",
+      "Bahram Zonooz",
+      "Mykola Pechenizkiy",
+      "Decebal Constantin Mocanu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03862",
+    "abstract": "Large foundation models often answer even when the available visual or textual evidence is insufficient to support a reliable conclusion. This failure to abstain makes them hard to trust in high-stakes or information-seeking settings, where a confident but unsupported answer can be worse than no answer at all.",
+    "detected": "2026-11-04",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.03765": {
+    "id": "arxiv:2611.03765",
+    "title": "VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions",
+    "authors": [
+      "Yang Qu",
+      "Qiang Fu",
+      "Zonghao Ying",
+      "Jiayi Zhao",
+      "Yaoyuan Zhang",
+      "Jinyang Guo",
+      "Jian Yang",
+      "Aishan Liu",
+      "Yingxun Wang",
+      "Xianglong Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03765",
+    "abstract": "Embodied agents are increasingly deployed in open-world environments, yet current robustness evaluations remain biased toward hazardous instructions and jailbreak vulnerabilities. A more fundamental issue is largely overlooked: agents are rarely tested under semantically sufficient but contextually minimal…",
+    "detected": "2026-11-04",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.03739": {
+    "id": "arxiv:2611.03739",
+    "title": "Reasoning is topologically simple",
+    "authors": [
+      "Chris Kapulkin",
+      "Nathan Kershaw"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.03739",
+    "abstract": "We formulate and investigate the hypothesis that reasoning text has simpler co-occurrence topology than non-reasoning text, and that higher-quality reasoning has simpler co-occurrence topology than lower-quality reasoning. We discuss and test applications to AI safety and AI evaluation.",
+    "detected": "2026-11-04",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
   "arxiv:2611.03627": {
     "id": "arxiv:2611.03627",
     "title": "Not All Reasoning Generalizes: A Case Study on Learning Generalizable Reasoning Strategies in RLVR",

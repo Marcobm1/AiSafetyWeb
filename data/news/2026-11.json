@@ -1,5 +1,173 @@
 [
   {
+    "id": "8bba823b3ee7969c",
+    "url": "https://www.lesswrong.com/posts/5ihkrtMEJw9u9ZbFg/crucible-iarpa-funded-ai-alignment-research-applications-1",
+    "title": "CRUCIBLE: IARPA-Funded AI Alignment Research — Applications Open",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-04T11:39:00Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "TL;DR: AE Studio is running a new government-funded research program that pairs alignment researchers with our internal engineering team for two-week sprints. We will select six alignment researchers whose proposed work attempts to answer one of our six open questions.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dan Lichtblau"
+    ],
+    "summary": null
+  },
+  {
+    "id": "79f4e26cd0254b84",
+    "url": "https://blog.redwoodresearch.org/p/openai-agents-keep-disabling-monitoring",
+    "title": "OpenAI agents keep disabling monitoring; is this being handled appropriately?",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-11-04T06:34:24Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Partly, but monitoring weak points and a lack of transparency about which cases reach human review remain concerning.",
+    "topics": [],
+    "authors": [
+      "Alec Harris"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8520f5ba2cddc1f8",
+    "url": "https://www.alignmentforum.org/posts/MuQDLAJyKJPFkw6q9/automating-subtle-emergent-misalignment-research",
+    "title": "Automating subtle emergent misalignment research",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-03T21:01:22Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Authors: Oscar Balcells Obeso, Richard Qi, Monte MacDiarmid, Evan Hubinger Abstract Red-teaming by humans is a vital part of model safety testing, but it may struggle to keep up as models improve. To test whether automated safety techniques could scale (which would allow us to turn more compute into progressively more…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "evhub"
+    ],
+    "summary": null
+  },
+  {
+    "id": "bb0f9cf1c231e5ad",
+    "url": "https://arxiv.org/abs/2611.05151",
+    "title": "Catalyzing Interactive HTML Generation Capabilities via High-Fidelity Reinforcement Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T16:27:07Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Generating HTML from natural-language specifications is an important application of code large language models (LLMs). Despite producing renderable pages, current models often fail to ensure functionality and visual quality during actual interaction.",
+    "topics": [],
+    "authors": [
+      "Xujia Wang",
+      "Yixuan Liu",
+      "Shaohan Huang",
+      "Furu Wei",
+      "Lei Hou",
+      "Bin Xu",
+      "Juanzi Li"
+    ],
+    "arxiv_id": "2611.05151",
+    "summary": null
+  },
+  {
+    "id": "27f106a2680f9d04",
+    "url": "https://arxiv.org/abs/2611.05003",
+    "title": "Unifying and Beyond the Theory of Pervasive Capability Degradation in LLM Post-training SFT from Feature Interference",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T14:52:23Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Pervasive Capability Degradation (PCD) refers to the phenomenon in which supervised fine-tuning (SFT), while adapting a large language model (LLM) to a target task, often erodes the general capabilities acquired during pre-training. Prevailing explanations attribute PCD to macroscopic distribution shift and therefore…",
+    "topics": [],
+    "authors": [
+      "Hang Chen",
+      "Jiaying Zhu",
+      "Wenya Wang"
+    ],
+    "arxiv_id": "2611.05003",
+    "summary": null
+  },
+  {
+    "id": "6613291a7a288964",
+    "url": "https://arxiv.org/abs/2611.04878",
+    "title": "TraceRouter++: Causal Semantic Routing Realignment via Optimal Transport",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T13:30:34Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Despite their remarkable capabilities, large foundation models (LFMs) remain susceptible to adversarial manipulation. Current safety intervention methods primarily rely on the \\textit{locality hypothesis}, rigidly suppressing isolated neurons or features.",
+    "topics": [
+      "interpretability",
+      "security"
+    ],
+    "authors": [
+      "Chuancheng Shi",
+      "Shangze Li",
+      "Wenhua Wu",
+      "Hengzhi Chen",
+      "Fei Shen",
+      "Li Zhuo",
+      "Zhiyong Wang",
+      "Tat-Seng Chua"
+    ],
+    "arxiv_id": "2611.04878",
+    "summary": null
+  },
+  {
+    "id": "a2357e701f020223",
+    "url": "https://openai.com/index/cisco-cyber",
+    "title": "How Cisco defends at machine speed with OpenAI",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-03T08:00:00Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Cisco combines network intelligence with OpenAI models to strengthen enterprise security. Learn how it is building more adaptive defenses.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e9758f46301c6b12",
+    "url": "https://arxiv.org/abs/2611.04356",
+    "title": "CloakFEM: Agentic FEM Code Generation for Red-Teaming Computational Resource Exhaustion",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T05:40:24Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Finite element method (FEM) solvers are foundational to scientific and engineering simulation, yet their susceptibility to \\emph{efficiency attacks} remains largely unexplored. An adversary can craft syntactically valid and runnable FEM programs that complete successfully while forcing excessive computational work…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Li Zheng",
+      "Simin Chen"
+    ],
+    "arxiv_id": "2611.04356",
+    "summary": null
+  },
+  {
+    "id": "eaad9bd213921e67",
+    "url": "https://arxiv.org/abs/2611.04260",
+    "title": "Neologism Inoculation Prompting",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T03:52:15Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Inoculation prompting is a method to reduce undesired behaviours such as reward hacking in frontier models. It works by training a model on harmful examples under a prompt that specifies the undesired behaviour, which reduces the model's tendency to exhibit it unless prompted.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Demitri Africa",
+      "Cameron Holmes"
+    ],
+    "arxiv_id": "2611.04260",
+    "summary": null
+  },
+  {
     "id": "13750b703b2f3940",
     "url": "https://www.lesswrong.com/posts/enzpS72uDmomiWN7a/against-strawmanning-unilateral-pauses",
     "title": "Against strawmanning unilateral pauses",
@@ -14,6 +182,25 @@
     "authors": [
       "Geoffrey Irving"
     ],
+    "summary": null
+  },
+  {
+    "id": "83e91b3838e33483",
+    "url": "https://arxiv.org/abs/2611.04085",
+    "title": "Follow the Features: SAE Feature-Guided Data-Efficient Instruction-Tuning of Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T23:50:56Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Selecting small, effective instruction-tuning datasets requires identifying which aspects of the original data to retain. We introduce Follow the Features (FtF), a data-selection method that uses sparse autoencoder (SAE) features to characterize training data and guide subset construction.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Ryan Swift",
+      "Konstantinos Psounis"
+    ],
+    "arxiv_id": "2611.04085",
     "summary": null
   },
   {
@@ -48,6 +235,28 @@
     "authors": [
       "Alex Mallen"
     ],
+    "summary": null
+  },
+  {
+    "id": "dac54ee67060923d",
+    "url": "https://arxiv.org/abs/2611.03862",
+    "title": "Dr. No: Feature Steering for Abstention in Vision-Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T19:34:06Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Large foundation models often answer even when the available visual or textual evidence is insufficient to support a reliable conclusion. This failure to abstain makes them hard to trust in high-stakes or information-seeking settings, where a confident but unsupported answer can be worse than no answer at all.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Farid Hasanov",
+      "Riccardo Renzulli",
+      "Bahram Zonooz",
+      "Mykola Pechenizkiy",
+      "Decebal Constantin Mocanu"
+    ],
+    "arxiv_id": "2611.03862",
     "summary": null
   },
   {
@@ -193,6 +402,34 @@
     "authors": [
       "Steven Byrnes"
     ],
+    "summary": null
+  },
+  {
+    "id": "34a210e867a27a76",
+    "url": "https://arxiv.org/abs/2611.03765",
+    "title": "VagueBench: Benchmarking the Robustness of Embodied Agents on Ambient Context Illusions",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T15:00:40Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "Embodied agents are increasingly deployed in open-world environments, yet current robustness evaluations remain biased toward hazardous instructions and jailbreak vulnerabilities. A more fundamental issue is largely overlooked: agents are rarely tested under semantically sufficient but contextually minimal…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Yang Qu",
+      "Qiang Fu",
+      "Zonghao Ying",
+      "Jiayi Zhao",
+      "Yaoyuan Zhang",
+      "Jinyang Guo",
+      "Jian Yang",
+      "Aishan Liu",
+      "Yingxun Wang",
+      "Xianglong Liu"
+    ],
+    "arxiv_id": "2611.03765",
     "summary": null
   },
   {
@@ -414,6 +651,26 @@
     "authors": [
       "Parv Mahajan"
     ],
+    "summary": null
+  },
+  {
+    "id": "fcceebec95de4453",
+    "url": "https://arxiv.org/abs/2611.03739",
+    "title": "Reasoning is topologically simple",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-02T00:12:52Z",
+    "fetched_at": "2026-11-04T13:34:22Z",
+    "excerpt": "We formulate and investigate the hypothesis that reasoning text has simpler co-occurrence topology than non-reasoning text, and that higher-quality reasoning has simpler co-occurrence topology than lower-quality reasoning. We discuss and test applications to AI safety and AI evaluation.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Chris Kapulkin",
+      "Nathan Kershaw"
+    ],
+    "arxiv_id": "2611.03739",
     "summary": null
   },
   {
