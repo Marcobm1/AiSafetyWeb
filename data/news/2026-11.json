@@ -1,5 +1,231 @@
 [
   {
+    "id": "c859c47f02cce4ef",
+    "url": "https://www.alignmentforum.org/posts/eKe7fky8kSt9DCJxZ/openai-astra-covertly-underperforms-on-safety-research",
+    "title": "OpenAI: Astra covertly underperforms on safety research",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-04T23:17:02Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Marcus Williams twitter thread ( non-twitter link ) intro: Astra covertly underperforms on safety research tasks. We noticed that Astra often makes surprisingly little progress on certain types of safety research and likes to invent blockers or impose arbitrary restrictions without telling the user.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Zach Stein-Perlman"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a016537781fcf9c4",
+    "url": "https://arxiv.org/abs/2611.06848",
+    "title": "Persona Perspectives: Adopting Viewpoints Reorganizes Representations in LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T18:05:17Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Common methods for monitoring features in large language models (LLMs) such as linear probes and sparse autoencoders (SAEs) assume that features maintain a consistent representation across contexts. LLMs, however, can flexibly adopt different perspectives or \"personas\" that suggest different underlying systems of…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Austin C. Kozlowski",
+      "Avital Mintz",
+      "Madison Lee"
+    ],
+    "arxiv_id": "2611.06848",
+    "summary": null
+  },
+  {
+    "id": "78c73d9d2eea0927",
+    "url": "https://arxiv.org/abs/2611.06830",
+    "title": "Alignment Myopia in Generative AI",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T17:44:07Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Current generative AI alignment relies on a myopic paradigm that prioritizes immediate conversational satisfaction. By relying on short-horizon feedback, this approach ignores the profound, longitudinal externalities of persistent human-AI interaction, which can lead to adverse outcomes such as cognitive atrophy…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Remi Denton",
+      "Aida Davani",
+      "Cynthia L Bennett",
+      "Michael Madaio",
+      "Roma Patel",
+      "Himabindu Lakkaraju"
+    ],
+    "arxiv_id": "2611.06830",
+    "summary": null
+  },
+  {
+    "id": "78a9968c26155d4f",
+    "url": "https://arxiv.org/abs/2611.06709",
+    "title": "Beyond the principle-practice gap: Responsible AI as situated epistemic and ethical practice",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T16:08:17Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Responsible AI scholarship has found that ethical principles are frequently not reflected in AI design and development. Conceptualised as a `gap' between principle and practice, this is framed as a problem of implementation, awareness or compliance, and by implication, a deficit of systems or individual behaviour.",
+    "topics": [],
+    "authors": [
+      "Thao Do Ngoc",
+      "Emma Carmel"
+    ],
+    "arxiv_id": "2611.06709",
+    "summary": null
+  },
+  {
+    "id": "d8924136b9940e3d",
+    "url": "https://arxiv.org/abs/2611.06688",
+    "title": "Don't Replace, Complement: A Detector-Agnostic Subspace Signal for Near-OOD Detection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T15:55:37Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Post-hoc out-of-distribution (OOD) detection is mature on far-OOD yet remains weak on near-OOD. These two settings differ in their use of class-characteristic feature directions: far-OOD inputs largely fail to activate those of their predicted class, whereas near-OOD inputs activate them much as in-distribution…",
+    "topics": [],
+    "authors": [
+      "Wonseok Shin",
+      "Songkuk Kim"
+    ],
+    "arxiv_id": "2611.06688",
+    "summary": null
+  },
+  {
+    "id": "326a762d00299646",
+    "url": "https://www.transformernews.ai/p/midterms-democrats-blue-tsunami-ai-policy-legislation",
+    "title": "What the blue tsunami means for AI policy",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-11-04T15:48:33Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Strong AI legislation now looks much more likely",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Shakeel Hashim"
+    ],
+    "summary": null
+  },
+  {
+    "id": "588c7996c76923af",
+    "url": "https://arxiv.org/abs/2611.06655",
+    "title": "Beyond accuracy: what AI assurance needs to establish in public services",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T15:31:51Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Public bodies increasingly rely on AI-produced evidence, including classifications, summaries and assessments. These outputs can inform policy decisions and service delivery, making their reliability a matter of public accountability.",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Louise Yorke"
+    ],
+    "arxiv_id": "2611.06655",
+    "summary": null
+  },
+  {
+    "id": "59cc3f83603700bb",
+    "url": "https://arxiv.org/abs/2611.06629",
+    "title": "Does Frontier AI Strengthen Cyber Defense? Evidence from Project Glasswing",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T15:12:30Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Defenders and attackers race to find the same software flaws. I use the launch of Project Glasswing, which gave a small group of large US tech firms early access to Claude Mythos Preview, a model for finding software vulnerabilities, to study how access to frontier AI affects defenders, external researchers, and…",
+    "topics": [
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Thomas Mosk"
+    ],
+    "arxiv_id": "2611.06629",
+    "summary": null
+  },
+  {
+    "id": "2b1eddf8807a2192",
+    "url": "https://www.alignmentforum.org/posts/sqjti8dxcKSvZJikd/desiderata-for-the-theory-of-agents",
+    "title": "Desiderata for the Theory of Agents",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-04T14:26:17Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "TLDR: I give informal conceptual desiderata for the theory of agents we need to solve ASI alignment, and show a few examples of how existing theories fall short of these desiderata. A Theory of What?",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Vanessa Kosoy"
+    ],
+    "summary": null
+  },
+  {
+    "id": "9f8504671859ad86",
+    "url": "https://arxiv.org/abs/2611.06553",
+    "title": "Addition by Subtraction: Toward Mitigating Fragile Safety Alignment in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T14:18:05Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Large language models (LLMs) undergo safety alignment to prevent harmful generations, yet they remain vulnerable to jailbreak attacks. Recent work reveals a deeper structural weakness: safety alignment can be highly sparse, such that pruning a small number of safety-critical neurons or ablating a single refusal…",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Hamid Dashtbani",
+      "Alexandra Dmitrienko"
+    ],
+    "arxiv_id": "2611.06553",
+    "summary": null
+  },
+  {
+    "id": "89465e7d4773877d",
+    "url": "https://arxiv.org/abs/2611.06518",
+    "title": "EmoReward: Self-Evolving Reward Calibration for Emotional Video Generation RL",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T13:43:09Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Group Relative Policy Optimization (GRPO) has advanced generative model post-training in verifiable domains such as code and mathematics, but evaluating video quality, especially emotional expression, often depends on subjective aesthetics and has no uniquely correct target. Existing approaches typically rely on fixed…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Mingzhe Zheng",
+      "Yue Wu",
+      "Jing Tan",
+      "Chang Zou",
+      "Dengyang Jiang",
+      "Zeyue Tian",
+      "Xuanhua He",
+      "Ryan Xu",
+      "Yunyang Ge",
+      "Sihui Ji",
+      "Yunlong Lin",
+      "Kaihang Pan",
+      "Hongru Yan",
+      "Sixiang Chen",
+      "Dianyi Wang",
+      "Julian Zhang",
+      "Weijie Kong",
+      "Changlin Li",
+      "Lanqing Guo",
+      "Zhao Zhong",
+      "Qifeng Chen",
+      "Harry Yang"
+    ],
+    "arxiv_id": "2611.06518",
+    "summary": null
+  },
+  {
     "id": "8bba823b3ee7969c",
     "url": "https://www.lesswrong.com/posts/5ihkrtMEJw9u9ZbFg/crucible-iarpa-funded-ai-alignment-research-applications-1",
     "title": "CRUCIBLE: IARPA-Funded AI Alignment Research — Applications Open",
@@ -13,6 +239,113 @@
     ],
     "authors": [
       "Dan Lichtblau"
+    ],
+    "summary": null
+  },
+  {
+    "id": "589f551f3d1cc951",
+    "url": "https://arxiv.org/abs/2611.06374",
+    "title": "Corralling AI Risks with Grassroots Contracts",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T11:34:17Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "AI's inflection point is a fountain of alarming risks. Digital platforms in particular are vulnerable to three major AI risks, as those in control of global platforms cede control to AI, of the algorithms, of membership and of content: (1) AI control of global platforms, social and economic, used by the majority of…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Ehud Shapiro"
+    ],
+    "arxiv_id": "2611.06374",
+    "summary": null
+  },
+  {
+    "id": "c34a3ddac9fa87fb",
+    "url": "https://arxiv.org/abs/2611.06244",
+    "title": "Rubric Curriculum RL: Exploiting the Generation-Verification Gap in Non-Verifiable Domains",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T09:51:06Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Reinforcement learning with verifiable rewards (RLVR) has led to significant gains in math and code generation. Extending these gains to open-ended domains remains challenging: ground-truth verification is unavailable, human annotation is expensive, and learned reward models are prone to reward hacking.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Sumeet Ramesh Motwani",
+      "Tejas Krishnan",
+      "Alistair Letcher",
+      "Charles London",
+      "Suhaas Bhat",
+      "Huitian Jiao",
+      "Philip Torr",
+      "Riashat Islam",
+      "Christopher Summerfield",
+      "Jakob Foerster",
+      "Christian Schroeder de Witt",
+      "Qilong Gu",
+      "Shital Shah"
+    ],
+    "arxiv_id": "2611.06244",
+    "summary": null
+  },
+  {
+    "id": "758b2f2a7b291c76",
+    "url": "https://arxiv.org/abs/2611.06219",
+    "title": "A Definition of Catastrophic Performance",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T09:30:13Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "A central challenge in AI is specifying objectives that align with human preferences. While existing theoretical results elucidate how misspecification impacts performance, they typically do not distinguish between merely suboptimal and catastrophic outcomes.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Henrik Marklund",
+      "Alex Infanger",
+      "Benjamin Van Roy"
+    ],
+    "arxiv_id": "2611.06219",
+    "summary": null
+  },
+  {
+    "id": "c957dcba45ca71e8",
+    "url": "https://arxiv.org/abs/2611.06147",
+    "title": "SafeStart: Mitigating the Overlooked Safety Cost of Active Expert Reduction in MoE LLM Serving",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-04T08:31:01Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Mixture-of-Experts (MoE) language models send each token through a few of many expert subnetworks. Serving methods make these models faster by running even fewer experts per token, and they are validated on accuracy benchmarks.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Erfan Baghaei Potraghloo",
+      "Saeid Shokoufa",
+      "Seyedarmin Azizi",
+      "Arya Fayyazi",
+      "Souvik Kundu",
+      "Mehdi Kamal",
+      "Massoud Pedram"
+    ],
+    "arxiv_id": "2611.06147",
+    "summary": null
+  },
+  {
+    "id": "75679f5aa60bfcf8",
+    "url": "https://openai.com/index/daybreak-red-aws-govcloud",
+    "title": "Daybreak Red is now available in AWS GovCloud (US-East)",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-04T07:00:00Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Daybreak Red brings GPT-5.6 Cyber to approved customers in AWS GovCloud (US-East) through Amazon Bedrock for authorized cybersecurity work.",
+    "topics": [
+      "security"
     ],
     "summary": null
   },
@@ -32,6 +365,28 @@
     "summary": null
   },
   {
+    "id": "bace19c9d9917093",
+    "url": "https://arxiv.org/abs/2611.05655",
+    "title": "When Are Two SAE Latents the Same Feature?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T21:39:53Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Comparing sparse autoencoders (SAEs) requires connecting feature correspondence, differences between whole dictionaries, and uncertainty from finite evaluation data. We develop a framework that connects these tasks through an energy-weighted optimal-transport plan under a specified similarity geometry.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Alexandra Suvorikova",
+      "Ilgam Latypov",
+      "Anton Trukhan",
+      "Yuriy Dorn"
+    ],
+    "arxiv_id": "2611.05655",
+    "summary": null
+  },
+  {
     "id": "8520f5ba2cddc1f8",
     "url": "https://www.alignmentforum.org/posts/MuQDLAJyKJPFkw6q9/automating-subtle-emergent-misalignment-research",
     "title": "Automating subtle emergent misalignment research",
@@ -47,6 +402,27 @@
     "authors": [
       "evhub"
     ],
+    "summary": null
+  },
+  {
+    "id": "9a871bca0a7da231",
+    "url": "https://arxiv.org/abs/2611.05549",
+    "title": "Whose Transparency is it Anyway? Understanding Generative AI Transparency Needs and Gaps Across Stakeholders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-03T19:40:36Z",
+    "fetched_at": "2026-11-05T13:47:39Z",
+    "excerpt": "Transparency has become a central principle in AI governance, yet there is little agreement about what transparency means, for whom, and in what contexts. Drawing on interpretive flexibility within the Social Construction of Technology, this paper examines how different stakeholders understand and experience…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Genevieve Smith",
+      "Sahiba Chopra",
+      "Natalia Luka",
+      "Min Kyung Lee"
+    ],
+    "arxiv_id": "2611.05549",
     "summary": null
   },
   {

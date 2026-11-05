@@ -1,15 +1,15 @@
 {
-  "last_run": "2026-11-04T13:34:22Z",
-  "duration_seconds": 8.4,
-  "new_entries": 13,
+  "last_run": "2026-11-05T13:47:39Z",
+  "duration_seconds": 6.2,
+  "new_entries": 18,
   "sources": [
     {
       "id": "alignment-forum",
       "name": "AI Alignment Forum",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 5,
-      "new": 1,
+      "kept": 6,
+      "new": 2,
       "error": null
     },
     {
@@ -17,7 +17,7 @@
       "name": "Don't Worry About the Vase",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 4,
+      "kept": 3,
       "new": 0,
       "error": null
     },
@@ -27,7 +27,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 6,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -53,7 +53,7 @@
       "name": "METR",
       "status": "ok",
       "items_in_feed": 100,
-      "kept": 1,
+      "kept": 0,
       "new": 0,
       "error": null
     },
@@ -63,14 +63,14 @@
       "status": "ok",
       "items_in_feed": 20,
       "kept": 5,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
       "id": "govai",
       "name": "Centre for the Governance of AI",
       "status": "ok",
-      "items_in_feed": 58,
+      "items_in_feed": 56,
       "kept": 5,
       "new": 0,
       "error": null
@@ -80,8 +80,8 @@
       "name": "Transformer",
       "status": "ok",
       "items_in_feed": 20,
-      "kept": 2,
-      "new": 0,
+      "kept": 3,
+      "new": 1,
       "error": null
     },
     {
@@ -106,8 +106,8 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1354,
-      "kept": 13,
+      "items_in_feed": 1360,
+      "kept": 14,
       "new": 1,
       "error": null
     },
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 9,
+      "new": 14,
       "error": null
     }
   ],
   "candidates": {
-    "added": 9,
+    "added": 14,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 586
+    "total": 600
   }
 }
