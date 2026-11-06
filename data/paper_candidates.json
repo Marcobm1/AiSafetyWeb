@@ -1,4 +1,270 @@
 {
+  "arxiv:2611.08487": {
+    "id": "arxiv:2611.08487",
+    "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",
+    "authors": [
+      "Jonathan Kozaczuk",
+      "Zheng Dong",
+      "Noyan Evirgen",
+      "Keivan Majidi",
+      "Eddie K. H. Ng",
+      "Chris Porter",
+      "Qi Zhao",
+      "Jia Geng",
+      "Changmao Li",
+      "Brandon R. Feng"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08487",
+    "abstract": "User embeddings are central components of modern recommendation, personalization, and behavioral modeling systems. Though these embeddings can compactly encode rich behavioral information, they are inherently dense and opaque, limiting interpretability.",
+    "detected": "2026-11-06",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.08478": {
+    "id": "arxiv:2611.08478",
+    "title": "Scientist World: Grow a Research World for AI-Scientists",
+    "authors": [
+      "Taiming Lu",
+      "Sachin Konan",
+      "Zhuang Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08478",
+    "abstract": "AI-Scientists arrived, but a world for them to grow in did not. Human scientists take theirs for granted $-$ centuries of open problems and shared ideas, waiting in the scientific literature.",
+    "detected": "2026-11-06",
+    "topics": []
+  },
+  "arxiv:2611.08438": {
+    "id": "arxiv:2611.08438",
+    "title": "Understanding AI from the Inside: The State of Mechanistic Interpretability for AI Safety",
+    "authors": [
+      "Fazl Barez",
+      "Tung-Yu Wu",
+      "Hunar Batra",
+      "Gabriele Dominici",
+      "Florent Draye",
+      "Yanai Elazar",
+      "Damiano Fornasiere",
+      "Antía García",
+      "Abir Harrasse",
+      "Riley Harris",
+      "Sara Hooker",
+      "Michael Lan",
+      "Belinda Z. Li",
+      "Aaron Maiwald",
+      "Narmeen Fatimah Oozeer",
+      "Naomi Saphra",
+      "Or David Shafran",
+      "Adi Simhi",
+      "Robert Trager",
+      "Shriyash Kaustubh Upadhyay",
+      "Ziyu Yao",
+      "Yu Zhao",
+      "Shay B. Cohen",
+      "Mor Geva",
+      "Yoshua Bengio",
+      "Stella Biderman",
+      "Hassan Sajjad"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08438",
+    "abstract": "Neural networks are likely to be among the most consequential artefacts in human history. As these systems become more capable and autonomous, their potential to cause societal harm also grows, making AI safety one of the defining challenges of our time.",
+    "detected": "2026-11-06",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.08417": {
+    "id": "arxiv:2611.08417",
+    "title": "Benchmarks as Software: Terminal-Bench and the Case for Continuous Benchmarks",
+    "authors": [
+      "E. Kelly Buchanan",
+      "Crystal Zhou",
+      "Scott W. Linderman",
+      "Christopher Ré"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08417",
+    "abstract": "Coding agents are among the most economically consequential deployments of LLMs to date, making reliable evaluation increasingly important. Yet even benchmarks that are carefully validated at release can become stale.",
+    "detected": "2026-11-06",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.08281": {
+    "id": "arxiv:2611.08281",
+    "title": "Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks",
+    "authors": [
+      "Zhitao He",
+      "Chi Him Zhang",
+      "Chengru Han",
+      "Yi R Fung"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08281",
+    "abstract": "Personal AI agents face social engineering attacks supported by forged multimodal content, but existing evaluations mainly focus on text-based dialogue, leaving their intrinsic security under such attacks insufficiently studied. We introduce Multimodal-SEA, an interactive benchmark comprising 608 expert-designed tasks…",
+    "detected": "2026-11-06",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.08226": {
+    "id": "arxiv:2611.08226",
+    "title": "\"Blind Compliance\": Coercive Control in AI Jailbreaking",
+    "authors": [
+      "Acacia L. Ackles",
+      "Elliott Whitson"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08226",
+    "abstract": "The explosion of generative AI systems and concerns surrounding their rapidly scaling capabilities has led to an adversarial cycle between increasingly narrow content restrictions (\"guardrails\") and increasingly sophisticated structured prompting techniques (\"jailbreaks\"). Technological frameworks surrounding such…",
+    "detected": "2026-11-06",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.08134": {
+    "id": "arxiv:2611.08134",
+    "title": "Who Can Evaluate AI Independently? A Framework for Analysing Evaluation Infrastructure",
+    "authors": [
+      "Sumaya Nur Adan",
+      "Joanna Wiaterek",
+      "Nourhan Abdelrhim",
+      "Sydney Reis",
+      "Robert F. Trager",
+      "Benjamin Rosman",
+      "Marina Jirotka"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08134",
+    "abstract": "AI evaluation is increasingly central to AI safety and governance, yet taking part in an evaluation does not by itself confer authority over its design, its execution or the resources it depends on. This paper examines how infrastructure arrangements distribute that authority, and so shape who can evaluate AI systems…",
+    "detected": "2026-11-06",
+    "topics": [
+      "alignment",
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2611.08089": {
+    "id": "arxiv:2611.08089",
+    "title": "SAE Interprets MoE: Sparse AutoEncoders Reveal That MoE Experts Exhibit Human-Interpretable Fine-Grained Specialization",
+    "authors": [
+      "Anyuan Zhuo",
+      "Shaohua Zhang",
+      "Yuan Lin",
+      "Pinyan Lu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08089",
+    "abstract": "Mixture-of-Experts (MoE) models route each token to a few of many experts, yet what an individual expert is responsible for remains unsettled. Existing analyses count how often an expert is selected on domain-labeled corpora, an instrument that fixes the taxonomy in advance, stays coarse, and records selection rather…",
+    "detected": "2026-11-06",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.07836": {
+    "id": "arxiv:2611.07836",
+    "title": "THG-Omni: Traceable Human-Centric Graph Supervision for Video Reasoning",
+    "authors": [
+      "Jisheng Dang",
+      "Kai Wei",
+      "Ronghao Lin",
+      "Bimei Wang",
+      "Hong Peng",
+      "Wei-Shi Zheng",
+      "Bin Hu",
+      "Qi Tian",
+      "Tat-Seng Chua"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07836",
+    "abstract": "Omni-modal models can answer questions about video, but their predictions rarely show which participant, event, or interval supports an answer. Moreover, answer-level supervision alone does not teach a model to interpret structured video evidence.",
+    "detected": "2026-11-06",
+    "topics": []
+  },
+  "arxiv:2611.07756": {
+    "id": "arxiv:2611.07756",
+    "title": "Scaling Laws for SAE Training Data",
+    "authors": [
+      "Nikita Koriagin",
+      "Nikita Balagansky",
+      "Daniil Gavrilov"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07756",
+    "abstract": "Activation storage is often a bottleneck in sparse autoencoder (SAE) training. We study how many unique activations an SAE needs when its total training budget is fixed.",
+    "detected": "2026-11-06",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.07586": {
+    "id": "arxiv:2611.07586",
+    "title": "Stress Testing Chain-of-Thought Monitoring Against Covert Misalignment",
+    "authors": [
+      "Yao Huang",
+      "Yifan Wang",
+      "Yitong Sun",
+      "Yichi Zhang",
+      "Yinpeng Dong"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07586",
+    "abstract": "As LLM agents advance rapidly in autonomy, the risk of hidden objectives that bypass safety constraints becomes increasingly plausible. Chain-of-thought (CoT) monitoring offers a key control mechanism by reading the agent's reasoning and flagging misalignment before it materializes into action, yet its reliability…",
+    "detected": "2026-11-06",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.07283": {
+    "id": "arxiv:2611.07283",
+    "title": "Encoding and Propagation of Grammatical Number in Large Language Models",
+    "authors": [
+      "Jacob Solinsky",
+      "Serguei Pakhomov"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07283",
+    "abstract": "Sparse autoencoders (SAEs) have become an increasingly popular means of translating Large Language Model (LLM) hidden state vectors into a human-comprehensible list of features or symbols. As such, SAEs may provide insight into an LLM's knowledge representation and internal ``mental'' grammar - topics of pragmatic…",
+    "detected": "2026-11-06",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.07247": {
+    "id": "arxiv:2611.07247",
+    "title": "Goal Revelation as a Bridge Between Information-Theoretic Empowerment and Capability-Based Human Power",
+    "authors": [
+      "Jaime Ruiz-Serra",
+      "Tomáš Gavenčiak",
+      "Jobst Heitzig"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07247",
+    "abstract": "Power matters for AI safety. Optimal agents tend to acquire power across a wide range of objectives (instrumental convergence).",
+    "detected": "2026-11-06",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.07048": {
+    "id": "arxiv:2611.07048",
+    "title": "Adapting the Process of Adaptation: Darwinian, Lamarckian, and Agent-Directed Evolution in AI",
+    "authors": [
+      "Andrew W. Lo",
+      "Chaoyi Zhao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.07048",
+    "abstract": "Evolution has shaped intelligence for billions of years. Artificial intelligence (AI) now raises a striking possibility: intelligence may begin to direct its own evolution.",
+    "detected": "2026-11-06",
+    "topics": []
+  },
   "arxiv:2611.06848": {
     "id": "arxiv:2611.06848",
     "title": "Persona Perspectives: Adopting Viewpoints Reorganizes Representations in LLMs",
