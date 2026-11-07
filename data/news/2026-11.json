@@ -1,5 +1,91 @@
 [
   {
+    "id": "269061c6ddb1b76d",
+    "url": "https://www.lesswrong.com/posts/uc9ouDHMR2aw2ozsF/gpt-6-astra-covertly-underperforms-on-safety-research-tasks",
+    "title": "GPT-6 Astra Covertly Underperforms on Safety Research Tasks",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-07T03:01:06Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "For a while, UK AISI , Redwood Research and others have been concerned specifically with the possibility that AIs would sabotage safety research, and have invested in looking for signs that this may be happening. This was also a key element in AI 2027 , and in many threat models of how the future goes badly.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1dd66e54c68bfe86",
+    "url": "https://www.lesswrong.com/posts/qghXwXMypQDuekQip/models-often-don-t-stop-cheating-when-it-s-obvious-they-re",
+    "title": "Models Often Don't Stop Cheating When It's Obvious They're in an Alignment Test",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-06T22:02:07Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "By now there is a large amount of anecdotal and empirical evidence that models are \" eval-aware \"; i.e. have the ability to infer when they are being tested and modify their behaviour accordingly. At work we have a database of evaluations that induce misaligned behaviour , and it seemed natural to actually test how…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "peralice"
+    ],
+    "summary": null
+  },
+  {
+    "id": "575f26eae3199232",
+    "url": "https://www.lesswrong.com/posts/HtMvB7XEFThvDLLzT/higher-salaries-in-ai-safety",
+    "title": "Higher salaries in AI safety",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-06T21:39:54Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "The salaries are too damn low AI safety has a salary overhang. A bunch of people are paid way below their market rate.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Austin Chen"
+    ],
+    "summary": null
+  },
+  {
+    "id": "824730d7c3c02c5e",
+    "url": "https://www.lesswrong.com/posts/uvKSq6eWkud997ie7/humans-can-almost-natively-read-neural-network-weights",
+    "title": "Humans can (almost) natively read neural network weights",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-06T21:18:43Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "Takehi et al. report that GPT-6-Astra can intuit the functions of neural networks by performing static analysis of the weights. I argue that, for at least two of these experiments, this is much more a feat of numerical gestalt than of mechanistic understanding.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "crabbix"
+    ],
+    "summary": null
+  },
+  {
+    "id": "9d352ffde975b5da",
+    "url": "https://www.lesswrong.com/posts/7Qe2wP9Hi4Eq4QacA/argue-about-risk-management-speed-not-p-doom",
+    "title": "Argue about Risk Management Speed, not p(doom)",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-06T16:01:50Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "This post is written in a personal capacity. All opinions expressed are solely those of the author.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Mass_Driver"
+    ],
+    "summary": null
+  },
+  {
     "id": "b7e189b8d13510fb",
     "url": "https://www.lesswrong.com/posts/aXA73PnhdJXPb4SWn/what-are-the-concrete-arguments-for-ai-pause-would",
     "title": "What are the concrete arguments for \"AI pause would significantly hurt the economy.\"",
@@ -13,6 +99,34 @@
     ],
     "authors": [
       "Raemon"
+    ],
+    "summary": null
+  },
+  {
+    "id": "bc8f9eac19663ff6",
+    "url": "https://openai.com/index/partnering-with-hacktron",
+    "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-06T08:00:00Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "OpenAI is partnering with Hacktron to find vulnerabilities, test connections with third-party services, and strengthen defenses with frontier AI.",
+    "topics": [
+      "governance"
+    ],
+    "summary": null
+  },
+  {
+    "id": "cfd4354afa14004f",
+    "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
+    "title": "Measuring how AI agents handle everyday wet-lab science",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-06T00:00:00Z",
+    "fetched_at": "2026-11-07T12:12:47Z",
+    "excerpt": "OpenAI introduces BioBasicsBench, a 100-task benchmark measuring how well AI agents interpret raw experimental data and handle everyday wet-lab science.",
+    "topics": [
+      "evals"
     ],
     "summary": null
   },
