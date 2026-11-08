@@ -1,5 +1,39 @@
 [
   {
+    "id": "3fe2d90eeb269f98",
+    "url": "https://www.lesswrong.com/posts/fjGgrzAkpSDouLwfx/illegible-problems-as-the-2027-political-boss-fight",
+    "title": "\"Illegible problems\" as the 2027 political boss fight",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-07T19:31:44Z",
+    "fetched_at": "2026-11-08T12:32:40Z",
+    "excerpt": "To legislate something, it must be legible . That is, legislators (or, you know, presidents) must be able to understand a problem, and understand whether a given law or decree solves that problem.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Raemon"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e0e1becde822d497",
+    "url": "https://www.lesswrong.com/posts/9ixerpx4DCQTaRYCz/five-types-of-corrigibility-projects-i-don-t-want-to-fund",
+    "title": "Five Types of “Corrigibility Projects” I Don’t Want to Fund",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-07T18:16:19Z",
+    "fetched_at": "2026-11-08T12:32:40Z",
+    "excerpt": "I'm currently evaluating grant applications for the Corrigibility Research Fund . For the most part, my methodology is the same as it was in September .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Max Harms"
+    ],
+    "summary": null
+  },
+  {
     "id": "269061c6ddb1b76d",
     "url": "https://www.lesswrong.com/posts/uc9ouDHMR2aw2ozsF/gpt-6-astra-covertly-underperforms-on-safety-research-tasks",
     "title": "GPT-6 Astra Covertly Underperforms on Safety Research Tasks",
