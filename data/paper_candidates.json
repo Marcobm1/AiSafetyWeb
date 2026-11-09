@@ -1,4 +1,182 @@
 {
+  "arxiv:2611.09828": {
+    "id": "arxiv:2611.09828",
+    "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
+    "authors": [
+      "Aria Wong",
+      "Joshua Engels",
+      "Neel Nanda"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.09828",
+    "abstract": "Reinforcement learning (RL) rewards are notoriously difficult to design and control, often leading to the model learning unintended behaviors such as reward hacking. One potential solution is to monitor for reward hacking and penalize it when detected; however, training against a monitor could lead to evasive…",
+    "detected": "2026-11-09",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.09351": {
+    "id": "arxiv:2611.09351",
+    "title": "AUTEUR: Acoustic Plan Learning for Red-Teaming Text-to-Audio Models",
+    "authors": [
+      "Jiashu Zhang",
+      "Jiaming He",
+      "Zheming Zhang",
+      "Kaizheng Wang",
+      "Bing Li",
+      "Zhiyuan Zha",
+      "Yi Yu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.09351",
+    "abstract": "Automated red-teaming of text-to-audio models requires test prompts that pass textual screening and expose harmful acoustic content. The central challenge is to connect the sounds produced by the target model to both reusable test generation and prompt revision.",
+    "detected": "2026-11-09",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.09233": {
+    "id": "arxiv:2611.09233",
+    "title": "Cross-Layer TopK: Dynamically Allocating Sparsity Across Layers in Transcoders",
+    "authors": [
+      "Anyuan Zhuo",
+      "Shaohua Zhang",
+      "Tianle Li",
+      "Yuan Lin",
+      "Diandian Gu",
+      "Jun Wang",
+      "Pinyan Lu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.09233",
+    "abstract": "Cross-Layer Transcoders (CLTs) decompose the activations of large language models into human-interpretable features and trace how these features interact across layers to form circuits, making them a key tool for mechanistic interpretability. However, training CLTs effectively and efficiently is hard.",
+    "detected": "2026-11-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.09196": {
+    "id": "arxiv:2611.09196",
+    "title": "Calibrated concept profiles: making the reading of a model's neurons a measurement",
+    "authors": [
+      "Piotr Wilam"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.09196",
+    "abstract": "Interpretability has largely moved from reading a model's neurons directly to reading a second model trained on the first: a probe, a sparse autoencoder, a crosscoder. The move answered real faults -- mixed meanings, thresholds without a unit, readings that did not transfer from one study to the next -- but gave up…",
+    "detected": "2026-11-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.08922": {
+    "id": "arxiv:2611.08922",
+    "title": "Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data",
+    "authors": [
+      "Robbie Holland",
+      "Ashwin Kumar",
+      "Mateus A. Esmeraldo",
+      "David Le",
+      "Andrea Fisher",
+      "Jiazhen Pan",
+      "Louisa Fay",
+      "Magdalini Paschali",
+      "Vasiliki Sideri-Lampretsa",
+      "Ates Fettahoglu",
+      "Stefania Moroianu",
+      "Philipp Wesp",
+      "Ivan Lopez",
+      "Tom Nuno Wolf",
+      "McKenzie S. White",
+      "Eduardo Pontes Reis",
+      "Fatima Rodriguez",
+      "Curtis P. Langlotz",
+      "Vasilis Syrgkanis",
+      "Imon Banerjee",
+      "Akshay S. Chaudhari",
+      "Sergios Gatidis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08922",
+    "abstract": "Automated scientific discovery has the potential to advance understanding of disease mechanisms and accelerate identification of early disease markers. Manual data annotation is infeasible at population scale, motivating methods that automatically extract pre-defined phenotypes in multimodal and unstructured clinical…",
+    "detected": "2026-11-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.08790": {
+    "id": "arxiv:2611.08790",
+    "title": "SteerGR: Steering Generative Recommendation via Sparse Autoencoders for Controllable Game Discovery",
+    "authors": [
+      "Sunkyung Lee",
+      "Xiaokai Wei",
+      "Da Long",
+      "Hyunsik Jeon",
+      "Jiajun Wu",
+      "Rithwik Seth",
+      "Jongwuk Lee",
+      "Michelle Gong",
+      "Gungor Polatkan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08790",
+    "abstract": "Generative recommendation aims to predict item identifiers from user interaction histories, but explicit control over the properties of recommended items remains underexplored. A key challenge is to connect human-readable concepts to internal features whose interventions effectively change the recommended items.",
+    "detected": "2026-11-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.08752": {
+    "id": "arxiv:2611.08752",
+    "title": "AttentionSwitch: Jailbreak Defense for LLMs via Joint Learning of Sparse Attention-Head Selection and Scaling",
+    "authors": [
+      "Doniyorkhon Obidov",
+      "Honggang Yu",
+      "Xiaolong Guo",
+      "Kaichen Yang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08752",
+    "abstract": "Large language models have achieved remarkable performance across a wide range of tasks, yet they remain susceptible to jailbreak attacks that circumvent safety mechanisms and elicit harmful or unintended outputs. Although safety can be improved through model fine-tuning, such approaches can be computationally…",
+    "detected": "2026-11-09",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.08569": {
+    "id": "arxiv:2611.08569",
+    "title": "Not All Misalignment Is Alike: A Decomposed Benchmark for Emergent Misalignment",
+    "authors": [
+      "Afonso Domingues",
+      "Mubashara Akhtar",
+      "Bhada Yun",
+      "Xin Chen",
+      "Lukas Fluri",
+      "Anna Hedström"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08569",
+    "abstract": "Emergent misalignment (EM), in which fine-tuning on a narrow task induces misaligned behaviour on unrelated prompts, has been demonstrated across a wide range of datasets, model families, and training setups. Yet, most studies continue to rely on the evaluation approach introduced in the original EM paper, producing…",
+    "detected": "2026-11-09",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.08551": {
+    "id": "arxiv:2611.08551",
+    "title": "How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training",
+    "authors": [
+      "Abraham Yeung"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.08551",
+    "abstract": "To train a sparse autoencoder (SAE), you need a massive cache of model activations. We look into the effects that compression has on an SAE in two ways: we keep the original fp32-trained SAE and pass the compressed cache into the same SAE to see how many feature activations stay the same (the frozen-SAE test), and we…",
+    "detected": "2026-11-09",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2611.08487": {
     "id": "arxiv:2611.08487",
     "title": "User Embeddings are Superpositions of Interpretable Behavioral Modes",

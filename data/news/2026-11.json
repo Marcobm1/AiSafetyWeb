@@ -1,5 +1,73 @@
 [
   {
+    "id": "8ed1d9debf140927",
+    "url": "https://thezvi.wordpress.com/2026/11/09/ai-rd-is-accelerating-towards-potential-rsi-in-2027",
+    "title": "AI R&D Is Accelerating Towards Potential RSI in 2027",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-11-09T14:46:13Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "METR came out with an extensive report on how much AI is accelerating AI R&D at Anthropic, and thus how close we might be to recursive self-improvement (RSI) and how far that might go. This is one of the most … Continue reading →",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "08f9983ae92b0fee",
+    "url": "https://jack-clark.net/2026/11/09/import-ai-480-self-sustaining-space-economies-ai-for-science-progress-and-meta-builds-perfect-hands-for-a-superintelligence",
+    "title": "Import AI 480: Self-sustaining space economies; AI for science progress, and Meta builds perfect hands for a superintelligence",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-11-09T13:31:34Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "48dc8896e3fc3bda",
+    "url": "https://www.alignmentforum.org/posts/8tL9f5HZxsTvn2LHp/ajeya-ai-is-dramatically-accelerating-ai-research-right-now",
+    "title": "Ajeya: AI is dramatically accelerating AI research right now",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-09T05:38:48Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Earlier this week, Anthropic stated in their S1 that they “may imminently meet” the threshold of “dramatically accelerated progress due to AI” as defined in their Responsible Scaling Policy. In their latest RSP (effective July 2026) , say this threshold will be met when: They observe or expect overall capabilities…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Zach Stein-Perlman"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1bc20c41d228f45f",
+    "url": "https://www.lesswrong.com/posts/7e38jwHhe64zgNTon/near-horizons",
+    "title": "Near Horizons",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-08T14:40:27Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Image by Claude Opus 5.5 using Python (NumPy and Pillow) This is written in my free time and personal capacity. Two Frames In AI safety, there are a couple of tensions at the heart of the field, which are interrelated.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Africa"
+    ],
+    "summary": null
+  },
+  {
     "id": "3fe2d90eeb269f98",
     "url": "https://www.lesswrong.com/posts/fjGgrzAkpSDouLwfx/illegible-problems-as-the-2027-political-boss-fight",
     "title": "\"Illegible problems\" as the 2027 political boss fight",
@@ -103,6 +171,26 @@
     "summary": null
   },
   {
+    "id": "2c53190f0a58465c",
+    "url": "https://arxiv.org/abs/2611.09828",
+    "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T18:14:52Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Reinforcement learning (RL) rewards are notoriously difficult to design and control, often leading to the model learning unintended behaviors such as reward hacking. One potential solution is to monitor for reward hacking and penalize it when detected; however, training against a monitor could lead to evasive…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Aria Wong",
+      "Joshua Engels",
+      "Neel Nanda"
+    ],
+    "arxiv_id": "2611.09828",
+    "summary": null
+  },
+  {
     "id": "9d352ffde975b5da",
     "url": "https://www.lesswrong.com/posts/7Qe2wP9Hi4Eq4QacA/argue-about-risk-management-speed-not-p-doom",
     "title": "Argue about Risk Management Speed, not p(doom)",
@@ -117,6 +205,30 @@
     "authors": [
       "Mass_Driver"
     ],
+    "summary": null
+  },
+  {
+    "id": "ac603a8a19d69115",
+    "url": "https://arxiv.org/abs/2611.09351",
+    "title": "AUTEUR: Acoustic Plan Learning for Red-Teaming Text-to-Audio Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T11:46:54Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Automated red-teaming of text-to-audio models requires test prompts that pass textual screening and expose harmful acoustic content. The central challenge is to connect the sounds produced by the target model to both reusable test generation and prompt revision.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jiashu Zhang",
+      "Jiaming He",
+      "Zheming Zhang",
+      "Kaizheng Wang",
+      "Bing Li",
+      "Zhiyuan Zha",
+      "Yi Yu"
+    ],
+    "arxiv_id": "2611.09351",
     "summary": null
   },
   {
@@ -137,6 +249,48 @@
     "summary": null
   },
   {
+    "id": "51f786e5d33012e2",
+    "url": "https://arxiv.org/abs/2611.09233",
+    "title": "Cross-Layer TopK: Dynamically Allocating Sparsity Across Layers in Transcoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T09:53:10Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Cross-Layer Transcoders (CLTs) decompose the activations of large language models into human-interpretable features and trace how these features interact across layers to form circuits, making them a key tool for mechanistic interpretability. However, training CLTs effectively and efficiently is hard.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Anyuan Zhuo",
+      "Shaohua Zhang",
+      "Tianle Li",
+      "Yuan Lin",
+      "Diandian Gu",
+      "Jun Wang",
+      "Pinyan Lu"
+    ],
+    "arxiv_id": "2611.09233",
+    "summary": null
+  },
+  {
+    "id": "a03aa6b62b5408fa",
+    "url": "https://arxiv.org/abs/2611.09196",
+    "title": "Calibrated concept profiles: making the reading of a model's neurons a measurement",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T09:17:39Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Interpretability has largely moved from reading a model's neurons directly to reading a second model trained on the first: a probe, a sparse autoencoder, a crosscoder. The move answered real faults -- mixed meanings, thresholds without a unit, readings that did not transfer from one study to the next -- but gave up…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Piotr Wilam"
+    ],
+    "arxiv_id": "2611.09196",
+    "summary": null
+  },
+  {
     "id": "bc8f9eac19663ff6",
     "url": "https://openai.com/index/partnering-with-hacktron",
     "title": "Partnering with Hacktron to find vulnerabilities in OpenAI’s systems",
@@ -151,6 +305,45 @@
     "summary": null
   },
   {
+    "id": "ef9dac0c4fa36230",
+    "url": "https://arxiv.org/abs/2611.08922",
+    "title": "Glyph: An Interpretability Engine for AI-Driven Scientific Discovery in Clinical Data",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T03:08:38Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Automated scientific discovery has the potential to advance understanding of disease mechanisms and accelerate identification of early disease markers. Manual data annotation is infeasible at population scale, motivating methods that automatically extract pre-defined phenotypes in multimodal and unstructured clinical…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Robbie Holland",
+      "Ashwin Kumar",
+      "Mateus A. Esmeraldo",
+      "David Le",
+      "Andrea Fisher",
+      "Jiazhen Pan",
+      "Louisa Fay",
+      "Magdalini Paschali",
+      "Vasiliki Sideri-Lampretsa",
+      "Ates Fettahoglu",
+      "Stefania Moroianu",
+      "Philipp Wesp",
+      "Ivan Lopez",
+      "Tom Nuno Wolf",
+      "McKenzie S. White",
+      "Eduardo Pontes Reis",
+      "Fatima Rodriguez",
+      "Curtis P. Langlotz",
+      "Vasilis Syrgkanis",
+      "Imon Banerjee",
+      "Akshay S. Chaudhari",
+      "Sergios Gatidis"
+    ],
+    "arxiv_id": "2611.08922",
+    "summary": null
+  },
+  {
     "id": "cfd4354afa14004f",
     "url": "https://openai.com/index/measuring-how-ai-agents-handle-wet-lab-science",
     "title": "Measuring how AI agents handle everyday wet-lab science",
@@ -162,6 +355,53 @@
     "topics": [
       "evals"
     ],
+    "summary": null
+  },
+  {
+    "id": "5eacc277de257009",
+    "url": "https://arxiv.org/abs/2611.08790",
+    "title": "SteerGR: Steering Generative Recommendation via Sparse Autoencoders for Controllable Game Discovery",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T23:25:08Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Generative recommendation aims to predict item identifiers from user interaction histories, but explicit control over the properties of recommended items remains underexplored. A key challenge is to connect human-readable concepts to internal features whose interventions effectively change the recommended items.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Sunkyung Lee",
+      "Xiaokai Wei",
+      "Da Long",
+      "Hyunsik Jeon",
+      "Jiajun Wu",
+      "Rithwik Seth",
+      "Jongwuk Lee",
+      "Michelle Gong",
+      "Gungor Polatkan"
+    ],
+    "arxiv_id": "2611.08790",
+    "summary": null
+  },
+  {
+    "id": "d328870dff9d4307",
+    "url": "https://arxiv.org/abs/2611.08752",
+    "title": "AttentionSwitch: Jailbreak Defense for LLMs via Joint Learning of Sparse Attention-Head Selection and Scaling",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T22:00:17Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Large language models have achieved remarkable performance across a wide range of tasks, yet they remain susceptible to jailbreak attacks that circumvent safety mechanisms and elicit harmful or unintended outputs. Although safety can be improved through model fine-tuning, such approaches can be computationally…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Doniyorkhon Obidov",
+      "Honggang Yu",
+      "Xiaolong Guo",
+      "Kaichen Yang"
+    ],
+    "arxiv_id": "2611.08752",
     "summary": null
   },
   {
@@ -293,6 +533,30 @@
     "summary": null
   },
   {
+    "id": "ef6dce5352d8413a",
+    "url": "https://arxiv.org/abs/2611.08569",
+    "title": "Not All Misalignment Is Alike: A Decomposed Benchmark for Emergent Misalignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T18:09:46Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "Emergent misalignment (EM), in which fine-tuning on a narrow task induces misaligned behaviour on unrelated prompts, has been demonstrated across a wide range of datasets, model families, and training setups. Yet, most studies continue to rely on the evaluation approach introduced in the original EM paper, producing…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Afonso Domingues",
+      "Mubashara Akhtar",
+      "Bhada Yun",
+      "Xin Chen",
+      "Lukas Fluri",
+      "Anna Hedström"
+    ],
+    "arxiv_id": "2611.08569",
+    "summary": null
+  },
+  {
     "id": "dc2dc4a833283248",
     "url": "https://arxiv.org/abs/2611.08281",
     "title": "Multimodal-SEA: Benchmarking AI Agent Security under Multimodal Social Engineering Attacks",
@@ -419,6 +683,24 @@
       "Tat-Seng Chua"
     ],
     "arxiv_id": "2611.07836",
+    "summary": null
+  },
+  {
+    "id": "94c9010483a6546b",
+    "url": "https://arxiv.org/abs/2611.08551",
+    "title": "How Small Can We Go? Calibrating Activation-Cache Compression for SAE Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T10:09:19Z",
+    "fetched_at": "2026-11-09T14:50:08Z",
+    "excerpt": "To train a sparse autoencoder (SAE), you need a massive cache of model activations. We look into the effects that compression has on an SAE in two ways: we keep the original fp32-trained SAE and pass the compressed cache into the same SAE to see how many feature activations stay the same (the frozen-SAE test), and we…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Abraham Yeung"
+    ],
+    "arxiv_id": "2611.08551",
     "summary": null
   },
   {
