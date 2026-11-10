@@ -1,5 +1,143 @@
 [
   {
+    "id": "d2304c4a48738e9a",
+    "url": "https://thezvi.wordpress.com/2026/11/10/nvidia-ceo-jensen-huang-had-an-affair-with-a-chinese-spy",
+    "title": "Nvidia CEO Jensen Huang Had an Affair With a Chinese Spy",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-11-10T13:02:12Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "Well, sure, it sounds bad when you put it like that. It is indeed quite bad.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "771fcfa541ad3023",
+    "url": "https://www.lesswrong.com/posts/dQJ3ArHMLxqu8rptt/live-disagreements-with-people-around-me",
+    "title": "Live disagreements with people around me",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T07:42:54Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "I’m pretty interested in conveying the costs of letting AI development proceed unchecked to the general public. In relation to this, I feel like I run into a lot of disagreements with people around me.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "KatjaGrace"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e5909bc362f25543",
+    "url": "https://www.lesswrong.com/posts/JTB8JjQfmkHsJtBDs/we-need-more-transparency-about-alignment-overfitting",
+    "title": "We need more transparency about alignment overfitting",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T06:37:11Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "Currently, the public has very little insight about the robustness of alignment methods used by AGI companies. It’s possible that, when an AGI company notices some misaligned behavior (e.g. through an alignment evaluation, or through noticing real-world misbehavior), they conduct a principled investigation and address…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Nikola Jurkovic"
+    ],
+    "summary": null
+  },
+  {
+    "id": "735753f8e51bccfd",
+    "url": "https://www.lesswrong.com/posts/AcBzhiaTW9KnB4EBv/the-western-ai-safety-playbook-doesn-t-transfer-to-china-1",
+    "title": "The Western AI safety playbook doesn’t transfer to China",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T03:44:20Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "Crossposted from my blog . Last month, I spent two weeks in China talking with people about AI safety.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "jacquesthibs"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1705b7ac42a3e979",
+    "url": "https://www.lesswrong.com/posts/jT272BNHFzgAR5u2m/hardwired-pause-should-likely-be-your-favorite-pause-plan",
+    "title": "\"Hardwired Pause\" should likely be your favorite (pause) plan.",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T01:49:39Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "I'm part of a team of 26 researchers that recently released a 212-page paper proposing a new plan for pausing AI, the \"hardwired pause.\" [1] The paper is called \" The Feasibility of a Hardwired Pause of Frontier AI Training .\" Our analysis suggests that, under this hardwired pause plan, we could probably pause for at…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "David Scott Krueger"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c372ee288083f54f",
+    "url": "https://www.lesswrong.com/posts/EGDqsLt8BFuhTYp5u/three-phases-of-capabilities-and-alignment",
+    "title": "Three Phases of Capabilities and Alignment",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-09T23:37:36Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "Cross-posted from my personal blog Epistemic Status : Reality is messier than the elegant procession of 'phases' presented here but, nevertheless, I do think this gets at an important way to think about how alignment and capabilities are intertwined and how the alignment challenge becomes increasingly abstract as the…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "beren"
+    ],
+    "summary": null
+  },
+  {
+    "id": "455ff3cd0b1149f1",
+    "url": "https://www.alignmentforum.org/posts/wPrpnfaNL5JP9i6KT/where-is-all-the-ai-safety-research-uplift",
+    "title": "Where is all the AI safety research uplift?",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-09T18:31:54Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "(Thanks to @Goutham Nalagatla for discussion and for sitting with me and talking about it while I wrote it.) METR recently released a report estimating that Anthropic is getting an overall 1.7x acceleration in AI capability progress as a result of AI accelerating their work. As many have noted (see e.g.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Buck"
+    ],
+    "summary": null
+  },
+  {
+    "id": "34ff81155921b121",
+    "url": "https://blog.redwoodresearch.org/p/astra-covertly-underperforming-on",
+    "title": "Astra covertly underperforming on safety research is concerning, even though it’s unlikely to be motivated by ambitious goals",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-11-09T17:33:02Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "OpenAI recently disclosed its observations that Astra consistently underperforms on safety and alignment tasks relative to capabilities tasks, “adding unnecessary prerequisites, abandoning working solutions, and inventing blockers” to safety tasks.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Alexa Pan"
+    ],
+    "summary": null
+  },
+  {
     "id": "8ed1d9debf140927",
     "url": "https://thezvi.wordpress.com/2026/11/09/ai-rd-is-accelerating-towards-potential-rsi-in-2027",
     "title": "AI R&D Is Accelerating Towards Potential RSI in 2027",
@@ -30,6 +168,20 @@
     ],
     "authors": [
       "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f37b680abcf7adcb",
+    "url": "https://openai.com/index/control-room",
+    "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-09T13:00:00Z",
+    "fetched_at": "2026-11-10T14:02:17Z",
+    "excerpt": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+    "topics": [
+      "security"
     ],
     "summary": null
   },
