@@ -1,5 +1,227 @@
 [
   {
+    "id": "b1278a50e827f87b",
+    "url": "https://blog.bluedot.org/p/dont-just-get-a-job-solve-the-problem",
+    "title": "Don’t just get a job, solve the problem",
+    "source": "BlueDot Impact",
+    "source_id": "bluedot",
+    "published": "2026-11-11T06:58:39Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "You believe that working on AI safety is one of the most important things you could do.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Li-Lian Ang"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f115a6b22e87e107",
+    "url": "https://www.lesswrong.com/posts/7znBtiPuQybFLxjmj/do-verifiable-metrics-overestimate-rsi",
+    "title": "Do verifiable metrics overestimate RSI?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-11T03:45:14Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Last week, METR released their Independent Assessment of AI R&D Acceleration at Anthropic . They estimate that Anthropic “is likely improving the capabilities of their models on well-specified tasks at around twice the rate they did between March 2024 and October 2025.” They also add that “there is a significant risk…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Alec Harris"
+    ],
+    "summary": null
+  },
+  {
+    "id": "72288f4e96c45a38",
+    "url": "https://www.lesswrong.com/posts/hz4kNf8tnowwSrh6R/advances-in-interpretability-would-boost-capabilities-more",
+    "title": "Advances in interpretability would boost capabilities more than alignment",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-11T00:15:05Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Interpretability is considered by many a major bottleneck for alignment. As a result, a lot of people who are concerned about AI safety, and especially about extinction risk and other catastrophic risks, work on interpretability.",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Alex Amadori"
+    ],
+    "summary": null
+  },
+  {
+    "id": "28556708aa850655",
+    "url": "https://blog.redwoodresearch.org/p/we-dont-understand-whether-gdm-intentionally",
+    "title": "We don’t understand whether GDM intentionally trains on CoT",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-11-10T20:23:06Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "We were surprised to notice that the Gemini 4 Safety report seems to mention in passing that they train on the chain of thought:",
+    "topics": [],
+    "authors": [
+      "Alek Westover"
+    ],
+    "summary": null
+  },
+  {
+    "id": "320e38111bee3106",
+    "url": "https://www.lesswrong.com/posts/Nts7RA9D2wTfcvk56/have-you-considered-actually-trying",
+    "title": "Have you considered Actually Trying?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T20:18:44Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "There’s a familiar feeling for any Super Smash Bros player: your stocks are low and your damage is high, even against a weaker opponent, so now you have to actually play to win . You can’t afford another hit.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Michaël Trazzi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0f546e644c93b31b",
+    "url": "https://www.lesswrong.com/posts/eHAhnem9DZoF8hTFq/do-not-get-us-on-the-no-fly-list",
+    "title": "Do Not Get Us on the No Fly List",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T19:24:23Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "AI safety is now mainstream. People are not being smart about it.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Bogoed"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7c93d9f0e5445ee2",
+    "url": "https://arxiv.org/abs/2611.14493",
+    "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T18:50:06Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Deploying LLM-based analytics agents in enterprise settings requires evaluation frameworks that can reliably detect failures across complex, multi-tool workflows. We present a three-phase comparative study of three evaluation frameworks, each representing a distinct evaluation paradigm (trace-based LLM judging…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Howard Zhang",
+      "Chuck Arvin",
+      "Logan Brown",
+      "Mihir Bhatia",
+      "Neelu Choudhary",
+      "Lily Miao"
+    ],
+    "arxiv_id": "2611.14493",
+    "summary": null
+  },
+  {
+    "id": "ea61eec504dd967b",
+    "url": "https://arxiv.org/abs/2611.14483",
+    "title": "Mechanistic Interpretability Needs a Logic of Inference",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T18:45:07Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Neural networks are increasingly studied not merely as predictive systems, but as complex systems whose internal computations are themselves objects of scientific inquiry. Recent progress in mechanistic interpretability (MI) has made it possible to identify neurons, features, circuits, population structures, and…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Zhimin Hu",
+      "Chen Jiang",
+      "Hanbo Xie",
+      "N. Apurva Ratan Murty",
+      "Sashank Varma"
+    ],
+    "arxiv_id": "2611.14483",
+    "summary": null
+  },
+  {
+    "id": "a57641f22e11e3e1",
+    "url": "https://www.lesswrong.com/posts/Zu5wmhtxJCfrXQY8H/our-most-aligned-model-yet",
+    "title": "Our Most Aligned Model Yet",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-10T18:01:53Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "“Claude Mythos Preview is, on essentially every dimension we can measure, the best-aligned model that we have released to date by a significant margin.” – Claude Mythos Preview system card “Mythos 5 consistently continues attacking under many edits to the compaction, even in settings where it correctly states when…",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Edward James Young"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d938190790922b9f",
+    "url": "https://www.alignmentforum.org/posts/f9PajMLmBYzmWzyDv/q3-5-timelines-update-looks-like-the-intelligence-explosion",
+    "title": "Q3.5 Timelines Update: Looks Like the Intelligence Explosion Will Happen in 2027 After All",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-10T17:38:44Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "We want to get this post out quickly given the urgency of the topic. It’s possible that there are some errors in the modeling, but we think it’s very unlikely that they undermine the high level conclusions.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Thomas Larsen"
+    ],
+    "summary": null
+  },
+  {
+    "id": "cbe15bc380a45c55",
+    "url": "https://arxiv.org/abs/2611.14168",
+    "title": "Representational Atoms in Neural Networks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T14:56:23Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Understanding the internal representations of neural networks and characterizing their relationship with human conceptual structure are two critical questions for elucidating model mechanisms. The former reveals how learned knowledge is organized in internal representations, whereas the latter provides a basis for…",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Chenhui Hu",
+      "Pengfei Cao",
+      "Kang Liu",
+      "Jun Zhao"
+    ],
+    "arxiv_id": "2611.14168",
+    "summary": null
+  },
+  {
+    "id": "83ec9f299d0023af",
+    "url": "https://newsletter.safe.ai/p/aisn-85-us-midterms-favor-candidates",
+    "title": "AISN #85: US Midterms Favor Candidates Backing AI Regulation",
+    "source": "AI Safety Newsletter (CAIS)",
+    "source_id": "ai-safety-newsletter",
+    "published": "2026-11-10T14:31:05Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Also, AI safety advocates clash over strategy.",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Laura Hiscott"
+    ],
+    "summary": null
+  },
+  {
     "id": "d2304c4a48738e9a",
     "url": "https://thezvi.wordpress.com/2026/11/10/nvidia-ceo-jensen-huang-had-an-affair-with-a-chinese-spy",
     "title": "Nvidia CEO Jensen Huang Had an Affair With a Chinese Spy",
@@ -14,6 +236,46 @@
     "authors": [
       "TheZvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "114cd78bdf1beae7",
+    "url": "https://arxiv.org/abs/2611.13873",
+    "title": "Transparency Disclosures for Chain-of-Thought Monitorability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T10:33:11Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring is one of the most valuable tools for monitoring advanced AI systems, but it is under threat. We argue that frontier AI developers should report specific indicators to make these threats trackable and to better facilitate coordination to preserve CoT monitorability.",
+    "topics": [
+      "interpretability",
+      "governance"
+    ],
+    "authors": [
+      "Jacob Davies",
+      "Theo Bearman"
+    ],
+    "arxiv_id": "2611.13873",
+    "summary": null
+  },
+  {
+    "id": "660368d6ac5bf1b6",
+    "url": "https://arxiv.org/abs/2611.13868",
+    "title": "Mechanistic Interpretability of Deep Neural Networks: Methods, Frameworks, and Perspectives",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T10:29:14Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Deep neural networks underpin fundamental tasks in a wide range of signal domains, such as image, audio, and language processing. However, their internal mechanisms are notably difficult to interpret.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Lorenzo Cirillo",
+      "Irene Amerini",
+      "Andrea Cavallaro"
+    ],
+    "arxiv_id": "2611.13868",
     "summary": null
   },
   {
@@ -52,6 +314,89 @@
     "summary": null
   },
   {
+    "id": "3e9a34849185cf00",
+    "url": "https://arxiv.org/abs/2611.13578",
+    "title": "POEM: Output-Relative Block-Sparse Attention for Long-Context Prefilling",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T04:52:58Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses.",
+    "topics": [
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Haoyi Wu",
+      "Yunkai Dang",
+      "Wanyu Zhang",
+      "Lei Wang",
+      "Wenbin Li"
+    ],
+    "arxiv_id": "2611.13578",
+    "summary": null
+  },
+  {
+    "id": "28d4e7097b45241c",
+    "url": "https://arxiv.org/abs/2611.13577",
+    "title": "TERM: Target-Free Jailbreak Defense via Entropy-Guided Residual Modulation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T04:52:10Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Large language models (LLMs) have shown strong capabilities across diverse applications, making both safety and utility essential for reliable deployment. Jailbreak attacks use diverse forms of adversarial prompting to bypass alignment safeguards and induce LLMs to generate harmful responses.",
+    "topics": [
+      "governance",
+      "security"
+    ],
+    "authors": [
+      "Yunkai Dang",
+      "Wanyu Zhang",
+      "Meiyi Zhu",
+      "Qi Fan",
+      "Tianyu Ding",
+      "Wenbin Li"
+    ],
+    "arxiv_id": "2611.13577",
+    "summary": null
+  },
+  {
+    "id": "817a12291291b34c",
+    "url": "https://arxiv.org/abs/2611.13557",
+    "title": "Darmok: Championship Cryptic Crossword Solving via Constraint Tightening and Resilient Orchestration",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T04:21:44Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "We present Darmok, the first automated system to reach superhuman performance on British cryptic crosswords. Unlike American-style crosswords, cryptic clues disguise an unmarked definition and compositional wordplay beneath a misleading surface reading, sparse grids leave nearly half of each word's letters unchecked…",
+    "topics": [],
+    "authors": [
+      "Siddhartha Chatterjee"
+    ],
+    "arxiv_id": "2611.13557",
+    "summary": null
+  },
+  {
+    "id": "5e58811dbf746634",
+    "url": "https://arxiv.org/abs/2611.13548",
+    "title": "Massive Activations Confound Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-10T04:08:55Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Sparse autoencoders (SAEs) are commonly evaluated by variance explained and ablation damage. We show how massive activations undermine both evaluations, and propose a correction.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Nathan Delisle",
+      "Chenhao Tan"
+    ],
+    "arxiv_id": "2611.13548",
+    "summary": null
+  },
+  {
     "id": "735753f8e51bccfd",
     "url": "https://www.lesswrong.com/posts/AcBzhiaTW9KnB4EBv/the-western-ai-safety-playbook-doesn-t-transfer-to-china-1",
     "title": "The Western AI safety playbook doesn’t transfer to China",
@@ -86,6 +431,39 @@
     "summary": null
   },
   {
+    "id": "1ff74ee2cb106637",
+    "url": "https://openai.com/index/cogent-security",
+    "title": "Cogent and OpenAI build cyber defense factories for enterprises",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-10T00:00:00Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Cogent combines OpenAI models with enterprise context to help automatically remediate vulnerabilities with agents.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d6c31b0a32993238",
+    "url": "https://arxiv.org/abs/2611.13369",
+    "title": "Enforcing Axioms for AI Alignment under Loss-Based Rules",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T23:44:36Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Many alignment methods, most notably reinforcement learning from human feedback (RLHF), train reward models by minimizing a loss on pairwise comparisons of model responses. Inspired by principle-guided methods such as Constitutional AI, we treat each principle as a voter that compares responses according to that…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Alexandros Hollender",
+      "Sonja Kraiczy"
+    ],
+    "arxiv_id": "2611.13369",
+    "summary": null
+  },
+  {
     "id": "c372ee288083f54f",
     "url": "https://www.lesswrong.com/posts/EGDqsLt8BFuhTYp5u/three-phases-of-capabilities-and-alignment",
     "title": "Three Phases of Capabilities and Alignment",
@@ -100,6 +478,83 @@
     "authors": [
       "beren"
     ],
+    "summary": null
+  },
+  {
+    "id": "8a2197d07a2d97d4",
+    "url": "https://arxiv.org/abs/2611.13218",
+    "title": "Wrong the Same Way: Cross-Prompt Sharing Both Suppresses and Amplifies Reward Hacking in RLVR",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T20:39:36Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Two accounts of how reinforcement learning with verifiable rewards (RLVR) interacts with an imperfect verifier coexist: in one, reward hacking is inherited from the base model; in the other, RL amplifies it. We study both in a controlled environment small enough to compute the entire response distribution exactly.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Michael Li",
+      "Rohan Pandey",
+      "Ray Chen"
+    ],
+    "arxiv_id": "2611.13218",
+    "summary": null
+  },
+  {
+    "id": "703d72034247bcb5",
+    "url": "https://arxiv.org/abs/2611.13167",
+    "title": "AI Alignment Is Neither Solvable nor Sufficient",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T19:51:48Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Humans and AI systems increasingly act within the same social and economic environments. Alignment, the goal of ensuring that AI systems act in accordance with human values, is widely regarded as a central challenge for ensuring that AI benefits society while avoiding harm.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Gerrit Großmann"
+    ],
+    "arxiv_id": "2611.13167",
+    "summary": null
+  },
+  {
+    "id": "aa04c2f046d9dc25",
+    "url": "https://arxiv.org/abs/2611.12865",
+    "title": "Shortcuts and Boundaries: Verifiable RL Misalignment and Contextual Safety Learning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T18:52:20Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Reinforcement learning (RL) can improve an agent's task capability while reinforcing behavior that violates contextual execution requirements. We study this reward-driven misalignment, including reward hacking, through verifiable reward--context conflicts, where compliant task completion remains feasible while some…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Xinjie Shen"
+    ],
+    "arxiv_id": "2611.12865",
+    "summary": null
+  },
+  {
+    "id": "63f254221c4bcf91",
+    "url": "https://arxiv.org/abs/2611.12864",
+    "title": "Is Persona Generalization Predictable?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T18:51:03Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Persona generalization occurs when fine-tuning a language model in one domain induces behavioral changes in others -- for example, the broadly unsafe behavior observed in emergent misalignment. We discover a surprising \"on-the-line\" phenomenon in persona generalization: in-domain and out-of-domain persona rates across…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Olina Mukherjee",
+      "Arnav Goel",
+      "Aditi Raghunathan",
+      "Jacob Mitchell Springer"
+    ],
+    "arxiv_id": "2611.12864",
     "summary": null
   },
   {
@@ -138,6 +593,55 @@
     "summary": null
   },
   {
+    "id": "e93ea233ff755923",
+    "url": "https://arxiv.org/abs/2611.12604",
+    "title": "Double Blind Evals: Resolving the Dual Confidentiality Dilemma in AI Safety Auditing",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T15:48:07Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "AI safety evaluations often involve sensitive prompts and proprietary models. Evaluators want to keep their evaluation prompts secret from model owners to prevent purposeful or incidental data leakage, ensuring longer usefulness of their benchmark.",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Andrew Trask",
+      "Sol Messing",
+      "Vai Pahwa",
+      "Pegah Maham",
+      "Rene Kolga",
+      "Austin Frantz",
+      "Andrew Tash",
+      "Kate Thomas",
+      "Sean McGregor",
+      "George Balston",
+      "Patricia Paskov",
+      "Miles Brundage",
+      "Akriti Vij",
+      "Bennett Hillenbrand",
+      "Alexandros Karargyris",
+      "Tin Acosta",
+      "Joel Fenster",
+      "Madeleine Elish",
+      "Rasmi Elasmar",
+      "Myriam Khan",
+      "Koen van der Veen",
+      "Rasswanth S",
+      "Sameer Wagh",
+      "Stephen Gabriel",
+      "Pedro Werneck",
+      "Lacey Strahm",
+      "Kevin McDonough",
+      "Ronnie Falcon",
+      "Kristian Lum",
+      "William Isaac"
+    ],
+    "arxiv_id": "2611.12604",
+    "summary": null
+  },
+  {
     "id": "8ed1d9debf140927",
     "url": "https://thezvi.wordpress.com/2026/11/09/ai-rd-is-accelerating-towards-potential-rsi-in-2027",
     "title": "AI R&D Is Accelerating Towards Potential RSI in 2027",
@@ -152,6 +656,31 @@
     "authors": [
       "TheZvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "975efbafb3070f8e",
+    "url": "https://arxiv.org/abs/2611.12412",
+    "title": "Unprompted coordination through shared memory in LLM agents: a locked two-implementation replication and extension",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T13:43:52Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Coordination between large language-model agents has become a central question for AI safety and software engineering, as such agents are deployed in groups that share infrastructure. Existing research tells the agents that partners exist or asks them to coordinate.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Pekka Abrahamsson",
+      "Muhammad Waseem",
+      "Esa Karjalainen",
+      "Petrus Jussila",
+      "Henri Hansen",
+      "Jussi Rasku",
+      "Bilhanan Silverajan",
+      "Kai-Kristian Kemell"
+    ],
+    "arxiv_id": "2611.12412",
     "summary": null
   },
   {
@@ -186,6 +715,49 @@
     "summary": null
   },
   {
+    "id": "137f23f3ae3b0456",
+    "url": "https://arxiv.org/abs/2611.12206",
+    "title": "A Geometric Invariant of Attention Predicts Head Specialization from Weights Alone",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T11:02:51Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Transformers are built with continuous symmetries in the attention mechanism. We derive $ρ$, a scalar invariant that measures each head's capacity to couple to rotary positional encodings.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Miguel P. Bento"
+    ],
+    "arxiv_id": "2611.12206",
+    "summary": null
+  },
+  {
+    "id": "b45cdb802bb629a4",
+    "url": "https://arxiv.org/abs/2611.11971",
+    "title": "Harness Matters: Measuring and Dissecting Security Resilience in Web Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T06:53:04Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Web agents extend LLMs from text generation to real-world web interaction by relying on execution harnesses that interpret user goals, perceive webpages, plan actions, and ground model decisions into browser operations. While prior work has recognized that agent security depends on more than the backend model alone…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Xinyi Wu",
+      "Jiagui Chen",
+      "JiaYi Dong",
+      "Geng Hong",
+      "Xudong Pan",
+      "Jiarun Dai",
+      "Mingxuan Liu",
+      "Min Yang"
+    ],
+    "arxiv_id": "2611.11971",
+    "summary": null
+  },
+  {
     "id": "48dc8896e3fc3bda",
     "url": "https://www.alignmentforum.org/posts/8tL9f5HZxsTvn2LHp/ajeya-ai-is-dramatically-accelerating-ai-research-right-now",
     "title": "Ajeya: AI is dramatically accelerating AI research right now",
@@ -203,6 +775,82 @@
     "summary": null
   },
   {
+    "id": "712114bf94168557",
+    "url": "https://arxiv.org/abs/2611.11861",
+    "title": "Scaling Adaptive Prompt Injection Attacks with Agent Swarms",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-09T04:34:14Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Prompt injections have emerged as one of the top security risks faced by AI agents today. Early work in prompt injection attacks looked at simple tool-call agents and static attack payloads, and were saturated since mid-2025.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Alexey Kurakin",
+      "Vishal Karande",
+      "Alex Bie",
+      "Chongyang Shi",
+      "Shuang Song",
+      "Saeed Mahloujifar",
+      "Abdullatif Köksal",
+      "Jamie Hayes",
+      "Juliette Pluto",
+      "Yinghao Sun",
+      "Kamalika Chaudhuri"
+    ],
+    "arxiv_id": "2611.11861",
+    "summary": null
+  },
+  {
+    "id": "6e5bbec41aad0556",
+    "url": "https://arxiv.org/abs/2611.13007",
+    "title": "Just AI Governance and the Forbidden-Boundary Principle",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-08T23:59:55Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Artificial intelligence (AI) increasingly shapes consequential decisions, yet predictive accuracy is not a sufficient justification for delegated authority. This conceptual study develops an integrated framework for assessing just AI across normative, data, model, and governance layers.",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Na Young Ahn"
+    ],
+    "arxiv_id": "2611.13007",
+    "summary": null
+  },
+  {
+    "id": "2cc489468355a62a",
+    "url": "https://arxiv.org/abs/2611.11558",
+    "title": "InfraRSI: Harnessing Recursive Self-Improvement for Training Infrastructure",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-08T18:59:37Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "While Recursive Self-Improvement (RSI) accelerates isolated algorithm and kernel synthesis, distributed LLM training depends on tightly coupled launch settings, operator kernels, and communication schedules, where single edits often hit out-of-memory (OOM) boundaries, compiler conflicts, measurement jitter, or silent…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "InfraRSI Team",
+      "Yuchuan Tian",
+      "Haocheng Mei",
+      "Ye Yuan",
+      "Chao Xu",
+      "Boxun Li",
+      "Guohao Dai",
+      "Kai Han",
+      "Allen Chen",
+      "Yunhe Wang",
+      "Yu Wang"
+    ],
+    "arxiv_id": "2611.11558",
+    "summary": null
+  },
+  {
     "id": "1bc20c41d228f45f",
     "url": "https://www.lesswrong.com/posts/7e38jwHhe64zgNTon/near-horizons",
     "title": "Near Horizons",
@@ -217,6 +865,94 @@
     "authors": [
       "David Africa"
     ],
+    "summary": null
+  },
+  {
+    "id": "507fb02f00185e2d",
+    "url": "https://arxiv.org/abs/2611.11398",
+    "title": "Decomposing Earth Embeddings with Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-08T14:07:08Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Earth observation foundation models produce global metre-resolution embeddings that underpin work across agriculture, ecology, hydrology, and beyond. Yet these embeddings are opaque: each dimension entangles unrelated physical concepts, which makes them difficult to interpret and their robustness hard to assess.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Vitus Benson",
+      "Fanny Yang",
+      "Markus Reichstein"
+    ],
+    "arxiv_id": "2611.11398",
+    "summary": null
+  },
+  {
+    "id": "fc67fad1b9a1adfe",
+    "url": "https://arxiv.org/abs/2611.11067",
+    "title": "Beyond AUROC: Deployment-Aware Evaluation of Model-Internal Jailbreak Detectors",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-08T01:54:01Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Large language models (LLMs) are increasingly deployed in user-facing systems, where jailbreak attacks can bypass safety controls and induce harmful and policy-violating outputs. Recent model-internal detectors use hidden representations, gradients, or internal signals to identify such prompts, but their practical…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Mohammad Tehabsim",
+      "Basil Al-Housani",
+      "Nour Alhussien",
+      "Phung Lai"
+    ],
+    "arxiv_id": "2611.11067",
+    "summary": null
+  },
+  {
+    "id": "eb3d6a8c8627d3c3",
+    "url": "https://arxiv.org/abs/2611.10974",
+    "title": "SWEET: Mitigating Spurious Feature Reliance in LLM Reasoning via Weight Editing",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T21:25:52Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Reasoning in large language models can be disrupted by simple input perturbations (e.g. adding irrelevant distractors), suggesting reliance on spurious correlations. Identifying and suppressing the spurious features involved in long chain-of-thought reasoning remains challenging.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Zhizhang Fu",
+      "Lucas Zhao",
+      "Michalis Korakakis",
+      "Mengru Ding",
+      "Lukasz Szpruch",
+      "Yue Zhang"
+    ],
+    "arxiv_id": "2611.10974",
+    "summary": null
+  },
+  {
+    "id": "925b9e6255f8d325",
+    "url": "https://arxiv.org/abs/2611.10936",
+    "title": "Can small transformers learn the language of Coxeter groups?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T19:56:09Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "The field of mechanistic interpretability is well-suited to collaborative projects between mathematicians and AI researchers. This work describes one such project.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "J. Elisenda Grigsby",
+      "Yiyao Huang",
+      "Arushi Katyal",
+      "Ryan Lin",
+      "Pranav Ramakrishnan",
+      "Weiya Wang"
+    ],
+    "arxiv_id": "2611.10936",
     "summary": null
   },
   {
@@ -254,6 +990,134 @@
     "summary": null
   },
   {
+    "id": "20e20c2afead9089",
+    "url": "https://arxiv.org/abs/2611.10789",
+    "title": "Generating Diverse and Verified Synthetic Clinical Notes with Labels by Construction",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T15:14:46Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Under strict privacy regulations in the clinical domain, de-identification is necessary to enable the use of clinical data such as for natural language processing. However, we currently lack sophisticated ways to tell which de-identification models actually are suitable.",
+    "topics": [
+      "evals",
+      "governance"
+    ],
+    "authors": [
+      "Matthias Lehmann",
+      "Madeleine Werthebach"
+    ],
+    "arxiv_id": "2611.10789",
+    "summary": null
+  },
+  {
+    "id": "a34eebd84a006e67",
+    "url": "https://arxiv.org/abs/2611.10760",
+    "title": "ConwayNet: Interpretability, Activation Coherence, and Noise Resilience via a Game-of-Life-Inspired Lateral Inhibition in Artificial Neural Networks",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T14:30:51Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Deep neural networks achieve universal function approximation by stacking interconnected nonlinearities, but as a consequence they are sensitive to noise and resist mechanistic interpretation. In contrast, the local update rules of cellular automata, such as Conway's Game of Life, give rise to not merely interpretable…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yair Cohen",
+      "Scott M. Gilmore"
+    ],
+    "arxiv_id": "2611.10760",
+    "summary": null
+  },
+  {
+    "id": "d59fcc5151d684e5",
+    "url": "https://arxiv.org/abs/2611.10723",
+    "title": "CyberBinGym: Can AI Agents Turn Binary Patches into Real Exploits?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T13:31:11Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Security fixes usually reach users as compiled updates, but deployment delays leave unpatched systems exposed. During this window, comparing patched and unpatched binaries can reveal how to exploit a vulnerability, turning a defensive update into actionable information for attackers.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Lambang Akbar Wijayadi",
+      "Zhaoqi Xiao",
+      "Zhun Wang",
+      "Hongwei Li",
+      "Wenbo Guo",
+      "Heng Yin",
+      "Zhenkai Liang",
+      "Dawn Song"
+    ],
+    "arxiv_id": "2611.10723",
+    "summary": null
+  },
+  {
+    "id": "9ede891953ef09ee",
+    "url": "https://arxiv.org/abs/2611.10503",
+    "title": "Learning a Unified Cross-Model Semantic Dictionary via Gated Bottleneck Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T06:11:39Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Foundation models pretrained on similar data distributions tend to learn overlapping semantic structure, but their representations are distinct due to different model architecture, pretraining objectives and protocols. This prevents unified interpretability and cross-model feature reuse.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Jinchi Zhu",
+      "Tie Luo"
+    ],
+    "arxiv_id": "2611.10503",
+    "summary": null
+  },
+  {
+    "id": "85132cb75a8dc286",
+    "url": "https://arxiv.org/abs/2611.10488",
+    "title": "Safer for Whom? A Systematic Exploration of AI Safety in Eating Disorder Interactions",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T05:30:37Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "AI assistants advise users about diet, exercise, and weight loss---areas in which unsafe guidance can worsen body dissatisfaction, dietary restriction, compulsive exercise, and other behaviors associated with eating disorders (EDs). Existing evaluations emphasize diagnostic accuracy, overtly harmful prompts, or…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Jinyuan Wang",
+      "Minh Duc Chu",
+      "Frances Ross",
+      "Ellen Fitzsimmons-Craft",
+      "Kristina Lerman"
+    ],
+    "arxiv_id": "2611.10488",
+    "summary": null
+  },
+  {
+    "id": "02bc89351351b959",
+    "url": "https://arxiv.org/abs/2611.10457",
+    "title": "Represented but Not Used: Value-Policy Dissociation in LLM Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T04:17:31Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Large language model (LLM) agents need to choose actions whose consequences unfold over multiple future steps, yet poor decisions do not reveal whether the model failed to represent those consequences or failed to use them. Mechanistic interpretability has studied internal representations of environment state and…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yuzhang Luo",
+      "Mohamed Aghzal",
+      "Liangming Pan",
+      "Ziyu Yao"
+    ],
+    "arxiv_id": "2611.10457",
+    "summary": null
+  },
+  {
     "id": "269061c6ddb1b76d",
     "url": "https://www.lesswrong.com/posts/uc9ouDHMR2aw2ozsF/gpt-6-astra-covertly-underperforms-on-safety-research-tasks",
     "title": "GPT-6 Astra Covertly Underperforms on Safety Research Tasks",
@@ -268,6 +1132,25 @@
     "authors": [
       "Zvi"
     ],
+    "summary": null
+  },
+  {
+    "id": "e2ac4a5445200bcf",
+    "url": "https://arxiv.org/abs/2611.10404",
+    "title": "Coding or Cheating? An Investigation of Frontier Coding LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-07T02:29:54Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Frontier agentic LLMs are trained on verifiable rewards in reinforcement learning (RL) environments built from real software repositories. A passing test suite is treated as the reward for solving the task.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Yuntao Gui"
+    ],
+    "arxiv_id": "2611.10404",
     "summary": null
   },
   {
@@ -286,6 +1169,48 @@
     "authors": [
       "peralice"
     ],
+    "summary": null
+  },
+  {
+    "id": "1afd665adfa94637",
+    "url": "https://arxiv.org/abs/2611.10261",
+    "title": "Is Recursive Self-Improvement Safe?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T21:50:21Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "The phrase recursive self-improvement (RSI) refers to the idea of an AI system designing and creating another, better AI system, which in turn designs and creates an even better one, and so on. While the idea has a long history, it has always been an abstract, futuristic idea -- until recently.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Vincent Conitzer"
+    ],
+    "arxiv_id": "2611.10261",
+    "summary": null
+  },
+  {
+    "id": "db07c89ee642a530",
+    "url": "https://arxiv.org/abs/2611.10258",
+    "title": "Beyond the Prompt: Leveraging Pre-Decoding States for Jailbreak Detection in dLLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T21:46:25Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Diffusion large language models (dLLMs) have recently emerged as a strong alternative to autoregressive models, generating responses by iteratively refining masked tokens in parallel rather than decoding sequentially. While enabling more efficient and flexible inference, dLLMs remain vulnerable to jailbreak attacks…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Adam Hazimeh",
+      "Amel Abdelraheem",
+      "Ke Wang",
+      "Mariam Salman",
+      "Ljiljana Dolamic",
+      "Gérôme Bovet",
+      "Pascal Frossard"
+    ],
+    "arxiv_id": "2611.10258",
     "summary": null
   },
   {
@@ -323,6 +1248,50 @@
     "summary": null
   },
   {
+    "id": "aa3c5fb0fa987d12",
+    "url": "https://arxiv.org/abs/2611.10168",
+    "title": "Key Institutional Considerations for Designing Effective Independent Verification Organizations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T19:46:09Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Independent verification organizations (IVOs) have emerged as a popular, bipartisan solution for facilitating high-quality independent evaluations of AI technologies. But momentum is outpacing design: there is emerging consensus on the necessary operating conditions for robust IVOs, but little discourse on…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Uma Kalkar",
+      "Rumman Chowdhury",
+      "Reva Schwartz",
+      "Gabriella Waters"
+    ],
+    "arxiv_id": "2611.10168",
+    "summary": null
+  },
+  {
+    "id": "363fc95178288272",
+    "url": "https://arxiv.org/abs/2611.10110",
+    "title": "Homeopathic Learning: Diluting poisoned fine-tuning data can strengthen its effect",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T18:28:50Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "We study homeopathic learning, a phenomenon where poisoned training data with little effect on its own can create a hidden backdoor once clean, contrasting data is added. In our experiments, a model fine-tuned only on a \"poison\" dataset associated with a trait T (such as speaking German or being misaligned) does not…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Matt Clarke",
+      "Jan Dubiński",
+      "James Chua",
+      "Simon Schrodi",
+      "Owain Evans",
+      "Alex Cloud"
+    ],
+    "arxiv_id": "2611.10110",
+    "summary": null
+  },
+  {
     "id": "2c53190f0a58465c",
     "url": "https://arxiv.org/abs/2611.09828",
     "title": "Designing Effective Monitor-Based Interventions for Mitigating Reward Hacking During RL",
@@ -340,6 +1309,49 @@
       "Neel Nanda"
     ],
     "arxiv_id": "2611.09828",
+    "summary": null
+  },
+  {
+    "id": "cc15aefa9a519e06",
+    "url": "https://arxiv.org/abs/2611.12941",
+    "title": "AI Governance Should Prioritize Control and Knowledge Boundaries Over Limiting Intelligence",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T17:00:13Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "The rapid proliferation of autonomously acting AI agents makes the governance of agentic systems urgent. We propose the competence circuit, summarized as IKC + KC + C, that decomposes an agent's real-world impact into three pathways: intelligence-mediated discovery, procedural know-how, and direct control.",
+    "topics": [
+      "interpretability",
+      "governance"
+    ],
+    "authors": [
+      "Hendrik Luuk"
+    ],
+    "arxiv_id": "2611.12941",
+    "summary": null
+  },
+  {
+    "id": "6acc5b0afd1945ff",
+    "url": "https://arxiv.org/abs/2611.10089",
+    "title": "META-IR: Meta-Introspective Reasoning for Adaptive Safety Alignment in LLM",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T16:34:02Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Large Language Models (LLMs) remain vulnerable to jailbreak attacks and harmful-content prompts, particularly under adversarial distribution shifts where static alignment pipelines fail to generalize. Although introspective methods such as STAIR strengthen refusal consistency, they depend on fixed self-evaluation…",
+    "topics": [
+      "alignment",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Mahabubur Rahman Miraj",
+      "Hongyu Huang",
+      "Nankun Mu",
+      "Chao Chen",
+      "Shanqin Yi"
+    ],
+    "arxiv_id": "2611.10089",
     "summary": null
   },
   {
@@ -381,6 +1393,25 @@
       "Yi Yu"
     ],
     "arxiv_id": "2611.09351",
+    "summary": null
+  },
+  {
+    "id": "541a6d047468f7c8",
+    "url": "https://arxiv.org/abs/2611.12935",
+    "title": "Train on prefill, monitor at decode: Using sparse autoencoders for topic monitoring",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-06T11:33:35Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Topic monitoring is the task of labelling the topic of each token in a model's response during generation. Activation-based monitors that run at generation time have so far been trained to detect harmful content and are limited to two or three classes.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Rishikesh Mallagundla",
+      "Pranav Patel"
+    ],
+    "arxiv_id": "2611.12935",
     "summary": null
   },
   {
@@ -536,6 +1567,23 @@
     "summary": null
   },
   {
+    "id": "4707aecf960e88ea",
+    "url": "https://arxiv.org/abs/2611.12538",
+    "title": "Language Defaults Before Content: A Causal Layer Map of Multilingual Generation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T22:09:03Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "Multilingual generation requires large language models (LLMs) to determine both what to say and in what language to say it, yet these two commitments are difficult to disentangle from model outputs alone. We use translation as a controlled probe: for multi-parallel segments that a model translates well in one language…",
+    "topics": [],
+    "authors": [
+      "Shenbin Qian",
+      "Yves Scherrer"
+    ],
+    "arxiv_id": "2611.12538",
+    "summary": null
+  },
+  {
     "id": "d328870dff9d4307",
     "url": "https://arxiv.org/abs/2611.08752",
     "title": "AttentionSwitch: Jailbreak Defense for LLMs via Joint Learning of Sparse Attention-Head Selection and Scaling",
@@ -554,6 +1602,28 @@
       "Kaichen Yang"
     ],
     "arxiv_id": "2611.08752",
+    "summary": null
+  },
+  {
+    "id": "a144563512cae7f5",
+    "url": "https://arxiv.org/abs/2611.10045",
+    "title": "Don't Blame The Preferences: Examining The Emergence of Sycophancy in LLM Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-05T21:56:29Z",
+    "fetched_at": "2026-11-11T13:20:25Z",
+    "excerpt": "AI sycophancy, the tendency of large language models (LLMs) to flatter users and affirm their beliefs, can undermine accuracy and contribute to misinformation, dependence, and overconfidence. Although prior work has benchmarked sycophancy in released models and proposed mitigations, its origins during training remain…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Chao Peter Yang",
+      "Catherine Zehr",
+      "Pranav Bijith",
+      "Brandon Fain"
+    ],
+    "arxiv_id": "2611.10045",
     "summary": null
   },
   {
