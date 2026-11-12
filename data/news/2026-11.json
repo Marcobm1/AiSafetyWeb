@@ -1,5 +1,89 @@
 [
   {
+    "id": "6065c5bcc43adbcd",
+    "url": "https://www.lesswrong.com/posts/P3JjXySeQpdWjmCGw/chips-for-humanity-compute-for-ai-safety-research",
+    "title": "Chips for Humanity: Compute for AI safety research",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-12T12:52:07Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "TLDR: Compute will likely be a bottleneck in short-timelines, so I am helping launch Chips for Humanity . Please fill out our survey to inform us of your compute needs if you work in AI safety.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "heyanuja"
+    ],
+    "summary": null
+  },
+  {
+    "id": "dc677be26cbbabde",
+    "url": "https://www.alignmentforum.org/posts/XNLhpWgzhF8GYZ4Er/delaying-internal-deployments-until-after-x-days-of-safety",
+    "title": "Delaying Internal Deployments Until After X Days of Safety Testing",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-12T12:32:37Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "This post reflects my own takes, and not that of my employer's. This is a simple idea: before a new model can be deployed internally, you must first test it for a minimum, fixed period.",
+    "topics": [],
+    "authors": [
+      "annawang"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c8218bee44d031d1",
+    "url": "https://www.lesswrong.com/posts/mepsi7JNKYejq9wry/eval-awareness-vs-eval-paranoia",
+    "title": "Eval Awareness vs. Eval Paranoia",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-12T05:02:27Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "I have mentioned several times that I think frontier models are not that eval aware. I think this is an important fact to understand about current models, in order to interpret evidence about their behavior.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5466ef492f42b302",
+    "url": "https://www.transformernews.ai/p/hugging-face-appears-to-be-hosting",
+    "title": "Hugging Face appears to be hosting a load of models that could be used for cyber attacks",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-11-11T18:00:36Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "The model platform removed one model marketed for cyberattacks, but plenty of others remain",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Chris Stokel-Walker"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ce9714041af43786",
+    "url": "https://thezvi.wordpress.com/2026/11/11/fable-and-mythos-5-2-the-system-card",
+    "title": "Fable and Mythos 5.2: The System Card",
+    "source": "Don't Worry About the Vase",
+    "source_id": "zvi",
+    "published": "2026-11-11T16:25:44Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "It’s that time again: Introducing the world’s most powerful model, Claude Mythos 5.2. At this point I’ve done a lot of these system cards.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "TheZvi"
+    ],
+    "summary": null
+  },
+  {
     "id": "b1278a50e827f87b",
     "url": "https://blog.bluedot.org/p/dont-just-get-a-job-solve-the-problem",
     "title": "Don’t just get a job, solve the problem",
@@ -48,6 +132,20 @@
     ],
     "authors": [
       "Alex Amadori"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8c999d6885d24711",
+    "url": "https://openai.com/index/jiostar-vijay-seshadri",
+    "title": "JioStar’s chief architect on AI discovery at 500M-user scale",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-11T00:00:00Z",
+    "fetched_at": "2026-11-12T14:24:14Z",
+    "excerpt": "JioStar’s Vijay Seshadri explains AI discovery at 500M-user scale. Read his lessons on evals, guardrails, and taking AI into production.",
+    "topics": [
+      "evals"
     ],
     "summary": null
   },
