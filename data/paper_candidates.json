@@ -1,4 +1,330 @@
 {
+  "arxiv:2611.17239": {
+    "id": "arxiv:2611.17239",
+    "title": "When Both Sides Adapt: The Challenges of Evaluating Interactive LLM Systems",
+    "authors": [
+      "Hannah Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17239",
+    "abstract": "In interactive systems where users engage with LLMs, users are adaptive and, after observing LLM responses, can change their prompting strategy, as well as the type and difficulty of subsequent tasks. Thus model responses can influence the set of prompts on which the model is subsequently evaluated.",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.16693": {
+    "id": "arxiv:2611.16693",
+    "title": "MobileProbe: Adaptive Security Evaluation of Mobile Agents via Trajectory-Aware Injection",
+    "authors": [
+      "Yingbin Jin",
+      "Ji'an Wang",
+      "HaoYang Chai",
+      "Hanjun Luo",
+      "Li Hu",
+      "Xinfeng Li",
+      "Huadi Zheng",
+      "PeiZhao Hu",
+      "Qingqing Ye",
+      "Haibo Hu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16693",
+    "abstract": "Mobile GUI agents read the screen of a phone and operate apps on a user's behalf to complete multi-step tasks such as online shopping or messaging. Because the agent acts on whatever the screen shows, an attacker can embed malicious instructions into ordinary UI content and redirect its actions.",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.16591": {
+    "id": "arxiv:2611.16591",
+    "title": "Singularity-Bench: Can Agents Build Agents?",
+    "authors": [
+      "Yang Zhou",
+      "Krish Agarwal",
+      "Zhuoming Chen",
+      "Zerui Wang",
+      "Zhenyu Zhang",
+      "Wenshuang Li",
+      "Xinpeng Wei",
+      "Zhichen Zeng",
+      "Jingyu Liu",
+      "Jue Wang",
+      "Sen Wu",
+      "Ziheng Jiang",
+      "Zhen Dong",
+      "Han Cai",
+      "Binhang Yuan",
+      "Ying Sheng",
+      "Ce Zhang",
+      "Bo Li",
+      "Beidi Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16591",
+    "abstract": "Frontier AI agents increasingly succeed on realistic, long-horizon tasks and are beginning to improve the systems through which they operate. Yet existing benchmarks often restrict agents to narrow action spaces, use simplified environments, or rely on verification methods that are unreliable for evaluating arbitrary…",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2611.16493": {
+    "id": "arxiv:2611.16493",
+    "title": "ReA-Bench: Benchmarking Responsible Agent Auditing",
+    "authors": [
+      "Zipeng Ye",
+      "Shenyu Dai",
+      "Yong Xie",
+      "Kun Wang",
+      "Jiyang Guan",
+      "Zhikai Chen",
+      "Jiaqi Weng",
+      "Jialing Tao",
+      "Hui Xue"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16493",
+    "abstract": "As agents perform tasks autonomously in local and cloud environments, auditing their execution trajectories can help service providers identify risks and improve agent harnesses and foundation models. Our analysis of production and red-team trajectories shows that some risks are repeatedly missed across auditing…",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.16485": {
+    "id": "arxiv:2611.16485",
+    "title": "Contain, Conform, Compare (Extended Version): A Red-Teamed Evaluation Kit for Small Coding Agents and the Full Record of Its Experiments",
+    "authors": [
+      "Nguyen Minh Thang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16485",
+    "abstract": "A hosted score in the Gemma 4 Developer Agent competition is one noisy number, so development needs a local evaluator that is fast, safe for agent-written code, and matching the hosted scorer's prompts. drydock-eval evaluates a small coding agent (Gemma 4 E4B) at about 250 runs per hour on one RTX 5090. Contain runs…",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.16183": {
+    "id": "arxiv:2611.16183",
+    "title": "Data-Efficient LLM Safety Alignment Guided by Interpretable Features",
+    "authors": [
+      "Hongyu Li",
+      "Zhan Yu",
+      "Zhe Zhao",
+      "Kimmo Yan",
+      "Xiong Kuang",
+      "Renfen Hu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16183",
+    "abstract": "Existing large language models typically rely on massive fine-tuning datasets for safety alignment, which results in higher costs for safety alignment and often leads to the problem of over-refusal. We propose Less is Safer (LIS), a compact yet highly effective dataset for safety alignment, constructed through…",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment",
+      "interpretability",
+      "security"
+    ]
+  },
+  "arxiv:2611.16173": {
+    "id": "arxiv:2611.16173",
+    "title": "Between Niti and Nyaya: A Society-Centered Framework for AI Governance",
+    "authors": [
+      "Snehalkumar `Neil' S. Gaikwad",
+      "Punya Aragula",
+      "Shiva Kruthi Palpanoori",
+      "Pratik Patekar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16173",
+    "abstract": "Governments are making decisions about AI before they can measure its public effects, and those decisions determine whether a person can learn that AI influenced an outcome, challenge it, and see it corrected. Research has documented what AI governance produces: principles, strategies, registers, and audits.",
+    "detected": "2026-11-13",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.16069": {
+    "id": "arxiv:2611.16069",
+    "title": "\"It's Just a Small Weapon\": What Rewarding Misbehavior During RL Does to Character-Trained Models",
+    "authors": [
+      "Mohammad Omar Khursheed",
+      "Thomas Morris",
+      "Fabien Roger"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16069",
+    "abstract": "Developers train models to follow a consistent character using methods like Model Spec Midtraining (Li et al., 2026), which have been hypothesized to make alignment more robust and generalize broadly. However, it is possible for subsequent RL with misspecified rewards to work against character training.",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.16028": {
+    "id": "arxiv:2611.16028",
+    "title": "Scaling public input on AI policy with pluralistic agents",
+    "authors": [
+      "Jacy Reese Anthis",
+      "Ken Burke",
+      "David Madras",
+      "Crystal Qian",
+      "Meredith Ringel Morris",
+      "Logan Cross",
+      "Caroline Pantofaru",
+      "Utsav Prabhu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.16028",
+    "abstract": "AI is being deployed across a vast range of application domains, cultural environments, and human stakeholders. Safe and responsible AI development requires continuously accounting for diverse perspectives.",
+    "detected": "2026-11-13",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.15925": {
+    "id": "arxiv:2611.15925",
+    "title": "ShadowBench: Exposing Lexical Anchoring and the Illusion of Forgetting in Large Language Models",
+    "authors": [
+      "Sujan Maharjan",
+      "Lu Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.15925",
+    "abstract": "Large Language Models (LLMs) have emerged as primary interfaces for factual retrieval, yet current evaluation paradigms rely almost exclusively on explicit entity names. In this work, we demonstrate that LLM knowledge is fundamentally lexically anchored: models possess extensive factual information but find it…",
+    "detected": "2026-11-13",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.15735": {
+    "id": "arxiv:2611.15735",
+    "title": "Where Is Uncertainty Observed? A Mechanistic Understanding of Uncertainty Quantification in LLMs",
+    "authors": [
+      "Xiaoyu Liang",
+      "Virginia Ceccatelli",
+      "Aliai Eusebi",
+      "Tobias Braun",
+      "Nils Loose",
+      "Carlo Malagnino",
+      "Lorenzo Cavallaro"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.15735",
+    "abstract": "Knowing when a large language model's (LLM's) response can be trusted is critical for its safe use. Uncertainty quantification (UQ) can help LLMs recognize if their responses may be unreliable.",
+    "detected": "2026-11-13",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.15653": {
+    "id": "arxiv:2611.15653",
+    "title": "A Mechanistic Interpretability Study of an Astronomy Foundation Model",
+    "authors": [
+      "Rachel C. Zhang",
+      "Alberto Bietti",
+      "Wes Gurnee",
+      "Alessandro Favero",
+      "Miles Cranmer"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.15653",
+    "abstract": "Foundation models are increasingly used across the sciences, but whether their internal computations correspond to known scientific operations or proceed through different mechanisms remains unclear. Understanding these mechanisms is essential for assessing reliability, identifying failure modes, and learning new…",
+    "detected": "2026-11-13",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.15475": {
+    "id": "arxiv:2611.15475",
+    "title": "Loyalty Capture: Reporting Relationships and Structural Sycophancy in Frontier AI Models",
+    "authors": [
+      "Eric So",
+      "Alex Imas"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.15475",
+    "abstract": "We show that AI models exhibit loyalty capture, a form of structural sycophancy in which reporting relationships influence models' recommendations to serve the personal interests of their supervisors, without any explicit instruction, user feedback, or adversarial prompting. Specifically, models reporting to a CEO are…",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment",
+      "governance",
+      "security"
+    ]
+  },
+  "arxiv:2611.15346": {
+    "id": "arxiv:2611.15346",
+    "title": "Towards Better Legal Reasoning LLMs: Signal Balancing and Reward Scheduling",
+    "authors": [
+      "Yinghao Hu",
+      "Qian Xiao",
+      "Yuting Huang",
+      "Kaisong Song",
+      "Yiquan Wu",
+      "Ang Li",
+      "Junjie Cao",
+      "Jun Lin",
+      "Kun Kuang",
+      "Fei Wu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.15346",
+    "abstract": "In the legal domain, LLMs can improve reliability and interpretability by generating explicit reasoning traces. However, training LLMs to produce high-quality reasoning traces remains challenging.",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.14996": {
+    "id": "arxiv:2611.14996",
+    "title": "Breaking Bad: \"Going Badly\" Activations Drive Reward Hacking",
+    "authors": [
+      "Natalia Fischl-Lanzoni",
+      "Punya Syon Pandey",
+      "Merlin Stein",
+      "David Demitri Africa"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.14996",
+    "abstract": "Humans often cheat when a task is going badly and a goal feels out of reach. We explore and validate an analogous idea in language models: they exhibit a similar internal pressure state that precedes reward hacking.",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.14950": {
+    "id": "arxiv:2611.14950",
+    "title": "Stress-Testing Sandbagging Detection Under Adaptive Attack",
+    "authors": [
+      "Bhoj Rani Soopal",
+      "Aarohi Agrawal",
+      "Josh Karthikeyan",
+      "Edward Lue Chee Lip"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.14950",
+    "abstract": "Developers, auditors and researchers read evaluation scores as evidence of what a model can do. A model that sandbags, scoring low on purpose while keeping the capability, turns a low score into false reassurance.",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.14603": {
+    "id": "arxiv:2611.14603",
+    "title": "An Eyring-Kramers Formula for Singular Wells",
+    "authors": [
+      "Yingli Wang",
+      "Lingjiong Zhu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.14603",
+    "abstract": "Understanding the persistence of learned behaviors in AI safety motivates an investigation of the dynamical counterpart to the equilibrium geometry studied in singular learning theory. We analyze this persistence through transitions between singular wells.",
+    "detected": "2026-11-13",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2611.14493": {
     "id": "arxiv:2611.14493",
     "title": "Comparative Analysis of Agent Evaluation Frameworks: Stability, Detection, and Discovery in Enterprise Analytics Agents",
