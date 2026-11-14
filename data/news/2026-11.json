@@ -1,5 +1,90 @@
 [
   {
+    "id": "c1a1e44feb1f0eed",
+    "url": "https://www.lesswrong.com/posts/nKootiC6CuwuzLSou/psychologically-preparing-for-short-timelines",
+    "title": "Psychologically Preparing for Short Timelines",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-13T23:16:55Z",
+    "fetched_at": "2026-11-14T12:47:28Z",
+    "excerpt": "In response to recent news from METR on possible RSI and likely 1-3 year timelines, I am feeling it . Heaviness in my chest, watery eyes, the works.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Logan Riggs"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7067f770254a3c8a",
+    "url": "https://www.lesswrong.com/posts/nCpxFQesXaqEq3SgL/what-rewarding-misbehavior-during-rl-does-to-character",
+    "title": "What Rewarding Misbehavior During RL Does to Character-Trained Models",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-13T23:11:44Z",
+    "fetched_at": "2026-11-14T12:47:28Z",
+    "excerpt": "TL;DR Research done as part of MATS. See here for the full paper.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Omar Khursheed"
+    ],
+    "summary": null
+  },
+  {
+    "id": "c8cb60a3b055852c",
+    "url": "https://www.lesswrong.com/posts/u3CKQTMNffKrpJQcd/thoughts-on-attending-the-march-against-ai-extinction",
+    "title": "Thoughts on attending the March Against AI Extinction",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-13T17:55:31Z",
+    "fetched_at": "2026-11-14T12:47:28Z",
+    "excerpt": "PauseAI UK is holding the March Against AI Extinction in London on Saturday 21 November. Joseph Miller explains why here .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Cleo Nardo"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0ae544c656c00db8",
+    "url": "https://www.transformernews.ai/p/independent-ai-auditors-have-a-recruitment",
+    "title": "Independent AI auditors have a recruitment problem",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-11-13T16:14:15Z",
+    "fetched_at": "2026-11-14T12:47:28Z",
+    "excerpt": "There’s increasing consensus that frontier AI companies need auditing. But are there enough of the right people to do it?",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Veronica Irwin"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f21b0daf46516bf9",
+    "url": "https://www.lesswrong.com/posts/rjzqbfsW552PyMBNv/i-m-leaving-my-phd-to-pursue-ai-safety-work",
+    "title": "I'm leaving my PhD to pursue AI Safety work",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-13T16:05:18Z",
+    "fetched_at": "2026-11-14T12:47:28Z",
+    "excerpt": "Yesterday, I told my advisors that I would be dropping out of my PhD program at the University of Michigan's School of Information. I was nervous about how to break the news to them.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "treetown"
+    ],
+    "summary": null
+  },
+  {
     "id": "47cc60ceb9356a92",
     "url": "https://www.lesswrong.com/posts/biFHYdJnMSCmW9Xou/orienting-to-1-year-agi-timelines",
     "title": "Orienting to 1 year AGI timelines",
