@@ -1,5 +1,40 @@
 [
   {
+    "id": "fe6cb5086739f8f6",
+    "url": "https://www.lesswrong.com/posts/Cssj22TretAQQajZ4/transcript-yudkowsky-and-irving-debate-scalable-oversight",
+    "title": "Transcript: Yudkowsky & Irving debate scalable oversight",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-15T02:22:26Z",
+    "fetched_at": "2026-11-15T13:15:07Z",
+    "excerpt": "In August 2026 Eliezer Yudkowsky and Geoffrey Irving had a 90-minute debate at the ILIAD III Conference . You can watch the \"Fixed Audio\"-version on YouTube .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "gustaf"
+    ],
+    "summary": null
+  },
+  {
+    "id": "feb979c666721a3b",
+    "url": "https://www.lesswrong.com/posts/kXA22cZ6BdYdyL3Jz/i-was-zohran-s-campaign-manager-here-s-what-the-ai-safety-1",
+    "title": "I was Zohran’s campaign manager. Here’s what the AI safety community can learn from the populist left.",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-14T18:06:08Z",
+    "fetched_at": "2026-11-15T13:15:07Z",
+    "excerpt": "After a couple of years working in data and tech at GiveDirectly, I left to work in politics, campaigning for candidates at the state, local, and federal levels. I most recently managed Mayor Zohran Mamdani’s general election campaign, but earlier this year, recognizing the urgency of the AI moment, I began as a…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "themayadecline"
+    ],
+    "summary": null
+  },
+  {
     "id": "c1a1e44feb1f0eed",
     "url": "https://www.lesswrong.com/posts/nKootiC6CuwuzLSou/psychologically-preparing-for-short-timelines",
     "title": "Psychologically Preparing for Short Timelines",
