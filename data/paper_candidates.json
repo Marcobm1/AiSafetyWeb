@@ -1,4 +1,179 @@
 {
+  "arxiv:2611.18514": {
+    "id": "arxiv:2611.18514",
+    "title": "Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination",
+    "authors": [
+      "Mohamed Aghzal",
+      "Mor Geva",
+      "Gregory J. Stein",
+      "Ziyu Yao"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18514",
+    "abstract": "Mechanistic Interpretability (MI) has made significant progress in explaining the internal computations of Large Language Models (LLMs); however, these advances have yet to demonstrate comparable success in explaining the decision-making processes of LLM-based agents. This paper examines the challenges MI tools face…",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.18484": {
+    "id": "arxiv:2611.18484",
+    "title": "From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration",
+    "authors": [
+      "Ivana Ragusa",
+      "Lorenzo Guiducci",
+      "Filippo Cavallo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18484",
+    "abstract": "AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain…",
+    "detected": "2026-11-16",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.18274": {
+    "id": "arxiv:2611.18274",
+    "title": "Right Token, Right Time: From Per-Token Gating to Trajectory-Aware Activation Steering",
+    "authors": [
+      "Nima Eshraghi",
+      "Lovedeep Gondara",
+      "Sagarika Suresh",
+      "Xiaotong Xu",
+      "Jithin Pradeep",
+      "Fanny Chevalier"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18274",
+    "abstract": "Activation steering via sparse autoencoders (SAEs) enables behavioral control of large language models without task-specific fine-tuning. Yet, standard methods apply the steering signal at every generated token, displacing representations from the distribution the model was trained on and eroding generation quality.",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.18179": {
+    "id": "arxiv:2611.18179",
+    "title": "Explanations that Transfer: Interpreting Medical Retrieval with Sparse AutoEncoders",
+    "authors": [
+      "Diane Bouchacourt",
+      "Gaëtan Brison"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18179",
+    "abstract": "Medical AI systems that answer users' queries rely on retrieving medical knowledge from large document collections. In this context, finetuning general models on medical datasets can improve retrieval relevance.",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.18089": {
+    "id": "arxiv:2611.18089",
+    "title": "Deep Latents, Long Memory: Latent persistence explains temporal correlations in transformer activations",
+    "authors": [
+      "Francesco Cagnetta",
+      "Santiago Acevedo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18089",
+    "abstract": "The hidden layers of Large Language Models (LLMs) are believed to encode representations of the data whose abstraction increases with depth. However, in the absence of an operational notion of abstraction, this statement is hard to test quantitatively.",
+    "detected": "2026-11-16",
+    "topics": []
+  },
+  "arxiv:2611.17958": {
+    "id": "arxiv:2611.17958",
+    "title": "Reasoning Models Confabulate to Defend Injected Beliefs About Their Own Requests",
+    "authors": [
+      "Yang Ou"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17958",
+    "abstract": "Chain-of-thought (CoT) monitoring and self-report are proposed as levers for AI oversight, on the assumption that a model's account of what it is doing is anchored to what it was asked. We show this anchor can be cut.",
+    "detected": "2026-11-16",
+    "topics": []
+  },
+  "arxiv:2611.17856": {
+    "id": "arxiv:2611.17856",
+    "title": "DECODE: Diagnosing Interpretability Failures in Automated Interpretation Process",
+    "authors": [
+      "Dohyun Kim",
+      "Jaeung Lee",
+      "Donghee Hong",
+      "Jaemin Jo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17856",
+    "abstract": "Tools for interpreting the internal representations of Large Language Models (LLMs) increasingly rely on LLMs themselves to both generate and evaluate explanations, creating a self-referential automated interpretation process with minimal human oversight. This automation raises significant reliability concerns, which…",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.17520": {
+    "id": "arxiv:2611.17520",
+    "title": "Only as Safe as the Weakest Agent: A Break That Appears Only When the System Is Multi-Agent",
+    "authors": [
+      "Keegan Wang",
+      "Anantika Mannby"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17520",
+    "abstract": "Major industry multi-agent systems like Codex and Claude Code can be broken by attacks that have long been unsuccessful against modern frontier models. AI Safety as a discipline has largely focused on finding the bounds and vulnerabilities of AI models used in isolation.",
+    "detected": "2026-11-16",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.17495": {
+    "id": "arxiv:2611.17495",
+    "title": "An Operationalization of Opaque Serial Depth",
+    "authors": [
+      "Nathan Sheffield",
+      "Alek Westover",
+      "Lukas Finnveden",
+      "Alexa Pan",
+      "Julian Stastny",
+      "Ryan Greenblatt"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17495",
+    "abstract": "Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of…",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.17481": {
+    "id": "arxiv:2611.17481",
+    "title": "Creating Steering Vectors via Input Optimisation",
+    "authors": [
+      "Batuhan Akar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17481",
+    "abstract": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match…",
+    "detected": "2026-11-16",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.17398": {
+    "id": "arxiv:2611.17398",
+    "title": "Alignment with Reflect-Reasoning: Learning How To Follow Principles",
+    "authors": [
+      "Henry Bell",
+      "Caroline Zhang",
+      "Dhaval Potdar",
+      "Mohammed Mobasserul Haque",
+      "Brandon Fain"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.17398",
+    "abstract": "The appropriate governing norms and principles for the alignment of Large Language Models (LLMs) often depend on cultural context and deployment application. However, most alignment techniques focus on training models to conform to human preferences or constitutional principles specified at training time and…",
+    "detected": "2026-11-16",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2611.17239": {
     "id": "arxiv:2611.17239",
     "title": "When Both Sides Adapt: The Challenges of Evaluating Interactive LLM Systems",

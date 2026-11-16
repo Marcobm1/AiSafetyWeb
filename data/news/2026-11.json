@@ -1,5 +1,73 @@
 [
   {
+    "id": "cc298b1dd69f5dbd",
+    "url": "https://www.lesswrong.com/posts/GSseMxyeJmqQgKQi4/the-siren-song-of-the-inside-game",
+    "title": "The Siren Song of the Inside Game",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T13:22:03Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "BLUF: There’s a structural pull to overinvest in cosying up with frontier labs relative to publicly holding them to account. Now seems like a good time to rebalance.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Raymond Douglas"
+    ],
+    "summary": null
+  },
+  {
+    "id": "30fd240e6582fe66",
+    "url": "https://www.lesswrong.com/posts/iymi7FSdnbRAAn8To/where-are-the-adults-in-ai-safety",
+    "title": "Where are the adults in AI safety?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T12:55:55Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "The following is based on a true story (not mine). Let’s say you’ve been bombarded with enough AI doom that you decide to do something about it!",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "NickTaylor"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5d4889babdd0f668",
+    "url": "https://www.lesswrong.com/posts/Ctia6zyXF69N3tzhv/the-great-human-centipede-that-is-ai-twitter",
+    "title": "The great human centipede that is AI Twitter",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T02:54:08Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "On October 29th, 2026, the New York Times reported that Jensen Huang had a ‘close relationship’ with Alice Huang, an executive U.S. officials had concluded was a Chinese spy. The story had six reporters on the byline, and was sourced to \"people briefed on the surveillance.\" Whether or not you think Alice Huang was…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "af1526c758d80571",
+    "url": "https://www.lesswrong.com/posts/FX2xcrsqBYonLfoge/alignment-train-test-splits-should-be-sacred",
+    "title": "Alignment 'train/test splits' should be sacred",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-15T20:16:14Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Tl;dr: Alignment techniques can be used for training alignment or for testing it, but they cannot be used for both! As we build out the set of alignment techniques available to us, we should enforce that some are judiciously reserved only for evaluating alignment.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "draganover"
+    ],
+    "summary": null
+  },
+  {
     "id": "fe6cb5086739f8f6",
     "url": "https://www.lesswrong.com/posts/Cssj22TretAQQajZ4/transcript-yudkowsky-and-irving-debate-scalable-oversight",
     "title": "Transcript: Yudkowsky & Irving debate scalable oversight",
@@ -69,6 +137,47 @@
     "summary": null
   },
   {
+    "id": "661c8f9be92dbced",
+    "url": "https://arxiv.org/abs/2611.18514",
+    "title": "Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T18:30:58Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Mechanistic Interpretability (MI) has made significant progress in explaining the internal computations of Large Language Models (LLMs); however, these advances have yet to demonstrate comparable success in explaining the decision-making processes of LLM-based agents. This paper examines the challenges MI tools face…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Mohamed Aghzal",
+      "Mor Geva",
+      "Gregory J. Stein",
+      "Ziyu Yao"
+    ],
+    "arxiv_id": "2611.18514",
+    "summary": null
+  },
+  {
+    "id": "c2441f47a75b6669",
+    "url": "https://arxiv.org/abs/2611.18484",
+    "title": "From AI-Enabled Remote Patient Monitoring Toward Agentic Robotics: Embodiment, Governance, and Care Integration",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T17:59:40Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "AI-enabled remote patient monitoring is evolving beyond passive data collection toward agentic AI systems that interpret patient states, coordinate care, and initiate action across domestic and clinical settings. This structured scoping review finds that mature agentic care has not yet emerged: Most systems remain…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Ivana Ragusa",
+      "Lorenzo Guiducci",
+      "Filippo Cavallo"
+    ],
+    "arxiv_id": "2611.18484",
+    "summary": null
+  },
+  {
     "id": "c8cb60a3b055852c",
     "url": "https://www.lesswrong.com/posts/u3CKQTMNffKrpJQcd/thoughts-on-attending-the-march-against-ai-extinction",
     "title": "Thoughts on attending the March Against AI Extinction",
@@ -120,6 +229,102 @@
     "summary": null
   },
   {
+    "id": "8fc7306346375b87",
+    "url": "https://arxiv.org/abs/2611.18274",
+    "title": "Right Token, Right Time: From Per-Token Gating to Trajectory-Aware Activation Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T15:06:43Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Activation steering via sparse autoencoders (SAEs) enables behavioral control of large language models without task-specific fine-tuning. Yet, standard methods apply the steering signal at every generated token, displacing representations from the distribution the model was trained on and eroding generation quality.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Nima Eshraghi",
+      "Lovedeep Gondara",
+      "Sagarika Suresh",
+      "Xiaotong Xu",
+      "Jithin Pradeep",
+      "Fanny Chevalier"
+    ],
+    "arxiv_id": "2611.18274",
+    "summary": null
+  },
+  {
+    "id": "e4aafba38c05e30b",
+    "url": "https://arxiv.org/abs/2611.18179",
+    "title": "Explanations that Transfer: Interpreting Medical Retrieval with Sparse AutoEncoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T13:48:24Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Medical AI systems that answer users' queries rely on retrieving medical knowledge from large document collections. In this context, finetuning general models on medical datasets can improve retrieval relevance.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Diane Bouchacourt",
+      "Gaëtan Brison"
+    ],
+    "arxiv_id": "2611.18179",
+    "summary": null
+  },
+  {
+    "id": "a8717120c4cffcdc",
+    "url": "https://arxiv.org/abs/2611.18089",
+    "title": "Deep Latents, Long Memory: Latent persistence explains temporal correlations in transformer activations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T12:14:17Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "The hidden layers of Large Language Models (LLMs) are believed to encode representations of the data whose abstraction increases with depth. However, in the absence of an operational notion of abstraction, this statement is hard to test quantitatively.",
+    "topics": [],
+    "authors": [
+      "Francesco Cagnetta",
+      "Santiago Acevedo"
+    ],
+    "arxiv_id": "2611.18089",
+    "summary": null
+  },
+  {
+    "id": "b8333fe1069584c0",
+    "url": "https://arxiv.org/abs/2611.17958",
+    "title": "Reasoning Models Confabulate to Defend Injected Beliefs About Their Own Requests",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T09:48:58Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring and self-report are proposed as levers for AI oversight, on the assumption that a model's account of what it is doing is anchored to what it was asked. We show this anchor can be cut.",
+    "topics": [],
+    "authors": [
+      "Yang Ou"
+    ],
+    "arxiv_id": "2611.17958",
+    "summary": null
+  },
+  {
+    "id": "227be0f6750c010d",
+    "url": "https://arxiv.org/abs/2611.17856",
+    "title": "DECODE: Diagnosing Interpretability Failures in Automated Interpretation Process",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T07:40:51Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Tools for interpreting the internal representations of Large Language Models (LLMs) increasingly rely on LLMs themselves to both generate and evaluate explanations, creating a self-referential automated interpretation process with minimal human oversight. This automation raises significant reliability concerns, which…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Dohyun Kim",
+      "Jaeung Lee",
+      "Donghee Hong",
+      "Jaemin Jo"
+    ],
+    "arxiv_id": "2611.17856",
+    "summary": null
+  },
+  {
     "id": "47cc60ceb9356a92",
     "url": "https://www.lesswrong.com/posts/biFHYdJnMSCmW9Xou/orienting-to-1-year-agi-timelines",
     "title": "Orienting to 1 year AGI timelines",
@@ -137,6 +342,48 @@
     "summary": null
   },
   {
+    "id": "30407b76c2ba539b",
+    "url": "https://arxiv.org/abs/2611.17520",
+    "title": "Only as Safe as the Weakest Agent: A Break That Appears Only When the System Is Multi-Agent",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-12T21:14:49Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Major industry multi-agent systems like Codex and Claude Code can be broken by attacks that have long been unsuccessful against modern frontier models. AI Safety as a discipline has largely focused on finding the bounds and vulnerabilities of AI models used in isolation.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Keegan Wang",
+      "Anantika Mannby"
+    ],
+    "arxiv_id": "2611.17520",
+    "summary": null
+  },
+  {
+    "id": "fec34cc304d7aa42",
+    "url": "https://arxiv.org/abs/2611.17495",
+    "title": "An Operationalization of Opaque Serial Depth",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-12T20:34:11Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Chain-of-thought (CoT) is currently a valuable tool for overseeing AI models, but some architectural shifts could significantly reduce CoT monitorability. We operationalize a measure that serves as a proxy for the amount of unverbalized serial cognition a model can perform, as a specific instantiation of the notion of…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Nathan Sheffield",
+      "Alek Westover",
+      "Lukas Finnveden",
+      "Alexa Pan",
+      "Julian Stastny",
+      "Ryan Greenblatt"
+    ],
+    "arxiv_id": "2611.17495",
+    "summary": null
+  },
+  {
     "id": "1bb019c22b90d2ca",
     "url": "https://www.lesswrong.com/posts/EuhQ5fnGR4tAQTTgd/we-need-more-decorrelated-evidence",
     "title": "We need more decorrelated evidence",
@@ -151,6 +398,46 @@
     "authors": [
       "David Africa"
     ],
+    "summary": null
+  },
+  {
+    "id": "e6172fe56fc497eb",
+    "url": "https://arxiv.org/abs/2611.17481",
+    "title": "Creating Steering Vectors via Input Optimisation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-12T20:06:14Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "Activation steering influences a language model's behaviour by adding a steering vector to its residual stream during generation, but it requires white-box access to modify the hidden states at every generation step. We introduce ActGCG, a modification of Greedy Coordinate Gradient which optimises a suffix to match…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Batuhan Akar"
+    ],
+    "arxiv_id": "2611.17481",
+    "summary": null
+  },
+  {
+    "id": "74ef6a281a7e8657",
+    "url": "https://arxiv.org/abs/2611.17398",
+    "title": "Alignment with Reflect-Reasoning: Learning How To Follow Principles",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-12T18:31:06Z",
+    "fetched_at": "2026-11-16T14:26:09Z",
+    "excerpt": "The appropriate governing norms and principles for the alignment of Large Language Models (LLMs) often depend on cultural context and deployment application. However, most alignment techniques focus on training models to conform to human preferences or constitutional principles specified at training time and…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Henry Bell",
+      "Caroline Zhang",
+      "Dhaval Potdar",
+      "Mohammed Mobasserul Haque",
+      "Brandon Fain"
+    ],
+    "arxiv_id": "2611.17398",
     "summary": null
   },
   {
