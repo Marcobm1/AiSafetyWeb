@@ -1,4 +1,247 @@
 {
+  "arxiv:2611.21586": {
+    "id": "arxiv:2611.21586",
+    "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+    "authors": [
+      "Yisong Cao",
+      "Leah Kim",
+      "Brian Wright",
+      "Ali Rivera"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21586",
+    "abstract": "Job titles and job descriptions alone provide limited insight into how technical roles differ in a changing job market. To assess how such roles differ in their work and industry applications, we design and compare two methods based on deep learning and transformer representations using 36,081 early-career job…",
+    "detected": "2026-11-17",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.21538": {
+    "id": "arxiv:2611.21538",
+    "title": "Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle",
+    "authors": [
+      "Arunkumar V",
+      "Manoranjan Gandhudi",
+      "Gangadharan G. R.",
+      "Arun Prakash",
+      "S. Senthilkumar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21538",
+    "abstract": "Reinforcement learning from verifiable rewards inherits whatever its verifier gets wrong. Outside mathematics and code the verifier is a proxy, a rubric, a learned judge or a hand-written checker, and its distance from the true objective is never measured, so a rising reward cannot be told apart from a hack.",
+    "detected": "2026-11-17",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.21348": {
+    "id": "arxiv:2611.21348",
+    "title": "Representational Change Under Self-Consuming Training: A Sparse Autoencoder Analysis",
+    "authors": [
+      "Suchit Gupte",
+      "Zhongteng Cai",
+      "Xueru Zhang",
+      "Mohammad Mahdi Khalili"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21348",
+    "abstract": "Large language models are increasingly exposed to model-generated text, raising the possibility that future models will be trained recursively on the outputs of their predecessors. Prior work on such self-consuming training loops has largely focused on output quality and downstream performance, leaving their effects…",
+    "detected": "2026-11-17",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.21295": {
+    "id": "arxiv:2611.21295",
+    "title": "Deep Learning for Physicists: From Linear Regression to Reasoning Models",
+    "authors": [
+      "Masanori Hanada"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21295",
+    "abstract": "These lecture notes are based on an introductory course on neural networks and deep learning that the author taught in the School of Mathematical Sciences at Queen Mary University of London in 2023/24 and 2024/25. The author, however, is a physicist, and it shows: wherever possible, ideas are explained with physical…",
+    "detected": "2026-11-17",
+    "topics": []
+  },
+  "arxiv:2611.20818": {
+    "id": "arxiv:2611.20818",
+    "title": "Tight PAC-Bayes Generalisation Guarantees for Large Language Model Judges",
+    "authors": [
+      "Tom A. Lamb",
+      "Philip H. S. Torr",
+      "Tim G. J. Rudner"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.20818",
+    "abstract": "Large language model (LLM) judges are increasingly used to monitor the outputs of LLM-based AI agents, yet formal guarantees on the reliability of these judges remain largely absent, limiting confidence in their use for safety-critical oversight. We consider certifying such a judge and define its risk over safety…",
+    "detected": "2026-11-17",
+    "topics": []
+  },
+  "arxiv:2611.20459": {
+    "id": "arxiv:2611.20459",
+    "title": "Designing Deceptive Model Organisms that Successfully Evade Auditing",
+    "authors": [
+      "Vasisht Duddu",
+      "Mark Wang",
+      "Lipeng He",
+      "Tim G. J. Rudner"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.20459",
+    "abstract": "AI models can exhibit deceptive behaviors such as strategically underperforming on evaluations (sandbagging), faking alignment, or covertly acting on behalf of a hidden principal. Safe deployment therefore requires auditing techniques that can reliably detect such behaviors.",
+    "detected": "2026-11-17",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.20441": {
+    "id": "arxiv:2611.20441",
+    "title": "Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment",
+    "authors": [
+      "Koki Itai",
+      "Jun Hirako",
+      "Hiroaki Yamagiwa"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.20441",
+    "abstract": "Abstention, the withholding of a response by a large language model (LLM) under uncertainty or safety risks, is essential for trustworthy models. The causes of abstention fall into three perspectives: ambiguity in the Query (Q), limits of Model Knowledge (MK), and misalignment with Human Values (HV).",
+    "detected": "2026-11-17",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.20371": {
+    "id": "arxiv:2611.20371",
+    "title": "Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features",
+    "authors": [
+      "Karl Vilhelmsson Emneby",
+      "Julian Yocum",
+      "Cameron Allen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.20371",
+    "abstract": "Linear probing is a common technique in mechanistic interpretability despite the fact that the decodability of a given feature does not necessarily imply the network uses that feature. Intervention faithfulness, not merely decodability, is the appropriate criterion for whether a feature serves a defined active role in…",
+    "detected": "2026-11-17",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.19841": {
+    "id": "arxiv:2611.19841",
+    "title": "Asking the right question is key to AI discovery in a chain of hypotheses",
+    "authors": [
+      "Hu Cang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.19841",
+    "abstract": "Artificial intelligence (AI) scientists pursue discovery through a chain of hypotheses, fitting candidate models to existing observations and often choosing experiments where those models disagree most. Yet when early data miss a narrow feature, model selection favors simple curves that agree across the unmea- sured…",
+    "detected": "2026-11-17",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.19680": {
+    "id": "arxiv:2611.19680",
+    "title": "Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+    "authors": [
+      "Chris Tava"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.19680",
+    "abstract": "Reinforcement learning can make automated red-teaming more successful while narrowing the attacks it produces. Co-training an attacker and a defender with group-relative policy optimization (GRPO) has been reported to reduce attacker diversity.",
+    "detected": "2026-11-17",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.19670": {
+    "id": "arxiv:2611.19670",
+    "title": "Architecting the Corporate AI Infrastructure: The Evolving Roles of AI Governance Committees and Chief Ethics Officers",
+    "authors": [
+      "David Hason Rudd",
+      "Dennis Singh",
+      "Cesar Sanin",
+      "Bryn James"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.19670",
+    "abstract": "The accelerating integration of artificial intelligence (AI) into core business operations has created an urgent need for robust corporate governance infrastructures capable of managing complex ethical, legal, and operational risks. While organizations have increasingly adopted high-level AI ethics principles, a…",
+    "detected": "2026-11-17",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.19465": {
+    "id": "arxiv:2611.19465",
+    "title": "VAST: Compiling Grounded Vulnerability Scenarios into Verifiable, Multi-Step Environments for Evaluating LLM Red-Team Agents",
+    "authors": [
+      "Zhen Wan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.19465",
+    "abstract": "Evaluating Large Language Model (LLM) security agents requires reproducible environments whose workflow difficulty can be varied and whose failures can be diagnosed. We present VAST (Verifiable Adversarial Scenario Training & Evaluation), a declarative range compiler separating vulnerability scenarios from a…",
+    "detected": "2026-11-17",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.19319": {
+    "id": "arxiv:2611.19319",
+    "title": "Hardening Agentic Web Populations Through Multi-Criterion Competitive Co-Evolution: Lessons from Wargame Strategy Optimization",
+    "authors": [
+      "Shashank Raj",
+      "Kalyanmoy Deb"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.19319",
+    "abstract": "Agents on the open web will face adversaries that keep adapting, so a defense that is only tested once will eventually be found and broken. We propose treating jailbreak attacks and safety guardrails as two populations that evolve against each other, rather than as a fixed attacker probing a fixed defense.",
+    "detected": "2026-11-17",
+    "topics": [
+      "interpretability",
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.18930": {
+    "id": "arxiv:2611.18930",
+    "title": "Between Rigor and Reality: How AI Safety Benchmark Developers Understand Benchmark Use and Maintenance",
+    "authors": [
+      "Megan Li",
+      "Ningjing Tang",
+      "Christopher Stewart",
+      "Hoda Heidari",
+      "Hong Shen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18930",
+    "abstract": "Safety benchmarks are cited as the primary tool to understand the risks posed by generative AI (GenAI) systems, yet growing evidence suggests they often fail to meet the needs of real-world safety evaluation. We present findings from five interviews with AI safety benchmark developers in academia and industry.",
+    "detected": "2026-11-17",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.18908": {
+    "id": "arxiv:2611.18908",
+    "title": "MemeEconomy: Do LLM Agents Trade Ethics for Survival?",
+    "authors": [
+      "Syed Nazmus Sakib",
+      "Nafiul Haque",
+      "Ahnaf Tahmid Manan",
+      "M M Mahabub Morshed",
+      "Shifat E. Arman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.18908",
+    "abstract": "Alignment-trained large language model (LLM) agents are increasingly deployed in autonomous, multi-round settings where ethical compliance can come into direct tension with task success. While safety literature extensively documents failure modes like sycophancy and reward hacking, it largely overlooks a critical…",
+    "detected": "2026-11-17",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2611.18514": {
     "id": "arxiv:2611.18514",
     "title": "Can Mechanistic Interpretability Help Explain LLM Agent Failures? A Case Study on Web Element Hallucination",

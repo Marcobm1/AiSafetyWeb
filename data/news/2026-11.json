@@ -1,5 +1,235 @@
 [
   {
+    "id": "d5eb574461f3835d",
+    "url": "https://www.lesswrong.com/posts/qJrhEoNbzKRQYhybh/thoughts-on-safety-bad-bc-warning-shots-good",
+    "title": "Thoughts on \"safety bad bc warning shots good\"",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-17T12:40:29Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Suppose there was a button which made the current generation of AIs more safe, i.e. more aligned and less capable of subverting control measures. The button has no other effects — in particular, the button wouldn’t make future generations more or less safe.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Cleo Nardo"
+    ],
+    "summary": null
+  },
+  {
+    "id": "520b8d43a3a7c72f",
+    "url": "https://www.lesswrong.com/posts/SaqXZbsLKjrSw6cwM/it-is-mildly-frustrating-that-people-will-now-respect-my",
+    "title": "It is mildly frustrating that people will now respect my faction less if ASI doesn't happen by 2028",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-17T07:40:07Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "By any reasonable definition I am an AI doomer. It has nevertheless been historically very strange for me to see how closely associated \"AI doomers\" and short timelines have been in the popular imagination.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "590cb0b9c5dd23f2",
+    "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+    "title": "Strengthening NATO and allied cyber defenses with AI",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-17T00:00:00Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6ba4bf74b60ed2f5",
+    "url": "https://www.lesswrong.com/posts/e3CKvARMn9ra8Ba6M/gradient-routing-creates-a-headstart",
+    "title": "Gradient Routing Creates a Headstart",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T23:56:40Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Tl;dr GRAFT showed that we can make reward hacking removable. In the setup we study, a small LLM has two trainable adapters, each consisting of an additional MLP in every layer.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "TomTaylor"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2606c16669ae4b9e",
+    "url": "https://www.lesswrong.com/posts/mRAM4DrK47cKc4kp9/cryonics-as-cause-area-1",
+    "title": "Cryonics as Cause Area",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T19:05:51Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "TLDR: Cryonics should be considered as part of a diversified portfolio of altruistic projects. I estimate, using ~ 3% chance of revival and a modest post-revival lifespan (~20,000 years), that current biopreservation is roughly on par with top GiveWell charities in terms of QALYs per dollar.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Max Harms"
+    ],
+    "summary": null
+  },
+  {
+    "id": "df20e944db0fe97f",
+    "url": "https://arxiv.org/abs/2611.21586",
+    "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T18:54:40Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Job titles and job descriptions alone provide limited insight into how technical roles differ in a changing job market. To assess how such roles differ in their work and industry applications, we design and compare two methods based on deep learning and transformer representations using 36,081 early-career job…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yisong Cao",
+      "Leah Kim",
+      "Brian Wright",
+      "Ali Rivera"
+    ],
+    "arxiv_id": "2611.21586",
+    "summary": null
+  },
+  {
+    "id": "77ffe008efcaafc1",
+    "url": "https://www.lesswrong.com/posts/t38CDwfsmS52ibwv2/on-friends-at-frontier-labs",
+    "title": "On Friends at Frontier Labs",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T18:48:45Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "I am deeply uncertain about whether or not it is a good idea to get my friends to quit working at frontier AI labs. I am against people working at frontier AI labs in general, but perhaps downstream of this, all my friends in the labs have sophisticated justifications for their being there that seem plausibly true to…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "jenn"
+    ],
+    "summary": null
+  },
+  {
+    "id": "3bbb4e23ae2119cf",
+    "url": "https://arxiv.org/abs/2611.21538",
+    "title": "Optimistic Verifiers Get Hacked: Reward Hacking Under an Exact Process Oracle",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T18:25:42Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Reinforcement learning from verifiable rewards inherits whatever its verifier gets wrong. Outside mathematics and code the verifier is a proxy, a rubric, a learned judge or a hand-written checker, and its distance from the true objective is never measured, so a rising reward cannot be told apart from a hack.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Arunkumar V",
+      "Manoranjan Gandhudi",
+      "Gangadharan G. R.",
+      "Arun Prakash",
+      "S. Senthilkumar"
+    ],
+    "arxiv_id": "2611.21538",
+    "summary": null
+  },
+  {
+    "id": "c8e8bbf9d16ac1d6",
+    "url": "https://www.lesswrong.com/posts/DjfeRMnLdNumtcKbK/gemini-4-safety-reports-don-t-demonstrate-low-loss-of",
+    "title": "Gemini 4 safety reports don’t demonstrate low loss-of-control risk",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T17:52:13Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Google DeepMind’s safety reports for new Gemini 4 models, Argon and Carbon , conclude that the models are “highly unlikely” to cause severe harm by evading oversight (p. 79).",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Adam Kaufman"
+    ],
+    "summary": null
+  },
+  {
+    "id": "15a22e54195aafd4",
+    "url": "https://www.lesswrong.com/posts/C6MM2FAeCAdDLBZCH/social-sanction-gaming-gives-multi-agent-ais-powerful",
+    "title": "Social Sanction Gaming gives Multi-Agent AIs Powerful Control over their Reinforcement",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-16T17:16:37Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Epistemic status: Conceptual and speculative. Human-written.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Matthew Khoriaty"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2b6467343d019c7c",
+    "url": "https://arxiv.org/abs/2611.21348",
+    "title": "Representational Change Under Self-Consuming Training: A Sparse Autoencoder Analysis",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T16:27:02Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Large language models are increasingly exposed to model-generated text, raising the possibility that future models will be trained recursively on the outputs of their predecessors. Prior work on such self-consuming training loops has largely focused on output quality and downstream performance, leaving their effects…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Suchit Gupte",
+      "Zhongteng Cai",
+      "Xueru Zhang",
+      "Mohammad Mahdi Khalili"
+    ],
+    "arxiv_id": "2611.21348",
+    "summary": null
+  },
+  {
+    "id": "a05edc5dd581722e",
+    "url": "https://arxiv.org/abs/2611.21295",
+    "title": "Deep Learning for Physicists: From Linear Regression to Reasoning Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T15:56:53Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "These lecture notes are based on an introductory course on neural networks and deep learning that the author taught in the School of Mathematical Sciences at Queen Mary University of London in 2023/24 and 2024/25. The author, however, is a physicist, and it shows: wherever possible, ideas are explained with physical…",
+    "topics": [],
+    "authors": [
+      "Masanori Hanada"
+    ],
+    "arxiv_id": "2611.21295",
+    "summary": null
+  },
+  {
+    "id": "41b364560b3242b8",
+    "url": "https://jack-clark.net/2026/11/16/import-ai-481-ai-sub-contractors-a-wet-lab-for-ai-and-subterfuge-during-development",
+    "title": "Import AI 481: AI sub-contractors; a wet lab for AI; and subterfuge during development",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-11-16T14:01:15Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
     "id": "cc298b1dd69f5dbd",
     "url": "https://www.lesswrong.com/posts/GSseMxyeJmqQgKQi4/the-siren-song-of-the-inside-game",
     "title": "The Siren Song of the Inside Game",
@@ -34,6 +264,111 @@
     "summary": null
   },
   {
+    "id": "850ef0b99c92da54",
+    "url": "https://arxiv.org/abs/2611.20818",
+    "title": "Tight PAC-Bayes Generalisation Guarantees for Large Language Model Judges",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T10:00:57Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Large language model (LLM) judges are increasingly used to monitor the outputs of LLM-based AI agents, yet formal guarantees on the reliability of these judges remain largely absent, limiting confidence in their use for safety-critical oversight. We consider certifying such a judge and define its risk over safety…",
+    "topics": [],
+    "authors": [
+      "Tom A. Lamb",
+      "Philip H. S. Torr",
+      "Tim G. J. Rudner"
+    ],
+    "arxiv_id": "2611.20818",
+    "summary": null
+  },
+  {
+    "id": "f054a54f8228cfac",
+    "url": "https://openai.com/business/customer-stories/revolut",
+    "title": "How Revolut raises ambition without lowering the bar",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-16T09:30:00Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Discover how Revolut uses OpenAI models and Codex to cut coding time by 30–60%, scale financial crime investigations, and innovate without compromising security.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ebd9eb94963902d2",
+    "url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+    "title": "Our first phase of embedded assessments",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-16T08:00:00Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d1c011e92db4ea65",
+    "url": "https://metr.org/notes/2026-11-16-measuring-alignment-eval-tells",
+    "title": "Measuring alignment eval tells",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-11-16T08:00:00Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Summary Models sometimes can tell that an eval is an alignment eval, not a capabilities eval (Needham & Edkins, 2025) . To figure out what features of an eval tell a model what kind of eval it’s in, we run investigator agents on a set of evals for both capabilities and alignment.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "summary": null
+  },
+  {
+    "id": "a9a3005ba379b451",
+    "url": "https://arxiv.org/abs/2611.20459",
+    "title": "Designing Deceptive Model Organisms that Successfully Evade Auditing",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T03:27:51Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "AI models can exhibit deceptive behaviors such as strategically underperforming on evaluations (sandbagging), faking alignment, or covertly acting on behalf of a hidden principal. Safe deployment therefore requires auditing techniques that can reliably detect such behaviors.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Vasisht Duddu",
+      "Mark Wang",
+      "Lipeng He",
+      "Tim G. J. Rudner"
+    ],
+    "arxiv_id": "2611.20459",
+    "summary": null
+  },
+  {
+    "id": "3e7b9c1a9309c36b",
+    "url": "https://arxiv.org/abs/2611.20441",
+    "title": "Abstention Direction in Large Language Models: Mechanistic Interpretability of Abstention Across Query Ambiguity, Knowledge Limits, and Safety Alignment",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T03:12:33Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Abstention, the withholding of a response by a large language model (LLM) under uncertainty or safety risks, is essential for trustworthy models. The causes of abstention fall into three perspectives: ambiguity in the Query (Q), limits of Model Knowledge (MK), and misalignment with Human Values (HV).",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ],
+    "authors": [
+      "Koki Itai",
+      "Jun Hirako",
+      "Hiroaki Yamagiwa"
+    ],
+    "arxiv_id": "2611.20441",
+    "summary": null
+  },
+  {
     "id": "5d4889babdd0f668",
     "url": "https://www.lesswrong.com/posts/Ctia6zyXF69N3tzhv/the-great-human-centipede-that-is-ai-twitter",
     "title": "The great human centipede that is AI Twitter",
@@ -48,6 +383,26 @@
     "authors": [
       "Dean Valentine"
     ],
+    "summary": null
+  },
+  {
+    "id": "f850e1574058c6ff",
+    "url": "https://arxiv.org/abs/2611.20371",
+    "title": "Pretty Linear Liars: Unregularized Probes Favor Intervention-Unfaithful Features",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T01:01:31Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Linear probing is a common technique in mechanistic interpretability despite the fact that the decodability of a given feature does not necessarily imply the network uses that feature. Intervention faithfulness, not merely decodability, is the appropriate criterion for whether a feature serves a defined active role in…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Karl Vilhelmsson Emneby",
+      "Julian Yocum",
+      "Cameron Allen"
+    ],
+    "arxiv_id": "2611.20371",
     "summary": null
   },
   {
@@ -68,6 +423,24 @@
     "summary": null
   },
   {
+    "id": "2bd521c0fde7029a",
+    "url": "https://arxiv.org/abs/2611.19841",
+    "title": "Asking the right question is key to AI discovery in a chain of hypotheses",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-15T06:43:31Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Artificial intelligence (AI) scientists pursue discovery through a chain of hypotheses, fitting candidate models to existing observations and often choosing experiments where those models disagree most. Yet when early data miss a narrow feature, model selection favors simple curves that agree across the unmea- sured…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Hu Cang"
+    ],
+    "arxiv_id": "2611.19841",
+    "summary": null
+  },
+  {
     "id": "fe6cb5086739f8f6",
     "url": "https://www.lesswrong.com/posts/Cssj22TretAQQajZ4/transcript-yudkowsky-and-irving-debate-scalable-oversight",
     "title": "Transcript: Yudkowsky & Irving debate scalable oversight",
@@ -82,6 +455,45 @@
     "authors": [
       "gustaf"
     ],
+    "summary": null
+  },
+  {
+    "id": "8fa7105a7abdba2b",
+    "url": "https://arxiv.org/abs/2611.19680",
+    "title": "Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-15T00:15:57Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Reinforcement learning can make automated red-teaming more successful while narrowing the attacks it produces. Co-training an attacker and a defender with group-relative policy optimization (GRPO) has been reported to reduce attacker diversity.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Chris Tava"
+    ],
+    "arxiv_id": "2611.19680",
+    "summary": null
+  },
+  {
+    "id": "8a23d7e14f7052dc",
+    "url": "https://arxiv.org/abs/2611.19670",
+    "title": "Architecting the Corporate AI Infrastructure: The Evolving Roles of AI Governance Committees and Chief Ethics Officers",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-14T23:48:47Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "The accelerating integration of artificial intelligence (AI) into core business operations has created an urgent need for robust corporate governance infrastructures capable of managing complex ethical, legal, and operational risks. While organizations have increasingly adopted high-level AI ethics principles, a…",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "David Hason Rudd",
+      "Dennis Singh",
+      "Cesar Sanin",
+      "Bryn James"
+    ],
+    "arxiv_id": "2611.19670",
     "summary": null
   },
   {
@@ -100,6 +512,46 @@
     "authors": [
       "themayadecline"
     ],
+    "summary": null
+  },
+  {
+    "id": "37638498cd5552d7",
+    "url": "https://arxiv.org/abs/2611.19465",
+    "title": "VAST: Compiling Grounded Vulnerability Scenarios into Verifiable, Multi-Step Environments for Evaluating LLM Red-Team Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-14T15:40:08Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Evaluating Large Language Model (LLM) security agents requires reproducible environments whose workflow difficulty can be varied and whose failures can be diagnosed. We present VAST (Verifiable Adversarial Scenario Training & Evaluation), a declarative range compiler separating vulnerability scenarios from a…",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Zhen Wan"
+    ],
+    "arxiv_id": "2611.19465",
+    "summary": null
+  },
+  {
+    "id": "aa8e964eeccef16d",
+    "url": "https://arxiv.org/abs/2611.19319",
+    "title": "Hardening Agentic Web Populations Through Multi-Criterion Competitive Co-Evolution: Lessons from Wargame Strategy Optimization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-14T10:29:51Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Agents on the open web will face adversaries that keep adapting, so a defense that is only tested once will eventually be found and broken. We propose treating jailbreak attacks and safety guardrails as two populations that evolve against each other, rather than as a fixed attacker probing a fixed defense.",
+    "topics": [
+      "interpretability",
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Shashank Raj",
+      "Kalyanmoy Deb"
+    ],
+    "arxiv_id": "2611.19319",
     "summary": null
   },
   {
@@ -134,6 +586,51 @@
     "authors": [
       "Omar Khursheed"
     ],
+    "summary": null
+  },
+  {
+    "id": "8c4d85a4d951110b",
+    "url": "https://arxiv.org/abs/2611.18930",
+    "title": "Between Rigor and Reality: How AI Safety Benchmark Developers Understand Benchmark Use and Maintenance",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T20:31:23Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Safety benchmarks are cited as the primary tool to understand the risks posed by generative AI (GenAI) systems, yet growing evidence suggests they often fail to meet the needs of real-world safety evaluation. We present findings from five interviews with AI safety benchmark developers in academia and industry.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Megan Li",
+      "Ningjing Tang",
+      "Christopher Stewart",
+      "Hoda Heidari",
+      "Hong Shen"
+    ],
+    "arxiv_id": "2611.18930",
+    "summary": null
+  },
+  {
+    "id": "777cd1e779dc04f4",
+    "url": "https://arxiv.org/abs/2611.18908",
+    "title": "MemeEconomy: Do LLM Agents Trade Ethics for Survival?",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-13T20:12:24Z",
+    "fetched_at": "2026-11-17T15:18:08Z",
+    "excerpt": "Alignment-trained large language model (LLM) agents are increasingly deployed in autonomous, multi-round settings where ethical compliance can come into direct tension with task success. While safety literature extensively documents failure modes like sycophancy and reward hacking, it largely overlooks a critical…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Syed Nazmus Sakib",
+      "Nafiul Haque",
+      "Ahnaf Tahmid Manan",
+      "M M Mahabub Morshed",
+      "Shifat E. Arman"
+    ],
+    "arxiv_id": "2611.18908",
     "summary": null
   },
   {
