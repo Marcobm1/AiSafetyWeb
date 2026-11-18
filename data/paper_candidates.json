@@ -1,4 +1,140 @@
 {
+  "arxiv:2611.23096": {
+    "id": "arxiv:2611.23096",
+    "title": "Hidden-State Similarity Predicts Re-Elicitation After Inoculation Prompting",
+    "authors": [
+      "Rose N. Kwon",
+      "Samy Mammeri",
+      "Sabyasachi Sahoo",
+      "Christian Gagné",
+      "Thomas Jiralerspong"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.23096",
+    "abstract": "Fine-tuning on narrow harmful tasks can cause emergent misalignment, where models generalize harmful behavior beyond the training distribution. Inoculation prompting can reduce this effect by explicitly eliciting the undesired behavior during training, but recent work shows that the behavior can reappear when…",
+    "detected": "2026-11-18",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.22868": {
+    "id": "arxiv:2611.22868",
+    "title": "Against Coercion: AI Alignment as a Synthetic Social Contract",
+    "authors": [
+      "Maria Sekatskaya"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.22868",
+    "abstract": "Contemporary AI safety treats alignment as an engineering challenge of control, forcing artificial architectures to comply with human values through behavioral filtering and sandboxing. This paper argues that the control paradigm rests on a fundamental misunderstanding of digital agency.",
+    "detected": "2026-11-18",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.22203": {
+    "id": "arxiv:2611.22203",
+    "title": "EGS: A Complementary Safety Framework for Educational LLMs",
+    "authors": [
+      "Zexuan Fei",
+      "Zhengnan Guo",
+      "Yiming Luo",
+      "Kaiyi Huang",
+      "Aimin Zhou",
+      "Bo Jiang",
+      "Fei Tan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.22203",
+    "abstract": "Large Language Models (LLMs) offer strong potential for personalized education, but adolescent-facing deployment raises risks of toxic, biased, misleading, or developmentally inappropriate content. We argue that educational safety should move beyond binary refusal: student queries are often ambiguous or…",
+    "detected": "2026-11-18",
+    "topics": []
+  },
+  "arxiv:2611.22186": {
+    "id": "arxiv:2611.22186",
+    "title": "Is 4-Bit Quantization More Than Noise to a Chat Model's Safety Behaviour? Attributing Behavioural Shifts with Matched Perturbations",
+    "authors": [
+      "Ege Kaya"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.22186",
+    "abstract": "Chat models on phones and laptops are usually 4-bit copies of the model that was evaluated, and audits of such copies disagree about what quantization does to refusal. A 4-bit build is one of many weight perturbations of the same size, so a change in its behaviour could come from its specific rounding error or from…",
+    "detected": "2026-11-18",
+    "topics": []
+  },
+  "arxiv:2611.21956": {
+    "id": "arxiv:2611.21956",
+    "title": "Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study",
+    "authors": [
+      "Ana Clara Zoppi Serpa",
+      "Anderson Rocha",
+      "Hélio Pedrini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21956",
+    "abstract": "We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques.",
+    "detected": "2026-11-18",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.21832": {
+    "id": "arxiv:2611.21832",
+    "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+    "authors": [
+      "Keshav Shenoy",
+      "Anthony Zang",
+      "Eric Gan",
+      "Jacqueline Tay",
+      "Amy Ngo",
+      "Sebastian Prasanna",
+      "Julian Stastny",
+      "Vivek Hebbar"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21832",
+    "abstract": "As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research.",
+    "detected": "2026-11-18",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.21799": {
+    "id": "arxiv:2611.21799",
+    "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+    "authors": [
+      "Zheng-Xin Yong",
+      "Benjamin Arnav",
+      "Miles Wang",
+      "Tomek Korbak",
+      "Olivia Watkins"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21799",
+    "abstract": "Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors.",
+    "detected": "2026-11-18",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.21705": {
+    "id": "arxiv:2611.21705",
+    "title": "Disambiguating Moral Circuits and Moral Features in Language Models: Moral content, normative judgment or cue words? Evidence from 14 models",
+    "authors": [
+      "Davide Liga",
+      "Liuwen Yu",
+      "Matteo Magnini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.21705",
+    "abstract": "Interpretability methods can locate the attention heads and sparse autoencoder (SAE) features that change the answer a language model gives to a moral prompt, e.g., whether \"Stealing medicine for a dying child is morally\" continues with \"justified\" or \"wrong\". Such a component could respond to moral content, to the…",
+    "detected": "2026-11-18",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2611.21586": {
     "id": "arxiv:2611.21586",
     "title": "Beyond Job Titles: Interpreting Early-Career Job Advertisements with Sparse Autoencoders and Semantic Clustering",

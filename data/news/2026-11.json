@@ -1,5 +1,80 @@
 [
   {
+    "id": "8b9923241e66c6cc",
+    "url": "https://blog.redwoodresearch.org/p/how-should-we-define-capabilities",
+    "title": "How should we define “capabilities activities” for the purpose of pacing?",
+    "source": "Redwood Research",
+    "source_id": "redwood",
+    "published": "2026-11-17T21:36:26Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "We’d like to pace the frontier by restricting the amount of compute AI companies use to improve AI capabilities, perhaps via legislation or voluntary commitments.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Alek Westover"
+    ],
+    "summary": null
+  },
+  {
+    "id": "5123fdea79006cb4",
+    "url": "https://www.lesswrong.com/posts/JPwYH3hEfLhEDaNFp/a-lab-employee-s-guide-to-raising-concerns",
+    "title": "A lab employee's guide to raising concerns",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-17T20:20:59Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "If you're an employee at a frontier lab, you are one of the most powerful people in the world. Not because of your nine-figure equity or the work you do—your lab probably won't live or die on your research: there are other researchers at the company, and if you don't refactor that eval harness, someone else will.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Tom Smith"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0b5ecb08d8bcd4d2",
+    "url": "https://arxiv.org/abs/2611.23096",
+    "title": "Hidden-State Similarity Predicts Re-Elicitation After Inoculation Prompting",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-17T17:20:33Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Fine-tuning on narrow harmful tasks can cause emergent misalignment, where models generalize harmful behavior beyond the training distribution. Inoculation prompting can reduce this effect by explicitly eliciting the undesired behavior during training, but recent work shows that the behavior can reappear when…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Rose N. Kwon",
+      "Samy Mammeri",
+      "Sabyasachi Sahoo",
+      "Christian Gagné",
+      "Thomas Jiralerspong"
+    ],
+    "arxiv_id": "2611.23096",
+    "summary": null
+  },
+  {
+    "id": "44d719f3cd2aefc6",
+    "url": "https://arxiv.org/abs/2611.22868",
+    "title": "Against Coercion: AI Alignment as a Synthetic Social Contract",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-17T14:45:51Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Contemporary AI safety treats alignment as an engineering challenge of control, forcing artificial architectures to comply with human values through behavioral filtering and sandboxing. This paper argues that the control paradigm rests on a fundamental misunderstanding of digital agency.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Maria Sekatskaya"
+    ],
+    "arxiv_id": "2611.22868",
+    "summary": null
+  },
+  {
     "id": "d5eb574461f3835d",
     "url": "https://www.lesswrong.com/posts/qJrhEoNbzKRQYhybh/thoughts-on-safety-bad-bc-warning-shots-good",
     "title": "Thoughts on \"safety bad bc warning shots good\"",
@@ -34,6 +109,44 @@
     "summary": null
   },
   {
+    "id": "32c76d8283dbc03e",
+    "url": "https://arxiv.org/abs/2611.22203",
+    "title": "EGS: A Complementary Safety Framework for Educational LLMs",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-17T04:40:42Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Large Language Models (LLMs) offer strong potential for personalized education, but adolescent-facing deployment raises risks of toxic, biased, misleading, or developmentally inappropriate content. We argue that educational safety should move beyond binary refusal: student queries are often ambiguous or…",
+    "topics": [],
+    "authors": [
+      "Zexuan Fei",
+      "Zhengnan Guo",
+      "Yiming Luo",
+      "Kaiyi Huang",
+      "Aimin Zhou",
+      "Bo Jiang",
+      "Fei Tan"
+    ],
+    "arxiv_id": "2611.22203",
+    "summary": null
+  },
+  {
+    "id": "ed127e67bd954bad",
+    "url": "https://arxiv.org/abs/2611.22186",
+    "title": "Is 4-Bit Quantization More Than Noise to a Chat Model's Safety Behaviour? Attributing Behavioural Shifts with Matched Perturbations",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-17T04:20:17Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Chat models on phones and laptops are usually 4-bit copies of the model that was evaluated, and audits of such copies disagree about what quantization does to refusal. A 4-bit build is one of many weight perturbations of the same size, so a change in its behaviour could come from its specific rounding error or from…",
+    "topics": [],
+    "authors": [
+      "Ege Kaya"
+    ],
+    "arxiv_id": "2611.22186",
+    "summary": null
+  },
+  {
     "id": "590cb0b9c5dd23f2",
     "url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
     "title": "Strengthening NATO and allied cyber defenses with AI",
@@ -44,6 +157,20 @@
     "excerpt": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
     "topics": [
       "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0604bc2b50fc0c3b",
+    "url": "https://openai.com/index/astra-law-6-2",
+    "title": "Astra for Law leads in legal intelligence",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-17T00:00:00Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Astra for Law ranked first in a launch evaluation spanning 24 areas of law. Every ChatGPT Enterprise customer can now request access.",
+    "topics": [
+      "evals"
     ],
     "summary": null
   },
@@ -62,6 +189,75 @@
     "authors": [
       "TomTaylor"
     ],
+    "summary": null
+  },
+  {
+    "id": "697a5a7be966697b",
+    "url": "https://arxiv.org/abs/2611.21956",
+    "title": "Eight in Ten LLMs Leak System-Prompt Secrets: Nevan, an Agentic Capture-the-Flag Study",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T22:37:31Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "We audit instruction-hierarchy enforcement across 363 text-in/text-out models from the OpenRouter catalog. The research question we answer with this experiment is which models disclose a protected secret embedded in the system prompt, and through which techniques.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Ana Clara Zoppi Serpa",
+      "Anderson Rocha",
+      "Hélio Pedrini"
+    ],
+    "arxiv_id": "2611.21956",
+    "summary": null
+  },
+  {
+    "id": "b5c3132bdab36a43",
+    "url": "https://arxiv.org/abs/2611.21832",
+    "title": "Auditors Struggle to Catch Sabotage In End-to-End Transcripts of AI Safety Research",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T19:52:38Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "As AI systems are increasingly used to automate AI R&D, misaligned systems could sabotage research intended to improve model safety and alignment. To stress-test defenses against such sabotage, we use a human expert as a proxy saboteur on AI safety research.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Keshav Shenoy",
+      "Anthony Zang",
+      "Eric Gan",
+      "Jacqueline Tay",
+      "Amy Ngo",
+      "Sebastian Prasanna",
+      "Julian Stastny",
+      "Vivek Hebbar"
+    ],
+    "arxiv_id": "2611.21832",
+    "summary": null
+  },
+  {
+    "id": "7a9e51a5eadb71ec",
+    "url": "https://arxiv.org/abs/2611.21799",
+    "title": "Chain-of-Thought Controllability Can Reduce Chain-of-Thought Monitorability",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T19:17:47Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Chain-of-thought (CoT) monitoring is a promising tool for detecting hidden goals, off-task behavior, and other failures in AI agents. One risk is that models could deliberately shape their reasoning to make it opaque to monitors.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Zheng-Xin Yong",
+      "Benjamin Arnav",
+      "Miles Wang",
+      "Tomek Korbak",
+      "Olivia Watkins"
+    ],
+    "arxiv_id": "2611.21799",
     "summary": null
   },
   {
@@ -194,6 +390,26 @@
       "Mohammad Mahdi Khalili"
     ],
     "arxiv_id": "2611.21348",
+    "summary": null
+  },
+  {
+    "id": "927fbff213f7c6d0",
+    "url": "https://arxiv.org/abs/2611.21705",
+    "title": "Disambiguating Moral Circuits and Moral Features in Language Models: Moral content, normative judgment or cue words? Evidence from 14 models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T16:12:45Z",
+    "fetched_at": "2026-11-18T14:53:33Z",
+    "excerpt": "Interpretability methods can locate the attention heads and sparse autoencoder (SAE) features that change the answer a language model gives to a moral prompt, e.g., whether \"Stealing medicine for a dying child is morally\" continues with \"justified\" or \"wrong\". Such a component could respond to moral content, to the…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Davide Liga",
+      "Liuwen Yu",
+      "Matteo Magnini"
+    ],
+    "arxiv_id": "2611.21705",
     "summary": null
   },
   {
