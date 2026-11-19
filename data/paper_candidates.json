@@ -1,4 +1,164 @@
 {
+  "arxiv:2611.24936": {
+    "id": "arxiv:2611.24936",
+    "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
+    "authors": [
+      "Yan Qiu",
+      "Yuanyuan Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24936",
+    "abstract": "Jailbreak attempts and harmful prompts remain a challenge for the safe deployment of large language models. We study whether contrastively learned representations can support safety detection without training an additional downstream classifier.",
+    "detected": "2026-11-19",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.24619": {
+    "id": "arxiv:2611.24619",
+    "title": "GateWatch: Low-Overhead LLM Monitoring with Boolean Circuits",
+    "authors": [
+      "Firas Spanioli",
+      "Yaniv David"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24619",
+    "abstract": "As large language models (LLMs) and LLM-based agents are increasingly deployed, monitoring their behavior becomes important for detecting unsafe or unintended actions. Activation probes offer an efficient approach, but existing methods face trade-offs between accuracy, interpretability, and computational overhead.",
+    "detected": "2026-11-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.24609": {
+    "id": "arxiv:2611.24609",
+    "title": "Negotiating Control and Accountability among Stakeholders in High-Risk AI Use Cases: Development and Evaluation of the Method ALIGN",
+    "authors": [
+      "Lena Schneider",
+      "Daniel Boos",
+      "Gudela Grote"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24609",
+    "abstract": "Characteristics of Artificial Intelligence (AI) severely restrict human control. This creates new challenges for socio-technical systems design especially in safety-critical domains, where control over risks is essential along with the accountability for any harm caused.",
+    "detected": "2026-11-19",
+    "topics": [
+      "evals",
+      "governance"
+    ]
+  },
+  "arxiv:2611.24453": {
+    "id": "arxiv:2611.24453",
+    "title": "Harmonic Circuit: Chord Progression Lies in a Sparse Principal Information Flow in Symbolic Music Models",
+    "authors": [
+      "Ruiji Yu",
+      "Gus Xia"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24453",
+    "abstract": "Mechanistic Interpretability (MI) seeks to decode neural network computations into human-understandable logic. A core methodology in MI is circuit discovery: identifying the information flow in sub-networks that drive specific model behaviors.",
+    "detected": "2026-11-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.24362": {
+    "id": "arxiv:2611.24362",
+    "title": "PIPETTE: Prompt Injection Purple-Teaming for Robust LLM Agents",
+    "authors": [
+      "Lipeng He",
+      "Yihan Wang",
+      "Jiawen Zhang",
+      "N. Asokan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24362",
+    "abstract": "Large language model (LLM) agents routinely interact with untrusted external data, exposing them to indirect prompt injection (IPI) attacks that hijack agents into executing attacker-chosen tasks. To uncover these vulnerabilities at scale, automated red-teaming methods often leverage reinforcement learning (RL) to…",
+    "detected": "2026-11-19",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.24313": {
+    "id": "arxiv:2611.24313",
+    "title": "AutoPI: Taxonomy-Guided Adaptive Red Teaming for Prompt Injection in LLM Agents",
+    "authors": [
+      "Stavros Damianakis",
+      "Konstantinos Psounis"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24313",
+    "abstract": "Prompt injection is the dominant unsolved security risk for LLM agents, and the community now agrees that robustness must be measured against adaptive attackers rather than fixed benchmark injections. Many adaptive red teamers exist, and most are built to maximize attack success rate (ASR).",
+    "detected": "2026-11-19",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.24221": {
+    "id": "arxiv:2611.24221",
+    "title": "Learning to Coordinate: LLM-Guided Workflow Evolution for Token-Efficient Red Teaming",
+    "authors": [
+      "Xiaoyang Xing",
+      "Wenyu Dai",
+      "Xiaoliang Gong",
+      "Asoke K Nandi",
+      "Anthony Cohn"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.24221",
+    "abstract": "Automated red teaming is essential for identifying safety failures in large language models (LLMs), but its practical scalability depends on the resources required to discover those failures. Multi-agent systems can combine complementary capabilities, yet repeated planning, redundant exchanges, and ineffective…",
+    "detected": "2026-11-19",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.23403": {
+    "id": "arxiv:2611.23403",
+    "title": "Tracking Representations in LLM Reasoning Traces for Iterated Games",
+    "authors": [
+      "Chaipat Tirapongprasert",
+      "Rajarshi Das",
+      "Parijat Dube"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.23403",
+    "abstract": "Large language model (LLM) agents achieve state-of-the-art performance across domains through chain-of-thought (CoT) reasoning. Despite their ubiquitous use, little is understood about the relationship between the externalized trace and the model's actual computation.",
+    "detected": "2026-11-19",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.23365": {
+    "id": "arxiv:2611.23365",
+    "title": "Training Language Models for Introspective Oversight",
+    "authors": [
+      "Alex Lin Wang",
+      "Linus Yifeng Tang",
+      "Dami Choi",
+      "Neil Chowdhury"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.23365",
+    "abstract": "Language models increasingly exhibit behaviors that are difficult to detect in transcripts, such as reward hacking, deception, and sycophancy. Asking the assistant follow-up questions about its actions is unreliable, since models are generally not trained to report their own misbehavior.",
+    "detected": "2026-11-19",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.23305": {
+    "id": "arxiv:2611.23305",
+    "title": "Dependency Fabrication in Repository Deployment Agents",
+    "authors": [
+      "Robin Matter",
+      "Salman Toor"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.23305",
+    "abstract": "Repository deployment agents set up the environment needed to run a software repository. They often treat passing tests as proof of a successful setup.",
+    "detected": "2026-11-19",
+    "topics": []
+  },
   "arxiv:2611.23096": {
     "id": "arxiv:2611.23096",
     "title": "Hidden-State Similarity Predicts Re-Elicitation After Inoculation Prompting",
