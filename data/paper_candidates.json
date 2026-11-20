@@ -1,4 +1,109 @@
 {
+  "arxiv:2611.26291": {
+    "id": "arxiv:2611.26291",
+    "title": "Who Moved My $Z$ Boson? Revealing Resonance Features Inside a Neural Network",
+    "authors": [
+      "Kevin Alberto Urquía Calderón",
+      "Midori Kato",
+      "Inar Timiryasov",
+      "Oleg Ruchayskiy"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.26291",
+    "abstract": "Methods used in mechanistic interpretability have revealed human-aligned concepts inside language and image models. In this paper, we search for physics concepts inside a neural a generative collider physics model trained on real LHC data (ShellFlow).",
+    "detected": "2026-11-20",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.26033": {
+    "id": "arxiv:2611.26033",
+    "title": "SEOYUN: Refusal-Inducing Exam Documents for AI-Glasses Pipelines",
+    "authors": [
+      "Dohyeon Kwon"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.26033",
+    "abstract": "Camera-equipped glasses can convert an examination page into a query to a vision-language model (VLM). Device detection addresses possession; a complementary question is whether an examination document can reduce the usefulness of an unauthorized capture.",
+    "detected": "2026-11-20",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.25998": {
+    "id": "arxiv:2611.25998",
+    "title": "Reinforcing Few-Step Diffusion Models via Shadow Posterior Matching",
+    "authors": [
+      "Jingqiao Xiu",
+      "Yicong Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.25998",
+    "abstract": "Few-step diffusion models are widely deployed for their efficiency. However, reinforcing them with black-box rewards, as is routine for multi-step models, faces two structural challenges.",
+    "detected": "2026-11-20",
+    "topics": []
+  },
+  "arxiv:2611.25898": {
+    "id": "arxiv:2611.25898",
+    "title": "Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding",
+    "authors": [
+      "Youssef ElNahas",
+      "Adel Ammar",
+      "Soumaya Chaffar",
+      "Wadii Boulila"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.25898",
+    "abstract": "Clinical large language models are usually judged by whether the final answer is right. Yet a model can reach a fluent, plausible output through invalid reasoning that static benchmarks do not detect, and confident hallucination, causally invalid inference, and spurious demographic shortcuts can pass conventional…",
+    "detected": "2026-11-20",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.25165": {
+    "id": "arxiv:2611.25165",
+    "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
+    "authors": [
+      "Anh Tien Nguyen",
+      "Dimitris Samaras",
+      "Mahdi S. Hosseini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.25165",
+    "abstract": "Sparse Autoencoders (SAEs) are effective tools for mechanistic interpretability by decomposing neural representations into sparse and interpretable features. However, a single sparse representation in traditional SAEs is responsible for both reconstruction fidelity and interpretability, which are not guaranteed to…",
+    "detected": "2026-11-20",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.25135": {
+    "id": "arxiv:2611.25135",
+    "title": "Calibrated Decision Rewards: Training Language Models with a Judge That Knows How Sure It Is",
+    "authors": [
+      "Rudransh Agnihotri",
+      "Manasvi Kapoor"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.25135",
+    "abstract": "Reinforcement learning (RL) can only teach a language model what its reward can recognize. Answer checkers are exact but need a reference answer; learned reward models and LLM judges work everywhere, but their scores are not probabilities.",
+    "detected": "2026-11-20",
+    "topics": []
+  },
+  "arxiv:2611.25119": {
+    "id": "arxiv:2611.25119",
+    "title": "Auditing Learned Dynamics in Weather Models",
+    "authors": [
+      "Skylar Gu",
+      "Christina Last"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.25119",
+    "abstract": "Learned weather models are experimentally accessible computational systems whose internal representations can be inspected and manipulated. Using sparse autoencoder features from GraphCast, DeepMind's autoregressive weather forecasting model, we test whether causal relevance requires physical semantics, a question…",
+    "detected": "2026-11-20",
+    "topics": [
+      "interpretability"
+    ]
+  },
   "arxiv:2611.24936": {
     "id": "arxiv:2611.24936",
     "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",

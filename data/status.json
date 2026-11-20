@@ -1,7 +1,7 @@
 {
-  "last_run": "2026-11-19T14:59:26Z",
-  "duration_seconds": 8.4,
-  "new_entries": 13,
+  "last_run": "2026-11-20T14:41:43Z",
+  "duration_seconds": 17.3,
+  "new_entries": 14,
   "sources": [
     {
       "id": "alignment-forum",
@@ -9,7 +9,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 5,
-      "new": 0,
+      "new": 1,
       "error": null
     },
     {
@@ -18,7 +18,7 @@
       "status": "ok",
       "items_in_feed": 10,
       "kept": 4,
-      "new": 1,
+      "new": 0,
       "error": null
     },
     {
@@ -26,8 +26,8 @@
       "name": "LessWrong",
       "status": "ok",
       "items_in_feed": 10,
-      "kept": 1,
-      "new": 0,
+      "kept": 4,
+      "new": 4,
       "error": null
     },
     {
@@ -71,7 +71,7 @@
       "name": "Centre for the Governance of AI",
       "status": "ok",
       "items_in_feed": 58,
-      "kept": 2,
+      "kept": 0,
       "new": 0,
       "error": null
     },
@@ -106,7 +106,7 @@
       "id": "openai",
       "name": "OpenAI News",
       "status": "ok",
-      "items_in_feed": 1413,
+      "items_in_feed": 1418,
       "kept": 11,
       "new": 2,
       "error": null
@@ -126,14 +126,14 @@
       "status": "ok",
       "items_in_feed": 100,
       "kept": 100,
-      "new": 10,
+      "new": 7,
       "error": null
     }
   ],
   "candidates": {
-    "added": 10,
+    "added": 7,
     "removed_promoted": 0,
     "pruned": 0,
-    "total": 725
+    "total": 732
   }
 }

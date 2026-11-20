@@ -1,5 +1,236 @@
 [
   {
+    "id": "43f4448c6045afb8",
+    "url": "https://www.lesswrong.com/posts/MHGgNaf6hTCP5NBz5/on-exporting-agency-to-washington-dc",
+    "title": "On exporting agency to Washington, DC",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-20T06:45:27Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "I was just at Takeoff last weekend, and one of my takeaways is that I and many people I talk to in the Bay put DC out of our locus of control. Our day jobs in AI safety focus on demonstrating potential avenues of misalignment, and when the topic comes to social problems like competitive pressures between the labs, our…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "ethanelasky"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0eba7d135cd15a1a",
+    "url": "https://www.lesswrong.com/posts/pXnwQ3ESp3wXhLzNa/towards-embedded-evaluations-for-ai-monitoring",
+    "title": "Towards embedded evaluations for AI monitoring",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-20T05:09:34Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Executive summary This year we observed multiple rogue agent incidents . AI monitors, often built from the developers' own internal models, are now the main oversight of internally deployed agents.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "monika_j"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d4f2d9132ac1352b",
+    "url": "https://www.lesswrong.com/posts/pfZWd2dLy7wRaDKYa/prosaic-ai-alignment-10-years-later",
+    "title": "\"Prosaic AI alignment\": 10 years later",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-19T17:28:33Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "(Edit: For some more recent views of Paul Christiano, see here and here . This post is meant as a \"time-capsule\" analysis, not to suggest he holds these exact opinions now.) A decade ago today, Paul Christiano published \" Prosaic AI alignment \" on his well-known AI safety blog.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Morgan S"
+    ],
+    "summary": null
+  },
+  {
+    "id": "36bd6e5913064307",
+    "url": "https://arxiv.org/abs/2611.26291",
+    "title": "Who Moved My $Z$ Boson? Revealing Resonance Features Inside a Neural Network",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T15:48:04Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Methods used in mechanistic interpretability have revealed human-aligned concepts inside language and image models. In this paper, we search for physics concepts inside a neural a generative collider physics model trained on real LHC data (ShellFlow).",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Kevin Alberto Urquía Calderón",
+      "Midori Kato",
+      "Inar Timiryasov",
+      "Oleg Ruchayskiy"
+    ],
+    "arxiv_id": "2611.26291",
+    "summary": null
+  },
+  {
+    "id": "e92f171618923742",
+    "url": "https://www.lesswrong.com/posts/Drj97tmuiWF3e9Xya/anthropic-is-not-living-up-to-its-ideals",
+    "title": "Anthropic is not living up to its ideals",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-19T15:06:27Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "I wrote a substack article about how Anthropic is not behaving sensibly according to the worldview expressed by its leaders; about how Anthropic comms is slimy; and about what it might look like if they were living up to their own ideals. It includes embedded video clips to drive the point home, and I don't know how…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "So8res"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ef210e1d36b83e8c",
+    "url": "https://arxiv.org/abs/2611.26033",
+    "title": "SEOYUN: Refusal-Inducing Exam Documents for AI-Glasses Pipelines",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T12:43:31Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Camera-equipped glasses can convert an examination page into a query to a vision-language model (VLM). Device detection addresses possession; a complementary question is whether an examination document can reduce the usefulness of an unauthorized capture.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Dohyeon Kwon"
+    ],
+    "arxiv_id": "2611.26033",
+    "summary": null
+  },
+  {
+    "id": "1ac7bd9794ea7071",
+    "url": "https://arxiv.org/abs/2611.25998",
+    "title": "Reinforcing Few-Step Diffusion Models via Shadow Posterior Matching",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T12:18:49Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Few-step diffusion models are widely deployed for their efficiency. However, reinforcing them with black-box rewards, as is routine for multi-step models, faces two structural challenges.",
+    "topics": [],
+    "authors": [
+      "Jingqiao Xiu",
+      "Yicong Li"
+    ],
+    "arxiv_id": "2611.25998",
+    "summary": null
+  },
+  {
+    "id": "7dcf79bf5a39aa79",
+    "url": "https://arxiv.org/abs/2611.25898",
+    "title": "Verifiable Logic in Medical LLMs: A Critical Review of Agentic Clinical Reasoning Optimization and Neuro-Symbolic Grounding",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T10:49:23Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Clinical large language models are usually judged by whether the final answer is right. Yet a model can reach a fluent, plausible output through invalid reasoning that static benchmarks do not detect, and confident hallucination, causally invalid inference, and spurious demographic shortcuts can pass conventional…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Youssef ElNahas",
+      "Adel Ammar",
+      "Soumaya Chaffar",
+      "Wadii Boulila"
+    ],
+    "arxiv_id": "2611.25898",
+    "summary": null
+  },
+  {
+    "id": "e29ac258c013c12c",
+    "url": "https://openai.com/business/learn/codex-security-plugin-demo",
+    "title": "Explore the Codex Security Plugin",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-19T00:00:00Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Watch a demo of the Codex Security Plugin and see the workflow in action, from getting started to reviewing the results shown in the recording.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "4b08ec50268e04a4",
+    "url": "https://openai.com/business/learn/deploying-daybreak-red",
+    "title": "Deploying Daybreak Red",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-19T00:00:00Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Explore a reference architecture for supervised security investigations with Daybreak Red, including safety controls, setup, and monitoring.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "7564c6d321c53664",
+    "url": "https://arxiv.org/abs/2611.25165",
+    "title": "Separating Interpretability and Reconstruction in Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-18T20:41:27Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Sparse Autoencoders (SAEs) are effective tools for mechanistic interpretability by decomposing neural representations into sparse and interpretable features. However, a single sparse representation in traditional SAEs is responsible for both reconstruction fidelity and interpretability, which are not guaranteed to…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Anh Tien Nguyen",
+      "Dimitris Samaras",
+      "Mahdi S. Hosseini"
+    ],
+    "arxiv_id": "2611.25165",
+    "summary": null
+  },
+  {
+    "id": "2808bdd6408f8f3a",
+    "url": "https://arxiv.org/abs/2611.25135",
+    "title": "Calibrated Decision Rewards: Training Language Models with a Judge That Knows How Sure It Is",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-18T20:15:18Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Reinforcement learning (RL) can only teach a language model what its reward can recognize. Answer checkers are exact but need a reference answer; learned reward models and LLM judges work everywhere, but their scores are not probabilities.",
+    "topics": [],
+    "authors": [
+      "Rudransh Agnihotri",
+      "Manasvi Kapoor"
+    ],
+    "arxiv_id": "2611.25135",
+    "summary": null
+  },
+  {
+    "id": "398d1bf49159a234",
+    "url": "https://arxiv.org/abs/2611.25119",
+    "title": "Auditing Learned Dynamics in Weather Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-18T19:58:01Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Learned weather models are experimentally accessible computational systems whose internal representations can be inspected and manipulated. Using sparse autoencoder features from GraphCast, DeepMind's autoregressive weather forecasting model, we test whether causal relevance requires physical semantics, a question…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Skylar Gu",
+      "Christina Last"
+    ],
+    "arxiv_id": "2611.25119",
+    "summary": null
+  },
+  {
     "id": "bd629930aca1200b",
     "url": "https://arxiv.org/abs/2611.24936",
     "title": "Jailbreak Detection on Large Language Models via Contrastive Prototype Structures",
@@ -1264,6 +1495,21 @@
       "Jaemin Jo"
     ],
     "arxiv_id": "2611.17856",
+    "summary": null
+  },
+  {
+    "id": "3e8c41bccb124066",
+    "url": "https://www.alignmentforum.org/posts/uxsDuWWHNTpKrsF6P/looping-a-transformer-increases-no-cot-capabilities-more",
+    "title": "Looping a transformer increases no-CoT capabilities more than general capabilities",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-13T06:57:17Z",
+    "fetched_at": "2026-11-20T14:41:43Z",
+    "excerpt": "Some researchers worry that looping (as in looped transformers ) is a particularly scary way to make AI models more capable, because looped models will be harder to monitor than standard transformers of similar capability. We test this worry on NVIDIA’s Dory 4B, a publicly available looped transformer, and find…",
+    "topics": [],
+    "authors": [
+      "Alek Westover"
+    ],
     "summary": null
   },
   {
