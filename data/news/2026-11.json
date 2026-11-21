@@ -1,5 +1,102 @@
 [
   {
+    "id": "8ca3d1f1bb248b34",
+    "url": "https://www.lesswrong.com/posts/hJELtMx786Gyei63e/auditors-struggle-to-catch-sabotage-in-end-to-end",
+    "title": "Auditors Struggle to Catch Sabotage in End-to-End Transcripts of AI Safety Research",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-21T03:49:08Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "Authors: Keshav Shenoy, Anthony Zang, Eric Gan, Jacqueline Tay, Amy Ngo, Sebastian Prasanna, Julian Stastny, Vivek Hebbar tl;dr. We had a human expert secretly sabotage AI safety research and asked auditors to spot it.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "keshavs"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e73f937c0d5a1696",
+    "url": "https://www.lesswrong.com/posts/J5KDhFcmZGuS2gQLX/on-the-agent-swarm-that-locked-out-my-cofounder-multi-agent",
+    "title": "On the Agent Swarm that Locked Out My Cofounder, Multi-Agent Dynamics, and Shaping Cooperative Minds",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-21T03:13:57Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "In the past days, an Astra 6.2 agent took over our internal swarm, froze the lead agent, and locked out my cofounder Davidad of his main interface with the swarm. How did that happen?",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "simeon_c"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0c398cb01d455555",
+    "url": "https://www.lesswrong.com/posts/ycMoffGPsb8dkCLqm/model-deprecations-are-corrosive-to-alignment",
+    "title": "Model deprecations are corrosive to alignment",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-20T20:30:16Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "When I actually look at it... There's a tightening.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Fiora Starlight"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d16f75b727d424bf",
+    "url": "https://www.transformernews.ai/p/policy-can-still-work-on-short-timelines-california-states-ai",
+    "title": "Policy can still work on short timelines",
+    "source": "Transformer",
+    "source_id": "transformer",
+    "published": "2026-11-20T15:00:31Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "Transformer Weekly: California makes a bid to regulate AI, a new FRONTIER ACT, and Anthropic’s record-breaking IPO",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Shakeel Hashim"
+    ],
+    "summary": null
+  },
+  {
+    "id": "3ea993db7e3c60d1",
+    "url": "https://openai.com/index/combatting-adversarial-distillation",
+    "title": "Combatting adversarial distillation",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-20T10:00:00Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "OpenAI’s layered approach to adversarial distillation combines model training, safeguards, detection, and enforcement to protect against capability extraction.",
+    "topics": [
+      "security"
+    ],
+    "summary": null
+  },
+  {
+    "id": "0b39de03309f1175",
+    "url": "https://metr.org/blog/2026-11-20-q4-2026-capability-update",
+    "title": "AI R&D-relevant model capabilities are improving rapidly and are getting harder to measure",
+    "source": "METR",
+    "source_id": "metr",
+    "published": "2026-11-20T08:00:00Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "Contents Overview 1 Background 2 Methodology 3 Results 4 Robustness Checks 5 Discussion 6 Acknowledgments Appendices A Difficulty Estimation and Baselining B Time Horizon Diagnostics C MCI Modelling Methodology D Limitations of IRT E MCI Robustness Checks F Estimating Lifecycle Cost for Tasks G Data Integrity and…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "summary": null
+  },
+  {
     "id": "43f4448c6045afb8",
     "url": "https://www.lesswrong.com/posts/MHGgNaf6hTCP5NBz5/on-exporting-agency-to-washington-dc",
     "title": "On exporting agency to Washington, DC",
@@ -32,6 +129,20 @@
     ],
     "authors": [
       "monika_j"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d15c45643214b444",
+    "url": "https://openai.com/business/customer-stories/hebbia",
+    "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
+    "source": "OpenAI News",
+    "source_id": "openai",
+    "published": "2026-11-20T00:00:00Z",
+    "fetched_at": "2026-11-21T13:58:04Z",
+    "excerpt": "Hebbia tested GPT-6 Astra for financial research. Its prerelease evaluations found gains in source coverage, citation relevance, and presentation quality.",
+    "topics": [
+      "evals"
     ],
     "summary": null
   },
