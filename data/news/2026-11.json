@@ -1,5 +1,56 @@
 [
   {
+    "id": "d8dc47c5b8f30d0f",
+    "url": "https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark",
+    "title": "Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab’s AI science benchmark",
+    "source": "Import AI",
+    "source_id": "import-ai",
+    "published": "2026-11-23T14:11:17Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Welcome to Import AI, a newsletter about AI research. Import AI runs on arXiv, cappuccinos, and feedback from readers.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Jack Clark"
+    ],
+    "summary": null
+  },
+  {
+    "id": "b5da51bdee5c8be5",
+    "url": "https://www.lesswrong.com/posts/FXGukrjX3bWCi7ycR/moderately-cursed-questions-of-ai-safety",
+    "title": "Moderately cursed questions of AI safety",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-23T11:56:04Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "TL;DR AI safety has many moderately cursed questions (as opposed to the extremely cursed questions of s-risk , which we don’t discuss here). Taboo prevents open discussion of these cursed questions in AI safety spaces outside LessWrong.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "alkjash"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ad5d781bc0545616",
+    "url": "https://www.lesswrong.com/posts/rEdEKoFsnGXityjcL/nuclear-may-have-had-bigger-problems-than-over-regulation",
+    "title": "Nuclear may have had bigger problems than over-regulation",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-22T18:09:09Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "There have always been three main challenges to the viability of nuclear power: over-regulation, competition from natural gas, and stagnant electricity demand. It is easy to list them, but hard to rank their importance.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "transhumanist_atom_understander"
+    ],
+    "summary": null
+  },
+  {
     "id": "6f045838c8cf5b60",
     "url": "https://www.lesswrong.com/posts/yyz2LAptjWgR7PKBD/trump-on-superintelligence-it-may-be-too-super-what-is-china",
     "title": "Trump on superintelligence: “It may be too super.” What is China saying?",
@@ -102,6 +153,63 @@
     "summary": null
   },
   {
+    "id": "965774fc95b0e75a",
+    "url": "https://arxiv.org/abs/2611.27652",
+    "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T14:17:08Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Machine unlearning is an approach to privacy protection: it aims to remove the influence of designated data while preserving the model's behavior on information that should be retained. While a growing body of work investigates this objective in autoregressive large language models, machine unlearning remains…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yunha Seo",
+      "Changhoon Kim"
+    ],
+    "arxiv_id": "2611.27652",
+    "summary": null
+  },
+  {
+    "id": "5eed1aed48c72ffb",
+    "url": "https://arxiv.org/abs/2611.27504",
+    "title": "The Assistant Persona Differs Across Languages in Activation Space",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T11:52:33Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Large language models behave differently across languages, and are noticeably less safe in lower-resource languages. This gap is well established behaviorally, but not mechanistically.",
+    "topics": [],
+    "authors": [
+      "Daniel Yoo",
+      "Naama Rozen",
+      "Evan Harris"
+    ],
+    "arxiv_id": "2611.27504",
+    "summary": null
+  },
+  {
+    "id": "830195f89c675bdc",
+    "url": "https://arxiv.org/abs/2611.27424",
+    "title": "Jagged Robustness: Uneven Safety Transfer and Emerging Vulnerabilities under LLM Quantization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T10:24:25Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Quantization enables efficient inference in language models through model parameter compression. This work audits the impact of quantization on capability and safety domains including model safeguards, instruction-following, ethics and bias.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Ramneek Agnihotri",
+      "Yingte Xu",
+      "Hans Vath"
+    ],
+    "arxiv_id": "2611.27424",
+    "summary": null
+  },
+  {
     "id": "3ea993db7e3c60d1",
     "url": "https://openai.com/index/combatting-adversarial-distillation",
     "title": "Combatting adversarial distillation",
@@ -113,6 +221,73 @@
     "topics": [
       "security"
     ],
+    "summary": null
+  },
+  {
+    "id": "01872c42035d7896",
+    "url": "https://arxiv.org/abs/2611.27353",
+    "title": "WaXup: Weight Averaging of Experts as Data Augmentation for Robust Introspection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T09:25:27Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "As the capabilities of large language models keep improving, traditional mechanistic interpretability methods struggle to keep pace. In contrast, trainable introspection methods emerge as a promising alternative; they repurpose the model itself as a self-diagnostic tool, trained to verbalize what it has learned during…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Marc Boëlle",
+      "Lucas Dixon",
+      "Alexandre Ramé"
+    ],
+    "arxiv_id": "2611.27353",
+    "summary": null
+  },
+  {
+    "id": "d6efc31d2ae07c1f",
+    "url": "https://arxiv.org/abs/2611.27329",
+    "title": "H-MSAE: Hierarchical Sparse Concept Coverage for Efficient and Diverse Instruction Data Selection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T09:08:19Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Large instruction-tuning corpora contain substantial semantic redundancy, motivating the selection of compact subsets that preserve useful supervision while reducing training cost. Existing diversity-aware selectors often rely on generated semantic tags and explicit graph structures, introducing considerable…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Bohan Cui",
+      "Jingyi Cui",
+      "Hongwei Wen",
+      "Feng Wang",
+      "Simiu Gu"
+    ],
+    "arxiv_id": "2611.27329",
+    "summary": null
+  },
+  {
+    "id": "8fb84deae6b27551",
+    "url": "https://arxiv.org/abs/2611.27288",
+    "title": "Preserving Pretrained CFG Structure in RL for Diffusion Models with Conditional Contrast Regularization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T08:27:32Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Reinforcement Learning (RL) has become an important component in the post-training of diffusion models. In practice, however, standard RL often improves the target reward without reliably preserving holistic generation quality, leading to unstable reward-quality trade-offs that we view as a form of reward hacking.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Yunfei Zheng",
+      "Xiaolong Wang",
+      "Dandan Zheng",
+      "Xianjun Deng",
+      "Shenghao Liu",
+      "Wei Xiang",
+      "Yuqian Li",
+      "Laurence Tianruo Yang"
+    ],
+    "arxiv_id": "2611.27288",
     "summary": null
   },
   {
@@ -167,6 +342,100 @@
     "summary": null
   },
   {
+    "id": "a25e27fc12717ac0",
+    "url": "https://arxiv.org/abs/2611.27079",
+    "title": "Weight-space programming and mechanistic interpretability for model editing in particle physics",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T03:46:32Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "We demonstrate that weight-space programming and edits guided by sparse autoencoders can remove unwanted aspects of a particle-physics foundation model through direct edits to its weights. In a foundation model trained on jets, we observe that adding a single soft neutral particle causes large changes in jet…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Raphaël Bonnet-Guerrini",
+      "Johann Ioannou-Nikolaides",
+      "Troels Petersen"
+    ],
+    "arxiv_id": "2611.27079",
+    "summary": null
+  },
+  {
+    "id": "27117f410f607a1a",
+    "url": "https://arxiv.org/abs/2611.26998",
+    "title": "Reward Integrity in Adversarial Reinforcement Learning for LLM Guardrail Red-Teaming",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T02:26:54Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "We study reward fidelity in an adversarial reinforcement-learning loop for red-teaming financial-services language-model guardrails. Apparent wins can arise when an attack omits prescribed personally identifiable information (PII), or when a reward judge credits a response that did not break the targeted policy.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Chengming Liu",
+      "Leon Viti",
+      "Hongxu Chen",
+      "Erdem Kemik",
+      "Mary-Anne Williams",
+      "Ruth Oliver"
+    ],
+    "arxiv_id": "2611.26998",
+    "summary": null
+  },
+  {
+    "id": "c8d198630fcbc0c3",
+    "url": "https://arxiv.org/abs/2611.26942",
+    "title": "CodeReviewBench: An Automated Benchmark for Evaluating the Software Factory",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T00:54:46Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "As AI agents ship more code with minimal human oversight, code review becomes the critical quality-control checkpoint -- but one without a reliable, objective verifier: review quality is nuanced and ultimately a judgment call by the PR author. Existing benchmarks are structurally misaligned with this: annotators are…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Ashley Zhang",
+      "Narmeen Fatimah Oozeer",
+      "Aleksandr Zverianskii",
+      "Daniel Ng",
+      "Tasana Pejovic",
+      "Antía García",
+      "Jacob Clyne",
+      "Ravpreet Setia",
+      "Akshay Utture",
+      "Etan Jacob Ginsberg",
+      "Shriyash Kaustubh Upadhyay",
+      "Fazl Barez"
+    ],
+    "arxiv_id": "2611.26942",
+    "summary": null
+  },
+  {
+    "id": "0f4f657297a8a500",
+    "url": "https://arxiv.org/abs/2611.26940",
+    "title": "CENTRY: A Probabilistic Latent-State Model for Continual AI Risk Estimation, Monitoring, and Regulation",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-20T00:52:05Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Artificial Intelligence (AI) systems are increasingly deployed in safety-critical applications, yet existing AI safety frameworks primarily define, categorize, or govern AI risk rather than proposing implementable models and methods for continually estimating, monitoring, and regulating risk throughout an AI system's…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Bonny Banerjee",
+      "Geetha Raju"
+    ],
+    "arxiv_id": "2611.26940",
+    "summary": null
+  },
+  {
     "id": "d15c45643214b444",
     "url": "https://openai.com/business/customer-stories/hebbia",
     "title": "Hebbia sees improvements in financial research with GPT-6 Astra",
@@ -178,6 +447,31 @@
     "topics": [
       "evals"
     ],
+    "summary": null
+  },
+  {
+    "id": "3c3aa18781a83d8a",
+    "url": "https://arxiv.org/abs/2611.26711",
+    "title": "Parasite Features: Causal Abstraction Through Spurious Pathways",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T19:12:58Z",
+    "fetched_at": "2026-11-23T16:59:20Z",
+    "excerpt": "Causal Abstraction defines a notion of \\emph{equivalence} between a neural network and an algorithm, thus serving as a powerful framework for mechanistic interpretability. In this paper, however, we show the existence of a class of \\emph{spurious features} which straightforwardly pass such equivalence tests.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Denis Sutter",
+      "Qing Yao",
+      "Sasha Boguraev",
+      "Julian Minder",
+      "Antonio Di Maio",
+      "Thomas Hofmann",
+      "Kyle Mahowald",
+      "Tiago Pimentel"
+    ],
+    "arxiv_id": "2611.26711",
     "summary": null
   },
   {
