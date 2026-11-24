@@ -1,5 +1,128 @@
 [
   {
+    "id": "9ac5b82b2ff7aede",
+    "url": "https://www.lesswrong.com/posts/7Zvs6w7BzLFYoGzDH/most-attempts-at-measuring-eval-awareness-overestimate-it",
+    "title": "Most attempts at measuring eval awareness overestimate it",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-24T15:17:11Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Alignment researchers often want to gather evidence on whether experimental and commercial AIs have our best interests in mind, or are just optimizing some proxy that they learned in training - and if the latter, where the two diverge. Essentially the only flexible technique people outside labs have for doing this, in…",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Dean Valentine"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2207c8f526bb87e4",
+    "url": "https://newsletter.safe.ai/p/aisn-86-anthropic-accused-of-recklessness",
+    "title": "AISN #86: Anthropic Accused of Recklessness as it Goes Public",
+    "source": "AI Safety Newsletter (CAIS)",
+    "source_id": "ai-safety-newsletter",
+    "published": "2026-11-24T14:31:03Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Also, AI companies face loss-of-control lawsuits and Jensen Huang returns as Nvidia CEO.",
+    "topics": [],
+    "authors": [
+      "Laura Hiscott"
+    ],
+    "summary": null
+  },
+  {
+    "id": "635faf642e3ef2e8",
+    "url": "https://www.lesswrong.com/posts/nCjAug5FgsCevAEGg/the-new-metr-time-horizon-results-basic-explainer",
+    "title": "The new METR time horizon results: basic explainer",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-24T12:26:38Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "You may have seen that METR released new time horizons results . If you’re like me, you may have thought “hmm, this seems important”, followed by some amount of “I’m not sure what I’m looking at”.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "draganover"
+    ],
+    "summary": null
+  },
+  {
+    "id": "eb0db59bad4df4f9",
+    "url": "https://www.lesswrong.com/posts/hNsPFqdYtjKguaSmv/what-if-the-rsa-rumors-are-true",
+    "title": "What if the RSA rumors are true?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-24T05:59:41Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "I recently heard two very alarming rumors. The first is that an internal AI model at one of the big labs has found a weakness in RSA, the encryption scheme behind much of the internet's security.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "frmsaul"
+    ],
+    "summary": null
+  },
+  {
+    "id": "519bbfbf5790ba24",
+    "url": "https://www.lesswrong.com/posts/nWRps3zxN7isngSsT/joseph-miller-actually-tried-is-that-enough",
+    "title": "Joseph Miller Actually Tried. Is that enough?",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-23T21:34:51Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Last week, over 1,000 people in six countries Marched for an AI Treaty , an international day of protest organized by Stop The AI Race, with local organizers including DC AI Safety, PauseAI, and many others. March of an AI Treaty in San Francisco (📸 Rachel Bujalski) Then Thursday, Stop The AI Race came in support of…",
+    "topics": [
+      "alignment",
+      "governance"
+    ],
+    "authors": [
+      "Michaël Trazzi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "51d79421dd7e5713",
+    "url": "https://www.lesswrong.com/posts/4eXof4KR6d4edmcJ2/everyone-in-ai-safety-gets-fomo",
+    "title": "Everyone in AI safety gets FOMO",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-23T19:36:27Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "If you’re feeling like you should drop everything and do something else (more advocacy, more technical research, more theory research, more empirical research, etc), one thing I’d like to communicate to you is that many (all?) in AI safety feel this way or have felt this way at some point. Why?",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Africa"
+    ],
+    "summary": null
+  },
+  {
+    "id": "f1b0a77b9b7d4285",
+    "url": "https://arxiv.org/abs/2611.30939",
+    "title": "Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T16:22:29Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Mechanistic interpretability seeks to reverse-engineer neural networks by identifying small, faithful subgraphs--circuits--that implement specific behaviors. The dominant paradigm scores each unit by replacing its clean activation with a corrupted counterpart as causal intervention.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yujie Zhang",
+      "Tianyi Zhao",
+      "Guanghui Min",
+      "Chen Chen"
+    ],
+    "arxiv_id": "2611.30939",
+    "summary": null
+  },
+  {
     "id": "d8dc47c5b8f30d0f",
     "url": "https://jack-clark.net/2026/11/23/import-ai-482-huawei-kernel-benchmarks-airborne-drone-detection-and-a-national-labs-ai-science-benchmark",
     "title": "Import AI 482: Huawei kernel benchmarks; airborne drone detection; and a national lab’s AI science benchmark",
@@ -14,6 +137,50 @@
     "authors": [
       "Jack Clark"
     ],
+    "summary": null
+  },
+  {
+    "id": "933f4fa1add6f602",
+    "url": "https://arxiv.org/abs/2611.30672",
+    "title": "Uncovering Hidden Behaviours in Language Models via Limited-Parameter Finetuning",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T13:28:32Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Large language models can have behaviours which only arise in hard-to-anticipate contexts. These hidden behaviours pose a challenge to alignment audits, which seek to uncover problematic model behaviour but are limited by the scenarios the auditor can anticipate.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Boyd Kane",
+      "Jo J. Jiao",
+      "Elizabeth Donoway",
+      "Bryce Woodworth",
+      "Alex Cloud",
+      "Alexander M. Turner"
+    ],
+    "arxiv_id": "2611.30672",
+    "summary": null
+  },
+  {
+    "id": "04fd5f6b5921a07c",
+    "url": "https://arxiv.org/abs/2611.30583",
+    "title": "Interrogation Protocols for AI Control",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T12:25:23Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "As the intelligence of an AI agent increases relative to a trusted monitor, so does the risk that the monitor will fail to understand the agent's actions or to evaluate them confidently. We introduce interrogation protocols to a high-stakes AI control setting, and allow the monitor to ask the untrusted agent questions…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Aniruddh Pramod",
+      "Matthew Khoriaty",
+      "James Lucassen",
+      "Adam Kaufman"
+    ],
+    "arxiv_id": "2611.30583",
     "summary": null
   },
   {
@@ -34,6 +201,144 @@
     "summary": null
   },
   {
+    "id": "8a1873845fe187b8",
+    "url": "https://arxiv.org/abs/2611.30006",
+    "title": "Sequential Selection against an Adaptive Opponent",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T04:10:06Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Selecting a strategy by testing it against an opponent is common in game-playing AI, red-teaming of language models, and safety evaluations of AI agents. In many of these settings, the opponent adapts to what it observes, so a strategy that keeps winning in practice may already have stopped working by the time it is…",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Zhongyuan Lyu",
+      "Xiaocong Xu"
+    ],
+    "arxiv_id": "2611.30006",
+    "summary": null
+  },
+  {
+    "id": "92d249c78817578f",
+    "url": "https://arxiv.org/abs/2611.29982",
+    "title": "Verifying Declared AI Workloads from GPU Supply Current",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T03:47:21Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Frontier AI governance agreements require compute verification techniques that allow an external observer to confirm that a hardware operator does not run prohibited workloads. Off-chip, analogue hardware signals, such as power draw, have been proposed as a potential information channel for compute verification.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Tom Kimpson"
+    ],
+    "arxiv_id": "2611.29982",
+    "summary": null
+  },
+  {
+    "id": "3bfdb7d3dc435b41",
+    "url": "https://arxiv.org/abs/2611.29977",
+    "title": "Conartist: Adaptive Agentic Red-Teaming of Computer-Using Agents against Multi-Step Prompt Injection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T03:41:22Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Harnesses secure Computer-Using Agents by enforcing security constraints and defending against prompt injection attacks. However, we find that two core security mechanisms of agent harnesses remain vulnerable.",
+    "topics": [
+      "evals",
+      "security"
+    ],
+    "authors": [
+      "Jiaqi Rong",
+      "Yunchen Lu",
+      "Lihai Nie",
+      "Yan Jia",
+      "Tong Li",
+      "Zheli Liu"
+    ],
+    "arxiv_id": "2611.29977",
+    "summary": null
+  },
+  {
+    "id": "2329523c017f7af9",
+    "url": "https://arxiv.org/abs/2611.29960",
+    "title": "Tracing Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T03:23:01Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Reinforcement learning can increase the success of automated red teaming but it also narrows the attack vector. This study asks where in the attacker-defender-judge learning loop does the narrowing begin and which mechanisms lead to a narrowing attack.",
+    "topics": [
+      "evals"
+    ],
+    "authors": [
+      "Chris Tava"
+    ],
+    "arxiv_id": "2611.29960",
+    "summary": null
+  },
+  {
+    "id": "dbfc0ea91a026b17",
+    "url": "https://arxiv.org/abs/2611.29936",
+    "title": "SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-23T02:54:19Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated strong performance in improving large language model (LLM) reasoning, yet its credit-assignment signal remains coarse. Outcome verifiers provide scalable supervision by judging whether a completed response is correct, but they do not directly…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Yusong Zhao",
+      "Zihao Zhao",
+      "Zirui Zhang",
+      "Tunyu Zhang",
+      "Ziyan Wang",
+      "Yi Wang",
+      "Chengzhi Mao",
+      "Hao Wang"
+    ],
+    "arxiv_id": "2611.29936",
+    "summary": null
+  },
+  {
+    "id": "e5b8d8f0d52cd435",
+    "url": "https://arxiv.org/abs/2611.29752",
+    "title": "Why Units Die in the Layer After a Frozen Random Encoder, and What the Number of Live Units Measures",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T20:32:35Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Reinforcement-learning agents can learn Atari games through a convolutional encoder whose random weights are never trained. They reach expert play in Pong and, without random action repeats, in Breakout, but training takes far longer and few ReLU units in the layer after the encoder stay alive.",
+    "topics": [],
+    "authors": [
+      "Scott M. Norton"
+    ],
+    "arxiv_id": "2611.29752",
+    "summary": null
+  },
+  {
+    "id": "522e09022e2129a3",
+    "url": "https://arxiv.org/abs/2611.29715",
+    "title": "From States to Dynamics: Detecting Rule Violations in OthelloGPT",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T19:27:23Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Sequence models trained on game moves have been shown to encode world models, with structured linear probes revealing the underlying game states. World models, however, are inherently dynamic: in deterministic board games, a set of rules constrain how states evolve over time.",
+    "topics": [],
+    "authors": [
+      "David L. Cao",
+      "Sai Sumedh R. Hindupur",
+      "Demba Ba"
+    ],
+    "arxiv_id": "2611.29715",
+    "summary": null
+  },
+  {
     "id": "ad5d781bc0545616",
     "url": "https://www.lesswrong.com/posts/rEdEKoFsnGXityjcL/nuclear-may-have-had-bigger-problems-than-over-regulation",
     "title": "Nuclear may have had bigger problems than over-regulation",
@@ -51,6 +356,83 @@
     "summary": null
   },
   {
+    "id": "a46beab01d8e75e5",
+    "url": "https://arxiv.org/abs/2611.29651",
+    "title": "Which Loopholes Get Found? Predicting Reward Hacking of LLM Judges Before RL Training",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T17:52:26Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "A policy trained against an LLM judge can learn to exploit its loopholes. Static probes show that such judges accept degenerate answers like a lone \"{\" or \"Thought process:\", but not which flaw a policy will find.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Xuanyi Lyu",
+      "Yuezhou Zhao",
+      "Qing Qin"
+    ],
+    "arxiv_id": "2611.29651",
+    "summary": null
+  },
+  {
+    "id": "a14f2ae3db71f3f3",
+    "url": "https://arxiv.org/abs/2611.29532",
+    "title": "Adaptation or Poisoning? Security Risks of Conversational Test-Time Learning in Large Language Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T14:58:43Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Test-time learning (TTL) enables large language models to adapt to unlabeled inputs during deployment. The model updates a lightweight adapter by minimizing the next-token prediction loss on the input it receives.",
+    "topics": [
+      "alignment",
+      "security"
+    ],
+    "authors": [
+      "Honghao Feng",
+      "Shanhan Qu",
+      "Kai Tong",
+      "Shuquan Man",
+      "Huiping Zhuang"
+    ],
+    "arxiv_id": "2611.29532",
+    "summary": null
+  },
+  {
+    "id": "c6017948ebf2bfce",
+    "url": "https://arxiv.org/abs/2611.29368",
+    "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T10:13:45Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Junbo Shen"
+    ],
+    "arxiv_id": "2611.29368",
+    "summary": null
+  },
+  {
+    "id": "c1b12c7488453930",
+    "url": "https://arxiv.org/abs/2611.29303",
+    "title": "From Vanishing Gradients to Recursive Self-Improvement: Evaluating the Most Influential Papers in Large Language Model Evolution (1997-2026)",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-22T07:49:18Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "The rapid proliferation of Large Language Model (LLM) research makes it increasingly difficult to distinguish incremental refinements from true paradigm shifts. This review evaluates 22 of the most influential publications spanning nearly three decades (1997-2026), organized through a causal, chronologically anchored…",
+    "topics": [],
+    "authors": [
+      "Saadh Jawwadh"
+    ],
+    "arxiv_id": "2611.29303",
+    "summary": null
+  },
+  {
     "id": "6f045838c8cf5b60",
     "url": "https://www.lesswrong.com/posts/yyz2LAptjWgR7PKBD/trump-on-superintelligence-it-may-be-too-super-what-is-china",
     "title": "Trump on superintelligence: “It may be too super.” What is China saying?",
@@ -65,6 +447,25 @@
     "authors": [
       "jacquesthibs"
     ],
+    "summary": null
+  },
+  {
+    "id": "6da6790fbf8a5cb7",
+    "url": "https://arxiv.org/abs/2611.29028",
+    "title": "Do You Even Know What I Want? Improving LLMs Ability to Detect Hidden User Intent",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-21T20:25:57Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "As with conventional AI agents, a common source of misalignment between Large Language Models (LLMs) and their human users is misspecified goals. Often, this happens when the human has skewed beliefs about the system's model and provides it with information that causes behavior different from what they expected, with…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Kelsey Sikes",
+      "Sarath Sreedharan"
+    ],
+    "arxiv_id": "2611.29028",
     "summary": null
   },
   {
@@ -447,6 +848,25 @@
     "topics": [
       "evals"
     ],
+    "summary": null
+  },
+  {
+    "id": "3967d82c78f207cc",
+    "url": "https://arxiv.org/abs/2611.28153",
+    "title": "From Observation to Explanation: Mechanistic Interpretability of LLM-Generated Code for Principled Repair",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-19T19:33:15Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Large language models (LLMs) have transformed software development, yet our understanding of how they generate code remains critically underdeveloped. We address this gap by triangulating evidence across three layers.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Musfiqur Rahman"
+    ],
+    "arxiv_id": "2611.28153",
     "summary": null
   },
   {
@@ -1438,6 +1858,31 @@
       "alignment",
       "evals"
     ],
+    "summary": null
+  },
+  {
+    "id": "49eb90764e5625ac",
+    "url": "https://arxiv.org/abs/2611.28082",
+    "title": "Frontier Open-Weight AI Risk Management Framework",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-16T05:18:45Z",
+    "fetched_at": "2026-11-24T16:47:43Z",
+    "excerpt": "Open-weight models advance transparency, research, and innovation, and spread the benefits of AI more widely. They also carry distinct risks.",
+    "topics": [
+      "governance"
+    ],
+    "authors": [
+      "Brian Tse",
+      "Oskar Galeev",
+      "Weibing Wang",
+      "Yuan Cheng",
+      "Liang Fang",
+      "Wenbin Qiao",
+      "Xiaochen Wang",
+      "Chen Zhang"
+    ],
+    "arxiv_id": "2611.28082",
     "summary": null
   },
   {

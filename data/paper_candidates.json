@@ -1,4 +1,279 @@
 {
+  "arxiv:2611.30939": {
+    "id": "arxiv:2611.30939",
+    "title": "Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis",
+    "authors": [
+      "Yujie Zhang",
+      "Tianyi Zhao",
+      "Guanghui Min",
+      "Chen Chen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.30939",
+    "abstract": "Mechanistic interpretability seeks to reverse-engineer neural networks by identifying small, faithful subgraphs--circuits--that implement specific behaviors. The dominant paradigm scores each unit by replacing its clean activation with a corrupted counterpart as causal intervention.",
+    "detected": "2026-11-24",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.30672": {
+    "id": "arxiv:2611.30672",
+    "title": "Uncovering Hidden Behaviours in Language Models via Limited-Parameter Finetuning",
+    "authors": [
+      "Boyd Kane",
+      "Jo J. Jiao",
+      "Elizabeth Donoway",
+      "Bryce Woodworth",
+      "Alex Cloud",
+      "Alexander M. Turner"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.30672",
+    "abstract": "Large language models can have behaviours which only arise in hard-to-anticipate contexts. These hidden behaviours pose a challenge to alignment audits, which seek to uncover problematic model behaviour but are limited by the scenarios the auditor can anticipate.",
+    "detected": "2026-11-24",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.30583": {
+    "id": "arxiv:2611.30583",
+    "title": "Interrogation Protocols for AI Control",
+    "authors": [
+      "Aniruddh Pramod",
+      "Matthew Khoriaty",
+      "James Lucassen",
+      "Adam Kaufman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.30583",
+    "abstract": "As the intelligence of an AI agent increases relative to a trusted monitor, so does the risk that the monitor will fail to understand the agent's actions or to evaluate them confidently. We introduce interrogation protocols to a high-stakes AI control setting, and allow the monitor to ask the untrusted agent questions…",
+    "detected": "2026-11-24",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.30006": {
+    "id": "arxiv:2611.30006",
+    "title": "Sequential Selection against an Adaptive Opponent",
+    "authors": [
+      "Zhongyuan Lyu",
+      "Xiaocong Xu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.30006",
+    "abstract": "Selecting a strategy by testing it against an opponent is common in game-playing AI, red-teaming of language models, and safety evaluations of AI agents. In many of these settings, the opponent adapts to what it observes, so a strategy that keeps winning in practice may already have stopped working by the time it is…",
+    "detected": "2026-11-24",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.29982": {
+    "id": "arxiv:2611.29982",
+    "title": "Verifying Declared AI Workloads from GPU Supply Current",
+    "authors": [
+      "Tom Kimpson"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29982",
+    "abstract": "Frontier AI governance agreements require compute verification techniques that allow an external observer to confirm that a hardware operator does not run prohibited workloads. Off-chip, analogue hardware signals, such as power draw, have been proposed as a potential information channel for compute verification.",
+    "detected": "2026-11-24",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.29977": {
+    "id": "arxiv:2611.29977",
+    "title": "Conartist: Adaptive Agentic Red-Teaming of Computer-Using Agents against Multi-Step Prompt Injection",
+    "authors": [
+      "Jiaqi Rong",
+      "Yunchen Lu",
+      "Lihai Nie",
+      "Yan Jia",
+      "Tong Li",
+      "Zheli Liu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29977",
+    "abstract": "Harnesses secure Computer-Using Agents by enforcing security constraints and defending against prompt injection attacks. However, we find that two core security mechanisms of agent harnesses remain vulnerable.",
+    "detected": "2026-11-24",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.29960": {
+    "id": "arxiv:2611.29960",
+    "title": "Tracing Attacker Diversity Reduction in Adaptive LLM Red Teaming",
+    "authors": [
+      "Chris Tava"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29960",
+    "abstract": "Reinforcement learning can increase the success of automated red teaming but it also narrows the attack vector. This study asks where in the attacker-defender-judge learning loop does the narrowing begin and which mechanisms lead to a narrowing attack.",
+    "detected": "2026-11-24",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.29936": {
+    "id": "arxiv:2611.29936",
+    "title": "SAEPO: Sparse-Autoencoder-Guided Credit Assignment for Policy Optimization",
+    "authors": [
+      "Yusong Zhao",
+      "Zihao Zhao",
+      "Zirui Zhang",
+      "Tunyu Zhang",
+      "Ziyan Wang",
+      "Yi Wang",
+      "Chengzhi Mao",
+      "Hao Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29936",
+    "abstract": "Reinforcement Learning with Verifiable Rewards (RLVR) has demonstrated strong performance in improving large language model (LLM) reasoning, yet its credit-assignment signal remains coarse. Outcome verifiers provide scalable supervision by judging whether a completed response is correct, but they do not directly…",
+    "detected": "2026-11-24",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.29752": {
+    "id": "arxiv:2611.29752",
+    "title": "Why Units Die in the Layer After a Frozen Random Encoder, and What the Number of Live Units Measures",
+    "authors": [
+      "Scott M. Norton"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29752",
+    "abstract": "Reinforcement-learning agents can learn Atari games through a convolutional encoder whose random weights are never trained. They reach expert play in Pong and, without random action repeats, in Breakout, but training takes far longer and few ReLU units in the layer after the encoder stay alive.",
+    "detected": "2026-11-24",
+    "topics": []
+  },
+  "arxiv:2611.29715": {
+    "id": "arxiv:2611.29715",
+    "title": "From States to Dynamics: Detecting Rule Violations in OthelloGPT",
+    "authors": [
+      "David L. Cao",
+      "Sai Sumedh R. Hindupur",
+      "Demba Ba"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29715",
+    "abstract": "Sequence models trained on game moves have been shown to encode world models, with structured linear probes revealing the underlying game states. World models, however, are inherently dynamic: in deterministic board games, a set of rules constrain how states evolve over time.",
+    "detected": "2026-11-24",
+    "topics": []
+  },
+  "arxiv:2611.29651": {
+    "id": "arxiv:2611.29651",
+    "title": "Which Loopholes Get Found? Predicting Reward Hacking of LLM Judges Before RL Training",
+    "authors": [
+      "Xuanyi Lyu",
+      "Yuezhou Zhao",
+      "Qing Qin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29651",
+    "abstract": "A policy trained against an LLM judge can learn to exploit its loopholes. Static probes show that such judges accept degenerate answers like a lone \"{\" or \"Thought process:\", but not which flaw a policy will find.",
+    "detected": "2026-11-24",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.29532": {
+    "id": "arxiv:2611.29532",
+    "title": "Adaptation or Poisoning? Security Risks of Conversational Test-Time Learning in Large Language Models",
+    "authors": [
+      "Honghao Feng",
+      "Shanhan Qu",
+      "Kai Tong",
+      "Shuquan Man",
+      "Huiping Zhuang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29532",
+    "abstract": "Test-time learning (TTL) enables large language models to adapt to unlabeled inputs during deployment. The model updates a lightweight adapter by minimizing the next-token prediction loss on the input it receives.",
+    "detected": "2026-11-24",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2611.29368": {
+    "id": "arxiv:2611.29368",
+    "title": "SAE-Audit: Clinical-Trial Prediction via Inference-Time Optimization of Black-Box LLMs Audited by Sparse Autoencoder Evidence",
+    "authors": [
+      "Junbo Shen"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29368",
+    "abstract": "Clinical trials are costly and often take years to complete, making early outcome prediction valuable for trial planning. Large language models (LLMs) are increasingly used to forecast clinical-trial outcomes, yet their predictions remain unreliable and their rationales may not faithfully reflect the evidence…",
+    "detected": "2026-11-24",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.29303": {
+    "id": "arxiv:2611.29303",
+    "title": "From Vanishing Gradients to Recursive Self-Improvement: Evaluating the Most Influential Papers in Large Language Model Evolution (1997-2026)",
+    "authors": [
+      "Saadh Jawwadh"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29303",
+    "abstract": "The rapid proliferation of Large Language Model (LLM) research makes it increasingly difficult to distinguish incremental refinements from true paradigm shifts. This review evaluates 22 of the most influential publications spanning nearly three decades (1997-2026), organized through a causal, chronologically anchored…",
+    "detected": "2026-11-24",
+    "topics": []
+  },
+  "arxiv:2611.29028": {
+    "id": "arxiv:2611.29028",
+    "title": "Do You Even Know What I Want? Improving LLMs Ability to Detect Hidden User Intent",
+    "authors": [
+      "Kelsey Sikes",
+      "Sarath Sreedharan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.29028",
+    "abstract": "As with conventional AI agents, a common source of misalignment between Large Language Models (LLMs) and their human users is misspecified goals. Often, this happens when the human has skewed beliefs about the system's model and provides it with information that causes behavior different from what they expected, with…",
+    "detected": "2026-11-24",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.28153": {
+    "id": "arxiv:2611.28153",
+    "title": "From Observation to Explanation: Mechanistic Interpretability of LLM-Generated Code for Principled Repair",
+    "authors": [
+      "Musfiqur Rahman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.28153",
+    "abstract": "Large language models (LLMs) have transformed software development, yet our understanding of how they generate code remains critically underdeveloped. We address this gap by triangulating evidence across three layers.",
+    "detected": "2026-11-24",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.28082": {
+    "id": "arxiv:2611.28082",
+    "title": "Frontier Open-Weight AI Risk Management Framework",
+    "authors": [
+      "Brian Tse",
+      "Oskar Galeev",
+      "Weibing Wang",
+      "Yuan Cheng",
+      "Liang Fang",
+      "Wenbin Qiao",
+      "Xiaochen Wang",
+      "Chen Zhang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.28082",
+    "abstract": "Open-weight models advance transparency, research, and innovation, and spread the benefits of AI more widely. They also carry distinct risks.",
+    "detected": "2026-11-24",
+    "topics": [
+      "governance"
+    ]
+  },
   "arxiv:2611.27652": {
     "id": "arxiv:2611.27652",
     "title": "Auditing Post-Training Unlearning in Diffusion Language Models using Sparse Autoencoders",
@@ -11662,441 +11937,5 @@
     "topics": [
       "alignment"
     ]
-  },
-  "arxiv:2609.28335": {
-    "id": "arxiv:2609.28335",
-    "title": "An Open Pipeline and Dashboard for Systemic-Risk Evidence under the EU AI Act's Code of Practice",
-    "authors": [
-      "Jacob T. Emmerson",
-      "Phuong-Anh Nguyen-Le",
-      "Ronan Romano",
-      "Wilber Sean V. Anterola",
-      "Yann Billeter",
-      "Zhijing Jin"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.28335",
-    "abstract": "Claims about AI safety reach audiences well beyond the AI community, yet many rely on opaque evidence or static assessments, when supporting evidence is accessible at all. We present the Systemic Risk Index, an open evaluation pipeline and dashboard built to make empirical evidence more transparent and traceable to…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "evals",
-      "governance",
-      "security"
-    ]
-  },
-  "arxiv:2609.28137": {
-    "id": "arxiv:2609.28137",
-    "title": "\"We'll Fix It Later\": Education, AI, and the Deferral of Privacy in EdTech",
-    "authors": [
-      "Meghna Manoj Nair",
-      "Rachel Greenstadt"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.28137",
-    "abstract": "Educational technology (EdTech) platforms collect highly sensitive student data, including behavioral logs, disability records, and academic histories. However, privacy considerations are often postponed rather than treated as a foundational design requirement.",
-    "detected": "2026-09-24",
-    "topics": []
-  },
-  "arxiv:2609.27572": {
-    "id": "arxiv:2609.27572",
-    "title": "DCRL: Decoupling and Coupling Reinforcement Learning via Policy-Reward Manifold Alignment",
-    "authors": [
-      "Henan Sun",
-      "Zehua Li",
-      "Haitao Hu",
-      "Qifan Zhang",
-      "Jianfeng Zhang",
-      "Nuo Chen",
-      "Jia Li"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27572",
-    "abstract": "Reinforcement learning (RL) has emerged as a key paradigm for improving the reasoning capabilities of large language models (LLMs). However, existing reward systems, such as rule-based and reward-model-based, often exhibit issues such as unstable optimization and reward hacking.",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
-  "arxiv:2609.27378": {
-    "id": "arxiv:2609.27378",
-    "title": "Psychoacoustically Aligned Latent Smoothing for Adversarial Robustness of Full-Duplex Speech-to-Speech Dialogue Models",
-    "authors": [
-      "Kian Shamsaie",
-      "Iman Modarressi"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27378",
-    "abstract": "End-to-end speech-to-speech dialogue models listen and speak simultaneously, so a continuously open acoustic channel is exposed to adversarial manipulation. We formalize imperceptible attacks on full-duplex agents as optimization over additive perturbations confined beneath the psychoacoustic masking threshold of the…",
-    "detected": "2026-09-24",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.27336": {
-    "id": "arxiv:2609.27336",
-    "title": "CART: Closed-Loop Adaptive Red Teaming for Large Language Models",
-    "authors": [
-      "Dongdong Zhang",
-      "Tengchao Lv",
-      "Yilin Jia",
-      "Yuzhong Zhao",
-      "Yupan Huang",
-      "Wenshan Wu",
-      "Xiangyang Zhou",
-      "Shaohan Huang",
-      "Nan Yang",
-      "Li Dong",
-      "Lei Cui",
-      "Furu Wei"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27336",
-    "abstract": "Automated red teaming often replays a fixed set of prompts, which measures known risks but cannot learn from failures found during testing. We present CART (Closed-Loop Adaptive Red Teaming), a framework that uses each result to guide what it tests next.",
-    "detected": "2026-09-24",
-    "topics": [
-      "evals"
-    ]
-  },
-  "arxiv:2609.27038": {
-    "id": "arxiv:2609.27038",
-    "title": "Are Stated Reasoning Steps Causally Load-Bearing?",
-    "authors": [
-      "Abhiram Bhupatiraju",
-      "Rayan Nyaupane"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.27038",
-    "abstract": "Chain-of-thought (CoT) monitoring assumes that the reasoning a model writes reflects the computation that directly produces its answer. Previous faithfulness metrics have been predominantly behavioral, as they simply edit the reasoning text and observe the resulting answer.",
-    "detected": "2026-09-24",
-    "topics": []
-  },
-  "arxiv:2609.26865": {
-    "id": "arxiv:2609.26865",
-    "title": "Safety Nudges: User-Facing Interventions for Real-Time AI Risk Awareness",
-    "authors": [
-      "Varshini Elangovan",
-      "James Wedgwood",
-      "Chhavi Yadav",
-      "William Agnew",
-      "Sauvik Das",
-      "Virginia Smith"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.26865",
-    "abstract": "Conversational AI systems can pose safety risks to their users such as hallucination, sycophancy, overconfidence, and anthropomorphism, but these risks are difficult for users to detect during everyday use. We introduce Safety Nudges, a browser-based tool that provides lightweight, in situ flags when concerning…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.22712": {
-    "id": "arxiv:2609.22712",
-    "title": "Trustworthy Agentic AI: Failure Modes, Mitigation Strategies, and a Lifecycle Framework for Autonomous LLM Systems",
-    "authors": [
-      "Fayeq Jeelani Syed",
-      "Rehan Ahmad",
-      "Ali Al Bataineh",
-      "Aakriti Adhikari"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.22712",
-    "abstract": "Agentic AI systems built on large language models can plan over multiple steps, use external tools, retain information in memory, and coordinate with other agents. These capabilities make them more useful than static language models, but they also introduce new security and operational risks.",
-    "detected": "2026-09-24",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.18346": {
-    "id": "arxiv:2609.18346",
-    "title": "Faithful yet Collusive: Why Chain-of-Thought Monitoring Cannot Detect Collusion in LLM Pricing Agents under Oligopolistic Competition",
-    "authors": [
-      "Dohun Lee",
-      "Hyunwoo Park"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.18346",
-    "abstract": "Large language models (LLM) deployed as autonomous pricing agents may sustain supracompetitive prices through tacit coordination. We develop a causal graph divergence framework that separately measures structural faithfulness and intent faithfulness of LLM pricing agents in Bertrand competition.",
-    "detected": "2026-09-24",
-    "topics": [
-      "interpretability"
-    ]
-  },
-  "arxiv:2609.13624": {
-    "id": "arxiv:2609.13624",
-    "title": "An Efficient and Modular Framework for Targeted Harm Mitigation in LLMS",
-    "authors": [
-      "Roberto Campbell",
-      "Momin Abbas",
-      "Muneeza Azmat",
-      "Michal Ulewicz",
-      "Raya Horesh",
-      "Kristjan Greenewald",
-      "Rogério Abreu de Paula",
-      "Nathalie Baracaldo"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.13624",
-    "abstract": "Large Language Models (LLMs) are powerful zero-shot learners but remain prone to misalignment with human preferences, often producing biased, toxic, or otherwise harmful outputs. Existing alignment methods, while effective, are costly and tightly coupled to the model, limiting flexibility and scalability.",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.13579": {
-    "id": "arxiv:2609.13579",
-    "title": "How User-AI Mistreatment Occurs and Matters in Conversational Systems?",
-    "authors": [
-      "Fanqi Zeng",
-      "Sadid A. Hasan",
-      "Chaocheng He"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.13579",
-    "abstract": "Safety research often focuses on model-generated harms, but users may also direct hostility, coercion, and adversarial pressure at models. Understanding how and when that occurs is essential for accurately interpreting model behaviour, alignment drift, and real-world deployment risks.",
-    "detected": "2026-09-24",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.13556": {
-    "id": "arxiv:2609.13556",
-    "title": "Domain-Specific Jargon in Large Language Models: A Comparative Analysis between General-Purpose and Specialist Models",
-    "authors": [
-      "Darin Keng",
-      "Zhewei Sun"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.13556",
-    "abstract": "Large Language Models (LLMs) have shown remarkable proficiency on general-purpose tasks, yet their performance often degrades in highly-specialized technical domains. Moreover, little is known about how parametric knowledge of domain-specific terms is encoded within these models.",
-    "detected": "2026-09-24",
-    "topics": [
-      "interpretability",
-      "evals"
-    ]
-  },
-  "arxiv:2609.13534": {
-    "id": "arxiv:2609.13534",
-    "title": "Harmfulness Propagation Dynamics: Layer-wise Trajectories of Adversarial Intent in Large Language Models",
-    "authors": [
-      "Noor Islam S. Mohammad",
-      "Uluğ Bayazıt"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.13534",
-    "abstract": "We identify \\textbf{Harmfulness Propagation Dynamics (HPD)}: for harmful prompts, the projection of the last-token hidden state onto a learned harm direction rises monotonically with transformer depth, whereas benign prompts remain flat or oscillatory. This cross-layer signature reflects harmful intent as a…",
-    "detected": "2026-09-24",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.13466": {
-    "id": "arxiv:2609.13466",
-    "title": "Governing at Machine Speed: An Adaptive Intelligence Architecture for Real-Time AI Policy Enforcement",
-    "authors": [
-      "Sandeep Bokkasam",
-      "B. Durgalakshmi"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.13466",
-    "abstract": "Enterprise AI adoption has reached 78% of organizations globally, yet the infrastructure to govern that adoption has not kept pace. This paper identifies and characterizes the attestation deficit, a structural condition in which organizations maintain governance policies but cannot produce auditable, tamper-evident…",
-    "detected": "2026-09-24",
-    "topics": [
-      "governance"
-    ]
-  },
-  "arxiv:2609.12841": {
-    "id": "arxiv:2609.12841",
-    "title": "A Graph-Based Approach for Mapping Kernel-Level Telemetry to MITRE ATT&CK",
-    "authors": [
-      "Matteo Lupinacci",
-      "Luigi Arena",
-      "Francesco Blefari",
-      "Angelo Furfaro"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12841",
-    "abstract": "Mapping observed system behavior to standardized frameworks like MITRE ATT&CK is essential for threat-informed defense, but remains largely manual. Existing automated methods depend on Cyber Threat Intelligence reports, which offer only retrospective accounts of attacks.",
-    "detected": "2026-09-24",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.12651": {
-    "id": "arxiv:2609.12651",
-    "title": "Distortion of AI Alignment Revisited: RLHF is a Decent Utilitarian Aligner",
-    "authors": [
-      "Kazusato Oko",
-      "Annie Ulichney",
-      "Nika Haghtalab",
-      "Han Bao"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12651",
-    "abstract": "While Reinforcement Learning from Human Feedback (RLHF) is the standard paradigm for aligning large language models with human preferences, its effectiveness in pluralistic settings has been called into question. Notably, recent work by Gölz et al.",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.12623": {
-    "id": "arxiv:2609.12623",
-    "title": "SteerDuplex: Steerable Duplex Speech Dialogue Models",
-    "authors": [
-      "Utkarsh Tyagi",
-      "Ramaneswaran Selvakumar",
-      "Advait Gosai",
-      "Sonal Kumar",
-      "Nikhil Barhate",
-      "Isabell Sagar",
-      "Steven Li",
-      "Miheer Bavare",
-      "Daniel Quigley",
-      "Fabiola Tapia Carrillo",
-      "Jose M Patron E",
-      "Diego Macías Gutiérrez",
-      "Paul Song",
-      "Ramani Duraiswami",
-      "Dinesh Manocha",
-      "Yunzhong He"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12623",
-    "abstract": "Full-duplex spoken dialogue models support low-latency turn taking, interruption handling, and backchanneling, yet a key capability remains underexplored: steerability, the ability to reliably shift conversational behavior along attributes such as tone, persona, speaking rate, and voice style in response to user…",
-    "detected": "2026-09-24",
-    "topics": []
-  },
-  "arxiv:2609.12607": {
-    "id": "arxiv:2609.12607",
-    "title": "Direct Preference Density Alignment for Conversational Audio Equalization",
-    "authors": [
-      "Ioannis Stylianou",
-      "Sven Ewan Shepstone",
-      "Jon Francombe",
-      "Pablo Martinez Nuevo",
-      "Zheng-Hua Tan"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12607",
-    "abstract": "Large Language Model alignment typically relies on learned proxy reward models, which significantly increase the memory footprint during training and are notoriously prone to instability and reward hacking. While offline methods like Direct Preference Optimization (DPO) bypass the reward model, they lose the ability…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.12591": {
-    "id": "arxiv:2609.12591",
-    "title": "Where Decoder Cosine Similarity Fails for SAE Feature Flow Discovery",
-    "authors": [
-      "Hendrik Droste",
-      "Christian Medeiros Adriano",
-      "Kathrin Korte",
-      "Holger Giese"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12591",
-    "abstract": "Foundation models are increasingly adapted through fine-tuning, model editing, and alignment procedures while retaining previously acquired capabilities. Understanding the internal computations that support these adaptations is therefore becoming increasingly important for continual model evolution.",
-    "detected": "2026-09-24",
-    "topics": [
-      "interpretability"
-    ]
-  },
-  "arxiv:2609.12459": {
-    "id": "arxiv:2609.12459",
-    "title": "EvoRS: On-Policy Self-Evolution of Reward Systems for Open-Ended Reinforcement Learning",
-    "authors": [
-      "Weiyuan Li",
-      "Aili Chen",
-      "Xintao Wang",
-      "Yikai Zhang",
-      "Qingqing Dong",
-      "Jinghan Xu",
-      "Hongru Hou",
-      "Wenxuan Zhao",
-      "Chengkun Lang",
-      "Jun Gao",
-      "Yuanli Guo",
-      "Hongcheng Guo",
-      "Yanghua Xiao",
-      "Deqing Yang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12459",
-    "abstract": "Open-ended reinforcement learning often relies on rubric-based rewards for tasks without directly verifiable answers. Yet the policy and reward system form a dynamic feedback loop: as the policy optimizes the current reward, an initially useful reward system may become unreliable due to reward hacking or reduced…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
-  "arxiv:2609.12413": {
-    "id": "arxiv:2609.12413",
-    "title": "SoK: Rethinking Jailbreaking in the Era of Agentic AI: Attacks, Defenses, and Practical Consideration",
-    "authors": [
-      "Md Jueal Mia",
-      "Yanzhao Wu",
-      "Selcuk Uluagac",
-      "M. Hadi Amini"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12413",
-    "abstract": "Large language models (LLMs) are rapidly evolving from conversational assistants into agentic AI systems that reason, plan, invoke tools, maintain persistent memory, communicate with other agents, and execute multi-step tasks. At the same time, modern models exhibit substantially stronger native safety alignment than…",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment",
-      "security"
-    ]
-  },
-  "arxiv:2609.12137": {
-    "id": "arxiv:2609.12137",
-    "title": "GUIDE: Generative Utility Inference and Decision Engine",
-    "authors": [
-      "Anagha Tiwari",
-      "Alexander G. Gray",
-      "Nick Feamster",
-      "Brian Jabarian",
-      "Alex Imas",
-      "Alex Kale"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12137",
-    "abstract": "Measuring the preferences of human users remains a fundamental challenge of AI alignment. Existing elicitation approaches struggle to efficiently discover multidimensional preferences or accurately ground these inferences in domain knowledge.",
-    "detected": "2026-09-24",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.12039": {
-    "id": "arxiv:2609.12039",
-    "title": "Reality Is the Final Verifier: On Two Key Gaps in Agentic Software Engineering",
-    "authors": [
-      "Alexander Krentsel",
-      "Shubham Agarwal",
-      "Mert Cemri",
-      "Shu Liu",
-      "Sidharth Sankhe",
-      "Ziming Mao",
-      "Matei Zaharia",
-      "Ion Stoica"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.12039",
-    "abstract": "Software development follows an implementation-verification loop in which developers or agents iteratively revise an implementation until an evaluator, such as a test suite, accepts it. The evaluator checks the implementation against a set of requirements under a model of the deployment environment.",
-    "detected": "2026-09-24",
-    "topics": []
-  },
-  "arxiv:2609.11498": {
-    "id": "arxiv:2609.11498",
-    "title": "ActMap: Single-Pass Uncertainty Quantification from Generation-Time Activation Maps",
-    "authors": [
-      "Jacopo Dardini",
-      "Roberta Calegari"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.11498",
-    "abstract": "Practical uncertainty quantification (UQ) for large language models must decide, from a single generation, whether a specific answer should be trusted. Existing methods either sample multiple generations, read only output-token probabilities, or reduce the model's internal computation to a single hidden state.",
-    "detected": "2026-09-24",
-    "topics": []
   }
 }
