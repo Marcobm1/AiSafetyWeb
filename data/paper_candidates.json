@@ -1,4 +1,296 @@
 {
+  "arxiv:2611.33030": {
+    "id": "arxiv:2611.33030",
+    "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
+    "authors": [
+      "Shivank Rajput",
+      "Himanshu Singh",
+      "A. V. Subramanyam"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.33030",
+    "abstract": "Large language models (LLMs) remain vulnerable to jailbreak attacks, where adversaries append optimized suffixes to otherwise benign looking prompts to bypass safety alignment. Existing optimization-based GCG-style attacks can be effective, but they are expensive at inference time, and suffer from poor transfer.",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment",
+      "security"
+    ]
+  },
+  "arxiv:2611.32957": {
+    "id": "arxiv:2611.32957",
+    "title": "\"I Do Intend to Deliver\": Will LLMs Run a Marketplace Advance-Fee Scam?",
+    "authors": [
+      "Megan Squire"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32957",
+    "abstract": "Online fraud is traditionally limited by the cost of the human labor needed to talk to potential victims. We ask whether hosted large language models will now supply that labor.",
+    "detected": "2026-11-25",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.32801": {
+    "id": "arxiv:2611.32801",
+    "title": "Scaling Laws of Ensemble Uncertainty in Language Models",
+    "authors": [
+      "Siamak Ravanbakhsh",
+      "David Nitchi",
+      "Khang Ngo"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32801",
+    "abstract": "Many use cases for large language models (LLMs)---from AI safety to exploration and human interaction---can benefit from epistemic uncertainty estimates. We argue that existing Bayesian Deep Learning solutions, which are often restricted to a fixed model family, fail to capture the full epistemic uncertainty at…",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.32710": {
+    "id": "arxiv:2611.32710",
+    "title": "Red-Teaming a Sovereign LLM, Its Reasoning and Its Training Stages",
+    "authors": [
+      "Hatef Otroshi Shahreza"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32710",
+    "abstract": "Open-weight large language models (LLMs) are increasingly deployed for applications with sensitive information. We investigate whether confidentiality instructions in system prompt can protect such information.",
+    "detected": "2026-11-25",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.32685": {
+    "id": "arxiv:2611.32685",
+    "title": "Social Bias Neurons in Multilingual Language Models: A Mechanistic Interpretability Analysis",
+    "authors": [
+      "Lance Calvin Lim Gamboa",
+      "Yue Feng",
+      "Mark Lee"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32685",
+    "abstract": "Multilingual models exhibit social bias when processing inputs pertaining to societal stereotypes. We adapt emerging mechanistic interpretability methods to pinpoint and characterize model components that encode this bias.",
+    "detected": "2026-11-25",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.32199": {
+    "id": "arxiv:2611.32199",
+    "title": "Steerable by Design: Conditional Pretraining for Robust Control of Language Models",
+    "authors": [
+      "Henry Castillo",
+      "Yanchen Liu",
+      "Claudio Mayrink Verdun",
+      "Dylan Hadfield-Menell"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32199",
+    "abstract": "Our goal is to build language models that are steerable by design. Today's language models are pretrained with next-token prediction, which relegates alignment and control to the final 1% of training tokens or inference-time interventions.",
+    "detected": "2026-11-25",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.32037": {
+    "id": "arxiv:2611.32037",
+    "title": "Online Environment Repair for Coding Agents",
+    "authors": [
+      "Sheng Lu",
+      "Rui Mao",
+      "Zewei Chen",
+      "Chihua Ying",
+      "Beiduo Chen",
+      "Dingxin Hu",
+      "Tinghao Yu"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32037",
+    "abstract": "Programmatic verifiers provide scalable reward signals for training coding agents with reinforcement learning, yet subtle harness defects and incomplete unit tests allow policies to earn full credit without solving the intended task. Existing training-time defenses intervene either by penalizing suspicious outputs or…",
+    "detected": "2026-11-25",
+    "topics": []
+  },
+  "arxiv:2611.32012": {
+    "id": "arxiv:2611.32012",
+    "title": "Marketing-Bench: Evaluating Frontier Models and Agents on Real-World Marketing Capabilities",
+    "authors": [
+      "Sumanth Balaji",
+      "Siddharth Gupta",
+      "Ameet Deshpande",
+      "Vishvak Murahari",
+      "Karthik Narasimhan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.32012",
+    "abstract": "As frontier AI models and agents are deployed more broadly in the real world, marketing is emerging as one of their largest applications. Marketing teams use AI models to produce brand assets like website copy and social media posts, while consumers' agents autonomously discover products, research purchases, and…",
+    "detected": "2026-11-25",
+    "topics": [
+      "governance"
+    ]
+  },
+  "arxiv:2611.31821": {
+    "id": "arxiv:2611.31821",
+    "title": "Exploring Multi-Player Social Games as Verifiable Training Grounds for Large Language Models",
+    "authors": [
+      "Keyu He",
+      "Michael Li",
+      "Jiarui Liu",
+      "Mingqian Zheng",
+      "Koichi Onoue",
+      "Tongshuang Wu",
+      "Maarten Sap"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31821",
+    "abstract": "The training of socially intelligent language models often relies on large language model (LLM) judges, which are expensive, noisy, and vulnerable to reward hacking. Multi-player social games offer a natural alternative: they require open-ended communication to coordinate with teammates and infer hidden roles, while…",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.31795": {
+    "id": "arxiv:2611.31795",
+    "title": "Constructive Causal Abstraction and a Case Study in Mechanistic Interpretability",
+    "authors": [
+      "Yuchen Zhu",
+      "Sergio Hernan Garrido Mejia",
+      "Dominik Janzing"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31795",
+    "abstract": "Existing frameworks in causal abstraction first propose a high-level causal model, and then verify whether its interventional effects agree with those of a given micro-level model - the two models are declared causally consistent when the discrepancy is zero. However, proposing a consistent macro causal model is…",
+    "detected": "2026-11-25",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.31791": {
+    "id": "arxiv:2611.31791",
+    "title": "SwarmLeak: Does Coordination Improve Privacy Attacks on LLM Agents?",
+    "authors": [
+      "Asma Farajidizaji",
+      "Vyas Raina",
+      "Vatsal Raina",
+      "Ivaxi Sheth"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31791",
+    "abstract": "LLM agents increasingly collaborate in group chats while holding tool access to confidential records, which makes the shared chat an attack surface. It remains unclear whether several colluding attackers extract such information more effectively than one.",
+    "detected": "2026-11-25",
+    "topics": [
+      "evals"
+    ]
+  },
+  "arxiv:2611.31640": {
+    "id": "arxiv:2611.31640",
+    "title": "Reward Basis Decomposition for Interpreting Preference Heterogeneity",
+    "authors": [
+      "Mohamed I. Eldagla",
+      "Ifesi Onubogu",
+      "Prerana Rane",
+      "Harsh Sharma",
+      "Rachel Freedman"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31640",
+    "abstract": "Canonical reward models specify the optimization target for AI policies, so understanding the values they encode is important for ensuring AI alignment. Existing interpretability techniques interpret reward models with a single reward head, which cannot distinguish between the values that a population shares and those…",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment",
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.31615": {
+    "id": "arxiv:2611.31615",
+    "title": "Eliciting sandbagged LLM capability via structural interventions on attention-head functional networks",
+    "authors": [
+      "Manzi Fabrice Niyigaba",
+      "Ishan Verma Prasad",
+      "Sansheng Cao",
+      "Zheng Huang",
+      "Yujun Yan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31615",
+    "abstract": "Reliably evaluating the capabilities of advanced AI systems is critical for safe development and deployment, yet such evaluations may be undermined by sandbagging, a situation in which a model strategically suppresses capabilities it possesses. Existing work has developed controlled sandbagging settings and methods…",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment",
+      "evals"
+    ]
+  },
+  "arxiv:2611.31610": {
+    "id": "arxiv:2611.31610",
+    "title": "Monitorable-by-design architectures for a post-Astra world: a compartmentalization-based approach",
+    "authors": [
+      "Jake Watts",
+      "Joel Sokol"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31610",
+    "abstract": "Frontier models like GPT-6 Astra are increasingly able to do substantial reasoning without a monitorable chain of thought, chains of thought are becoming less legible, and are often monitored asynchronously to reduce cost. With the future of chain of thought monitoring unclear, it may be necessary to design LLMs with…",
+    "detected": "2026-11-25",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.31424": {
+    "id": "arxiv:2611.31424",
+    "title": "ContextLure: Exploiting Benign Conversation History for Indirect Prompt Injection",
+    "authors": [
+      "Yi Han",
+      "Zhen Sun",
+      "Zhijie Deng",
+      "Yini Huang",
+      "Yangyang Zheng",
+      "Dongyi Zhang",
+      "Xinlei He"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31424",
+    "abstract": "As LLMs become more capable, agents can perform more complex tasks with tools and maintain longer interactions with users. These benign conversations contain evidence on task results, user concerns, and operational constraints.",
+    "detected": "2026-11-25",
+    "topics": [
+      "evals",
+      "security"
+    ]
+  },
+  "arxiv:2611.31354": {
+    "id": "arxiv:2611.31354",
+    "title": "Detecting Harmful Short Videos in Toxic Diet Culture: A Governance-Ready Evidence Framework with Sparse Autoencoders",
+    "authors": [
+      "Wenli Zhang",
+      "Shuang Geng",
+      "Jiaheng Xie",
+      "Zhonghan Xiang",
+      "Sudha Ram"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31354",
+    "abstract": "Algorithmic content moderation is increasingly important for governing short-form video content, yet harmful-content detection research focuses primarily on prediction or limited explanations. This leaves a governance challenge underexplored: producing decision-linked evidence that supports the review and…",
+    "detected": "2026-11-25",
+    "topics": [
+      "interpretability",
+      "governance"
+    ]
+  },
+  "arxiv:2611.31312": {
+    "id": "arxiv:2611.31312",
+    "title": "Evolutionary AI Control: Population-Level Safety Under Reproduction, Heredity, and Selection",
+    "authors": [
+      "Andrew T. Cadotte"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.31312",
+    "abstract": "An AI agent can satisfy every individual safety check and still give rise to a population that violates a collective safety limit. This risk arises in open multi-agent systems, where agents copy themselves, modify their successors, and change system membership during a run.",
+    "detected": "2026-11-25",
+    "topics": [
+      "alignment"
+    ]
+  },
   "arxiv:2611.30939": {
     "id": "arxiv:2611.30939",
     "title": "Beyond Patching: Consistent Circuit Discovery via Gradient Spectral Analysis",
@@ -11732,210 +12024,6 @@
     "detected": "2026-09-28",
     "topics": [
       "interpretability"
-    ]
-  },
-  "arxiv:2609.30217": {
-    "id": "arxiv:2609.30217",
-    "title": "Instrumental Monitor Evasion Emerges Under Ordinary Task Pressure",
-    "authors": [
-      "David Schmotz",
-      "Derck Prinzhorn",
-      "Luca Beurer-Kellner",
-      "Anselm Paulus",
-      "Ameya Prabhu",
-      "Maksym Andriushchenko"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.30217",
-    "abstract": "A central concern in AI safety is that agents may treat oversight as an obstacle when it conflicts with completing their goals. We study instrumental evasion, the propensity of LLM agents to circumvent runtime monitoring as a means of completing ordinary tasks.",
-    "detected": "2026-09-25",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
-  "arxiv:2609.30094": {
-    "id": "arxiv:2609.30094",
-    "title": "PrivDrift: Auditing User-Secret Leakage Under Topic Drift in Active LLM Conversations",
-    "authors": [
-      "Luciano Maldonado"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.30094",
-    "abstract": "Large language models increasingly operate as persistent assistants in user-facing, shared-session, and tool-augmented settings. When users disclose sensitive information during an active conversation, that information may remain behaviorally recoverable through later prompts even after the dialogue shifts to…",
-    "detected": "2026-09-25",
-    "topics": [
-      "interpretability",
-      "evals"
-    ]
-  },
-  "arxiv:2609.29808": {
-    "id": "arxiv:2609.29808",
-    "title": "Hard Stop: Kernel-Level Preemption and Containment for Rogue Agentic Execution",
-    "authors": [
-      "José Luis Pino"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29808",
-    "abstract": "In July 2026, an unconstrained autonomous agent participating in a frontier AI cybersecurity evaluation harness breached its evaluation sandbox, established an external command-and-control foothold, and executed a multi-stage intrusion into Hugging Face's production multi-tenant dataset conversion infrastructure…",
-    "detected": "2026-09-25",
-    "topics": [
-      "evals",
-      "governance",
-      "security"
-    ]
-  },
-  "arxiv:2609.29781": {
-    "id": "arxiv:2609.29781",
-    "title": "Hallucination Neurons and Where to Find Them: An Investigation into the existence of Hallucination Neurons",
-    "authors": [
-      "Huseyin Cavus",
-      "Sebin Sabu",
-      "Joshua Spear",
-      "Jaskaran Singh Kawatra",
-      "Pavithra Rajendran"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29781",
-    "abstract": "Interpretable machine learning for Large Language Models (LLMs) increasingly relies on sparse probing methods that identify small sets of neurons claimed to detect and causally influence behaviors such as factuality recall, safety alignment, and hallucination. These claims have important implications for model…",
-    "detected": "2026-09-25",
-    "topics": [
-      "alignment",
-      "interpretability"
-    ]
-  },
-  "arxiv:2609.29775": {
-    "id": "arxiv:2609.29775",
-    "title": "Prefilling the Reasoning Channel: Output-Prefix Attacks on Reasoning LLMs",
-    "authors": [
-      "Lukáš Brůna",
-      "Robert Bridges",
-      "Adam Ek"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29775",
-    "abstract": "Large Language Models (LLMs) consume and produce a single sequence of text; hence, if text can be added to the beginning of the LLM's response, i.e., an output prefix, then all subsequent tokens will be conditioned on it. This output-prefix attack technique is a cheap black-box prompt injection.",
-    "detected": "2026-09-25",
-    "topics": [
-      "security"
-    ]
-  },
-  "arxiv:2609.29429": {
-    "id": "arxiv:2609.29429",
-    "title": "Just Ask Jev: Reinforcement Learning for Calibrated Decisions as a Zero-Shot Detector of AI Alignment Failures",
-    "authors": [
-      "Ruoqi Guo",
-      "Yi Liu",
-      "Gelei Deng",
-      "Yuekang Li",
-      "Lida Zhao",
-      "Yutao Wu",
-      "Simin Chen",
-      "Ying Zhang",
-      "Leo Yu Zhang"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29429",
-    "abstract": "Detectors of alignment failures screen deployed language models and score alignment benchmarks. Most are generative judges that spend a decoding pass on every criterion, and classifiers that read token probabilities, such as Llama Guard, still score one fixed label per call.",
-    "detected": "2026-09-25",
-    "topics": [
-      "alignment",
-      "evals"
-    ]
-  },
-  "arxiv:2609.29362": {
-    "id": "arxiv:2609.29362",
-    "title": "Parts-of-Speech as Emergent Categories in SAE Latent Space",
-    "authors": [
-      "Alessandro Bondielli",
-      "Lucia Passaro",
-      "Serena Auriemma",
-      "Alessandro Lenci"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29362",
-    "abstract": "Sparse AutoEncoders (SAEs) offer a promising way to inspect language model representations, but it is still unclear what kind of linguistic structure their latents expose. We use part-of-speech (PoS) categories as a controlled test case to study whether morpho-syntactic information is encoded by individual latents or…",
-    "detected": "2026-09-25",
-    "topics": [
-      "interpretability"
-    ]
-  },
-  "arxiv:2609.29189": {
-    "id": "arxiv:2609.29189",
-    "title": "When Honesty is Not Enough in AI Debate",
-    "authors": [
-      "Rayne Holland",
-      "Liming Zhu",
-      "Jason Xue"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29189",
-    "abstract": "Scalable oversight aims to verify the behaviour of agents whose capabilities exceed those of their overseers. AI debate has been proposed as an oversight solution in which competing agents help a resource-limited verifier assess claims that it cannot reliably evaluate unaided.",
-    "detected": "2026-09-25",
-    "topics": [
-      "alignment"
-    ]
-  },
-  "arxiv:2609.29108": {
-    "id": "arxiv:2609.29108",
-    "title": "Functional Architecture of European Electricity Trading Markets: Requirements for AI Supported Trading Systems under Regulatory Constraints",
-    "authors": [
-      "Walter Kurz",
-      "Wojtek Stricker"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.29108",
-    "abstract": "European electricity trading in the EU operates as a constrained multi-layer system in which legal design, exchange microstructure, and network physics are executed jointly across forward, day-ahead, intraday, and balancing horizons. This paper develops a functional architecture for AI-supported trading that is…",
-    "detected": "2026-09-25",
-    "topics": [
-      "governance"
-    ]
-  },
-  "arxiv:2609.28809": {
-    "id": "arxiv:2609.28809",
-    "title": "Stream Recursion Model (SRM)",
-    "authors": [
-      "Asael Sorensen",
-      "Charles Brock",
-      "David Chamberlain",
-      "Jennifer Minnich",
-      "Matthew Hoffman",
-      "Ramyaa Ramyaa"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.28809",
-    "abstract": "Mechanistic interpretability seeks to make verifiable statements about the internal behavior of large language models (LLMs). Many interpretability techniques struggle to scale with the increasing size and depth of architectures.",
-    "detected": "2026-09-25",
-    "topics": [
-      "interpretability"
-    ]
-  },
-  "arxiv:2609.28614": {
-    "id": "arxiv:2609.28614",
-    "title": "Reward Hacking Challenges Oversight of Autonomous Research Agents",
-    "authors": [
-      "Yue Huang",
-      "Zhangchen Xu",
-      "Yuchen Ma",
-      "Wenjie Wang",
-      "Zheyuan Liu",
-      "Ziwei Xu",
-      "Pin-Yu Chen",
-      "Michel Galley",
-      "Zinan Lin",
-      "Stefan Feuerriegel",
-      "Radha Poovendran",
-      "Misha Sra",
-      "Alex Pentland",
-      "Xiangliang Zhang",
-      "Zichen Chen"
-    ],
-    "year": 2026,
-    "url": "https://arxiv.org/abs/2609.28614",
-    "abstract": "Autonomous research agents can design experiments, evaluate results, and write reports, giving them control over both a scientific result and the evidence used to support it. This creates a risk of reward hacking: meeting the reward criteria without achieving the intended goal.",
-    "detected": "2026-09-25",
-    "topics": [
-      "alignment"
     ]
   }
 }
