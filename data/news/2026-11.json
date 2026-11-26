@@ -1,5 +1,180 @@
 [
   {
+    "id": "a0907d88a1cd8fe0",
+    "url": "https://www.lesswrong.com/posts/2nuNydxTyMPneLRdH/a-therapist-s-guide-to-the-singularity",
+    "title": "A Therapist's Guide to the Singularity",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-26T01:17:09Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "I'm a therapist who has been following AI alignment for the last few years. In that time, I've been dumbfounded by two things.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Ramaiz"
+    ],
+    "summary": null
+  },
+  {
+    "id": "efad790dfb86bd48",
+    "url": "https://www.lesswrong.com/posts/GhTL69vuX4BfJARGk/ais-may-seek-ambient-score",
+    "title": "AIs may seek ambient score",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-25T23:58:16Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Score-seeking AIs may Internalize the kind of score they are pursuing instead of caring about the concrete process that generated the reward Care at least in part about a process-based score that sees all actions the AI takes, instead of just the outcomes of those actions. I say of such AIs that internalized…",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Fabien Roger"
+    ],
+    "summary": null
+  },
+  {
+    "id": "e5f865a499a44ee0",
+    "url": "https://www.lesswrong.com/posts/MAiAapN7CWZpQcfmz/ai-safety-grassroots-work-needs-funding-and-volunteers",
+    "title": "AI safety grassroots work needs funding and volunteers",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-25T20:38:43Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "This post – mostly a roundup of the AI safety grassroots organizations – was written collaboratively. Most of the individual organization summaries were written by the organizations themselves, and the claims have not been independently verified.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Vael Gates"
+    ],
+    "summary": null
+  },
+  {
+    "id": "58fc9fd4618ca9fa",
+    "url": "https://arxiv.org/abs/2611.34930",
+    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T18:59:13Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents.",
+    "topics": [
+      "interpretability",
+      "evals"
+    ],
+    "authors": [
+      "Paul Vilars",
+      "Vincent Quoc-Huy Trinh",
+      "Maria Vakalopoulou",
+      "Dimitris Samaras",
+      "Stergios Christodoulidis",
+      "Mahdi S. Hosseini"
+    ],
+    "arxiv_id": "2611.34930",
+    "summary": null
+  },
+  {
+    "id": "5a23c7b4b65f1988",
+    "url": "https://arxiv.org/abs/2611.34637",
+    "title": "Carrying Feature Ablations Across Sparse Autoencoder Seeds",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T16:20:40Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "A vision encoder turns an image into one vector per patch, refined layer by layer. A sparse autoencoder (SAE) writes each vector of one layer as a sum of learned directions, most with a coefficient of zero.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Karl Li"
+    ],
+    "arxiv_id": "2611.34637",
+    "summary": null
+  },
+  {
+    "id": "c0939b57c855220e",
+    "url": "https://arxiv.org/abs/2611.34363",
+    "title": "Single-Database Rewards Are Hackable: Counterfactual Execution for Trustworthy Text-to-SQL RL",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T13:30:26Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Reinforcement learning (RL) for text-to-SQL agents pays a query when its result matches the reference on one database. However, a wrong query can match by luck when the data lack the rows that expose its bug.",
+    "topics": [],
+    "authors": [
+      "Shreshth Rai",
+      "Rishii Kumar Singh",
+      "Aksh Aggarwal"
+    ],
+    "arxiv_id": "2611.34363",
+    "summary": null
+  },
+  {
+    "id": "b0c8f3c93e84904b",
+    "url": "https://arxiv.org/abs/2611.34278",
+    "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T12:35:33Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Manit Baser",
+      "Vyoman Jain",
+      "Rachel Yeo Hui Min",
+      "Xianglin Yang",
+      "Meenatchi Sundaram Muthu Selva Annamalai",
+      "Dinil Mon Divakaran"
+    ],
+    "arxiv_id": "2611.34278",
+    "summary": null
+  },
+  {
+    "id": "fbbd674f37db4321",
+    "url": "https://arxiv.org/abs/2611.34132",
+    "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T10:31:08Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Verification is increasingly critical across various inference and learning paradigms, such as test-time scaling, recursive intelligence and automated research, where feedback can improve efficiency and optimization. Common score-based verifiers, or discriminative reward models, predict a scalar reward for an output.",
+    "topics": [],
+    "authors": [
+      "Yuxuan Sun",
+      "Hao",
+      "Chen",
+      "Nagarajan Natarajan",
+      "Sushrut Karmalkar",
+      "Niranjani Prasad",
+      "Amit Sharma",
+      "Hongxiang Fan"
+    ],
+    "arxiv_id": "2611.34132",
+    "summary": null
+  },
+  {
+    "id": "8fdf8b417ccc13ca",
+    "url": "https://arxiv.org/abs/2611.34121",
+    "title": "Unstable Action Boundaries in Lethal Drone Agents",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T10:23:38Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Tool-using large language model (LLM) agents raise safety risks that are not captured by text-only refusal behavior, especially when tools can trigger high-impact actions. This concern is salient in military settings, where autonomous weapons raise the possibility of delegating force decisions to software agents.",
+    "topics": [],
+    "authors": [
+      "Jacques Dumora",
+      "André-Louis Rochet",
+      "Simon Roburin"
+    ],
+    "arxiv_id": "2611.34121",
+    "summary": null
+  },
+  {
     "id": "b2b1ee2fc8d43d5e",
     "url": "https://www.lesswrong.com/posts/QazdpnzTYqARAB8Ed/ghost-hunt-a-steering-approach-to-model-backdoors-1",
     "title": "Ghost Hunt: a steering approach to model backdoors",
@@ -19,6 +194,26 @@
     "summary": null
   },
   {
+    "id": "277e31be3ca0d196",
+    "url": "https://arxiv.org/abs/2611.33640",
+    "title": "Sparse-to-Sparse Feature Learning for Cross-Layer Analysis and Steering",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-25T02:08:34Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Understanding how models internally represent information is a central challenge in interpretation and control. Sparse autoencoders (SAEs) decompose dense hidden representations into sparse features, and cross-layer methods capture structure spanning multiple layers.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Masahiro Kaneko",
+      "Ayana Niwa",
+      "Timothy Baldwin"
+    ],
+    "arxiv_id": "2611.33640",
+    "summary": null
+  },
+  {
     "id": "6491e25d9b5efa18",
     "url": "https://www.lesswrong.com/posts/rXixzzScjLrnNZ4vo/fable-5-2-tries-less-on-some-hard-tasks-when-a-shortcut-is",
     "title": "Fable 5.2 Tries Less on Some Hard Tasks When a Shortcut is Available",
@@ -33,6 +228,46 @@
     "authors": [
       "Harry Esau"
     ],
+    "summary": null
+  },
+  {
+    "id": "4dddd1096949eac0",
+    "url": "https://arxiv.org/abs/2611.33470",
+    "title": "Dynamic Reasoning in Next-Gen Detection and Response: An Empirical Study of LLM Triage, Reinforcement Tuning, and Adversarial Evasion",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-24T21:48:03Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "We present an end-to-end empirical study of dynamic reasoning in next-generation detection and response pipelines, evaluating how static classifiers, graph-based signal fusion, and large language model (LLM) triage agents perform under strict human-analyst attention budgets (Recall at B alerts/day). Across 56…",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Jeremy Canale"
+    ],
+    "arxiv_id": "2611.33470",
+    "summary": null
+  },
+  {
+    "id": "8593cef74327519f",
+    "url": "https://arxiv.org/abs/2611.33398",
+    "title": "Best-of-$N$ Test-Time Steering Can Lead to Reward Hacking in Vision-Language-Action Models",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-24T20:19:03Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Vision-language-action (VLA) models have shown promise for general-purpose robotic manipulation, but adapting to changing environmental conditions still remains challenging. Recent test-time steering methods have shown promise in enabling adaptive VLA policies by utilizing additional computation during deployment.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Vanshaj Khattar",
+      "Jing Liu",
+      "Toshiaki Koike-Akino",
+      "Ming Jin",
+      "Ye Wang"
+    ],
+    "arxiv_id": "2611.33398",
     "summary": null
   },
   {
@@ -110,6 +345,28 @@
     "authors": [
       "Dean Valentine"
     ],
+    "summary": null
+  },
+  {
+    "id": "ba37651d6e3eceb0",
+    "url": "https://arxiv.org/abs/2611.33243",
+    "title": "Beyond the Efficiency-Efficacy Dilemma: A Critical Analysis of Transferability in Adversarial Malware Detection",
+    "source": "arXiv",
+    "source_id": "arxiv",
+    "published": "2026-11-24T14:53:35Z",
+    "fetched_at": "2026-11-26T16:08:06Z",
+    "excerpt": "Machine Learning (ML) models are already being deployed at scale for malware detection. Therefore there is a pressing need to rigorously study adversarial robustness.",
+    "topics": [
+      "security"
+    ],
+    "authors": [
+      "Veysel Alevcan",
+      "Mohammad Furqan Ali",
+      "Teresa Sousa",
+      "Luís Miguel Campos",
+      "Christoforos Ntantogian"
+    ],
+    "arxiv_id": "2611.33243",
     "summary": null
   },
   {

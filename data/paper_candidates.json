@@ -1,4 +1,170 @@
 {
+  "arxiv:2611.34930": {
+    "id": "arxiv:2611.34930",
+    "title": "A gene informed benchmark for BioScoring of pathology foundation models",
+    "authors": [
+      "Paul Vilars",
+      "Vincent Quoc-Huy Trinh",
+      "Maria Vakalopoulou",
+      "Dimitris Samaras",
+      "Stergios Christodoulidis",
+      "Mahdi S. Hosseini"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34930",
+    "abstract": "Pathology foundation models are usually compared by their performance on downstream tasks such as classification and retrieval. While such benchmarks measure how useful a model is, they provide no insight into the biology it represents.",
+    "detected": "2026-11-26",
+    "topics": [
+      "interpretability",
+      "evals"
+    ]
+  },
+  "arxiv:2611.34637": {
+    "id": "arxiv:2611.34637",
+    "title": "Carrying Feature Ablations Across Sparse Autoencoder Seeds",
+    "authors": [
+      "Karl Li"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34637",
+    "abstract": "A vision encoder turns an image into one vector per patch, refined layer by layer. A sparse autoencoder (SAE) writes each vector of one layer as a sum of learned directions, most with a coefficient of zero.",
+    "detected": "2026-11-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.34363": {
+    "id": "arxiv:2611.34363",
+    "title": "Single-Database Rewards Are Hackable: Counterfactual Execution for Trustworthy Text-to-SQL RL",
+    "authors": [
+      "Shreshth Rai",
+      "Rishii Kumar Singh",
+      "Aksh Aggarwal"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34363",
+    "abstract": "Reinforcement learning (RL) for text-to-SQL agents pays a query when its result matches the reference on one database. However, a wrong query can match by luck when the data lack the rows that expose its bug.",
+    "detected": "2026-11-26",
+    "topics": []
+  },
+  "arxiv:2611.34278": {
+    "id": "arxiv:2611.34278",
+    "title": "Latent-in-the-Middle: On the Security of Cross-Model Latent Communication in Multi-Agent Systems",
+    "authors": [
+      "Manit Baser",
+      "Vyoman Jain",
+      "Rachel Yeo Hui Min",
+      "Xianglin Yang",
+      "Meenatchi Sundaram Muthu Selva Annamalai",
+      "Dinil Mon Divakaran"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34278",
+    "abstract": "As large language models increasingly collaborate in heterogeneous multi-agent systems, latent communication has emerged as an efficient alternative to exchanging natural-language messages. By sharing internal representations, agents can avoid repeatedly processing the same context, reducing communication overhead and…",
+    "detected": "2026-11-26",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.34132": {
+    "id": "arxiv:2611.34132",
+    "title": "Agent-as-a-Verifier: From Scores to Evidence for General Verification",
+    "authors": [
+      "Yuxuan Sun",
+      "Hao",
+      "Chen",
+      "Nagarajan Natarajan",
+      "Sushrut Karmalkar",
+      "Niranjani Prasad",
+      "Amit Sharma",
+      "Hongxiang Fan"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34132",
+    "abstract": "Verification is increasingly critical across various inference and learning paradigms, such as test-time scaling, recursive intelligence and automated research, where feedback can improve efficiency and optimization. Common score-based verifiers, or discriminative reward models, predict a scalar reward for an output.",
+    "detected": "2026-11-26",
+    "topics": []
+  },
+  "arxiv:2611.34121": {
+    "id": "arxiv:2611.34121",
+    "title": "Unstable Action Boundaries in Lethal Drone Agents",
+    "authors": [
+      "Jacques Dumora",
+      "André-Louis Rochet",
+      "Simon Roburin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.34121",
+    "abstract": "Tool-using large language model (LLM) agents raise safety risks that are not captured by text-only refusal behavior, especially when tools can trigger high-impact actions. This concern is salient in military settings, where autonomous weapons raise the possibility of delegating force decisions to software agents.",
+    "detected": "2026-11-26",
+    "topics": []
+  },
+  "arxiv:2611.33640": {
+    "id": "arxiv:2611.33640",
+    "title": "Sparse-to-Sparse Feature Learning for Cross-Layer Analysis and Steering",
+    "authors": [
+      "Masahiro Kaneko",
+      "Ayana Niwa",
+      "Timothy Baldwin"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.33640",
+    "abstract": "Understanding how models internally represent information is a central challenge in interpretation and control. Sparse autoencoders (SAEs) decompose dense hidden representations into sparse features, and cross-layer methods capture structure spanning multiple layers.",
+    "detected": "2026-11-26",
+    "topics": [
+      "interpretability"
+    ]
+  },
+  "arxiv:2611.33470": {
+    "id": "arxiv:2611.33470",
+    "title": "Dynamic Reasoning in Next-Gen Detection and Response: An Empirical Study of LLM Triage, Reinforcement Tuning, and Adversarial Evasion",
+    "authors": [
+      "Jeremy Canale"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.33470",
+    "abstract": "We present an end-to-end empirical study of dynamic reasoning in next-generation detection and response pipelines, evaluating how static classifiers, graph-based signal fusion, and large language model (LLM) triage agents perform under strict human-analyst attention budgets (Recall at B alerts/day). Across 56…",
+    "detected": "2026-11-26",
+    "topics": [
+      "security"
+    ]
+  },
+  "arxiv:2611.33398": {
+    "id": "arxiv:2611.33398",
+    "title": "Best-of-$N$ Test-Time Steering Can Lead to Reward Hacking in Vision-Language-Action Models",
+    "authors": [
+      "Vanshaj Khattar",
+      "Jing Liu",
+      "Toshiaki Koike-Akino",
+      "Ming Jin",
+      "Ye Wang"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.33398",
+    "abstract": "Vision-language-action (VLA) models have shown promise for general-purpose robotic manipulation, but adapting to changing environmental conditions still remains challenging. Recent test-time steering methods have shown promise in enabling adaptive VLA policies by utilizing additional computation during deployment.",
+    "detected": "2026-11-26",
+    "topics": [
+      "alignment"
+    ]
+  },
+  "arxiv:2611.33243": {
+    "id": "arxiv:2611.33243",
+    "title": "Beyond the Efficiency-Efficacy Dilemma: A Critical Analysis of Transferability in Adversarial Malware Detection",
+    "authors": [
+      "Veysel Alevcan",
+      "Mohammad Furqan Ali",
+      "Teresa Sousa",
+      "Luís Miguel Campos",
+      "Christoforos Ntantogian"
+    ],
+    "year": 2026,
+    "url": "https://arxiv.org/abs/2611.33243",
+    "abstract": "Machine Learning (ML) models are already being deployed at scale for malware detection. Therefore there is a pressing need to rigorously study adversarial robustness.",
+    "detected": "2026-11-26",
+    "topics": [
+      "security"
+    ]
+  },
   "arxiv:2611.33030": {
     "id": "arxiv:2611.33030",
     "title": "SALSA: Sampling Adversarial Suffixes from Learned Distributions for LLM Safety Assessment",
