@@ -1,5 +1,57 @@
 [
   {
+    "id": "5e8eef87500fe490",
+    "url": "https://www.lesswrong.com/posts/uAXt43Wg2PWzsagvr/ghostbusters-understanding-hereditary-trait-distillation-in",
+    "title": "GhostBusters: Understanding Hereditary Trait Distillation in Phantom Transfer",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-27T13:56:54Z",
+    "fetched_at": "2026-11-27T15:55:14Z",
+    "excerpt": "Understanding how models learn and generalise from their training data is an open problem in mechanistic interpretability. When the behaviour is obvious from the documents, simple training data attribution techniques such as LLM judges can work well.",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "J Rosser"
+    ],
+    "summary": null
+  },
+  {
+    "id": "ab84e1fc79c4cf48",
+    "url": "https://www.lesswrong.com/posts/f5r7FpLWiFQ7aeJu9/go-seeking-mysteries",
+    "title": "Go seeking mysteries",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-26T17:55:04Z",
+    "fetched_at": "2026-11-27T15:55:14Z",
+    "excerpt": "I think an impactful line of research would be to hunt for unexplained phenomena: simple things that are surprising and interesting, given the most parsimonious explanation of the data. Let’s call this mystery-seeking .",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "David Africa"
+    ],
+    "summary": null
+  },
+  {
+    "id": "57d6422eb9ad1d21",
+    "url": "https://www.lesswrong.com/posts/qvy8Tvhzg2PgfvHcs/recursive-self-alignment-the-model-is-the-estimator",
+    "title": "Recursive Self Alignment: The Model is the Estimator",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-26T16:38:18Z",
+    "fetched_at": "2026-11-27T15:55:14Z",
+    "excerpt": "Alignment research has historically been undertaken from the position that we should solve it before the intelligence explosion. But the intelligence explosion has already begun.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "Anish Tondwalkar"
+    ],
+    "summary": null
+  },
+  {
     "id": "a0907d88a1cd8fe0",
     "url": "https://www.lesswrong.com/posts/2nuNydxTyMPneLRdH/a-therapist-s-guide-to-the-singularity",
     "title": "A Therapist's Guide to the Singularity",
