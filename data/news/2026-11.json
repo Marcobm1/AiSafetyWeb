@@ -1,5 +1,108 @@
 [
   {
+    "id": "47d861f022337526",
+    "url": "https://www.lesswrong.com/posts/2kZgma6h2epedGBtD/it-s-a-belief-cascade",
+    "title": "It's a Belief Cascade",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-28T05:57:31Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "We’re probably in an info bubble. Written Nov 20-23, 2026, addressed to a (large) subset of the Berkeley AI safety community.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "lottaFLOPS"
+    ],
+    "summary": null
+  },
+  {
+    "id": "d4408c7127564346",
+    "url": "https://www.lesswrong.com/posts/wdowLCxnsRg56cNqT/towards-a-theory-of-learnability-via-debate",
+    "title": "Towards a Theory of Learnability via Debate",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-28T04:54:24Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "Debate is a popular training protocol that is believed to be a promising approach to the problem of scalable oversight. Even though it is a training protocol, not a lot is known about its learning behaviour.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Vinayak Pathak"
+    ],
+    "summary": null
+  },
+  {
+    "id": "8fab7304175957e5",
+    "url": "https://www.lesswrong.com/posts/xkK93DssNu7oD9vKg/thinking-about-llms-in-terms-of-cognitive-patterns",
+    "title": "Thinking About LLMs in Terms of Cognitive Patterns",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-27T20:33:48Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "TL;DR : I argue that describing LLM behavior in terms of “cognitive patterns” could help develop better alignment science, and provide several examples of what such descriptions might look like. Premise Appropriate language (abstractions/concepts) is often a prerequisite for good science.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Jan Betley"
+    ],
+    "summary": null
+  },
+  {
+    "id": "bd99a4d0212af9fe",
+    "url": "https://www.alignmentforum.org/posts/o9dPGxEbpQrnasgDB/i-don-t-expect-superposition-in-transformer-mlp-neurons",
+    "title": "I don’t expect superposition in transformer MLP neurons",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-27T18:58:10Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "I currently believe that in a typical (well trained and under-parametrized) transformer model, there is something like superposition-type compression in the residual stream, but not in the MLP neurons. By \"superposition-type compression\", I mean some way of storing extra features using the fact that you can have…",
+    "topics": [
+      "interpretability"
+    ],
+    "authors": [
+      "Linda Linsefors"
+    ],
+    "summary": null
+  },
+  {
+    "id": "6e406ac233fa9fc9",
+    "url": "https://www.lesswrong.com/posts/RFTWNPhm8jmnmaF5t/astra-6-2-s-brain-gets-smart-but-its-head-gets-dumb",
+    "title": "Astra 6.2’s Brain Gets Smart But Its Head Gets Dumb",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-27T18:50:49Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "Astra 6.2 has very high intelligence. Astra 6.2 has very low wisdom.",
+    "topics": [
+      "alignment"
+    ],
+    "authors": [
+      "Zvi"
+    ],
+    "summary": null
+  },
+  {
+    "id": "1cbe9827f839795b",
+    "url": "https://www.lesswrong.com/posts/2EQ2y3eGqm952tAZ6/a-basic-case-against-differentially-accelerating-conceptual-1",
+    "title": "A Basic Case Against Differentially Accelerating Conceptual Reasoning",
+    "source": "LessWrong",
+    "source_id": "lesswrong",
+    "published": "2026-11-27T17:43:33Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "A basic case for differentially accelerating conceptual reasoning capabilities [1] argues that we should make AIs better at conceptual reasoning (CR), roughly the philosophy-like reasoning you need for problems where you can’t run an experiment or write a proof. I’ll call this agenda CRC.",
+    "topics": [
+      "alignment",
+      "evals"
+    ],
+    "authors": [
+      "williawa"
+    ],
+    "summary": null
+  },
+  {
     "id": "5e8eef87500fe490",
     "url": "https://www.lesswrong.com/posts/uAXt43Wg2PWzsagvr/ghostbusters-understanding-hereditary-trait-distillation-in",
     "title": "GhostBusters: Understanding Hereditary Trait Distillation in Phantom Transfer",
@@ -82,6 +185,21 @@
     ],
     "authors": [
       "Fabien Roger"
+    ],
+    "summary": null
+  },
+  {
+    "id": "2c7d23e3a5c825d8",
+    "url": "https://www.alignmentforum.org/posts/e758PJCpwAwyodvEj/comparing-ai-r-and-d-compute-caps-and-deployment-lags",
+    "title": "Comparing AI R&D compute caps and deployment lags",
+    "source": "AI Alignment Forum",
+    "source_id": "alignment-forum",
+    "published": "2026-11-25T20:53:03Z",
+    "fetched_at": "2026-11-28T14:50:48Z",
+    "excerpt": "I’m publishing this a bit rougher than usual because it’s very pertinent to Evan Hubinger’s recent shortform , which advocates for blocking internal deployment as a pacing mechanism over compute reallocation (he mostly discusses it in the context of a risk-assessment-based regime, while this post discusses the…",
+    "topics": [],
+    "authors": [
+      "elifland"
     ],
     "summary": null
   },
